@@ -3,5 +3,9 @@ node_modules/
 __pycache__/
 .env
 
-# Rohdaten der Vorlagen (ca. 44 MB): per phase0/fetch_papers.py laden
+# Lokale Rohdaten und Build (per `python -m pipeline fetch` bzw. `build`)
 data/raw/papers.jsonl
+data/raw/consultations_lite.jsonl
+data/raw/STAND.json
+data/build/
+.venv/
