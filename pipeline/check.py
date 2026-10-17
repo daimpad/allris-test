@@ -66,7 +66,33 @@ def check():
     print("\nCo-Dezernat")
     print("fachliche Zuständigkeit über Stellungnahme abgeleitet:", pct(n_co_res, n_co))
 
-    streets = [r[0] for r in db.execute("SELECT street FROM location WHERE street IS NOT NULL")]
+    print("\nGeokodierung")
+    for stage in ("A", "B"):
+        print(f"Vorlagen mit Ortsbezug Stufe {stage}:", pct(one(
+            "SELECT COUNT(DISTINCT paper_id) FROM paper_location WHERE stage = ? AND method <> 'vererbt'",
+            stage), found["Vorlagen"]))
+    print("Vorlagen mit vererbtem Ortsbezug:",
+          one("SELECT COUNT(DISTINCT paper_id) FROM paper_location WHERE method = 'vererbt'"))
+    print("Vorlagen mit Ortsbezug insgesamt:",
+          pct(one("SELECT COUNT(DISTINCT paper_id) FROM paper_location"), found["Vorlagen"]))
+    # Stufe B gegen Stufe A, für Vorlagen mit beidem. Straßentreffer aus OParl-Locations sind nicht
+    # unabhängig von Stufe A (gleiche Punkte) und werden getrennt ausgewiesen.
+    n_a = one("SELECT COUNT(DISTINCT paper_id) FROM paper_location WHERE stage = 'A' AND method <> 'vererbt'")
+    pairs = db.execute(
+        "SELECT b.paper_id, lb.level || ' (' || lb.source || ')', (SELECT COUNT(*) FROM paper_location a "
+        "JOIN location la ON la.id = a.location_id WHERE a.paper_id = b.paper_id AND a.stage = 'A' "
+        "AND la.ortsteil = lb.ortsteil) FROM paper_location b JOIN location lb ON lb.id = b.location_id "
+        "WHERE b.stage = 'B' AND b.method <> 'vererbt' AND lb.level <> 'stadtbezirk' AND b.paper_id IN "
+        "(SELECT paper_id FROM paper_location WHERE stage = 'A' AND method <> 'vererbt')").fetchall()
+    print("Vorlagen mit Stufe A, für die Stufe B einen Ortsteil findet:",
+          pct(len({p for p, *_ in pairs}), n_a))
+    for kind in sorted({k for _, k, _ in pairs}):
+        sub = [ok for _, k, ok in pairs if k == kind]
+        note = " – nicht unabhängig von Stufe A" if "oparl-bonn" in kind else ""
+        print(f"  Ortsteil wie Stufe A, Ebene {kind}:", pct(sum(1 for ok in sub if ok), len(sub)) + note)
+
+    streets = [r[0] for r in db.execute(
+        "SELECT street FROM location WHERE street IS NOT NULL AND source = 'oparl-bonn'")]
     with_number = [s for s in streets if re.search(r"\d", s)]
     print("\nDatenschutz")
     print("Orte mit Hausnummer im Straßenfeld:", len(with_number))

@@ -1,4 +1,4 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|build|export|check|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-streets|build|export|check|all}"""
 import sys
 
 from . import build, check, export, fetch
@@ -8,6 +8,7 @@ STEPS = {
     "fetch-papers": fetch.fetch_papers,
     "fetch-organizations": fetch.fetch_organizations,
     "fetch-lite": fetch.fetch_consultations_lite,
+    "fetch-streets": fetch.fetch_streets,
     "build": build.build,
     "export": export.export,
     "check": check.check,

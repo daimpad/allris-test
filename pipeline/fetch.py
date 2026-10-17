@@ -4,7 +4,7 @@ import json
 from datetime import datetime, timezone
 
 from . import config
-from .net import get_json, post_graphql
+from .net import get_json, post_form, post_graphql
 
 
 def _now():
@@ -84,7 +84,73 @@ def fetch_consultations_lite(page=100, workers=2):
     print(f"{len(seen)} Beratungen → {config.CONSULTATIONS_LITE}")
 
 
+OVERPASS_QUERY = '[out:json][timeout:90];way["highway"]["name"]({s},{w},{n},{e});out tags geom;'
+
+
+def _overpass(query):
+    for url in config.OVERPASS:
+        try:
+            return post_form(url, {"data": query}, tries=3)
+        except Exception as exc:  # nächster Server
+            print(f"  {url}: {exc}", flush=True)
+    raise RuntimeError("Kein Overpass-Server erreichbar.")
+
+
+def _tile_ways(s, w, n, e, depth=0):
+    """Ways einer Kachel (zwischengespeichert); schlägt der Abruf fehl, wird die Kachel
+    geviertelt. Liefert (Ways, fehlende Kacheln)."""
+    cache = config.OSM_TILES / f"{s}_{w}_{n}_{e}.json"
+    if cache.exists():
+        return json.loads(cache.read_text()), []
+    try:
+        elements = _overpass(OVERPASS_QUERY.format(s=s, w=w, n=n, e=e))["elements"]
+    except RuntimeError:
+        if depth >= 2:
+            return [], [(s, w, n, e)]
+        ms, mw = round((s + n) / 2, 4), round((w + e) / 2, 4)
+        ways, missing = [], []
+        for q in ((s, w, ms, mw), (s, mw, ms, e), (ms, w, n, mw), (ms, mw, n, e)):
+            got, miss = _tile_ways(*q, depth + 1)
+            ways += got
+            missing += miss
+        return ways, missing
+    config.OSM_TILES.mkdir(parents=True, exist_ok=True)
+    cache.write_text(json.dumps(elements, ensure_ascii=False))
+    return elements, []
+
+
+def fetch_streets(step=0.05):
+    """Benannte Straßen (OSM-Ways mit `highway` und `name`) im Stadtgebiet, in Kacheln.
+    Nicht abrufbare Kacheln werden übersprungen und in der Ausgabe als `missing_tiles`
+    vermerkt; ein erneuter Aufruf holt nur diese nach."""
+    south, west, north, east = config.BONN_BBOX
+    tiles = [(round(s, 2), round(w, 2), round(min(s + step, north), 2), round(min(w + step, east), 2))
+             for s in _frange(south, north, step) for w in _frange(west, east, step)]
+    ways, missing = {}, []
+    for i, tile in enumerate(tiles, 1):
+        elements, miss = _tile_ways(*tile)
+        missing += miss
+        for el in elements:
+            if el.get("geometry"):
+                ways[el["id"]] = {"id": el["id"], "name": el["tags"]["name"],
+                                  "highway": el["tags"].get("highway"),
+                                  "coords": [[p["lon"], p["lat"]] for p in el["geometry"]]}
+        print(f"Kachel {i}/{len(tiles)}: {len(ways)} Ways, {len(miss)} Teilkacheln fehlen", flush=True)
+    config.OSM_STREETS.write_text(json.dumps(
+        {"ways": list(ways.values()), "missing_tiles": missing}, ensure_ascii=False))
+    _stamp("osm_streets")
+    print(f"{len(ways)} Ways → {config.OSM_STREETS}; fehlende Teilkacheln: {len(missing)}")
+
+
+def _frange(start, stop, step):
+    x = start
+    while x < stop - 1e-9:
+        yield x
+        x += step
+
+
 def fetch_all():
     fetch_papers()
     fetch_organizations()
     fetch_consultations_lite()
+    fetch_streets()

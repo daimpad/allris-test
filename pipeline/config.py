@@ -11,12 +11,20 @@ PAPERS = RAW / "papers.jsonl"
 ORGANIZATIONS = RAW / "organizations.json"
 VERWALTUNGSBEREICHE = RAW / "verwaltungsbereiche.json"
 CONSULTATIONS_LITE = RAW / "consultations_lite.jsonl"
+OSM_STREETS = RAW / "osm_streets.json"
+OSM_TILES = RAW / "osm_tiles"
 STAND = RAW / "STAND.json"
 ORTSTEILE = GEO / "ortsteile_bonn.geojson"
 DB = BUILD / "allris.sqlite"
 
 OPARL_BODY = "https://www.bonn.sitzung-online.de/oparl/bodies/1"
 LITE_GRAPHQL = "https://oparl.bonn.machdenstaat.de/graphql"
+OVERPASS = [
+    "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+    "https://overpass-api.de/api/interpreter",
+]
+# Umgebendes Rechteck der 51 Ortsteile (Süd, West, Nord, Ost), für den Kachelabruf gerundet
+BONN_BBOX = (50.63, 7.02, 50.78, 7.22)
 USER_AGENT = "allris-bonn-pipeline (https://github.com/daimpad/allris-test)"
 
 # Quelle je Datensatz; wird in die Datenbank und in jeden Export übernommen.
@@ -28,6 +36,10 @@ SOURCES = {
     "oparl-lite": {
         "url": LITE_GRAPHQL,
         "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
+    },
+    "osm": {
+        "url": "https://www.openstreetmap.org (Overpass API)",
+        "license": "ODbL 1.0, © OpenStreetMap-Mitwirkende",
     },
     "geo-bonn": {
         "url": "https://opendata.bonn.de/dataset/flächen-der-ortsteile",

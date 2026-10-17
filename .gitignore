@@ -6,6 +6,8 @@ __pycache__/
 # Lokale Rohdaten und Build (per `python -m pipeline fetch` bzw. `build`)
 data/raw/papers.jsonl
 data/raw/consultations_lite.jsonl
+data/raw/osm_streets.json
+data/raw/osm_tiles/
 data/raw/STAND.json
 data/build/
 .venv/
