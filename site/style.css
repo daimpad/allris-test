@@ -7,8 +7,8 @@
   --accent: #0b5cad;
   --accent-soft: #e3eef9;
   --hoch: #1f6f43;
-  --mittel: #b25e09;
-  --niedrig: #8a3ffc;
+  --mittel: #985000;
+  --niedrig: #6d28d9;
   --prelim: #fff4d6;
   --radius: 8px;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -109,3 +109,15 @@ dl.facts dd { margin: 0; }
   .map-panel { min-height: 320px; order: -1; }
   .list-panel { max-height: 65vh; }
 }
+
+.skip-link { position: absolute; left: 8px; top: -40px; z-index: 1000; background: var(--surface); color: var(--accent); padding: 8px 12px; border-radius: var(--radius); }
+.skip-link:focus { top: 8px; }
+.more-filters summary { cursor: pointer; font-size: .85rem; color: var(--muted); }
+.more-filters[open] { display: grid; gap: 8px; }
+fieldset[hidden] { display: none; }
+.glossary { margin-top: 8px; font-size: .85rem; }
+.glossary summary { cursor: pointer; color: var(--accent); }
+.glossary dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; margin: 8px 0 4px; }
+.glossary dt { font-weight: 600; }
+.glossary dd { margin: 0; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }

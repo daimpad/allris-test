@@ -1,7 +1,11 @@
-"""Exporte für den Pilot-Ortsteil: Vorlagen mit Prozesslinie, Akteuren und Orten (JSON, GeoJSON)."""
+"""Exporte: Pilot-Ortsteil (data/export/endenich, im Repository) und ganz Bonn je Ortsteil,
+Stadtbezirk und Jahr (data/export/bonn, für die Webseite; wird bei der Veröffentlichung erzeugt).
+Jede Vorlage mit Prozesslinie, Akteuren und Ortsbezügen samt Quelle."""
 import csv
 import json
 import random
+import re
+import shutil
 import sqlite3
 from datetime import datetime, timezone
 
@@ -103,7 +107,79 @@ def _write_tsv(path, header, rows):
         w.writerows(rows)
 
 
-def export(ortsteil=config.PILOT_ORTSTEIL):
+def export():
+    export_pilot()
+    export_all()
+
+
+def _meta(db, **extra):
+    return {**extra, "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "sources": [dict(r) for r in db.execute("SELECT * FROM source")], "note": DERIVED_NOTE}
+
+
+def slug(name):
+    name = name.lower().translate(str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss"}))
+    return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
+
+
+def _dump(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
+
+
+def export_all():
+    """Ganz Bonn: je Ortsteil, je Stadtbezirk (nur Bezüge auf Bezirksebene) und Vorlagen ohne
+    Ortsbezug je Jahr; dazu index.json mit Zählungen für die Auswahl auf der Webseite."""
+    db = sqlite3.connect(config.DB)
+    db.row_factory = sqlite3.Row
+    out = config.EXPORT / "bonn"
+    shutil.rmtree(out, ignore_errors=True)
+    cache = {}
+    detail = lambda pid: cache.setdefault(pid, _paper_detail(db, pid))
+    order = "ORDER BY p.date DESC, p.reference"
+    index = {"ortsteile": [], "bezirke": [], "ohne_ortsbezug": []}
+
+    for ot in json.loads(config.ORTSTEILE.read_text())["features"]:
+        name, bezirk = ot["properties"]["ortsteil_bez"], ot["properties"]["bezirk_bez"]
+        ids = [r[0] for r in db.execute(
+            "SELECT DISTINCT pl.paper_id FROM paper_location pl JOIN location l ON l.id = pl.location_id "
+            f"JOIN paper p ON p.id = pl.paper_id WHERE l.ortsteil = ? {order}", (name,))]
+        _dump(out / "ortsteile" / f"{slug(name)}.json",
+              {"meta": _meta(db, ortsteil=name, stadtbezirk=bezirk, count=len(ids)),
+               "papers": [detail(i) for i in ids]})
+        index["ortsteile"].append({"name": name, "slug": slug(name), "stadtbezirk": bezirk,
+                                   "count": len(ids)})
+
+    for bz in json.loads(config.STADTBEZIRKE.read_text())["features"]:
+        name = bz["properties"]["bezirk_bez"]
+        ids = [r[0] for r in db.execute(
+            "SELECT DISTINCT pl.paper_id FROM paper_location pl JOIN location l ON l.id = pl.location_id "
+            "JOIN paper p ON p.id = pl.paper_id WHERE l.level = 'stadtbezirk' AND l.stadtbezirk = ? "
+            "AND pl.paper_id NOT IN (SELECT pl2.paper_id FROM paper_location pl2 JOIN location l2 "
+            f"ON l2.id = pl2.location_id WHERE l2.ortsteil IS NOT NULL AND l2.stadtbezirk = ?) {order}",
+            (name, name))]
+        _dump(out / "bezirke" / f"{slug(name)}.json",
+              {"meta": _meta(db, stadtbezirk=name, count=len(ids)), "papers": [detail(i) for i in ids]})
+        index["bezirke"].append({"name": name, "slug": slug(name), "count": len(ids)})
+
+    years = [r[0] for r in db.execute(
+        "SELECT DISTINCT substr(date, 1, 4) y FROM paper WHERE id NOT IN "
+        "(SELECT paper_id FROM paper_location) ORDER BY y DESC")]
+    for year in years:
+        ids = [r[0] for r in db.execute(
+            "SELECT p.id FROM paper p WHERE substr(p.date, 1, 4) = ? AND p.id NOT IN "
+            f"(SELECT paper_id FROM paper_location) {order}", (year,))]
+        _dump(out / "ohne-ortsbezug" / f"{year}.json",
+              {"meta": _meta(db, jahr=year, count=len(ids)), "papers": [detail(i) for i in ids]})
+        index["ohne_ortsbezug"].append({"jahr": year, "count": len(ids)})
+
+    _dump(out / "index.json", {"meta": _meta(db), **index})
+    db.close()
+    print(f"Bonn: {len(index['ortsteile'])} Ortsteile, {len(index['bezirke'])} Bezirke, "
+          f"{len(years)} Jahre ohne Ortsbezug, {len(cache)} Vorlagen → {out}")
+
+
+def export_pilot(ortsteil=config.PILOT_ORTSTEIL):
     db = sqlite3.connect(config.DB)
     db.row_factory = sqlite3.Row
     ids = [r[0] for r in db.execute(
@@ -111,13 +187,7 @@ def export(ortsteil=config.PILOT_ORTSTEIL):
         "JOIN paper p ON p.id = pl.paper_id WHERE l.ortsteil = ? ORDER BY p.date DESC, p.reference",
         (ortsteil,))]
     papers = [_paper_detail(db, pid) for pid in ids]
-    meta = {
-        "ortsteil": ortsteil,
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "sources": [dict(r) for r in db.execute("SELECT * FROM source")],
-        "note": DERIVED_NOTE,
-        "count": len(papers),
-    }
+    meta = _meta(db, ortsteil=ortsteil, count=len(papers))
     out = config.EXPORT / ortsteil.lower()
     out.mkdir(parents=True, exist_ok=True)
     (out / "vorlagen.json").write_text(

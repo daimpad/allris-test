@@ -2,7 +2,8 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "generated_at": "2026-10-17T15:53:33+00:00",
+  "count": 576,
+  "generated_at": "2026-10-17T22:40:26+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -29,8 +30,7 @@
     "retrieved_at": "2026-10-17"
    }
   ],
-  "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend.",
-  "count": 576
+  "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
  },
  "features": [
   {

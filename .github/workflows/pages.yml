@@ -1,0 +1,97 @@
+# Daten aus der OParl-API (Stadt Bonn) und OParl-Lite abrufen, aufbereiten, prüfen und die
+# Ratskarte mit allen Exporten über GitHub Pages veröffentlichen. Läuft bei jedem Push auf main,
+# täglich früh am Morgen (die Quelle wird täglich aktualisiert) und auf Knopfdruck.
+name: Daten aktualisieren und Seite veröffentlichen
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Abhängigkeiten
+        run: pip install -r requirements.txt
+
+      # Der letzte erfolgreiche Abruf dient als Rückfall, falls eine Quelle nicht antwortet.
+      - name: Rohdaten des letzten Laufs
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/raw/papers.jsonl
+            data/raw/consultations_lite.jsonl
+            data/raw/organizations.json
+            data/raw/verwaltungsbereiche.json
+            data/raw/STAND.json
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
+      - name: Abruf OParl-API Stadt Bonn (Vorlagen)
+        run: python -m pipeline fetch-papers
+        continue-on-error: true
+
+      - name: Abruf OParl-API Stadt Bonn (Gremien, Ämter)
+        run: python -m pipeline fetch-organizations
+        continue-on-error: true
+
+      - name: Abruf OParl-Lite (Sitzungen, Tagesordnungspunkte)
+        run: python -m pipeline fetch-lite
+        continue-on-error: true
+
+      - name: Aufbereiten, Geokodierung, Export
+        run: |
+          python -m pipeline build
+          python -m pipeline export
+          python -m pipeline check
+
+      - name: Verifikation gegen die OParl-API
+        run: python -m pipeline verify
+        continue-on-error: true
+
+      - name: Datenpaket
+        run: python -m pipeline package
+
+      - name: Seite zusammenstellen (Frontend, Exporte, Flächen)
+        run: |
+          mkdir -p _site/data/geo
+          cp -r site/. _site/
+          cp -r data/export _site/data/
+          cp data/LICENSE-DATA.md _site/data/
+          cp data/geo/*.geojson _site/data/geo/
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Auf GitHub Pages veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v5

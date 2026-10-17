@@ -46,6 +46,7 @@ CREATE TABLE paper_responsibility (
   paper_id TEXT REFERENCES paper, organization_id TEXT REFERENCES organization, kind TEXT,
   method TEXT, evidence TEXT, derived INTEGER);
 CREATE INDEX consultation_paper ON consultation(paper_id);
+CREATE INDEX relation_child ON paper_relation(child_id);
 CREATE INDEX paper_location_loc ON paper_location(location_id);
 CREATE INDEX location_ortsteil ON location(ortsteil);
 CREATE INDEX originator_paper ON paper_originator(paper_id);

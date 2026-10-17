@@ -74,7 +74,7 @@ class Gazetteer:
     def __init__(self, ways=None, street_points=()):
         """`street_points`: (Name, lon, lat) aus den OParl-Locations der Stadt."""
         ortsteile = json.loads(config.ORTSTEILE.read_text())["features"]
-        bezirke = json.loads((config.GEO / "stadtbezirke_bonn.geojson").read_text())["features"]
+        bezirke = json.loads(config.STADTBEZIRKE.read_text())["features"]
         self.ortsteile = [f["properties"] for f in ortsteile]
         self.ot_geoms = [to_m(shape(f["geometry"])) for f in ortsteile]
         self.ot_tree = STRtree(self.ot_geoms)
@@ -83,7 +83,10 @@ class Gazetteer:
         self.bezirk_point = {f["properties"]["bezirk_bez"]: shape(f["geometry"]).representative_point()
                              for f in bezirke}
         self.ot_by_name = {p["ortsteil_bez"]: p for p in self.ortsteile}
-        self.streets = self._streets(ways if ways is not None else self._load_ways())
+        if ways is None and config.STRASSEN.exists():
+            self.streets = json.loads(config.STRASSEN.read_text())["streets"]
+        else:
+            self.streets = self._streets(ways if ways is not None else self._load_ways())
         self._add_points(street_points)
 
         # Ortsteilnamen, Varianten und Adjektive („Endenicher“) → Ortsteil
@@ -241,3 +244,17 @@ class Gazetteer:
 
 def plan_numbers(title):
     return [(m.group(1), m.group(0)) for m in PLAN.finditer(title or "")]
+
+
+def write_gazetteer():
+    """Straßenverzeichnis aus den OSM-Rohdaten neu berechnen und in data/geo ablegen."""
+    gaz = Gazetteer(ways=Gazetteer._load_ways())
+    stand = json.loads(config.STAND.read_text()) if config.STAND.exists() else {}
+    config.STRASSEN.write_text(json.dumps({
+        "meta": {"source": "OpenStreetMap (Overpass API), benannte Ways mit highway-Tag",
+                 "license": config.SOURCES["osm"]["license"],
+                 "retrieved_at": stand.get("osm_streets"),
+                 "note": "Ortsteile je Straße per Verschneidung mit den Ortsteilflächen der Stadt Bonn; "
+                         "component = räumlich getrennte Lage desselben Namens"},
+        "streets": dict(sorted(gaz.streets.items()))}, ensure_ascii=False, separators=(",", ":")))
+    print(f"{len(gaz.streets)} Straßennamen → {config.STRASSEN}")

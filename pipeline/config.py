@@ -15,6 +15,10 @@ OSM_STREETS = RAW / "osm_streets.json"
 OSM_TILES = RAW / "osm_tiles"
 STAND = RAW / "STAND.json"
 ORTSTEILE = GEO / "ortsteile_bonn.geojson"
+STADTBEZIRKE = GEO / "stadtbezirke_bonn.geojson"
+# Straßenverzeichnis (Name → Lagen je Ortsteil), abgeleitet aus OSM; im Repository, damit die
+# Aktualisierung ohne Overpass auskommt. Neu erzeugen mit `python -m pipeline gazetteer`.
+STRASSEN = GEO / "strassen_bonn.json"
 DB = BUILD / "allris.sqlite"
 
 OPARL_BODY = "https://www.bonn.sitzung-online.de/oparl/bodies/1"
