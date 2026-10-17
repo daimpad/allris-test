@@ -1,6 +1,7 @@
 """HTTP-Abruf mit Wiederholung; nur Standardbibliothek."""
 import json
 import time
+import urllib.parse
 import urllib.request
 
 from .config import USER_AGENT
@@ -33,3 +34,9 @@ def post_graphql(url, query, variables=None, tries=6):
     if data.get("errors"):
         raise RuntimeError(f"GraphQL-Fehler: {data['errors'][:2]}")
     return data["data"]
+
+
+def post_form(url, fields, tries=4):
+    body = urllib.parse.urlencode(fields).encode()
+    req = urllib.request.Request(url, data=body, headers={"User-Agent": USER_AGENT})
+    return _open(req, tries)

@@ -33,11 +33,17 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Seite zusammenstellen (Frontend, Exporte, Ortsteilflächen)
+        run: |
+          mkdir -p _site/data/geo
+          cp -r site/. _site/
+          cp -r data/export _site/data/
+          cp data/LICENSE-DATA.md _site/data/
+          cp data/geo/*.geojson _site/data/geo/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5

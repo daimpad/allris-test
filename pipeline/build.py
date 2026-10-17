@@ -4,6 +4,7 @@ import sqlite3
 
 from . import actors, config
 from .geo import Ortsteile
+from .geocode import Gazetteer, plan_numbers
 
 SCHEMA = """
 CREATE TABLE source (
@@ -29,11 +30,15 @@ CREATE TABLE consultation (
   source TEXT, link_source TEXT);
 CREATE TABLE location (
   id TEXT PRIMARY KEY, street TEXT, postal_code TEXT, sub_locality TEXT, description TEXT,
-  lon REAL, lat REAL, ortsteil TEXT, ortsteil_nr INTEGER, stadtbezirk TEXT, source TEXT);
+  lon REAL, lat REAL, ortsteil TEXT, ortsteil_nr INTEGER, stadtbezirk TEXT,
+  level TEXT /* strasse | ortsteil | stadtbezirk */, source TEXT);
 CREATE TABLE paper_location (
   paper_id TEXT REFERENCES paper, location_id TEXT REFERENCES location, stage TEXT,
   method TEXT, confidence TEXT, evidence TEXT, source_object TEXT,
   PRIMARY KEY (paper_id, location_id, method));
+CREATE TABLE paper_plan (
+  paper_id TEXT REFERENCES paper, plan_nr TEXT, evidence TEXT,
+  PRIMARY KEY (paper_id, plan_nr));
 CREATE TABLE paper_originator (
   paper_id TEXT REFERENCES paper, actor TEXT, actor_type TEXT,
   organization_id TEXT REFERENCES organization, method TEXT, evidence TEXT, derived INTEGER);
@@ -73,6 +78,7 @@ def build():
     retrieved = {
         "oparl-bonn": stand.get("papers"),
         "oparl-lite": stand.get("consultations_lite"),
+        "osm": stand.get("osm_streets"),
         "geo-bonn": stand.get("geo", "2026-10-17"),
     }
     db.executemany("INSERT INTO source VALUES (?,?,?,?)",
@@ -88,8 +94,8 @@ def build():
 
     papers_by_id = {p["id"]: p for p in papers}
     ortsteile = Ortsteile()
-    meetings, agenda, locations = {}, {}, {}
-    rows = {k: [] for k in ("paper", "rel", "cons", "ploc", "orig", "resp")}
+    meetings, agenda, locations, bv_bezirke = {}, {}, {}, {}
+    rows = {k: [] for k in ("paper", "rel", "cons", "ploc", "orig", "resp", "plan")}
 
     for p in papers:
         mf = p.get("mainFile") or {}
@@ -131,11 +137,14 @@ def build():
                 loc["id"], (loc.get("streetAddress") or "").strip() or None, loc.get("postalCode"),
                 loc.get("subLocality"), loc.get("description"), lon, lat,
                 ot["ortsteil_bez"] if ot else None, ot["ortsteil"] if ot else None,
-                ot["bezirk_bez"] if ot else None)
+                ot["bezirk_bez"] if ot else None, "strasse", "oparl-bonn")
             rows["ploc"].append((p["id"], loc["id"], "A", "oparl_location",
                                  "hoch" if lon is not None else "niedrig",
                                  loc.get("description"), loc["id"]))
 
+        bv_bezirke[p["id"]] = bezirke
+        for nr, ev in plan_numbers(p.get("name")):
+            rows["plan"].append((p["id"], nr, ev))
         for r in actors.originators(p, orgs, bezirke):
             rows["orig"].append((p["id"], r["actor"], r["actor_type"], r["organization_id"],
                                  r["method"], r["evidence"], 1))
@@ -143,13 +152,16 @@ def build():
             rows["resp"].append((p["id"], r["organization_id"], r["kind"], r["method"],
                                  r["evidence"], r["derived"]))
 
+    rows["ploc"] += _stage_b(papers, bv_bezirke, locations)
+    rows["ploc"] += _inherited(papers, papers_by_id, rows["ploc"])
+
     db.executemany("INSERT INTO paper VALUES (?,?,?,?,?,?,?,?,?,'oparl-bonn')", rows["paper"])
     db.executemany("INSERT OR IGNORE INTO paper_relation VALUES (?,?,'oparl-bonn')", rows["rel"])
     db.executemany("INSERT INTO meeting VALUES (?,?,?,?,'oparl-lite')", meetings.values())
     db.executemany("INSERT INTO agenda_item VALUES (?,?,?,?,?,?,'oparl-lite')", agenda.values())
     db.executemany("INSERT INTO consultation VALUES (?,?,?,?,?,?,?,?,'oparl-bonn',?)", rows["cons"])
-    db.executemany("INSERT INTO location VALUES (?,?,?,?,?,?,?,?,?,?,'oparl-bonn')",
-                   locations.values())
+    db.executemany("INSERT INTO location VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", locations.values())
+    db.executemany("INSERT OR IGNORE INTO paper_plan VALUES (?,?,?)", rows["plan"])
     db.executemany("INSERT OR IGNORE INTO paper_location VALUES (?,?,?,?,?,?,?)", rows["ploc"])
     db.executemany("INSERT INTO paper_originator VALUES (?,?,?,?,?,?,?)", rows["orig"])
     db.executemany("INSERT INTO paper_responsibility VALUES (?,?,?,?,?,?)", rows["resp"])
@@ -157,3 +169,44 @@ def build():
     db.close()
     print(f"{len(papers)} Vorlagen, {len(rows['cons'])} Beratungen, {len(meetings)} Sitzungen, "
           f"{len(agenda)} TOPs, {len(locations)} Orte → {config.DB}")
+
+
+def _stage_b(papers, bv_bezirke, locations):
+    """Stufe B: Ortsbezüge aus dem Titel (Straße, Ortsteil, Stadtbezirk)."""
+    points = [(loc[1], loc[5], loc[6]) for loc in locations.values() if loc[-1] == "oparl-bonn"]
+    gaz = Gazetteer(street_points=points)
+    if not gaz.streets:
+        print(f"Hinweis: {config.OSM_STREETS} fehlt oder ist leer – Stufe B ohne Straßen.")
+    out = []
+    for p in papers:
+        for r in gaz.locate(p.get("name"), bv_bezirke.get(p["id"], ())):
+            if r["level"] == "strasse":
+                loc_id, source = f"strasse:{r['name']}|{r['ortsteil']}", r["source"]
+            else:
+                loc_id, source = f"{r['level']}:{r['name']}", "geo-bonn"
+            nr = gaz.ot_by_name[r["ortsteil"]]["ortsteil"] if r["ortsteil"] else None
+            locations[loc_id] = (loc_id, r["name"] if r["level"] == "strasse" else None, None, None,
+                                 r["name"], r["lon"], r["lat"], r["ortsteil"], nr, r["bezirk"],
+                                 r["level"], source)
+            out.append((p["id"], loc_id, "B", r["method"], r["confidence"], r["evidence"], p["id"]))
+    print(f"Stufe B: {len({r[0] for r in out})} Vorlagen, {len(out)} Ortsbezüge")
+    return out
+
+
+def _inherited(papers, papers_by_id, own_rows):
+    """Vorlagen ohne eigenen Ortsbezug erben die Ortsbezüge der übergeordneten Vorlage."""
+    own = {}
+    for r in own_rows:
+        own.setdefault(r[0], []).append(r)
+    out = []
+    for p in papers:
+        if p["id"] in own:
+            continue
+        for parent_id in p.get("superordinatedPaper") or []:
+            parent = papers_by_id.get(parent_id)
+            for _, loc_id, stage, _, conf, _, _ in own.get(parent_id, []):
+                out.append((p["id"], loc_id, stage, "vererbt", conf,
+                            f"übergeordnete Vorlage {parent.get('reference') if parent else parent_id}",
+                            parent_id))
+    print(f"Vererbt: {len({r[0] for r in out})} Vorlagen")
+    return out
