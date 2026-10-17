@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "generated_at": "2026-10-17T14:42:52+00:00",
+  "generated_at": "2026-10-17T14:46:00+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -12,7 +12,7 @@
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
-    "license": "CC BY-NC 4.0 (OParl-Lite Bonn, machdenstaat)",
+    "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
     "retrieved_at": "2026-10-17T14:42:46+00:00"
    },
    {

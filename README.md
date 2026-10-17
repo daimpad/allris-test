@@ -11,7 +11,7 @@ Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschlie�
 - `data/geo/` – Ortsteil- und Stadtbezirkspolygone (GeoJSON, WGS84).
 - `pipeline/` – Datenpipeline (Phase 1): Abruf, Normalisierung in SQLite, Exporte, Prüfung.
 - `data/export/endenich/` – Pilot-Export: Vorlagen mit Ortsbezug in Endenich (JSON, GeoJSON).
-- `data/LICENSE-DATA.md` – Lizenzen der Datendateien (CC0, CC BY-NC 4.0 bzw. ODbL), getrennt vom MIT-Code.
+- `data/LICENSE-DATA.md` – Lizenzen der Datendateien (CC0, CC BY 4.0 bzw. ODbL), getrennt vom MIT-Code.
 
 ## Start in Claude Code
 

@@ -27,7 +27,7 @@ SOURCES = {
     },
     "oparl-lite": {
         "url": LITE_GRAPHQL,
-        "license": "CC BY-NC 4.0 (OParl-Lite Bonn, machdenstaat)",
+        "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
     },
     "geo-bonn": {
         "url": "https://opendata.bonn.de/dataset/flächen-der-ortsteile",
