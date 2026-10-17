@@ -11,7 +11,7 @@ DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
     "Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind "
     "abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: "
-    "Straßenverzeichnis noch unvollständig, Stichprobenprüfung ausstehend."
+    "Stichprobenprüfung von Hand ausstehend."
 )
 AUDIT_COLUMNS = ["drucksache", "datum", "vorlagenart", "titel", "stufe", "methode", "ebene", "treffer",
                  "ortsteil", "stadtbezirk", "konfidenz", "fundstelle", "quellobjekt", "pruefstatus"]

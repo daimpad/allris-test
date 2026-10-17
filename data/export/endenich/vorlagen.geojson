@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "generated_at": "2026-10-17T15:31:10+00:00",
+  "generated_at": "2026-10-17T15:53:33+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -20,7 +20,7 @@
     "name": "osm",
     "url": "https://www.openstreetmap.org (Overpass API)",
     "license": "ODbL 1.0, © OpenStreetMap-Mitwirkende",
-    "retrieved_at": null
+    "retrieved_at": "2026-10-17T15:49:06+00:00"
    },
    {
     "name": "geo-bonn",
@@ -29,10 +29,130 @@
     "retrieved_at": "2026-10-17"
    }
   ],
-  "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Straßenverzeichnis noch unvollständig, Stichprobenprüfung ausstehend.",
-  "count": 430
+  "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend.",
+  "count": 576
  },
  "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.061371,
+     50.72951
+    ]
+   },
+   "properties": {
+    "reference": "261798-01",
+    "name": "Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“ hier: Dringlichkeitsentscheidung aufgrund der Ablehnung der Befreiung im Naturschutzbeirat",
+    "paper_type": "Dringlichkeitsentscheidung OB",
+    "date": "2026-10-13",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029806"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.060506,
+     50.73301
+    ]
+   },
+   "properties": {
+    "reference": "261798-01",
+    "name": "Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“ hier: Dringlichkeitsentscheidung aufgrund der Ablehnung der Befreiung im Naturschutzbeirat",
+    "paper_type": "Dringlichkeitsentscheidung OB",
+    "date": "2026-10-13",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "An der Schwarzen Brücke",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029806"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "261553-01 ST",
+    "name": "Stellungnahme zur Großen Anfrage: Verkehrsführung Siemensstraße und neu angelegte Bushaltestelle Vili-Viorel-Pāun-Platz",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-10-09",
+    "amt": "66 Tiefbauamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029611"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064404,
+     50.736188
+    ]
+   },
+   "properties": {
+    "reference": "261529-06",
+    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Păun-Platz",
+    "paper_type": "Anregungen und Beschwerden",
+    "date": "2026-10-06",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Vili-Viorel-Păun-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029745"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064404,
+     50.736188
+    ]
+   },
+   "properties": {
+    "reference": "261529-07",
+    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Păun-Platz",
+    "paper_type": "Anregungen und Beschwerden",
+    "date": "2026-10-06",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Vili-Viorel-Păun-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029749"
+   }
+  },
   {
    "type": "Feature",
    "geometry": {
@@ -86,6 +206,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "261749",
+    "name": "Bürgerantrag: Modellprojekt „Schwammstadt“ - klimagerechte Umgestaltung und Förderung des Radverkehrs im Teilabschnitt Endenicher Straße 238 bis 220",
+    "paper_type": "Anregungen und Beschwerden",
+    "date": "2026-09-29",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029456"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -103,6 +247,54 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029600"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.061371,
+     50.72951
+    ]
+   },
+   "properties": {
+    "reference": "261798",
+    "name": "Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“",
+    "paper_type": "Beschlussvorlage",
+    "date": "2026-09-24",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029541"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.060506,
+     50.73301
+    ]
+   },
+   "properties": {
+    "reference": "261798",
+    "name": "Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“",
+    "paper_type": "Beschlussvorlage",
+    "date": "2026-09-24",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "An der Schwarzen Brücke",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029541"
    }
   },
   {
@@ -134,6 +326,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "260745-02 ST",
+    "name": "Vertagungsbitte zum Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der Hausnummer 82",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-09-07",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029126"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -158,8 +374,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -182,8 +398,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "260545-01 ST",
+    "name": "Stellungnahme zu Grüne-Bezirksfraktion-Antrag: Baumschäden Siemensstraße, Auf dem Hügel, am Meßdorfer Feld",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-08-31",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029066"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -206,8 +446,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -230,8 +470,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743616,
-     50.7239861
+     7.072678,
+     50.724117
     ]
    },
    "properties": {
@@ -254,8 +494,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743879,
-     50.7206135
+     7.074105,
+     50.719306
     ]
    },
    "properties": {
@@ -271,6 +511,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028854"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "261553",
+    "name": "Grüne-Große Anfrage: Verkehrsführung Siemensstraße und neu angelegte Bushaltestelle Vili-Viorel-Pāun-Platz",
+    "paper_type": "Große Anfrage",
+    "date": "2026-08-18",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028952"
    }
   },
   {
@@ -422,8 +686,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0729439,
-     50.7257598
+     7.07273,
+     50.725757
     ]
    },
    "properties": {
@@ -494,8 +758,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -518,8 +782,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -542,8 +806,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -590,8 +854,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -614,8 +878,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "260745-01 ST",
+    "name": "Vertagungsbitte zum Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der Hausnummer 82",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-05-13",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027341"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078022,
+     50.723774
     ]
    },
    "properties": {
@@ -624,11 +912,11 @@
     "paper_type": "Änderungsantrag",
     "date": "2026-05-07",
     "amt": "01-2 Ratsbüro",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Sebastianstraße",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027422"
    }
@@ -662,8 +950,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "253599-04 ST",
+    "name": "Vertagungsbitte zum BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-05-06",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026905"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078022,
+     50.723774
     ]
    },
    "properties": {
@@ -672,13 +984,85 @@
     "paper_type": "Stellungnahme der Verwaltung",
     "date": "2026-04-24",
     "amt": "33 Bürgerdienste",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Sebastianstraße",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024937"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "260745",
+    "name": "Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der Hausnummer 82",
+    "paper_type": "Anregungen und Beschwerden",
+    "date": "2026-04-22",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026718"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "253599-02 AA",
+    "name": "BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328; Drucksachengruppe 253599",
+    "paper_type": "Änderungsantrag",
+    "date": "2026-04-17",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026632"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "253599-03",
+    "name": "BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599",
+    "paper_type": "Antrag",
+    "date": "2026-04-17",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026633"
    }
   },
   {
@@ -710,8 +1094,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -734,8 +1118,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0662837,
-     50.7245726
+     7.066191,
+     50.724665
     ]
    },
    "properties": {
@@ -758,8 +1142,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -782,8 +1166,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0728361,
-     50.7212216
+     7.076179,
+     50.724239
     ]
    },
    "properties": {
@@ -806,8 +1190,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.066322,
+     50.736421
+    ]
+   },
+   "properties": {
+    "reference": "260579",
+    "name": "Grüne-Bezirksfraktion-Prüfauftrag: Maßnahmen zur Erhöhung der Sicherheit im verkehrsberuhigten Bereich auf der Robert- Havemann-Straße und Simone-Veil-Straße",
+    "paper_type": "Antrag",
+    "date": "2026-04-01",
+    "amt": "01-2 Ratsbüro",
+    "place": "Simone-Veil-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026371"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -830,8 +1238,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "260545",
+    "name": "Grüne-Bezirksfraktion-Antrag:Baumschäden Siemensstraße, Auf dem Hügel, am Meßdorfer Feld",
+    "paper_type": "Antrag",
+    "date": "2026-03-31",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026306"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -854,8 +1286,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -878,8 +1310,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0662837,
-     50.7245726
+     7.066191,
+     50.724665
     ]
    },
    "properties": {
@@ -926,8 +1358,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -974,8 +1406,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0797524,
-     50.7252877
+     7.079794,
+     50.725463
     ]
    },
    "properties": {
@@ -1039,6 +1471,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021043"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.0709,
+     50.726788
+    ]
+   },
+   "properties": {
+    "reference": "253612-01 ST",
+    "name": "Stellungnahme zum Grüne-Antrag: Verbesserung des Hermann-Wandersleb-Ringes im Bereich des Fußgängerüberweges Effertzstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-01-27",
+    "amt": "66 Tiefbauamt",
+    "place": "Effertzstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025224"
    }
   },
   {
@@ -1262,8 +1718,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743616,
-     50.7239861
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "253599-01 ST",
+    "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-10-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024112"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072678,
+     50.724117
     ]
    },
    "properties": {
@@ -1286,8 +1766,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0700295,
-     50.7228231
+     7.058391,
+     50.726513
+    ]
+   },
+   "properties": {
+    "reference": "252765-01 ST",
+    "name": "Baumersatz an Sitzbank Meßdorfer Feldweg",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-09-04",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Meßdorfer Feldweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023923"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "253718",
+    "name": "Wiederherstellung der Siemensstraße nach Fertigstellung der aktuellen Arbeiten an der Fernwärmezufuhr",
+    "paper_type": "Dringlichkeitsantrag",
+    "date": "2025-09-02",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024187"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070126,
+     50.723124
     ]
    },
    "properties": {
@@ -1358,8 +1886,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.0709,
+     50.726788
+    ]
+   },
+   "properties": {
+    "reference": "253612",
+    "name": "Grüne-Antrag: Verbesserung des Hermann-Wandersleb-Ringes im Bereich des Fußgängerüberweges Effertzstraße",
+    "paper_type": "Antrag",
+    "date": "2025-08-07",
+    "amt": "01-2 Ratsbüro",
+    "place": "Effertzstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023892"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -1423,6 +1975,30 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023714"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "253599",
+    "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328",
+    "paper_type": "Anregungen und Beschwerden",
+    "date": "2025-08-05",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023856"
    }
   },
   {
@@ -1502,8 +2078,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -1519,6 +2095,78 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023229"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "253196-01 ST",
+    "name": "Bürgerantrag: Einrichtung einer Tempo 30-Zone im Bereich Herwarthstraße (ab Einmündung Gluckstraße), über Endenicher Straße bis zur Kreuzung am Wittelsbacherring.",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-06-13",
+    "amt": "33 Bürgerdienste",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023119"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "252722-01 ST",
+    "name": "Bürgerantrag: Einrichtung von Anwohnerparkplätzen im Bereich Endenicher Straße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-06-12",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023096"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "253221-01 ST",
+    "name": "Grüne-Antrag: Sicherung Fußgängerquerung Siemensstraße 184",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-06-12",
+    "amt": "33 Bürgerdienste",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023177"
    }
   },
   {
@@ -1550,8 +2198,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -1574,8 +2222,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -1622,8 +2270,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "253221",
+    "name": "Grüne-Antrag: Sicherung Fußgängerquerung Siemensstraße 184",
+    "paper_type": "Antrag",
+    "date": "2025-05-28",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023005"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -1639,6 +2311,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022996"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "253196",
+    "name": "Bürgerantrag: Einrichtung einer Tempo 30-Zone im Bereich Herwarthstraße (ab Einmündung Gluckstraße), über Endenicher Straße bis zur Kreuzung am Wittelsbacherring.",
+    "paper_type": "Anregungen und Beschwerden",
+    "date": "2025-05-26",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022962"
    }
   },
   {
@@ -1694,8 +2390,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743879,
-     50.7206135
+     7.074105,
+     50.719306
     ]
    },
    "properties": {
@@ -1910,6 +2606,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "252902",
+    "name": "Viktoriaunterführung (Unterführung Thomastraße/Endenicher Straße) Hier: Aufhebung der Ausschreibung und Verschiebung des Baubeginns wegen ausstehender Genehmigung der DB",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2025-04-22",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022346"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0737035,
      50.7337687
     ]
@@ -1934,8 +2654,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.078022,
+     50.723774
     ]
    },
    "properties": {
@@ -1944,11 +2664,11 @@
     "paper_type": "Stellungnahme der Verwaltung",
     "date": "2025-04-12",
     "amt": "33 Bürgerdienste",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Sebastianstraße",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022165"
    }
@@ -2006,8 +2726,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -2047,6 +2767,30 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021851"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "252661-002 ST",
+    "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße 238",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-03-24",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021960"
    }
   },
   {
@@ -2102,6 +2846,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.058391,
+     50.726513
+    ]
+   },
+   "properties": {
+    "reference": "252765",
+    "name": "Baumersatz an Sitzbank Meßdorfer Feldweg",
+    "paper_type": "Antrag",
+    "date": "2025-03-18",
+    "amt": "01-2 Ratsbüro",
+    "place": "Meßdorfer Feldweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021993"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -2126,8 +2894,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -2143,6 +2911,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021876"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "252722",
+    "name": "Bürgerantrag: Einrichtung von Anwohnerparkplätzen im Bereich Endenicher Straße",
+    "paper_type": "Anregungen und Beschwerden",
+    "date": "2025-03-11",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021884"
    }
   },
   {
@@ -2167,6 +2959,30 @@
     "method": "vererbt",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021671"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "252383-01 ST",
+    "name": "Siemensstraße Baubeginn",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-03-07",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021602"
    }
   },
   {
@@ -2246,6 +3062,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07675,
+     50.717578
+    ]
+   },
+   "properties": {
+    "reference": "252453-01 ST",
+    "name": "Markierungen an der Straßenecke „Am Benderberg/Zur Marterkapelle“",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-02-28",
+    "amt": "33 Bürgerdienste",
+    "place": "Zur Marterkapelle",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021750"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -2263,6 +3103,30 @@
     "method": "ortsteil_adjektiv",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021714"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "252661",
+    "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße 238",
+    "paper_type": "Anregungen und Beschwerden",
+    "date": "2025-02-26",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021739"
    }
   },
   {
@@ -2294,6 +3158,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "231606-02",
+    "name": "Bürgerantrag: Tempo 30 in der Endenicher Straße",
+    "paper_type": "Beschlussvorlage",
+    "date": "2025-02-18",
+    "amt": "33 Bürgerdienste",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021394"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -2318,8 +3206,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0737035,
-     50.7337687
+     7.073172,
+     50.734047
     ]
    },
    "properties": {
@@ -2438,6 +3326,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07675,
+     50.717578
+    ]
+   },
+   "properties": {
+    "reference": "252453",
+    "name": "Markierungen an der Straßenecke „Am Benderberg/Zur Marterkapelle“",
+    "paper_type": "Große Anfrage",
+    "date": "2025-01-22",
+    "amt": "01-2 Ratsbüro",
+    "place": "Zur Marterkapelle",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021160"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -2534,8 +3446,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "240553-05 ST",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-01-14",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020852"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -2551,6 +3487,54 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020852"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "240553-05 ST",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-01-14",
+    "amt": "66 Tiefbauamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020852"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "252383",
+    "name": "Siemensstraße Baubeginn",
+    "paper_type": "Große Anfrage",
+    "date": "2025-01-13",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020972"
    }
   },
   {
@@ -2678,8 +3662,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "240553-04 ST",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-11-26",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020404"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -2702,8 +3710,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "240553-04 ST",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-11-26",
+    "amt": "66 Tiefbauamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020404"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -2774,8 +3806,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -2798,8 +3830,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -2870,8 +3902,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -2894,8 +3926,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -2918,8 +3950,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -2990,8 +4022,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.061371,
+     50.72951
     ]
    },
    "properties": {
@@ -3000,11 +4032,11 @@
     "paper_type": "Beschlussvorlage",
     "date": "2024-10-30",
     "amt": "61 Stadtplanungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019517"
    }
@@ -3038,8 +4070,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0708877,
-     50.7295937
+     7.064353,
+     50.727459
     ]
    },
    "properties": {
@@ -3062,8 +4094,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -3086,8 +4118,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -3134,8 +4166,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0708877,
-     50.7295937
+     7.064353,
+     50.727459
     ]
    },
    "properties": {
@@ -3206,8 +4238,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.074465,
+     50.724819
     ]
    },
    "properties": {
@@ -3216,11 +4248,11 @@
     "paper_type": "Beschlussvorlage",
     "date": "2024-10-07",
     "amt": "63 Bauordnungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Lutfridstraße",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019478"
    }
@@ -3230,8 +4262,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -3254,8 +4286,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -3350,8 +4382,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07895,
-     50.72722
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "232062-03 AA",
+    "name": "Änderungsantrag der Koalition - Bürgerantrag: Einrichtung von Querungshilfen im Bereich Endenicher Allee von Campusallee zum Wiesenweg/zur Schubertstraße Antrag zur Vorlage 232062",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-09-12",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019184"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078475,
+     50.72715
     ]
    },
    "properties": {
@@ -3422,8 +4478,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.078022,
+     50.723774
     ]
    },
    "properties": {
@@ -3432,11 +4488,11 @@
     "paper_type": "Anregungen und Beschwerden",
     "date": "2024-08-21",
     "amt": "Stabsstellle Bürgerbeteiligung",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Sebastianstraße",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018781"
    }
@@ -3470,8 +4526,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -3494,8 +4550,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0776268,
-     50.7281331
+     7.07942,
+     50.727678
     ]
    },
    "properties": {
@@ -3518,8 +4574,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0729439,
-     50.7257598
+     7.07273,
+     50.725757
     ]
    },
    "properties": {
@@ -3542,8 +4598,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -3566,8 +4622,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0776268,
-     50.7281331
+     7.07942,
+     50.727678
     ]
    },
    "properties": {
@@ -3614,8 +4670,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -3638,8 +4694,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "240553-03",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2024-07-22",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017862"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -3662,8 +4742,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "240553-03",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2024-07-22",
+    "amt": "66 Tiefbauamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017862"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -3686,8 +4790,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -3710,8 +4814,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -3734,8 +4838,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -3806,8 +4910,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "240553-02 AA",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung Antrag zur Vorlage 240553",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-05-23",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017441"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -3817,6 +4945,30 @@
     "date": "2024-05-23",
     "amt": "01-2 Ratsbüro",
     "place": "Kolpingstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017441"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "240553-02 AA",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung Antrag zur Vorlage 240553",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-05-23",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
@@ -3854,8 +5006,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "240553-01 AA",
+    "name": "Änderungsantrag der Koalition - Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung Antrag zur Vorlage 240553",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-05-22",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017421"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -3878,8 +5054,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "240553-01 AA",
+    "name": "Änderungsantrag der Koalition - Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung Antrag zur Vorlage 240553",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-05-22",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017421"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -3902,8 +5102,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -3926,8 +5126,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0640789,
-     50.7309932
+     7.064059,
+     50.731039
     ]
    },
    "properties": {
@@ -3950,8 +5150,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -3998,8 +5198,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07895,
-     50.72722
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "232062-02 ST",
+    "name": "Bürgerantrag: Einrichtung von Querungshilfen im Bereich Endenicher Allee von Campusallee zum Wiesenweg/zur Schubertstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-04-25",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016988"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078475,
+     50.72715
     ]
    },
    "properties": {
@@ -4022,8 +5246,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.061371,
+     50.72951
     ]
    },
    "properties": {
@@ -4032,11 +5256,11 @@
     "paper_type": "Beschlussvorlage",
     "date": "2024-04-25",
     "amt": "61 Stadtplanungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015972"
    }
@@ -4046,8 +5270,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "240553",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2024-04-25",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016598"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -4057,6 +5305,30 @@
     "date": "2024-04-25",
     "amt": "66 Tiefbauamt",
     "place": "Kolpingstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016598"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "240553",
+    "name": "Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof - Vorplanung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2024-04-25",
+    "amt": "66 Tiefbauamt",
+    "place": "Siemensstraße",
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
@@ -4142,8 +5414,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -4159,6 +5431,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016764"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "240409-01 ST",
+    "name": "Große Anfrage CDU: Rückfrage zur Fußgängerunterführung Thomasstraße/ Endenicher Straße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-04-05",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016667"
    }
   },
   {
@@ -4190,8 +5486,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -4214,8 +5510,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0662837,
-     50.7245726
+     7.066191,
+     50.724665
     ]
    },
    "properties": {
@@ -4231,6 +5527,30 @@
     "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016394"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "240409",
+    "name": "Große Anfrage CDU: Rückfrage zur Fußgängerunterführung Thomasstraße/ Endenicher Straße",
+    "paper_type": "Große Anfrage",
+    "date": "2024-03-06",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016308"
    }
   },
   {
@@ -4255,6 +5575,54 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016036"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "232136",
+    "name": "Grüne/u.w.-Anfrage: Beleuchtung Am Propsthof",
+    "paper_type": "Große Anfrage",
+    "date": "2024-02-28",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014777"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "232143",
+    "name": "Grüne/u.w.-Anfrage: Vorlage Planungen ZOB, „Uni trifft City“, Siemensstraße, Brüdergasse",
+    "paper_type": "Große Anfrage",
+    "date": "2024-02-28",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014784"
    }
   },
   {
@@ -4310,8 +5678,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743879,
-     50.7206135
+     7.074105,
+     50.719306
     ]
    },
    "properties": {
@@ -4382,8 +5750,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0708877,
-     50.7295937
+     7.064353,
+     50.727459
     ]
    },
    "properties": {
@@ -4406,8 +5774,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -4430,8 +5798,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0662837,
-     50.7245726
+     7.066191,
+     50.724665
     ]
    },
    "properties": {
@@ -4454,8 +5822,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -4478,8 +5846,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -4502,8 +5870,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0708877,
-     50.7295937
+     7.064353,
+     50.727459
     ]
    },
    "properties": {
@@ -4526,8 +5894,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743879,
-     50.7206135
+     7.074105,
+     50.719306
     ]
    },
    "properties": {
@@ -4550,8 +5918,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -4567,6 +5935,54 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015613"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.0709,
+     50.726788
+    ]
+   },
+   "properties": {
+    "reference": "240036-01 ST",
+    "name": "Antrag der Grünen-Bezirksfraktion: Gehwege Effertzstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-01-18",
+    "amt": "66 Tiefbauamt",
+    "place": "Effertzstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015615"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "232136-02 ST",
+    "name": "Grüne/u.w.-Anfrage: Beleuchtung Am Propsthof",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-01-15",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015556"
    }
   },
   {
@@ -4598,8 +6014,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07895,
-     50.72722
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "232062-01 ST",
+    "name": "Bürgerantrag: Einrichtung von Querungshilfen im Bereich Endenicher Allee von Campusallee zum Wiesenweg/zur Schubertstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-01-13",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078475,
+     50.72715
     ]
    },
    "properties": {
@@ -4615,6 +6055,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "232310-01 ST",
+    "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. 331",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-01-11",
+    "amt": "33 Bürgerdienste",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015455"
    }
   },
   {
@@ -4646,8 +6110,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0728361,
-     50.7212216
+     7.076179,
+     50.724239
     ]
    },
    "properties": {
@@ -4670,8 +6134,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -4694,8 +6158,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -4718,8 +6182,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0693367,
-     50.7229862
+     7.0709,
+     50.726788
+    ]
+   },
+   "properties": {
+    "reference": "240036",
+    "name": "Antrag der Grünen-Bezirksfraktion: Gehwege Effertzstraße",
+    "paper_type": "Antrag",
+    "date": "2024-01-09",
+    "amt": "01-2 Ratsbüro",
+    "place": "Effertzstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015486"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069318,
+     50.722897
     ]
    },
    "properties": {
@@ -4733,7 +6221,7 @@
     "ortsteil": "Endenich",
     "stage": "B",
     "method": "strasse",
-    "confidence": "niedrig",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015414"
    }
   },
@@ -4742,8 +6230,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0693367,
-     50.7229862
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "232342-01 ST",
+    "name": "CDU-Große Anfrage: Beleuchtung Hainstraße - Provinzialstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-01-08",
+    "amt": "66 Tiefbauamt",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015414"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069318,
+     50.722897
     ]
    },
    "properties": {
@@ -4757,7 +6269,7 @@
     "ortsteil": "Endenich",
     "stage": "B",
     "method": "strasse",
-    "confidence": "niedrig",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015335"
    }
   },
@@ -4766,8 +6278,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743616,
-     50.7239861
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "232342",
+    "name": "CDU-Große Anfrage: Beleuchtung Hainstraße - Provinzialstraße",
+    "paper_type": "Große Anfrage",
+    "date": "2023-12-19",
+    "amt": "01-2 Ratsbüro",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015335"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "232310",
+    "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. 331",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2023-12-15",
+    "amt": "Stabsstellle Bürgerbeteiligung",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015284"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072678,
+     50.724117
     ]
    },
    "properties": {
@@ -4838,8 +6398,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743616,
-     50.7239861
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "232136-01 ST",
+    "name": "Grüne/u.w.-Anfrage: Beleuchtung Am Propsthof",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-11-24",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014982"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "232143-01 ST",
+    "name": "Grüne/u.w.-Anfrage: Vorlage Planungen ZOB, „Uni trifft City“, Siemensstraße, Brüdergasse",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-11-22",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014896"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072678,
+     50.724117
     ]
    },
    "properties": {
@@ -4886,8 +6494,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -4958,8 +6566,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -5006,8 +6614,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0780833,
-     50.7263246
+     7.078083,
+     50.726372
     ]
    },
    "properties": {
@@ -5102,8 +6710,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "231606",
+    "name": "Bürgerantrag: Tempo 30 in der Endenicher Straße",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2023-08-28",
+    "amt": "Stabsstellle Bürgerbeteiligung",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013596"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -5119,6 +6751,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013500"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "231495-01 ST",
+    "name": "Beleuchtung der Reichsstraße/Provinzialstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-08-21",
+    "amt": "66 Tiefbauamt",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013490"
    }
   },
   {
@@ -5150,8 +6806,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "231495",
+    "name": "Beleuchtung der Reichsstraße/Provinzialstraße",
+    "paper_type": "Antrag",
+    "date": "2023-08-15",
+    "amt": "01-2 Ratsbüro",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013381"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "231294-01 ST",
+    "name": "Siemensstraße Straßenplanung",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-07-28",
+    "amt": "66 Tiefbauamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013048"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -5198,8 +6902,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0708877,
-     50.7295937
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "231294",
+    "name": "Grüne/u.w.-Große Anfrage: Siemensstraße Straßenplanung",
+    "paper_type": "Große Anfrage",
+    "date": "2023-07-20",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012962"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064353,
+     50.727459
     ]
    },
    "properties": {
@@ -5318,8 +7046,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -5342,8 +7070,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -5414,8 +7142,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0780833,
-     50.7263246
+     7.078083,
+     50.726372
     ]
    },
    "properties": {
@@ -5438,8 +7166,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0693367,
-     50.7229862
+     7.069318,
+     50.722897
     ]
    },
    "properties": {
@@ -5462,8 +7190,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0780833,
-     50.7263246
+     7.078083,
+     50.726372
     ]
    },
    "properties": {
@@ -5486,8 +7214,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0780833,
-     50.7263246
+     7.078083,
+     50.726372
     ]
    },
    "properties": {
@@ -5510,8 +7238,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0780833,
-     50.7263246
+     7.078083,
+     50.726372
     ]
    },
    "properties": {
@@ -5534,8 +7262,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.072251,
+     50.735946
     ]
    },
    "properties": {
@@ -5544,11 +7272,11 @@
     "paper_type": "Beschlussvorlage",
     "date": "2023-05-08",
     "amt": "61 Stadtplanungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Am Propsthof",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011639"
    }
@@ -5558,8 +7286,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -5582,8 +7310,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -5606,8 +7334,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -5623,6 +7351,78 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011995"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "230836",
+    "name": "Einleitung des Vergabeverfahrens Neue haltbare weiße Markierung der Umweltspur auf dem Hermann-Wandersleb-Ring zwischen \"Auf dem Hügel/Frongasse\" und \"Provinzialstraße/Rochusstraße\"",
+    "paper_type": "Beschlussvorlage: Einleitung",
+    "date": "2023-05-08",
+    "amt": "66 Tiefbauamt",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011995"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "230878",
+    "name": "Grundstück in Bonn, Endenicher Allee 17 - Errichtung eines Studentenwohnheims (Ersatzneubau) Az.: 10682/2022",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-05-04",
+    "amt": "63 Bauordnungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012067"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "230578",
+    "name": "Ersatzneubau inkl. Abbruch Aula, Seminargebäude und Bestandsmensa mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn -Entwurfsplanung-",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-05-02",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011358"
    }
   },
   {
@@ -5654,8 +7454,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0693367,
-     50.7229862
+     7.069318,
+     50.722897
     ]
    },
    "properties": {
@@ -5671,6 +7471,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012060"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "222051-004 ST",
+    "name": "Vorplanung zum Neubau einer Fuß- und Radwegbrücke über die A 565 zwischen Immenburgstraße und An der Immenburg – Ergebnisbericht über die Prüfung von Planungsvarianten zum Bau der Brücke vor Fertigstellung des 6-streifigen Ausbaus der A 565",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-04-26",
+    "amt": "66 Tiefbauamt",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011923"
    }
   },
   {
@@ -5702,6 +7526,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "222051-003 AA",
+    "name": "Änderungsantrag der Koalition - Vorplanung zum Neubau einer Fuß- und Radwegbrücke über die A 565 zwischen Immenburgstraße und An der Immenburg – Ergebnisbericht über die Prüfung von Planungsvarianten zum Bau der Brücke vor Fertigstellung des 6-streifigen Ausbaus der A 565",
+    "paper_type": "Änderungsantrag",
+    "date": "2023-04-18",
+    "amt": "01-2 Ratsbüro",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011845"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -5726,8 +7574,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -5774,8 +7622,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0737035,
-     50.7337687
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "230390-01 ST",
+    "name": "Ampel Endenicher Straße/ Wesendonckstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-03-30",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011453"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073172,
+     50.734047
     ]
    },
    "properties": {
@@ -5791,6 +7663,54 @@
     "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011425"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073108,
+     50.725615
+    ]
+   },
+   "properties": {
+    "reference": "230385-01 ST",
+    "name": "Schulbau \"Am Cöllenhof\"",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-03-22",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Am Cöllenhof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011114"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "222051-02 AA",
+    "name": "FDP-AA: Vorplanung zum Neubau einer Fuß- und Radwegbrücke über die A 565 zwischen Immenburgstraße und An der Immenburg – Ergebnisbericht über die Prüfung von Planungsvarianten zum Bau der Brücke vor Fertigstellung des 6-streifigen Ausbaus der A 565 Antrag zur Vorlage",
+    "paper_type": "Änderungsantrag",
+    "date": "2023-03-20",
+    "amt": "01-2 Ratsbüro",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011402"
    }
   },
   {
@@ -5846,6 +7766,54 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "222051-01 AA",
+    "name": "FDP-Änderungsantrag: Vorplanung zum Neubau einer Fuß- und Radwegbrücke über die A 565 zwischen Immenburgstraße und An der Immenburg – Ergebnisbericht über die Prüfung von Planungsvarianten zum Bau der Brücke vor Fertigstellung des 6-streifigen Ausbaus der A 565 Antrag zur Vorlage",
+    "paper_type": "Änderungsantrag",
+    "date": "2023-03-09",
+    "amt": "01-2 Ratsbüro",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "230145-01 ST",
+    "name": "Radfahrregelung Am Propsthof zwischen Am Dickobskreuz und Ennemoserstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-03-07",
+    "amt": "33 Bürgerdienste",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011039"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0776268,
      50.7281331
     ]
@@ -5870,8 +7838,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "230471",
+    "name": "Informationsbrief - Sanierung Abwasserkanal Provinzialstraße bis In der Grächt",
+    "paper_type": "Informationsbrief",
+    "date": "2023-02-28",
+    "amt": "Stabsstellle Bürgerbeteiligung",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010955"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073108,
+     50.725615
+    ]
+   },
+   "properties": {
+    "reference": "230385",
+    "name": "Grüne/SPD/u.w.-Antrag: Schulbau \"Am Cöllenhof\"",
+    "paper_type": "Antrag",
+    "date": "2023-02-21",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Cöllenhof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010793"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -5894,8 +7910,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0776268,
-     50.7281331
+     7.07942,
+     50.727678
     ]
    },
    "properties": {
@@ -5911,6 +7927,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010776"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "230390",
+    "name": "Grüne/SPD/u.w.-Antrag: Ampel Endenicher Straße/ Wesendonckstraße",
+    "paper_type": "Antrag",
+    "date": "2023-02-15",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010798"
    }
   },
   {
@@ -5935,6 +7975,54 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010369"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "222461-01 ST",
+    "name": "Absenkung Bürgersteig Endenicher Allee",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-01-11",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009959"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "230145",
+    "name": "Grüne/SPD/u.w.-Antrag: Radfahrregelung Am Propsthof zwischen Am Dickobskreuz und Ennemoserstraße",
+    "paper_type": "Antrag",
+    "date": "2023-01-11",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010205"
    }
   },
   {
@@ -5990,8 +8078,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.072251,
+     50.735946
     ]
    },
    "properties": {
@@ -6000,11 +8088,11 @@
     "paper_type": "Beschlussvorlage",
     "date": "2023-01-09",
     "amt": "67 Amt für Umwelt und Stadtgrün",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Am Propsthof",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010054"
    }
@@ -6014,8 +8102,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "222051",
+    "name": "Vorplanung zum Neubau einer Fuß- und Radwegbrücke über die A 565 zwischen Immenburgstraße und An der Immenburg – Ergebnisbericht über die Prüfung von Planungsvarianten zum Bau der Brücke vor Fertigstellung des 6-streifigen Ausbaus der A 565",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-01-03",
+    "amt": "66 Tiefbauamt",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2008842"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "222461",
+    "name": "CDU-Antrag: Absenkung Bürgersteig Endenicher Allee",
+    "paper_type": "Antrag",
+    "date": "2022-12-22",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009877"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -6031,6 +8167,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009878"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "222187-01 ST",
+    "name": "Geschwindigkeitskontrolle und Lärmmessung Provinzialstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-12-21",
+    "amt": "33 Bürgerdienste",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009712"
    }
   },
   {
@@ -6062,8 +8222,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -6086,8 +8246,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -6278,8 +8438,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "222131-01 ST",
+    "name": "Straßenplanung in der Siemensstraße zwischen Am Propsthof und Kolpingstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-11-03",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009163"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -6289,6 +8473,30 @@
     "date": "2022-11-03",
     "amt": "66 Tiefbauamt",
     "place": "Kolpingstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009163"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "222131-01 ST",
+    "name": "Straßenplanung in der Siemensstraße zwischen Am Propsthof und Kolpingstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-11-03",
+    "amt": "66 Tiefbauamt",
+    "place": "Siemensstraße",
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
@@ -6326,8 +8534,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0637,
-     50.73246
+     7.063966,
+     50.732684
     ]
    },
    "properties": {
@@ -6350,8 +8558,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0637,
-     50.73246
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "222187",
+    "name": "Grüne/SPD/u.w.-Antrag: Geschwindigkeitskontrolle und Lärmmessung Provinzialstraße",
+    "paper_type": "Antrag",
+    "date": "2022-11-02",
+    "amt": "01-2 Ratsbüro",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009151"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063966,
+     50.732684
     ]
    },
    "properties": {
@@ -6374,8 +8606,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "222131",
+    "name": "Grüne-Große Anfrage: Straßenplanung in der Siemensstraße zwischen Am Propsthof und Kolpingstraße",
+    "paper_type": "Große Anfrage",
+    "date": "2022-10-27",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009040"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -6398,8 +8654,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "222131",
+    "name": "Grüne-Große Anfrage: Straßenplanung in der Siemensstraße zwischen Am Propsthof und Kolpingstraße",
+    "paper_type": "Große Anfrage",
+    "date": "2022-10-27",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009040"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
     ]
    },
    "properties": {
@@ -6408,11 +8688,11 @@
     "paper_type": "Beschlussvorlage",
     "date": "2022-10-18",
     "amt": "61 Stadtplanungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Am Propsthof",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2008042"
    }
@@ -6446,8 +8726,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -6470,8 +8750,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0729439,
-     50.7257598
+     7.07273,
+     50.725757
     ]
    },
    "properties": {
@@ -6494,8 +8774,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.072251,
+     50.735946
     ]
    },
    "properties": {
@@ -6504,11 +8784,11 @@
     "paper_type": "Beschlussvorlage",
     "date": "2022-10-05",
     "amt": "63 Bauordnungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Am Propsthof",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2008645"
    }
@@ -6518,8 +8798,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -6638,8 +8918,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -6710,6 +8990,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07675,
+     50.717578
+    ]
+   },
+   "properties": {
+    "reference": "221536-01 ST",
+    "name": "Parkverbot \"Am Bendenberg\"/ Ecke \"Zur Marterkapelle\"",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-08-17",
+    "amt": "33 Bürgerdienste",
+    "place": "Zur Marterkapelle",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007736"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -6734,8 +9038,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "221526-01 ST",
+    "name": "Nutzung und Ankauf Bundesimmobilie Provinzialstraße 21",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-08-15",
+    "amt": "03 Amt für Wirtschaftsförderung",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007656"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -6758,8 +9086,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -6782,8 +9110,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "221526",
+    "name": "CDU-Antrag: Nutzung und Ankauf Bundesimmobilie Provinzialstraße 21",
+    "paper_type": "Antrag",
+    "date": "2022-08-09",
+    "amt": "01-2 Ratsbüro",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007600"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07675,
+     50.717578
+    ]
+   },
+   "properties": {
+    "reference": "221536",
+    "name": "Grüne/SPD/u.w.-Antrag: Parkverbot \"Am Bendenberg\"/ Ecke \"Zur Marterkapelle\"",
+    "paper_type": "Antrag",
+    "date": "2022-08-09",
+    "amt": "01-2 Ratsbüro",
+    "place": "Zur Marterkapelle",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007624"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -6806,8 +9182,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -6830,8 +9206,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -6950,8 +9326,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.072251,
+     50.735946
     ]
    },
    "properties": {
@@ -6960,11 +9336,11 @@
     "paper_type": "Mitteilungsvorlage",
     "date": "2022-06-08",
     "amt": "61 Stadtplanungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Am Propsthof",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006435"
    }
@@ -6998,8 +9374,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -7022,8 +9398,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -7118,8 +9494,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -7190,8 +9566,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0630679,
-     50.7326183
+     7.061713,
+     50.732419
     ]
    },
    "properties": {
@@ -7262,8 +9638,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743879,
-     50.7206135
+     7.074105,
+     50.719306
     ]
    },
    "properties": {
@@ -7310,8 +9686,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0757404,
-     50.7221736
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211119-02",
+    "name": "Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2022-03-09",
+    "amt": "33 Bürgerdienste",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005407"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070917,
+     50.720693
     ]
    },
    "properties": {
@@ -7382,8 +9782,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0737035,
-     50.7337687
+     7.073172,
+     50.734047
     ]
    },
    "properties": {
@@ -7406,8 +9806,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0757404,
-     50.7221736
+     7.070917,
+     50.720693
     ]
    },
    "properties": {
@@ -7430,8 +9830,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0630679,
-     50.7326183
+     7.061713,
+     50.732419
     ]
    },
    "properties": {
@@ -7526,8 +9926,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0693367,
-     50.7229862
+     7.069318,
+     50.722897
     ]
    },
    "properties": {
@@ -7574,8 +9974,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "220258",
+    "name": "Grundstück in Bonn, Siemensstraße 126 - Errichtung eines Mehrfamilienwohnhauses Az. 10397/2021",
+    "paper_type": "Beschlussvorlage",
+    "date": "2022-02-08",
+    "amt": "63 Bauordnungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004981"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -7814,8 +10238,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -7838,8 +10262,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -7862,8 +10286,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.072251,
+     50.735946
     ]
    },
    "properties": {
@@ -7872,11 +10296,11 @@
     "paper_type": "Beschlussvorlage",
     "date": "2021-12-09",
     "amt": "61 Stadtplanungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Am Propsthof",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003155"
    }
@@ -7886,8 +10310,80 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "212292",
+    "name": "Abbau eines Grünpfeils Ecke Am Propsthof/Bornheimer Straße",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-12-08",
+    "amt": "33 Bürgerdienste",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004030"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "212251",
+    "name": "Bürgerbrief: Sanierung Abwasserkanal Provinzialstraße zwischen Haus Nr. 27 und Haus Nr. 35",
+    "paper_type": "Bürgerbrief",
+    "date": "2021-11-24",
+    "amt": "Stabsstellle Bürgerbeteiligung",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003912"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "211532-01 AA",
+    "name": "Koalitionsänderungsantrag: Vorplanung zum Neubau einer Fuß- und Radwegbrücke über die A 565 zwischen Immenburgstraße und An der Immenburg Antrag zur Vorlage 211532",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-11-23",
+    "amt": "01-2 Ratsbüro",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003884"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -7910,8 +10406,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0693367,
-     50.7229862
+     7.069318,
+     50.722897
     ]
    },
    "properties": {
@@ -7934,8 +10430,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0684095,
-     50.7252941
+     7.068662,
+     50.725408
     ]
    },
    "properties": {
@@ -7982,8 +10478,104 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211994",
+    "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-10-29",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003442"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211637-03 AA",
+    "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-10-28",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003461"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211637-02 AA",
+    "name": "BBB-Änderungsantrag: Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-10-27",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003428"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211637-01 ST",
+    "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-10-26",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003387"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -8006,8 +10598,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "201308-04",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-10-12",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003061"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "211672-01 ST",
+    "name": "Fahrbahnteiler Endenicher Straße / Verdistraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-09-30",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002940"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -8030,8 +10670,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211637",
+    "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-09-29",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002654"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078022,
+     50.723774
+    ]
+   },
+   "properties": {
+    "reference": "201158-03 ST",
+    "name": "Bürgerantrag: Einrichtung einer Querungshilfe in der Sebastianstraße, Poppeldorf",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-09-27",
+    "amt": "33 Bürgerdienste",
+    "place": "Sebastianstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002859"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -8054,8 +10742,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0693367,
-     50.7229862
+     7.069318,
+     50.722897
     ]
    },
    "properties": {
@@ -8071,6 +10759,30 @@
     "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002713"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "211532",
+    "name": "Vorplanung zum Neubau einer Fuß- und Radwegbrücke über die A 565 zwischen Immenburgstraße und An der Immenburg",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-09-15",
+    "amt": "66 Tiefbauamt",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002456"
    }
   },
   {
@@ -8095,6 +10807,30 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002496"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "211672",
+    "name": "Fahrbahnteiler Endenicher Straße / Verdistraße",
+    "paper_type": "Antrag",
+    "date": "2021-09-15",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002724"
    }
   },
   {
@@ -8150,8 +10886,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "201308-03 ST",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise Antrag zur Vorlage 201308",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-09-02",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002434"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -8174,8 +10934,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211119-01 ST",
+    "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-08-25",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002362"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -8198,8 +10982,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211124-01 ST",
+    "name": "Bürgerantrag: Nutzungsproblematik Sportplatz Ernst-Moritz-Arndt Gymnasium Endenicher Allee/Wegelerstraße sowie Beseitigung des Beachvolleyballplatzes",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-08-11",
+    "amt": "33 Bürgerdienste",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002059"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "211273",
+    "name": "Förderprogramm Emissionsfreie Innenstadt (EFRE) Neubau einer Fahrradbrücke über die Straße ‚Am Propsthof‘ im Zuge des Ausbaus der Radpendlerroute Bornheim-Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-08-08",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001957"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -8215,6 +11047,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002142"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "211285-01 ST",
+    "name": "Bürgerantrag: Barrierefreie Gestaltung der Straßenübergänge Endenicher Straße und Weberstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-08-05",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001998"
    }
   },
   {
@@ -8246,8 +11102,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -8294,6 +11150,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "211285",
+    "name": "Bürgerantrag: Barrierefreie Gestaltung der Straßenübergänge Endenicher Straße und Weberstraße",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2021-07-27",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001976"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0764434,
      50.7249815
     ]
@@ -8311,6 +11191,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001677"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211119",
+    "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2021-06-29",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001664"
    }
   },
   {
@@ -8342,8 +11246,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0693367,
-     50.7229862
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "211124",
+    "name": "Bürgerantrag: Nutzungsproblematik Sportplatz Ernst-Moritz-Arndt Gymnasium Endenicher Allee/Wegelerstraße sowie Beseitigung des Beachvolleyballplatzes",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2021-06-28",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001674"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069318,
+     50.722897
     ]
    },
    "properties": {
@@ -8357,7 +11285,31 @@
     "ortsteil": "Endenich",
     "stage": "B",
     "method": "strasse",
-    "confidence": "niedrig",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001509"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "210697-01",
+    "name": "Verbesserungen für den Fußweg zwischen Hainstraße und Provinzialstraße",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-06-16",
+    "amt": "66 Tiefbauamt",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001509"
    }
   },
@@ -8534,6 +11486,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "210897",
+    "name": "Endenicher Allee – niveaugleiche Fortführung der Gehwege",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-05-24",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000968"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0734714,
      50.7283008
     ]
@@ -8558,8 +11534,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -8582,8 +11558,104 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06378,
-     50.73546
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "210869",
+    "name": "CDU: Endenicher Allee - Straßenplanung zwischen Alfred-Bucherer-Straße und BAB 565, hier: nördliche Straßenseite",
+    "paper_type": "Dringlichkeitsantrag",
+    "date": "2021-05-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000910"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "210742-01 ST",
+    "name": "DB-Unterführung für Fußgänger- und Fahrradfahrer*innen zwischen Ecke Endenicher Straße /Herwarthstraße und Thomasstraße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-05-11",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000820"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "210741-01 ST",
+    "name": "Aufstellung von zwei Altpapiercontainer an der Ecke Herwathstraße/Endenicher Straße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-05-10",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000768"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "210801",
+    "name": "Ausbau Siemensstraße zwischen Kolpingstraße und Am Propsthof",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-05-10",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000760"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
     ]
    },
    "properties": {
@@ -8593,6 +11665,30 @@
     "date": "2021-05-10",
     "amt": "66 Tiefbauamt",
     "place": "Kolpingstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000760"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "210801",
+    "name": "Ausbau Siemensstraße zwischen Kolpingstraße und Am Propsthof",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-05-10",
+    "amt": "66 Tiefbauamt",
+    "place": "Siemensstraße",
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
@@ -8630,8 +11726,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -8654,8 +11750,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0693367,
-     50.7229862
+     7.069318,
+     50.722897
     ]
    },
    "properties": {
@@ -8669,7 +11765,7 @@
     "ortsteil": "Endenich",
     "stage": "B",
     "method": "strasse",
-    "confidence": "niedrig",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000573"
    }
   },
@@ -8678,8 +11774,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0706147,
-     50.7286564
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "210697",
+    "name": "Verbesserungen für den Fußweg zwischen Hainstraße und Provinzialstraße",
+    "paper_type": "Antrag",
+    "date": "2021-04-28",
+    "amt": "01-2 Ratsbüro",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000573"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07078,
+     50.728764
     ]
    },
    "properties": {
@@ -8702,8 +11822,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0708877,
-     50.7295937
+     7.064353,
+     50.727459
     ]
    },
    "properties": {
@@ -8726,8 +11846,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0757404,
-     50.7221736
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "210741",
+    "name": "Aufstellung von zwei Altpapiercontainer an der Ecke Herwathstraße/Endenicher Straße",
+    "paper_type": "Antrag",
+    "date": "2021-04-28",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000633"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "210742",
+    "name": "DB-Unterführung für Fußgänger- und Fahrradfahrer*innen zwischen Ecke Endenicher Straße /Herwarthstraße und Thomasstraße",
+    "paper_type": "Antrag",
+    "date": "2021-04-28",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000634"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070917,
+     50.720693
     ]
    },
    "properties": {
@@ -8750,8 +11918,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0737035,
-     50.7337687
+     7.073172,
+     50.734047
     ]
    },
    "properties": {
@@ -8767,6 +11935,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10604"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "201308-02 ST",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise Antrag zur Vorlage 201308",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-04-09",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10601"
    }
   },
   {
@@ -8798,8 +11990,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0757404,
-     50.7221736
+     7.070917,
+     50.720693
     ]
    },
    "properties": {
@@ -8815,6 +12007,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000148"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "210501",
+    "name": "Bürgerbrief - Straßenerneuerung Endenicher Allee",
+    "paper_type": "Bürgerbrief",
+    "date": "2021-03-31",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000097"
    }
   },
   {
@@ -8839,6 +12055,78 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10355"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "210217",
+    "name": "Ernst-Moritz-Arndt-Gymnasium, Fällung Baum Nr. 37, Abriss der Aula und angrenzender Gebäudetrakte, Neubauplanung",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-03-15",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "210191",
+    "name": "Bürgerantrag: Bewohnerparken in der Endenicher Allee",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2021-03-05",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10171"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "201308-01 AA",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise Antrag zur Vorlage 201308",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-03-02",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10123"
    }
   },
   {
@@ -8918,8 +12206,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201710-01",
+    "name": "1. Beanstandung des Ratsbeschlusses vom 05.11.2020, DS-Nr.: 201710 2. Erneute Genehmigung der Dringlichkeitsentscheidung betr. Umgestaltung der Endenicher Allee; Bereitstellung außerplanmäßiger Haushaltsmittel im investiven Haushalt – Finanzstelle 5.66.06.1201.1200/78.5200",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-02-01",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9662"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -8935,6 +12247,54 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9253"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201913-02",
+    "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37",
+    "paper_type": "Dringlichkeitsentscheidung BV",
+    "date": "2021-01-18",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9512"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201913-01",
+    "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-01-11",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9376"
    }
   },
   {
@@ -8966,8 +12326,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201991-01 ST",
+    "name": "Bürgerantrag: Verkehrswende an der Endenicher Allee",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-12-10",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9175"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "202055-01 ST",
+    "name": "Straßenreinigung; hier Einordnung der Herwarthstraße zwischen Bachstraße und Endenicher Straße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-12-10",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -8977,6 +12385,30 @@
     "date": "2020-12-10",
     "amt": "66 Tiefbauamt",
     "place": "Alfred-Bucherer-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9181"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "202150",
+    "name": "Entsperrung von Haushaltsmitteln für die Umgestaltung der Endenicher Allee, zwischen Alfred-Bucherer-Straße und BAB 565",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-12-10",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Allee",
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
@@ -9038,8 +12470,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0640789,
-     50.7309932
+     7.064059,
+     50.731039
     ]
    },
    "properties": {
@@ -9055,6 +12487,54 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8195"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201897",
+    "name": "Straßenplanung Endenicher Allee – Entfernung von vier satzungsgeschützten Bäumen auf öffentlicher Verkehrsfläche",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-11-25",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8493"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "202055",
+    "name": "Straßenreinigung; hier Einordnung der Herwarthstraße zwischen Bachstraße und Endenicher Straße",
+    "paper_type": "Große Anfrage",
+    "date": "2020-11-25",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8813"
    }
   },
   {
@@ -9079,6 +12559,54 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8960"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "202072",
+    "name": "Umgestaltung Endenicher Allee",
+    "paper_type": "Dringlichkeitsantrag",
+    "date": "2020-11-23",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8922"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201913",
+    "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung von 5 städtischen Bäumen",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-11-20",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8526"
    }
   },
   {
@@ -9158,6 +12686,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201991",
+    "name": "Bürgerantrag: Verkehrswende an der Endenicher Allee",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2020-11-17",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8708"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -9182,8 +12734,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -9206,8 +12758,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -9217,6 +12769,30 @@
     "date": "2020-11-13",
     "amt": "66 Tiefbauamt",
     "place": "Alfred-Bucherer-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8513"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201906",
+    "name": "Einleitung des Vergabeverfahrens: Straßenerneuerung der Endenicher Allee zwischen Alfred-Bucherer-Straße und BAB 565",
+    "paper_type": "Beschlussvorlage: Einleitung",
+    "date": "2020-11-13",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Allee",
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
@@ -9254,8 +12830,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201424-2 ST",
+    "name": "Bürgerantrag: Ausweitung Bewohnerparken auf der Endenicher Allee und benachbarte Seitenstraßen",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-10-06",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201632-1 ST",
+    "name": "Bürgerantrag: Aussetzung der Anwohnerparkregelung im Musikerviertel (Endenicher Allee und benachbarte Seitenstraßen)",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-10-06",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8202"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -9278,8 +12902,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07895,
-     50.72722
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201714-1 ST",
+    "name": "Bürgerantrag: Gestaltung Endenicher Allee zwischen Bundesautobahn und Alfred-Bucherer-Str.",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-10-06",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8182"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201715-1 ST",
+    "name": "Bürgerantrag: Ausbauplanung Endenicher Allee",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-10-06",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8183"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078475,
+     50.72715
     ]
    },
    "properties": {
@@ -9295,6 +12967,54 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8091"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201323-1 AA",
+    "name": "Änderung der Radverkehrsführung auf der Straße Endenicher Allee im Bereich zwischen Nußallee und Beethovenstraße Antrag zur Vorlage 201323",
+    "paper_type": "Änderungsantrag",
+    "date": "2020-10-01",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8197"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201424-1 ST",
+    "name": "Bürgerantrag: Ausweitung Bewohnerparken auf der Endenicher Allee und benachbarte Seitenstraßen",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-10-01",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8189"
    }
   },
   {
@@ -9326,8 +13046,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -9343,6 +13063,30 @@
     "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7830"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201710",
+    "name": "Umgestaltung der Endenicher Allee; Bereitstellung außerplanmäßiger Haushaltsmittel im investiven Haushalt – Finanzstelle 5.66.06.1201.1200/78.5200",
+    "paper_type": "Dringlichkeitsentscheidung OB",
+    "date": "2020-09-28",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8125"
    }
   },
   {
@@ -9374,8 +13118,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0640789,
-     50.7309932
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201715",
+    "name": "Bürgerantrag: Ausbauplanung Endenicher Allee",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2020-09-18",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8134"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064059,
+     50.731039
     ]
    },
    "properties": {
@@ -9422,8 +13190,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "201557",
+    "name": "Fahrradbrücke über die Straße ‘Am Propsthof‘ im Zuge des Ausbaus der Radpendlerroute Bornheim-Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-08-25",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7536"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201632",
+    "name": "Bürgerantrag: Aussetzung der Anwohnerparkregelung im Musikerviertel (Endenicher Allee und benachbarte Seitenstraßen)",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2020-08-18",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7728"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -9433,6 +13249,30 @@
     "date": "2020-08-15",
     "amt": "61 Stadtplanungsamt",
     "place": "Alfred-Bucherer-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7358"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201471",
+    "name": "Endenicher Allee - Straßenplanung zwischen Alfred-Bucherer-Straße und BAB 565",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-08-15",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
@@ -9494,8 +13334,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -9518,8 +13358,104 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201236-1 ST",
+    "name": "Bürgerantrag: Gestaltung Endenicher Allee zwischen Hosenträgerbrücke und Alfred-Bucherer-Straße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-08-10",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7327"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "201308",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2020-07-29",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7043"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201424",
+    "name": "Bürgerantrag: Ausweitung Bewohnerparken auf der Endenicher Allee und benachbarte Seitenstraßen",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2020-07-29",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "201200",
+    "name": "Radverkehrsführung auf der Straße Am Propsthof im Bereich zwischen Auf dem Hügel und Siemensstraße",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-07-28",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6849"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -9542,8 +13478,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "201200",
+    "name": "Radverkehrsführung auf der Straße Am Propsthof im Bereich zwischen Auf dem Hügel und Siemensstraße",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-07-28",
+    "amt": "66 Tiefbauamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6849"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -9559,6 +13519,54 @@
     "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7253"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "201323",
+    "name": "Änderung der Radverkehrsführung auf der Straße Endenicher Allee im Bereich zwischen Nußallee und Beethovenstraße",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-07-27",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7074"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078022,
+     50.723774
+    ]
+   },
+   "properties": {
+    "reference": "201158-1 ST",
+    "name": "Bürgerantrag: Einrichtung einer Querungshilfe in der Sebastianstraße, Poppeldorf",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-07-24",
+    "amt": "33 Bürgerdienste",
+    "place": "Sebastianstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7048"
    }
   },
   {
@@ -9590,8 +13598,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -9631,6 +13639,54 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6911"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "201232",
+    "name": "Bürgerbrief: Bewohnerparken Endenicher Straße",
+    "paper_type": "Bürgerbrief",
+    "date": "2020-07-03",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6905"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078022,
+     50.723774
+    ]
+   },
+   "properties": {
+    "reference": "201158",
+    "name": "Bürgerantrag: Einrichtung einer Querungshilfe in der Sebastianstraße, Poppeldorf",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2020-06-18",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Sebastianstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6758"
    }
   },
   {
@@ -9679,6 +13735,54 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6336"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "200913",
+    "name": "Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Provinzialstr. 27, Ludwig-Richter-Str. 3 c) im Stadtbezirk Hardtberg",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2020-05-19",
+    "amt": "56 Amt für Umwelt-, Verbraucherschutz und Lokale Agenda",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6166"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "200577",
+    "name": "Endenicher Allee - Planung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-05-14",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5477"
    }
   },
   {
@@ -9782,8 +13886,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.072251,
+     50.735946
     ]
    },
    "properties": {
@@ -9792,11 +13896,35 @@
     "paper_type": "Beschlussvorlage",
     "date": "2020-04-02",
     "amt": "61 Stadtplanungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Am Propsthof",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5075"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "200434",
+    "name": "Stellungnahmen und Satzungsbeschluss Bebauungsplan Nr. 6322-2 -Teilbereich A -, Stadtbezirk Bonn, Ortsteil Endenich, Siemensstraße / „Am Propsthof“",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-04-02",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5075"
    }
@@ -9830,8 +13958,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0640789,
-     50.7309932
+     7.064059,
+     50.731039
     ]
    },
    "properties": {
@@ -9854,8 +13982,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -9902,6 +14030,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "200190-1 ST",
+    "name": "Ankauf und Vermarktung BMVg bzw. Bundesimmobilie Provinzialstraße 21",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-02-25",
+    "amt": "03 Amt für Wirtschaftsförderung",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4955"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0776268,
      50.7281331
     ]
@@ -9926,8 +14078,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07885,
-     50.72444
+     7.077042,
+     50.725874
     ]
    },
    "properties": {
@@ -10022,8 +14174,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0734714,
-     50.7283008
+     7.069428,
+     50.731564
     ]
    },
    "properties": {
@@ -10046,8 +14198,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0797524,
-     50.7252877
+     7.078022,
+     50.723774
+    ]
+   },
+   "properties": {
+    "reference": "200238",
+    "name": "Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Auf dem Hügel 16, Theodor-Brinkmann-Str. 34, Lambareneweg 2, Beethovenstr. 49, Sebastianstr. (Schumannhaus), Venusberg-Campus 1, Römerweg 17) im Stadtbezirk Bonn",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2020-02-12",
+    "amt": "56 Amt für Umwelt-, Verbraucherschutz und Lokale Agenda",
+    "place": "Sebastianstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4662"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.079794,
+     50.725463
     ]
    },
    "properties": {
@@ -10070,8 +14246,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0757404,
-     50.7221736
+     7.070917,
+     50.720693
     ]
    },
    "properties": {
@@ -10094,8 +14270,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743616,
-     50.7239861
+     7.072678,
+     50.724117
     ]
    },
    "properties": {
@@ -10118,8 +14294,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0729439,
-     50.7257598
+     7.07273,
+     50.725757
     ]
    },
    "properties": {
@@ -10190,6 +14366,54 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.079347,
+     50.72232
+    ]
+   },
+   "properties": {
+    "reference": "200172",
+    "name": "Fällgenehmigung für fünf Birken auf dem Grundstück Albert-Schweitzer-Str. 4 - 10, 53115 Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-02-04",
+    "amt": "56 Amt für Umwelt-, Verbraucherschutz und Lokale Agenda",
+    "place": "Albert-Schweitzer-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4518"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "200190",
+    "name": "Ankauf und Vermarktung BMVg bzw. Bundesimmobilie Provinzialstraße 21",
+    "paper_type": "Antrag",
+    "date": "2020-02-04",
+    "amt": "01-2 Ratsbüro",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4567"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -10214,8 +14438,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0737035,
-     50.7337687
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "190639-1 ST",
+    "name": "Endenicher Allee - Straßengestaltung nach Abschluss der Kanalsanierung",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-01-27",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4119"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073172,
+     50.734047
     ]
    },
    "properties": {
@@ -10238,8 +14486,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0744792,
-     50.7275062
+     7.073676,
+     50.727971
     ]
    },
    "properties": {
@@ -10310,8 +14558,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.0709,
+     50.726788
+    ]
+   },
+   "properties": {
+    "reference": "190997-1",
+    "name": "Bürgerantrag: Veränderung Ampelschaltung Hermann-Wandersleb-Ring / Effertzstr.",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-01-13",
+    "amt": "66 Tiefbauamt",
+    "place": "Effertzstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3699"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -10430,8 +14702,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.0709,
+     50.726788
+    ]
+   },
+   "properties": {
+    "reference": "190997",
+    "name": "Bürgerantrag: Veränderung Ampelschaltung Hermann-Wandersleb-Ring / Effertzstr.",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2020-01-02",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Effertzstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3494"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -10478,6 +14774,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "190291-1 ST",
+    "name": "Bürgerantrag : Beibehaltung der Einbahnstraßenregelung für den hinteren Teil der Endenicher Allee (alt: 1912715, FF OB-1)",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2019-12-10",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3305"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -10502,8 +14822,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "190648-1 ST",
+    "name": "Umweltspuren / Sonderspuren auf dem Hermann-Wandersleb-Ring und der Endenicher Straße",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2019-11-29",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3279"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -10526,8 +14870,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "190648-2 AA",
+    "name": "Umweltspuren / Sonderspuren auf dem Hermann-Wandersleb-Ring und der Endenicher Straße Antrag zur Vorlage 190648",
+    "paper_type": "Änderungsantrag",
+    "date": "2019-11-29",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3288"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -10550,8 +14918,32 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06796,
-     50.72444
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "190880-1 ST",
+    "name": "Bürgerantrag: Veränderung Ampelschaltung Endenicher Straße 165/Knauber",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2019-11-29",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3213"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.068235,
+     50.724591
     ]
    },
    "properties": {
@@ -10574,8 +14966,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "190362-3 AA",
+    "name": "Einrichtung von eigenen Fahrspuren für Radfahrer Hier: “Umweltspur“ auf Endenicher Str.  (alt: 1912945AA3)",
+    "paper_type": "Änderungsantrag",
+    "date": "2019-11-25",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3185"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "190362-4 AA",
+    "name": "Einrichtung von eigenen Fahrspuren für Radfahrer Hier: “Umweltspur“ auf Endenicher Str.  (alt: 1912945AA4)",
+    "paper_type": "Änderungsantrag",
+    "date": "2019-11-25",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3186"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -10622,6 +15062,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "190880",
+    "name": "Bürgerantrag: Veränderung Ampelschaltung Endenicher Straße 165/Knauber",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2019-11-22",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3153"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0737035,
      50.7337687
     ]
@@ -10646,8 +15110,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0743616,
-     50.7239861
+     7.072678,
+     50.724117
     ]
    },
    "properties": {
@@ -10670,8 +15134,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0729439,
-     50.7257598
+     7.07273,
+     50.725757
     ]
    },
    "properties": {
@@ -10694,8 +15158,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -10766,8 +15230,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.070351,
-     50.725238
+     7.067574,
+     50.736429
     ]
    },
    "properties": {
@@ -10776,11 +15240,11 @@
     "paper_type": "Beschlussvorlage",
     "date": "2019-11-11",
     "amt": "56 Amt für Umwelt-, Verbraucherschutz und Lokale Agenda",
-    "place": "Endenich",
-    "level": "ortsteil",
+    "place": "Václav-Havel-Platz",
+    "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "ortsteil_name",
+    "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2826"
    }
@@ -10814,8 +15278,56 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "190639",
+    "name": "Endenicher Allee - Straßengestaltung nach Abschluss der Kanalsanie-rung",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2019-11-06",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2623"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "190648",
+    "name": "Umweltspuren / Sonderspuren auf dem Hermann-Wandersleb-Ring und der Endenicher Straße",
+    "paper_type": "Antrag",
+    "date": "2019-11-06",
+    "amt": "Bezirksverwaltungsstelle Hardtberg",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2640"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -10838,8 +15350,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0758417,
-     50.7287614
+     7.07005,
+     50.727177
     ]
    },
    "properties": {
@@ -10886,8 +15398,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0708877,
-     50.7295937
+     7.064353,
+     50.727459
     ]
    },
    "properties": {
@@ -10910,8 +15422,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.0708877,
-     50.7295937
+     7.064353,
+     50.727459
     ]
    },
    "properties": {
@@ -10927,6 +15439,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "190291",
+    "name": "Bürgerantrag : Beibehaltung der Einbahnstraßenregelung für den hinteren Teil der Endenicher Allee (alt: 1912715, FF OB-1)",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2019-10-23",
+    "amt": "Bezirksverwaltungsstelle Bonn",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=592"
    }
   },
   {
@@ -10975,6 +15511,54 @@
     "method": "ortsteil_adjektiv",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=928"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "190362-1 AA",
+    "name": "Einrichtung von eigenen Fahrspuren für Radfahrer Hier: “Umweltspur“ auf Endenicher Str.  (alt: 1912945AA2)",
+    "paper_type": "Änderungsantrag",
+    "date": "2019-10-17",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=815"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "190362",
+    "name": "Einrichtung von eigenen Fahrspuren für Radfahrer Hier: “Umweltspur“ auf Endenicher Str.  (alt: 1912945, FF Amt 61)",
+    "paper_type": "Beschlussvorlage",
+    "date": "2019-10-16",
+    "amt": "Bezirksverwaltungsstelle Bonn",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=717"
    }
   },
   {
