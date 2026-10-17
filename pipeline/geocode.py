@@ -231,6 +231,8 @@ class Gazetteer:
                 entries, method, conf = keep or entries, "strasse_mehrdeutig", "niedrig"
         elif bv_bezirke and not ({e["bezirk"] for e in entries} & bv_bezirke):
             conf = "niedrig"  # Straße liegt nicht im Bezirk der befassten Bezirksvertretung
+        elif named_bz and not ({e["bezirk"] for e in entries} & named_bz):
+            conf = "niedrig"  # Titel nennt einen anderen Bezirk („Beueler Rheinufer“)
         return [dict(level="strasse", name=name, ortsteil=e["ortsteil"], bezirk=e["bezirk"],
                      lon=e["lon"], lat=e["lat"], method=method, confidence=conf, evidence=evidence,
                      source=e["source"])

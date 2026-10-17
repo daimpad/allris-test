@@ -53,6 +53,9 @@ class GeocodeTest(unittest.TestCase):
     def test_bv_mismatch_lowers_confidence(self):
         self.assertEqual(self.names("Am Burggraben", bv={"Beuel"})[0][4], "niedrig")
 
+    def test_named_bezirk_elsewhere_lowers_confidence(self):
+        self.assertEqual(self.names("Beueler Endenicher Straße")[0][4], "niedrig")
+
     def test_plan_numbers(self):
         self.assertEqual(plan_numbers("Bebauungsplan Nr. 6522-3 Kaiser-Karl-Ring")[0][0], "6522-3")
 

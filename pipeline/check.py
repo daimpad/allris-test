@@ -86,10 +86,15 @@ def check():
         "(SELECT paper_id FROM paper_location WHERE stage = 'A' AND method <> 'vererbt')").fetchall()
     print("Vorlagen mit Stufe A, für die Stufe B einen Ortsteil findet:",
           pct(len({p for p, *_ in pairs}), n_a))
+    # je Vorlage: trifft mindestens ein Ortsbezug dieser Art den Ortsteil aus Stufe A?
     for kind in sorted({k for _, k, _ in pairs}):
-        sub = [ok for _, k, ok in pairs if k == kind]
+        hits = {}
+        for pid, k, ok in pairs:
+            if k == kind:
+                hits[pid] = hits.get(pid, False) or bool(ok)
         note = " – nicht unabhängig von Stufe A" if "oparl-bonn" in kind else ""
-        print(f"  Ortsteil wie Stufe A, Ebene {kind}:", pct(sum(1 for ok in sub if ok), len(sub)) + note)
+        print(f"  Vorlagen mit Ortsteil wie Stufe A, Ebene {kind}:",
+              pct(sum(hits.values()), len(hits)) + note)
 
     streets = [r[0] for r in db.execute(
         "SELECT street FROM location WHERE street IS NOT NULL AND source = 'oparl-bonn'")]

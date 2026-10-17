@@ -18,7 +18,7 @@ Du arbeitest als Webentwickler:in mit Erfahrung in Open-Data-Pipelines und Geoda
 | Räumlicher Umfang | Ganz Bonn; Pilot und erste Auslieferung: Ortsteil **Endenich** (Stadtbezirk Bonn) |
 | Einsatz von Sprachmodellen | Zulässig für Ortsextraktion und Kurzfassungen – mit Kennzeichnung, Konfidenz und Link zum Original |
 | Auslieferung | Ergebnisse als Zip-Paket; Audit-Protokolle als TSV |
-| Abgeleitete Daten | Aus den OParl-Lite-Volltexten abgeleitete Ortsdaten und kurze Zitate (Fundstellen) dürfen im Repository veröffentlicht werden; Quelle und Lizenz (CC BY-NC 4.0, machdenstaat) werden je Datensatz genannt; Datendateien erhalten eine eigene LICENSE-Datei getrennt vom MIT-Code |
+| Abgeleitete Daten | Aus den OParl-Lite-Volltexten abgeleitete Ortsdaten und kurze Zitate (Fundstellen) dürfen im Repository veröffentlicht werden; Quelle und Lizenz (CC BY 4.0, machdenstaat) werden je Datensatz genannt; Datendateien erhalten eine eigene LICENSE-Datei getrennt vom MIT-Code |
 
 ## 3. Datenquellen (recherchiert, Stand 17.10.2026)
 
@@ -35,7 +35,7 @@ Du arbeitest als Webentwickler:in mit Erfahrung in Open-Data-Pipelines und Geoda
 - Oberfläche: `https://oparl.bonn.machdenstaat.de/` – Abdeckung laut `/progress` 99,7 % der vergleichbaren Objekte (168.291 von 168.727, Stand 17.10.2026)
 - **GraphQL-API**: `https://oparl.bonn.machdenstaat.de/graphql` – Listen mit `limit`/`offset`/`where`/`orderBy` für `papers`, `consultations`, `meetings`, `agendaItems`, `files`, `organizations`, `persons`, `memberships`; Volltextsuche `fileFullTextSearch(query)`; Stichwortsuche `searchPapersByKeyword(keyword)` (Treffer „Endenich“: 284 Vorlagen)
 - **MCP-Server**: `claude mcp add --transport http oparl-bonn https://oparl.bonn.machdenstaat.de/mcp` – 11 Werkzeuge (`search_papers`, `get_paper`, `get_paper_meetings` = Beratungsfolge mit Ergebnis, `search_fulltext`, `get_file_text`, `search_meetings`, `get_meeting`, `search_organizations`, `get_organization`, `search_persons`, `get_person`) und 3 Prompts (`track_topic`, `trace_paper`, `prepare_meeting`); öffentlich, nur lesend, Streamable HTTP
-- Lizenzen: Inhalte der Oberfläche CC BY-NC 4.0; Code GPL-3.0 (`https://codeberg.org/machdenstaat/oparl-lite-2`); Crawler `https://codeberg.org/machdenstaat/stadt-bonn-oparl`; Teildatensatz auf Kaggle (`cgoern/stadt-bonn-allris-partial`)
+- Lizenzen: Inhalte der Oberfläche CC BY 4.0; Code GPL-3.0 (`https://codeberg.org/machdenstaat/oparl-lite-2`); Crawler `https://codeberg.org/machdenstaat/stadt-bonn-oparl`; Teildatensatz auf Kaggle (`cgoern/stadt-bonn-allris-partial`)
 - **Korrektur zu v0.1**: Eine „akkumulierte Datei“ zum Download ist weder in der README noch auf dem Server auffindbar (`/export`, `/download`, `/data` → 404). Der Massenabruf erfolgt über die GraphQL-API (paginiert) oder direkt über die OParl-API der Stadt. Die Locations sind im Spiegel noch nicht erfasst (0 Objekte).
 - Bekannte Lücken im Spiegel: Beratung verweist auf die Sitzung, nicht direkt auf das Gremium; Tagesordnungspunkte nicht immer mit Vorlage verknüpft; Einreicher:innen selten erfasst; `underDirectionOf` nicht enthalten.
 
