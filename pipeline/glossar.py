@@ -3,9 +3,10 @@
 - ergebnisse: Ergebnistexte und Rollen der Beratung, wie sie wörtlich in den Quellen stehen
 - hinweise: Erläuterungen zu Prozessschritten (Schlüssel `note` in den Exporten, process.NOTES)
 - schritte, evidenz, staende: Bezeichnungen der Prozessebene (process.py)
+- themen: Bezeichnungen der abgeleiteten Themen (topics.py)
 - begriffe: allgemeine Begriffe mit Fundstelle (Gemeindeordnung NRW bzw. Datenfeld); allgemeine
   Erklärungen, keine Rechtsberatung"""
-from . import process as proc
+from . import process as proc, topics
 
 ERGEBNISSE = {
     "ungeändert beschlossen": "Das Gremium hat dem Vorschlag in der vorgelegten Fassung zugestimmt.",
@@ -105,5 +106,6 @@ def glossar():
         "schritte": SCHRITTE,
         "evidenz": EVIDENZ,
         "staende": STAENDE,
+        "themen": dict(topics.THEMES),
         "begriffe": [{"begriff": b, "erklaerung": e, "fundstelle": f} for b, e, f in BEGRIFFE],
     }

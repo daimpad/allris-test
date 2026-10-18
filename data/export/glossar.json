@@ -53,6 +53,18 @@
   "offen": "Noch keine Beratung mit Ergebnis.",
   "ohne Beratungsfolge": "Für die Vorlage ist keine Beratung in einem Gremium erfasst."
  },
+ "themen": {
+  "verkehr": "Verkehr und Mobilität",
+  "bauen": "Bauen und Stadtentwicklung",
+  "umwelt": "Umwelt, Grün und Klima",
+  "bildung": "Schule und Bildung",
+  "kinder": "Kinder, Jugend und Familie",
+  "soziales": "Soziales, Wohnen und Gesundheit",
+  "kultur": "Kultur und Sport",
+  "wirtschaft": "Wirtschaft und Finanzen",
+  "sicherheit": "Sicherheit und Ordnung",
+  "beteiligung": "Beteiligung, Integration und Internationales"
+ },
  "begriffe": [
   {
    "begriff": "Vorlage",

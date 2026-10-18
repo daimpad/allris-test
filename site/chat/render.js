@@ -1,7 +1,7 @@
 // Darstellung der Modellantworten: kleines Markdown ohne HTML-Durchreichung (alles wird maskiert).
 // Links nur zu Adressen, die in Werkzeugergebnissen dieses Gesprächs vorkamen; Drucksachennummern werden
 // zu Schaltflächen (belegt) oder sichtbar markiert (nicht durch abgerufene Daten belegt).
-import { REF_RX } from "./core.js";
+import { REF_RX, sameRef } from "./core.js";
 
 export const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
@@ -16,7 +16,7 @@ export function collectUrls(value, set = new Set()) {
 // Zu einer genannten Nummer die Drucksache aus den Werkzeugergebnissen (z. B. „261798-01“ → „261798-01 ST“)
 export function resolveRef(ref, refs) {
   const r = ref.trim().replace(/\s+/g, " ");
-  for (const x of refs) if (x === r || x.startsWith(r + " ")) return x;
+  for (const x of refs) if (sameRef(x, r)) return x;
   return null;
 }
 

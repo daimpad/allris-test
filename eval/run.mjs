@@ -46,7 +46,8 @@ async function main() {
   const a = args(process.argv.slice(2));
   const anbieter = a.anbieter || "anthropic";
   if (!PROVIDERS[anbieter]) throw new Error(`Unbekannter Anbieter „${anbieter}“ (${Object.keys(PROVIDERS).join(", ")}).`);
-  const modell = a.modell || PROVIDERS[anbieter].models[0];
+  const modell = typeof a.modell === "string" ? a.modell : PROVIDERS[anbieter].models[0];
+  if (!modell) throw new Error(`Bitte mit --modell ein Modell angeben; für ${anbieter} gibt es keine Voreinstellung.`);
   const key = process.env[ENV_KEY[anbieter]] || "";
   if (!key && !PROVIDERS[anbieter].keyOptional) throw new Error(`Bitte den Schlüssel in der Umgebungsvariablen ${ENV_KEY[anbieter]} setzen.`);
   const local = await access(new URL("data/export/bonn/chat/datenstand.json", ROOT)).then(() => true, () => false);
@@ -86,10 +87,13 @@ async function main() {
       lauf = { text: "", protocol: [], citations: null, fehler: null, usage: null, model: null };
       for await (const ev of chat.ask(f.frage)) {
         if (ev.type === "done") Object.assign(lauf, { text: ev.text, protocol: ev.protocol, citations: ev.citations, usage: ev.usage, model: ev.model });
-        if (ev.type === "error") Object.assign(lauf, { fehler: ev.message, status: ev.status, protocol: ev.protocol || [] });
+        if (ev.type === "error") Object.assign(lauf, { fehler: ev.message, status: ev.status, art: ev.kind, protocol: ev.protocol || [] });
       }
       lauf.ms = Date.now() - t0;
-      const retry = lauf.fehler && (lauf.status === 429 || lauf.status >= 500 || lauf.status === 0) && versuch < 3;
+      // nur vorübergehende Fehler wiederholen: Ratenlimit, Serverfehler, Netzwerk, Fehlerereignis im Strom (z. B. überlastet);
+      // Konfiguration, Ablehnung und interne Fehler gelingen auch beim zweiten Mal nicht
+      const transient = lauf.status === 429 || lauf.status >= 500 || lauf.art === "network" || (lauf.art === "api" && !lauf.status);
+      const retry = lauf.fehler && transient && versuch < 3;
       if (!retry) break;
       console.log(`  ${f.id}: ${lauf.fehler} – neuer Versuch in 30 s`);
       await sleep(30000);
