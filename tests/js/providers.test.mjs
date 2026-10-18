@@ -2,7 +2,7 @@
 // Auswertung der Streams, Werkzeugaufrufe, Fehler und Schlüsselschutz.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { stream, toAnthropic, toOpenAI, endpoint, sse, explain, ProviderError, listModels } from "../../site/chat/providers.js";
+import { stream, toAnthropic, toOpenAI, endpoint, sse, explain, ProviderError, listModels, newCallId } from "../../site/chat/providers.js";
 
 const KEY = "sk-test-geheim-0123456789";
 const TOOLS = [{ name: "hole_vorlage", description: "Details einer Vorlage", parameters: { type: "object", properties: { drucksache: { type: "string" } }, required: ["drucksache"] } }];
@@ -204,4 +204,14 @@ test("Modelllisten: OpenRouter nur mit Werkzeugen", async () => {
   const f = async () => new Response(JSON.stringify({ data: [{ id: "a/b", name: "B", supported_parameters: ["tools"] }, { id: "c/d", name: "D", supported_parameters: [] }] }));
   assert.deepEqual(await listModels("openrouter", { fetchImpl: f }), [{ id: "a/b", name: "B" }]);
   assert.equal((await listModels("anthropic")).length, 3);
+});
+
+test("Ersatz-IDs für Werkzeugaufrufe ohne ID: eindeutig, 9 Zeichen", async () => {
+  const ids = new Set(Array.from({ length: 200 }, () => newCallId()));
+  assert.equal(ids.size, 200);
+  for (const id of ids) assert.match(id, /^[a-z0-9]{9}$/);
+  const turn = () => sseResponse([O({ tool_calls: [{ index: 0, function: { name: "hole_vorlage", arguments: "{}" } }] }, "tool_calls"), "data: [DONE]\n\n"]);
+  const a = await collect(stream({ provider: "lokal", model: "m", key: "", history: [{ role: "user", text: "q" }], fetchImpl: fakeFetch(turn) }));
+  const b = await collect(stream({ provider: "lokal", model: "m", key: "", history: [{ role: "user", text: "q" }], fetchImpl: fakeFetch(turn) }));
+  assert.notEqual(a.find((e) => e.type === "tool_call").id, b.find((e) => e.type === "tool_call").id);
 });

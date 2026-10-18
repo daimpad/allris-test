@@ -76,6 +76,9 @@ button, select, input { font: inherit; color: inherit; }
   position: fixed; top: 16px; left: 16px; right: 16px; z-index: 1000; height: var(--nav-h);
   display: flex; align-items: center; gap: 10px; padding: 8px 10px 8px 18px; border-radius: 22px;
 }
+/* Seitentitel: auf dem Desktop nur für Bildschirmleser (sichtbar steht der Name in der Leiste),
+   mobil als schwebende Kopfzeile oben links, weil die Leiste dort unten liegt */
+.site-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: 0; }
 .brand { font: 700 20px/1 var(--font-display); letter-spacing: -0.02em; white-space: nowrap; color: var(--accent-fill); }
 .brand span { color: var(--text); font-weight: 600; }
 .nav-search { position: relative; flex: 1 1 260px; max-width: 440px; min-width: 160px; }
@@ -416,8 +419,8 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .msg-foot { font-size: 12px; color: var(--text-muted); margin-top: 8px !important; }
 .tool-line { font-size: 13px; color: var(--accent-ink); margin: 6px 0 0 !important; }
 .tool-line[hidden] { display: none; }
-.src-cards { display: grid; gap: 8px; margin-top: 10px; }
-.src-head { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin: 0 !important; }
+.src-cards { margin: 10px 0 0; background: transparent; }
+.src-list { display: grid; gap: 8px; }
 .src-card { border: 1px solid var(--border-alt); border-radius: 12px; padding: 8px 10px; background: rgba(250, 250, 255, 0.9); }
 .src-card p { margin: 0 0 4px; }
 .src-title { font-weight: 500; }
@@ -459,6 +462,13 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
   .glass { -webkit-backdrop-filter: blur(8px) saturate(150%); backdrop-filter: blur(8px) saturate(150%); }
   .nav { top: auto; bottom: 10px; left: 10px; right: 10px; height: auto; flex-wrap: wrap; padding: 8px; gap: 6px; border-radius: 22px; }
   .brand { display: none; }
+  .site-title {
+    position: fixed; top: 10px; left: 10px; z-index: 850; width: auto; height: auto; overflow: visible; clip: auto;
+    padding: 9px 16px; border-radius: 999px; background: var(--surface-strong); border: 1px solid var(--border);
+    box-shadow: var(--shadow), var(--highlight); -webkit-backdrop-filter: blur(8px) saturate(150%); backdrop-filter: blur(8px) saturate(150%);
+    font: 700 20px/1 var(--font-display); letter-spacing: -0.02em; color: var(--accent-fill);
+  }
+  .site-title span { color: var(--text); font-weight: 600; }
   .nav-search { flex: 1 1 60%; max-width: none; }
   .nav-area { flex: 1 1 30%; max-width: none; min-width: 0; height: 44px; }
   .nav-search input { height: 44px; }
@@ -467,7 +477,8 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
   .nav-group:not(.seg) { flex: 4 1 0; justify-content: space-between; }
   .toggle, .menu-btn { flex: 1; flex-direction: column; justify-content: center; gap: 2px; height: 50px; padding: 0 2px; font-size: 11px; }
   .menu-btn .chev { display: none; }
-  .panel, .overlay, .mega { top: 10px; bottom: auto; left: 10px !important; right: 10px !important; width: auto !important; max-height: calc(100vh - 210px); transform: none; }
+  /* Blätter beginnen unter dem Seitentitel, damit der Name immer sichtbar bleibt */
+  .panel, .overlay, .mega { top: 58px; bottom: auto; left: 10px !important; right: 10px !important; width: auto !important; max-height: calc(100vh - 258px); transform: none; }
   .panel { overflow: hidden; }
   .panel[hidden] { transform: translateY(-110%); }
   .resizer { display: none; }

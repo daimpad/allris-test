@@ -3,7 +3,7 @@
 // mit Karte, Liste und Vorgang (window.risKarte aus app.js). Daten und Prompt werden erst beim ersten
 // Öffnen geladen.
 import { TOOLS, createTools } from "./tools.js";
-import { createChat } from "./core.js";
+import { createChat, collectRefs, sameRef } from "./core.js";
 import { PROVIDERS, listModels } from "./providers.js";
 import { createKeyStore } from "./keys.js";
 import { loadSystemPrompt, deDate } from "./prompt.js";
@@ -28,6 +28,7 @@ const keys = createKeyStore();
 const prefs = { provider: "anthropic", models: {}, base: "", ...(store.get(PREFS) || {}) };
 
 let chat = null, ready = null, controller = null, busy = false;
+let conv = 0;   // zählt Gespräche; Ereignisse einer Antwort aus einem früheren Gespräch werden verworfen
 const urls = new Set(STATIC_URLS);
 const refs = new Set();
 const cards = new Map();   // Drucksache → { titel, datum, art, links }
@@ -109,11 +110,11 @@ async function ensureChat() {
 
 function record(result) {
   collectUrls(result, urls);
+  collectRefs(result, refs);
   const walk = (v) => {
     if (Array.isArray(v)) return v.forEach(walk);
     if (!v || typeof v !== "object") return;
     if (typeof v.drucksache === "string") {
-      refs.add(v.drucksache);
       const c = cards.get(v.drucksache) || {};
       cards.set(v.drucksache, { ...c, titel: v.titel ?? c.titel, datum: v.datum ?? c.datum, art: v.art ?? c.art, links: v.links ?? c.links });
     }
@@ -132,10 +133,10 @@ function bubble(role, html) {
 function scrollDown() { const b = $("#chat-body"); b.scrollTop = b.scrollHeight; }
 
 function sourceCards(belegt) {
-  const list = belegt.map((r) => [...refs].find((x) => x === r || x.startsWith(r + " ")) || r);
+  const list = belegt.map((r) => [...refs].find((x) => sameRef(x, r)) || r);
   const uniq = [...new Set(list)];
   if (!uniq.length) return "";
-  return `<div class="src-cards"><p class="src-head">Quellen</p>${uniq.map((ref) => {
+  return `<details class="acc src-cards" open><summary>Quellen (${uniq.length})</summary><div class="src-list">${uniq.map((ref) => {
     const c = cards.get(ref) || {};
     const l = c.links || {};
     return `<article class="src-card"><p class="src-title">${esc(c.titel || "Vorlage " + ref)}</p>
@@ -143,7 +144,7 @@ function sourceCards(belegt) {
       <p class="src-actions"><button type="button" class="btn btn-soft ref" data-ref="${esc(ref)}">In der Karte zeigen</button>
       ${l.ratsinformationssystem ? `<a class="btn btn-ghost" href="${esc(l.ratsinformationssystem)}" target="_blank" rel="noopener noreferrer">Ratsinformationssystem<span class="visually-hidden"> (neuer Tab)</span></a>` : ""}
       ${l.dokument ? `<a class="btn btn-ghost" href="${esc(l.dokument)}" target="_blank" rel="noopener noreferrer">Dokument<span class="visually-hidden"> (neuer Tab)</span></a>` : ""}</p></article>`;
-  }).join("")}</div>`;
+  }).join("")}</div></details>`;
 }
 
 function protocolHtml(protocol) {
@@ -173,11 +174,13 @@ async function ask(question) {
   $("#chat-input").value = "";
   status("Der Assistent arbeitet …");
   controller = new AbortController();
+  const mine = conv;
   let text = "";
   try {
     const c = await ensureChat();
     const full = ctx ? `${q}\n\n[Kontext der Seite, von der Nutzer:in freigegeben: ${ctx}]` : q;
     for await (const ev of c.ask(full, { signal: controller.signal })) {
+      if (mine !== conv) break;
       if (ev.type === "text") { text += ev.text; stream.textContent = text; scrollDown(); }
       else if (ev.type === "tool_start") { toolLine.hidden = false; toolLine.textContent = `${TOOL_LABEL[ev.name] || ev.name} …`; status(`Der Assistent nutzt: ${TOOL_LABEL[ev.name] || ev.name}`); }
       else if (ev.type === "tool_end") { record(ev.result); if (text && !text.endsWith("\n")) { text += "\n\n"; } }
@@ -211,6 +214,16 @@ async function ask(question) {
   }
 }
 
+function newConversation(message) {
+  conv++;
+  controller?.abort();
+  chat?.reset();
+  refs.clear(); cards.clear(); urls.clear(); STATIC_URLS.forEach((u) => urls.add(u));
+  $("#chat-log").innerHTML = "";
+  status(message);
+  updateState();
+}
+
 // --- Kopplung mit Karte, Liste und Vorgang --------------------------------------------------------------------
 async function openRef(ref, button) {
   if (!window.risKarte) return;
@@ -225,7 +238,11 @@ function init() {
   $("#chat-provider").innerHTML = Object.entries(PROVIDERS).map(([k, v]) => `<option value="${k}">${esc(v.label)}</option>`).join("");
   fillSettings();
   $("#chat-consent").addEventListener("click", () => { store.set(CONSENT, true); updateState(); ($("#chat-input").disabled ? $("#chat-settings summary") : $("#chat-input")).focus(); });
-  $("#chat-provider").addEventListener("change", (e) => { prefs.provider = e.target.value; savePrefs(); fillSettings(); });
+  // Anbieterwechsel beginnt ein neues Gespräch: Verlauf und Werkzeug-IDs eines Anbieters passen nicht zum anderen
+  $("#chat-provider").addEventListener("change", (e) => {
+    prefs.provider = e.target.value; savePrefs(); fillSettings();
+    if ($("#chat-log").children.length) newConversation("Anbieter gewechselt: neues Gespräch begonnen.");
+  });
   $("#chat-model").addEventListener("change", (e) => { prefs.models[provider()] = e.target.value.trim(); savePrefs(); updateState(); });
   $("#chat-base").addEventListener("change", (e) => { prefs.base = e.target.value.trim(); savePrefs(); });
   const saveKey = () => { keys.set(provider(), $("#chat-key").value, { remember: $("#chat-remember").checked }); updateState(); };
@@ -238,12 +255,7 @@ function init() {
   });
   $("#chat-stop").addEventListener("click", () => controller?.abort());
   $("#chat-new").addEventListener("click", () => {
-    controller?.abort();
-    chat?.reset();
-    refs.clear(); cards.clear(); urls.clear(); STATIC_URLS.forEach((u) => urls.add(u));
-    $("#chat-log").innerHTML = "";
-    status("Neues Gespräch begonnen.");
-    updateState();
+    newConversation("Neues Gespräch begonnen.");
     if (!$("#chat-input").disabled) $("#chat-input").focus();
   });
   $("#chat-examples").addEventListener("click", (e) => { const b = e.target.closest(".chip"); if (b) ask(b.textContent); });

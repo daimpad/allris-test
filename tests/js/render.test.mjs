@@ -24,10 +24,10 @@ test("Links nur zu Adressen aus Werkzeugergebnissen", () => {
 });
 
 test("Drucksachen: belegte als Schaltfläche (volle Nummer), unbelegte markiert", () => {
-  const html = renderMarkdown("Die Vorlage 261798 und ihre Stellungnahme 261798-01; 123456 ist unbekannt.", ctx);
+  const html = renderMarkdown("Die Vorlage 261798 und ihre Stellungnahme 261798-01; 259999 ist unbekannt.", ctx);
   assert.match(html, /<button type="button" class="ref" data-ref="261798" [^>]*>261798<\/button>/);
   assert.match(html, /data-ref="261798-01 ST"[^>]*>261798-01<\/button>/);
-  assert.match(html, /<mark class="unbelegt"[^>]*>123456<\/mark>/);
+  assert.match(html, /<mark class="unbelegt"[^>]*>259999<\/mark>/);
   assert.equal(resolveRef("261798-01", ctx.refs), "261798-01 ST");
   assert.equal(resolveRef("261798-0", ctx.refs), null);
 });
@@ -47,4 +47,9 @@ test("Adressen aus Ergebnissen sammeln; Maskierung", () => {
   const urls = collectUrls({ links: { ratsinformationssystem: URL1, dokument: null }, quelle_id: "https://www.bonn.sitzung-online.de/oparl/papers/1", titel: "Siehe https://x.example im Text" });
   assert.deepEqual([...urls].sort(), ["https://www.bonn.sitzung-online.de/oparl/papers/1", URL1].sort());
   assert.equal(esc(`<"'&>`), "&lt;&quot;&#39;&amp;&gt;");
+});
+
+test("Zahlen außerhalb der Drucksachen-Nummern bleiben Text", () => {
+  const html = renderMarkdown("Kosten von 150000 Euro, 200000 € und die Nummer 999999.", ctx);
+  assert.doesNotMatch(html, /<button|<mark/);
 });

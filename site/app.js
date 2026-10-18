@@ -853,12 +853,12 @@
 
   // --- Start -----------------------------------------------------------------------------------------
   async function start() {
-    try {
-      const g = await fetch(GLOSSAR_URL).then((r) => (r.ok ? r.json() : null));
-      if (g) ({ ergebnisse: GLOSSAR, hinweise: NOTES, schritte: STEP_LABEL, evidenz: STATUS_TEXT } = g);
-    } catch (e) { /* ohne Glossar: Schlüssel statt Erläuterungen */ }
+    // Glossar parallel zu den Daten laden; ohne Glossar erscheinen Schlüssel statt Erläuterungen
+    const glossar = fetch(GLOSSAR_URL).then((r) => (r.ok ? r.json() : null)).catch(() => null);
     try { index = await fetch(BONN + "index.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { index = null; }
     if (index) { try { zeit = await fetch(BONN + "zeit.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { zeit = null; } }
+    const g = await glossar;
+    if (g) ({ ergebnisse: GLOSSAR, hinweise: NOTES, schritte: STEP_LABEL, evidenz: STATUS_TEXT } = g);
     [geo.ortsteil, geo.bezirk] = await Promise.all([fetch(GEO.ortsteil).then((r) => r.json()), fetch(GEO.bezirk).then((r) => r.json())]);
     initMap();
     fillAreaSelect();

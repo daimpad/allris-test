@@ -38,6 +38,10 @@ export const PROVIDERS = {
 const ANTHROPIC_VERSION = "2023-06-01";
 const FALLBACK_BETA = "server-side-fallback-2026-07-01";
 const LOCAL = /^http:\/\/(localhost|127\.0\.0\.1)(:\d{1,5})?\//;
+// Ersatz-ID für Werkzeugaufrufe ohne ID (manche lokale Server): eindeutig über Runden, 9 Zeichen [a-z0-9]
+// wie von Mistral verlangt
+let callSeq = 0;
+export const newCallId = () => `c${(++callSeq).toString(36)}${Math.random().toString(36).slice(2)}`.replace(/[^a-z0-9]/g, "").slice(0, 9).padEnd(9, "0");
 
 export class ProviderError extends Error {
   constructor(message, { status = 0, kind = "api" } = {}) { super(message); this.status = status; this.kind = kind; }
@@ -258,7 +262,7 @@ async function* openai({ provider, model, key, system, history, tools, toolChoic
     });
     if (choice.finish_reason) finish = choice.finish_reason;
   }
-  const list = calls.filter(Boolean).map((c, i) => ({ ...c, id: c.id || `call${i}${Date.now().toString(36)}`.slice(0, 9).padEnd(9, "0") }));
+  const list = calls.filter(Boolean).map((c) => ({ ...c, id: c.id || newCallId() }));
   for (const c of list) {
     const parsed = parseArgs(c.args);
     yield { type: "tool_call", id: c.id, name: c.name, args: parsed.args ?? {}, ...(parsed.invalid != null ? { invalid: parsed.invalid } : {}) };

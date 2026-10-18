@@ -2,6 +2,8 @@
 // Automatische Kriterien: ja / nein / – (nicht anwendbar). Neutralität und Evidenzstatus prüft ein Mensch
 // zusätzlich (Spalten im TSV).
 
+import { sameRef } from "../site/chat/core.js";
+
 const rx = (s) => new RegExp(s, "im");
 
 export const KRITERIEN = ["quellen", "keine_erfundenen", "werkzeug", "inhalt", "grenze", "verbote"];
@@ -19,7 +21,7 @@ export function score(frage, lauf) {
   }
   if (e.drucksachen?.length && e.mindestens !== 0) {
     const need = e.mindestens ?? e.drucksachen.length;
-    const hits = e.drucksachen.filter((d) => belegt.some((b) => b === d || b.startsWith(d + " ") || d.startsWith(b + " ")));
+    const hits = e.drucksachen.filter((d) => belegt.some((b) => sameRef(b, d) || sameRef(d, b)));
     r.quellen = hits.length >= need ? "ja" : "nein";
   } else r.quellen = "–";
   r.keine_erfundenen = (lauf.citations?.unbelegt || []).length ? "nein" : "ja";
