@@ -25,45 +25,9 @@
   const STATUS = {
     belegt: "belegt", abgeleitet: "abgeleitet", soll: "soll", "nicht_öffentlich": "nicht öffentlich", unklar: "unklar",
   };
-  const STATUS_TEXT = {
-    belegt: "Als Datenobjekt in der Quelle vorhanden.",
-    abgeleitet: "Aus Quelldaten erschlossen (z. B. Verknüpfung mit OParl-Lite, Titelmuster).",
-    "nicht_öffentlich": "Findet regelmäßig statt, ist von außen aber nicht einsehbar.",
-    unklar: "Ob und wann der Schritt stattfindet, lässt sich aus öffentlichen Quellen nicht bestimmen.",
-    soll: "Nach Regelwerk zu erwarten, aber nicht dokumentiert (noch nicht modelliert).",
-  };
-  const NOTES = {
-    sonderweg: "Sonderweg: Entscheidung vor der Beratung, nachträgliche Genehmigung durch das Gremium.",
-    vorbereitung: "Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.",
-    datum: "Datum der Vorlage laut Ratsinformationssystem; ob es Erstellung, Freigabe oder Veröffentlichung bezeichnet, ist nicht dokumentiert.",
-    ohne_sitzung: "Beratung ist vorgesehen; Sitzung und Ergebnis sind (noch) nicht verknüpft.",
-    vollzug: "Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt es keine öffentliche Schnittstelle.",
-    nichtoeffentlich: "Der Tagesordnungspunkt wurde nichtöffentlich beraten; Inhalte sind nicht einsehbar.",
-    datum_vor_vorlage: "Dieser Schritt liegt vor dem angegebenen Datum der Vorlage; die Quelle erklärt die Abweichung nicht.",
-  };
-  const STEP_LABEL = {
-    initiierung: "Initiierung", vorbereitung: "Vorbereitung", veroeffentlichung: "Datum der Vorlage", beratung: "Beratung",
-    entscheidung: "Entscheidung", folgevorlage: "Folgevorlage", vollzug: "Vollzug",
-  };
-  const GLOSSAR = {
-    "ungeändert beschlossen": "Das Gremium hat dem Vorschlag in der vorgelegten Fassung zugestimmt.",
-    "geändert beschlossen": "Das Gremium hat zugestimmt, aber mit Änderungen, etwa aus Änderungsanträgen.",
-    "zur Kenntnis genommen": "Das Gremium wurde informiert; über einen Beschluss wurde nicht abgestimmt.",
-    "abgelehnt": "Die Mehrheit des Gremiums hat dagegen gestimmt.",
-    "vertagt": "Die Beratung wurde auf eine spätere Sitzung verschoben.",
-    "zurückgezogen": "Die Einreichenden haben die Vorlage zurückgenommen.",
-    "verwiesen": "Die Vorlage wurde zur Beratung an ein anderes Gremium weitergegeben.",
-    "nicht abgestimmt": "In dieser Sitzung fand keine Abstimmung statt.",
-    "ohne Votum": "Das Gremium hat keine Empfehlung abgegeben.",
-    "erledigt durch Stellungnahme der Verwaltung": "Der Antrag gilt als erledigt, weil die Verwaltung schriftlich Stellung genommen hat.",
-    "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt": "Der Punkt wurde zu Beginn der Sitzung von der Tagesordnung genommen oder verschoben.",
-    "mit Protokollnotiz": "Zusätzlich wurde eine Anmerkung ins Protokoll aufgenommen.",
-    "mit Maßgabe": "Der Beschluss gilt mit einer zusätzlichen Bedingung oder Vorgabe.",
-    Entscheidung: "Dieses Gremium entscheidet abschließend.",
-    Empfehlung: "Das Gremium berät vor und gibt eine Empfehlung an das entscheidende Gremium.",
-    Anhörung: "Das Gremium wird angehört; seine Stellungnahme ist nicht bindend.",
-    Kenntnisnahme: "Das Gremium wird informiert.",
-  };
+  // Glossar, Erläuterungen und Bezeichnungen der Prozessebene: data/export/glossar.json (pipeline/glossar.py)
+  const GLOSSAR_URL = "data/export/glossar.json";
+  let GLOSSAR = {}, NOTES = {}, STEP_LABEL = {}, STATUS_TEXT = {};
   const LIMITS = `<details class="acc"><summary>Was diese Darstellung nicht zeigen kann</summary><ul>
     <li>Verwaltungsinterne Abläufe vor dem Datum der Vorlage (Erarbeitung, Mitzeichnung, Freigaben).</li>
     <li>Den Vollzug von Beschlüssen: Die Beschlusskontrolle hat keine öffentliche Schnittstelle.</li>
@@ -554,7 +518,7 @@
   }
   function legend() {
     return `<details class="acc"><summary>Legende Evidenzstatus</summary><div class="legend">${["belegt", "abgeleitet", "nicht_öffentlich", "unklar"]
-      .map((s) => `<span><span class="mark mark-${s}" aria-hidden="true">${s === "unklar" ? "?" : ""}</span><strong>${STATUS[s]}</strong> – ${STATUS_TEXT[s]}</span>`).join("")}
+      .map((s) => `<span><span class="mark mark-${s}" aria-hidden="true">${s === "unklar" ? "?" : ""}</span><strong>${STATUS[s]}</strong> – ${STATUS_TEXT[s] || ""}</span>`).join("")}
       <span class="hint">Linie: durchgezogen = belegt, gestrichelt = abgeleitet, gepunktet = nicht öffentlich oder unklar.</span></div></details>`;
   }
   function glossary(p) {
@@ -886,6 +850,10 @@
 
   // --- Start -----------------------------------------------------------------------------------------
   async function start() {
+    try {
+      const g = await fetch(GLOSSAR_URL).then((r) => (r.ok ? r.json() : null));
+      if (g) ({ ergebnisse: GLOSSAR, hinweise: NOTES, schritte: STEP_LABEL, evidenz: STATUS_TEXT } = g);
+    } catch (e) { /* ohne Glossar: Schlüssel statt Erläuterungen */ }
     try { index = await fetch(BONN + "index.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { index = null; }
     if (index) { try { zeit = await fetch(BONN + "zeit.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { zeit = null; } }
     [geo.ortsteil, geo.bezirk] = await Promise.all([fetch(GEO.ortsteil).then((r) => r.json()), fetch(GEO.bezirk).then((r) => r.json())]);
