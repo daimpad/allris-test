@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ratskarte Bonn</title>
+  <meta name="description" content="Vorlagen aus dem Bonner Ratsinformationssystem räumlich, zeitlich und nach Akteuren erschlossen – mit Prozessschritten, Evidenzstatus und Quellenangabe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="list-open detail-open">
+  <h1 class="visually-hidden">Ratskarte Bonn</h1>
+  <div id="map" aria-label="Karte der Vorlagen im gewählten Gebiet. Alle Vorlagen stehen auch in der Liste."></div>
+
+  <nav class="nav glass" aria-label="Ansicht">
+    <div class="brand" aria-hidden="true">Ratskarte Bonn<small>vorläufige Fassung</small></div>
+    <label class="visually-hidden" for="f-area">Gebiet</label>
+    <select id="f-area"></select>
+    <button type="button" class="toggle" data-panel="panel-list" aria-controls="panel-list" aria-pressed="true">Liste</button>
+    <button type="button" class="toggle" data-panel="timeline-wrap" aria-controls="timeline-wrap" aria-pressed="true">Zeitleiste</button>
+    <button type="button" class="toggle" data-panel="panel-detail" aria-controls="panel-detail" aria-pressed="true">Detail</button>
+    <button type="button" class="toggle" data-panel="panel-wege" aria-controls="panel-wege" aria-pressed="false">Wege</button>
+  </nav>
+
+  <section id="panel-list" class="panel glass" aria-labelledby="list-heading">
+    <div class="panel-head">
+      <h2 id="list-heading">Vorlagen</h2>
+      <button type="button" class="icon-btn" data-close="panel-list" aria-label="Liste einklappen">‹</button>
+    </div>
+    <div class="panel-body">
+      <form class="filters" id="filters" role="search" aria-label="Vorlagen filtern">
+        <label>Stichwort
+          <input type="search" id="f-text" placeholder="z. B. Radweg, Kita, 261856" autocomplete="off">
+        </label>
+        <div class="filter-row">
+          <label>Vorlagenart
+            <select id="f-type"><option value="">alle</option></select>
+          </label>
+          <label>Stand
+            <select id="f-stand">
+              <option value="">alle</option>
+              <option>entschieden</option>
+              <option>in Beratung</option>
+              <option>offen</option>
+              <option>ohne Beratungsfolge</option>
+            </select>
+          </label>
+        </div>
+        <details class="acc">
+          <summary>Weitere Filter</summary>
+          <div class="filters">
+            <label>Federführendes Amt
+              <select id="f-amt"><option value="">alle</option></select>
+            </label>
+            <label>Gremium
+              <select id="f-gremium"><option value="">alle</option></select>
+            </label>
+            <fieldset id="f-conf">
+              <legend>Verortung</legend>
+              <label class="check"><input type="checkbox" value="hoch" checked> hoch <span class="hint">(Koordinate der Stadt)</span></label>
+              <label class="check"><input type="checkbox" value="mittel" checked> mittel <span class="hint">(aus dem Titel)</span></label>
+              <label class="check"><input type="checkbox" value="niedrig" checked> niedrig <span class="hint">(mehrdeutig)</span></label>
+            </fieldset>
+          </div>
+        </details>
+      </form>
+      <p class="count" id="count" aria-live="polite"></p>
+      <ol class="papers" id="papers" tabindex="-1"></ol>
+    </div>
+  </section>
+
+  <section id="timeline-wrap" class="glass" aria-label="Zeitleiste"></section>
+
+  <section id="panel-detail" class="panel glass" aria-labelledby="detail-heading">
+    <div class="panel-head">
+      <h2 id="detail-heading">Vorgang</h2>
+      <button type="button" class="icon-btn" data-close="panel-detail" aria-label="Detail einklappen">›</button>
+    </div>
+    <div class="panel-body detail" id="detail" aria-live="polite" tabindex="-1">
+      <p class="empty">Eine Vorlage in der Liste oder auf der Karte auswählen.</p>
+    </div>
+  </section>
+
+  <section id="panel-wege" class="glass" aria-labelledby="wege-heading" hidden>
+    <div class="panel-head">
+      <h2 id="wege-heading">Typische Wege nach Vorlagenart</h2>
+      <button type="button" class="icon-btn" data-close="panel-wege" aria-label="Wege schließen">×</button>
+    </div>
+    <div class="panel-body" id="wege"></div>
+  </section>
+
+  <aside id="sources" class="glass" aria-label="Quellen und Lizenzen">
+    <details class="acc">
+      <summary>Quellen, Lizenzen und Datenstand</summary>
+      <div>
+        <p>OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteil- und Bezirksflächen der Stadt Bonn (CC0 1.0) · Straßen © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet.</p>
+        <p id="stand"></p>
+        <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a></p>
+      </div>
+    </details>
+  </aside>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+  <script src="timeline.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
