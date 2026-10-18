@@ -79,6 +79,7 @@ export function createChat({ tools, runTool, settings, system, adapter = provide
     history.push({ role: "user", text });
     const protocol = [];
     let calls = 0, answer = "", last = null;
+    const usage = { eingabe: 0, ausgabe: 0 };  // Tokens über alle Runden dieser Antwort
     try {
       for (let round = 0; round < MAX_ROUNDS; round++) {
         const toolChoice = calls >= maxToolCalls ? "none" : "auto";
@@ -92,6 +93,8 @@ export function createChat({ tools, runTool, settings, system, adapter = provide
           else if (ev.type === "done") last = ev;
         }
         if (!last) throw new ProviderError("Die Antwort des Anbieters ist unvollständig.");
+        usage.eingabe += last.usage?.input_tokens ?? last.usage?.prompt_tokens ?? 0;
+        usage.ausgabe += last.usage?.output_tokens ?? last.usage?.completion_tokens ?? 0;
         if (last.stop === "refusal") {
           dropOpenQuestion();
           yield { type: "error", kind: "refusal", message: "Das Modell hat die Antwort abgelehnt. Bitte die Frage anders formulieren." };
@@ -138,7 +141,7 @@ export function createChat({ tools, runTool, settings, system, adapter = provide
         history.push({ role: "tool", results });
       }
       if (history.at(-1)?.role === "tool") history.push({ role: "assistant", text: "[Antwort unvollständig: zu viele Runden]", toolCalls: [] });
-      yield { type: "done", text: answer, protocol, citations: checkCitations(answer, refs), model: last?.model, usage: last?.usage, stop: last?.stop };
+      yield { type: "done", text: answer, protocol, citations: checkCitations(answer, refs), model: last?.model, usage, stop: last?.stop };
     } catch (e) {
       dropOpenQuestion();
       if (e?.name === "AbortError" || signal?.aborted) { yield { type: "error", kind: "abort", message: "Antwort abgebrochen.", protocol }; return; }
