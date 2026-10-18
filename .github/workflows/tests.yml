@@ -18,7 +18,12 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Unit-Tests (Akteure, Geokodierung, Prozessschritte, Feeds und Kalender)
+      - name: Unit-Tests (Akteure, Geokodierung, Prozessschritte, Feeds und Kalender, Chat-Daten)
         run: python -m unittest discover tests -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
       - name: Syntax der Webseite
-        run: node --check site/app.js && node --check site/timeline.js
+        run: node --check site/app.js && node --check site/timeline.js && node --check site/chat/tools.js && node --check site/chat/providers.js && node --check site/chat/core.js && node --check site/chat/keys.js && node --check site/chat/prompt.js
+      - name: Ratsassistent (Werkzeuge, Anbieter-Adapter, Chat-Kern)
+        run: node --test "tests/js/**/*.test.mjs"

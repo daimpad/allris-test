@@ -1,0 +1,158 @@
+{
+ "meta": {
+  "note": "Allgemeine Erklärungen ohne Rechtsberatung; Fundstelle je Begriff. Ergebnistexte erscheinen wörtlich wie in den Quellen."
+ },
+ "ergebnisse": {
+  "ungeändert beschlossen": "Das Gremium hat dem Vorschlag in der vorgelegten Fassung zugestimmt.",
+  "geändert beschlossen": "Das Gremium hat zugestimmt, aber mit Änderungen, etwa aus Änderungsanträgen.",
+  "zur Kenntnis genommen": "Das Gremium wurde informiert; über einen Beschluss wurde nicht abgestimmt.",
+  "abgelehnt": "Die Mehrheit des Gremiums hat dagegen gestimmt.",
+  "vertagt": "Die Beratung wurde auf eine spätere Sitzung verschoben.",
+  "zurückgezogen": "Die Einreichenden haben die Vorlage zurückgenommen.",
+  "verwiesen": "Die Vorlage wurde zur Beratung an ein anderes Gremium weitergegeben.",
+  "nicht abgestimmt": "In dieser Sitzung fand keine Abstimmung statt.",
+  "ohne Votum": "Das Gremium hat keine Empfehlung abgegeben.",
+  "erledigt durch Stellungnahme der Verwaltung": "Der Antrag gilt als erledigt, weil die Verwaltung schriftlich Stellung genommen hat.",
+  "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt": "Der Punkt wurde zu Beginn der Sitzung von der Tagesordnung genommen oder verschoben.",
+  "mit Protokollnotiz": "Zusätzlich wurde eine Anmerkung ins Protokoll aufgenommen.",
+  "mit Maßgabe": "Der Beschluss gilt mit einer zusätzlichen Bedingung oder Vorgabe.",
+  "Entscheidung": "Dieses Gremium entscheidet abschließend.",
+  "Empfehlung": "Das Gremium berät vor und gibt eine Empfehlung an das entscheidende Gremium.",
+  "Anhörung": "Das Gremium wird angehört; seine Stellungnahme ist nicht bindend.",
+  "Kenntnisnahme": "Das Gremium wird informiert."
+ },
+ "hinweise": {
+  "sonderweg": "Sonderweg: Entscheidung vor der Beratung, nachträgliche Genehmigung durch das Gremium.",
+  "vorbereitung": "Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.",
+  "datum": "Datum der Vorlage laut Ratsinformationssystem; ob es Erstellung, Freigabe oder Veröffentlichung bezeichnet, ist nicht dokumentiert.",
+  "ohne_sitzung": "Beratung ist vorgesehen; Sitzung und Ergebnis sind (noch) nicht verknüpft.",
+  "vollzug": "Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt es keine öffentliche Schnittstelle.",
+  "nichtoeffentlich": "Der Tagesordnungspunkt wurde nichtöffentlich beraten; Inhalte sind nicht einsehbar.",
+  "datum_vor_vorlage": "Dieser Schritt liegt vor dem angegebenen Datum der Vorlage; die Quelle erklärt die Abweichung nicht."
+ },
+ "schritte": {
+  "initiierung": "Initiierung",
+  "vorbereitung": "Vorbereitung",
+  "veroeffentlichung": "Datum der Vorlage",
+  "beratung": "Beratung",
+  "entscheidung": "Entscheidung",
+  "folgevorlage": "Folgevorlage",
+  "vollzug": "Vollzug"
+ },
+ "evidenz": {
+  "belegt": "Als Datenobjekt in der Quelle vorhanden.",
+  "abgeleitet": "Aus Quelldaten erschlossen (z. B. Verknüpfung mit OParl-Lite, Titelmuster).",
+  "nicht_öffentlich": "Findet regelmäßig statt, ist von außen aber nicht einsehbar.",
+  "unklar": "Ob und wann der Schritt stattfindet, lässt sich aus öffentlichen Quellen nicht bestimmen.",
+  "soll": "Nach Regelwerk zu erwarten, aber nicht dokumentiert (noch nicht modelliert)."
+ },
+ "staende": {
+  "entschieden": "Eine entscheidende Beratung hat ein abschließendes Ergebnis.",
+  "beraten, ohne Entscheidung": "Alle Beratungen sind abgeschlossen, keine davon war entscheidend (z. B. Mitteilungen, die zur Kenntnis genommen wurden).",
+  "in Beratung": "Mindestens eine Beratung hat ein Ergebnis, andere stehen aus oder wurden vertagt.",
+  "offen": "Noch keine Beratung mit Ergebnis.",
+  "ohne Beratungsfolge": "Für die Vorlage ist keine Beratung in einem Gremium erfasst."
+ },
+ "begriffe": [
+  {
+   "begriff": "Vorlage",
+   "erklaerung": "Schriftstück, über das Rat, Bezirksvertretungen oder Ausschüsse beraten, etwa ein Antrag, eine Beschlussvorlage oder ein Bürgerantrag.",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Objekt „Paper“"
+  },
+  {
+   "begriff": "Drucksachennummer",
+   "erklaerung": "Kennung einer Vorlage, z. B. 261798. Zusätze wie „-01“ kennzeichnen zugehörige Folgevorlagen.",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „reference“"
+  },
+  {
+   "begriff": "Beschlussvorlage",
+   "erklaerung": "Vorlage der Verwaltung mit einem Beschlussvorschlag, über den ein Gremium entscheidet.",
+   "fundstelle": "allgemeine Erklärung"
+  },
+  {
+   "begriff": "Mitteilungsvorlage",
+   "erklaerung": "Vorlage, mit der die Verwaltung ein Gremium informiert; ein Beschluss ist nicht vorgesehen.",
+   "fundstelle": "allgemeine Erklärung"
+  },
+  {
+   "begriff": "Antrag",
+   "erklaerung": "Vorlage einer Fraktion, Gruppe oder eines Mitglieds, mit der ein Gremium um einen Beschluss gebeten wird.",
+   "fundstelle": "allgemeine Erklärung"
+  },
+  {
+   "begriff": "Änderungsantrag",
+   "erklaerung": "Antrag, der eine andere Vorlage oder einen anderen Antrag ändern will.",
+   "fundstelle": "allgemeine Erklärung"
+  },
+  {
+   "begriff": "Stellungnahme der Verwaltung",
+   "erklaerung": "Schriftliche Antwort der Verwaltung, meist auf einen Antrag oder eine Anfrage.",
+   "fundstelle": "allgemeine Erklärung"
+  },
+  {
+   "begriff": "Anfrage",
+   "erklaerung": "Fragen einer Fraktion oder eines Mitglieds an die Verwaltung (Kleine oder Große Anfrage); die Verwaltung antwortet schriftlich oder in der Sitzung.",
+   "fundstelle": "allgemeine Erklärung"
+  },
+  {
+   "begriff": "Anregungen und Beschwerden (Bürgerantrag)",
+   "erklaerung": "Jede Person kann sich schriftlich mit Anregungen oder Beschwerden in Angelegenheiten der Gemeinde an den Rat oder die Bezirksvertretung wenden.",
+   "fundstelle": "§ 24 GO NRW"
+  },
+  {
+   "begriff": "Einwohnerfragestunde",
+   "erklaerung": "Zeit in einer Sitzung, in der Einwohnerinnen und Einwohner Fragen stellen können; Einzelheiten regelt die Geschäftsordnung.",
+   "fundstelle": "Geschäftsordnung des Rates der Stadt Bonn"
+  },
+  {
+   "begriff": "Rat",
+   "erklaerung": "Gewählte Vertretung der Bürgerinnen und Bürger; er ist für alle Angelegenheiten der Gemeinde zuständig, soweit nichts anderes bestimmt ist.",
+   "fundstelle": "§ 41 GO NRW"
+  },
+  {
+   "begriff": "Bezirksvertretung",
+   "erklaerung": "Gewählte Vertretung eines Stadtbezirks in kreisfreien Städten; Bonn hat vier (Bonn, Bad Godesberg, Beuel, Hardtberg). Sie entscheidet über Angelegenheiten, deren Bedeutung nicht wesentlich über den Stadtbezirk hinausgeht.",
+   "fundstelle": "§§ 36, 37 GO NRW"
+  },
+  {
+   "begriff": "Ausschuss",
+   "erklaerung": "Vom Rat gebildetes Gremium, das Beschlüsse vorbereitet oder in übertragenen Angelegenheiten selbst entscheidet.",
+   "fundstelle": "§§ 41, 57 GO NRW"
+  },
+  {
+   "begriff": "Hauptausschuss",
+   "erklaerung": "Pflichtausschuss des Rates; er stimmt die Arbeit der Ausschüsse ab und kann in dringenden Fällen anstelle des Rates entscheiden.",
+   "fundstelle": "§§ 59, 60 GO NRW"
+  },
+  {
+   "begriff": "Dringlichkeitsentscheidung",
+   "erklaerung": "Entscheidung in dringenden Fällen ohne Sitzung des zuständigen Gremiums; sie wird dem Gremium nachträglich zur Genehmigung vorgelegt.",
+   "fundstelle": "§ 60 GO NRW (Rat), § 36 GO NRW (Bezirksvertretung)"
+  },
+  {
+   "begriff": "Fraktion",
+   "erklaerung": "Zusammenschluss von Mitgliedern des Rates oder einer Bezirksvertretung.",
+   "fundstelle": "§ 56 GO NRW"
+  },
+  {
+   "begriff": "Öffentlichkeit von Sitzungen",
+   "erklaerung": "Sitzungen des Rates sind grundsätzlich öffentlich; für einzelne Angelegenheiten kann die Öffentlichkeit ausgeschlossen werden. Inhalte nichtöffentlicher Beratungen sind nicht einsehbar.",
+   "fundstelle": "§ 48 GO NRW"
+  },
+  {
+   "begriff": "Federführendes Amt",
+   "erklaerung": "Amt der Verwaltung, das eine Vorlage verantwortet.",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „underDirectionOf“"
+  },
+  {
+   "begriff": "Beratungsfolge",
+   "erklaerung": "Reihenfolge der Gremien, die eine Vorlage beraten, jeweils mit Rolle (Entscheidung, Empfehlung, Anhörung, Kenntnisnahme).",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Objekt „Consultation“"
+  },
+  {
+   "begriff": "Tagesordnungspunkt",
+   "erklaerung": "Punkt der Tagesordnung einer Sitzung; über ihn wird beraten und gegebenenfalls abgestimmt. Das Ergebnis stammt aus OParl-Lite.",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Objekt „AgendaItem“"
+  }
+ ]
+}

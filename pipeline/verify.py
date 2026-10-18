@@ -113,7 +113,9 @@ Inhalt
 - bonn/prozesse.json: typische Wege (Folge der Beratungen) je Vorlagenart
 - bonn/vorlagen.geojson: alle verorteten Vorlagen (ein Punkt je Vorlage und Straße)
 - bonn/termine.ics: Sitzungskalender (iCalendar); bonn/dcat.jsonld: Beschreibung nach DCAT-AP
-- (nicht im Paket: Atom-Feeds unter bonn/feeds/ auf der Seite)
+- glossar.json: Ergebnistexte, Evidenzstatus, Stände und Begriffe mit Fundstelle
+- (nicht im Paket: Atom-Feeds unter bonn/feeds/ und Daten des Ratsassistenten unter bonn/chat/ auf
+  der Seite; sie wiederholen die Gebietsdateien)
 - verifikation_oparl.tsv, verifikation_zeit.tsv: Abgleich von Stichproben mit der OParl-API
 - prozess/: Bericht zur Exploration der Prozessebene und Stichprobe Endenich
 - strassen_bonn.json: Straßenverzeichnis (OSM) mit Ortsteilen je Straße
@@ -133,7 +135,7 @@ def package():
         z.write(config.ROOT / "data" / "LICENSE-DATA.md", "allris-bonn/LICENSE-DATA.md")
         z.write(config.STRASSEN, "allris-bonn/strassen_bonn.json")
         for path in sorted(config.EXPORT.rglob("*")):
-            if path.is_file() and path != target and "feeds" not in path.parts:
+            if path.is_file() and path != target and not {"feeds", "chat"} & set(path.parts):
                 z.write(path, "allris-bonn/" + str(path.relative_to(config.EXPORT)))
         for path in sorted((config.ROOT / "prozess").glob("*")):
             if path.suffix in (".md", ".tsv"):
