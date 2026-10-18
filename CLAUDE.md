@@ -1,7 +1,7 @@
 # Prompt: „allris-bonn“ – Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschließen
 
-> Entwurf v0.3 (17.10.2026) · Kontext: Hackathon „Hack den Stadtrat“ · Zur Ausführung in Claude Code
-> Änderungen gegenüber v0.1: Datenquellen nachrecherchiert und korrigiert (Abschnitt 3), Entscheidungen aus Rückfragen eingearbeitet (Abschnitt 2), Geokodierung in drei Stufen präzisiert (5.2), Vorgehen mit Prüfpunkten (7).
+> Fassung v0.4 (18.10.2026) · Kontext: Hackathon „Hack den Stadtrat“ · Zur Ausführung in Claude Code
+> Änderungen gegenüber v0.3: Stand der Umsetzung (Abschnitt 9), Entscheidungen zu Name, Hosting und Gestaltung (Abschnitt 2), Bebauungspläne und Straßenverzeichnis geklärt (3.3), offene Punkte aktualisiert (8). Arbeitsweise im Repository: `.claude/skills/allris-bonn/SKILL.md`.
 
 ---
 
@@ -13,7 +13,9 @@ Du arbeitest als Webentwickler:in mit Erfahrung in Open-Data-Pipelines und Geoda
 
 | Punkt | Entscheidung |
 |---|---|
-| Projektname / Repository | `allris-bonn`, öffentlich auf GitHub |
+| Projektname / Repository | `allris-bonn`, öffentlich auf GitHub als `daimpad/allris-test`; die Seite heißt **RIS-Karte Bonn** |
+| Veröffentlichung | GitHub Pages (https://daimpad.github.io/allris-test/), täglich 04:17 UTC neu erzeugt; zusätzlich Branch `deploy` mit der fertigen Seite für `ris-bonn.datenatlas.de` (netcup-Webhosting, Plesk-Git mit Webhook) |
+| Gestaltung | Karte vollflächig, alle Flächen einklappbar darüber; Glass-Stil (DESIGN.md „Arc Browser Glass“), Akzent für Text abgedunkelt (Kontrast); Kartenhintergrund grau mit Umschalter „Farbige Karte“; Quellen stets im Akkordeon; WCAG 2.1 AA |
 | Code-Lizenz | MIT |
 | Räumlicher Umfang | Ganz Bonn; Pilot und erste Auslieferung: Ortsteil **Endenich** (Stadtbezirk Bonn) |
 | Einsatz von Sprachmodellen | Zulässig für Ortsextraktion und Kurzfassungen – mit Kennzeichnung, Konfidenz und Link zum Original |
@@ -42,9 +44,9 @@ Du arbeitest als Webentwickler:in mit Erfahrung in Open-Data-Pipelines und Geoda
 ### 3.3 Geobasisdaten der Stadt Bonn (CC0, Open-Data-Portal)
 - **Ortsteile** (51 Polygone, WGS84, Felder `ortsteil`, `ortsteil_bez`, `bezirk`, `bezirk_bez`): `https://stadtplan.bonn.de/geojson?Thema=21247` – Datensatz `https://opendata.bonn.de/dataset/flächen-der-ortsteile`
 - **Stadtbezirke** (4 Polygone): `https://stadtplan.bonn.de/geojson?Thema=14574` – Datensatz `https://opendata.bonn.de/dataset/flächen-der-stadtbezirke`
-- Straßenverzeichnis (Straßennamen, Herkunft): Datensatz „Straßenliste Straßennamen Straßenverzeichnis Herkunft Entstehung“ auf opendata.bonn.de / open.nrw – Ressourcen-URL und Felder (Ortsteilzuordnung? Koordinaten?) vor Nutzung prüfen
-- Straßengeometrien und Adresspunkte: OpenStreetMap (ODbL; Nominatim/Photon oder lokaler Extrakt), falls das städtische Straßenverzeichnis keine Geometrien liefert; Lizenzhinweis ODbL beachten
-- Bebauungspläne (Geltungsbereiche): INSPIRE/GDK-Metadatensatz vorhanden; WFS-URL noch zu ermitteln
+- Straßenverzeichnis: umgesetzt mit OpenStreetMap (Overpass, ODbL) → `data/geo/strassen_bonn.json` mit Ortsteilen je Straße; das städtische Straßenverzeichnis liefert keine Geometrien
+- **Bebauungspläne** (Geltungsbereiche, 1.128 rechtskräftige Pläne, CC0): `https://stadtplan.bonn.de/geojson?Thema=20074` – Datensatz `https://opendata.bonn.de/dataset/lage-der-bebauungspläne`; Felder Plannummer, in Kraft seit, Plan- und Begründungs-PDF. Pläne im Verfahren sind nicht enthalten.
+- Sitzungen, Wahlperioden: OParl-API (`meetings`, `legislativeTerms`); Tagesordnung (`web`), Einladung und TOPs erscheinen etwa zwei Wochen vor der Sitzung; TOPs der Stadt verweisen nicht auf Vorlagen (Verknüpfung nur über OParl-Lite)
 
 ## 4. Ziel
 
@@ -104,7 +106,22 @@ Eine öffentliche, statisch auslieferbare Webanwendung, die Ratsinformationen in
 
 ## 8. Offene Punkte
 
-- GitHub-Account für `allris-bonn`: eigener Account des Auftraggebers (bei Ausführung per `gh auth status` prüfen; Organisation nur auf ausdrückliche Angabe)
-- Ressourcen-URL und Felder des Straßenverzeichnisses; WFS der Bebauungspläne
-- Aktualisierungsrhythmus (täglich wie die Quelle?) und Hosting (GitHub Pages reicht für statische Daten bis einige MB)
+- **Nächste Aufgabe (vorgemerkt):** Vorlagen nach übergeordneten Themen erschließen (Themen-Layer, z. B. Verkehr, Bauen, Grün, Schule, Soziales) und nach Parteien bzw. Fraktionen filtern und durchsuchen (Grundlage: abgeleitete Einreichende, federführendes Amt, Stichworte; später Volltext)
+- Stufe C (Volltext, Sprachmodell) zurückgestellt, bis die Lizenz der PDFs geklärt ist
+- Stichprobe zur Prüfung von Hand: `data/export/endenich/stichprobe_pruefung.tsv` (50 Vorlagen) ausstehend; Text im Dialog „Über“ gegenlesen
+- Eigene Domain: A-Eintrag `ris-bonn` muss auf die Web-Adresse des Hostings zeigen (91.204.46.169, nicht die Mail-Adresse .171); danach Let's-Encrypt-Zertifikat, Plesk-Git (Branch `deploy`) und Webhook; anschließend `SITE_URL` auf `https://ris-bonn.datenatlas.de/` umstellen
+- Soll-Modell der Prozessebene (Zuständigkeitsordnung, Bezirkssatzung) nicht formalisiert
+- Beitrag an OParl-Lite (Felder `location`, `underDirectionOf`) als Issue auf Codeberg – nur nach Rückfrage, da nach außen wirksam
 - Hackathon-Rahmen: Datum, Teilnehmende, erwartetes Ergebnisformat (Demo, Repository, Datensatz)
+
+## 9. Stand der Umsetzung (18.10.2026)
+
+| Bereich | Umgesetzt |
+|---|---|
+| Phasen 0–5 (Abschnitt 7) | Exploration, Pipeline (`python -m pipeline all`), Geokodierung A/B mit Audit, Frontend, Repository mit README/LICENSE/CONTRIBUTING/Issue-Vorlagen, tägliche Aktualisierung, Verifikation und Zip-Paket |
+| Geokodierung | Stufe A (OParl `location`), Stufe B (Straßen, Ortsteile, Stadtbezirke im Titel; Bebauungsplan-Nummern mit Geltungsbereich), Vererbung von übergeordneten Vorlagen (Stufe B, höchstens „mittel“); Stufe C offen |
+| Prozessebene | Schritte mit Evidenzstatus (belegt, abgeleitet, nicht öffentlich, unklar), Stand (entschieden; beraten, ohne Entscheidung; in Beratung; offen; ohne Beratungsfolge), typische Wege je Vorlagenart, Audit |
+| Zeitleiste | Dichte je Monat, Sitzungen, Wahlperioden, Auswahlspur, Zeitraumfilter mit URL-Zustand, Datumsaudit, Verifikation gegen die OParl-API |
+| Abonnieren und Termine | Atom-Feeds je Gebiet und je Vorlage, Sitzungskalender (Seite und `termine.ics`) |
+| Offene Daten | `vorlagen.geojson`, `dcat.jsonld` (DCAT-AP), Datenpaket |
+| Ideen aus Abschnitt 6 offen | Beteiligungshinweise, Gremien- und Ämterkarte, Themen-Layer (siehe 8), Kurzfassungen (LLM), Rückmeldung zur Verortung ist umgesetzt |

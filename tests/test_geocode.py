@@ -58,6 +58,8 @@ class GeocodeTest(unittest.TestCase):
 
     def test_plan_numbers(self):
         self.assertEqual(plan_numbers("Bebauungsplan Nr. 6522-3 Kaiser-Karl-Ring")[0][0], "6522-3")
+        self.assertEqual(plan_numbers("Anhörung zum Bebauungsplanverfahren Nr. 6421-1")[0][0], "6421-1")
+        self.assertEqual(plan_numbers("Öffentlichkeitsbeteiligung zum Bebauungsplanverfahrens Nr. 6421-1")[0][0], "6421-1")
 
 
 if __name__ == "__main__":

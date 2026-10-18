@@ -22,6 +22,8 @@ STADTBEZIRKE = GEO / "stadtbezirke_bonn.geojson"
 # Straßenverzeichnis (Name → Lagen je Ortsteil), abgeleitet aus OSM; im Repository, damit die
 # Aktualisierung ohne Overpass auskommt. Neu erzeugen mit `python -m pipeline gazetteer`.
 STRASSEN = GEO / "strassen_bonn.json"
+BPLAN = GEO / "bebauungsplaene_bonn.geojson"
+BPLAN_URL = "https://stadtplan.bonn.de/geojson?Thema=20074"
 DB = BUILD / "allris.sqlite"
 
 OPARL_BODY = "https://www.bonn.sitzung-online.de/oparl/bodies/1"
@@ -51,6 +53,10 @@ SOURCES = {
     "geo-bonn": {
         "url": "https://opendata.bonn.de/dataset/flächen-der-ortsteile",
         "license": "CC0 1.0 (Stadt Bonn)",
+    },
+    "bplan-bonn": {
+        "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
+        "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
     },
 }
 
