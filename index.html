@@ -38,6 +38,11 @@
       </div>
       <div class="panel-body">
         <form class="filters" id="filters" role="search" aria-label="Vorlagen filtern">
+          <fieldset class="scope" id="scope" hidden>
+            <legend class="visually-hidden">Suchen in</legend>
+            <label><input type="radio" name="scope" value="gebiet" checked> im gewählten Gebiet</label>
+            <label><input type="radio" name="scope" value="bonn"> in ganz Bonn</label>
+          </fieldset>
           <label>Stichwort
             <input type="search" id="f-text" placeholder="z. B. Radweg, Kita, 261856" autocomplete="off">
           </label>
@@ -56,6 +61,15 @@
               </select>
             </label>
           </div>
+          <div class="filter-row">
+            <label>Thema
+              <select id="f-theme"><option value="">alle</option></select>
+            </label>
+            <label>Partei / Fraktion
+              <select id="f-party"><option value="">alle</option></select>
+            </label>
+          </div>
+          <label class="check" id="f-related-wrap" hidden><input type="checkbox" id="f-related" checked> auch Stellungnahmen und Folgevorlagen zu ihren Anträgen</label>
           <details class="acc" id="more-filters">
             <summary>Weitere Filter<span class="active-filters" id="active-filters"></span></summary>
             <div class="filters">
@@ -151,6 +165,9 @@
 
       <h3>Wie sicher sind die Angaben?</h3>
       <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Einige sind erschlossen, etwa der Ort aus dem Titel einer Vorlage oder das Datum einer Sitzung. Sie sind als „abgeleitet“ gekennzeichnet. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt.</p>
+
+      <h3>Nach Themen und Parteien suchen</h3>
+      <p>In der Liste lassen sich Vorlagen nach Thema (zum Beispiel Verkehr, Bauen, Umwelt) und nach Partei oder Fraktion filtern – im gewählten Gebiet oder in ganz Bonn. Die Themen sind aus dem zuständigen Amt, dem beratenden Ausschuss und Stichworten im Titel abgeleitet; bei jeder Vorlage steht, worauf die Zuordnung beruht. Parteien stammen aus den Einreichenden eines Antrags; auf Wunsch erscheinen auch die Antworten der Verwaltung darauf.</p>
 
       <h3>Auf dem Laufenden bleiben</h3>
       <p>Unter der Liste finden Sie einen <strong>Feed</strong> für das gewählte Gebiet, bei einer Vorlage einen Feed für genau diesen Vorgang. Ein Feed-Reader (zum Beispiel im Browser oder E-Mail-Programm) meldet dann neue Vorlagen und Beratungsergebnisse. Unter „Termine“ stehen die kommenden Sitzungen; sie lassen sich als Kalenderdatei in den eigenen Kalender übernehmen.</p>
