@@ -243,6 +243,30 @@
     map = L.map("map", { zoomControl: false, scrollWheelZoom: true, zoomAnimation: !REDUCED, fadeAnimation: !REDUCED, markerZoomAnimation: !REDUCED });
     L.control.zoom({ position: "bottomright" }).addTo(map);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap-Mitwirkende" }).addTo(map);
+    // Kartenhintergrund standardmäßig grau, damit die Marker hervortreten; die Wahl merkt sich der Browser
+    let colored = false;
+    try { colored = localStorage.getItem("ris-karte-farbig") === "1"; } catch (e) { /* ohne Speicher: grau */ }
+    const MapStyle = L.Control.extend({
+      options: { position: "bottomright" },
+      onAdd() {
+        const b = L.DomUtil.create("button", "map-style");
+        b.type = "button";
+        b.textContent = "Farbige Karte";
+        const apply = () => {
+          document.getElementById("map").classList.toggle("map-gray", !colored);
+          b.setAttribute("aria-pressed", String(colored));
+        };
+        b.addEventListener("click", () => {
+          colored = !colored;
+          try { localStorage.setItem("ris-karte-farbig", colored ? "1" : "0"); } catch (e) { /* nicht speicherbar */ }
+          apply();
+        });
+        L.DomEvent.disableClickPropagation(b);
+        apply();
+        return b;
+      },
+    });
+    new MapStyle().addTo(map);
     cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 40, animate: !REDUCED }).addTo(map);
   }
   function mapPadding() {
