@@ -60,15 +60,53 @@ class Steps(unittest.TestCase):
 class StandUndWeg(unittest.TestCase):
     def test_stand(self):
         self.assertEqual(process.stand(paper()), "ohne Beratungsfolge")
-        self.assertEqual(process.stand(paper(process_=[cons("Rat", status="")])), "offen")
-        self.assertEqual(process.stand(paper(process_=[cons("BV"), cons("Rat", status="")])), "in Beratung")
-        self.assertEqual(process.stand(paper(process_=[cons("Rat", "Entscheidung", True)])), "entschieden")
+        self.assertEqual(process.stand(paper(process_=[cons("Rat")])), "offen")
+        self.assertEqual(process.stand(paper(process_=[cons("BV", result="ungeändert beschlossen"), cons("Rat")])),
+                         "in Beratung")
+        self.assertEqual(process.stand(paper(process_=[cons("Rat", "Entscheidung", True,
+                                                            result="geändert beschlossen")])), "entschieden")
+
+    def test_vertagt_ist_nicht_entschieden(self):
+        p = paper(process_=[cons("Rat", "Entscheidung", True, result="vertagt")])
+        self.assertEqual(process.stand(p), "in Beratung")
+
+    def test_kenntnisnahme_ohne_entscheidung(self):
+        p = paper("Mitteilungsvorlage", process_=[cons("BV Bonn", "Kenntnisnahme", result="zur Kenntnis genommen")])
+        self.assertEqual(process.stand(p), "beraten, ohne Entscheidung")
 
     def test_path_key(self):
         p = paper(process_=[cons("BV Bonn", "Anhörung"),
                             cons("Rat", "Entscheidung", True, result="geändert beschlossen")])
         self.assertEqual(process.path_key(p),
-                         (("BV Bonn (Anhörung)", "Rat (Entscheidung)"), "geändert beschlossen"))
+                         (("BV Bonn (Anhörung)", "Rat (Entscheidung)"), "geändert beschlossen", "ergebnis"))
+        self.assertEqual(process.path_key(paper(process_=[cons("Rat")]))[1:], ("offen", "stand"))
+
+
+class Datum(unittest.TestCase):
+    def test_local_day_utc_nach_mitternacht(self):
+        self.assertEqual(process.local_day("2024-05-02T22:30:00.000Z"), "2024-05-03")
+        self.assertEqual(process.local_day("2024-05-02T17:00:00.000Z"), "2024-05-02")
+        self.assertEqual(process.local_day("2019-11-26T18:00:00+01:00"), "2019-11-26")
+        self.assertIsNone(process.local_day(None))
+
+    def test_ergebnis_ohne_sitzung_hat_kein_abgeleitetes_datum(self):
+        s = [x for x in process.steps(paper(process_=[cons("Rat", result="vertagt")])) if x["typ"] == "beratung"][0]
+        self.assertEqual((s["date"], s["date_status"], s["note"], s["result_source"]),
+                         (None, "unklar", None, "oparl-lite"))
+
+    def test_beratung_vor_datum_der_vorlage_wird_markiert(self):
+        p = paper(date="2024-06-01", process_=[cons("Rat", start="2024-03-01T17:00:00Z", result="vertagt")])
+        s = [x for x in process.steps(p) if x["typ"] == "beratung"][0]
+        self.assertEqual(s["note"], "datum_vor_vorlage")
+
+    def test_undatierte_beratung_folgt_der_vorigen(self):
+        p = paper(process_=[cons("BV", start="2024-04-01T17:00:00Z", result="vertagt"), cons("HA"),
+                            cons("Rat", "Entscheidung", True, "2024-05-02T17:00:00Z", "zur Kenntnis genommen")],
+                  subordinated=[{"paper_type": "Stellungnahme der Verwaltung", "reference": "1-01",
+                                 "name": "x", "date": "2024-04-20"}])
+        mid = [x["label"] if x["typ"] != "folgevorlage" else "FV" for x in process.steps(p)
+               if x["typ"] in ("beratung", "entscheidung", "folgevorlage")]
+        self.assertEqual(mid, ["BV", "HA", "FV", "Rat"])
 
 
 if __name__ == "__main__":

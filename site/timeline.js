@@ -51,7 +51,7 @@
 
   function create(root, options) {
     const o = Object.assign({ onRange() {}, onDate() {} }, options);
-    let data = null, papers = [], selected = null, level = 1;
+    let data = null, papers = [], selected = null, preview = false, level = 1;
     let view = [0, 1], range = [0, 1], extent = [0, 1], debounce;
 
     root.classList.add("tl");
@@ -90,7 +90,9 @@
         <div class="tl-handle" role="slider" tabindex="0" data-h="0" aria-label="Beginn des Zeitraums"></div>
         <div class="tl-handle" role="slider" tabindex="0" data-h="1" aria-label="Ende des Zeitraums"></div>
       </div>
-      <p class="tl-range" aria-live="polite"></p>
+      <p class="tl-range"></p>
+      <p class="tl-hint">Zeitraum wählen: Griffe ziehen, eine Voreinstellung nutzen oder mit gedrückter Umschalttaste über die Balken ziehen.</p>
+      <p class="visually-hidden tl-live" aria-live="polite"></p>
       <p id="tl-help" class="visually-hidden">Der gewählte Zeitraum filtert Liste und Karte.</p>
       <details class="acc tl-table"><summary>Monatsübersicht als Tabelle</summary><div class="tl-table-body" tabindex="0" role="region" aria-label="Monatsübersicht"></div></details>
       <details class="acc"><summary>Was die Zeitleiste nicht zeigt</summary>
@@ -235,8 +237,8 @@
           const shape = s.date_status === "abgeleitet" ? "rect" : "circle";
           const y = (LAYOUT.sel[0] + LAYOUT.sel[1]) / 2;
           const m = shape === "rect"
-            ? el("rect", { x: x(ms) - 4, y: y - 4, width: 8, height: 8, transform: `rotate(45 ${x(ms)} ${y})`, class: "tl-step derived" }, svg)
-            : el("circle", { cx: x(ms), cy: y, r: 4.5, class: "tl-step" }, svg);
+            ? el("rect", { x: x(ms) - 4, y: y - 4, width: 8, height: 8, transform: `rotate(45 ${x(ms)} ${y})`, class: `tl-step derived${preview ? " preview" : ""}` }, svg)
+            : el("circle", { cx: x(ms), cy: y, r: 4.5, class: `tl-step${preview ? " preview" : ""}` }, svg);
           el("title", {}, m).textContent = `${de(ms)} · ${s.label}${s.result ? " · „" + s.result + "“" : ""}${s.date_status === "abgeleitet" ? " (Datum abgeleitet)" : ""}`;
           m.addEventListener("click", () => o.onDate(s.date));
         }
@@ -293,12 +295,18 @@
       const text = `${de(range[0])} – ${de(range[1])} · ${countIn(range[0], range[1])} Vorlagen`;
       root.querySelector(".tl-range").textContent = `Zeitraum: ${text}`;
       clearTimeout(debounce);
-      if (!silent) debounce = setTimeout(() => o.onRange(iso(range[0]), iso(range[1])), 180);
+      // Ansage erst, wenn die Auswahl zur Ruhe kommt, nicht bei jeder Zeigerbewegung
+      if (!silent) debounce = setTimeout(() => {
+        root.querySelector(".tl-live").textContent = `Zeitraum ${text}`;
+        o.onRange(iso(range[0]), iso(range[1]));
+      }, 180);
     }
+    // „gesamter Bestand“ endet beim Datenstand; nur die Sitzungsachse reicht bis zu künftigen Terminen
+    const fullEnd = () => (dimSel.value === "sitzung" ? extent[1] : Math.min(extent[1], t(data.dataStand)));
     function preset(name) {
       const now = Math.min(Date.now(), extent[1]);
       if (name === "12m") setRange(now - 365 * DAY, now);
-      if (name === "all") setRange(extent[0], extent[1]);
+      if (name === "all") setRange(extent[0], fullEnd());
       if (name === "term") {
         const cur = data.terms.find((tm) => t(tm.start) <= now && (!tm.end || t(tm.end) >= now)) || data.terms[data.terms.length - 1];
         if (cur) setRange(t(cur.start), Math.min(t(cur.end || "2100-01-01"), extent[1]));
@@ -412,12 +420,14 @@
         data = d;
         if (d.dimension) dimSel.value = d.dimension;
         extent = [t(d.dataStart), Math.max(t(d.months[d.months.length - 1]) + 31 * DAY, Date.now())];
-        if (range[0] === 0) { range = [extent[0], extent[1]]; setLevel(level, Date.now() - LEVELS[level].span / 3); }
+        if (range[0] === 0) { range = [extent[0], fullEnd()]; setLevel(level, Date.now() - LEVELS[level].span / 3); }
         table();
         setRange(range[0], range[1], true);
       },
       setPapers(p) { papers = p || []; if (data) setRange(range[0], range[1], true); },
-      select(p) { selected = p; draw(); },
+      // preview: nur angedeutet (Zeiger über einem Listeneintrag), nicht ausgewählt
+      select(p, isPreview) { selected = p; preview = Boolean(p && isPreview); draw(); },
+      reset() { if (data) setRange(extent[0], fullEnd(), true); },
       setRange(a, b) { setRange(t(a), t(b), true); },
       center(d) { setLevel(level, t(d)); },
       getState() { return { von: iso(range[0]), bis: iso(range[1]), zoom: LEVELS[level].name, achse: dimSel.value }; },
@@ -425,7 +435,11 @@
         if (s.achse) dimSel.value = s.achse;
         const z = LEVELS.findIndex((l) => l.name === s.zoom);
         if (z >= 0) level = z;
-        if (s.von && s.bis) { range = [t(s.von), t(s.bis)]; setLevel(level, (range[0] + range[1]) / 2); }
+        if (s.von && s.bis) {
+          range = [t(s.von), t(s.bis)];
+          setLevel(level, (range[0] + range[1]) / 2);
+          setRange(range[0], range[1], true);
+        }
       },
       dimension() { return dimSel.value; },
       reduceMotion,

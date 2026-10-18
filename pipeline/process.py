@@ -9,7 +9,12 @@ Evidenzstatus
 
 Lücken werden als eigene Schritte ausgegeben, nicht weggelassen.
 """
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
 from .actors import EINWOHNER_TYPES, POLITIK_TYPES, VERWALTUNG_TYPES
+
+BERLIN = ZoneInfo("Europe/Berlin")
 
 SONDER_TYPES = {
     "Dringlichkeitsentscheidung OB": "Dringlichkeitsentscheidung der Oberbürgermeisterin bzw. des Oberbürgermeisters",
@@ -31,7 +36,24 @@ NOTES = {
     "vollzug": "Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt "
                "es keine öffentliche Schnittstelle.",
     "nichtoeffentlich": "Der Tagesordnungspunkt wurde nichtöffentlich beraten; Inhalte sind nicht einsehbar.",
+    "datum_vor_vorlage": "Dieser Schritt liegt vor dem angegebenen Datum der Vorlage; die Quelle erklärt "
+                         "die Abweichung nicht.",
 }
+
+
+def local_day(ts):
+    """Kalendertag in Bonn; Sitzungszeiten aus OParl-Lite stehen in UTC (z. B. 22:30Z = 00:30 Uhr)."""
+    if not ts:
+        return None
+    if len(ts) == 10:
+        return ts
+    dt = datetime.fromisoformat(ts.replace("Z", "+00:00"))
+    return (dt.astimezone(BERLIN) if dt.tzinfo else dt).date().isoformat()
+
+
+def is_final(result):
+    """Ergebnis, das die Beratung abschließt (nicht vertagt, verwiesen, nicht aufgenommen)."""
+    return bool(result) and not any(k in result for k in SCHLEIFE)
 
 
 def initiation_kind(paper_type):
@@ -70,17 +92,19 @@ def steps(p):
 
     decided = False
     for s in p["process"]:
-        linked = bool(s["start_date"] or s["result"])
+        day = local_day(s["start_date"])
         step = {
             "typ": "entscheidung" if s["authoritative"] else "beratung",
             "label": s["gremium"] or "Gremium unbekannt", "role": s["role"],
             "status": "belegt", "source": "oparl-bonn",
-            "date": (s["start_date"] or "")[:10] or None,
-            "date_status": "abgeleitet" if linked else "unklar",
-            "date_source": "oparl-lite" if linked else None,
+            "date": day, "date_status": "abgeleitet" if day else "unklar",
+            "date_source": "oparl-lite" if day else None,
             "number": s["number"], "result": s["result"], "stand": s["status"],
-            "note": None if linked else "ohne_sitzung",
+            "result_source": "oparl-lite" if s["result"] or s["number"] else None,
+            "note": None if day or s["result"] else "ohne_sitzung",
         }
+        if day and p["date"] and day < p["date"]:
+            step["note"] = "datum_vor_vorlage"
         if s["result"] and any(k in s["result"] for k in SCHLEIFE):
             step["schleife"] = True
         if s["authoritative"] and s["result"] and any(k in s["result"] for k in VOLLZUG):
@@ -88,33 +112,58 @@ def steps(p):
         out.append(step)
 
     for sub in p["subordinated"]:
+        early = sub.get("date") and p["date"] and sub["date"] < p["date"]
         out.append({"typ": "folgevorlage", "label": sub["paper_type"], "status": "belegt",
                     "date": sub.get("date"), "source": "oparl-bonn", "reference": sub["reference"],
-                    "title": sub["name"]})
+                    "title": sub["name"], "note": "datum_vor_vorlage" if early else None})
     if decided:
         out.append({"typ": "vollzug", "label": "Vollzug durch die Verwaltung", "status": "unklar",
                     "date": None, "note": "vollzug"})
 
-    # Datierte Schritte nach Datum, undatierte an ihrer logischen Stelle
+    # Datierte Schritte nach Datum; eine undatierte Beratung folgt der vorigen in der Beratungsfolge,
+    # undatierte Folgevorlagen stehen am Ende
     head = [s for s in out if s["typ"] in ("initiierung", "vorbereitung")]
     tail = [s for s in out if s["typ"] == "vollzug"]
     mid = [s for s in out if s not in head and s not in tail]
-    mid.sort(key=lambda s: (s["date"] is None, s["date"] or ""))
+    keys, carry = [], p["date"] or ""
+    for i, s in enumerate(mid):
+        if s["date"]:
+            if s["typ"] in ("beratung", "entscheidung"):
+                carry = s["date"]
+            keys.append((s["date"], i))
+        elif s["typ"] == "folgevorlage":
+            keys.append(("9999", i))
+        else:
+            keys.append((carry, i))
+    mid = [s for _, s in sorted(zip(keys, mid), key=lambda x: x[0])]
     return head + mid + tail
 
 
+STAENDE = ("entschieden", "beraten, ohne Entscheidung", "in Beratung", "offen", "ohne Beratungsfolge")
+
+
 def stand(p):
-    """Stand des Verfahrens: entschieden / in Beratung / offen / ohne Beratungsfolge."""
+    """Stand des Verfahrens (STAENDE):
+    - entschieden: eine entscheidende Beratung hat ein abschließendes Ergebnis
+    - beraten, ohne Entscheidung: alle Beratungen abgeschlossen, keine davon entscheidend
+      (z. B. Mitteilungen und Stellungnahmen, die zur Kenntnis genommen wurden)
+    - in Beratung: mindestens eine Beratung hat ein Ergebnis, andere stehen aus oder wurden vertagt
+    - offen: noch keine Beratung mit Ergebnis"""
     s = p["process"]
     if not s:
         return "ohne Beratungsfolge"
-    if any(x["authoritative"] and x["status"] == "beraten" for x in s):
+    if any(x["authoritative"] and is_final(x["result"]) for x in s):
         return "entschieden"
-    return "in Beratung" if any(x["status"] == "beraten" for x in s) else "offen"
+    if not any(x["result"] for x in s):
+        return "offen"
+    if any(not is_final(x["result"]) for x in s):
+        return "in Beratung"
+    return "beraten, ohne Entscheidung"
 
 
 def path_key(p):
-    """Weg einer Vorlage für die Aggregatdarstellung: Gremien mit Rolle, dann Ergebnis."""
+    """Weg einer Vorlage für die Aggregatdarstellung: Gremien mit Rolle (in der Beratungsfolge), dann
+    das Ergebnis der entscheidenden Beratung (wörtlich aus der Quelle) oder ersatzweise der Stand."""
     stations = [f"{s['gremium'] or '?'} ({s['role'] or '?'})" for s in p["process"]]
     final = next((s["result"] for s in reversed(p["process"]) if s["authoritative"] and s["result"]), None)
-    return tuple(stations), final or stand(p)
+    return tuple(stations), final or stand(p), "ergebnis" if final else "stand"

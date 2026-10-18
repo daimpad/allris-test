@@ -3,7 +3,7 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 576,
-  "generated_at": "2026-10-18T12:34:20+00:00",
+  "generated_at": "2026-10-18T13:23:52+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -2955,9 +2955,9 @@
     "place": "Steinweg",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021671"
    }
   },
@@ -10059,9 +10059,9 @@
     "place": "Flodelingsweg",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004609"
    }
   },
@@ -10083,9 +10083,9 @@
     "place": "Am Burggraben",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004609"
    }
   },
@@ -10107,9 +10107,9 @@
     "place": "Alfred-Bucherer-Straße",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004609"
    }
   },
@@ -10131,9 +10131,9 @@
     "place": "Magdalenenstraße",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004609"
    }
   },

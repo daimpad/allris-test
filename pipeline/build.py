@@ -157,11 +157,12 @@ def build():
     rows["ploc"] += _stage_b(papers, bv_bezirke, locations)
     rows["ploc"] += _inherited(papers, papers_by_id, rows["ploc"])
 
-    db.executemany("INSERT INTO paper VALUES (?,?,?,?,?,?,?,?,?,'oparl-bonn')", rows["paper"])
+    # OR REPLACE: ändert sich die Quelle während des seitenweisen Abrufs, kann eine Vorlage doppelt kommen
+    db.executemany("INSERT OR REPLACE INTO paper VALUES (?,?,?,?,?,?,?,?,?,'oparl-bonn')", rows["paper"])
     db.executemany("INSERT OR IGNORE INTO paper_relation VALUES (?,?,'oparl-bonn')", rows["rel"])
     db.executemany("INSERT INTO meeting VALUES (?,?,?,?,'oparl-lite')", meetings.values())
     db.executemany("INSERT INTO agenda_item VALUES (?,?,?,?,?,?,'oparl-lite')", agenda.values())
-    db.executemany("INSERT INTO consultation VALUES (?,?,?,?,?,?,?,?,'oparl-bonn',?)", rows["cons"])
+    db.executemany("INSERT OR REPLACE INTO consultation VALUES (?,?,?,?,?,?,?,?,'oparl-bonn',?)", rows["cons"])
     db.executemany("INSERT INTO location VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", locations.values())
     db.executemany("INSERT OR IGNORE INTO paper_plan VALUES (?,?,?)", rows["plan"])
     db.executemany("INSERT OR IGNORE INTO paper_location VALUES (?,?,?,?,?,?,?)", rows["ploc"])
@@ -206,8 +207,9 @@ def _inherited(papers, papers_by_id, own_rows):
             continue
         for parent_id in p.get("superordinatedPaper") or []:
             parent = papers_by_id.get(parent_id)
-            for _, loc_id, stage, _, conf, _, _ in own.get(parent_id, []):
-                out.append((p["id"], loc_id, stage, "vererbt", conf,
+            # abgeleitet, daher Stufe B; die Konfidenz liegt höchstens bei „mittel“
+            for _, loc_id, _, _, conf, _, _ in own.get(parent_id, []):
+                out.append((p["id"], loc_id, "B", "vererbt", "mittel" if conf == "hoch" else conf,
                             f"übergeordnete Vorlage {parent.get('reference') if parent else parent_id}",
                             parent_id))
     print(f"Vererbt: {len({r[0] for r in out})} Vorlagen")

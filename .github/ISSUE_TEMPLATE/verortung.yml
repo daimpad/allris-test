@@ -22,7 +22,7 @@ body:
   - type: input
     id: gebiet
     attributes:
-      label: Gebiet in der Ratskarte
+      label: Gebiet in der RIS-Karte
       placeholder: z. B. Endenich
   - type: dropdown
     id: art

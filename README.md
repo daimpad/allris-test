@@ -1,4 +1,4 @@
-# allris-bonn – Ratskarte Bonn
+# allris-bonn – RIS-Karte Bonn
 
 Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschließen: Wo liegt eine Vorlage, wo steht das Verfahren, wer ist beteiligt? Jede Angabe ist auf ihr Quellobjekt rückführbar; abgeleitete Angaben sind gekennzeichnet. Pilot und erste Auslieferung: Ortsteil Endenich.
 
@@ -12,7 +12,8 @@ Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschlie�
 - **Wer?** Federführendes Amt; bei der Sammelklasse „Co-Dezernat“ zusätzlich das fachlich zuständige Amt; befasste Gremien; Einreichende.
 - Die Karte füllt den Bildschirm; Liste, Zeitleiste, Detail, Wege und Quellen liegen als einklappbare Flächen darüber. Quellen stehen jeweils in einem Akkordeon.
 - Filter: Gebiet, Stichwort, Vorlagenart, Zeitraum, Amt, Gremium, Stand des Verfahrens, Konfidenz der Verortung. Direktlinks mit Zustand: `?gebiet=ortsteil:endenich&von=2025-10-18&bis=2026-10-18&zoom=Quartal&achse=vorlage#191010`.
-- „Verortung falsch?“ öffnet ein vorausgefülltes Issue.
+- „Verortung falsch?“ öffnet ein vorausgefülltes Issue. „Über“ erklärt die Seite in einfacher Sprache.
+- **Stand des Verfahrens:** *entschieden* (eine entscheidende Beratung hat ein abschließendes Ergebnis), *beraten, ohne Entscheidung* (z. B. Mitteilungen, die zur Kenntnis genommen wurden), *in Beratung* (Beratungen stehen aus oder wurden vertagt), *offen* (noch keine Beratung mit Ergebnis), *ohne Beratungsfolge*.
 
 ## Datenquellen und Lizenzen
 
@@ -41,7 +42,7 @@ Prüfung: `python -m pipeline check` gleicht Stufe B mit Stufe A ab (je Vorlage,
 
 ## Prozessebene
 
-Jeder Schritt einer Vorlage trägt einen Evidenzstatus: **belegt** (Datenobjekt in der Quelle), **abgeleitet** (erschlossen, z. B. Sitzungsdatum über OParl-Lite), **nicht öffentlich** (findet regelmäßig statt, ist aber nicht einsehbar, z. B. verwaltungsinterne Vorbereitung), **unklar** (aus öffentlichen Quellen nicht bestimmbar, z. B. Vollzug). Lücken erscheinen als eigene Schritte. Ein Soll-Modell (Zuständigkeitsordnung, Bezirkssatzung) ist noch nicht formalisiert. Bericht der Exploration: `prozess/BERICHT_phase0.md`; Audit je Schritt: `data/export/endenich/audit_prozess.tsv`.
+Jeder Schritt einer Vorlage trägt einen Evidenzstatus: **belegt** (Datenobjekt in der Quelle), **abgeleitet** (erschlossen, z. B. Sitzungsdatum über OParl-Lite), **nicht öffentlich** (findet regelmäßig statt, ist aber nicht einsehbar, z. B. verwaltungsinterne Vorbereitung), **unklar** (aus öffentlichen Quellen nicht bestimmbar, z. B. Vollzug). Lücken erscheinen als eigene Schritte. Sitzungsdaten werden auf den Kalendertag in Bonn umgerechnet; liegt ein Schritt vor dem Datum der Vorlage (rund 1.300 Fälle), ist er gekennzeichnet. Vererbte Ortsbezüge gelten als Stufe B (höchstens Konfidenz „mittel“). Ein Soll-Modell (Zuständigkeitsordnung, Bezirkssatzung) ist noch nicht formalisiert. Bericht der Exploration: `prozess/BERICHT_phase0.md`; Audit je Schritt: `data/export/endenich/audit_prozess.tsv`.
 
 ## Zeitleiste
 
