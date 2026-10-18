@@ -41,6 +41,7 @@ Ratsassistent (BYOK, im Aufbau; ES-Module ohne Abhängigkeiten unter `site/chat/
 - `keys.js`: Schlüssel im Arbeitsspeicher, `sessionStorage` nur auf Wunsch, nie `localStorage`.
 - `systemprompt.md` (Version und Änderungsvermerk; Text zwischen `<!-- PROMPT -->`-Markierungen) und `prompt.js` (Platzhalter aus `datenstand.json`); jede neue Fassung mit Begründung im Änderungsvermerk, Werkzeugnamen im Prompt müssen zu `tools.js` passen (Test). Entwürfe des Auftrags in `docs/`.
 - `render.js` (Markdown ohne HTML, Links nur aus Werkzeugergebnissen, Drucksachen als Schaltflächen) und `ui.js` (Fläche „Assistent“ links, teilt sich den Platz mit der Liste; KI-Hinweis, Einstellungen, Quellenkarten, Protokoll; Kopplung über `window.risKarte.open(ref)` und `.context()` aus `app.js`).
+- Auswertung: `eval/fragen.json` (Fragen mit Erwartungen aus den Daten), `eval/run.mjs` (Lauf mit echtem Anbieter, Schlüssel nur aus der Umgebung), `eval/score.mjs`; Ergebnisse als TSV und JSONL in `eval/ergebnisse/`. Erwartete Drucksachen werden im Test gegen den Export geprüft.
 - CSP als `<meta>` in `site/index.html`: neue externe Quellen dort und in `connect-src` eintragen; CDN-Dateien mit `integrity`.
 
 Im Repository liegen: Gremien, Ämter, Sitzungen, Wahlperioden (`data/raw/*.json`), Flächen und Straßenverzeichnis (`data/geo/`), Pilot Endenich und Audits (`data/export/`). Erzeugt und nicht eingecheckt: `data/export/bonn/`, Zip, Datenbank.
