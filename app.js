@@ -96,8 +96,8 @@
   const THEME_METHOD = { amt: "Amt", gremium: "Gremium", stichwort: "Stichwort im Titel" };
 
   // --- Flächen ein- und ausklappen ---------------------------------------------------------------
-  const SHEETS = ["panel-list", "panel-detail", "panel-wege", "panel-termine", "timeline-wrap", "sources"];
-  const OVERLAYS = ["panel-wege", "panel-termine"];
+  const SHEETS = ["panel-list", "panel-detail", "panel-auswertung", "panel-termine", "timeline-wrap"];
+  const OVERLAYS = ["panel-auswertung", "panel-termine"];
   const toggleFor = (id) => document.querySelector(`.toggle[data-panel="${id}"]`);
   function setPanel(id, open) {
     const el = document.getElementById(id);
@@ -106,8 +106,9 @@
     if (id === "panel-list") { document.body.classList.toggle("list-open", open); document.body.classList.toggle("list-closed", !open); }
     if (id === "panel-detail") { document.body.classList.toggle("detail-open", open); document.body.classList.toggle("detail-closed", !open); }
     if (!open) return;
-    // schmale Bildschirme: nur eine Fläche; mittlere Breiten: Liste oder Detail, damit die Zeitleiste Platz hat
-    // Wege und Termine liegen mittig übereinander, daher immer nur eines davon
+    closeMega();
+    // schmale Bildschirme: nur eine Fläche; mittlere Breiten: Liste oder Vorgang, damit die Zeitleiste Platz hat;
+    // Auswertung und Termine liegen mittig übereinander, daher immer nur eines davon
     const others = MOBILE.matches ? SHEETS : OVERLAYS.includes(id) ? OVERLAYS
       : NARROW.matches && (id === "panel-list" || id === "panel-detail") ? ["panel-list", "panel-detail"] : [];
     for (const other of others) if (other !== id && !document.getElementById(other).hidden) setPanel(other, false);
@@ -128,35 +129,111 @@
       const open = document.getElementById(t.dataset.panel).hidden;
       setPanel(t.dataset.panel, open);
       if (open) focusPanel(t.dataset.panel);
-      if (open && t.dataset.panel === "sources") $("#sources details").open = true;
     }
     const c = e.target.closest("[data-close]");
     if (c) closePanel(c.dataset.close);
   });
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape" || $("#about").open) return;
+    if (openMegaId) return closeMega(true);
     const overlay = OVERLAYS.find((id) => !document.getElementById(id).hidden);
     if (overlay) return closePanel(overlay);
     const inside = SHEETS.find((id) => document.getElementById(id).contains(document.activeElement));
-    if (inside && (MOBILE.matches || inside !== "sources")) closePanel(inside);
+    if (inside) closePanel(inside);
   });
   function applyLayout() {
     if (MOBILE.matches) {
-      setPanel("sources", false);
       const open = SHEETS.filter((id) => !document.getElementById(id).hidden);
       open.slice(1).forEach((id) => setPanel(id, false));
-    } else {
-      $("#sources").hidden = false;
-      if (NARROW.matches && !$("#panel-list").hidden && !$("#panel-detail").hidden) setPanel("panel-detail", false);
-    }
+    } else if (NARROW.matches && !$("#panel-list").hidden && !$("#panel-detail").hidden) setPanel("panel-detail", false);
     $("#timeline-wrap").classList.toggle("tl-compact", MOBILE.matches);
+    clampWidths();
     if (tl) tl.select(selected);
   }
 
+  // --- Mega-Menüs ------------------------------------------------------------------------------------
+  let openMegaId = null;
+  function openMega(id, trigger) {
+    if (openMegaId && openMegaId !== id) closeMega();
+    const el = document.getElementById(id);
+    el.hidden = false;
+    openMegaId = id;
+    el.dataset.trigger = trigger ? trigger.id || "" : "";
+    document.querySelectorAll(`[data-mega="${id}"]`).forEach((b) => b.setAttribute("aria-expanded", "true"));
+    if (id === "mega-suche") fillChips();
+    if (id === "mega-mitmachen") fillMitmachen();
+    if (MOBILE.matches) SHEETS.forEach((s) => !document.getElementById(s).hidden && setPanel(s, false));
+  }
+  function closeMega(returnFocus) {
+    if (!openMegaId) return;
+    const id = openMegaId;
+    document.getElementById(id).hidden = true;
+    openMegaId = null;
+    document.querySelectorAll(`[data-mega="${id}"]`).forEach((b) => b.setAttribute("aria-expanded", "false"));
+    if (returnFocus) (id === "mega-suche" ? $("#q") : document.querySelector(`[data-mega="${id}"]`)).focus();
+  }
+  document.addEventListener("click", (e) => {
+    const m = e.target.closest("[data-mega]");
+    if (m) {
+      const id = m.dataset.mega;
+      if (openMegaId === id) closeMega(); else { openMega(id, m); const f = document.getElementById(id).querySelector("button, a, input"); if (f && e.detail === 0) f.focus(); }
+      return;
+    }
+    // Klick außerhalb schließt das Menü (das Suchfeld gehört zum Suchmenü)
+    // (Ziele, die beim Klick neu aufgebaut wurden, z. B. Chips, sind nicht mehr im Dokument)
+    if (openMegaId && e.target.isConnected && !e.target.closest(".mega") && !e.target.closest("#nav-search")) closeMega();
+  });
+
+  // --- Breite von Liste und Vorgang per Ziehgriff ---------------------------------------------------
+  const WIDTH = { list: { v: "--list-w", min: 300, max: () => Math.min(680, innerWidth * 0.45), def: 360 },
+    detail: { v: "--detail-w", min: 340, max: () => Math.min(760, innerWidth * 0.5), def: 420 } };
+  const widthOf = (k) => parseFloat(getComputedStyle(document.documentElement).getPropertyValue(WIDTH[k].v)) || WIDTH[k].def;
+  function setWidth(k, px, save) {
+    const w = WIDTH[k], v = Math.round(Math.max(w.min, Math.min(w.max(), px)));
+    document.documentElement.style.setProperty(w.v, v + "px");
+    const r = document.querySelector(`.resizer[data-resize="${k}"]`);
+    r.setAttribute("aria-valuemin", String(w.min)); r.setAttribute("aria-valuemax", String(Math.round(w.max())));
+    r.setAttribute("aria-valuenow", String(v)); r.setAttribute("aria-valuetext", `${v} Pixel breit`);
+    if (save) { try { localStorage.setItem("ris-breite-" + k, String(v)); } catch (e) { /* ohne Speicher */ } }
+  }
+  function clampWidths() { for (const k of Object.keys(WIDTH)) setWidth(k, widthOf(k)); }
+  for (const k of Object.keys(WIDTH)) {
+    try { const v = Number(localStorage.getItem("ris-breite-" + k)); if (v) document.documentElement.style.setProperty(WIDTH[k].v, v + "px"); } catch (e) { /* ohne Speicher */ }
+  }
+  document.querySelectorAll(".resizer").forEach((r) => {
+    const k = r.dataset.resize, sign = k === "list" ? 1 : -1;
+    r.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
+      r.setPointerCapture(e.pointerId);
+      const x0 = e.clientX, w0 = widthOf(k);
+      r.classList.add("active"); document.body.classList.add("resizing");
+      const move = (ev) => setWidth(k, w0 + sign * (ev.clientX - x0));
+      const up = () => { r.removeEventListener("pointermove", move); r.classList.remove("active"); document.body.classList.remove("resizing"); setWidth(k, widthOf(k), true); };
+      r.addEventListener("pointermove", move);
+      r.addEventListener("pointerup", up, { once: true });
+      r.addEventListener("pointercancel", up, { once: true });
+    });
+    r.addEventListener("keydown", (e) => {
+      const step = e.shiftKey ? 64 : 16;
+      const map = { ArrowRight: sign * step, ArrowLeft: -sign * step };
+      if (map[e.key] !== undefined) { e.preventDefault(); setWidth(k, widthOf(k) + map[e.key], true); }
+      if (e.key === "Home") { e.preventDefault(); setWidth(k, WIDTH[k].def, true); }
+    });
+    r.addEventListener("dblclick", () => setWidth(k, WIDTH[k].def, true));
+  });
+
   // --- Über ----------------------------------------------------------------------------------------
-  $("#about-open").addEventListener("click", () => $("#about").showModal());
+  $("#about-open").addEventListener("click", () => { closeMega(); $("#about").showModal(); });
   $("#about-close").addEventListener("click", () => $("#about").close());
   $("#about").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-about]");
+    if (!b) return;
+    closeMega();
+    $("#about").showModal();
+    const h = document.getElementById("about-" + b.dataset.about);
+    if (h) { h.scrollIntoView({ block: "start" }); h.focus(); }
+  });
 
   // --- Gebiet ----------------------------------------------------------------------------------------
   function parseArea(value) {
@@ -247,6 +324,7 @@
     }
     subscribeArea();
     if (!$("#panel-termine").hidden) showTermine();
+    if (!$("#panel-auswertung").hidden && !$("#stats").hidden) showStats();
     render();
     syncUrl();
     const stand = meta.sources.map((s) => `${s.name}: ${String(s.retrieved_at || "–").slice(0, 10)}`).join(" · ");
@@ -287,9 +365,9 @@
   }
   function mapPadding() {
     const desktop = !MOBILE.matches;
-    const left = desktop && !$("#panel-list").hidden ? 392 : 16;
-    const right = desktop && !$("#panel-detail").hidden ? 452 : 16;
-    const top = desktop && !$("#timeline-wrap").hidden ? 76 + $("#timeline-wrap").offsetHeight + 12 : 80;
+    const left = desktop && !$("#panel-list").hidden ? widthOf("list") + 32 : 16;
+    const right = desktop && !$("#panel-detail").hidden ? widthOf("detail") + 32 : 16;
+    const top = desktop && !$("#timeline-wrap").hidden ? 86 + $("#timeline-wrap").offsetHeight + 12 : 90;
     return { paddingTopLeft: [left, top], paddingBottomRight: [right, desktop ? 70 : 150], animate: !REDUCED };
   }
   function drawOutline() {
@@ -417,6 +495,7 @@
     // auf der Karte: die Treffer, die im gerade geladenen Gebiet liegen
     const refs = new Set(rows.map((r) => r[0]));
     drawMarkers(papers.filter((p) => refs.has(p.reference)));
+    if (openMegaId === "mega-suche") $("#mega-count").textContent = $("#count").textContent;
   }
   async function openGlobal(ref, areaKey) {
     if (!area || `${area.kind}:${area.key}` !== areaKey) await loadArea(areaKey, true);
@@ -447,6 +526,7 @@
     $("#papers").innerHTML = html;
     drawMarkers(list);
     if (tl) tl.setPapers(base);
+    if (openMegaId === "mega-suche") $("#mega-count").textContent = $("#count").textContent;
   }
   const renderSoon = debounce(() => { shown = LIST_STEP; render(); }, 200);
 
@@ -544,7 +624,7 @@
         ${x.area ? '<span class="plan-meta">– Geltungsbereich auf der Karte</span>' : " – nicht im Datensatz der rechtskräftigen Pläne (vermutlich noch im Verfahren); keine Fläche verfügbar"}
         <br><span class="meta">Fundstelle: „${esc(x.evidence)}“</span></li>`).join("")}</ul>` : ""}
       <p class="links">${link(reportLink(p), "Verortung falsch? Hinweis geben", "btn btn-secondary")}
-        ${hasPaperFeed(p) ? `<a class="btn btn-secondary feed" href="${BONN}feeds/vorlagen/${slug(p.reference)}.xml" type="application/atom+xml">Diesen Vorgang abonnieren (Feed)</a>` : ""}</p>
+        ${hasPaperFeed(p) ? `<a class="btn btn-soft" href="${BONN}feeds/vorlagen/${slug(p.reference)}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Diesen Vorgang abonnieren</a>` : ""}</p>
       ${p.superordinated.length ? `<details class="acc"><summary>Bezieht sich auf (${p.superordinated.length})</summary><ul class="related">${rel(p.superordinated)}</ul></details>` : ""}
       <details class="acc"><summary>Quellen dieser Vorlage</summary><ul>
         <li>Quellobjekt: ${link(p.source_object, esc(p.source_object)) || esc(p.source_object)}</li>
@@ -552,6 +632,7 @@
         ${sources}</ul></details>
       ${LIMITS}`;
     $("#announce").textContent = `Vorgang ${p.reference} geöffnet: ${p.name}`;
+    fillMitmachen();
     showPlans(p, !fromMap);
     if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
     $("#detail").scrollTop = 0;
@@ -614,8 +695,9 @@
     if (!index) { box.hidden = true; return; }
     const href = `${BONN}feeds/${area.kind}-${area.key}.xml`;
     const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
-    box.innerHTML = `<a class="feed" href="${href}" type="application/atom+xml">Neues aus ${esc(where)} abonnieren (Feed)</a>`;
+    box.innerHTML = `<a class="btn btn-soft" href="${href}" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ${esc(where)} abonnieren</a>`;
     box.hidden = false;
+    fillMitmachen();
     const l = document.createElement("link");
     Object.assign(l, { rel: "alternate", type: "application/atom+xml", href, title: `RIS-Karte Bonn – ${where}` });
     document.head.appendChild(l);
@@ -658,7 +740,7 @@
       <div class="filters termine-filters"><label>Gremien
         <select id="termine-scope"><option value="gebiet"${scope === "gebiet" ? " selected" : ""}>${bezirk ? `Rat, Ausschüsse und Bezirksvertretung ${esc(bezirk)}` : "alle (kein Stadtbezirk gewählt)"}</option>
         <option value="alle"${scope === "alle" ? " selected" : ""}>alle Gremien</option></select></label>
-        <a class="btn btn-secondary" href="${BONN}termine.ics" download>Alle Termine als Kalenderdatei (.ics)</a></div>
+        <a class="btn btn-cta" href="${BONN}termine.ics" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Alle Termine in den Kalender (.ics)</a></div>
       <p class="count">${list.length} kommende Sitzungen</p>
       ${items || "<p>Keine kommenden Sitzungen im Datenbestand.</p>"}`;
     box.querySelector("#termine-scope").addEventListener("change", showTermine);
@@ -666,6 +748,127 @@
   $("#termine").addEventListener("click", (e) => {
     const b = e.target.closest("button[data-ref]");
     if (b) { const p = papers.find((x) => x.reference === b.dataset.ref); if (p) { closePanel("panel-termine"); select(p); } }
+  });
+
+  // --- Menü „Mitmachen“: Abonnieren und Hinweise ----------------------------------------------------
+  function fillMitmachen() {
+    if (!area) return;
+    const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
+    const acts = [];
+    if (index) acts.push(`<a class="btn btn-cta" href="${BONN}feeds/${area.kind}-${area.key}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ${esc(where)}</a>`);
+    if (selected && hasPaperFeed(selected)) acts.push(`<a class="btn btn-soft" href="${BONN}feeds/vorlagen/${slug(selected.reference)}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Vorgang ${esc(selected.reference)}</a>`);
+    $("#cta-feed").innerHTML = acts.join("") || '<span class="hint">Feeds gibt es für die Gebiete in ganz Bonn.</span>';
+    $("#cta-feed-text").textContent = `Neue Vorlagen und Beratungsergebnisse aus ${where} im Feed-Reader erhalten${selected ? ", oder nur den gewählten Vorgang" : ""}.`;
+    const report = $("#cta-report");
+    report.href = selected ? reportLink(selected) : `${REPO}/issues/new/choose`;
+    report.lastChild.textContent = selected ? `Hinweis zu ${selected.reference}` : "Hinweis geben";
+  }
+
+  // --- Suche in der Leiste mit Schnellfiltern (Mega-Menü „Suche“) ----------------------------------
+  function setScope(v) {
+    const r = document.querySelector(`input[name="scope"][value="${v}"]`);
+    if (r) r.checked = true;
+    document.querySelectorAll(".scope-switch [data-scope]").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.scope === v)));
+  }
+  function chip(label, pressed, data, n) {
+    return `<button type="button" class="chip" aria-pressed="${pressed}" ${data}>${esc(label)}${n != null ? ` <span class="n">${n}</span>` : ""}</button>`;
+  }
+  function fillChips() {
+    const theme = $("#f-theme").value, party = $("#f-party").value;
+    const counts = {};
+    for (const p of papers) for (const t of p.themes || []) counts[t.theme] = (counts[t.theme] || 0) + 1;
+    const local = scope() === "gebiet";
+    $("#chips-theme").innerHTML = Object.entries(THEMES).map(([k, v]) => chip(v, theme === k, `data-theme="${k}"`, local ? counts[k] || 0 : null)).join("");
+    const parties = [...$("#f-party").options].map((o) => o.value).filter(Boolean);
+    $("#chips-party").innerHTML = parties.map((v) => chip(v === "Koalition" ? "Koalition (gemeinsam)" : v, party === v, `data-party="${esc(v)}"`)).join("")
+      || '<span class="hint">Im gewählten Gebiet gibt es keine zugeordneten Einreichenden.</span>';
+    document.querySelectorAll(".scope-switch [data-scope]").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.scope === scope())));
+    $("#mega-count").textContent = $("#count").textContent;
+  }
+  function applyFromBar() {
+    shown = LIST_STEP;
+    fillParties();
+    render();
+    syncUrl();
+    if (openMegaId === "mega-suche") fillChips();
+  }
+  function initSearchBar() {
+    const q = $("#q");
+    q.addEventListener("focus", () => openMega("mega-suche"));
+    q.addEventListener("input", debounce(() => {
+      $("#f-text").value = q.value;
+      if (q.value && index && scope() !== "bonn") setScope("bonn");
+      openMega("mega-suche");
+      applyFromBar();
+    }, 200));
+    $("#nav-search").addEventListener("submit", (e) => {
+      e.preventDefault();
+      setPanel("panel-list", true);
+      closeMega();
+      $("#papers").focus();
+    });
+    $("#f-text").addEventListener("input", () => { q.value = $("#f-text").value; });
+    $("#mega-suche").addEventListener("click", (e) => {
+      const sc = e.target.closest("[data-scope]");
+      if (sc) { setScope(sc.dataset.scope); return applyFromBar(); }
+      const t = e.target.closest("[data-theme]");
+      if (t) { $("#f-theme").value = $("#f-theme").value === t.dataset.theme ? "" : t.dataset.theme; return applyFromBar(); }
+      const pa = e.target.closest("[data-party]");
+      if (pa) { $("#f-party").value = $("#f-party").value === pa.dataset.party ? "" : pa.dataset.party; return applyFromBar(); }
+    });
+    $("#mega-show").addEventListener("click", () => { setPanel("panel-list", true); closeMega(); focusPanel("panel-list"); });
+    $("#mega-reset").addEventListener("click", () => { q.value = ""; resetFilters(); fillChips(); });
+    if (!index) document.querySelector(".scope-switch").hidden = true;
+  }
+
+  // --- Auswertung: Kennzahlen zum Gebiet und Verfahrenswege ------------------------------------------
+  function openAuswertung(tab, focusTab) {
+    closeMega();
+    setPanel("panel-auswertung", true);
+    const stats = tab === "stats";
+    $("#tab-stats").setAttribute("aria-selected", String(stats)); $("#tab-stats").tabIndex = stats ? 0 : -1;
+    $("#tab-wege").setAttribute("aria-selected", String(!stats)); $("#tab-wege").tabIndex = stats ? -1 : 0;
+    $("#stats").hidden = !stats; $("#wege").hidden = stats;
+    if (stats) showStats(); else showWege();
+    (focusTab ? document.getElementById(stats ? "tab-stats" : "tab-wege") : $("#auswertung-heading")).focus();
+  }
+  function bars(title, rows, attr) {
+    const max = Math.max(1, ...rows.map((r) => r.n));
+    return `<section class="stat-block"><h3>${esc(title)}</h3><ul class="bars">${rows.map((r) => `<li><button type="button" class="bar" ${attr}="${esc(r.key)}" aria-label="${esc(r.label)}: ${r.n} Vorlagen – Liste danach filtern">
+      <span>${esc(r.label)}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${(100 * r.n / max).toFixed(1)}%"></span></span><span class="bar-n">${r.n}</span></button></li>`).join("")}</ul></section>`;
+  }
+  function showStats() {
+    const list = papers, where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
+    const count = (f) => { const c = new Map(); for (const p of list) for (const k of f(p)) c.set(k, (c.get(k) || 0) + 1); return c; };
+    const th = count((p) => (p.themes || []).map((t) => t.theme));
+    const pa = count((p) => p.parties || []);
+    const yr = count((p) => (p.date ? [p.date.slice(0, 4)] : []));
+    const st = count((p) => [p.stand]);
+    $("#stats").innerHTML = `<p class="hint">${list.length} Vorlagen in ${esc(where)}. Ein Klick auf einen Balken filtert die Liste. Themen und Parteien sind abgeleitet.</p>
+      ${bars("Nach Thema", Object.keys(THEMES).filter((k) => th.get(k)).map((k) => ({ key: k, label: THEMES[k], n: th.get(k) })).sort((a, b) => b.n - a.n), "data-stat-theme")}
+      ${pa.size ? bars("Nach Einreichenden (Partei, Fraktion, Verwaltung)", [...pa].map(([k, n]) => ({ key: k, label: k, n })).sort((a, b) => b.n - a.n), "data-stat-party") : ""}
+      ${bars("Nach Jahr (Datum der Vorlage)", [...yr].map(([k, n]) => ({ key: k, label: k, n })).sort((a, b) => a.key.localeCompare(b.key)), "data-stat-year")}
+      ${bars("Nach Stand des Verfahrens", [...st].map(([k, n]) => ({ key: k, label: k, n })).sort((a, b) => b.n - a.n), "data-stat-stand")}`;
+  }
+  $("#stats").addEventListener("click", (e) => {
+    const b = e.target.closest(".bar");
+    if (!b) return;
+    // die Zahl am Balken gilt für das ganze Gebiet: übrige Filter und Zeitraum zurücksetzen
+    $("#filters").reset();
+    $("#q").value = "";
+    range = null;
+    if (tl) tl.reset();
+    setScope("gebiet");
+    if (b.dataset.statTheme) $("#f-theme").value = b.dataset.statTheme;
+    if (b.dataset.statParty) { fillParties(); $("#f-party").value = b.dataset.statParty; }
+    if (b.dataset.statStand) $("#f-stand").value = b.dataset.statStand;
+    if (b.dataset.statYear && tl) { const y = b.dataset.statYear; tl.setRange(`${y}-01-01`, `${y}-12-31`); range = [`${y}-01-01`, `${y}-12-31`]; }
+    shown = LIST_STEP;
+    render();
+    syncUrl();
+    closePanel("panel-auswertung");
+    setPanel("panel-list", true);
+    focusPanel("panel-list");
   });
 
   // --- URL-Zustand -----------------------------------------------------------------------------------
@@ -706,7 +909,7 @@
     $("#filters").addEventListener("input", (e) => {
       if (e.target.id === "f-text") return renderSoon();
       shown = LIST_STEP;
-      if (e.target.name === "scope") fillParties();
+      if (e.target.name === "scope") { fillParties(); setScope(e.target.value); }
       render();
       syncUrl();
     });
@@ -724,9 +927,16 @@
       if (b && tl) tl.select(papers.find((p) => p.reference === b.dataset.ref), true);
     });
     $("#papers").addEventListener("mouseleave", () => tl && tl.select(selected));
-    toggleFor("panel-wege").addEventListener("click", showWege);
-    if (zeit) toggleFor("panel-termine").addEventListener("click", showTermine);
-    else toggleFor("panel-termine").hidden = true;
+    // Menü „Mitmachen“: Termine; Menü „Auswertung“: Reiter Kennzahlen und Verfahrenswege
+    if (zeit) $("#cta-termine").addEventListener("click", () => { setPanel("panel-termine", true); showTermine(); focusPanel("panel-termine"); });
+    else $("#cta-termine").hidden = true;
+    document.querySelectorAll("[data-open-tab]").forEach((b) => b.addEventListener("click", () => openAuswertung(b.dataset.openTab)));
+    $("#tab-stats").addEventListener("click", () => openAuswertung("stats"));
+    $("#tab-wege").addEventListener("click", () => openAuswertung("wege"));
+    $("#panel-auswertung .tabs").addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); openAuswertung($("#tab-stats").getAttribute("aria-selected") === "true" ? "wege" : "stats", true); }
+    });
+    initSearchBar();
     $("#f-theme").innerHTML = '<option value="">alle</option>' + Object.entries(THEMES).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join("");
     if (index) $("#scope").hidden = false;
     const params = new URLSearchParams(location.search);
