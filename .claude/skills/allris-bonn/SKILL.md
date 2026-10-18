@@ -39,6 +39,7 @@ Ratsassistent (BYOK, im Aufbau; ES-Module ohne Abhängigkeiten unter `site/chat/
 - `providers.js`: Adapter für Anthropic (Header `anthropic-dangerous-direct-browser-access`, Denkblöcke werden unverändert zurückgegeben, serverseitige Ausweichmodelle bei Opus/Sonnet) und OpenAI-kompatible Dienste (Mistral, OpenRouter, lokal nur `localhost`); ohne SDK, Schlüssel nur im Header.
 - `core.js`: Werkzeugschleife (höchstens 8 Aufrufe, danach `tool_choice: none`), Eingabeprüfung, Ergebnisse als abgegrenzte Daten, Verlauf nur anhängen, Quellenprüfung (`checkCitations`).
 - `keys.js`: Schlüssel im Arbeitsspeicher, `sessionStorage` nur auf Wunsch, nie `localStorage`.
+- `systemprompt.md` (Version und Änderungsvermerk; Text zwischen `<!-- PROMPT -->`-Markierungen) und `prompt.js` (Platzhalter aus `datenstand.json`); jede neue Fassung mit Begründung im Änderungsvermerk, Werkzeugnamen im Prompt müssen zu `tools.js` passen (Test). Entwürfe des Auftrags in `docs/`.
 - CSP als `<meta>` in `site/index.html`: neue externe Quellen dort und in `connect-src` eintragen; CDN-Dateien mit `integrity`.
 
 Im Repository liegen: Gremien, Ämter, Sitzungen, Wahlperioden (`data/raw/*.json`), Flächen und Straßenverzeichnis (`data/geo/`), Pilot Endenich und Audits (`data/export/`). Erzeugt und nicht eingecheckt: `data/export/bonn/`, Zip, Datenbank.
