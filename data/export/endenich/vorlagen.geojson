@@ -3,19 +3,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 576,
-  "generated_at": "2026-10-18T21:53:07+00:00",
+  "generated_at": "2026-10-18T22:35:37+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-18T21:48:36+00:00"
+    "retrieved_at": "2026-10-18T22:30:37+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-18T21:51:02+00:00"
+    "retrieved_at": "2026-10-18T22:33:27+00:00"
    },
    {
     "name": "osm",
@@ -33,7 +33,7 @@
     "name": "bplan-bonn",
     "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
-    "retrieved_at": "2026-10-18T21:48:54+00:00"
+    "retrieved_at": "2026-10-18T22:30:57+00:00"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."

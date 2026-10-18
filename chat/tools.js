@@ -240,10 +240,9 @@ export function createTools({ load, today = berlinToday() } = {}) {
     async hole_vorlage(a) {
       const p = await paper(a.drucksache);
       const g = await glossar();
-      const s = await search();
       const mask = await masker();
       const rel = relOf(mask);
-      const label = Object.fromEntries(s.themes.map((t) => [t.id, t.label]));
+      const label = g.themen || {};
       return {
         drucksache: p.reference, titel: mask(p.name, p.paper_type), art: p.paper_type, datum: p.date,
         stand: p.stand, stand_erklaerung: g.staende[p.stand] ?? null,
@@ -362,8 +361,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
       // aktive und häufig befasste zuerst
       const weight = (o) => (o.end_date ? 0 : 1e6) + (num && o.name === o.amt ? 1e7 : 0) + (o.consultations ?? o.papers_led ?? 0);
       hits.sort((x, y) => weight(y) - weight(x));
-      const s = await search();
-      const label = Object.fromEntries(s.themes.map((t) => [t.id, t.label]));
+      const label = (await glossar()).themen || {};
       const z = await get("bonn/zeit.json");
       const detail = (o) => {
         const d = { name: o.name, typ: o.type, kategorie: o.classification, aufgeloest: o.end_date || null,
