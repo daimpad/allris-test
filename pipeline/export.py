@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import datetime, timezone
 
-from . import config, process as proc, publish, topics
+from . import chat, config, glossar, process as proc, publish, topics
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -118,6 +118,7 @@ def _write_tsv(path, header, rows):
 
 
 def export():
+    (config.EXPORT / "glossar.json").write_text(json.dumps(glossar.glossar(), ensure_ascii=False, indent=1) + "\n")
     export_pilot()
     export_all()
 
@@ -227,11 +228,12 @@ def export_all():
                                      [{k: v for k, v in s.items() if k != "retrieved_at"} for s in sources])
     publish.write_dcat(out / "dcat.jsonld", min(p["date"] for p in cache.values() if p["date"]),
                        stand[:10] or datetime.now(timezone.utc).date().isoformat())
+    n_shards = chat.write_chat(out / "chat", db, cache, meetings, sources, _meta(db, True))
 
     _dump(out / "index.json", {"meta": _meta(db), **index})
     db.close()
     print(f"Bonn: {len(index['ortsteile'])} Ortsteile, {len(index['bezirke'])} Bezirke, "
-          f"{len(years)} Jahre ohne Ortsbezug, {len(cache)} Vorlagen, {n_points} Punkte im GeoJSON → {out}")
+          f"{len(years)} Jahre ohne Ortsbezug, {len(cache)} Vorlagen, {n_points} Punkte im GeoJSON, {n_shards} Dateien für den Assistenten → {out}")
 
 
 def export_pilot(ortsteil=config.PILOT_ORTSTEIL):
@@ -316,6 +318,8 @@ def _search_index(cache, areas, names):
     area_list = sorted(set(home.values()))
     types = sorted({p["paper_type"] for p in cache.values() if p["paper_type"]})
     theme_ids = [k for k, _ in topics.THEMES]
+    aemter = sorted({p["amt"] for p in cache.values() if p["amt"]})
+    gremien = sorted({c["gremium"] for p in cache.values() for c in p["process"] if c["gremium"]})
     rows = []
     for pid, p in sorted(cache.items(), key=lambda x: (x[1]["date"] or "", x[1]["reference"]), reverse=True):
         related = {x for s in p["superordinated"] for x in (by_ref.get(s["reference"]) or {}).get("parties", [])}
@@ -323,13 +327,15 @@ def _search_index(cache, areas, names):
                      proc.STAENDE.index(p["stand"]), area_list.index(home[pid]) if pid in home else -1,
                      [theme_ids.index(t["theme"]) for t in p["themes"]],
                      [party_list.index(x) for x in p["parties"]],
-                     [party_list.index(x) for x in sorted(related - set(p["parties"]))]])
+                     [party_list.index(x) for x in sorted(related - set(p["parties"]))],
+                     aemter.index(p["amt"]) if p["amt"] else -1,
+                     sorted({gremien.index(c["gremium"]) for c in p["process"] if c["gremium"]})])
     return {"meta": {"note": "Themen und Parteien sind abgeleitet (siehe pipeline/topics.py); Spalten: "
                              "Drucksache, Titel, Datum, Vorlagenart, Stand, Gebiet, Themen, Parteien, "
-                             "Parteien der übergeordneten Vorlage"},
+                             "Parteien der übergeordneten Vorlage, federführendes Amt, beratende Gremien"},
             "themes": [{"id": k, "label": v} for k, v in topics.THEMES], "parties": party_list,
             "areas": [{"key": k, "name": names[k]} for k in area_list], "types": types, "stands": list(proc.STAENDE),
-            "rows": rows}
+            "aemter": aemter, "gremien": gremien, "rows": rows}
 
 
 THEME_AUDIT = ["drucksache", "titel", "thema", "methode", "fundstelle", "konfidenz", "pruefstatus"]

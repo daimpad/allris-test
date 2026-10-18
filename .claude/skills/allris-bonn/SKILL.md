@@ -32,12 +32,15 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 | `topics.py` | Themen (Amt, Fachausschuss, Stichwort) und Parteien je Vorlage; Themenliste mit `THEMES` in `site/app.js` abgleichen |
 | `export.py`, `publish.py` | JSON je Gebiet, Zeit- und Wegeaggregate, Audits (TSV); Feeds, Kalender, GeoJSON, DCAT |
 | `check.py`, `verify.py` | Kennzahlen, Datenschutz; Abgleich von Stichproben mit der OParl-API; Zip-Paket |
+| `chat.py`, `glossar.py` | Daten des Ratsassistenten (`bonn/chat/`: gekürzte Vorlagen je Präfix der Drucksachennummer, Orte, Gremien, Datenstand); Glossar `data/export/glossar.json` für Seite und Assistent |
+
+Ratsassistent (BYOK, im Aufbau): Werkzeuge in `site/chat/tools.js` (ES-Modul, ohne Abhängigkeiten) über die statischen Exporte; jedes Ergebnis trägt Drucksachennummer bzw. OParl-ID, bleibt unter `MAX_CHARS` und lässt in Titeln aus der Einwohnerschaft Hausnummern aus.
 
 Im Repository liegen: Gremien, Ämter, Sitzungen, Wahlperioden (`data/raw/*.json`), Flächen und Straßenverzeichnis (`data/geo/`), Pilot Endenich und Audits (`data/export/`). Erzeugt und nicht eingecheckt: `data/export/bonn/`, Zip, Datenbank.
 
 ## Prüfen vor jedem Push
 
-1. `.venv/bin/python -m unittest discover tests` und `node --check site/app.js site/timeline.js`
+1. `.venv/bin/python -m unittest discover tests`, `node --check site/app.js site/timeline.js site/chat/tools.js` und `node --test "tests/js/**/*.test.mjs"` (mit vorhandenem Export auch gegen die echten Daten)
 2. Bei Datenänderungen: `build`, `export`, `check`; Kennzahlen mit dem vorigen Stand vergleichen
 3. Bei Oberflächenänderungen: Vorschau bauen und im Browser prüfen
 
