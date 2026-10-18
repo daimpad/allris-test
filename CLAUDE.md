@@ -15,7 +15,7 @@ Du arbeitest als Webentwickler:in mit Erfahrung in Open-Data-Pipelines und Geoda
 |---|---|
 | Projektname / Repository | `allris-bonn`, öffentlich auf GitHub als `daimpad/allris-test`; die Seite heißt **RIS-Karte Bonn** |
 | Veröffentlichung | GitHub Pages (https://daimpad.github.io/allris-test/), täglich 04:17 UTC neu erzeugt; zusätzlich Branch `deploy` mit der fertigen Seite für `ris-bonn.datenatlas.de` (netcup-Webhosting, Plesk-Git mit Webhook) |
-| Gestaltung | Karte vollflächig, alle Flächen einklappbar darüber; Glass-Stil (DESIGN.md „Arc Browser Glass“), Akzent für Text abgedunkelt (Kontrast); Kartenhintergrund grau mit Umschalter „Farbige Karte“; Quellen stets im Akkordeon; WCAG 2.1 AA |
+| Gestaltung | Leiste mit Suche (ganz Bonn, Schnellfilter) und Mega-Menüs Auswertung, Mitmachen, Daten; interaktive Angebote als deutliche Schaltflächen; Liste und Vorgang in der Breite ziehbar; Karte vollflächig, alle Flächen einklappbar darüber; Glass-Stil (DESIGN.md „Arc Browser Glass“), Akzent für Text abgedunkelt (Kontrast); Kartenhintergrund grau mit Umschalter „Farbige Karte“; Quellen stets im Akkordeon; WCAG 2.1 AA |
 | Code-Lizenz | MIT |
 | Räumlicher Umfang | Ganz Bonn; Pilot und erste Auslieferung: Ortsteil **Endenich** (Stadtbezirk Bonn) |
 | Einsatz von Sprachmodellen | Zulässig für Ortsextraktion und Kurzfassungen – mit Kennzeichnung, Konfidenz und Link zum Original |
