@@ -4,29 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ratskarte Bonn</title>
-  <meta name="description" content="Vorlagen aus dem Bonner Ratsinformationssystem räumlich, zeitlich und nach Akteuren erschlossen: wo, wann, wer – mit Quellenangabe.">
+  <meta name="description" content="Vorlagen aus dem Bonner Ratsinformationssystem räumlich, zeitlich und nach Akteuren erschlossen – mit Prozessschritten, Evidenzstatus und Quellenangabe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <a class="skip-link" href="#papers">Zur Liste der Vorlagen springen</a>
-  <header class="site-header">
-    <div>
-      <h1>Ratskarte Bonn</h1>
-      <p class="lede">Vorlagen aus dem Bonner Ratsinformationssystem: wo, wann, wer – mit Quellenangabe.</p>
-    </div>
-    <p class="badge-prelim" role="note"><strong>Vorläufige Fassung.</strong> Ortsbezüge der Stufe B sind aus den Titeln abgeleitet und noch nicht vollständig von Hand geprüft.</p>
-  </header>
+<body class="list-open detail-open">
+  <h1 class="visually-hidden">Ratskarte Bonn</h1>
+  <div id="map" aria-label="Karte der Vorlagen im gewählten Gebiet. Alle Vorlagen stehen auch in der Liste."></div>
 
-  <main class="layout">
-    <section class="panel list-panel" aria-labelledby="list-heading">
-      <h2 id="list-heading" class="visually-hidden">Vorlagen</h2>
+  <nav class="nav glass" aria-label="Ansicht">
+    <div class="brand" aria-hidden="true">Ratskarte Bonn<small>vorläufige Fassung</small></div>
+    <label class="visually-hidden" for="f-area">Gebiet</label>
+    <select id="f-area"></select>
+    <button type="button" class="toggle" data-panel="panel-list" aria-controls="panel-list" aria-pressed="true">Liste</button>
+    <button type="button" class="toggle" data-panel="timeline-wrap" aria-controls="timeline-wrap" aria-pressed="true">Zeitleiste</button>
+    <button type="button" class="toggle" data-panel="panel-detail" aria-controls="panel-detail" aria-pressed="true">Detail</button>
+    <button type="button" class="toggle" data-panel="panel-wege" aria-controls="panel-wege" aria-pressed="false">Wege</button>
+  </nav>
+
+  <section id="panel-list" class="panel glass" aria-labelledby="list-heading">
+    <div class="panel-head">
+      <h2 id="list-heading">Vorlagen</h2>
+      <button type="button" class="icon-btn" data-close="panel-list" aria-label="Liste einklappen">‹</button>
+    </div>
+    <div class="panel-body">
       <form class="filters" id="filters" role="search" aria-label="Vorlagen filtern">
-        <label>Gebiet
-          <select id="f-area"></select>
-        </label>
         <label>Stichwort
           <input type="search" id="f-text" placeholder="z. B. Radweg, Kita, 261856" autocomplete="off">
         </label>
@@ -34,19 +41,7 @@
           <label>Vorlagenart
             <select id="f-type"><option value="">alle</option></select>
           </label>
-          <label>Zeitraum ab
-            <select id="f-year"><option value="">alle Jahre</option></select>
-          </label>
-        </div>
-        <details class="more-filters">
-          <summary>Weitere Filter</summary>
-          <label>Federführendes Amt
-            <select id="f-amt"><option value="">alle</option></select>
-          </label>
-          <label>Gremium
-            <select id="f-gremium"><option value="">alle</option></select>
-          </label>
-          <label>Stand des Verfahrens
+          <label>Stand
             <select id="f-stand">
               <option value="">alle</option>
               <option>entschieden</option>
@@ -55,34 +50,64 @@
               <option>ohne Beratungsfolge</option>
             </select>
           </label>
+        </div>
+        <details class="acc">
+          <summary>Weitere Filter</summary>
+          <div class="filters">
+            <label>Federführendes Amt
+              <select id="f-amt"><option value="">alle</option></select>
+            </label>
+            <label>Gremium
+              <select id="f-gremium"><option value="">alle</option></select>
+            </label>
+            <fieldset id="f-conf">
+              <legend>Verortung</legend>
+              <label class="check"><input type="checkbox" value="hoch" checked> hoch <span class="hint">(Koordinate der Stadt)</span></label>
+              <label class="check"><input type="checkbox" value="mittel" checked> mittel <span class="hint">(aus dem Titel)</span></label>
+              <label class="check"><input type="checkbox" value="niedrig" checked> niedrig <span class="hint">(mehrdeutig)</span></label>
+            </fieldset>
+          </div>
         </details>
-        <fieldset id="f-conf">
-          <legend>Verortung</legend>
-          <label class="check"><input type="checkbox" value="hoch" checked> hoch <span class="hint">(Koordinate der Stadt)</span></label>
-          <label class="check"><input type="checkbox" value="mittel" checked> mittel <span class="hint">(aus dem Titel)</span></label>
-          <label class="check"><input type="checkbox" value="niedrig" checked> niedrig <span class="hint">(mehrdeutig)</span></label>
-        </fieldset>
       </form>
       <p class="count" id="count" aria-live="polite"></p>
       <ol class="papers" id="papers" tabindex="-1"></ol>
-    </section>
+    </div>
+  </section>
 
-    <section class="panel map-panel" aria-label="Karte">
-      <div id="map" aria-label="Karte der Vorlagen im gewählten Gebiet. Alle Vorlagen stehen auch in der Liste."></div>
-    </section>
+  <section id="timeline-wrap" class="glass" aria-label="Zeitleiste"></section>
 
-    <section class="panel detail-panel" id="detail" aria-live="polite" tabindex="-1">
+  <section id="panel-detail" class="panel glass" aria-labelledby="detail-heading">
+    <div class="panel-head">
+      <h2 id="detail-heading">Vorgang</h2>
+      <button type="button" class="icon-btn" data-close="panel-detail" aria-label="Detail einklappen">›</button>
+    </div>
+    <div class="panel-body detail" id="detail" aria-live="polite" tabindex="-1">
       <p class="empty">Eine Vorlage in der Liste oder auf der Karte auswählen.</p>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="site-footer" id="footer">
-    <p>Quellen: OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteil- und Bezirksflächen der Stadt Bonn (CC0 1.0) · Straßen © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet. <a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a></p>
-    <p id="stand"></p>
-  </footer>
+  <section id="panel-wege" class="glass" aria-labelledby="wege-heading" hidden>
+    <div class="panel-head">
+      <h2 id="wege-heading">Typische Wege nach Vorlagenart</h2>
+      <button type="button" class="icon-btn" data-close="panel-wege" aria-label="Wege schließen">×</button>
+    </div>
+    <div class="panel-body" id="wege"></div>
+  </section>
+
+  <aside id="sources" class="glass" aria-label="Quellen und Lizenzen">
+    <details class="acc">
+      <summary>Quellen, Lizenzen und Datenstand</summary>
+      <div>
+        <p>OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteil- und Bezirksflächen der Stadt Bonn (CC0 1.0) · Straßen © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet.</p>
+        <p id="stand"></p>
+        <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a></p>
+      </div>
+    </details>
+  </aside>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+  <script src="timeline.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

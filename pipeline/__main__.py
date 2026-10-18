@@ -1,4 +1,4 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-streets|gazetteer|build|export|check|verify|package|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-streets|gazetteer|build|export|check|verify|package|all}"""
 import sys
 
 from . import build, check, export, fetch, geocode, verify
@@ -8,6 +8,7 @@ STEPS = {
     "fetch-papers": fetch.fetch_papers,
     "fetch-organizations": fetch.fetch_organizations,
     "fetch-lite": fetch.fetch_consultations_lite,
+    "fetch-meetings": fetch.fetch_meetings,
     "fetch-streets": fetch.fetch_streets,
     "gazetteer": geocode.write_gazetteer,
     "build": build.build,
