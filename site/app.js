@@ -85,6 +85,15 @@
 
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null;
   let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [];
+  // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
+  let search = null, searchLoading = null;
+  const THEMES = {  // wie pipeline/topics.THEMES
+    verkehr: "Verkehr und Mobilität", bauen: "Bauen und Stadtentwicklung", umwelt: "Umwelt, Grün und Klima",
+    bildung: "Schule und Bildung", kinder: "Kinder, Jugend und Familie", soziales: "Soziales, Wohnen und Gesundheit",
+    kultur: "Kultur und Sport", wirtschaft: "Wirtschaft und Finanzen", sicherheit: "Sicherheit und Ordnung",
+    beteiligung: "Beteiligung, Integration und Internationales",
+  };
+  const THEME_METHOD = { amt: "Amt", gremium: "Gremium", stichwort: "Stichwort im Titel" };
 
   // --- Flächen ein- und ausklappen ---------------------------------------------------------------
   const SHEETS = ["panel-list", "panel-detail", "panel-wege", "panel-termine", "timeline-wrap", "sources"];
@@ -326,7 +335,29 @@
     options($("#f-type"), uniq(papers.map((p) => p.paper_type)));
     options($("#f-amt"), uniq(papers.map((p) => p.amt)));
     options($("#f-gremium"), uniq(papers.flatMap((p) => p.process.map((s) => s.gremium))));
+    fillParties();
   }
+  function fillParties() {
+    const sel = $("#f-party"), cur = sel.value;
+    const list = scope() === "bonn" && search ? search.parties : [...new Set(papers.flatMap((p) => p.parties || []))];
+    // Fraktionen und Gruppen zuerst, dann Koalition, interfraktionell, Einwohner:innen, Verwaltung
+    const other = ["Koalition", "interfraktionell", "Einwohner:innen", "Verwaltung"];
+    const sorted = [...list.filter((x) => !other.includes(x)).sort((a, b) => a.localeCompare(b, "de")), ...other.filter((x) => list.includes(x))];
+    sel.innerHTML = '<option value="">alle</option>' + sorted.map((v) => `<option value="${esc(v)}">${esc(v === "Koalition" ? "Koalition (gemeinsamer Antrag)" : v)}</option>`).join("");
+    if (sorted.includes(cur)) sel.value = cur;
+  }
+  const scope = () => (document.querySelector('input[name="scope"]:checked') || {}).value || "gebiet";
+  function loadSearch() {
+    if (search || !index) return Promise.resolve(search);
+    return (searchLoading ||= fetch(BONN + "suche.json").then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then((d) => {
+        d.related = new Map(d.rows.map((r) => [r[0], new Set(r[8].map((i) => d.parties[i]))]));
+        search = d;
+        return d;
+      }).catch((err) => { searchLoading = null; $("#count").textContent = `Der Suchindex konnte nicht geladen werden (${err.message}).`; return null; }));
+  }
+  // Parteien der übergeordneten Vorlage (z. B. Stellungnahme der Verwaltung zu einem Antrag)
+  const relatedParties = (ref) => (search && search.related.get(ref)) || new Set();
   function inRange(p) {
     if (!range) return true;
     const [a, b] = range, dim = tl ? tl.dimension() : "vorlage";
@@ -336,14 +367,20 @@
   function filtered(withRange = true) {
     const text = $("#f-text").value.trim().toLowerCase(), type = $("#f-type").value, amt = $("#f-amt").value;
     const gremium = $("#f-gremium").value, standF = $("#f-stand").value;
+    const theme = $("#f-theme").value, party = $("#f-party").value, rel = $("#f-related").checked;
     const confs = new Set([...document.querySelectorAll("#f-conf input:checked")].map((i) => i.value));
     return papers.filter((p) => (!type || p.paper_type === type) && (!amt || p.amt === amt) &&
+      (!theme || (p.themes || []).some((t) => t.theme === theme)) &&
+      (!party || (p.parties || []).includes(party) || (rel && relatedParties(p.reference).has(party))) &&
       (!gremium || p.process.some((s) => s.gremium === gremium)) && (!standF || p.stand === standF) &&
       (area.kind === "ohne" || confs.has(bestConfidence(p))) && (!withRange || inRange(p)) &&
       (!text || (p.name + " " + p.reference).toLowerCase().includes(text)));
   }
   function resetFilters() {
+    const sc = scope();
     $("#filters").reset();
+    document.querySelector(`input[name="scope"][value="${sc}"]`).checked = true;
+    $("#f-related-wrap").hidden = true;
     range = null;
     if (tl) tl.reset();
     shown = LIST_STEP;
@@ -356,9 +393,45 @@
     return `<li><button type="button" data-ref="${esc(p.reference)}" aria-current="${selected === p}">
       <span class="title">${esc(p.name)}</span>
       <span class="meta"><span>${esc(p.reference)}</span><span>${fmtDate(p.date)}</span><span>${esc(p.paper_type)}</span>
-      <span>${esc(p.stand)}</span>${conf}</span></button></li>`;
+      <span>${esc(p.stand)}</span>${conf}${themeTags(p.themes)}</span></button></li>`;
   }
+  const themeTags = (ts) => (ts || []).slice(0, 2).map((t) => `<span class="theme">${esc(THEMES[t.theme || t])}</span>`).join("");
+
+  // Suche über ganz Bonn: Treffer aus dem Index, Öffnen lädt das Gebiet der Vorlage
+  function renderGlobal() {
+    const text = $("#f-text").value.trim().toLowerCase(), type = $("#f-type").value, standF = $("#f-stand").value;
+    const theme = search.themes.findIndex((t) => t.id === $("#f-theme").value), party = search.parties.indexOf($("#f-party").value);
+    const rel = $("#f-related").checked, ti = search.types.indexOf(type), si = search.stands.indexOf(standF);
+    const rows = search.rows.filter((r) => (!type || r[3] === ti) && (!standF || r[4] === si) && (theme < 0 || r[6].includes(theme)) &&
+      (party < 0 || r[7].includes(party) || (rel && r[8].includes(party))) && (!range || (r[2] && r[2] >= range[0] && r[2] <= range[1])) &&
+      (!text || (r[1] + " " + r[0]).toLowerCase().includes(text)));
+    const span = range ? ` · ${fmtDate(range[0])}–${fmtDate(range[1])}` : "";
+    $("#count").textContent = `${rows.length} Treffer in ganz Bonn${span}`;
+    let html = rows.slice(0, shown).map((r) => `<li><button type="button" data-gref="${esc(r[0])}" data-area="${esc(search.areas[r[5]].key)}" aria-current="${selected && selected.reference === r[0]}">
+      <span class="title">${esc(r[1])}</span>
+      <span class="meta"><span>${esc(r[0])}</span><span>${fmtDate(r[2])}</span><span>${esc(search.types[r[3]] || "")}</span>
+      <span>${esc(search.stands[r[4]])}</span><span class="area-tag">${esc(search.areas[r[5]].name)}</span>${themeTags(r[6].slice(0, 2).map((i) => search.themes[i].id))}</span></button></li>`).join("");
+    if (rows.length > shown) html += `<li class="more"><button type="button" class="btn btn-secondary" id="more">Weitere ${Math.min(LIST_STEP, rows.length - shown)} von ${rows.length - shown} anzeigen</button></li>`;
+    if (!rows.length) html = `<li class="empty-list"><p>Keine Vorlage in ganz Bonn passt zu Filtern und Zeitraum.</p><button type="button" class="btn btn-secondary" id="reset-filters">Filter und Zeitraum zurücksetzen</button></li>`;
+    $("#papers").innerHTML = html;
+    // auf der Karte: die Treffer, die im gerade geladenen Gebiet liegen
+    const refs = new Set(rows.map((r) => r[0]));
+    drawMarkers(papers.filter((p) => refs.has(p.reference)));
+  }
+  async function openGlobal(ref, areaKey) {
+    if (!area || `${area.kind}:${area.key}` !== areaKey) await loadArea(areaKey, true);
+    const p = papers.find((x) => x.reference === ref);
+    if (p) select(p);
+  }
+
   function render() {
+    $("#f-related-wrap").hidden = !$("#f-party").value;
+    $("#more-filters").hidden = scope() === "bonn";
+    if (scope() === "bonn") {
+      if (!search) { $("#count").textContent = "Lade den Suchindex für ganz Bonn …"; loadSearch().then((d) => d && (fillParties(), render())); return; }
+      return renderGlobal();
+    }
+    if ($("#f-party").value && $("#f-related").checked && !search && index) { loadSearch().then((d) => d && render()); }
     const base = filtered(false);
     const list = range ? base.filter(inRange) : base;
     lastList = list;
@@ -459,6 +532,7 @@
         <dt>Datum</dt><dd>${fmtDate(p.date)}</dd>
         <dt>Amt</dt><dd>${resp || esc(p.amt)}</dd>
         <dt>Stand</dt><dd>${esc(p.stand)}</dd>
+        <dt>Themen</dt><dd>${(p.themes || []).length ? p.themes.map((t) => `${esc(THEMES[t.theme])} <span class="derived">abgeleitet, über ${esc(THEME_METHOD[t.method])} „${esc(t.evidence)}“</span>`).join("<br>") : "–"}</dd>
       </dl>
       <div class="links">${link(p.web, "Original im Ratsinformationssystem", "btn btn-primary")}
         ${link(p.main_file, "Dokument (PDF)", "btn btn-secondary")}</div>
@@ -601,6 +675,8 @@
     url.searchParams.set("gebiet", `${area.kind}:${area.key}`);
     if (tl && range) { const s = tl.getState(); for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.set(k, s[k]); }
     else for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.delete(k);
+    const state = { thema: $("#f-theme").value, partei: $("#f-party").value, suche: scope() === "bonn" ? "bonn" : "" };
+    for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
     history.replaceState(null, "", url);
   }
@@ -627,11 +703,19 @@
     MOBILE.addEventListener("change", applyLayout);
     NARROW.addEventListener("change", applyLayout);
     $("#filters").addEventListener("submit", (e) => e.preventDefault());
-    $("#filters").addEventListener("input", (e) => (e.target.id === "f-text" ? renderSoon() : (shown = LIST_STEP, render())));
+    $("#filters").addEventListener("input", (e) => {
+      if (e.target.id === "f-text") return renderSoon();
+      shown = LIST_STEP;
+      if (e.target.name === "scope") fillParties();
+      render();
+      syncUrl();
+    });
     $("#f-area").addEventListener("change", (e) => { range = null; if (tl) tl.reset(); loadArea(e.target.value); });
     $("#papers").addEventListener("click", (e) => {
       if (e.target.closest("#more")) { shown += LIST_STEP; render(); return; }
       if (e.target.closest("#reset-filters")) { resetFilters(); return; }
+      const g = e.target.closest("button[data-gref]");
+      if (g) { openGlobal(g.dataset.gref, g.dataset.area); return; }
       const b = e.target.closest("button[data-ref]");
       if (b) select(papers.find((p) => p.reference === b.dataset.ref));
     });
@@ -643,9 +727,15 @@
     toggleFor("panel-wege").addEventListener("click", showWege);
     if (zeit) toggleFor("panel-termine").addEventListener("click", showTermine);
     else toggleFor("panel-termine").hidden = true;
+    $("#f-theme").innerHTML = '<option value="">alle</option>' + Object.entries(THEMES).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join("");
+    if (index) $("#scope").hidden = false;
     const params = new URLSearchParams(location.search);
     const ref = decodeURIComponent(location.hash.slice(1));
+    if (THEMES[params.get("thema")]) $("#f-theme").value = params.get("thema");
+    if (index && params.get("suche") === "bonn") document.querySelector('input[name="scope"][value="bonn"]').checked = true;
+    if (params.get("partei")) await loadSearch();
     await loadArea(params.get("gebiet") || DEFAULT_AREA, true);
+    if (params.get("partei")) { fillParties(); $("#f-party").value = params.get("partei"); render(); }
     const von = params.get("von"), bis = params.get("bis");
     if (tl && ISO_DAY.test(von || "") && ISO_DAY.test(bis || "")) {
       tl.setState({ von, bis, zoom: params.get("zoom"), achse: params.get("achse") });

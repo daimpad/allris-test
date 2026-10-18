@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import datetime, timezone
 
-from . import config, process as proc, publish
+from . import config, process as proc, publish, topics
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -72,6 +72,8 @@ def _paper_detail(db, pid):
         "source_object": pid,
     }
     d["stand"] = proc.stand(d)
+    d["themes"] = topics.themes(d)
+    d["parties"] = topics.parties(d)
     d["steps"] = [{k: v for k, v in s.items() if v not in (None, [], False)} for s in proc.steps(d)]
     return d
 
@@ -208,6 +210,8 @@ def export_all():
     _dump(out / "zeit.json", _time_index(db, areas, cache))
     _dump(out / "prozesse.json", _paths(db, cache))
 
+    _dump(out / "suche.json", _search_index(cache, areas, names))
+
     # Abonnieren und Nachnutzen (publish.py)
     home = {}
     for key, ids in areas.items():
@@ -260,6 +264,7 @@ def export_pilot(ortsteil=config.PILOT_ORTSTEIL):
         ensure_ascii=False, indent=1) + "\n")
     _write_tsv(out / "audit_prozess.tsv", PROCESS_AUDIT, process_audit_rows(papers))
     _write_tsv(out / "audit_zeit.tsv", TIME_AUDIT, time_audit_rows(papers, _meetings(db)))
+    _write_tsv(out / "audit_themen.tsv", THEME_AUDIT, theme_audit_rows(papers))
     _write_tsv(out / "audit_geokodierung.tsv", AUDIT_COLUMNS,
                _audit_rows(db, "WHERE p.id IN (SELECT pl2.paper_id FROM paper_location pl2 JOIN location l2 "
                                "ON l2.id = pl2.location_id WHERE l2.ortsteil = ?)", (ortsteil,)))
@@ -293,6 +298,48 @@ def _sample(db, out, ortsteil, n=50, seed=2026):
     _write_tsv(out / "stichprobe_pruefung.tsv",
                ["nr", "drucksache", "datum", "vorlagenart", "titel", "link", "zuordnung", "methode",
                 "konfidenz", "fundstelle", "urteil (richtig/falsch/unklar)", "anmerkung"], rows)
+
+
+# --- Suche über ganz Bonn: Themen und Parteien -------------------------------------------------------
+
+def _search_index(cache, areas, names):
+    """Kompakter Index aller Vorlagen für die Suche über ganz Bonn. Je Zeile: Drucksache, Titel, Datum,
+    Vorlagenart, Stand, Gebiet (zum Öffnen), Themen, eigene Parteien, Parteien der übergeordneten Vorlage
+    (z. B. Stellungnahme der Verwaltung zu einem Antrag)."""
+    home = {}
+    for key, ids in areas.items():
+        if key != "gesamt":
+            for pid in ids:
+                home.setdefault(pid, key)
+    by_ref = {p["reference"]: p for p in cache.values()}
+    party_list = sorted({x for p in cache.values() for x in p["parties"]})
+    area_list = sorted(set(home.values()))
+    types = sorted({p["paper_type"] for p in cache.values() if p["paper_type"]})
+    theme_ids = [k for k, _ in topics.THEMES]
+    rows = []
+    for pid, p in sorted(cache.items(), key=lambda x: (x[1]["date"] or "", x[1]["reference"]), reverse=True):
+        related = {x for s in p["superordinated"] for x in (by_ref.get(s["reference"]) or {}).get("parties", [])}
+        rows.append([p["reference"], p["name"], p["date"], types.index(p["paper_type"]) if p["paper_type"] else -1,
+                     proc.STAENDE.index(p["stand"]), area_list.index(home[pid]) if pid in home else -1,
+                     [theme_ids.index(t["theme"]) for t in p["themes"]],
+                     [party_list.index(x) for x in p["parties"]],
+                     [party_list.index(x) for x in sorted(related - set(p["parties"]))]])
+    return {"meta": {"note": "Themen und Parteien sind abgeleitet (siehe pipeline/topics.py); Spalten: "
+                             "Drucksache, Titel, Datum, Vorlagenart, Stand, Gebiet, Themen, Parteien, "
+                             "Parteien der übergeordneten Vorlage"},
+            "themes": [{"id": k, "label": v} for k, v in topics.THEMES], "parties": party_list,
+            "areas": [{"key": k, "name": names[k]} for k in area_list], "types": types, "stands": list(proc.STAENDE),
+            "rows": rows}
+
+
+THEME_AUDIT = ["drucksache", "titel", "thema", "methode", "fundstelle", "konfidenz", "pruefstatus"]
+
+
+def theme_audit_rows(papers):
+    label = dict(topics.THEMES)
+    return [[p["reference"], p["name"], label[t["theme"]], t["method"], t["evidence"], t["confidence"], "ungeprüft"]
+            for p in papers for t in p["themes"]] + \
+           [[p["reference"], p["name"], "", "", "", "", "ohne Thema"] for p in papers if not p["themes"]]
 
 
 # --- Zeitleiste: Aggregate je Monat, Sitzungen, Wahlperioden --------------------------------------

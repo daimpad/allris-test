@@ -29,6 +29,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 | `build.py` | SQLite `data/build/allris.sqlite`: Vorlagen, Beratungen, Sitzungen, TOPs, Orte, Ortsbezüge, Akteure |
 | `geocode.py`, `geo.py`, `plans.py` | Stufe B (Straßen, Ortsteile, Bezirke, Bebauungspläne), Point-in-Polygon, Überschneidungen |
 | `actors.py`, `process.py` | Einreichende und Zuständigkeit; Prozessschritte, Stand, Wege |
+| `topics.py` | Themen (Amt, Fachausschuss, Stichwort) und Parteien je Vorlage; Themenliste mit `THEMES` in `site/app.js` abgleichen |
 | `export.py`, `publish.py` | JSON je Gebiet, Zeit- und Wegeaggregate, Audits (TSV); Feeds, Kalender, GeoJSON, DCAT |
 | `check.py`, `verify.py` | Kennzahlen, Datenschutz; Abgleich von Stichproben mit der OParl-API; Zip-Paket |
 
