@@ -106,7 +106,7 @@ Eine öffentliche, statisch auslieferbare Webanwendung, die Ratsinformationen in
 
 ## 8. Offene Punkte
 
-- **Nächste Aufgabe (vorgemerkt):** Vorlagen nach übergeordneten Themen erschließen (Themen-Layer, z. B. Verkehr, Bauen, Grün, Schule, Soziales) und nach Parteien bzw. Fraktionen filtern und durchsuchen (Grundlage: abgeleitete Einreichende, federführendes Amt, Stichworte; später Volltext)
+- Themen und Parteien: Grundversion umgesetzt (Abschnitt 9); offen sind die Prüfung der Zuordnung an einer Stichprobe (`audit_themen.tsv`), ein Themen-Layer auf der Karte und die Suche im Volltext der Dokumente (abhängig von der PDF-Lizenz)
 - Stufe C (Volltext, Sprachmodell) zurückgestellt, bis die Lizenz der PDFs geklärt ist
 - Stichprobe zur Prüfung von Hand: `data/export/endenich/stichprobe_pruefung.tsv` (50 Vorlagen) ausstehend; Text im Dialog „Über“ gegenlesen
 - Eigene Domain: A-Eintrag `ris-bonn` muss auf die Web-Adresse des Hostings zeigen (91.204.46.169, nicht die Mail-Adresse .171); danach Let's-Encrypt-Zertifikat, Plesk-Git (Branch `deploy`) und Webhook; anschließend `SITE_URL` auf `https://ris-bonn.datenatlas.de/` umstellen
@@ -122,6 +122,7 @@ Eine öffentliche, statisch auslieferbare Webanwendung, die Ratsinformationen in
 | Geokodierung | Stufe A (OParl `location`), Stufe B (Straßen, Ortsteile, Stadtbezirke im Titel; Bebauungsplan-Nummern mit Geltungsbereich), Vererbung von übergeordneten Vorlagen (Stufe B, höchstens „mittel“); Stufe C offen |
 | Prozessebene | Schritte mit Evidenzstatus (belegt, abgeleitet, nicht öffentlich, unklar), Stand (entschieden; beraten, ohne Entscheidung; in Beratung; offen; ohne Beratungsfolge), typische Wege je Vorlagenart, Audit |
 | Zeitleiste | Dichte je Monat, Sitzungen, Wahlperioden, Auswahlspur, Zeitraumfilter mit URL-Zustand, Datumsaudit, Verifikation gegen die OParl-API |
+| Themen und Parteien | zehn Themen (Amt, Fachausschuss, Stichwort; abgeleitet mit Fundstelle), Parteien aus Einreichenden (Bezirksfraktionen → Partei, Koalition eigene Kategorie), Filter im Gebiet und Suche über ganz Bonn (`suche.json`), URL-Zustand |
 | Abonnieren und Termine | Atom-Feeds je Gebiet und je Vorlage, Sitzungskalender (Seite und `termine.ics`) |
 | Offene Daten | `vorlagen.geojson`, `dcat.jsonld` (DCAT-AP), Datenpaket |
-| Ideen aus Abschnitt 6 offen | Beteiligungshinweise, Gremien- und Ämterkarte, Themen-Layer (siehe 8), Kurzfassungen (LLM), Rückmeldung zur Verortung ist umgesetzt |
+| Ideen aus Abschnitt 6 offen | Beteiligungshinweise, Gremien- und Ämterkarte, Themen-Layer auf der Karte, Kurzfassungen (LLM), Rückmeldung zur Verortung ist umgesetzt |
