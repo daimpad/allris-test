@@ -3,24 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ratskarte Endenich</title>
-  <meta name="description" content="Vorlagen des Bonner Rats und der Bezirksvertretung mit Ortsbezug in Endenich – räumlich, zeitlich und nach Akteuren. Vorläufige Fassung.">
+  <title>Ratskarte Bonn</title>
+  <meta name="description" content="Vorlagen aus dem Bonner Ratsinformationssystem räumlich, zeitlich und nach Akteuren erschlossen: wo, wann, wer – mit Quellenangabe.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#papers">Zur Liste der Vorlagen springen</a>
   <header class="site-header">
     <div>
-      <h1>Ratskarte Endenich</h1>
-      <p class="lede">Vorlagen aus dem Bonner Ratsinformationssystem mit Ortsbezug im Ortsteil Endenich: wo, wann, wer.</p>
+      <h1>Ratskarte Bonn</h1>
+      <p class="lede">Vorlagen aus dem Bonner Ratsinformationssystem: wo, wann, wer – mit Quellenangabe.</p>
     </div>
-    <p class="badge-prelim" role="note"><strong>Vorläufige Fassung.</strong> Ortsbezüge der Stufe B sind abgeleitet und noch nicht von Hand geprüft.</p>
+    <p class="badge-prelim" role="note"><strong>Vorläufige Fassung.</strong> Ortsbezüge der Stufe B sind aus den Titeln abgeleitet und noch nicht vollständig von Hand geprüft.</p>
   </header>
 
   <main class="layout">
     <section class="panel list-panel" aria-labelledby="list-heading">
       <h2 id="list-heading" class="visually-hidden">Vorlagen</h2>
       <form class="filters" id="filters" role="search" aria-label="Vorlagen filtern">
+        <label>Gebiet
+          <select id="f-area"></select>
+        </label>
         <label>Stichwort
           <input type="search" id="f-text" placeholder="z. B. Radweg, Kita, 261856" autocomplete="off">
         </label>
@@ -32,7 +38,25 @@
             <select id="f-year"><option value="">alle Jahre</option></select>
           </label>
         </div>
-        <fieldset>
+        <details class="more-filters">
+          <summary>Weitere Filter</summary>
+          <label>Federführendes Amt
+            <select id="f-amt"><option value="">alle</option></select>
+          </label>
+          <label>Gremium
+            <select id="f-gremium"><option value="">alle</option></select>
+          </label>
+          <label>Stand des Verfahrens
+            <select id="f-stand">
+              <option value="">alle</option>
+              <option>entschieden</option>
+              <option>in Beratung</option>
+              <option>offen</option>
+              <option>ohne Beratungsfolge</option>
+            </select>
+          </label>
+        </details>
+        <fieldset id="f-conf">
           <legend>Verortung</legend>
           <label class="check"><input type="checkbox" value="hoch" checked> hoch <span class="hint">(Koordinate der Stadt)</span></label>
           <label class="check"><input type="checkbox" value="mittel" checked> mittel <span class="hint">(aus dem Titel)</span></label>
@@ -40,11 +64,11 @@
         </fieldset>
       </form>
       <p class="count" id="count" aria-live="polite"></p>
-      <ol class="papers" id="papers"></ol>
+      <ol class="papers" id="papers" tabindex="-1"></ol>
     </section>
 
     <section class="panel map-panel" aria-label="Karte">
-      <div id="map" role="application" aria-label="Karte der Vorlagen in Endenich"></div>
+      <div id="map" aria-label="Karte der Vorlagen im gewählten Gebiet. Alle Vorlagen stehen auch in der Liste."></div>
     </section>
 
     <section class="panel detail-panel" id="detail" aria-live="polite" tabindex="-1">
@@ -53,11 +77,12 @@
   </main>
 
   <footer class="site-footer" id="footer">
-    <p>Quellen: OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteilflächen der Stadt Bonn (CC0 1.0) · Straßen © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet.</p>
+    <p>Quellen: OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteil- und Bezirksflächen der Stadt Bonn (CC0 1.0) · Straßen © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet. <a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a></p>
     <p id="stand"></p>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

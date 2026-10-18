@@ -10,4 +10,8 @@ data/raw/osm_streets.json
 data/raw/osm_tiles/
 data/raw/STAND.json
 data/build/
+data/export/bonn/
+data/export/allris-bonn-export.zip
+dist/
+_site/
 .venv/
