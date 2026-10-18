@@ -3,19 +3,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 576,
-  "generated_at": "2026-10-18T13:13:41+00:00",
+  "generated_at": "2026-10-18T14:10:55+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-18T13:09:14+00:00"
+    "retrieved_at": "2026-10-18T14:05:53+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-18T13:11:38+00:00"
+    "retrieved_at": "2026-10-18T14:08:52+00:00"
    },
    {
     "name": "osm",
@@ -2955,9 +2955,9 @@
     "place": "Steinweg",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021671"
    }
   },
@@ -10059,9 +10059,9 @@
     "place": "Flodelingsweg",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004609"
    }
   },
@@ -10083,9 +10083,9 @@
     "place": "Am Burggraben",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004609"
    }
   },
@@ -10107,9 +10107,9 @@
     "place": "Alfred-Bucherer-Straße",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004609"
    }
   },
@@ -10131,9 +10131,9 @@
     "place": "Magdalenenstraße",
     "level": "strasse",
     "ortsteil": "Endenich",
-    "stage": "A",
+    "stage": "B",
     "method": "vererbt",
-    "confidence": "hoch",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004609"
    }
   },
