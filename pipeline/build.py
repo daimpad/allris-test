@@ -79,7 +79,8 @@ def build():
     retrieved = {
         "oparl-bonn": stand.get("papers"),
         "oparl-lite": stand.get("consultations_lite"),
-        "osm": stand.get("osm_streets"),
+        "osm": stand.get("osm_streets") or (json.loads(config.STRASSEN.read_text())["meta"].get("retrieved_at")
+                                            if config.STRASSEN.exists() else None),
         "geo-bonn": stand.get("geo", "2026-10-17"),
     }
     db.executemany("INSERT INTO source VALUES (?,?,?,?)",
