@@ -10,6 +10,7 @@ Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschlie�
 - **Wann?** Zeitleiste über der Karte: Dichte der Vorlagen je Monat und Vorlagenart, Sitzungen ausgewählter Gremien (künftige als offene Marken), Wahlperioden, Stationen der gewählten Vorlage. Zeitraum per Griff, Voreinstellung oder Tastatur; Zoom von Jahr bis Tag; Monatsübersicht als Tabelle.
 - **Wie?** Prozesslinie je Vorlage mit Evidenzstatus je Schritt (siehe unten); „Wege“ zeigt die häufigsten Abfolgen von Beratungen je Vorlagenart für ganz Bonn.
 - **Wer?** Federführendes Amt; bei der Sammelklasse „Co-Dezernat“ zusätzlich das fachlich zuständige Amt; befasste Gremien; Einreichende.
+- **Abonnieren:** Atom-Feed je Gebiet (neue Vorlagen und Beratungsergebnisse) und je Vorlage (Beratungen, Ergebnisse, Folgevorlagen; für Vorlagen ab dem Vorjahr oder noch nicht abgeschlossen). **Termine:** kommende Sitzungen mit Link zu Tagesordnung und Einladung, Vorlagen des Gebiets auf der Tagesordnung, Kalenderdatei (`termine.ics`).
 - Der Kartenhintergrund (OpenStreetMap) ist grau gefiltert, damit die Marker hervortreten; „Farbige Karte“ schaltet um.
 - Die Karte füllt den Bildschirm; Liste, Zeitleiste, Detail, Wege und Quellen liegen als einklappbare Flächen darüber. Quellen stehen jeweils in einem Akkordeon.
 - Filter: Gebiet, Stichwort, Vorlagenart, Zeitraum, Amt, Gremium, Stand des Verfahrens, Konfidenz der Verortung. Direktlinks mit Zustand: `?gebiet=ortsteil:endenich&von=2025-10-18&bis=2026-10-18&zoom=Quartal&achse=vorlage#191010`.
@@ -48,6 +49,14 @@ Jeder Schritt einer Vorlage trägt einen Evidenzstatus: **belegt** (Datenobjekt 
 ## Zeitleiste
 
 Die Dichte wird je Gebiet vorab als Monatsaggregat berechnet (`zeit.json`); feinere Stufen zählt die Seite aus den geladenen Vorlagen. Achse wählbar: Datum der Vorlage oder Datum der Beratungen. Vor Oktober 2019 liegen keine Vorlagen vor. Audit der Datumsangaben: `data/export/endenich/audit_zeit.tsv` – alle 750 abgeleiteten Beratungsdaten in Endenich fallen auf eine Sitzung desselben Gremiums in der Sitzungsliste der Stadt. `verify` prüft zusätzlich 20 Vorlagen gegen die OParl-API (`data/export/verifikation_zeit.tsv`).
+
+## Offene Daten (Linked Open Data)
+
+- `data/export/bonn/vorlagen.geojson` – alle verorteten Vorlagen, ein Punkt je Vorlage und Straße, mit Stufe, Methode, Konfidenz, Fundstelle und Quellobjekt (OParl-ID)
+- `data/export/bonn/dcat.jsonld` – Beschreibung des Datensatzes nach DCAT-AP (JSON-LD) mit Distributionen und Lizenzen
+- `data/export/bonn/termine.ics` – Sitzungskalender; `data/export/bonn/feeds/` – Atom-Feeds
+
+Absolute Links in Feeds, Kalender und DCAT verweisen auf `SITE_URL` (Standard: GitHub Pages; anpassbar über die Umgebungsvariable).
 
 ## Grenzen
 

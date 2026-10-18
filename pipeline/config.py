@@ -1,4 +1,5 @@
 """Pfade, Quellen und Lizenzen der Pipeline."""
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -54,3 +55,6 @@ SOURCES = {
 }
 
 PILOT_ORTSTEIL = "Endenich"
+
+# Öffentliche Adresse der Seite (für absolute Links in Feeds, Kalender und DCAT-Beschreibung)
+SITE_URL = os.environ.get("SITE_URL", "https://daimpad.github.io/allris-test/")

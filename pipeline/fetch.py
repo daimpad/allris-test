@@ -50,9 +50,11 @@ def fetch_organizations():
 def fetch_meetings():
     """Sitzungen (auch künftige) und Wahlperioden aus der städtischen OParl-API."""
     meetings = _oparl_list(f"{config.OPARL_BODY}/meetings")
-    keep = ("id", "name", "meetingState", "cancelled", "start", "end", "organization")
-    config.MEETINGS.write_text(json.dumps([{k: m.get(k) for k in keep} for m in meetings],
-                                          ensure_ascii=False))
+    keep = ("id", "name", "meetingState", "cancelled", "start", "end", "organization", "web")
+    # Tagesordnung (web) und Einladung erscheinen etwa zwei Wochen vor der Sitzung
+    config.MEETINGS.write_text(json.dumps(
+        [{**{k: m.get(k) for k in keep}, "invitation": (m.get("invitation") or {}).get("accessUrl"),
+          "agenda_items": len(m.get("agendaItem") or [])} for m in meetings], ensure_ascii=False))
     terms = _oparl_list(f"{config.OPARL_BODY}/legislativeTerms", size=10)
     config.LEGISLATIVE_TERMS.write_text(json.dumps(terms, ensure_ascii=False))
     _stamp("meetings")

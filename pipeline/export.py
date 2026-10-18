@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import datetime, timezone
 
-from . import config, process as proc
+from . import config, process as proc, publish
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -153,7 +153,7 @@ def export_all():
 
     order = "ORDER BY p.date DESC, p.reference"
     index = {"ortsteile": [], "bezirke": [], "ohne_ortsbezug": []}
-    areas = {}
+    areas, names = {}, {}
 
     for ot in json.loads(config.ORTSTEILE.read_text())["features"]:
         name, bezirk = ot["properties"]["ortsteil_bez"], ot["properties"]["bezirk_bez"]
@@ -166,6 +166,7 @@ def export_all():
         index["ortsteile"].append({"name": name, "slug": slug(name), "stadtbezirk": bezirk,
                                    "count": len(ids)})
         areas[f"ortsteil:{slug(name)}"] = ids
+        names[f"ortsteil:{slug(name)}"] = name
 
     for bz in json.loads(config.STADTBEZIRKE.read_text())["features"]:
         name = bz["properties"]["bezirk_bez"]
@@ -179,6 +180,7 @@ def export_all():
               {"meta": _meta(db, True, stadtbezirk=name, count=len(ids)), "papers": [detail(i) for i in ids]})
         index["bezirke"].append({"name": name, "slug": slug(name), "count": len(ids)})
         areas[f"bezirk:{slug(name)}"] = ids
+        names[f"bezirk:{slug(name)}"] = f"Stadtbezirk {name}, ohne genaueren Ort"
 
     # ohne Ortsbezug: auch Vorlagen, deren Orte weder einem Ortsteil noch einem Stadtbezirk zugeordnet
     # werden konnten (z. B. Straße ohne Koordinate), damit keine Vorlage verloren geht
@@ -194,16 +196,33 @@ def export_all():
               {"meta": _meta(db, True, jahr=year, count=len(ids)), "papers": [detail(i) for i in ids]})
         index["ohne_ortsbezug"].append({"jahr": year, "count": len(ids)})
         areas[f"ohne:{year}"] = ids
+        names[f"ohne:{year}"] = f"stadtweit / ohne Ortsbezug {year}"
     areas["gesamt"] = [r[0] for r in db.execute("SELECT id FROM paper")]
     for pid in areas["gesamt"]:
         detail(pid)
     _dump(out / "zeit.json", _time_index(db, areas, cache))
     _dump(out / "prozesse.json", _paths(db, cache))
 
+    # Abonnieren und Nachnutzen (publish.py)
+    home = {}
+    for key, ids in areas.items():
+        for pid in ids:
+            home.setdefault(pid, key)
+    sources = [dict(r) for r in db.execute("SELECT * FROM source")]
+    stand = next((s["retrieved_at"] for s in sources if s["name"] == "oparl-bonn"), None) or ""
+    year = int((stand or datetime.now(timezone.utc).isoformat())[:4])
+    publish.write_feeds(out / "feeds", areas, cache, names, home, slug, f"{year - 1}-01-01")
+    meetings = _meetings(db)
+    publish.write_calendar(out / "termine.ics", meetings)
+    n_points = publish.write_geojson(out / "vorlagen.geojson", cache,
+                                     [{k: v for k, v in s.items() if k != "retrieved_at"} for s in sources])
+    publish.write_dcat(out / "dcat.jsonld", min(p["date"] for p in cache.values() if p["date"]),
+                       stand[:10] or datetime.now(timezone.utc).date().isoformat())
+
     _dump(out / "index.json", {"meta": _meta(db), **index})
     db.close()
     print(f"Bonn: {len(index['ortsteile'])} Ortsteile, {len(index['bezirke'])} Bezirke, "
-          f"{len(years)} Jahre ohne Ortsbezug, {len(cache)} Vorlagen → {out}")
+          f"{len(years)} Jahre ohne Ortsbezug, {len(cache)} Vorlagen, {n_points} Punkte im GeoJSON → {out}")
 
 
 def export_pilot(ortsteil=config.PILOT_ORTSTEIL):
@@ -312,10 +331,16 @@ def _time_index(db, areas, cache):
         "months": months, "categories": types + ["Sonstige"],
         "data_start": min(p["date"] for p in papers if p["date"]),
         "areas": {k: series(v) for k, v in areas.items()},
-        "meetings": meetings,
+        "meetings": [{k: v for k, v in m.items() if k not in ("start", "end")} for m in meetings],
         "terms": [{"name": t["name"], "start": t.get("startDate"), "end": t.get("endDate"),
                    "source_object": t["id"]} for t in terms if (t.get("endDate") or "9999") >= "2014"],
     }
+
+
+def _nominativ(name):
+    """„Städtebau- und Gestaltungsbeirates“ → „…beirat“, „Ausschusses“ → „Ausschuss“ (Sitzungsnamen im Genitiv)."""
+    name = re.sub(r"(rat)es\b", r"\1", name, flags=re.I)
+    return re.sub(r"(schuss)es\b", r"\1", name, flags=re.I)
 
 
 def _meetings(db):
@@ -328,8 +353,14 @@ def _meetings(db):
         if not m.get("start"):
             continue
         org = (m.get("organization") or [None])[0]
-        out.append({"date": proc.local_day(m["start"]), "gremium": names.get(org, "unbekannt"), "name": m.get("name"),
-                    "cancelled": bool(m.get("cancelled")), "state": m.get("meetingState"),
+        time = m["start"][11:16] if len(m["start"]) > 10 and m["start"][11:16] != "00:00" else None
+        # Gremium aus der Organisation; fehlt sie (z. B. neue Wahlperiode), aus dem Sitzungsnamen
+        gremium = names.get(org) or _nominativ(re.sub(r"^(Gemeinsame )?Sitzung (des|der) ", "", m.get("name") or "")) \
+            or "unbekannt"
+        out.append({"date": proc.local_day(m["start"]), "time": time, "gremium": gremium,
+                    "name": m.get("name"), "cancelled": bool(m.get("cancelled")), "state": m.get("meetingState"),
+                    "web": m.get("web"), "invitation": m.get("invitation"),
+                    "agenda_items": m.get("agenda_items") or 0, "start": m["start"], "end": m.get("end"),
                     "source_object": m["id"]})
     return sorted(out, key=lambda x: x["date"])
 
