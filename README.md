@@ -7,9 +7,11 @@ Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschlie�
 ## Was die Seite zeigt
 
 - **Wo?** Karte und gleichwertige Liste je Ortsteil, je Stadtbezirk (Vorlagen ohne genaueren Ort) und für Vorlagen ohne Ortsbezug (je Jahr). Jeder Ortsbezug nennt Stufe, Methode, Konfidenz und Fundstelle.
-- **Wann?** Prozesslinie je Vorlage: Beratungen mit Gremium, Datum, Tagesordnungspunkt und Ergebnis (wörtlich aus der Quelle, mit allgemeiner Erläuterung); Folgevorlagen und übergeordnete Vorlagen.
+- **Wann?** Zeitleiste über der Karte: Dichte der Vorlagen je Monat und Vorlagenart, Sitzungen ausgewählter Gremien (künftige als offene Marken), Wahlperioden, Stationen der gewählten Vorlage. Zeitraum per Griff, Voreinstellung oder Tastatur; Zoom von Jahr bis Tag; Monatsübersicht als Tabelle.
+- **Wie?** Prozesslinie je Vorlage mit Evidenzstatus je Schritt (siehe unten); „Wege“ zeigt die häufigsten Abfolgen von Beratungen je Vorlagenart für ganz Bonn.
 - **Wer?** Federführendes Amt; bei der Sammelklasse „Co-Dezernat“ zusätzlich das fachlich zuständige Amt; befasste Gremien; Einreichende.
-- Filter: Gebiet, Stichwort, Vorlagenart, Zeitraum, Amt, Gremium, Stand des Verfahrens, Konfidenz der Verortung. Direktlinks: `?gebiet=ortsteil:endenich#191010`.
+- Die Karte füllt den Bildschirm; Liste, Zeitleiste, Detail, Wege und Quellen liegen als einklappbare Flächen darüber. Quellen stehen jeweils in einem Akkordeon.
+- Filter: Gebiet, Stichwort, Vorlagenart, Zeitraum, Amt, Gremium, Stand des Verfahrens, Konfidenz der Verortung. Direktlinks mit Zustand: `?gebiet=ortsteil:endenich&von=2025-10-18&bis=2026-10-18&zoom=Quartal&achse=vorlage#191010`.
 - „Verortung falsch?“ öffnet ein vorausgefülltes Issue.
 
 ## Datenquellen und Lizenzen
@@ -37,6 +39,14 @@ Die Seite wird täglich neu erzeugt (Workflow `pages.yml`, 04:17 UTC) und bei je
 
 Prüfung: `python -m pipeline check` gleicht Stufe B mit Stufe A ab (je Vorlage, unabhängig, da OSM-Geometrie). `python -m pipeline verify` lädt eine Stichprobe von 50 Vorlagen erneut aus der OParl-API und vergleicht die Felder (`data/export/verifikation_oparl.tsv`). Audit aller Ortsbezüge: `data/export/audit_geokodierung_bonn.tsv`.
 
+## Prozessebene
+
+Jeder Schritt einer Vorlage trägt einen Evidenzstatus: **belegt** (Datenobjekt in der Quelle), **abgeleitet** (erschlossen, z. B. Sitzungsdatum über OParl-Lite), **nicht öffentlich** (findet regelmäßig statt, ist aber nicht einsehbar, z. B. verwaltungsinterne Vorbereitung), **unklar** (aus öffentlichen Quellen nicht bestimmbar, z. B. Vollzug). Lücken erscheinen als eigene Schritte. Ein Soll-Modell (Zuständigkeitsordnung, Bezirkssatzung) ist noch nicht formalisiert. Bericht der Exploration: `prozess/BERICHT_phase0.md`; Audit je Schritt: `data/export/endenich/audit_prozess.tsv`.
+
+## Zeitleiste
+
+Die Dichte wird je Gebiet vorab als Monatsaggregat berechnet (`zeit.json`); feinere Stufen zählt die Seite aus den geladenen Vorlagen. Achse wählbar: Datum der Vorlage oder Datum der Beratungen. Vor Oktober 2019 liegen keine Vorlagen vor. Audit der Datumsangaben: `data/export/endenich/audit_zeit.tsv` – alle 750 abgeleiteten Beratungsdaten in Endenich fallen auf eine Sitzung desselben Gremiums in der Sitzungsliste der Stadt. `verify` prüft zusätzlich 20 Vorlagen gegen die OParl-API (`data/export/verifikation_zeit.tsv`).
+
 ## Grenzen
 
 - Rund 57 % der Vorlagen haben keinen erkennbaren Ortsbezug im Titel; sie stehen unter „ohne Ortsbezug“.
@@ -54,10 +64,10 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 | Schritt | Ergebnis |
 |---|---|
-| `fetch` (`fetch-papers`, `fetch-organizations`, `fetch-lite`, `fetch-streets`) | Rohdaten in `data/raw/` (nicht im Repository, außer Gremien und Ämtern); Abrufzeitpunkte in `STAND.json` |
+| `fetch` (`fetch-papers`, `fetch-organizations`, `fetch-meetings`, `fetch-lite`, `fetch-streets`) | Rohdaten in `data/raw/` (nicht im Repository, außer Gremien, Ämtern, Sitzungen und Wahlperioden); Abrufzeitpunkte in `STAND.json` |
 | `gazetteer` | `data/geo/strassen_bonn.json`: Straßenverzeichnis aus den OSM-Rohdaten (im Repository, damit die Aktualisierung ohne Overpass auskommt) |
 | `build` | `data/build/allris.sqlite`: Vorlage, Beratung, Sitzung, Tagesordnungspunkt, Organisation, Vorlagenbeziehung, Ort, Ortsbezug (Stufe, Methode, Konfidenz, Fundstelle), Einreichende, Zuständigkeit |
-| `export` | `data/export/endenich/` (Pilot, im Repository) und `data/export/bonn/` (je Ortsteil, Bezirk, Jahr; wird bei der Veröffentlichung erzeugt); Audit-TSV |
+| `export` | `data/export/endenich/` (Pilot, im Repository) und `data/export/bonn/` (je Ortsteil, Bezirk, Jahr, dazu `zeit.json` und `prozesse.json`; wird bei der Veröffentlichung erzeugt); Audit-TSV (Geokodierung, Prozessschritte, Datumsangaben) |
 | `check`, `verify` | Kennzahlen, Abgleich B/A, Datenschutzprüfung; Abgleich mit der OParl-API |
 | `package` | `data/export/allris-bonn-export.zip` |
 
@@ -73,8 +83,9 @@ Tests: `.venv/bin/python -m unittest discover tests`
 
 ## Aufbau des Repositorys
 
-- `pipeline/` – Abruf, Aufbereitung, Geokodierung (`geocode.py`), Akteure (`actors.py`), Export, Prüfung
-- `site/` – statische Seite (Leaflet, OSM-Kacheln), WCAG 2.1 AA geprüft mit axe-core
+- `pipeline/` – Abruf, Aufbereitung, Geokodierung (`geocode.py`), Akteure (`actors.py`), Prozessschritte (`process.py`), Export, Prüfung
+- `site/` – statische Seite (Leaflet, OSM-Kacheln, Zeitleiste in `timeline.js`), WCAG 2.1 AA geprüft mit axe-core
+- `prozess/` – Exploration der Prozessebene (Bericht, Stichprobe Endenich)
 - `data/` – Gremien, Ämter, Flächen, Straßenverzeichnis, Pilot-Export, Lizenzen
 - `phase0/` – Explorationsbericht und Audit der Phase 0
 - `CLAUDE.md`, `docs/` – Projektprompt und frühere Fassungen

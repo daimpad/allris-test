@@ -54,6 +54,10 @@ jobs:
         run: python -m pipeline fetch-organizations
         continue-on-error: true
 
+      - name: Abruf OParl-API Stadt Bonn (Sitzungen, Wahlperioden)
+        run: python -m pipeline fetch-meetings
+        continue-on-error: true
+
       - name: Abruf OParl-Lite (Sitzungen, Tagesordnungspunkte)
         run: python -m pipeline fetch-lite
         continue-on-error: true

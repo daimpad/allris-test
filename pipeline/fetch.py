@@ -47,6 +47,18 @@ def fetch_organizations():
     print(f"{len(orgs)} Organisationen, davon {len(vb)} Verwaltungsbereiche")
 
 
+def fetch_meetings():
+    """Sitzungen (auch künftige) und Wahlperioden aus der städtischen OParl-API."""
+    meetings = _oparl_list(f"{config.OPARL_BODY}/meetings")
+    keep = ("id", "name", "meetingState", "cancelled", "start", "end", "organization")
+    config.MEETINGS.write_text(json.dumps([{k: m.get(k) for k in keep} for m in meetings],
+                                          ensure_ascii=False))
+    terms = _oparl_list(f"{config.OPARL_BODY}/legislativeTerms", size=10)
+    config.LEGISLATIVE_TERMS.write_text(json.dumps(terms, ensure_ascii=False))
+    _stamp("meetings")
+    print(f"{len(meetings)} Sitzungen, {len(terms)} Wahlperioden")
+
+
 CONSULTATION_QUERY = """
 query($limit: Int!, $offset: Int!) {
   consultations(limit: $limit, offset: $offset, orderBy: {field: URI, direction: ASC}) {
@@ -153,4 +165,5 @@ def fetch_all():
     fetch_papers()
     fetch_organizations()
     fetch_consultations_lite()
+    fetch_meetings()
     fetch_streets()
