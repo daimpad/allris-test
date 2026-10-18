@@ -246,7 +246,10 @@ def export_pilot(ortsteil=config.PILOT_ORTSTEIL):
 
 
 def _sample(db, out, ortsteil, n=50, seed=2026):
-    """Stichprobe zur Prüfung von Hand: Vorlagen, die nur über Stufe B/vererbt im Ortsteil liegen."""
+    """Stichprobe zur Prüfung von Hand: Vorlagen, die nur über Stufe B/vererbt im Ortsteil liegen.
+    Wird nur einmal gezogen; eine vorhandene Datei ist Prüfgrundlage und bleibt unverändert."""
+    if (out / "stichprobe_pruefung.tsv").exists():
+        return
     ids = [r[0] for r in db.execute(
         "SELECT DISTINCT pl.paper_id FROM paper_location pl JOIN location l ON l.id = pl.location_id "
         "WHERE l.ortsteil = ? AND pl.stage = 'B' AND pl.paper_id NOT IN "
