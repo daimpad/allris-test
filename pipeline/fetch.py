@@ -163,9 +163,32 @@ def _frange(start, stop, step):
         x += step
 
 
+def fetch_plans():
+    """Geltungsbereiche der rechtskräftigen Bebauungspläne (Stadt Bonn, CC0); im Repository als
+    Rückfall, falls der Dienst nicht antwortet."""
+    data = get_json(config.BPLAN_URL)
+    rnd = lambda c: [rnd(x) for x in c] if isinstance(c[0], list) else [round(c[0], 6), round(c[1], 6)]
+    https = lambda u: (u or "").replace("http://stadtplan.bonn.de/", "https://stadtplan.bonn.de/") or None
+    features = [{"type": "Feature",
+                 "properties": {"name": f["properties"]["bplan_name"], "inkraft_seit": f["properties"].get("inkraft_seit"),
+                                "plan": https(f["properties"].get("pdf_link")),
+                                "begruendung": https(f["properties"].get("begruendung_link"))},
+                 "geometry": {"type": f["geometry"]["type"], "coordinates": rnd(f["geometry"]["coordinates"])}}
+                for f in data["features"] if f.get("geometry")]
+    config.BPLAN.write_text(json.dumps({
+        "type": "FeatureCollection",
+        "meta": {"source": config.BPLAN_URL, "license": config.SOURCES["bplan-bonn"]["license"],
+                 "retrieved_at": _now()},
+        "features": sorted(features, key=lambda f: f["properties"]["name"])},
+        ensure_ascii=False, separators=(",", ":")) + "\n")
+    _stamp("bplan")
+    print(f"{len(features)} Bebauungspläne → {config.BPLAN}")
+
+
 def fetch_all():
     fetch_papers()
     fetch_organizations()
     fetch_consultations_lite()
     fetch_meetings()
+    fetch_plans()
     fetch_streets()

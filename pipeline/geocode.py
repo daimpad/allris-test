@@ -40,7 +40,8 @@ ORTSTEIL_ALIASES = {
 BEZIRKE = {"Bad Godesberg": ["Bad Godesberg", "Godesberg"], "Beuel": ["Beuel"], "Hardtberg": ["Hardtberg"]}
 # Namen, die im Titel oft nicht die Straße meinen (oder mehrere Lagen haben): Konfidenz niedrig
 GENERIC_NAMES = {"Rheinufer", "Markt", "Kirchberg", "Wasserland"}
-PLAN = re.compile(r"(?:Bebauungsplan(?:es|s|entwurf)?|B-Plan(?:es|s)?)\s*(?:Nr\.?\s*)?(\d{4}-\d{1,3})")
+PLAN = re.compile(r"(?:Bebauungsplan(?:es|s|entwurf|entwurfs|verfahren|verfahrens|änderung)?|B-Plan(?:es|s)?)"
+                  r"\s*(?:Nr\.?\s*)?(\d{4}-\d{1,3})")
 STRASSE = re.compile(r"[Ss]traße$")
 
 

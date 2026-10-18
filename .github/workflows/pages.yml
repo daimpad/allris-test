@@ -59,6 +59,10 @@ jobs:
         run: python -m pipeline fetch-meetings
         continue-on-error: true
 
+      - name: Abruf Bebauungspläne (Geltungsbereiche, Stadt Bonn)
+        run: python -m pipeline fetch-plans
+        continue-on-error: true
+
       - name: Abruf OParl-Lite (Sitzungen, Tagesordnungspunkte)
         run: python -m pipeline fetch-lite
         continue-on-error: true

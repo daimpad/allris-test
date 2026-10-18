@@ -104,6 +104,11 @@ def check():
         "SELECT street FROM location WHERE street IS NOT NULL AND source = 'oparl-bonn' UNION ALL "
         "SELECT description FROM location WHERE description IS NOT NULL AND source = 'oparl-bonn'")]
     with_number = [s for s in texts if re.search(r"\d", re.sub(r"\b5[0-9]{4}\b", "", s))]
+    with_nr = one("SELECT COUNT(DISTINCT paper_id) FROM paper_plan")
+    with_area = one("SELECT COUNT(DISTINCT paper_id) FROM paper_location WHERE method = 'bebauungsplan'")
+    print("\nBebauungspläne")
+    print("Vorlagen mit Plannummer im Titel:", with_nr, "· davon mit Geltungsbereich:", pct(with_area, with_nr))
+
     print("\nDatenschutz")
     print("Orte mit Hausnummer in Straße oder Beschreibung:", len(with_number), with_number[:5])
     db.close()

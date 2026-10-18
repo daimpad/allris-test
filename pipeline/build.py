@@ -5,6 +5,7 @@ import sqlite3
 from . import actors, config
 from .geo import Ortsteile
 from .geocode import Gazetteer, plan_numbers
+from .plans import plan_locations
 
 SCHEMA = """
 CREATE TABLE source (
@@ -82,6 +83,8 @@ def build():
         "osm": stand.get("osm_streets") or (json.loads(config.STRASSEN.read_text())["meta"].get("retrieved_at")
                                             if config.STRASSEN.exists() else None),
         "geo-bonn": stand.get("geo", "2026-10-17"),
+        "bplan-bonn": stand.get("bplan") or (json.loads(config.BPLAN.read_text())["meta"].get("retrieved_at")
+                                             if config.BPLAN.exists() else None),
     }
     db.executemany("INSERT INTO source VALUES (?,?,?,?)",
                    [(k, v["url"], v["license"], retrieved[k]) for k, v in config.SOURCES.items()])
@@ -155,6 +158,11 @@ def build():
                                  r["evidence"], r["derived"]))
 
     rows["ploc"] += _stage_b(papers, bv_bezirke, locations)
+    plan_locs, plan_rows = plan_locations(rows["plan"], ortsteile)
+    locations.update(plan_locs)
+    rows["ploc"] += plan_rows
+    print(f"Bebauungspläne: {len({r[0] for r in plan_rows})} Vorlagen mit Geltungsbereich, "
+          f"{len({r[0] for r in rows['plan']})} mit Plannummer im Titel")
     rows["ploc"] += _inherited(papers, papers_by_id, rows["ploc"])
 
     # OR REPLACE: ändert sich die Quelle während des seitenweisen Abrufs, kann eine Vorlage doppelt kommen

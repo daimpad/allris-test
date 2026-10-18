@@ -23,6 +23,7 @@ Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschlie�
 |---|---|---|
 | [OParl-API der Stadt Bonn](https://www.bonn.sitzung-online.de/oparl/bodies/1) (ALLRIS) | Vorlagen, Beratungsfolge, Gremien, Ämter (`underDirectionOf`), Orte (`location`) – Primärquelle | CC0 1.0; PDFs sind vom Datensatz ausgenommen |
 | [OParl-Lite Bonn](https://oparl.bonn.machdenstaat.de/) (machdenstaat), GraphQL | Sitzung, Tagesordnungspunkt und Ergebnis je Beratung | CC BY 4.0 |
+| Geltungsbereiche der Bebauungspläne der Stadt Bonn ([Open-Data-Portal](https://opendata.bonn.de/dataset/lage-der-bebauungspläne)) | 1.128 rechtskräftige Pläne mit Plannummer, Datum, Plan und Begründung (PDF) | CC0 1.0 |
 | Ortsteil- und Bezirksflächen der Stadt Bonn ([Open-Data-Portal](https://opendata.bonn.de/dataset/flächen-der-ortsteile)) | 51 Ortsteile, 4 Stadtbezirke | CC0 1.0 |
 | OpenStreetMap (Overpass API) | Straßennamen und -verläufe für das Straßenverzeichnis | ODbL 1.0, © OpenStreetMap-Mitwirkende |
 
@@ -38,6 +39,7 @@ Die Seite wird täglich neu erzeugt (Workflow `pages.yml`, 04:17 UTC) und bei je
 |---|---|---|
 | A | `location` aus der OParl-API (ein Punkt je Straße; Ortsteil per Point-in-Polygon) | hoch |
 | B | Straßen-, Ortsteil- und Stadtbezirksnamen im Titel; Straßenverzeichnis aus OSM mit Ortsteilen je Straße; Eingrenzung mehrdeutiger Straßen über genannten Ortsteil oder befasste Bezirksvertretung; Folgevorlagen erben den Ortsbezug der übergeordneten Vorlage | mittel, bei Mehrdeutigkeit oder Widerspruch niedrig |
+| B (Bebauungsplan) | Plannummer im Titel, abgeglichen mit den Geltungsbereichen der rechtskräftigen Pläne; Ortsteile über die Überschneidung der Planfläche (ab 5 %); Fläche auf der Karte, Plan und Begründung verlinkt. Pläne im Verfahren sind nicht im Datensatz und bleiben ohne Fläche (Audit: `data/export/audit_bebauungsplaene.tsv`) | mittel |
 | C | Volltext mit Sprachmodell | zurückgestellt, bis die Lizenz der PDFs geklärt ist |
 
 Prüfung: `python -m pipeline check` gleicht Stufe B mit Stufe A ab (je Vorlage, unabhängig, da OSM-Geometrie). `python -m pipeline verify` lädt eine Stichprobe von 50 Vorlagen erneut aus der OParl-API und vergleicht die Felder (`data/export/verifikation_oparl.tsv`). Audit aller Ortsbezüge: `data/export/audit_geokodierung_bonn.tsv`.
@@ -75,7 +77,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 | Schritt | Ergebnis |
 |---|---|
-| `fetch` (`fetch-papers`, `fetch-organizations`, `fetch-meetings`, `fetch-lite`, `fetch-streets`) | Rohdaten in `data/raw/` (nicht im Repository, außer Gremien, Ämtern, Sitzungen und Wahlperioden); Abrufzeitpunkte in `STAND.json` |
+| `fetch` (`fetch-papers`, `fetch-organizations`, `fetch-meetings`, `fetch-plans`, `fetch-lite`, `fetch-streets`) | Rohdaten in `data/raw/` und `data/geo/bebauungsplaene_bonn.geojson` (nicht im Repository, außer Gremien, Ämtern, Sitzungen und Wahlperioden); Abrufzeitpunkte in `STAND.json` |
 | `gazetteer` | `data/geo/strassen_bonn.json`: Straßenverzeichnis aus den OSM-Rohdaten (im Repository, damit die Aktualisierung ohne Overpass auskommt) |
 | `build` | `data/build/allris.sqlite`: Vorlage, Beratung, Sitzung, Tagesordnungspunkt, Organisation, Vorlagenbeziehung, Ort, Ortsbezug (Stufe, Methode, Konfidenz, Fundstelle), Einreichende, Zuständigkeit |
 | `export` | `data/export/endenich/` (Pilot, im Repository) und `data/export/bonn/` (je Ortsteil, Bezirk, Jahr, dazu `zeit.json` und `prozesse.json`; wird bei der Veröffentlichung erzeugt); Audit-TSV (Geokodierung, Prozessschritte, Datumsangaben) |

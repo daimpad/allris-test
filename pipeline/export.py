@@ -64,6 +64,11 @@ def _paper_detail(db, pid):
                             "JOIN paper p ON p.id = r.child_id WHERE r.parent_id = ? "
                             "ORDER BY p.date"),
         "locations": locs,
+        # Plannummern im Titel; area = Geltungsbereich im Datensatz der rechtskräftigen Pläne gefunden
+        "plans": [{"nr": nr, "evidence": ev,
+                   "area": any(l["level"] == "bebauungsplan" and (l["name"] or "").split(" ")[1:2] == [nr]
+                               or (l["name"] or "").startswith(f"Bebauungsplan {nr} ") for l in locs)}
+                  for nr, ev in db.execute("SELECT plan_nr, evidence FROM paper_plan WHERE paper_id = ?", (pid,))],
         "source_object": pid,
     }
     d["stand"] = proc.stand(d)
@@ -80,7 +85,7 @@ def _locations(db, pid):
         "WHERE pl.paper_id = ? ORDER BY pl.stage, l.level", (pid,))]
     a_ortsteile = {r["ortsteil"] for r in rows if r["stage"] == "A"}
     return [r for r in rows if r["stage"] == "A" or r["ortsteil"] not in a_ortsteile
-            or r["ortsteil"] is None]
+            or r["ortsteil"] is None or r["level"] == "bebauungsplan"]
 
 
 def _audit_rows(db, where="", params=()):
@@ -259,6 +264,7 @@ def export_pilot(ortsteil=config.PILOT_ORTSTEIL):
                _audit_rows(db, "WHERE p.id IN (SELECT pl2.paper_id FROM paper_location pl2 JOIN location l2 "
                                "ON l2.id = pl2.location_id WHERE l2.ortsteil = ?)", (ortsteil,)))
     _write_tsv(config.EXPORT / "audit_geokodierung_bonn.tsv", AUDIT_COLUMNS, _audit_rows(db))
+    _write_tsv(config.EXPORT / "audit_bebauungsplaene.tsv", PLAN_AUDIT, plan_audit_rows(db))
     _sample(db, out, ortsteil)
     db.close()
     print(f"{len(papers)} Vorlagen, {len(features)} Punkte → {out}")
@@ -387,6 +393,29 @@ def _paths(db, cache, top=12):
 
 PROCESS_AUDIT = ["drucksache", "schritt", "bezeichnung", "status", "datum", "datum_status", "quelle",
                  "fundstelle", "pruefvermerk"]
+
+
+PLAN_AUDIT = ["drucksache", "titel", "plannummer", "fundstelle", "geltungsbereich", "inkraft_seit", "ortsteile",
+              "pruefstatus"]
+
+
+def plan_audit_rows(db):
+    """Je Plannummer im Titel: Treffer im Datensatz der rechtskräftigen Pläne und berührte Ortsteile."""
+    from .plans import Plans
+    plans = Plans()
+    out = []
+    for ref, name, pid, nr, ev in db.execute(
+            "SELECT p.reference, p.name, p.id, pp.plan_nr, pp.evidence FROM paper_plan pp "
+            "JOIN paper p ON p.id = pp.paper_id ORDER BY p.date DESC, p.reference"):
+        hits = plans.match(nr)
+        ortsteile = sorted({r[0] for r in db.execute(
+            "SELECT l.ortsteil FROM paper_location pl JOIN location l ON l.id = pl.location_id "
+            "WHERE pl.paper_id = ? AND pl.method = 'bebauungsplan' AND l.description LIKE ?",
+            (pid, f"Bebauungsplan {nr}%"))})
+        out.append([ref, name, nr, ev, "; ".join(f["properties"]["name"] for f in hits) or "nicht im Datensatz",
+                    "; ".join(f["properties"]["inkraft_seit"] or "" for f in hits), "; ".join(ortsteile),
+                    "ungeprüft" if hits else "kein rechtskräftiger Plan (Verfahren?)"])
+    return out
 
 
 TIME_AUDIT = ["drucksache", "zeitdimension", "wert", "quelle", "status", "bemerkung"]

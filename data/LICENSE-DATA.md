@@ -6,6 +6,7 @@ Die Dateien in diesem Verzeichnis sind Rohdaten Dritter oder daraus abgeleitet u
 |---|---|---|---|
 | raw/papers.jsonl (rund 25.000 Vorlagen, täglich aktualisiert), raw/organizations.json (368), raw/verwaltungsbereiche.json (145) | OParl-API der Stadt Bonn, https://www.bonn.sitzung-online.de/oparl/bodies/1 – Datensatz „Ratsinformationssystem OParl-API“, https://opendata.bonn.de/dataset/ratsinformationssystem-oparl-api | CC0 1.0 (Stadt Bonn); angehängte Dokumente (PDFs) sind vom Datensatz ausgenommen | 17.10.2026 |
 | geo/ortsteile_bonn.geojson (51 Ortsteile), geo/stadtbezirke_bonn.geojson (4 Stadtbezirke) | Stadt Bonn, https://stadtplan.bonn.de/geojson?Thema=21247 und ?Thema=14574 – https://opendata.bonn.de/dataset/flächen-der-ortsteile, https://opendata.bonn.de/dataset/flächen-der-stadtbezirke | CC0 1.0 (Stadt Bonn) | 17.10.2026 |
+| geo/bebauungsplaene_bonn.geojson (1.128 rechtskräftige Bebauungspläne) | Stadt Bonn, https://stadtplan.bonn.de/geojson?Thema=20074 – https://opendata.bonn.de/dataset/lage-der-bebauungspläne | CC0 1.0 (Stadt Bonn) | siehe `meta` |
 | phase0/endenich_streets_photon.json | Photon (photon.komoot.io), Daten © OpenStreetMap-Mitwirkende | ODbL 1.0 | 17.10.2026 |
 | raw/meetings.json (Sitzungen), raw/legislative_terms.json (Wahlperioden) | OParl-API der Stadt Bonn, wie oben | CC0 1.0 (Stadt Bonn) | 18.10.2026 |
 | raw/consultations_lite.jsonl (lokal, nicht im Repository) | OParl-Lite Bonn, https://oparl.bonn.machdenstaat.de/graphql | CC BY 4.0 (machdenstaat) | bei Abruf |
