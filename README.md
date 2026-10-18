@@ -81,6 +81,14 @@ python3 -m http.server -d _site 8000
 
 Tests: `.venv/bin/python -m unittest discover tests`
 
+## Betrieb auf einem eigenen Server
+
+Der Workflow schreibt die fertige Seite nach jedem Lauf zusätzlich in den Branch `deploy` (statische Dateien, dazu eine `.htaccess` für Apache; ohne Datenpaket, dessen Link auf GitHub Pages verweist). Einrichtung in Plesk, z. B. für `ris-bonn.datenatlas.de`:
+
+1. Subdomain anlegen und ein SSL-Zertifikat (Let's Encrypt) ausstellen.
+2. „Git“ bei der Subdomain: entferntes Repository `https://github.com/daimpad/allris-test.git`, Branch `deploy`, automatische Bereitstellung in das Dokumentstammverzeichnis.
+3. Die von Plesk angezeigte Webhook-URL in GitHub unter Settings → Webhooks eintragen (Ereignis: push). Dann holt der Server jede neue Fassung selbst.
+
 ## Aufbau des Repositorys
 
 - `pipeline/` – Abruf, Aufbereitung, Geokodierung (`geocode.py`), Akteure (`actors.py`), Prozessschritte (`process.py`), Export, Prüfung
