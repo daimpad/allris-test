@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 576,
-  "generated_at": "2026-10-18T18:37:44+00:00",
+  "generated_at": "2026-10-18T18:51:14+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-18T18:32:49+00:00"
+    "retrieved_at": "2026-10-18T18:47:00+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-18T18:35:40+00:00"
+    "retrieved_at": "2026-10-18T18:49:11+00:00"
    },
    {
     "name": "osm",
@@ -27,6 +27,12 @@
     "url": "https://opendata.bonn.de/dataset/flächen-der-ortsteile",
     "license": "CC0 1.0 (Stadt Bonn)",
     "retrieved_at": "2026-10-17"
+   },
+   {
+    "name": "bplan-bonn",
+    "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
+    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
+    "retrieved_at": "2026-10-18T18:47:13+00:00"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
@@ -129,6 +135,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029806",
    "stand": "offen",
    "steps": [
@@ -254,6 +261,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029611",
    "stand": "offen",
    "steps": [
@@ -364,6 +372,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029745",
    "stand": "offen",
    "steps": [
@@ -468,6 +477,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029749",
    "stand": "offen",
    "steps": [
@@ -565,6 +575,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029726",
    "stand": "offen",
    "steps": [
@@ -669,6 +680,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029667",
    "stand": "offen",
    "steps": [
@@ -786,6 +798,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029456",
    "stand": "offen",
    "steps": [
@@ -918,6 +931,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029600",
    "stand": "offen",
    "steps": [
@@ -1053,6 +1067,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029541",
    "stand": "entschieden",
    "steps": [
@@ -1202,6 +1217,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029185",
    "stand": "offen",
    "steps": [
@@ -1360,6 +1376,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029126",
    "stand": "in Beratung",
    "steps": [
@@ -1501,6 +1518,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028561",
    "stand": "offen",
    "steps": [
@@ -1687,6 +1705,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029066",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -1813,6 +1832,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029044",
    "stand": "offen",
    "steps": [
@@ -1916,6 +1936,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028987",
    "stand": "offen",
    "steps": [
@@ -2034,6 +2055,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028854",
    "stand": "offen",
    "steps": [
@@ -2169,6 +2191,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028952",
    "stand": "in Beratung",
    "steps": [
@@ -2327,6 +2350,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027912",
    "stand": "in Beratung",
    "steps": [
@@ -2449,6 +2473,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027876",
    "stand": "in Beratung",
    "steps": [
@@ -2562,6 +2587,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028157",
    "stand": "offen",
    "steps": [
@@ -2686,6 +2712,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028234",
    "stand": "offen",
    "steps": [
@@ -2842,6 +2869,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028209",
    "stand": "in Beratung",
    "steps": [
@@ -3002,6 +3030,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027944",
    "stand": "offen",
    "steps": [
@@ -3125,6 +3154,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027753",
    "stand": "entschieden",
    "steps": [
@@ -3287,6 +3317,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027892",
    "stand": "in Beratung",
    "steps": [
@@ -3418,6 +3449,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027843",
    "stand": "in Beratung",
    "steps": [
@@ -3536,6 +3568,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027437",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -3672,6 +3705,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027832",
    "stand": "in Beratung",
    "steps": [
@@ -3790,6 +3824,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027528",
    "stand": "in Beratung",
    "steps": [
@@ -3905,6 +3940,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026656",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -4047,6 +4083,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027341",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -4161,6 +4198,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027422",
    "stand": "entschieden",
    "steps": [
@@ -4275,6 +4313,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027184",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -4403,6 +4442,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026905",
    "stand": "offen",
    "steps": [
@@ -4527,6 +4567,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024937",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -4683,6 +4724,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026718",
    "stand": "in Beratung",
    "steps": [
@@ -4824,6 +4866,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026632",
    "stand": "entschieden",
    "steps": [
@@ -4946,6 +4989,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026633",
    "stand": "offen",
    "steps": [
@@ -5051,6 +5095,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2025274",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -5179,6 +5224,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026362",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -5315,6 +5361,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026368",
    "stand": "in Beratung",
    "steps": [
@@ -5426,6 +5473,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026371",
    "stand": "entschieden",
    "steps": [
@@ -5604,6 +5652,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026306",
    "stand": "entschieden",
    "steps": [
@@ -5735,6 +5784,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026307",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -5874,6 +5924,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026347",
    "stand": "entschieden",
    "steps": [
@@ -6005,6 +6056,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026228",
    "stand": "in Beratung",
    "steps": [
@@ -6131,6 +6183,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026231",
    "stand": "entschieden",
    "steps": [
@@ -6268,6 +6321,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026088",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -6382,6 +6436,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024665",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -6517,6 +6572,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2025784",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -6631,6 +6687,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021043",
    "stand": "offen",
    "steps": [
@@ -6743,6 +6800,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2025224",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -6850,6 +6908,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024820",
    "stand": "entschieden",
    "steps": [
@@ -6992,6 +7051,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024776",
    "stand": "entschieden",
    "steps": [
@@ -7117,6 +7177,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024565",
    "stand": "entschieden",
    "steps": [
@@ -7234,6 +7295,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023728",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -7347,6 +7409,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024510",
    "stand": "entschieden",
    "steps": [
@@ -7460,6 +7523,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024063",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -7574,6 +7638,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024345",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -7696,6 +7761,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024355",
    "stand": "entschieden",
    "steps": [
@@ -7813,6 +7879,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024241",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -7941,6 +8008,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024112",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -8055,6 +8123,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024139",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -8169,6 +8238,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023923",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -8281,6 +8351,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024187",
    "stand": "offen",
    "steps": [
@@ -8382,6 +8453,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023861",
    "stand": "offen",
    "steps": [
@@ -8486,6 +8558,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023863",
    "stand": "offen",
    "steps": [
@@ -8665,6 +8738,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022885",
    "stand": "in Beratung",
    "steps": [
@@ -8840,6 +8914,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023892",
    "stand": "entschieden",
    "steps": [
@@ -8962,6 +9037,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023813",
    "stand": "entschieden",
    "steps": [
@@ -9080,6 +9156,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023873",
    "stand": "entschieden",
    "steps": [
@@ -9190,6 +9267,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023714",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplanverfahren Nr. 6421-1",
+     "area": false
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023714",
@@ -9346,6 +9430,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023856",
    "stand": "entschieden",
    "steps": [
@@ -9497,6 +9582,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023655",
    "stand": "offen",
    "steps": [
@@ -9630,6 +9716,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023772",
    "stand": "entschieden",
    "steps": [
@@ -9761,6 +9848,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023229",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -9931,6 +10019,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023119",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -10059,6 +10148,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023096",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -10187,6 +10277,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023177",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -10309,6 +10400,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023155",
    "stand": "entschieden",
    "steps": [
@@ -10440,6 +10532,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022947",
    "stand": "entschieden",
    "steps": [
@@ -10553,6 +10646,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022995",
    "stand": "entschieden",
    "steps": [
@@ -10673,6 +10767,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021981",
    "stand": "offen",
    "steps": [
@@ -10806,6 +10901,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023005",
    "stand": "entschieden",
    "steps": [
@@ -10943,6 +11039,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022996",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -11115,6 +11212,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022962",
    "stand": "entschieden",
    "steps": [
@@ -11280,6 +11378,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022606",
    "stand": "in Beratung",
    "steps": [
@@ -11447,6 +11546,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022385",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -11561,6 +11661,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022715",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -11683,6 +11784,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022676",
    "stand": "entschieden",
    "steps": [
@@ -11828,6 +11930,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021687",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -12033,6 +12136,13 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplanverfahrens Nr. 6421-1",
+     "area": false
+    }
+   ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022560",
    "stand": "offen",
    "steps": [
@@ -12147,6 +12257,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022138",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -12328,6 +12439,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022346",
    "stand": "in Beratung",
    "steps": [
@@ -12481,6 +12593,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022234",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -12609,6 +12722,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022165",
    "stand": "in Beratung",
    "steps": [
@@ -12724,6 +12838,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022091",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -12838,6 +12953,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022236",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -12960,6 +13076,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022148",
    "stand": "entschieden",
    "steps": [
@@ -13103,6 +13220,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021851",
    "stand": "entschieden",
    "steps": [
@@ -13237,6 +13355,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021960",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -13365,6 +13484,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021913",
    "stand": "entschieden",
    "steps": [
@@ -13501,6 +13621,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021992",
    "stand": "entschieden",
    "steps": [
@@ -13619,6 +13740,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021993",
    "stand": "entschieden",
    "steps": [
@@ -13772,6 +13894,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020874",
    "stand": "entschieden",
    "steps": [
@@ -13929,6 +14052,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021876",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -14055,6 +14179,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021884",
    "stand": "entschieden",
    "steps": [
@@ -14178,6 +14303,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021671",
    "stand": "in Beratung",
    "steps": [
@@ -14307,6 +14433,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021602",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -14449,6 +14576,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021822",
    "stand": "entschieden",
    "steps": [
@@ -14571,6 +14699,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020988",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -14699,6 +14828,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021750",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -14813,6 +14943,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021714",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -14949,6 +15080,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021739",
    "stand": "entschieden",
    "steps": [
@@ -15075,6 +15207,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021639",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -15217,6 +15350,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021394",
    "stand": "entschieden",
    "steps": [
@@ -15335,6 +15469,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021562",
    "stand": "entschieden",
    "steps": [
@@ -15458,6 +15593,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021563",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -15597,6 +15733,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020403",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020403",
@@ -15755,6 +15898,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020742",
    "stand": "in Beratung",
    "steps": [
@@ -15884,6 +16028,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021249",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -16006,6 +16151,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019059",
    "stand": "entschieden",
    "steps": [
@@ -16144,6 +16290,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021160",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -16271,6 +16418,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021148",
    "stand": "entschieden",
    "steps": [
@@ -16399,6 +16547,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021063",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -16555,6 +16704,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020989",
    "stand": "entschieden",
    "steps": [
@@ -16739,6 +16889,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021038",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -16923,6 +17074,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020852",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -17064,6 +17216,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020972",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -17191,6 +17344,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020818",
    "stand": "entschieden",
    "steps": [
@@ -17379,6 +17533,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020066",
    "stand": "entschieden",
    "steps": [
@@ -17618,6 +17773,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020736",
    "stand": "entschieden",
    "steps": [
@@ -17772,6 +17928,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020596",
    "stand": "entschieden",
    "steps": [
@@ -17895,6 +18052,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020564",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -18073,6 +18231,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020404",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -18243,6 +18402,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020217",
    "stand": "in Beratung",
    "steps": [
@@ -18393,6 +18553,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020257",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -18521,6 +18682,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020170",
    "stand": "entschieden",
    "steps": [
@@ -18655,6 +18817,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020186",
    "stand": "offen",
    "steps": [
@@ -18780,6 +18943,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020192",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -18908,6 +19072,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019987",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -19022,6 +19187,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019808",
    "stand": "offen",
    "steps": [
@@ -19155,6 +19321,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020043",
    "stand": "in Beratung",
    "steps": [
@@ -19286,6 +19453,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020054",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -19461,6 +19629,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020044",
    "stand": "entschieden",
    "steps": [
@@ -19631,6 +19800,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020050",
    "stand": "entschieden",
    "steps": [
@@ -19768,6 +19938,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019780",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -19915,6 +20086,13 @@
      "evidence": "Am Bleichgraben",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019517",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "7522-77",
+     "evidence": "Bebauungsplans Nr. 7522-77",
+     "area": false
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019517",
@@ -20065,6 +20243,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019644",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -20193,6 +20372,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019768",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -20315,6 +20495,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019874",
    "stand": "entschieden",
    "steps": [
@@ -20480,6 +20661,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018230",
    "stand": "entschieden",
    "steps": [
@@ -20642,6 +20824,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019492",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -20778,6 +20961,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019699",
    "stand": "entschieden",
    "steps": [
@@ -20936,6 +21120,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019709",
    "stand": "offen",
    "steps": [
@@ -21112,6 +21297,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019670",
    "stand": "entschieden",
    "steps": [
@@ -21278,6 +21464,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019478",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -21406,6 +21593,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019314",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -21534,6 +21722,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019232",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -21648,6 +21837,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019212",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -21762,6 +21952,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019289",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -21885,6 +22076,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019216",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -22083,6 +22275,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019184",
    "stand": "entschieden",
    "steps": [
@@ -22211,6 +22404,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2019092",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -22319,6 +22513,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018715",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -22467,6 +22662,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018781",
    "stand": "entschieden",
    "steps": [
@@ -22643,6 +22839,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018786",
    "stand": "offen",
    "steps": [
@@ -22773,6 +22970,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018303",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -22887,6 +23085,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018567",
    "stand": "offen",
    "steps": [
@@ -23006,6 +23205,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018525",
    "stand": "entschieden",
    "steps": [
@@ -23157,6 +23357,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018548",
    "stand": "entschieden",
    "steps": [
@@ -23302,6 +23503,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018555",
    "stand": "offen",
    "steps": [
@@ -23435,6 +23637,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018526",
    "stand": "entschieden",
    "steps": [
@@ -23567,6 +23770,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017995",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -23751,6 +23955,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017862",
    "stand": "entschieden",
    "steps": [
@@ -23885,6 +24090,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017988",
    "stand": "entschieden",
    "steps": [
@@ -23999,6 +24205,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017764",
    "stand": "offen",
    "steps": [
@@ -24110,6 +24317,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017600",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -24238,6 +24446,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017664",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -24359,6 +24568,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017431",
    "stand": "entschieden",
    "steps": [
@@ -24519,6 +24729,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017403",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017403",
@@ -24716,6 +24933,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017441",
    "stand": "entschieden",
    "steps": [
@@ -24834,6 +25052,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017423",
    "stand": "entschieden",
    "steps": [
@@ -25032,6 +25251,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017421",
    "stand": "entschieden",
    "steps": [
@@ -25154,6 +25374,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017330",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -25296,6 +25517,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017164",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -25413,6 +25635,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017155",
    "stand": "entschieden",
    "steps": [
@@ -25522,6 +25745,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017156",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -25661,6 +25885,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016167",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016167",
@@ -25886,6 +26117,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016988",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -26047,6 +26279,13 @@
      "evidence": "Am Bleichgraben",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015972",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "7522-77",
+     "evidence": "Bebauungsplans Nr. 7522-77",
+     "area": false
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015972",
@@ -26302,6 +26541,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016598",
    "stand": "entschieden",
    "steps": [
@@ -26517,6 +26757,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016968",
    "stand": "entschieden",
    "steps": [
@@ -26686,6 +26927,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015932",
    "stand": "entschieden",
    "steps": [
@@ -26840,6 +27082,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016486",
    "stand": "entschieden",
    "steps": [
@@ -26974,6 +27217,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016764",
    "stand": "offen",
    "steps": [
@@ -27113,6 +27357,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016667",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -27263,6 +27508,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016648",
    "stand": "entschieden",
    "steps": [
@@ -27400,6 +27646,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016508",
    "stand": "offen",
    "steps": [
@@ -27516,6 +27763,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016394",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -27666,6 +27914,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016308",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -27797,6 +28046,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016036",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -27947,6 +28197,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014777",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -28121,6 +28372,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014784",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -28255,6 +28507,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015975",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -28376,6 +28629,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015750",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -28490,6 +28744,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016033",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -28604,6 +28859,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016025",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -28739,6 +28995,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015963",
    "stand": "entschieden",
    "steps": [
@@ -28915,6 +29172,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015513",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -29050,6 +29308,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015902",
    "stand": "entschieden",
    "steps": [
@@ -29175,6 +29434,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015866",
    "stand": "entschieden",
    "steps": [
@@ -29298,6 +29558,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015142",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -29413,6 +29674,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015564",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -29541,6 +29803,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015657",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -29663,6 +29926,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015653",
    "stand": "entschieden",
    "steps": [
@@ -29808,6 +30072,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015613",
    "stand": "in Beratung",
    "steps": [
@@ -29933,6 +30198,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015615",
    "stand": "offen",
    "steps": [
@@ -30058,6 +30324,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015556",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -30172,6 +30439,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015386",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -30370,6 +30638,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015424",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -30512,6 +30781,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015455",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -30640,6 +30910,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015251",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -30761,6 +31032,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015508",
    "stand": "entschieden",
    "steps": [
@@ -30883,6 +31155,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015512",
    "stand": "entschieden",
    "steps": [
@@ -31022,6 +31295,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015485",
    "stand": "entschieden",
    "steps": [
@@ -31147,6 +31421,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015486",
    "stand": "offen",
    "steps": [
@@ -31303,6 +31578,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015414",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -31467,6 +31743,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015335",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -31606,6 +31883,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015284",
    "stand": "entschieden",
    "steps": [
@@ -31723,6 +32001,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015147",
    "stand": "entschieden",
    "steps": [
@@ -31851,6 +32130,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014941",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -31987,6 +32267,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014995",
    "stand": "entschieden",
    "steps": [
@@ -32124,6 +32405,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014982",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -32266,6 +32548,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014896",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -32380,6 +32663,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014821",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -32494,6 +32778,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014879",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -32618,6 +32903,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014819",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -32826,6 +33112,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014584",
    "stand": "entschieden",
    "steps": [
@@ -33016,6 +33303,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014384",
    "stand": "offen",
    "steps": [
@@ -33156,6 +33444,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013894",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -33270,6 +33559,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013938",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -33384,6 +33674,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014045",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -33519,6 +33810,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014144",
    "stand": "offen",
    "steps": [
@@ -33649,6 +33941,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013794",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -33784,6 +34077,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013696",
    "stand": "offen",
    "steps": [
@@ -33992,6 +34286,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013596",
    "stand": "entschieden",
    "steps": [
@@ -34187,6 +34482,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013500",
    "stand": "in Beratung",
    "steps": [
@@ -34396,6 +34692,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013490",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -34510,6 +34807,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012692",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -34679,6 +34977,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013381",
    "stand": "entschieden",
    "steps": [
@@ -34812,6 +35111,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013048",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -34926,6 +35226,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2013019",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -35040,6 +35341,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012887",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -35184,6 +35486,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012962",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -35316,6 +35619,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012691",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -35437,6 +35741,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012704",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -35565,6 +35870,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012723",
    "stand": "entschieden",
    "steps": [
@@ -35723,6 +36029,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012725",
    "stand": "entschieden",
    "steps": [
@@ -35881,6 +36188,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012669",
    "stand": "entschieden",
    "steps": [
@@ -35991,6 +36299,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012552",
    "stand": "entschieden",
    "steps": [
@@ -36099,6 +36408,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012045",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -36244,6 +36554,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012424",
    "stand": "entschieden",
    "steps": [
@@ -36382,6 +36693,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012397",
    "stand": "offen",
    "steps": [
@@ -36512,6 +36824,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012300",
    "stand": "entschieden",
    "steps": [
@@ -36640,6 +36953,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012199",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -36789,6 +37103,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
    "stand": "offen",
    "steps": [
@@ -36929,6 +37244,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012214",
    "stand": "entschieden",
    "steps": [
@@ -37060,6 +37376,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012221",
    "stand": "entschieden",
    "steps": [
@@ -37184,6 +37501,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-3",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071393,
+     "lat": 50.735432,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011639",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Am Propsthof",
      "ortsteil": "Endenich",
@@ -37196,6 +37527,13 @@
      "evidence": "Am Propsthof",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011639",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-3",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011639",
@@ -37423,6 +37761,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011995",
    "stand": "entschieden",
    "steps": [
@@ -37564,6 +37903,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012067",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -37755,6 +38095,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011358",
    "stand": "entschieden",
    "steps": [
@@ -37938,6 +38279,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012046",
    "stand": "entschieden",
    "steps": [
@@ -38065,6 +38407,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012060",
    "stand": "entschieden",
    "steps": [
@@ -38198,6 +38541,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011923",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -38312,6 +38656,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011788",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -38440,6 +38785,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011845",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -38562,6 +38908,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011461",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -38704,6 +39051,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011098",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -38839,6 +39187,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011643",
    "stand": "offen",
    "steps": [
@@ -38997,6 +39346,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011453",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -39104,6 +39454,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011425",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -39218,6 +39569,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011114",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -39346,6 +39698,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011402",
    "stand": "entschieden",
    "steps": [
@@ -39484,6 +39837,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011344",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -39674,6 +40028,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011301",
    "stand": "entschieden",
    "steps": [
@@ -39842,6 +40197,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011240",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -40006,6 +40362,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011039",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -40120,6 +40477,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011086",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -40297,6 +40655,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010955",
    "stand": "offen",
    "steps": [
@@ -40451,6 +40810,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010793",
    "stand": "entschieden",
    "steps": [
@@ -40576,6 +40936,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010606",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -40714,6 +41075,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010776",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -40885,6 +41247,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010798",
    "stand": "entschieden",
    "steps": [
@@ -41038,6 +41401,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010369",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -41180,6 +41544,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009959",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -41360,6 +41725,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010205",
    "stand": "entschieden",
    "steps": [
@@ -41494,6 +41860,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010206",
    "stand": "entschieden",
    "steps": [
@@ -41634,6 +42001,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010207",
    "stand": "entschieden",
    "steps": [
@@ -41752,6 +42120,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-2 Teil A",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064791,
+     "lat": 50.734904,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010054",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Am Propsthof",
      "ortsteil": "Endenich",
@@ -41764,6 +42146,13 @@
      "evidence": "Am Propsthof",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010054",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-2",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010054",
@@ -41979,6 +42368,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008842",
    "stand": "entschieden",
    "steps": [
@@ -42227,6 +42617,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009877",
    "stand": "entschieden",
    "steps": [
@@ -42364,6 +42755,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009878",
    "stand": "entschieden",
    "steps": [
@@ -42510,6 +42902,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009712",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -42617,6 +43010,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009508",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -42738,6 +43132,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009572",
    "stand": "entschieden",
    "steps": [
@@ -42873,6 +43268,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009573",
    "stand": "entschieden",
    "steps": [
@@ -43006,6 +43402,13 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
+    }
+   ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009497",
    "stand": "entschieden",
    "steps": [
@@ -43131,6 +43534,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009409",
    "stand": "entschieden",
    "steps": [
@@ -43245,6 +43649,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009252",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -43373,6 +43778,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009274",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -43501,6 +43907,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009275",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -43636,6 +44043,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009074",
    "stand": "entschieden",
    "steps": [
@@ -43820,6 +44228,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009163",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -43942,6 +44351,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009182",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -44059,6 +44469,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009153",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -44211,6 +44622,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009151",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -44354,6 +44766,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009039",
    "stand": "entschieden",
    "steps": [
@@ -44543,6 +44956,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009040",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -44681,6 +45095,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-3",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071393,
+     "lat": 50.735432,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-3",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008042",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Am Propsthof",
      "ortsteil": "Endenich",
@@ -44693,6 +45121,13 @@
      "evidence": "Am Propsthof",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008042",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-3",
+     "evidence": "Bebauungsplanes Nr. 6322-3",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008042",
@@ -44857,6 +45292,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008316",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -45009,6 +45445,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008697",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -45152,6 +45589,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008688",
    "stand": "entschieden",
    "steps": [
@@ -45270,6 +45708,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008645",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -45422,6 +45861,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008699",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -45553,6 +45993,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008188",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008188",
@@ -45697,6 +46144,13 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
+    }
+   ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008374",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -45833,6 +46287,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008302",
    "stand": "entschieden",
    "steps": [
@@ -45984,6 +46439,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008167",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -46154,6 +46610,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008187",
    "stand": "entschieden",
    "steps": [
@@ -46324,6 +46781,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008152",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -46456,6 +46914,13 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
+    }
+   ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008028",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -46574,6 +47039,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007736",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -46688,6 +47154,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007564",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -46816,6 +47283,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007656",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -46972,6 +47440,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007345",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -47142,6 +47611,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007611",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -47278,6 +47748,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007600",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -47433,6 +47904,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007624",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -47543,6 +48015,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007483",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -47640,6 +48113,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007391",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -47792,6 +48266,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007412",
    "stand": "entschieden",
    "steps": [
@@ -47945,6 +48420,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007289",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -48073,6 +48549,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007201",
    "stand": "offen",
    "steps": [
@@ -48191,6 +48668,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007099",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -48341,6 +48819,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007016",
    "stand": "entschieden",
    "steps": [
@@ -48478,6 +48957,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2006435",
    "stand": "in Beratung",
    "steps": [
@@ -48631,6 +49111,13 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
+    }
+   ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2006243",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -48773,6 +49260,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2006812",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -48923,6 +49411,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2006767",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -49121,6 +49610,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2006533",
    "stand": "entschieden",
    "steps": [
@@ -49282,6 +49772,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2006677",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -49438,6 +49929,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005873",
    "stand": "entschieden",
    "steps": [
@@ -49638,6 +50130,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2006703",
    "stand": "entschieden",
    "steps": [
@@ -49787,6 +50280,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2006705",
    "stand": "entschieden",
    "steps": [
@@ -49926,6 +50420,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2006229",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -50040,6 +50535,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005919",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -50171,6 +50667,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005891",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005891",
@@ -50333,6 +50836,13 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
+    }
+   ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005720",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -50468,6 +50978,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005529",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -50662,6 +51173,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005136",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplan Nr. 6421-1",
+     "area": false
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005136",
@@ -50930,6 +51448,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005407",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -51044,6 +51563,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005497",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -51172,6 +51692,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005490",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -51293,6 +51814,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005290",
    "stand": "entschieden",
    "steps": [
@@ -51428,6 +51950,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005316",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -51536,6 +52059,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005286",
    "stand": "entschieden",
    "steps": [
@@ -51668,6 +52192,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005271",
    "stand": "entschieden",
    "steps": [
@@ -51853,6 +52378,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005199",
    "stand": "offen",
    "steps": [
@@ -51983,6 +52509,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004961",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -52104,6 +52631,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004975",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -52225,6 +52753,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004981",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -52339,6 +52868,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003780",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -52453,6 +52983,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004994",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -53043,6 +53574,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004609",
    "stand": "in Beratung",
    "steps": [
@@ -53700,6 +54232,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004234",
    "stand": "in Beratung",
    "steps": [
@@ -53925,6 +54458,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004097",
    "stand": "entschieden",
    "steps": [
@@ -54087,6 +54621,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003155",
    "stand": "entschieden",
    "steps": [
@@ -54258,6 +54793,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004030",
    "stand": "offen",
    "steps": [
@@ -54404,6 +54940,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003912",
    "stand": "offen",
    "steps": [
@@ -54548,6 +55085,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003884",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -54705,6 +55243,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003465",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -54857,6 +55396,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003757",
    "stand": "entschieden",
    "steps": [
@@ -54990,6 +55530,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003683",
    "stand": "entschieden",
    "steps": [
@@ -55121,6 +55662,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003508",
    "stand": "entschieden",
    "steps": [
@@ -55259,6 +55801,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003442",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -55392,6 +55935,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003461",
    "stand": "entschieden",
    "steps": [
@@ -55544,6 +56088,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003428",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -55722,6 +56267,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003387",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -55998,6 +56544,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10404",
    "stand": "entschieden",
    "steps": [
@@ -56317,6 +56864,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-3",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071393,
+     "lat": 50.735432,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003061",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Am Propsthof",
      "ortsteil": "Endenich",
@@ -56343,6 +56904,13 @@
      "evidence": "Am Propsthof",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003061",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-3",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003061",
@@ -56522,6 +57090,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002940",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -56627,6 +57196,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002944",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -56799,6 +57369,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002654",
    "stand": "entschieden",
    "steps": [
@@ -56988,6 +57559,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002859",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -57116,6 +57688,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002733",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -57230,6 +57803,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002713",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -57414,6 +57988,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002456",
    "stand": "entschieden",
    "steps": [
@@ -57620,6 +58195,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002496",
    "stand": "in Beratung",
    "steps": [
@@ -57772,6 +58348,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002724",
    "stand": "entschieden",
    "steps": [
@@ -57899,6 +58476,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002636",
    "stand": "entschieden",
    "steps": [
@@ -58022,6 +58600,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002485",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -58122,6 +58701,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-3",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071393,
+     "lat": 50.735432,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002434",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Am Propsthof",
      "ortsteil": "Endenich",
@@ -58148,6 +58741,13 @@
      "evidence": "Am Propsthof",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002434",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-3",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002434",
@@ -58257,6 +58857,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002486",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -58399,6 +59000,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002362",
    "stand": "offen",
    "steps": [
@@ -58514,6 +59116,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002324",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -58674,6 +59277,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002059",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -58837,6 +59441,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001957",
    "stand": "entschieden",
    "steps": [
@@ -59024,6 +59629,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002142",
    "stand": "offen",
    "steps": [
@@ -59186,6 +59792,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001998",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -59279,6 +59886,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-2 Teil A",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064791,
+     "lat": 50.734904,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001892",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "ortsteil",
      "name": "Endenich",
      "ortsteil": "Endenich",
@@ -59291,6 +59912,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001892",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-2",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001892",
@@ -59431,6 +60059,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002057",
    "stand": "offen",
    "steps": [
@@ -59558,6 +60187,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001984",
    "stand": "entschieden",
    "steps": [
@@ -59731,6 +60361,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001976",
    "stand": "entschieden",
    "steps": [
@@ -59848,6 +60479,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001677",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -60012,6 +60644,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001664",
    "stand": "entschieden",
    "steps": [
@@ -60165,6 +60798,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001081",
    "stand": "entschieden",
    "steps": [
@@ -60379,6 +61013,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001674",
    "stand": "entschieden",
    "steps": [
@@ -60538,6 +61173,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001509",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -60680,6 +61316,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001431",
    "stand": "offen",
    "steps": [
@@ -60790,6 +61427,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001220",
    "stand": "offen",
    "steps": [
@@ -60921,6 +61559,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000673",
    "stand": "entschieden",
    "steps": [
@@ -61090,6 +61729,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-2 Teil A",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064791,
+     "lat": 50.734904,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000706",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "ortsteil",
      "name": "Endenich",
      "ortsteil": "Endenich",
@@ -61102,6 +61755,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000706",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-2",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000706",
@@ -61301,6 +61961,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000558",
    "stand": "entschieden",
    "steps": [
@@ -61477,6 +62138,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001230",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -61612,6 +62274,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000968",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -61748,6 +62411,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001053",
    "stand": "entschieden",
    "steps": [
@@ -61913,6 +62577,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000910",
    "stand": "entschieden",
    "steps": [
@@ -62049,6 +62714,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000820",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -62177,6 +62843,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000768",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -62340,6 +63007,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000760",
    "stand": "entschieden",
    "steps": [
@@ -62459,6 +63127,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000589",
    "stand": "entschieden",
    "steps": [
@@ -62562,6 +63231,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000591",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -62707,6 +63377,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000573",
    "stand": "entschieden",
    "steps": [
@@ -62853,6 +63524,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000621",
    "stand": "entschieden",
    "steps": [
@@ -62985,6 +63657,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000633",
    "stand": "entschieden",
    "steps": [
@@ -63131,6 +63804,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000634",
    "stand": "entschieden",
    "steps": [
@@ -63230,6 +63904,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 7520-2",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.073211,
+     "lat": 50.7144,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplan Nr. 7520-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000338",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Flodelingsweg",
      "ortsteil": "Endenich",
@@ -63242,6 +63930,13 @@
      "evidence": "Flodelingsweg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000338",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "7520-2",
+     "evidence": "Bebauungsplan Nr. 7520-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000338",
@@ -63372,6 +64067,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10604",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -63500,6 +64196,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-3",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071393,
+     "lat": 50.735432,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10601",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Am Propsthof",
      "ortsteil": "Endenich",
@@ -63526,6 +64236,13 @@
      "evidence": "Am Propsthof",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10601",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-3",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10601",
@@ -63679,6 +64396,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000209",
    "stand": "entschieden",
    "steps": [
@@ -63790,6 +64508,20 @@
    ],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 7520-2",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.073211,
+     "lat": 50.7144,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplan Nr. 7520-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000148",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Flodelingsweg",
      "ortsteil": "Endenich",
@@ -63802,6 +64534,13 @@
      "evidence": "Flodelingsweg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000148",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "7520-2",
+     "evidence": "Bebauungsplan Nr. 7520-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000148",
@@ -63970,6 +64709,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000097",
    "stand": "offen",
    "steps": [
@@ -64128,6 +64868,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10355",
    "stand": "entschieden",
    "steps": [
@@ -64295,6 +65036,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10223",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -64448,6 +65190,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10171",
    "stand": "entschieden",
    "steps": [
@@ -64582,6 +65325,20 @@
    ],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-3",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071393,
+     "lat": 50.735432,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10123",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Am Propsthof",
      "ortsteil": "Endenich",
@@ -64608,6 +65365,13 @@
      "evidence": "Am Propsthof",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10123",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-3",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10123",
@@ -64773,6 +65537,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8431",
    "stand": "in Beratung",
    "steps": [
@@ -64987,6 +65752,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7550",
    "stand": "entschieden",
    "steps": [
@@ -65223,6 +65989,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7863",
    "stand": "entschieden",
    "steps": [
@@ -65401,6 +66168,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9662",
    "stand": "entschieden",
    "steps": [
@@ -65521,6 +66289,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9253",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -65654,6 +66423,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9512",
    "stand": "offen",
    "steps": [
@@ -65789,6 +66559,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9376",
    "stand": "offen",
    "steps": [
@@ -65920,6 +66691,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9368",
    "stand": "entschieden",
    "steps": [
@@ -66096,6 +66868,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9175",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -66252,6 +67025,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9248",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -66401,6 +67175,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9181",
    "stand": "entschieden",
    "steps": [
@@ -66521,6 +67296,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9233",
    "stand": "entschieden",
    "steps": [
@@ -66620,6 +67396,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9209",
    "stand": "entschieden",
    "steps": [
@@ -66730,6 +67507,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8195",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -66865,6 +67643,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8493",
    "stand": "entschieden",
    "steps": [
@@ -67026,6 +67805,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8813",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -67144,6 +67924,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8960",
    "stand": "entschieden",
    "steps": [
@@ -67274,6 +68055,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8922",
    "stand": "entschieden",
    "steps": [
@@ -67424,6 +68206,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
    "stand": "entschieden",
    "steps": [
@@ -67597,6 +68380,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8550",
    "stand": "entschieden",
    "steps": [
@@ -67751,6 +68535,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8584",
    "stand": "entschieden",
    "steps": [
@@ -67871,6 +68656,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8726",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -68021,6 +68807,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8708",
    "stand": "entschieden",
    "steps": [
@@ -68137,6 +68924,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8723",
    "stand": "entschieden",
    "steps": [
@@ -68250,6 +69038,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8214",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -68399,6 +69188,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8513",
    "stand": "entschieden",
    "steps": [
@@ -68527,6 +69317,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8280",
    "stand": "entschieden",
    "steps": [
@@ -68672,6 +69463,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8203",
    "stand": "offen",
    "steps": [
@@ -68810,6 +69602,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8202",
    "stand": "offen",
    "steps": [
@@ -68962,6 +69755,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8182",
    "stand": "offen",
    "steps": [
@@ -69100,6 +69894,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8183",
    "stand": "offen",
    "steps": [
@@ -69210,6 +70005,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8091",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -69371,6 +70167,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8197",
    "stand": "entschieden",
    "steps": [
@@ -69503,6 +70300,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8189",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -69625,6 +70423,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7730",
    "stand": "entschieden",
    "steps": [
@@ -69748,6 +70547,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7830",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -69890,6 +70690,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8125",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -70050,6 +70851,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8132",
    "stand": "entschieden",
    "steps": [
@@ -70203,6 +71005,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8134",
    "stand": "entschieden",
    "steps": [
@@ -70340,6 +71143,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7651",
    "stand": "entschieden",
    "steps": [
@@ -70540,6 +71344,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7758",
    "stand": "in Beratung",
    "steps": [
@@ -70718,6 +71523,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7536",
    "stand": "entschieden",
    "steps": [
@@ -70888,6 +71694,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7728",
    "stand": "entschieden",
    "steps": [
@@ -71061,6 +71868,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7358",
    "stand": "entschieden",
    "steps": [
@@ -71225,6 +72033,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7701",
    "stand": "offen",
    "steps": [
@@ -71355,6 +72164,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7586",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -71511,6 +72321,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7327",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -71691,6 +72502,20 @@
    ],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-3",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071393,
+     "lat": 50.735432,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7043",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Am Propsthof",
      "ortsteil": "Endenich",
@@ -71717,6 +72542,13 @@
      "evidence": "Am Propsthof",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7043",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-3",
+     "evidence": "Bebauungsplan Nr. 6322-3",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7043",
@@ -71978,6 +72810,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7243",
    "stand": "entschieden",
    "steps": [
@@ -72187,6 +73020,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6849",
    "stand": "entschieden",
    "steps": [
@@ -72328,6 +73162,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7253",
    "stand": "entschieden",
    "steps": [
@@ -72532,6 +73367,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7074",
    "stand": "entschieden",
    "steps": [
@@ -72689,6 +73525,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7048",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -72811,6 +73648,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6988",
    "stand": "entschieden",
    "steps": [
@@ -73095,6 +73933,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -73259,6 +74098,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6911",
    "stand": "entschieden",
    "steps": [
@@ -73439,6 +74279,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6905",
    "stand": "offen",
    "steps": [
@@ -73611,6 +74452,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6758",
    "stand": "entschieden",
    "steps": [
@@ -73752,6 +74594,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6270",
    "stand": "entschieden",
    "steps": [
@@ -73857,6 +74700,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6336",
    "stand": "entschieden",
    "steps": [
@@ -74002,6 +74846,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6166",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -74165,6 +75010,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5477",
    "stand": "entschieden",
    "steps": [
@@ -74313,6 +75159,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5879",
    "stand": "entschieden",
    "steps": [
@@ -74442,6 +75289,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-2 Teil A",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064791,
+     "lat": 50.734904,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5451",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "ortsteil",
      "name": "Endenich",
      "ortsteil": "Endenich",
@@ -74454,6 +75315,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5451",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-2",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5451",
@@ -74570,6 +75438,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5300",
    "stand": "entschieden",
    "steps": [
@@ -74733,6 +75602,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5612",
    "stand": "entschieden",
    "steps": [
@@ -74888,6 +75758,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-2 Teil A",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064791,
+     "lat": 50.734904,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplan Nr. 6322-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5075",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Am Propsthof",
      "ortsteil": "Endenich",
@@ -74914,6 +75798,13 @@
      "evidence": "Siemensstraße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5075",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-2",
+     "evidence": "Bebauungsplan Nr. 6322-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5075",
@@ -75056,6 +75947,20 @@
    ],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-2 Teil A",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064791,
+     "lat": 50.734904,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5293",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "ortsteil",
      "name": "Endenich",
      "ortsteil": "Endenich",
@@ -75068,6 +75973,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5293",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-2",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5293",
@@ -75197,6 +76109,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4542",
    "stand": "entschieden",
    "steps": [
@@ -75326,6 +76239,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4679",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -75454,6 +76368,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4940",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -75582,6 +76497,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4955",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -75696,6 +76612,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4548",
    "stand": "entschieden",
    "steps": [
@@ -75818,6 +76735,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4826",
    "stand": "entschieden",
    "steps": [
@@ -75941,6 +76859,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3321",
    "stand": "entschieden",
    "steps": [
@@ -76069,6 +76988,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4790",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -76183,6 +77103,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-2 Teil A",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064791,
+     "lat": 50.734904,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4022",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "ortsteil",
      "name": "Endenich",
      "ortsteil": "Endenich",
@@ -76195,6 +77129,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4022",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-2",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4022",
@@ -76444,6 +77385,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4662",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -76593,6 +77535,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4664",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -76735,6 +77678,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3786",
    "stand": "entschieden",
    "steps": [
@@ -76898,6 +77842,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4603",
    "stand": "offen",
    "steps": [
@@ -77036,6 +77981,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4608",
    "stand": "entschieden",
    "steps": [
@@ -77160,6 +78106,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4518",
    "stand": "entschieden",
    "steps": [
@@ -77307,6 +78254,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4567",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -77397,6 +78345,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-2 Teil A",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064791,
+     "lat": 50.734904,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4450",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "ortsteil",
      "name": "Endenich",
      "ortsteil": "Endenich",
@@ -77409,6 +78371,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4450",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-2",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4450",
@@ -77543,6 +78512,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4119",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -77671,6 +78641,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3836",
    "stand": "entschieden",
    "steps": [
@@ -77784,6 +78755,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4090",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -77897,6 +78869,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3972",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -78032,6 +79005,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3471",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -78188,6 +79162,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3699",
    "stand": "entschieden",
    "steps": [
@@ -78302,6 +79277,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3693",
    "stand": "entschieden",
    "steps": [
@@ -78415,6 +79391,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3723",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -78528,6 +79505,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3608",
    "stand": "entschieden",
    "steps": [
@@ -78649,6 +79627,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3555",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -78785,6 +79764,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3494",
    "stand": "entschieden",
    "steps": [
@@ -78928,6 +79908,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3516",
    "stand": "entschieden",
    "steps": [
@@ -79106,6 +80087,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3305",
    "stand": "entschieden",
    "steps": [
@@ -79247,6 +80229,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3326",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -79397,6 +80380,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3279",
    "stand": "entschieden",
    "steps": [
@@ -79530,6 +80514,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3288",
    "stand": "entschieden",
    "steps": [
@@ -79648,6 +80633,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3213",
    "stand": "entschieden",
    "steps": [
@@ -79770,6 +80756,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3235",
    "stand": "entschieden",
    "steps": [
@@ -79892,6 +80879,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3185",
    "stand": "entschieden",
    "steps": [
@@ -80007,6 +80995,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3186",
    "stand": "entschieden",
    "steps": [
@@ -80108,6 +81097,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3187",
    "stand": "entschieden",
    "steps": [
@@ -80220,6 +81210,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3145",
    "stand": "entschieden",
    "steps": [
@@ -80365,6 +81356,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3153",
    "stand": "entschieden",
    "steps": [
@@ -80510,6 +81502,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3157",
    "stand": "entschieden",
    "steps": [
@@ -80646,6 +81639,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3000",
    "stand": "entschieden",
    "steps": [
@@ -80793,6 +81787,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2979",
    "stand": "entschieden",
    "steps": [
@@ -80984,6 +81979,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/609",
    "stand": "entschieden",
    "steps": [
@@ -81167,6 +82163,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/610",
    "stand": "entschieden",
    "steps": [
@@ -81280,6 +82277,20 @@
    "subordinated": [],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-1",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.067981,
+     "lat": 50.735628,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-1",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2826",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "strasse",
      "name": "Václav-Havel-Platz",
      "ortsteil": "Endenich",
@@ -81292,6 +82303,13 @@
      "evidence": "Václav-Havel-Platz",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2826",
      "source": "osm"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-1",
+     "evidence": "Bebauungsplanes Nr. 6322-1",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2826",
@@ -81448,6 +82466,20 @@
    ],
    "locations": [
     {
+     "level": "bebauungsplan",
+     "name": "Bebauungsplan 6322-2 Teil A",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064791,
+     "lat": 50.734904,
+     "stage": "B",
+     "method": "bebauungsplan",
+     "confidence": "mittel",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/618",
+     "source": "bplan-bonn"
+    },
+    {
      "level": "ortsteil",
      "name": "Endenich",
      "ortsteil": "Endenich",
@@ -81460,6 +82492,13 @@
      "evidence": "Endenich",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/618",
      "source": "geo-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6322-2",
+     "evidence": "Bebauungsplanes Nr. 6322-2",
+     "area": true
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/618",
@@ -81693,6 +82732,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2623",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -81855,6 +82895,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2640",
    "stand": "entschieden",
    "steps": [
@@ -82002,6 +83043,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2606",
    "stand": "entschieden",
    "steps": [
@@ -82148,6 +83190,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/1037",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -82283,6 +83326,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/399",
    "stand": "entschieden",
    "steps": [
@@ -82404,6 +83448,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/403",
    "stand": "entschieden",
    "steps": [
@@ -82560,6 +83605,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/592",
    "stand": "entschieden",
    "steps": [
@@ -82693,6 +83739,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/661",
    "stand": "beraten, ohne Entscheidung",
    "steps": [
@@ -82869,6 +83916,7 @@
      "source": "geo-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/928",
    "stand": "offen",
    "steps": [
@@ -83052,6 +84100,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/815",
    "stand": "entschieden",
    "steps": [
@@ -83238,6 +84287,7 @@
      "source": "osm"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/717",
    "stand": "entschieden",
    "steps": [
@@ -83453,6 +84503,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/718",
    "stand": "entschieden",
    "steps": [
@@ -83620,6 +84671,7 @@
      "source": "oparl-bonn"
     }
    ],
+   "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/605",
    "stand": "entschieden",
    "steps": [

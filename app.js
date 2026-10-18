@@ -4,7 +4,8 @@
   "use strict";
   const BONN = "data/export/bonn/";
   const PILOT = "data/export/endenich/vorlagen.json";
-  const GEO = { ortsteil: "data/geo/ortsteile_bonn.geojson", bezirk: "data/geo/stadtbezirke_bonn.geojson" };
+  const GEO = { ortsteil: "data/geo/ortsteile_bonn.geojson", bezirk: "data/geo/stadtbezirke_bonn.geojson",
+    bplan: "data/geo/bebauungsplaene_bonn.geojson" };
   const DEFAULT_AREA = "ortsteil:endenich";
   const REPO = "https://github.com/daimpad/allris-test";
   const RANK = { hoch: 3, mittel: 2, niedrig: 1 };
@@ -19,6 +20,7 @@
     strasse_mehrdeutig: "Straßenname im Titel, mehrere Lagen", ortsteil_name: "Ortsteilname im Titel",
     ortsteil_adjektiv: "Ortsteil im Titel (z. B. „Endenicher …“)", stadtbezirk_name: "Stadtbezirk im Titel",
     stadtbezirk_adjektiv: "Stadtbezirk im Titel (Adjektiv)", vererbt: "von der übergeordneten Vorlage übernommen",
+    bebauungsplan: "Bebauungsplan-Nummer im Titel, Geltungsbereich laut Stadt Bonn",
   };
   const STATUS = {
     belegt: "belegt", abgeleitet: "abgeleitet", soll: "soll", "nicht_öffentlich": "nicht öffentlich", unklar: "unklar",
@@ -294,7 +296,7 @@
     cluster.clearLayers();
     markers.clear();
     for (const p of list) {
-      const ms = areaLocs(p).filter((l) => l.level === "strasse" && l.lon != null).map((l) => {
+      const ms = areaLocs(p).filter((l) => (l.level === "strasse" || l.level === "bebauungsplan") && l.lon != null).map((l) => {
         const m = L.circleMarker([l.lat, l.lon], { ...MARKER, fillColor: color(l.confidence) })
           .bindTooltip(`${esc(p.reference)} · ${esc(l.name)}`).on("click", () => select(p, true));
         m.baseColor = color(l.confidence);
@@ -414,6 +416,28 @@
     return `${REPO}/issues/new?${q}`;
   }
   const link = (url, text, cls) => { const u = safeUrl(url); return u ? `<a ${cls ? `class="${cls}" ` : ""}href="${u}" target="_blank" rel="noopener">${text}</a>` : ""; };
+  // Bebauungspläne: Geltungsbereiche der Stadt (CC0), erst bei Bedarf geladen
+  let plansData = null, planLayer = null;
+  const loadPlans = () => (plansData ||= fetch(GEO.bplan).then((r) => (r.ok ? r.json() : { features: [] })).catch(() => ({ features: [] })));
+  async function showPlans(p, fit) {
+    if (planLayer) { planLayer.remove(); planLayer = null; }
+    const nrs = (p.plans || []).filter((x) => x.area).map((x) => x.nr);
+    if (!nrs.length) return;
+    const data = await loadPlans();
+    if (selected !== p) return;
+    const feats = data.features.filter((f) => nrs.includes(f.properties.name.split(" ")[0]));
+    planLayer = L.geoJSON({ type: "FeatureCollection", features: feats }, {
+      style: { color: "#0f0f14", weight: 2, dashArray: "6 4", fillColor: "#7c3aed", fillOpacity: 0.12 }, interactive: false,
+    }).addTo(map);
+    if (fit && feats.length) map.fitBounds(planLayer.getBounds(), { ...mapPadding(), maxZoom: 17 });
+    for (const nr of nrs) {
+      const li = document.querySelector(`#detail .plans li[data-plan="${CSS.escape(nr)}"] .plan-meta`);
+      if (!li) continue;
+      li.innerHTML = feats.filter((f) => f.properties.name.split(" ")[0] === nr).map((f) =>
+        `– ${f.properties.name !== nr ? esc(f.properties.name) + ", " : ""}rechtskräftig seit ${fmtDate(f.properties.inkraft_seit)} · ${link(f.properties.plan, "Plan (PDF)")}${f.properties.begruendung ? " · " + link(f.properties.begruendung, "Begründung (PDF)") : ""}`).join("<br>");
+    }
+  }
+
   function select(p, fromMap) {
     selected = p;
     document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", String(b.dataset.ref === p.reference)));
@@ -442,6 +466,9 @@
       <ol class="steps">${p.steps.map(stepHtml).join("")}</ol>
       ${legend()}${glossary(p)}
       <h4>Ortsbezug</h4><ul class="locs">${locs}</ul>
+      ${(p.plans || []).length ? `<h4>Bebauungspläne</h4><ul class="locs plans">${p.plans.map((x) => `<li data-plan="${esc(x.nr)}"><strong>Bebauungsplan ${esc(x.nr)}</strong>
+        ${x.area ? '<span class="plan-meta">– Geltungsbereich auf der Karte</span>' : " – nicht im Datensatz der rechtskräftigen Pläne (vermutlich noch im Verfahren); keine Fläche verfügbar"}
+        <br><span class="meta">Fundstelle: „${esc(x.evidence)}“</span></li>`).join("")}</ul>` : ""}
       <p class="links">${link(reportLink(p), "Verortung falsch? Hinweis geben", "btn btn-secondary")}
         ${hasPaperFeed(p) ? `<a class="btn btn-secondary feed" href="${BONN}feeds/vorlagen/${slug(p.reference)}.xml" type="application/atom+xml">Diesen Vorgang abonnieren (Feed)</a>` : ""}</p>
       ${p.superordinated.length ? `<details class="acc"><summary>Bezieht sich auf (${p.superordinated.length})</summary><ul class="related">${rel(p.superordinated)}</ul></details>` : ""}
@@ -451,6 +478,7 @@
         ${sources}</ul></details>
       ${LIMITS}`;
     $("#announce").textContent = `Vorgang ${p.reference} geöffnet: ${p.name}`;
+    showPlans(p, !fromMap);
     if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
     $("#detail").scrollTop = 0;
     const ms = markers.get(p.reference) || [];
@@ -458,7 +486,8 @@
       const b = document.querySelector(`.papers button[data-ref="${CSS.escape(p.reference)}"]`);
       if (b) b.scrollIntoView({ block: "nearest" });
     } else {
-      if (ms.length) cluster.zoomToShowLayer(ms[0], () => { highlight(); map.panTo(ms[0].getLatLng(), { animate: !REDUCED }); });
+      // mit Bebauungsplan zoomt showPlans auf die Planfläche
+      if (ms.length && !(p.plans || []).some((x) => x.area)) cluster.zoomToShowLayer(ms[0], () => { highlight(); map.panTo(ms[0].getLatLng(), { animate: !REDUCED }); });
       if (MOBILE.matches) $("#detail h3").focus();
     }
   }

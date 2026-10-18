@@ -3,19 +3,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 576,
-  "generated_at": "2026-10-18T18:37:44+00:00",
+  "generated_at": "2026-10-18T18:51:14+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-18T18:32:49+00:00"
+    "retrieved_at": "2026-10-18T18:47:00+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-18T18:35:40+00:00"
+    "retrieved_at": "2026-10-18T18:49:11+00:00"
    },
    {
     "name": "osm",
@@ -28,6 +28,12 @@
     "url": "https://opendata.bonn.de/dataset/flächen-der-ortsteile",
     "license": "CC0 1.0 (Stadt Bonn)",
     "retrieved_at": "2026-10-17"
+   },
+   {
+    "name": "bplan-bonn",
+    "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
+    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
+    "retrieved_at": "2026-10-18T18:47:13+00:00"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
@@ -7262,6 +7268,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.071393,
+     50.735432
+    ]
+   },
+   "properties": {
+    "reference": "230685",
+    "name": "Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 6322-3, Stadtbezirk Bonn, Ortsteil Endenich; „Am Propsthof 92/92A“ (zukünftig Luise-Straus-Ernst-Allee 2)",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-05-08",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Bebauungsplan 6322-3",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011639"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -8078,6 +8108,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.064791,
+     50.734904
+    ]
+   },
+   "properties": {
+    "reference": "230052",
+    "name": "Fällung von 6 satzungsgeschützten Bäumen auf dem Grundstück der Schule Am Hügel, Am Propsthof 102 im Geltungsbereich des Bebauungsplanes Nr. 6322-2 “Am Vogelsang“ in Bonn, Ortsteil Endenich",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-01-09",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Bebauungsplan 6322-2 Teil A",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010054"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -8671,6 +8725,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009040"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.071393,
+     50.735432
+    ]
+   },
+   "properties": {
+    "reference": "221648",
+    "name": "Einleitung des Planverfahrens sowie öffentliche Auslegung des vorhabenbezogenen Bebauungsplanes Nr. 6322-3, Stadtbezirk Bonn, Ortsteil Endenich; „Am Propsthof 92“",
+    "paper_type": "Beschlussvorlage",
+    "date": "2022-10-18",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Bebauungsplan 6322-3",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2008042"
    }
   },
   {
@@ -10598,6 +10676,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.071393,
+     50.735432
+    ]
+   },
+   "properties": {
+    "reference": "201308-04",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-10-12",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Bebauungsplan 6322-3",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003061"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -10886,6 +10988,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.071393,
+     50.735432
+    ]
+   },
+   "properties": {
+    "reference": "201308-03 ST",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise Antrag zur Vorlage 201308",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-09-02",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Bebauungsplan 6322-3",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002434"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -11071,6 +11197,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001998"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064791,
+     50.734904
+    ]
+   },
+   "properties": {
+    "reference": "211230",
+    "name": "Baumfällungen im Zusammenhang mit dem Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des Bebauungsplanes Nr. 6322-2 \"Am Vogelsang\" in Bonn-Endenich",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-08-03",
+    "amt": "63 Bauordnungsamt",
+    "place": "Bebauungsplan 6322-2 Teil A",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001892"
    }
   },
   {
@@ -11407,6 +11557,30 @@
     "method": "ortsteil_adjektiv",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000673"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064791,
+     50.734904
+    ]
+   },
+   "properties": {
+    "reference": "210769",
+    "name": "Genehmigung der Ausbauplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des Bebauungsplanes Nr. 6322-2  “Am Vogelsang“ in Bonn, Ortsteil Endenich",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-06-09",
+    "amt": "63 Bauordnungsamt",
+    "place": "Bebauungsplan 6322-2 Teil A",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000706"
    }
   },
   {
@@ -11942,6 +12116,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.071393,
+     50.735432
+    ]
+   },
+   "properties": {
+    "reference": "201308-02 ST",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise Antrag zur Vorlage 201308",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-04-09",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Bebauungsplan 6322-3",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10601"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -12103,6 +12301,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10171"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.071393,
+     50.735432
+    ]
+   },
+   "properties": {
+    "reference": "201308-01 AA",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise Antrag zur Vorlage 201308",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-03-02",
+    "amt": "01-2 Ratsbüro",
+    "place": "Bebauungsplan 6322-3",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10123"
    }
   },
   {
@@ -13382,6 +13604,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.071393,
+     50.735432
+    ]
+   },
+   "properties": {
+    "reference": "201308",
+    "name": "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2020-07-29",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Bebauungsplan 6322-3",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7043"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -13814,6 +14060,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.064791,
+     50.734904
+    ]
+   },
+   "properties": {
+    "reference": "190310-2 ST",
+    "name": "Genehmigung der Vorentwurfsplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des in Aufstellung befindlichen Bebauungsplanes Nr. 6322-2 \"Am Vogelsang\" in Bonn-Endenich Antrag zur Vorlage 190310 - Offenlegung des Baches",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-04-21",
+    "amt": "66 Tiefbauamt",
+    "place": "Bebauungsplan 6322-2 Teil A",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5451"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -13886,6 +14156,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.064791,
+     50.734904
+    ]
+   },
+   "properties": {
+    "reference": "200434",
+    "name": "Stellungnahmen und Satzungsbeschluss Bebauungsplan Nr. 6322-2 -Teilbereich A -, Stadtbezirk Bonn, Ortsteil Endenich, Siemensstraße / „Am Propsthof“",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-04-02",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Bebauungsplan 6322-2 Teil A",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5075"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -13927,6 +14221,30 @@
     "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5075"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064791,
+     50.734904
+    ]
+   },
+   "properties": {
+    "reference": "190310-3 AA",
+    "name": "Genehmigung der Vorentwurfsplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des in Aufstellung befindlichen Bebauungsplanes Nr. 6322-2 \"Am Vogelsang\" in Bonn-Endenich Antrag zur Vorlage 190310 - Offenlegung des Baches",
+    "paper_type": "Änderungsantrag",
+    "date": "2020-03-12",
+    "amt": "01-2 Ratsbüro",
+    "place": "Bebauungsplan 6322-2 Teil A",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5293"
    }
   },
   {
@@ -14143,6 +14461,30 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4790"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064791,
+     50.734904
+    ]
+   },
+   "properties": {
+    "reference": "190310-1 ST",
+    "name": "Genehmigung der Vorentwurfsplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des in Aufstellung befindlichen Bebauungsplanes Nr. 6322-2 \"Am Vogelsang\" in Bonn-Endenich",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-02-13",
+    "amt": "63 Bauordnungsamt",
+    "place": "Bebauungsplan 6322-2 Teil A",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4022"
    }
   },
   {
@@ -14407,6 +14749,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4567"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064791,
+     50.734904
+    ]
+   },
+   "properties": {
+    "reference": "190310-2 AA",
+    "name": "Genehmigung der Vorentwurfsplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des in Aufstellung befindlichen Bebauungsplanes Nr. 6322-2 \"Am Vogelsang\" in Bonn-Endenich Antrag zur Vorlage 190310",
+    "paper_type": "Änderungsantrag",
+    "date": "2020-01-28",
+    "amt": "01-2 Ratsbüro",
+    "place": "Bebauungsplan 6322-2 Teil A",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4450"
    }
   },
   {
@@ -15230,6 +15596,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.067981,
+     50.735628
+    ]
+   },
+   "properties": {
+    "reference": "190741",
+    "name": "Genehmigung der baureifen Planung zum Ausbau des Václav-Havel-Platz im Geltungsbereich des Bebauungsplanes Nr. 6322-1 in Bonn-Endenich (alt: 1912669, FF: Amt 63)",
+    "paper_type": "Beschlussvorlage",
+    "date": "2019-11-11",
+    "amt": "56 Amt für Umwelt-, Verbraucherschutz und Lokale Agenda",
+    "place": "Bebauungsplan 6322-1",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2826"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.067574,
      50.736429
     ]
@@ -15247,6 +15637,30 @@
     "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2826"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064791,
+     50.734904
+    ]
+   },
+   "properties": {
+    "reference": "190310",
+    "name": "Genehmigung der Vorentwurfsplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des in Aufstellung befindlichen Bebauungsplanes Nr. 6322-2 \"Am Vogelsang\" in Bonn-Endenich",
+    "paper_type": "Beschlussvorlage",
+    "date": "2019-11-06",
+    "amt": "63 Bauordnungsamt",
+    "place": "Bebauungsplan 6322-2 Teil A",
+    "level": "bebauungsplan",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "bebauungsplan",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=618"
    }
   },
   {
