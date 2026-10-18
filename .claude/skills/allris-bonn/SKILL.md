@@ -40,6 +40,7 @@ Ratsassistent (BYOK, im Aufbau; ES-Module ohne Abhängigkeiten unter `site/chat/
 - `core.js`: Werkzeugschleife (höchstens 8 Aufrufe, danach `tool_choice: none`), Eingabeprüfung, Ergebnisse als abgegrenzte Daten, Verlauf nur anhängen, Quellenprüfung (`checkCitations`).
 - `keys.js`: Schlüssel im Arbeitsspeicher, `sessionStorage` nur auf Wunsch, nie `localStorage`.
 - `systemprompt.md` (Version und Änderungsvermerk; Text zwischen `<!-- PROMPT -->`-Markierungen) und `prompt.js` (Platzhalter aus `datenstand.json`); jede neue Fassung mit Begründung im Änderungsvermerk, Werkzeugnamen im Prompt müssen zu `tools.js` passen (Test). Entwürfe des Auftrags in `docs/`.
+- `render.js` (Markdown ohne HTML, Links nur aus Werkzeugergebnissen, Drucksachen als Schaltflächen) und `ui.js` (Fläche „Assistent“ links, teilt sich den Platz mit der Liste; KI-Hinweis, Einstellungen, Quellenkarten, Protokoll; Kopplung über `window.risKarte.open(ref)` und `.context()` aus `app.js`).
 - CSP als `<meta>` in `site/index.html`: neue externe Quellen dort und in `connect-src` eintragen; CDN-Dateien mit `integrity`.
 
 Im Repository liegen: Gremien, Ämter, Sitzungen, Wahlperioden (`data/raw/*.json`), Flächen und Straßenverzeichnis (`data/geo/`), Pilot Endenich und Audits (`data/export/`). Erzeugt und nicht eingecheckt: `data/export/bonn/`, Zip, Datenbank.
@@ -56,7 +57,7 @@ mkdir -p _site/data/geo && cp -r site/. _site/ && cp -r data/export _site/data/ 
 python3 -m http.server -d _site 8765
 ```
 
-   Mit Playwright (Chromium vorinstalliert) Desktop 1440 px, mittlere Breite 1024 px und Mobil 390 px prüfen; axe-core (`wcag2a`, `wcag2aa`) darf keine Verstöße melden. Typische Fälle: Gebietswechsel (auch schnell hintereinander), URL-Zustand (`?gebiet=…&von=…&bis=…&thema=…&partei=…&suche=bonn#Drucksache`), Esc und Fokus, Zeitleiste per Tastatur, Suche in der Leiste mit Chips, Mega-Menüs (öffnen, Esc, Klick außerhalb), Ziehgriffe (Maus, Pfeiltasten, gespeicherte Breite).
+   Mit Playwright (Chromium vorinstalliert) Desktop 1440 px, mittlere Breite 1024 px und Mobil 390 px prüfen; axe-core (`wcag2a`, `wcag2aa`) darf keine Verstöße melden. Typische Fälle: Gebietswechsel (auch schnell hintereinander), URL-Zustand (`?gebiet=…&von=…&bis=…&thema=…&partei=…&suche=bonn#Drucksache`), Esc und Fokus, Zeitleiste per Tastatur, Suche in der Leiste mit Chips, Mega-Menüs (öffnen, Esc, Klick außerhalb), Ziehgriffe (Maus, Pfeiltasten, gespeicherte Breite), Assistent mit nachgebildetem Anbieter (`page.route` auf den Anbieter-Endpunkt; kein echter Schlüssel nötig).
 
 ## Veröffentlichung
 

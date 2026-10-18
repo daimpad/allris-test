@@ -60,7 +60,8 @@
   const THEME_METHOD = { amt: "Amt", gremium: "Gremium", stichwort: "Stichwort im Titel" };
 
   // --- Flächen ein- und ausklappen ---------------------------------------------------------------
-  const SHEETS = ["panel-list", "panel-detail", "panel-auswertung", "panel-termine", "timeline-wrap"];
+  const SHEETS = ["panel-list", "panel-detail", "panel-auswertung", "panel-termine", "timeline-wrap", "panel-assistent"];
+  const LEFT = ["panel-list", "panel-assistent"];  // Liste und Assistent teilen sich die linke Seite
   const OVERLAYS = ["panel-auswertung", "panel-termine"];
   const toggleFor = (id) => document.querySelector(`.toggle[data-panel="${id}"]`);
   function setPanel(id, open) {
@@ -69,12 +70,14 @@
     document.querySelectorAll(`.toggle[data-panel="${id}"]`).forEach((b) => b.setAttribute("aria-pressed", String(open)));
     if (id === "panel-list") { document.body.classList.toggle("list-open", open); document.body.classList.toggle("list-closed", !open); }
     if (id === "panel-detail") { document.body.classList.toggle("detail-open", open); document.body.classList.toggle("detail-closed", !open); }
+    if (id === "panel-assistent") document.body.classList.toggle("chat-open", open);
     if (!open) return;
     closeMega();
     // schmale Bildschirme: nur eine Fläche; mittlere Breiten: Liste oder Vorgang, damit die Zeitleiste Platz hat;
     // Auswertung und Termine liegen mittig übereinander, daher immer nur eines davon
     const others = MOBILE.matches ? SHEETS : OVERLAYS.includes(id) ? OVERLAYS
-      : NARROW.matches && (id === "panel-list" || id === "panel-detail") ? ["panel-list", "panel-detail"] : [];
+      : NARROW.matches && (id === "panel-list" || id === "panel-detail") ? ["panel-list", "panel-detail", ...(id === "panel-list" ? LEFT : [])]
+      : LEFT.includes(id) ? LEFT : [];
     for (const other of others) if (other !== id && !document.getElementById(other).hidden) setPanel(other, false);
   }
   function focusPanel(id) {
@@ -329,7 +332,7 @@
   }
   function mapPadding() {
     const desktop = !MOBILE.matches;
-    const left = desktop && !$("#panel-list").hidden ? widthOf("list") + 32 : 16;
+    const left = !desktop ? 16 : !$("#panel-list").hidden ? widthOf("list") + 32 : !$("#panel-assistent").hidden ? $("#panel-assistent").offsetWidth + 32 : 16;
     const right = desktop && !$("#panel-detail").hidden ? widthOf("detail") + 32 : 16;
     const top = desktop && !$("#timeline-wrap").hidden ? 86 + $("#timeline-wrap").offsetHeight + 12 : 90;
     return { paddingTopLeft: [left, top], paddingBottomRight: [right, desktop ? 70 : 150], animate: !REDUCED };
@@ -925,5 +928,20 @@
     else $("#detail").innerHTML = INTRO;
     syncUrl();
   }
+  // Schnittstelle für den Ratsassistenten (site/chat/ui.js): Vorlage öffnen, Kontext der Karte
+  window.risKarte = {
+    async open(ref) {
+      const s = await loadSearch();
+      const row = s && s.rows.find((r) => r[0] === ref);
+      const key = row && s.areas[row[5]] ? s.areas[row[5]].key : null;
+      if (!key) return false;
+      await openGlobal(ref, key);
+      return selected?.reference === ref;
+    },
+    context() {
+      return { gebiet: area ? area.name : null, von: range ? range[0] : null, bis: range ? range[1] : null };
+    },
+  };
+
   start().catch((err) => { $("#detail").innerHTML = `<p>Die Daten konnten nicht geladen werden (${esc(err.message)}).</p>`; });
 })();
