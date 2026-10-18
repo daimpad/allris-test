@@ -133,6 +133,8 @@ test("Quellenprüfung und Sammeln der Drucksachen", () => {
   const c = checkCitations("Siehe 261798-01, 250001-02 und 261798 sowie PLZ 53111 und 2025.", refs);
   assert.deepEqual(c.belegt.sort(), ["250001-02", "261798-01"]);
   assert.deepEqual(c.unbelegt, ["261798"]);
+  const u = checkCitations("Siehe https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029541 und 1234567.", refs);
+  assert.deepEqual(u, { belegt: [], unbelegt: [] });
 });
 
 test("Schema-Prüfung", () => {

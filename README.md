@@ -61,6 +61,14 @@ Die Dichte wird je Gebiet vorab als Monatsaggregat berechnet (`zeit.json`); fein
 
 Absolute Links in Feeds, Kalender und DCAT verweisen auf `SITE_URL` (Standard: GitHub Pages; anpassbar über die Umgebungsvariable).
 
+## Ratsassistent (KI, eigener Schlüssel)
+
+Unter „Assistent“ beantwortet ein Sprachmodell Fragen zu Bonner Ratsvorgängen, ausschließlich über die Daten dieser Seite (acht Werkzeuge in `site/chat/tools.js`). Nutzer:innen tragen den Schlüssel eines Anbieters selbst ein (Anthropic, Mistral, OpenRouter oder ein lokales Modell); der Browser ruft den Anbieter direkt auf, ohne Server des Projekts.
+
+- Der Schlüssel bleibt im Arbeitsspeicher, auf Wunsch bis zum Schließen des Tabs; er geht nur an den gewählten Anbieter. Die Content-Security-Policy erlaubt Verbindungen nur zu diesen Anbietern und `localhost`.
+- Jede genannte Drucksache wird gegen die abgerufenen Daten geprüft; unbelegte Nummern werden markiert. Unter jeder Antwort stehen Quellenkarten und das Protokoll der Werkzeugaufrufe.
+- Systemprompt mit Änderungsvermerk: `site/chat/systemprompt.md`. Grenzen: keine Volltexte, keine Rechtsberatung, keine Bewertung.
+
 ## Grenzen
 
 - Rund 57 % der Vorlagen haben keinen erkennbaren Ortsbezug im Titel; sie stehen unter „ohne Ortsbezug“.
