@@ -24,6 +24,6 @@ jobs:
         with:
           node-version: "22"
       - name: Syntax der Webseite
-        run: node --check site/app.js && node --check site/timeline.js && node --check site/chat/tools.js
-      - name: Werkzeuge des Ratsassistenten
+        run: node --check site/app.js && node --check site/timeline.js && node --check site/chat/tools.js && node --check site/chat/providers.js && node --check site/chat/core.js && node --check site/chat/keys.js
+      - name: Ratsassistent (Werkzeuge, Anbieter-Adapter, Chat-Kern)
         run: node --test "tests/js/**/*.test.mjs"

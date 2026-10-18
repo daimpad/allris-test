@@ -34,7 +34,12 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 | `check.py`, `verify.py` | Kennzahlen, Datenschutz; Abgleich von Stichproben mit der OParl-API; Zip-Paket |
 | `chat.py`, `glossar.py` | Daten des Ratsassistenten (`bonn/chat/`: gekürzte Vorlagen je Präfix der Drucksachennummer, Orte, Gremien, Datenstand); Glossar `data/export/glossar.json` für Seite und Assistent |
 
-Ratsassistent (BYOK, im Aufbau): Werkzeuge in `site/chat/tools.js` (ES-Modul, ohne Abhängigkeiten) über die statischen Exporte; jedes Ergebnis trägt Drucksachennummer bzw. OParl-ID, bleibt unter `MAX_CHARS` und lässt in Titeln aus der Einwohnerschaft Hausnummern aus.
+Ratsassistent (BYOK, im Aufbau; ES-Module ohne Abhängigkeiten unter `site/chat/`):
+- `tools.js`: Werkzeuge über die statischen Exporte; jedes Ergebnis trägt Drucksachennummer bzw. OParl-ID, bleibt unter `MAX_CHARS` und lässt in Titeln aus der Einwohnerschaft Hausnummern aus.
+- `providers.js`: Adapter für Anthropic (Header `anthropic-dangerous-direct-browser-access`, Denkblöcke werden unverändert zurückgegeben, serverseitige Ausweichmodelle bei Opus/Sonnet) und OpenAI-kompatible Dienste (Mistral, OpenRouter, lokal nur `localhost`); ohne SDK, Schlüssel nur im Header.
+- `core.js`: Werkzeugschleife (höchstens 8 Aufrufe, danach `tool_choice: none`), Eingabeprüfung, Ergebnisse als abgegrenzte Daten, Verlauf nur anhängen, Quellenprüfung (`checkCitations`).
+- `keys.js`: Schlüssel im Arbeitsspeicher, `sessionStorage` nur auf Wunsch, nie `localStorage`.
+- CSP als `<meta>` in `site/index.html`: neue externe Quellen dort und in `connect-src` eintragen; CDN-Dateien mit `integrity`.
 
 Im Repository liegen: Gremien, Ämter, Sitzungen, Wahlperioden (`data/raw/*.json`), Flächen und Straßenverzeichnis (`data/geo/`), Pilot Endenich und Audits (`data/export/`). Erzeugt und nicht eingecheckt: `data/export/bonn/`, Zip, Datenbank.
 
