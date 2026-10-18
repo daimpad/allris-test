@@ -10,6 +10,7 @@ Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschlie�
 - **Wann?** Zeitleiste über der Karte: Dichte der Vorlagen je Monat und Vorlagenart, Sitzungen ausgewählter Gremien (künftige als offene Marken), Wahlperioden, Stationen der gewählten Vorlage. Zeitraum per Griff, Voreinstellung oder Tastatur; Zoom von Jahr bis Tag; Monatsübersicht als Tabelle.
 - **Wie?** Prozesslinie je Vorlage mit Evidenzstatus je Schritt (siehe unten); „Wege“ zeigt die häufigsten Abfolgen von Beratungen je Vorlagenart für ganz Bonn.
 - **Wer?** Federführendes Amt; bei der Sammelklasse „Co-Dezernat“ zusätzlich das fachlich zuständige Amt; befasste Gremien; Einreichende.
+- Der Kartenhintergrund (OpenStreetMap) ist grau gefiltert, damit die Marker hervortreten; „Farbige Karte“ schaltet um.
 - Die Karte füllt den Bildschirm; Liste, Zeitleiste, Detail, Wege und Quellen liegen als einklappbare Flächen darüber. Quellen stehen jeweils in einem Akkordeon.
 - Filter: Gebiet, Stichwort, Vorlagenart, Zeitraum, Amt, Gremium, Stand des Verfahrens, Konfidenz der Verortung. Direktlinks mit Zustand: `?gebiet=ortsteil:endenich&von=2025-10-18&bis=2026-10-18&zoom=Quartal&achse=vorlage#191010`.
 - „Verortung falsch?“ öffnet ein vorausgefülltes Issue. „Über“ erklärt die Seite in einfacher Sprache.

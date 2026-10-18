@@ -219,9 +219,15 @@ body.detail-closed #timeline-wrap { right: 16px; }
 #sources p { font-size: 12px; margin: 0 0 6px; color: var(--text); }
 body.list-open.detail-open #sources { width: min(560px, calc(100vw - 840px)); min-width: 260px; }
 
+/* Kartenhintergrund grau (Standard) oder farbig; der Filter wirkt nur auf die Kacheln */
+#map.map-gray .leaflet-tile-pane { filter: grayscale(1) contrast(.9) brightness(1.08); }
+.map-style { font: 500 13px/1 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); cursor: pointer; }
+.map-style[aria-pressed="true"] { background: var(--accent-fill); color: #fff; border-color: transparent; }
+
 /* Kartensteuerung und Namensnennung neben den Flächen, nicht darunter */
 .leaflet-right { transition: right .35s cubic-bezier(0.16, 1, 0.3, 1); }
 body.detail-open .leaflet-right { right: 436px; }
+.leaflet-bottom { bottom: 62px; }  /* über der Quellenleiste */
 
 /* Über (Dialog) */
 #about { border: 1px solid var(--border); border-radius: var(--radius); padding: 0; width: min(680px, calc(100vw - 32px)); max-height: calc(100vh - 48px); color: var(--text); background: var(--surface-strong); box-shadow: var(--shadow); }
@@ -270,6 +276,7 @@ body.detail-open .leaflet-right { right: 436px; }
   .leaflet-bottom { bottom: 168px; }
   body.detail-open .leaflet-right { right: 0; }
   .step .jump { display: none; }
+  .map-style { min-height: 44px; }
   .tl-btn, .tl-chip, .icon-btn { min-width: 44px; min-height: 44px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
