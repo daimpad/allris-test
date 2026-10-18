@@ -81,11 +81,12 @@
     .toLocaleDateString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", year: "numeric" }) : "";
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
-  let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null;
+  let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null;
   let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [];
 
   // --- Flächen ein- und ausklappen ---------------------------------------------------------------
-  const SHEETS = ["panel-list", "panel-detail", "panel-wege", "timeline-wrap", "sources"];
+  const SHEETS = ["panel-list", "panel-detail", "panel-wege", "panel-termine", "timeline-wrap", "sources"];
+  const OVERLAYS = ["panel-wege", "panel-termine"];
   const toggleFor = (id) => document.querySelector(`.toggle[data-panel="${id}"]`);
   function setPanel(id, open) {
     const el = document.getElementById(id);
@@ -95,8 +96,9 @@
     if (id === "panel-detail") { document.body.classList.toggle("detail-open", open); document.body.classList.toggle("detail-closed", !open); }
     if (!open) return;
     // schmale Bildschirme: nur eine Fläche; mittlere Breiten: Liste oder Detail, damit die Zeitleiste Platz hat
-    const others = MOBILE.matches ? SHEETS : NARROW.matches && (id === "panel-list" || id === "panel-detail")
-      ? ["panel-list", "panel-detail"] : [];
+    // Wege und Termine liegen mittig übereinander, daher immer nur eines davon
+    const others = MOBILE.matches ? SHEETS : OVERLAYS.includes(id) ? OVERLAYS
+      : NARROW.matches && (id === "panel-list" || id === "panel-detail") ? ["panel-list", "panel-detail"] : [];
     for (const other of others) if (other !== id && !document.getElementById(other).hidden) setPanel(other, false);
   }
   function focusPanel(id) {
@@ -122,7 +124,8 @@
   });
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape" || $("#about").open) return;
-    if (!$("#panel-wege").hidden) return closePanel("panel-wege");
+    const overlay = OVERLAYS.find((id) => !document.getElementById(id).hidden);
+    if (overlay) return closePanel(overlay);
     const inside = SHEETS.find((id) => document.getElementById(id).contains(document.activeElement));
     if (inside && (MOBILE.matches || inside !== "sources")) closePanel(inside);
   });
@@ -215,6 +218,8 @@
     area = next;
     meta = data.meta;
     if (index && index.meta) meta = { ...meta, generated_at: index.meta.generated_at, sources: index.meta.sources };
+    const oparl = meta.sources.find((s) => s.name === "oparl-bonn") || {};
+    dataStand = (oparl.retrieved_at || meta.generated_at || new Date().toISOString()).slice(0, 10);
     papers = data.papers;
     document.title = `RIS-Karte Bonn – ${area.kind === "ohne" ? "Vorlagen ohne Ortsbezug " + area.key : area.name}`;
     $("#f-conf").hidden = area.kind === "ohne";
@@ -225,12 +230,12 @@
     if (!keepState) $("#detail").innerHTML = INTRO;
     if (tl && zeit) {
       const series = zeit.areas[`${area.kind}:${area.key}`] || zeit.areas.gesamt;
-      const oparl = meta.sources.find((s) => s.name === "oparl-bonn") || {};
       tl.setData({ months: zeit.months, categories: zeit.categories, density: series, meetings: zeit.meetings,
-        terms: zeit.terms, dataStart: zeit.data_start,
-        dataStand: (oparl.retrieved_at || meta.generated_at || new Date().toISOString()).slice(0, 10) });
+        terms: zeit.terms, dataStart: zeit.data_start, dataStand });
       tl.select(null);
     }
+    subscribeArea();
+    if (!$("#panel-termine").hidden) showTermine();
     render();
     syncUrl();
     const stand = meta.sources.map((s) => `${s.name}: ${String(s.retrieved_at || "–").slice(0, 10)}`).join(" · ");
@@ -437,7 +442,8 @@
       <ol class="steps">${p.steps.map(stepHtml).join("")}</ol>
       ${legend()}${glossary(p)}
       <h4>Ortsbezug</h4><ul class="locs">${locs}</ul>
-      <p>${link(reportLink(p), "Verortung falsch? Hinweis geben", "btn btn-secondary")}</p>
+      <p class="links">${link(reportLink(p), "Verortung falsch? Hinweis geben", "btn btn-secondary")}
+        ${hasPaperFeed(p) ? `<a class="btn btn-secondary feed" href="${BONN}feeds/vorlagen/${slug(p.reference)}.xml" type="application/atom+xml">Diesen Vorgang abonnieren (Feed)</a>` : ""}</p>
       ${p.superordinated.length ? `<details class="acc"><summary>Bezieht sich auf (${p.superordinated.length})</summary><ul class="related">${rel(p.superordinated)}</ul></details>` : ""}
       <details class="acc"><summary>Quellen dieser Vorlage</summary><ul>
         <li>Quellobjekt: ${link(p.source_object, esc(p.source_object)) || esc(p.source_object)}</li>
@@ -493,6 +499,72 @@
     draw();
   }
 
+  // --- Abonnieren (Atom-Feeds) ------------------------------------------------------------------------
+  // gleiche Regeln wie pipeline/export.slug und publish.has_paper_feed
+  const slug = (s) => String(s).toLowerCase().replace(/[äöüß]/g, (c) => ({ ä: "ae", ö: "oe", ü: "ue", ß: "ss" }[c]))
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  const hasPaperFeed = (p) => Boolean(index && dataStand) &&
+    ((p.date || "") >= `${Number(dataStand.slice(0, 4)) - 1}-01-01` || ["in Beratung", "offen"].includes(p.stand));
+  function subscribeArea() {
+    const box = $("#subscribe");
+    document.querySelectorAll('link[rel="alternate"][type="application/atom+xml"]').forEach((l) => l.remove());
+    if (!index) { box.hidden = true; return; }
+    const href = `${BONN}feeds/${area.kind}-${area.key}.xml`;
+    const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
+    box.innerHTML = `<a class="feed" href="${href}" type="application/atom+xml">Neues aus ${esc(where)} abonnieren (Feed)</a>`;
+    box.hidden = false;
+    const l = document.createElement("link");
+    Object.assign(l, { rel: "alternate", type: "application/atom+xml", href, title: `RIS-Karte Bonn – ${where}` });
+    document.head.appendChild(l);
+  }
+
+  // --- Termine: kommende Sitzungen -------------------------------------------------------------------
+  const isBV = (g) => /^Bezirksvertretung/.test(g || "");
+  function areaBezirk() {
+    if (!area || !index) return null;
+    if (area.kind === "ortsteil") return (index.ortsteile.find((o) => o.slug === area.key) || {}).stadtbezirk;
+    if (area.kind === "bezirk") return area.name;
+    return null;
+  }
+  const fmtDay = (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("de-DE", { weekday: "short", day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Europe/Berlin" });
+  function showTermine() {
+    if (!zeit) return;
+    const box = $("#termine");
+    const bezirk = areaBezirk();
+    const scope = box.querySelector("#termine-scope") ? box.querySelector("#termine-scope").value : "gebiet";
+    const today = new Date().toISOString().slice(0, 10);
+    const relevant = (m) => scope === "alle" || !isBV(m.gremium) || !bezirk || m.gremium === `Bezirksvertretung ${bezirk}`;
+    const list = zeit.meetings.filter((m) => m.date >= today && relevant(m));
+    const where = area.kind === "ohne" ? "Vorlagen ohne Ortsbezug" : area.name;
+    // Vorlagen des Gebiets, deren Beratung (über OParl-Lite verknüpft) auf dieser Sitzung liegt
+    const onAgenda = (m) => papers.filter((p) => p.steps.some((s) => (s.typ === "beratung" || s.typ === "entscheidung") && s.date === m.date && s.label === m.gremium));
+    let month = "";
+    const items = list.map((m) => {
+      const head = m.date.slice(0, 7) !== month ? `<h3 class="month">${new Date(m.date + "T12:00:00Z").toLocaleDateString("de-DE", { month: "long", year: "numeric" })}</h3>` : "";
+      month = m.date.slice(0, 7);
+      const docs = [link(m.web, "Tagesordnung"), link(m.invitation, "Einladung (PDF)")].filter(Boolean).join(" · ");
+      const ps = onAgenda(m);
+      return `${head}<div class="meeting${m.cancelled ? " cancelled" : ""}">
+        <div class="meeting-head"><span class="meeting-date">${fmtDay(m.date)}${m.time ? `, ${esc(m.time)} Uhr` : ""}</span>
+          <strong>${esc(m.gremium)}</strong>${m.cancelled ? ' <span class="badge">abgesagt</span>' : ""}</div>
+        <div class="meta">${docs || "Tagesordnung noch nicht veröffentlicht"}</div>
+        ${ps.length ? `<div class="agenda"><span>Aus ${esc(where)} auf der Tagesordnung:</span><ul>${ps.map((p) => `<li><button type="button" class="linkish" data-ref="${esc(p.reference)}">${esc(p.reference)} – ${esc(p.name)}</button></li>`).join("")}</ul></div>` : ""}
+      </div>`;
+    }).join("");
+    box.innerHTML = `<p class="hint">Sitzungen von Rat, Ausschüssen, Beiräten und Bezirksvertretungen laut OParl-API der Stadt. Sie sind in der Regel öffentlich; Ort und Tagesordnung stehen in der Einladung, die etwa zwei Wochen vorher erscheint.</p>
+      <div class="filters termine-filters"><label>Gremien
+        <select id="termine-scope"><option value="gebiet"${scope === "gebiet" ? " selected" : ""}>${bezirk ? `Rat, Ausschüsse und Bezirksvertretung ${esc(bezirk)}` : "alle (kein Stadtbezirk gewählt)"}</option>
+        <option value="alle"${scope === "alle" ? " selected" : ""}>alle Gremien</option></select></label>
+        <a class="btn btn-secondary" href="${BONN}termine.ics" download>Alle Termine als Kalenderdatei (.ics)</a></div>
+      <p class="count">${list.length} kommende Sitzungen</p>
+      ${items || "<p>Keine kommenden Sitzungen im Datenbestand.</p>"}`;
+    box.querySelector("#termine-scope").addEventListener("change", showTermine);
+  }
+  $("#termine").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-ref]");
+    if (b) { const p = papers.find((x) => x.reference === b.dataset.ref); if (p) { closePanel("panel-termine"); select(p); } }
+  });
+
   // --- URL-Zustand -----------------------------------------------------------------------------------
   function syncUrl() {
     if (!area) return;
@@ -540,6 +612,8 @@
     });
     $("#papers").addEventListener("mouseleave", () => tl && tl.select(selected));
     toggleFor("panel-wege").addEventListener("click", showWege);
+    if (zeit) toggleFor("panel-termine").addEventListener("click", showTermine);
+    else toggleFor("panel-termine").hidden = true;
     const params = new URLSearchParams(location.search);
     const ref = decodeURIComponent(location.hash.slice(1));
     await loadArea(params.get("gebiet") || DEFAULT_AREA, true);

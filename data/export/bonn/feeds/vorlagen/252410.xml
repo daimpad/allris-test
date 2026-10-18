@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/252410</id>
+<title>Vorlage 252410: Sachstand Guido Westerwelle Brücke, Bornheimer Straße</title>
+<subtitle>Verlauf der Vorlage 252410: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-12-02T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/252410.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#252410"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021026#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 252410 Sachstand Guido Westerwelle Brücke, Bornheimer Straße</title>
+<updated>2025-12-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#252410"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021026"/>
+<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021026#folge-252410-01 ST</id>
+<title>Stellungnahme der Verwaltung 252410-01 ST: Sachstand Guido Westerwelle Brücke, Bornheimer Straße</title>
+<updated>2025-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#252410"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021026"/>
+<summary>Folgevorlage zu 252410</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021026#vorlage</id>
+<title>Neue Vorlage 252410: Sachstand Guido Westerwelle Brücke, Bornheimer Straße</title>
+<updated>2025-01-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#252410"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021026"/>
+<summary>Einwohnerfrage · federführend: Bezirksverwaltungsstelle Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

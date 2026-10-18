@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/252784</id>
+<title>Vorlage 252784: Umstellung CVS-Vertrag Civitec (jetzt RegioIT) auf Company Professional Solutions Vertrag der Telekom</title>
+<subtitle>Verlauf der Vorlage 252784: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-05-13T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/252784.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252784"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022044#beratung-4</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 252784 Umstellung CVS-Vertrag Civitec (jetzt RegioIT) auf Company Professional Solutions Vertrag der Telekom</title>
+<updated>2025-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252784"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022044"/>
+<summary>Entscheidung am 2025-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022044#folge-252784-01 ST</id>
+<title>Stellungnahme der Verwaltung 252784-01 ST: Ergänzende und korrigierende Informationen zur Umstellung CVS-Vertrag Civitec (jetzt RegioIT) auf Company Professional Solutions Vertrag der Telekom</title>
+<updated>2025-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252784"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022044"/>
+<summary>Folgevorlage zu 252784</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022044#vorlage</id>
+<title>Neue Vorlage 252784: Umstellung CVS-Vertrag Civitec (jetzt RegioIT) auf Company Professional Solutions Vertrag der Telekom</title>
+<updated>2025-03-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252784"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022044"/>
+<summary>Beschlussvorlage: Einleitung · federführend: 10 Personal- und Organisationsamt · Stand: entschieden</summary>
+</entry>
+</feed>

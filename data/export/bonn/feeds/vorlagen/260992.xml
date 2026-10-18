@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/260992</id>
+<title>Vorlage 260992: Tagesordnungspunkte in nichtöffentlicher Sitzung des Schulausschusses am 03.06.2026</title>
+<subtitle>Verlauf der Vorlage 260992: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-06-03T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/260992.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260992"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027614#beratung-3</id>
+<title>Schulausschuss: „zur Kenntnis genommen“ – 260992 Tagesordnungspunkte in nichtöffentlicher Sitzung des Schulausschusses am 03.06.2026</title>
+<updated>2026-06-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260992"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027614"/>
+<summary>Kenntnisnahme am 2026-06-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027614#vorlage</id>
+<title>Neue Vorlage 260992: Tagesordnungspunkte in nichtöffentlicher Sitzung des Schulausschusses am 03.06.2026</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260992"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027614"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 40 Schulamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

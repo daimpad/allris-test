@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/260011</id>
+<title>Vorlage 260011: Fortsetzung der Zwischennutzung des Viktoriabads ermöglichen</title>
+<subtitle>Verlauf der Vorlage 260011: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-01-22T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/260011.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260011"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025009#beratung-3</id>
+<title>Rat: „abgelehnt“ – 260011 Fortsetzung der Zwischennutzung des Viktoriabads ermöglichen</title>
+<updated>2026-01-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260011"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025009"/>
+<summary>Entscheidung am 2026-01-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025009#folge-260011-01 ST</id>
+<title>Stellungnahme der Verwaltung 260011-01 ST: Fortsetzung der Zwischennutzung des Viktoriabads ermöglichen</title>
+<updated>2026-01-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260011"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025009"/>
+<summary>Folgevorlage zu 260011</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025009#vorlage</id>
+<title>Neue Vorlage 260011: Fortsetzung der Zwischennutzung des Viktoriabads ermöglichen</title>
+<updated>2026-01-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260011"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025009"/>
+<summary>Antrag · federführend: Ebene 3 · Stand: entschieden</summary>
+</entry>
+</feed>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/252629</id>
+<title>Vorlage 252629: Koalitionsantrag: Wohnheim-Viktoriakarree</title>
+<subtitle>Verlauf der Vorlage 252629: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-05-12T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/252629.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252629"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021666#beratung-5</id>
+<title>Rat: „ungeändert beschlossen“ – 252629 Koalitionsantrag: Wohnheim-Viktoriakarree</title>
+<updated>2025-05-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252629"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021666"/>
+<summary>Entscheidung am 2025-05-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021666#folge-252629-02 AA</id>
+<title>Änderungsantrag 252629-02 AA: CDU-Änderungsantrag: Wohnheim-Viktoriakarree Antrag zur Vorlage 252629</title>
+<updated>2025-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252629"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021666"/>
+<summary>Folgevorlage zu 252629</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021666#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 252629 Koalitionsantrag: Wohnheim-Viktoriakarree</title>
+<updated>2025-04-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252629"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021666"/>
+<summary>Empfehlung am 2025-04-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021666#folge-252629-001 ST</id>
+<title>Stellungnahme der Verwaltung 252629-001 ST: Koalitionsantrag: Wohnheim-Viktoriakarree</title>
+<updated>2025-03-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252629"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021666"/>
+<summary>Folgevorlage zu 252629</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021666#vorlage</id>
+<title>Neue Vorlage 252629: Koalitionsantrag: Wohnheim-Viktoriakarree</title>
+<updated>2025-02-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252629"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021666"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+</feed>

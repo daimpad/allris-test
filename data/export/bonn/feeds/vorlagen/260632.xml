@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/260632</id>
+<title>Vorlage 260632: Tagesordnungspunkte in nichtöffentlicher Sitzung des Beirats Bürgerbeteiligung</title>
+<subtitle>Verlauf der Vorlage 260632: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-04-24T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/260632.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260632"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026466#beratung-3</id>
+<title>Beirat Bürgerbeteiligung: „zur Kenntnis genommen“ – 260632 Tagesordnungspunkte in nichtöffentlicher Sitzung des Beirats Bürgerbeteiligung</title>
+<updated>2026-04-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260632"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026466"/>
+<summary>Kenntnisnahme am 2026-04-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026466#vorlage</id>
+<title>Neue Vorlage 260632: Tagesordnungspunkte in nichtöffentlicher Sitzung des Beirats Bürgerbeteiligung</title>
+<updated>2026-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260632"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026466"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

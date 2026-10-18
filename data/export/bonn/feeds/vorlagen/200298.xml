@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/200298</id>
+<title>Vorlage 200298: Umsetzung und Kontrolle der Zertifizierungsplicht für Grabsteine</title>
+<subtitle>Verlauf der Vorlage 200298: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2020-04-23T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/200298.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200298"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/4795#folge-200298-1 ST</id>
+<title>Stellungnahme der Verwaltung 200298-1 ST: Umsetzung und Kontrolle der Zertifizierungsplicht für Grabsteine</title>
+<updated>2020-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200298"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4795"/>
+<summary>Folgevorlage zu 200298</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/4795#vorlage</id>
+<title>Neue Vorlage 200298: Umsetzung und Kontrolle der Zertifizierungsplicht für Grabsteine</title>
+<updated>2020-02-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200298"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4795"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+</feed>

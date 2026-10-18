@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/190421</id>
+<title>Vorlage 190421: Kommunale Vergabegrundsätze - Bestimmung der Wertgrenzen für Bauleistungen</title>
+<subtitle>Verlauf der Vorlage 190421: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2019-11-28T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/190421.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2019#190421"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/837#beratung-4</id>
+<title>Betriebsausschuss SGB: „zurückgezogen“ – 190421 Kommunale Vergabegrundsätze - Bestimmung der Wertgrenzen für Bauleistungen</title>
+<updated>2019-11-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2019#190421"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=837"/>
+<summary>Kenntnisnahme am 2019-11-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/837#beratung-3</id>
+<title>Bau- und Vergabeausschuss: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 190421 Kommunale Vergabegrundsätze - Bestimmung der Wertgrenzen für Bauleistungen</title>
+<updated>2019-11-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2019#190421"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=837"/>
+<summary>Kenntnisnahme am 2019-11-21; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/837#vorlage</id>
+<title>Neue Vorlage 190421: Kommunale Vergabegrundsätze - Bestimmung der Wertgrenzen für Bauleistungen</title>
+<updated>2019-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2019#190421"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=837"/>
+<summary>Mitteilungsvorlage · federführend: II-2 Referat Vergabedienste · Stand: in Beratung</summary>
+</entry>
+</feed>

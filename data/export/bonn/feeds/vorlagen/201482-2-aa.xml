@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/201482-2-aa</id>
+<title>Vorlage 201482-2 AA: Sanierung Stadthalle Bad Godesberg Antrag zur Vorlage 201482</title>
+<subtitle>Verlauf der Vorlage 201482-2 AA: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2020-10-07T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/201482-2-aa.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=bezirk:bad-godesberg#201482-2%20AA"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8184#folge-201482-3 ST</id>
+<title>Stellungnahme der Verwaltung 201482-3 ST: Sanierung Stadthalle Bad Godesberg</title>
+<updated>2020-10-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=bezirk:bad-godesberg#201482-2%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8184"/>
+<summary>Folgevorlage zu 201482-2 AA</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8184#vorlage</id>
+<title>Neue Vorlage 201482-2 AA: Sanierung Stadthalle Bad Godesberg Antrag zur Vorlage 201482</title>
+<updated>2020-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=bezirk:bad-godesberg#201482-2%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8184"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+</feed>

@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ortsteil-nordstadt</id>
+<title>RIS-Karte Bonn – Nordstadt</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Nordstadt</subtitle>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-nordstadt.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029907#vorlage</id>
+<title>Neue Vorlage 261906: Große Anfrage Grüne Fraktion - Auswirkungen der vierspurigen Verkehrsführung im Bereich Oxfordstraße/Berliner Platz</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261906"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029907"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029857#vorlage</id>
+<title>Neue Vorlage 261887: Informationsbrief - Kanalerneuerung Oppenhoffstraße</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261887"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029857"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028800#vorlage</id>
+<title>Neue Vorlage 261479: Vorplanung verkehrsberuhigter Bereich um den Gerhardsplatz</title>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261479"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028800"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029696#vorlage</id>
+<title>Neue Vorlage 261846: Bürgerantrag: Optimierung des Rad- und Autoverkehrs im Bereich der Kreuzung Bornheimer Straße/Guido-Westerwelle-Brücke</title>
+<updated>2026-10-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261846"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029696"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029644#vorlage</id>
+<title>Neue Vorlage 261830: Linke-Bezirksfraktion-Antrag: ÖPNV-Vorrang in der Thomas-Mann-Straße zwischen Budapester Str. und Berliner Platz</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261830"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029644"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029600#vorlage</id>
+<title>Neue Vorlage 253158-03 AA: Volt-Änderungsantrag zur N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a. Antrag zur Vorlage 253158</title>
+<updated>2026-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253158-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029600"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027892#beratung-3</id>
+<title>Hauptausschuss: „abgelehnt“ – 253158-01 AA Volt-Änderungsantrag zu N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a. Antrag zur Vorlage 253158</title>
+<updated>2026-09-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253158-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027892"/>
+<summary>Empfehlung am 2026-09-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029154#vorlage</id>
+<title>Neue Vorlage 260490-01 ST: SPD-Bezirksfraktion-Antrag: Instandsetzung des wassergebundenen Weges zwischen Heinrich-Böll-Ring und Bornheimer Straße</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260490-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029154"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029407#vorlage</id>
+<title>Neue Vorlage 261523-03 AA: Grüne/Volt-Änderungsantrag -  Bornheimer Straße als verkehrsberuhigte Wohnstraße erhalten</title>
+<updated>2026-09-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261523-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029407"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029403#vorlage</id>
+<title>Neue Vorlage 261523-02 AA: SPD-Fraktion: Öffnung der Bornheimer Straße für Kfz-Verkehr am Knoten Hochstadenring/Bornheimer Straße/ Guido-Westerwelle-Brücke Antrag zur Vorlage 261523</title>
+<updated>2026-09-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261523-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029403"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028884#vorlage</id>
+<title>Neue Vorlage 261523: Öffnung der Bornheimer Straße für Kfz-Verkehr am Knoten Hochstadenring/Bornheimer Straße/ Guido-Westerwelle-Brücke</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261523"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028884"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028707#beratung-6</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen - mit Maßgabe“ – 261433 Bau einer Rad- und Fußwegbrücke über die Bahngleise zwischen Heinrich-Böll-Ring/Thomastraße und Immenburgstraße (Innovationsdreieck)</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261433"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028707"/>
+<summary>Empfehlung am 2026-09-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029117#vorlage</id>
+<title>Neue Vorlage 260365-02 ST: Bürgerantrag: Optimierung Lkw-Verkehr im Bereich der Kölnstraße/Änderung der Durchfahrtszeiten</title>
+<updated>2026-09-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260365-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029117"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029234#vorlage</id>
+<title>Neue Vorlage 261669: Bürgerantrag: Aufstellung eines Blitzers zur Überwachung von Tempo 30 im Bereich Ellerstraße und Hochstadenring</title>
+<updated>2026-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261669"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029234"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028785#vorlage</id>
+<title>Neue Vorlage 260801-01 ST: Stellungnahme zum Antrag: Zebrastreifen an der Verkehrsinsel am Lievelingsweg</title>
+<updated>2026-09-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260801-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028785"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028707#vorlage</id>
+<title>Neue Vorlage 261433: Bau einer Rad- und Fußwegbrücke über die Bahngleise zwischen Heinrich-Böll-Ring/Thomastraße und Immenburgstraße (Innovationsdreieck)</title>
+<updated>2026-09-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261433"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028707"/>
+<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029049#vorlage</id>
+<title>Neue Vorlage 253498-01 ST: Vertagungsbitte zum Bürgerantrag: Lücken in der Straßenraumbegrünung im Macke Viertel/Altstadt schließen</title>
+<updated>2026-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253498-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029049"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028951#vorlage</id>
+<title>Neue Vorlage 261552: SPD-Bezirksfraktion: Fahrbahnmarkierung zur Lenkung des Kraftfahrzeugverkehrs und Verbesserung der Verkehrssicherheit an der Kreuzung Heerstraße/Rosental/Kölnstraße in Bonn</title>
+<updated>2026-08-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261552"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028951"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028941#vorlage</id>
+<title>Neue Vorlage 261544: Bürgerantrag: Anordnung von Tempo 30 im Bereich der Kölnstraße zwischen An der Josefshöhe und Chlodwigsplatz</title>
+<updated>2026-08-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261544"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028941"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028812#vorlage</id>
+<title>Neue Vorlage 260768-02 ST: Ergänzende Stellungnahme zur DS 260768-01 Bürgerantrag: Verkehrsanalyse in der Bornheimer Straße zur Bewertung von Geschwindigkeitsüberschreitungen und Maßnahmen zur Verkehrsberuhigung</title>
+<updated>2026-08-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260768-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028812"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028783#vorlage</id>
+<title>Neue Vorlage 261472: Bürgerantrag: Einrichtung einer Fahrverbotszone für Lkw im Bereich der Kölnstraße in der Zeit von 22.00 bis 07.00 Uhr</title>
+<updated>2026-08-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261472"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028783"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028683#vorlage</id>
+<title>Neue Vorlage 260108-02 ST: Stellungnahme zum Bürgerantrag: Antrag auf Verbesserung der aktuellen Fahrbeziehung zwischen der Weiherstraße und der Bornheimer Straße</title>
+<updated>2026-08-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260108-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028683"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027912#vorlage</id>
+<title>Neue Vorlage 253158-02 ST: N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a.</title>
+<updated>2026-07-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253158-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027912"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028523#vorlage</id>
+<title>Neue Vorlage 261352: Informationsbrief - Kanalsanierung Kölnstraße und Am Johanneskreuz</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261352"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028523"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027892#beratung-2</id>
+<title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253158-01 AA Volt-Änderungsantrag zu N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a. Antrag zur Vorlage 253158</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253158-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027892"/>
+<summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027807#beratung-3</id>
+<title>Rat: „ungeändert beschlossen“ – 261078 Überplanmäßige Auszahlung in Höhe von € 2.385.341,96 € zur Begleichung der Schlussrechnung der Fa. STRABAG für die Baumaßnahme Bornheimer Straße im Rahmen des Masterplan Innere Stadt Bonn 2.0.</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261078"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027807"/>
+<summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022885#beratung-6</id>
+<title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253158 N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a.</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253158"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022885"/>
+<summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026898#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 260110-01 ST Stellungnahme zum Bürgerantrag: Antrag auf Anpassung der geltenden Regeln in der Parkraumbewirtschaftungszone Nordstadt</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260110-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026898"/>
+<summary>Kenntnisnahme am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025262#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 260110 Bürgerantrag: Antrag auf Anpassung der geltenden Regeln in der Parkraumbewirtschaftungszone Nordstadt</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260110"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025262"/>
+<summary>Entscheidung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022885#beratung-5</id>
+<title>Hauptausschuss: „ungeändert beschlossen - mit Protokollnotiz“ – 253158 N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a.</title>
+<updated>2026-06-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253158"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022885"/>
+<summary>Empfehlung am 2026-06-30; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027830#beratung-2</id>
+<title>Bezirksvertretung Bonn: „vertagt“ – 261086 CDU-Bezirksfraktion-Große Anfrage: Sicherheit auf dem Fuß- und Radweg Höhe Ärztehaus Kölnstr. 480</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261086"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027830"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027807#vorlage</id>
+<title>Neue Vorlage 261078: Überplanmäßige Auszahlung in Höhe von € 2.385.341,96 € zur Begleichung der Schlussrechnung der Fa. STRABAG für die Baumaßnahme Bornheimer Straße im Rahmen des Masterplan Innere Stadt Bonn 2.0.</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261078"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027807"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027734#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260202-03 ST Stellungnahme zu Grüne-Große Anfrage: Sicherheit für den Radverkehr auf der Vorgebirgsstraße</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260202-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027734"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027719#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260996-01 ST Bürgerantrag: Deutliche Kennzeichnung Tempo 30-Zone im Bereich Graurheindorfer Straße zwischen Nordstraße und Kaiser-Karl-Ring und Einrichtung einer elektronischen Anzeige</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260996-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027719"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027622#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 260996 Bürgerantrag: Deutliche Kennzeichnung Tempo 30-Zone im Bereich Graurheindorfer Straße zwischen Nordstraße und Kaiser-Karl-Ring und Einrichtung einer elektronischen Anzeige</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260996"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027622"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027540#beratung-3</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260768-01 ST Stellungnahme zum Bürgerantrag: Verkehrsanalyse in der Bornheimer Straße zur Bewertung von Geschwindigkeitsüberschreitungen und Maßnahmen zur Verkehrsberuhigung</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260768-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027540"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027441#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260365-01 ST Stellungnahme zum Bürgerantrag: Optimierung Lkw-Verkehr im Bereich der Kölnstraße/Änderung der Durchfahrtszeiten</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260365-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027441"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026855#beratung-2</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260807 Bürgerantrag: Antrag auf Maßnahmen zur Verkehrslenkung, Lärmminderung und Geschwindigkeitskontrolle in der Kölnstraße nach Sperrung der Nordbrücke</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260807"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026855"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026844#beratung-2</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 260803 SPD-Bezirksfraktion-Antrag: Aufbringung eines neuen Tempo 30 Zeichen auf dem Lievelingsweg</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260803"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026844"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026842#beratung-3</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260801 SPD-Bezirksfraktion-Antrag: Zebrastreifen an der Verkehrsinsel am Lievelingsweg</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260801"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026842"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026775#beratung-3</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260768 Bürgerantrag: Verkehrsanalyse in der Bornheimer Straße zur Bewertung von Geschwindigkeitsüberschreitungen und Maßnahmen zur Verkehrsberuhigung</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260768"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026775"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026218#beratung-2</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260490 SPD-Bezirksfraktion-Antrag: Instandsetzung des wassergebundenen Weges zwischen Heinrich-Böll-Ring und Bornheimer Straße</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260490"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026218"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025894#beratung-3</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 260365 Bürgerantrag: Optimierung Lkw-Verkehr im Bereich der Kölnstraße/Änderung der Durchfahrtszeiten</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260365"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025894"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025507#beratung-4</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260202 Grüne-Große Anfrage: Sicherheit für den Radverkehr auf der Vorgebirgsstraße</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260202"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025507"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025341#beratung-2</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253173-03 Bürgerantrag: Antrag auf Umsetzung des beschlossenen Änderungsantrages 253173-01 - Vorübergehende Verkehrsführung auf der Bornheimer Straße und der Guido-Westerwelle-Brücke bis zur Herstellung der Rampe Thomastraße</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253173-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025341"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025259#beratung-3</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260108 Bürgerantrag: Antrag auf Verbesserung der aktuellen Fahrbeziehung zwischen der Weiherstraße und der Bornheimer Straße</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260108"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025259"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025072#beratung-2</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260016 Bürgerantrag: Installation von Fahrradständern im Bereich Heerstraße 205</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260016"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025072"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023669#beratung-2</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253498 Bürgerantrag: Lücken in der Straßenraumbegrünung im Macke Viertel/Altstadt schließen</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253498"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023669"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028085#vorlage</id>
+<title>Neue Vorlage 261215: Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahren Nr. 6325-1 „Kölnstraße/Otto-Hahn-Straße“ zwischen Kölnstraße, Otto-Hahn-Straße und Im großen Garten</title>
+<updated>2026-06-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261215"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028085"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027734#vorlage</id>
+<title>Neue Vorlage 260202-03 ST: Stellungnahme zu Grüne-Große Anfrage: Sicherheit für den Radverkehr auf der Vorgebirgsstraße</title>
+<updated>2026-06-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260202-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027734"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026898#vorlage</id>
+<title>Neue Vorlage 260110-01 ST: Stellungnahme zum Bürgerantrag: Antrag auf Anpassung der geltenden Regeln in der Parkraumbewirtschaftungszone Nordstadt</title>
+<updated>2026-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260110-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026898"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027892#vorlage</id>
+<title>Neue Vorlage 253158-01 AA: Volt-Änderungsantrag zu N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a. Antrag zur Vorlage 253158</title>
+<updated>2026-06-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253158-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027892"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027830#vorlage</id>
+<title>Neue Vorlage 261086: CDU-Bezirksfraktion-Große Anfrage: Sicherheit auf dem Fuß- und Radweg Höhe Ärztehaus Kölnstr. 480</title>
+<updated>2026-06-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#261086"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027830"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027719#vorlage</id>
+<title>Neue Vorlage 260996-01 ST: Bürgerantrag: Deutliche Kennzeichnung Tempo 30-Zone im Bereich Graurheindorfer Straße zwischen Nordstraße und Kaiser-Karl-Ring und Einrichtung einer elektronischen Anzeige</title>
+<updated>2026-05-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260996-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027719"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026365#beratung-4</id>
+<title>Ausschuss für Mobilität und Verkehr: „vertagt“ – 260528-01 ST Stellungnahme zur Großen Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260528-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026365"/>
+<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026283#beratung-4</id>
+<title>Ausschuss für Mobilität und Verkehr: „vertagt“ – 260528 FDP-Gruppe-Große Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260528"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026283"/>
+<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026880#beratung-5</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „zur Kenntnis genommen“ – 260529-01 ST Stellungnahme zu FDP-Gruppe-Große Anfrage: Warum lässt die Stadt die Viktoriaunterführung verwahrlosen?</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260529-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026880"/>
+<summary>Kenntnisnahme am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026463#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen - mit Protokollnotiz“ – 260631 Einleitung des Vergabeverfahrens Kanal-TV-Inspektionen Castell, Nordstadt, Tannenbusch</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260631"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026463"/>
+<summary>Entscheidung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026284#beratung-5</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „zur Kenntnis genommen“ – 260529 FDP-Gruppe-Große Anfrage: Warum lässt die Stadt die Viktoriaunterführung verwahrlosen?</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260529"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026284"/>
+<summary>Kenntnisnahme am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025826#beratung-4</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen - mit Protokollnotiz“ – 260339 Baureife Planung zum Ausbau der Oppenhoffstraße</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260339"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025826"/>
+<summary>Entscheidung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027622#vorlage</id>
+<title>Neue Vorlage 260996: Bürgerantrag: Deutliche Kennzeichnung Tempo 30-Zone im Bereich Graurheindorfer Straße zwischen Nordstraße und Kaiser-Karl-Ring und Einrichtung einer elektronischen Anzeige</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260996"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027622"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027441#vorlage</id>
+<title>Neue Vorlage 260365-01 ST: Stellungnahme zum Bürgerantrag: Optimierung Lkw-Verkehr im Bereich der Kölnstraße/Änderung der Durchfahrtszeiten</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260365-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027441"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027420#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260788-01 ST Stellungnahme zu Grüne-Bezirksfraktion-Große Anfrage: Nachlassende Kontrollen bei der Parkraumüberwachung in der Nordstadt</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260788-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027420"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026880#beratung-4</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260529-01 ST Stellungnahme zu FDP-Gruppe-Große Anfrage: Warum lässt die Stadt die Viktoriaunterführung verwahrlosen?</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260529-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026880"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026824#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260788 Grüne-Bezirksfraktion-Große Anfrage: Nachlassende Kontrollen bei der Parkraumüberwachung in der Nordstadt</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260788"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026824"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026813#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260521-01 ST Sachstand Guido-Westerwelle-Brücke</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260521-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026813"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026365#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260528-01 ST Stellungnahme zur Großen Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260528-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026365"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026284#beratung-4</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260529 FDP-Gruppe-Große Anfrage: Warum lässt die Stadt die Viktoriaunterführung verwahrlosen?</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260529"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026284"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026283#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260528 FDP-Gruppe-Große Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260528"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026283"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026272#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260521 Sachstand Guido-Westerwelle-Brücke</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260521"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026272"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026161#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260414-01 ST Stellungnahme zum Bürgerantrag: Optimierung der Parksituation im Bereich "Im Krausfeld"</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260414-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026161"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026048#beratung-3</id>
+<title>Bezirksvertretung Bonn: „abgelehnt“ – 260414 Bürgerantrag: Optimierung der Parksituation im Bereich "Im Krausfeld"</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260414"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026048"/>
+<summary>Entscheidung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025826#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 260339 Baureife Planung zum Ausbau der Oppenhoffstraße</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260339"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025826"/>
+<summary>Entscheidung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027540#vorlage</id>
+<title>Neue Vorlage 260768-01 ST: Stellungnahme zum Bürgerantrag: Verkehrsanalyse in der Bornheimer Straße zur Bewertung von Geschwindigkeitsüberschreitungen und Maßnahmen zur Verkehrsberuhigung</title>
+<updated>2026-05-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260768-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027540"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027420#vorlage</id>
+<title>Neue Vorlage 260788-01 ST: Stellungnahme zu Grüne-Bezirksfraktion-Große Anfrage: Nachlassende Kontrollen bei der Parkraumüberwachung in der Nordstadt</title>
+<updated>2026-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260788-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027420"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026365#vorlage</id>
+<title>Neue Vorlage 260528-01 ST: Stellungnahme zur Großen Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
+<updated>2026-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260528-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026365"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027382#beratung-2</id>
+<title>Rat: „ungeändert beschlossen“ – 260132-04 AA CDU, SPD, FDP Kooperation: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt Antrag zur Vorlage 260132</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260132-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027382"/>
+<summary>Entscheidung am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026813#vorlage</id>
+<title>Neue Vorlage 260521-01 ST: Sachstand Guido-Westerwelle-Brücke</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260521-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026813"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026710#beratung-3</id>
+<title>Rat: „abgelehnt“ – 260132-03 AA BBB-Änderungsantrag: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt Antrag zur Vorlage 260132</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260132-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026710"/>
+<summary>Entscheidung am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026269#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 260132-02 ST Stellungnahme der Verwaltung zum Änderungsantrag von CDU/SPD/FDP: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260132-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026269"/>
+<summary>Kenntnisnahme am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026179#beratung-4</id>
+<title>Rat: „nicht abgestimmt“ – 260132-01 AA CDU/SPD/FDP Änderungsantrag: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt Antrag zur Vorlage 260132</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260132-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026179"/>
+<summary>Entscheidung am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025330#beratung-9</id>
+<title>Rat: „geändert beschlossen“ – 260132 Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260132"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025330"/>
+<summary>Entscheidung am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027382#vorlage</id>
+<title>Neue Vorlage 260132-04 AA: CDU, SPD, FDP Kooperation: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt Antrag zur Vorlage 260132</title>
+<updated>2026-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260132-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027382"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026880#beratung-3</id>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „zur Kenntnis genommen“ – 260529-01 ST Stellungnahme zu FDP-Gruppe-Große Anfrage: Warum lässt die Stadt die Viktoriaunterführung verwahrlosen?</title>
+<updated>2026-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260529-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026880"/>
+<summary>Kenntnisnahme am 2026-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026284#beratung-3</id>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „zur Kenntnis genommen - mit Protokollnotiz“ – 260529 FDP-Gruppe-Große Anfrage: Warum lässt die Stadt die Viktoriaunterführung verwahrlosen?</title>
+<updated>2026-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260529"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026284"/>
+<summary>Kenntnisnahme am 2026-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026842#vorlage</id>
+<title>Neue Vorlage 260801: SPD-Bezirksfraktion-Antrag: Zebrastreifen an der Verkehrsinsel am Lievelingsweg</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260801"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026842"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026269#vorlage</id>
+<title>Neue Vorlage 260132-02 ST: Stellungnahme der Verwaltung zum Änderungsantrag von CDU/SPD/FDP: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260132-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026269"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026161#vorlage</id>
+<title>Neue Vorlage 260414-01 ST: Stellungnahme zum Bürgerantrag: Optimierung der Parksituation im Bereich "Im Krausfeld"</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260414-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026161"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026880#vorlage</id>
+<title>Neue Vorlage 260529-01 ST: Stellungnahme zu FDP-Gruppe-Große Anfrage: Warum lässt die Stadt die Viktoriaunterführung verwahrlosen?</title>
+<updated>2026-05-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260529-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026880"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024347#beratung-4</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 253298-01 ST Bürgerantrag: Regelkontrollen und Erweiterung der Anwohnerparkzone D sowie Anpassung der Parkregelungen in den Abendstunden</title>
+<updated>2026-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253298-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024347"/>
+<summary>Kenntnisnahme am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023159#beratung-4</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „ungeändert beschlossen“ – 253298 Bürgerantrag: Regelkontrollen und Erweiterung der Anwohnerparkzone D sowie Anpassung der Parkregelungen in den Abendstunden</title>
+<updated>2026-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#253298"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023159"/>
+<summary>Entscheidung am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026855#vorlage</id>
+<title>Neue Vorlage 260807: Bürgerantrag: Antrag auf Maßnahmen zur Verkehrslenkung, Lärmminderung und Geschwindigkeitskontrolle in der Kölnstraße nach Sperrung der Nordbrücke</title>
+<updated>2026-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260807"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026855"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026844#vorlage</id>
+<title>Neue Vorlage 260803: SPD-Bezirksfraktion-Antrag: Aufbringung eines neuen Tempo 30 Zeichen auf dem Lievelingsweg</title>
+<updated>2026-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260803"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026844"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026824#vorlage</id>
+<title>Neue Vorlage 260788: Grüne-Bezirksfraktion-Große Anfrage: Nachlassende Kontrollen bei der Parkraumüberwachung in der Nordstadt</title>
+<updated>2026-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260788"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026824"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026804#vorlage</id>
+<title>Neue Vorlage 260781: Informationsbrief - Kanalbauarbeiten Heerstraße</title>
+<updated>2026-04-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260781"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026804"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026775#vorlage</id>
+<title>Neue Vorlage 260768: Bürgerantrag: Verkehrsanalyse in der Bornheimer Straße zur Bewertung von Geschwindigkeitsüberschreitungen und Maßnahmen zur Verkehrsberuhigung</title>
+<updated>2026-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260768"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026775"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026710#vorlage</id>
+<title>Neue Vorlage 260132-03 AA: BBB-Änderungsantrag: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt Antrag zur Vorlage 260132</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260132-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026710"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026710#beratung-1</id>
+<title>Bezirksvertretung Bonn: „abgelehnt“ – 260132-03 AA BBB-Änderungsantrag: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt Antrag zur Vorlage 260132</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260132-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026710"/>
+<summary>Anhörung am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026668#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260123-02 ST Bürgerantrag: Antrag auf Tempo 30 als Höchstgeschwindigkeit auf der Bornheimer Straße zwischen Alter Friedhof und Hochstadenring Ergänzung der STN 260123-01</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#260123-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026668"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026596#beratung-2</id>
+<title>Bezirksvertretung Bonn: „zurückgezogen“ – 254062-01 AA Grüne-Bezirksfraktion-Änderungsantrag: Fällgenehmigung für einen Spitz-Ahorn auf dem Baugrundstück Annagraben 70, 53111 Bonn im Rahmen eines Baugenehmigungsverfahrens Änderungsantrag zur Vorlage 254062</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:nordstadt#254062-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026596"/>
+<summary>Entscheidung am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+</feed>

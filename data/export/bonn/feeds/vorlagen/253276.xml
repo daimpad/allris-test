@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/253276</id>
+<title>Vorlage 253276: BBB-Anfrage Bauarbeiten im Mehlemer Spatzenbrunnenpark</title>
+<subtitle>Verlauf der Vorlage 253276: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-04-06T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/253276.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253276"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023111#folge-253276-02</id>
+<title>Mitteilungsvorlage 253276-02: BBB-Anfrage Bauarbeiten im Mehlemer Spatzenbrunnenpark hier: Beantwortungen der Protokollfragen aus der Sitzung 03.12.2025</title>
+<updated>2026-04-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253276"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023111"/>
+<summary>Folgevorlage zu 253276</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023111#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Maßgabe“ – 253276 BBB-Anfrage Bauarbeiten im Mehlemer Spatzenbrunnenpark</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253276"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023111"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023111#folge-253276-01 ST</id>
+<title>Stellungnahme der Verwaltung 253276-01 ST: BBB-Anfrage Bauarbeiten im Mehlemer Spatzenbrunnenpark</title>
+<updated>2025-11-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253276"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023111"/>
+<summary>Folgevorlage zu 253276</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023111#vorlage</id>
+<title>Neue Vorlage 253276: BBB-Anfrage Bauarbeiten im Mehlemer Spatzenbrunnenpark</title>
+<updated>2025-06-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253276"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023111"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

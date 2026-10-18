@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/254003</id>
+<title>Vorlage 254003: Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<subtitle>Verlauf der Vorlage 254003: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/254003.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024736#folge-254003-02</id>
+<title>Mitteilungsvorlage 254003-02: Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024736"/>
+<summary>Folgevorlage zu 254003</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024736#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 254003 Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<updated>2026-03-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024736"/>
+<summary>Entscheidung am 2026-03-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024736#folge-254003-01 ST</id>
+<title>Stellungnahme der Verwaltung 254003-01 ST: Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<updated>2026-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024736"/>
+<summary>Folgevorlage zu 254003</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024736#vorlage</id>
+<title>Neue Vorlage 254003: Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<updated>2025-11-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024736"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+</feed>

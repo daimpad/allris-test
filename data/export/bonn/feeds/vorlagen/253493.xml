@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/253493</id>
+<title>Vorlage 253493: CDU-Antrag: Toilettenanlage Ramersdorf U-Bahn</title>
+<subtitle>Verlauf der Vorlage 253493: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-09-03T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/253493.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ramersdorf#253493"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023659#beratung-4</id>
+<title>Betriebsausschuss SGB: „vertagt - mit Maßgabe“ – 253493 CDU-Antrag: Toilettenanlage Ramersdorf U-Bahn</title>
+<updated>2025-09-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ramersdorf#253493"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023659"/>
+<summary>Anhörung am 2025-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023659#beratung-3</id>
+<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 253493 CDU-Antrag: Toilettenanlage Ramersdorf U-Bahn</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ramersdorf#253493"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023659"/>
+<summary>Entscheidung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023659#folge-253493-01 ST</id>
+<title>Stellungnahme der Verwaltung 253493-01 ST: CDU-Antrag: Toilettenanlage Ramersdorf U-Bahn</title>
+<updated>2025-07-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ramersdorf#253493"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023659"/>
+<summary>Folgevorlage zu 253493</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023659#vorlage</id>
+<title>Neue Vorlage 253493: CDU-Antrag: Toilettenanlage Ramersdorf U-Bahn</title>
+<updated>2025-07-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ramersdorf#253493"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023659"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+</feed>

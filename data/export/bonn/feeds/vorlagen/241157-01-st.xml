@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/241157-01-st</id>
+<title>Vorlage 241157-01 ST: Bürgerantrag: Zusätzliche Überquerung am südlichen Ende der Haltestelle Oberkassel Süd</title>
+<subtitle>Verlauf der Vorlage 241157-01 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-01-29T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/241157-01-st.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:oberkassel#241157-01%20ST"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020949#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 241157-01 ST Bürgerantrag: Zusätzliche Überquerung am südlichen Ende der Haltestelle Oberkassel Süd</title>
+<updated>2025-01-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:oberkassel#241157-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020949"/>
+<summary>Kenntnisnahme am 2025-01-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020949#vorlage</id>
+<title>Neue Vorlage 241157-01 ST: Bürgerantrag: Zusätzliche Überquerung am südlichen Ende der Haltestelle Oberkassel Süd</title>
+<updated>2025-01-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:oberkassel#241157-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020949"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

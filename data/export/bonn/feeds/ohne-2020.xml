@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ohne-2020</id>
+<title>RIS-Karte Bonn – stadtweit / ohne Ortsbezug 2020</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2020</subtitle>
+<updated>2024-09-26T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ohne-2020.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/233#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 190057-1 ST Bonn CC; Anspassung der Pacht für den Gastronomiebereich der Beethovenhalle (alt: 1611089ST5 FF Amt 20)</title>
+<updated>2024-09-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190057-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=233"/>
+<summary>Kenntnisnahme am 2024-09-26; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/233#beratung-3</id>
+<title>Projektbeirat Sanierung Beethovenhalle Bonn: „zur Kenntnis genommen“ – 190057-1 ST Bonn CC; Anspassung der Pacht für den Gastronomiebereich der Beethovenhalle (alt: 1611089ST5 FF Amt 20)</title>
+<updated>2024-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190057-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=233"/>
+<summary>Kenntnisnahme am 2024-09-18; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8144#beratung-6</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 201722 Bürgerantrag: Umsetzung von Maßnahmen gegen unnötigen Einwegmüll in Bonn</title>
+<updated>2022-01-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201722"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8144"/>
+<summary>Entscheidung am 2022-01-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7628#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 201406-1 ST Bürgerantrag: Umwandlung von städtischen Rasenflächen in bestäuberfreundliche Blühwiesen</title>
+<updated>2021-09-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201406-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7628"/>
+<summary>Kenntnisnahme am 2021-09-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7206#beratung-6</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 201406 Bürgerantrag: Umwandlung von städtischen Rasenflächen in bestäuberfreundliche Blühwiesen</title>
+<updated>2021-09-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201406"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7206"/>
+<summary>Entscheidung am 2021-09-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/4083#beratung-6</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 200011-1 ST Begrünung der Fassade des WCCB-Parkhauses</title>
+<updated>2021-09-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200011-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4083"/>
+<summary>Kenntnisnahme am 2021-09-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9165#beratung-5</id>
+<title>Rat: „zur Kenntnis genommen“ – 202022-01 ST Klimanotstand Bonn; Maßnahmen zur Reduzierung der Wärmebelastung durch Dach- und Fassadenbegrünung</title>
+<updated>2021-09-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202022-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9165"/>
+<summary>Entscheidung am 2021-09-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8753#beratung-6</id>
+<title>Rat: „abgelehnt“ – 202022 Klimanotstand Bonn; Maßnahmen zur Reduzierung der Wärmebelastung durch Dach- und Fassadenbegrünung</title>
+<updated>2021-09-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202022"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8753"/>
+<summary>Entscheidung am 2021-09-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9219#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 202076-01 ST Verschönerung Erscheinungsbild Rheinpromenade</title>
+<updated>2021-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202076-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9219"/>
+<summary>Kenntnisnahme am 2021-08-31; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9049#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 202075-01 ST Bienen- und Insektenfreundliche Bepflanzung</title>
+<updated>2021-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202075-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9049"/>
+<summary>Kenntnisnahme am 2021-08-31; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8929#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 202076 Verschönerung Erscheinungsbild Rheinpromenade</title>
+<updated>2021-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202076"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8929"/>
+<summary>Entscheidung am 2021-08-31; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8928#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 202075 Bienen- und Insektenfreundliche Bepflanzung</title>
+<updated>2021-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202075"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8928"/>
+<summary>Entscheidung am 2021-08-31; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8706#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 201989 Bürgerantrag: Beleuchtung des Fußball- und Basketballplatzes in der Bonner Rheinaue</title>
+<updated>2021-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201989"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8706"/>
+<summary>Entscheidung am 2021-08-31; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8685#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 201976 Einbahnstraßenregelung für die Weißenburgsraße</title>
+<updated>2021-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201976"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8685"/>
+<summary>Entscheidung am 2021-08-31; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9165#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 202022-01 ST Klimanotstand Bonn; Maßnahmen zur Reduzierung der Wärmebelastung durch Dach- und Fassadenbegrünung</title>
+<updated>2021-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202022-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9165"/>
+<summary>Empfehlung am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8753#beratung-5</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „abgelehnt“ – 202022 Klimanotstand Bonn; Maßnahmen zur Reduzierung der Wärmebelastung durch Dach- und Fassadenbegrünung</title>
+<updated>2021-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202022"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8753"/>
+<summary>Empfehlung am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7559#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 201470-1 ST Melbbad</title>
+<updated>2021-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201470-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7559"/>
+<summary>Kenntnisnahme am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7482#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 201490-1 ST Zustand des Baumbestandes in der Stadt Bonn</title>
+<updated>2021-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201490-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7482"/>
+<summary>Kenntnisnahme am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7389#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 201490 Zustand des Baumbestandes in der Stadt Bonn</title>
+<updated>2021-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201490"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7389"/>
+<summary>Kenntnisnahme am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7357#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 201470 Melbbad</title>
+<updated>2021-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201470"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7357"/>
+<summary>Kenntnisnahme am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6454#beratung-6</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 190939-3 Sachstand zur Photovoltaik</title>
+<updated>2021-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190939-3"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6454"/>
+<summary>Kenntnisnahme am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/4540#beratung-5</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „vertagt“ – 190939-2 ST Sachstand zur Photovoltaik</title>
+<updated>2021-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190939-2%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4540"/>
+<summary>Kenntnisnahme am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/3703#beratung-5</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 190939-1 ST Sachstand zur Photovoltaik</title>
+<updated>2021-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190939-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3703"/>
+<summary>Kenntnisnahme am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8598#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 201942 Bürgerantrag: Verbesserung der Toilettensituation in der Bonner Innenstadt</title>
+<updated>2021-08-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201942"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8598"/>
+<summary>Entscheidung am 2021-08-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9217#beratung-3</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 202157 Bürgerantrag: Fahrradinfrastruktur im Bereich des Hauptbahnhofs</title>
+<updated>2021-06-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202157"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9217"/>
+<summary>Entscheidung am 2021-06-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8951#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 201833-01 ST Familienzentrum „Rheindorfer Burg“</title>
+<updated>2021-06-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201833-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8951"/>
+<summary>Kenntnisnahme am 2021-06-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8364#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 201833 Familienzentrum „Rheindorfer Burg“</title>
+<updated>2021-06-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201833"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8364"/>
+<summary>Kenntnisnahme am 2021-06-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8593#beratung-8</id>
+<title>Rat: „zur Kenntnis genommen“ – 201841-1 ST Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste</title>
+<updated>2021-06-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201841-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8593"/>
+<summary>Kenntnisnahme am 2021-06-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8377#beratung-8</id>
+<title>Rat: „abgelehnt“ – 201841 Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste</title>
+<updated>2021-06-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201841"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8377"/>
+<summary>Entscheidung am 2021-06-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7021#beratung-13</id>
+<title>Rat: „geändert beschlossen“ – 201298 Evaluierung des Bonner Baulandmodells</title>
+<updated>2021-06-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201298"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7021"/>
+<summary>Entscheidung am 2021-06-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7880#beratung-5</id>
+<title>Rat: „zurückgezogen“ – 201298-2 AA Evaluierung des Bonner Baulandmodells Antrag zur Vorlage 201298</title>
+<updated>2021-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201298-2%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7880"/>
+<summary>Entscheidung am 2021-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7772#beratung-8</id>
+<title>Rat: „zurückgezogen“ – 201298-1 AA Evaluierung des Bonner Baulandmodells Antrag LINKE zur Vorlage 201298</title>
+<updated>2021-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201298-1%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7772"/>
+<summary>Entscheidung am 2021-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2168#beratung-7</id>
+<title>Rat: „vertagt“ – 190571 Einrichtung einer zusätzlichen Stelle im Stadtmarketing mit Schwerpunkt „Internationales Marketing“</title>
+<updated>2021-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190571"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2168"/>
+<summary>Entscheidung am 2021-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9285#beratung-3</id>
+<title>Integrationsrat: „zur Kenntnis genommen“ – 202175 Terrorismus und Gewaltprävention</title>
+<updated>2021-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202175"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9285"/>
+<summary>Kenntnisnahme am 2021-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8976#beratung-5</id>
+<title>Hauptausschuss: „zur Kenntnis genommen“ – 201974-01 ST Umbenennung Bushaltestelle von-Hompesch-Straße</title>
+<updated>2021-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201974-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8976"/>
+<summary>Kenntnisnahme am 2021-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8593#beratung-7</id>
+<title>Hauptausschuss: „zur Kenntnis genommen“ – 201841-1 ST Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste</title>
+<updated>2021-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201841-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8593"/>
+<summary>Kenntnisnahme am 2021-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8377#beratung-7</id>
+<title>Hauptausschuss: „abgelehnt“ – 201841 Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste</title>
+<updated>2021-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201841"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8377"/>
+<summary>Empfehlung am 2021-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7904#beratung-6</id>
+<title>Hauptausschuss: „ungeändert beschlossen“ – 201680 Umsetzung Evaluation Bürgerbeteiligung</title>
+<updated>2021-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201680"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7904"/>
+<summary>Empfehlung am 2021-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7162#beratung-6</id>
+<title>Hauptausschuss: „zur Kenntnis genommen“ – 201219-1 ST Beleuchtung und Aufwertung der Umgebung der Statue von Simón Bolívar</title>
+<updated>2021-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201219-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7162"/>
+<summary>Kenntnisnahme am 2021-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6879#beratung-7</id>
+<title>Hauptausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 201219 Beleuchtung und Aufwertung der Umgebung der Statue von Simón Bolívar</title>
+<updated>2021-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201219"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6879"/>
+<summary>Entscheidung am 2021-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/5219#beratung-4</id>
+<title>Hauptausschuss: „zur Kenntnis genommen“ – 190091-4 ST Investitionsstau: Kostenaufstellung und zeitlicher Horizont (alt: 1812234)</title>
+<updated>2021-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190091-4%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5219"/>
+<summary>Entscheidung am 2021-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2946#beratung-4</id>
+<title>Hauptausschuss: „zur Kenntnis genommen“ – 190091-3 ST Investitionsstau: Kostenaufstellung und zeitlicher Horizont (alt: 1812234)</title>
+<updated>2021-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190091-3%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2946"/>
+<summary>Entscheidung am 2021-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/237#beratung-7</id>
+<title>Hauptausschuss: „ungeändert beschlossen“ – 190091 Investitionsstau: Kostenaufstellung und zeitlicher Horizont (alt: 1812234)</title>
+<updated>2021-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190091"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=237"/>
+<summary>Entscheidung am 2021-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8974#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 202100 Durchschnittliche Auslastung der Stadthalle inklusive Trinkpavillon in den Jahren 2015 - 2019</title>
+<updated>2021-06-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202100"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8974"/>
+<summary>Kenntnisnahme am 2021-06-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8377#beratung-6</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 201841 Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste</title>
+<updated>2021-06-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201841"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8377"/>
+<summary>Anregung am 2021-06-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7668#beratung-4</id>
+<title>Kulturausschuss: „nicht abgestimmt“ – 201607 Honorarkräfte bei der Beethoven Musikschule Bonn</title>
+<updated>2021-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201607"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7668"/>
+<summary>Empfehlung am 2021-06-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7165#beratung-5</id>
+<title>Kulturausschuss: „nicht abgestimmt“ – 200470-2 Erstellung eines Konzeptes für Kunst im öffentlichen Raum - 2. Lesung</title>
+<updated>2021-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200470-2"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7165"/>
+<summary>Entscheidung am 2021-06-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7631#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „erledigt durch Stellungnahme der Verwaltung“ – 201594 Bürgerantrag: Zusätzliche öffentliche Toiletten in Bonn</title>
+<updated>2021-06-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201594"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7631"/>
+<summary>Entscheidung am 2021-06-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8923#beratung-3</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 200274-01 Rückblick und Ausblick zum Haus der Natur (HdN)</title>
+<updated>2021-06-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200274-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8923"/>
+<summary>Kenntnisnahme am 2021-06-01; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6787#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 201169 Kindergarten Erich Hoffmann-Straße; Passivhausstandard</title>
+<updated>2021-06-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201169"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6787"/>
+<summary>Kenntnisnahme am 2021-06-01; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9153#beratung-5</id>
+<title>Rat: „zur Kenntnis genommen“ – 201936-02 ST Stadtmuseum Bonn</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201936-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9153"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9151#beratung-5</id>
+<title>Rat: „zur Kenntnis genommen“ – 201982-02 ST Neuanfang für das Stadtmuseum Bonn</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201982-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9151"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9150#beratung-5</id>
+<title>Rat: „zur Kenntnis genommen“ – 202002-02 ST Erhalt und Neukonzeption des Stadtmuseums</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202002-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9150"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8741#beratung-5</id>
+<title>Rat: „zur Kenntnis genommen“ – 202002-1 ST Erhalt und Neukonzeption des Stadtmuseums</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202002-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8741"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8740#beratung-5</id>
+<title>Rat: „zur Kenntnis genommen“ – 201982-1 ST Neuanfang für das Stadtmuseum Bonn</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201982-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8740"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8719#beratung-6</id>
+<title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 202002 Erhalt und Neukonzeption des Stadtmuseums</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202002"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8719"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8691#beratung-6</id>
+<title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 201982 Neuanfang für das Stadtmuseum Bonn</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201982"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8691"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8654#beratung-5</id>
+<title>Rat: „zur Kenntnis genommen“ – 201936-1 ST Stadtmuseum Bonn</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201936-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8654"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8579#beratung-6</id>
+<title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 201936 Stadtmuseum Bonn</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201936"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8579"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/3596#beratung-21</id>
+<title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 191065 Überarbeitung des Regionalplanes</title>
+<updated>2021-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#191065"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3596"/>
+<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8688#beratung-4</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „zur Kenntnis genommen“ – 201979 Ambulante Sprachheilhilfe</title>
+<updated>2021-05-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201979"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8688"/>
+<summary>Kenntnisnahme am 2021-05-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8675#beratung-4</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „zur Kenntnis genommen“ – 201970 Sachstand des Förderprojektes „Zusammen im Quartier“ (ZiQ); Baustein 1 „Ein Kümmerer für Medinghoven“</title>
+<updated>2021-05-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201970"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8675"/>
+<summary>Kenntnisnahme am 2021-05-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7880#beratung-4</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „nicht abgestimmt“ – 201298-2 AA Evaluierung des Bonner Baulandmodells Antrag zur Vorlage 201298</title>
+<updated>2021-05-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201298-2%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7880"/>
+<summary>Empfehlung am 2021-05-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7772#beratung-7</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „nicht abgestimmt“ – 201298-1 AA Evaluierung des Bonner Baulandmodells Antrag LINKE zur Vorlage 201298</title>
+<updated>2021-05-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201298-1%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7772"/>
+<summary>Empfehlung am 2021-05-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7734#beratung-6</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „zur Kenntnis genommen“ – 190895-4 ST Bürgerantrag: Maßnahmen zur Förderung gemeinschaftlicher Wohnprojekte als Element nachhaltiger Wohnungspolitik und sozialer Stadtentwicklung</title>
+<updated>2021-05-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190895-4%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7734"/>
+<summary>Kenntnisnahme am 2021-05-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7021#beratung-12</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „geändert beschlossen“ – 201298 Evaluierung des Bonner Baulandmodells</title>
+<updated>2021-05-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201298"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7021"/>
+<summary>Empfehlung am 2021-05-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6184#beratung-7</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „zur Kenntnis genommen“ – 190895-2 ST Bürgerantrag: Maßnahmen zur Förderung gemeinschaftlicher Wohnprojekte als Element nachhaltiger Wohnungspolitik und sozialer Stadtentwicklung</title>
+<updated>2021-05-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190895-2%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6184"/>
+<summary>Kenntnisnahme am 2021-05-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7904#beratung-5</id>
+<title>Hauptausschuss: „geändert beschlossen“ – 201680 Umsetzung Evaluation Bürgerbeteiligung</title>
+<updated>2021-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201680"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7904"/>
+<summary>Entscheidung am 2021-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8593#beratung-5</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 201841-1 ST Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste</title>
+<updated>2021-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201841-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8593"/>
+<summary>Kenntnisnahme am 2021-04-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8377#beratung-5</id>
+<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 201841 Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste</title>
+<updated>2021-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201841"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8377"/>
+<summary>Anregung am 2021-04-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2946#beratung-3</id>
+<title>Betriebsausschuss SGB: „zur Kenntnis genommen“ – 190091-3 ST Investitionsstau: Kostenaufstellung und zeitlicher Horizont (alt: 1812234)</title>
+<updated>2021-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190091-3%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2946"/>
+<summary>Empfehlung am 2021-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/237#beratung-6</id>
+<title>Betriebsausschuss SGB: „ungeändert beschlossen“ – 190091 Investitionsstau: Kostenaufstellung und zeitlicher Horizont (alt: 1812234)</title>
+<updated>2021-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190091"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=237"/>
+<summary>Empfehlung am 2021-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8300#beratung-3</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 200531-5 Sanierung des Rheinauensees Antrag zur Vorlage 200531-3 Hier: Erstellung eines Sanierungskonzeptes</title>
+<updated>2021-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200531-5"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8300"/>
+<summary>Kenntnisnahme am 2021-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7774#beratung-3</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „ungeändert beschlossen“ – 200531-4 Sanierung des Rheinauensees BBB-Dringlichkeitsantrag zur Vorlage 200531 Antrag zur Vorlage 200531-3</title>
+<updated>2021-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200531-4"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7774"/>
+<summary>Empfehlung am 2021-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7545#beratung-3</id>
+<title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „zur Kenntnis genommen“ – 201443-1 ST Auswirkungen des BREXIT auf die Bundesstadt Bonn</title>
+<updated>2021-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201443-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7545"/>
+<summary>Kenntnisnahme am 2021-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7298#beratung-4</id>
+<title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „zur Kenntnis genommen“ – 201443 Auswirkungen des BREXIT auf die Bundesstadt Bonn</title>
+<updated>2021-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201443"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7298"/>
+<summary>Kenntnisnahme am 2021-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/4737#beratung-5</id>
+<title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „zur Kenntnis genommen“ – 200073-1 ST Wissenschaftliche Projekte zu kommunalen Themen</title>
+<updated>2021-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200073-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4737"/>
+<summary>Kenntnisnahme am 2021-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/4058#beratung-6</id>
+<title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „zur Kenntnis genommen“ – 200073 Wissenschaftliche Projekte zu kommunalen Themen</title>
+<updated>2021-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200073"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4058"/>
+<summary>Kenntnisnahme am 2021-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9153#beratung-4</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 201936-02 ST Stadtmuseum Bonn</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201936-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9153"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9151#beratung-4</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 201982-02 ST Neuanfang für das Stadtmuseum Bonn</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201982-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9151"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9150#beratung-4</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 202002-02 ST Erhalt und Neukonzeption des Stadtmuseums</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202002-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9150"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8741#beratung-4</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 202002-1 ST Erhalt und Neukonzeption des Stadtmuseums</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202002-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8741"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8740#beratung-4</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 201982-1 ST Neuanfang für das Stadtmuseum Bonn</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201982-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8740"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8719#beratung-5</id>
+<title>Kulturausschuss: „abgelehnt“ – 202002 Erhalt und Neukonzeption des Stadtmuseums</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#202002"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8719"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8691#beratung-5</id>
+<title>Kulturausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 201982 Neuanfang für das Stadtmuseum Bonn</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201982"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8691"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8654#beratung-4</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 201936-1 ST Stadtmuseum Bonn</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201936-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8654"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8579#beratung-5</id>
+<title>Kulturausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 201936 Stadtmuseum Bonn</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201936"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8579"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8337#beratung-3</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 201204-1 ST Stellungnahme zur Großen Anfrage „Theatergemeinde“</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201204-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8337"/>
+<summary>Kenntnisnahme am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7681#beratung-2</id>
+<title>Kulturausschuss: „nicht abgestimmt“ – 200470-4 AA Erstellung eines Konzeptes für Kunst im öffentlichen Raum - 2. Lesung Antrag zur Vorlage 200470-2</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200470-4%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7681"/>
+<summary>Entscheidung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7621#beratung-2</id>
+<title>Kulturausschuss: „nicht abgestimmt“ – 200470-3 AA Erstellung eines Konzeptes für Kunst im öffentlichen Raum - 2. Lesung Antrag zur Vorlage 200470-2</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#200470-3%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7621"/>
+<summary>Entscheidung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6879#beratung-5</id>
+<title>Kulturausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 201219 Beleuchtung und Aufwertung der Umgebung der Statue von Simón Bolívar</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201219"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6879"/>
+<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6855#beratung-3</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 201204 Theatergemeinde und Theater</title>
+<updated>2021-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201204"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6855"/>
+<summary>Kenntnisnahme am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8619#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zurückgezogen“ – 201778-1 ST Bürgerantrag: Ablehnung einer Fortsetzung des 365-Euro-Tickets ohne die bisherige Einschränkung des Berechtigtenkreises/Ablehnende Haltung 201763</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201778-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8619"/>
+<summary>Kenntnisnahme am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8458#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zurückgezogen“ – 201763-1 ST Bürgerantrag: Erweiterung Personenkreis für Fortsetzung des 365-Euro-Tickets im Stadtgebiet Bonn</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201763-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8458"/>
+<summary>Kenntnisnahme am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8273#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zurückgezogen“ – 201778 Bürgerantrag: Ablehnung einer Fortsetzung des 365-Euro-Tickets ohne die bisherige Einschränkung des Berechtigtenkreises/Ablehnende Haltung 201763</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201778"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8273"/>
+<summary>Entscheidung am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8247#beratung-5</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zurückgezogen“ – 201763 Bürgerantrag: Erweiterung Personenkreis für Fortsetzung des 365-Euro-Tickets im Stadtgebiet Bonn</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201763"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8247"/>
+<summary>Entscheidung am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8172#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „erledigt durch Stellungnahme der Verwaltung“ – 201737 Bürgerantrag: Institutionalisierung städtischer Bürgerversammlungen/Foren für Bonner Bürgerinnen und Bürger zu den zentralen Themenbereichen "Klima und Moblität in Bonn"</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201737"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8172"/>
+<summary>Entscheidung am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8144#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „verwiesen“ – 201722 Bürgerantrag: Umsetzung von Maßnahmen gegen unnötigen Einwegmüll in Bonn</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201722"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8144"/>
+<summary>Entscheidung am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7904#beratung-4</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „geändert beschlossen“ – 201680 Umsetzung Evaluation Bürgerbeteiligung</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201680"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7904"/>
+<summary>Empfehlung am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7628#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „verwiesen“ – 201406-1 ST Bürgerantrag: Umwandlung von städtischen Rasenflächen in bestäuberfreundliche Blühwiesen</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201406-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7628"/>
+<summary>Kenntnisnahme am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+</feed>

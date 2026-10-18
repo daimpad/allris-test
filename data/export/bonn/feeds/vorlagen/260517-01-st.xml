@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/260517-01-st</id>
+<title>Vorlage 260517-01 ST: Grüne Anfrage: Schwimmcontainer</title>
+<subtitle>Verlauf der Vorlage 260517-01 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-04-16T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/260517-01-st.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260517-01%20ST"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026405#beratung-3</id>
+<title>Schulausschuss: „zur Kenntnis genommen“ – 260517-01 ST Grüne Anfrage: Schwimmcontainer</title>
+<updated>2026-04-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260517-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026405"/>
+<summary>Kenntnisnahme am 2026-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026405#vorlage</id>
+<title>Neue Vorlage 260517-01 ST: Grüne Anfrage: Schwimmcontainer</title>
+<updated>2026-04-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260517-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026405"/>
+<summary>Stellungnahme der Verwaltung · federführend: 52 Sport- und Bäderamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

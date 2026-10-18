@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/252564</id>
+<title>Vorlage 252564: Vorhabenbezogener Bebauungsplan Nr. 6122-1, Stadtbezirk Bonn, Ortsteil Dransdorf "Grootestraße/Lenaustraße"</title>
+<subtitle>Verlauf der Vorlage 252564: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/252564.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dransdorf#252564"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021508#beratung-3</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 252564 Vorhabenbezogener Bebauungsplan Nr. 6122-1, Stadtbezirk Bonn, Ortsteil Dransdorf "Grootestraße/Lenaustraße"</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dransdorf#252564"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021508"/>
+<summary>Kenntnisnahme am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021508#vorlage</id>
+<title>Neue Vorlage 252564: Vorhabenbezogener Bebauungsplan Nr. 6122-1, Stadtbezirk Bonn, Ortsteil Dransdorf "Grootestraße/Lenaustraße"</title>
+<updated>2025-02-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dransdorf#252564"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021508"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

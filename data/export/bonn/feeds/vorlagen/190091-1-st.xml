@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/190091-1-st</id>
+<title>Vorlage 190091-1 ST: Investitionsstau: Kostenaufstellung und zeitlicher Horizont (alt: 1812234ST2)</title>
+<subtitle>Verlauf der Vorlage 190091-1 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2020-11-10T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/190091-1-st.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190091-1%20ST"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/240#vorlage</id>
+<title>Neue Vorlage 190091-1 ST: Investitionsstau: Kostenaufstellung und zeitlicher Horizont (alt: 1812234ST2)</title>
+<updated>2020-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190091-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=240"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/240#beratung-3</id>
+<title>Hauptausschuss: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 190091-1 ST Investitionsstau: Kostenaufstellung und zeitlicher Horizont (alt: 1812234ST2)</title>
+<updated>2020-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190091-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=240"/>
+<summary>Kenntnisnahme am 2020-04-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/240#beratung-2</id>
+<title>Betriebsausschuss SGB: „vertagt“ – 190091-1 ST Investitionsstau: Kostenaufstellung und zeitlicher Horizont (alt: 1812234ST2)</title>
+<updated>2019-11-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#190091-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=240"/>
+<summary>Kenntnisnahme am 2019-11-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+</feed>

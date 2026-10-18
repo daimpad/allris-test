@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/254081</id>
+<title>Vorlage 254081: CDU-Antrag: Wiederherstellung von Halteflächen vor dem Ärztehaus Kölnstraße 480</title>
+<subtitle>Verlauf der Vorlage 254081: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-03-03T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/254081.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:auerberg#254081"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024977#beratung-3</id>
+<title>Bezirksvertretung Bonn: „abgelehnt“ – 254081 CDU-Antrag: Wiederherstellung von Halteflächen vor dem Ärztehaus Kölnstraße 480</title>
+<updated>2026-03-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:auerberg#254081"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024977"/>
+<summary>Entscheidung am 2026-03-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024977#folge-254081-01 ST</id>
+<title>Stellungnahme der Verwaltung 254081-01 ST: Stellungnahme zum CDU-Antrag: Wiederherstellung von Halteflächen vor dem Ärztehaus Kölnstraße 480</title>
+<updated>2026-02-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:auerberg#254081"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024977"/>
+<summary>Folgevorlage zu 254081</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024977#vorlage</id>
+<title>Neue Vorlage 254081: CDU-Antrag: Wiederherstellung von Halteflächen vor dem Ärztehaus Kölnstraße 480</title>
+<updated>2025-12-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:auerberg#254081"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024977"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+</feed>

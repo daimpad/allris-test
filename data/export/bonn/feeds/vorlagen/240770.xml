@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/240770</id>
+<title>Vorlage 240770: BBB-Anfrage zur Straßenverkehrsanbindung an das Universitätsklinikum Bonn (UKB), hier: Robert-Koch-Straße/Sigmund-Freud-Straße</title>
+<subtitle>Verlauf der Vorlage 240770: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-08-25T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/240770.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:poppelsdorf#240770"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017084#folge-240770-02 ST</id>
+<title>Stellungnahme der Verwaltung 240770-02 ST: BBB-Anfrage zur Straßenverkehrsanbindung an das Universitätsklinikum Bonn (UKB), hier: Robert-Koch-Straße/Sigmund-Freud-Straße</title>
+<updated>2025-08-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:poppelsdorf#240770"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017084"/>
+<summary>Folgevorlage zu 240770</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017084#folge-240770-01</id>
+<title>Stellungnahme der Verwaltung 240770-01: BBB-Anfrage zur Straßenverkehrsanbindung an das Universitätsklinikum Bonn (UKB), hier: Robert-Koch-Straße/Sigmund-Freud-Straße</title>
+<updated>2024-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:poppelsdorf#240770"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017084"/>
+<summary>Folgevorlage zu 240770</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017084#vorlage</id>
+<title>Neue Vorlage 240770: BBB-Anfrage zur Straßenverkehrsanbindung an das Universitätsklinikum Bonn (UKB), hier: Robert-Koch-Straße/Sigmund-Freud-Straße</title>
+<updated>2024-05-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:poppelsdorf#240770"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017084"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+</feed>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/201689</id>
+<title>Vorlage 201689: Technische Voraussetzungen zur Installation von Ladeeinrichtungen für Elektrofahrzeuge</title>
+<subtitle>Verlauf der Vorlage 201689: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2020-10-21T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/201689.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201689"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8071#folge-201689-1 ST</id>
+<title>Stellungnahme der Verwaltung 201689-1 ST: Technische Voraussetzungen zur Installation von Ladeeinrichtungen für Elektrofahrzeuge</title>
+<updated>2020-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201689"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8071"/>
+<summary>Folgevorlage zu 201689</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8071#vorlage</id>
+<title>Neue Vorlage 201689: Technische Voraussetzungen zur Installation von Ladeeinrichtungen für Elektrofahrzeuge</title>
+<updated>2020-09-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2020#201689"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8071"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+</feed>

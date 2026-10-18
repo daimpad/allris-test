@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/252597</id>
+<title>Vorlage 252597: Bürgerantrag zur Beschlussvorlage DS 242080 / Bebauungsplan Nr. 7213-2 Schlossallee / Schlosshöfe</title>
+<subtitle>Verlauf der Vorlage 252597: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-05-15T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/252597.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252597"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021575#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „geändert beschlossen“ – 252597 Bürgerantrag zur Beschlussvorlage DS 242080 / Bebauungsplan Nr. 7213-2 Schlossallee / Schlosshöfe</title>
+<updated>2025-05-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252597"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021575"/>
+<summary>Entscheidung am 2025-05-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021575#folge-252597-01 ST</id>
+<title>Stellungnahme der Verwaltung 252597-01 ST: Bürgerantrag zur Beschlussvorlage DS 242080 / Bebauungsplan Nr. 7213-2 Schlossallee / Schlosshöfe</title>
+<updated>2025-03-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252597"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021575"/>
+<summary>Folgevorlage zu 252597</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021575#vorlage</id>
+<title>Neue Vorlage 252597: Bürgerantrag zur Beschlussvorlage DS 242080 / Bebauungsplan Nr. 7213-2 Schlossallee / Schlosshöfe</title>
+<updated>2025-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#252597"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021575"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+</feed>

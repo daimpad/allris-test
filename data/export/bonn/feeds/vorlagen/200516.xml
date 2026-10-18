@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/200516</id>
+<title>Vorlage 200516: Städtebaulicher Wettbewerb "Umfeld Dottendorfer Straße" - Aufgabenstellung und Auslobung</title>
+<subtitle>Verlauf der Vorlage 200516: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2020-04-22T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/200516.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dottendorf#200516"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/5237#folge-200516-2 ST</id>
+<title>Stellungnahme der Verwaltung 200516-2 ST: Städtebaulicher Wettbewerb "Umfeld Dottendorfer Straße" - Aufgabenstellung und Auslobung</title>
+<updated>2020-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dottendorf#200516"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5237"/>
+<summary>Folgevorlage zu 200516</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/5237#folge-200516-1</id>
+<title>Eilentscheidung HA 200516-1: Städtebaulicher Wettbewerb "Umfeld Dottendorfer Straße" - Aufgabenstellung und Auslobung</title>
+<updated>2020-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dottendorf#200516"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5237"/>
+<summary>Folgevorlage zu 200516</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/5237#vorlage</id>
+<title>Neue Vorlage 200516: Städtebaulicher Wettbewerb "Umfeld Dottendorfer Straße" - Aufgabenstellung und Auslobung</title>
+<updated>2020-04-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dottendorf#200516"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5237"/>
+<summary>Dringlichkeitsentscheidung OB · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+</feed>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/231272</id>
+<title>Vorlage 231272: Grüne/u.w.-Antrag: Sichere Kreuzungen und sogenannte Zebrastreifen in Kessenich</title>
+<subtitle>Verlauf der Vorlage 231272: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-01-02T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/231272.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#231272"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012937#folge-231272-02 ST</id>
+<title>Stellungnahme der Verwaltung 231272-02 ST: Grüne/u.w.-Antrag: Sichere Kreuzungen und sogenannte Zebrastreifen in Kessenich</title>
+<updated>2024-01-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#231272"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012937"/>
+<summary>Folgevorlage zu 231272</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012937#folge-231272-01 ST</id>
+<title>Stellungnahme der Verwaltung 231272-01 ST: Grüne/u.w.-Antrag: Sichere Kreuzungen und sogenannte Zebrastreifen in Kessenich</title>
+<updated>2023-10-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#231272"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012937"/>
+<summary>Folgevorlage zu 231272</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012937#vorlage</id>
+<title>Neue Vorlage 231272: Grüne/u.w.-Antrag: Sichere Kreuzungen und sogenannte Zebrastreifen in Kessenich</title>
+<updated>2023-07-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#231272"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012937"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+</feed>

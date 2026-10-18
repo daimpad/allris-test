@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ortsteil-mehlem</id>
+<title>RIS-Karte Bonn – Mehlem</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Mehlem</subtitle>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-mehlem.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029697#vorlage</id>
+<title>Neue Vorlage 261623-02 ST: BBB-Antrag: Vormalige Tätigkeit eines Alltagshelfer in den städtischen Kindertagesstätten Friedrich-Bleek-Straße / Oberaustraße, Stellungnahme des Oberbürgermeisters</title>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261623-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029697"/>
+<summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029417#vorlage</id>
+<title>Neue Vorlage 253201-10 ST: Stellungnahme der Verwaltung zur BBB-Anfrage: Vorhabenbezogener Bebauungsplan Nr. 7213-2 „Schloßallee“, Errichtung von gefördertem Wohnraum und Bonner Baulandmodell Drucksachengruppen 253201, 1613742EB5 und 260169</title>
+<updated>2026-10-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-10%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029417"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029494#vorlage</id>
+<title>Neue Vorlage 261623-01 ST: Vertagungsbitte zum BBB-Antrag: Vormalige Tätigkeit eines Alltagshelfer in den städtischen Kindertagesstätten Friedrich-Bleek-Straße / Oberaustraße, Stellungnahme des Oberbürgermeisters</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261623-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029494"/>
+<summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029172#vorlage</id>
+<title>Neue Vorlage 260787-01 ST: FDP-Große Anfrage: Bauliche Maßnahmen Heisterbachst. / Ecke Rheinufer</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260787-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029172"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029264#vorlage</id>
+<title>Neue Vorlage 261591-01 ST: Bürgerantrag: Einrichtung eines öffentlichen Calisthenics- und Outdoor-Fitness-Platz am Bonner Rheinufer</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261591-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029264"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029253#vorlage</id>
+<title>Neue Vorlage 253201-09: BBB-Anfrage: Vorhabenbezogenen Bebauungsplan Nr. 7213-2 „Schloßallee“, Errichtung von gefördertem Wohnraum und Bonner Baulandmodell Drucksachengruppen 253201, 1613742EB5 und 260169</title>
+<updated>2026-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-09"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029253"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028778#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 261469 Bürgerantrag: Maßnahmen zur Einhaltung von Tempo 30 auf der Brunhildstraße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261469"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028778"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028606#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261109-01 ST GRÜNEN-Große Anfrage: Bauliche Verbesserungen für den Fuß- und Radverkehr am Rheinufer in Mehlem</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261109-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028606"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028598#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261110-02 ST GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261110-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028598"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028312#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 253201-08 ST Stellungnahme zur BBB-Anfrage: Vorhabenbezogener Bebauungsplan Nr. 7213-2 „Schloßallee“, Errichtung von gefördertem Wohnraum und Bonner Baulandmodell Drucksachengruppen 253201, 1613742EB5 und 260169</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028312"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028261#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 253201-07 BBB-Anfrage: Vorhabenbezogener Bebauungsplan Nr. 7213-2 „Schloßallee“, Errichtung von gefördertem Wohnraum und Bonner Baulandmodell Drucksachengruppen 253201, 1613742EB5 und 260169</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028261"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028040#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261110-01 ST GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem - Vertagungsbitte</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261110-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028040"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027914#beratung-6</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 253201-06 Vorhabenbezogener Bebauungsplan Nr. 7213-2 „Schloßallee“, Stadtbezirk Bad Godesberg, Ortsteil Mehlem, hier: Befreiung zur Errichtung von gefördertem Wohnungsbau</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027914"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027861#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261110 GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261110"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027861"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027860#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261109 GRÜNEN-Große Anfrage: Bauliche Verbesserungen für den Fuß- und Radverkehr am Rheinufer in Mehlem</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261109"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027860"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027546#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260907-01 ST CDU-Große Anfrage: Hochwasserschutz Godesberger- und Mehlemer Bach und Katastrophenvorsorge</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260907-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027546"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027486#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 210538-05 ST FDP-Große Anfrage: Umsetzung des Beschlusses 210538</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#210538-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027486"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027394#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260907 CDU-Große Anfrage: Hochwasserschutz Godesberger- und Mehlemer Bach und Katastrophenvorsorge</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260907"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027394"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027392#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260906 CDU-Antrag: Prüfauftrag für die Errichtung einer Outdoor-Fitnessanlage in Mehlem</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260906"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027392"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026817#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260787 FDP-Große Anfrage: Bauliche Maßnahmen Heisterbachst. / Ecke Rheinufer</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260787"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026817"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026248#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 210538-04 FDP-Große Anfrage: Umsetzung des Beschlusses 210538</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#210538-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026248"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025626#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260267 CDU-Antrag: Neugestaltung der Fußgänger- und Fahrradunterführung Drehholzstraße in Mehlem inklusive einer ausreichenden Beleuchtung</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260267"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025626"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024024#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 242185-02 ST Verbreiterung des Gehwegs der Rüdigerstraße vor dem Seniorenhaus Steinbach</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242185-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024024"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023057#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 242185-01 ST Verbreiterung des Gehwegs der Rüdigerstraße vor dem Seniorenhaus Steinbach</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242185-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023057"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020539#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 242185 Verbreiterung des Gehwegs der Rüdigerstraße vor dem Seniorenhaus Steinbach</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242185"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020539"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020455#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 242161 Bürgerantrag: Erhalt der alten Blutbuche in Bonn-Mehlem, Rolandswerther Straße 104 d</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242161"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020455"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029123#vorlage</id>
+<title>Neue Vorlage 261623: BBB-Antrag: Vormalige Tätigkeit eines Alltagshelfer in den städtischen Kindertagesstätten Friedrich-Bleek-Straße / Oberaustraße, Stellungnahme des Oberbürgermeisters</title>
+<updated>2026-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261623"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029123"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028598#vorlage</id>
+<title>Neue Vorlage 261110-02 ST: GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem</title>
+<updated>2026-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261110-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028598"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029030#vorlage</id>
+<title>Neue Vorlage 261591: Bürgerantrag: Einrichtung eines öffentlichen Calisthenics- und Outdoor-Fitness-Platz am Bonner Rheinufer</title>
+<updated>2026-08-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261591"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029030"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028040#vorlage</id>
+<title>Neue Vorlage 261110-01 ST: GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem - Vertagungsbitte</title>
+<updated>2026-08-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261110-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028040"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028776#vorlage</id>
+<title>Neue Vorlage 261468: Bürgerantrag: Maßnahmen zur Verbesserung der Sicherheit im Bereich Rheinufer zwischen Rosental und Bonner Hafen</title>
+<updated>2026-08-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261468"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028776"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028778#vorlage</id>
+<title>Neue Vorlage 261469: Bürgerantrag: Maßnahmen zur Einhaltung von Tempo 30 auf der Brunhildstraße</title>
+<updated>2026-08-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261469"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028778"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028606#vorlage</id>
+<title>Neue Vorlage 261109-01 ST: GRÜNEN-Große Anfrage: Bauliche Verbesserungen für den Fuß- und Radverkehr am Rheinufer in Mehlem</title>
+<updated>2026-08-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261109-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028606"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027486#vorlage</id>
+<title>Neue Vorlage 210538-05 ST: FDP-Große Anfrage: Umsetzung des Beschlusses 210538</title>
+<updated>2026-07-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#210538-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027486"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026267#beratung-6</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „vertagt - mit Maßgabe“ – 230605-11 Grundstück in Bonn-Mehlem, Rolandswerther Straße 140 d - Errichtung eines Einfamilienwohnhauses mit Garage Az.: 40216/2023</title>
+<updated>2026-07-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#230605-11"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026267"/>
+<summary>Kenntnisnahme am 2026-07-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028312#vorlage</id>
+<title>Neue Vorlage 253201-08 ST: Stellungnahme zur BBB-Anfrage: Vorhabenbezogener Bebauungsplan Nr. 7213-2 „Schloßallee“, Errichtung von gefördertem Wohnraum und Bonner Baulandmodell Drucksachengruppen 253201, 1613742EB5 und 260169</title>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028312"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028261#beratung-2</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen - mit Protokollnotiz“ – 253201-07 BBB-Anfrage: Vorhabenbezogener Bebauungsplan Nr. 7213-2 „Schloßallee“, Errichtung von gefördertem Wohnraum und Bonner Baulandmodell Drucksachengruppen 253201, 1613742EB5 und 260169</title>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028261"/>
+<summary>Kenntnisnahme am 2026-07-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027914#beratung-3</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253201-06 Vorhabenbezogener Bebauungsplan Nr. 7213-2 „Schloßallee“, Stadtbezirk Bad Godesberg, Ortsteil Mehlem, hier: Befreiung zur Errichtung von gefördertem Wohnungsbau</title>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027914"/>
+<summary>Kenntnisnahme am 2026-07-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026079#beratung-3</id>
+<title>Rat: „ungeändert beschlossen“ – 242338-03 Beanstandung eines Beschlusses der Bezirksvertretung Bad Godesberg vom 29.01.2025 zum Antrag: Fristgerechte und vereinfachte Genehmigungen von Veranstaltungen, u.a. des Caracciola Cups und der After-Zoch-Party in Mehlem</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242338-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026079"/>
+<summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026078#beratung-3</id>
+<title>Rat: „ungeändert beschlossen“ – 240860-03 Beanstandung eines Beschlusses der Bezirksvertretung Bad Godesberg vom 05.06.2024 zum Antrag "Genehmigung des Caracciola Cups im Drachensteinpark, Ortsteil Mehlem"</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#240860-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026078"/>
+<summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027914#vorlage</id>
+<title>Neue Vorlage 253201-06: Vorhabenbezogener Bebauungsplan Nr. 7213-2 „Schloßallee“, Stadtbezirk Bad Godesberg, Ortsteil Mehlem, hier: Befreiung zur Errichtung von gefördertem Wohnungsbau</title>
+<updated>2026-06-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027914"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028261#vorlage</id>
+<title>Neue Vorlage 253201-07: BBB-Anfrage: Vorhabenbezogener Bebauungsplan Nr. 7213-2 „Schloßallee“, Errichtung von gefördertem Wohnraum und Bonner Baulandmodell Drucksachengruppen 253201, 1613742EB5 und 260169</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028261"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027439#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 242340-04 ST Stellungnahme der Verwaltung zu "FDP-Große Anfrage: Umsetzung des Beschlusses 242340, Verlegung der Ladestation Giselherstraße 37 in Mehlem"</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242340-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027439"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027438#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 242340-03 Mitteilungsvorlage zu "Interfraktioneller CDU-, BBB-, FDP-Antrag zur Verlegung der Ladestation Giselherstraße 37 in Mehlem"</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242340-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027438"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026832#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 242340-02 FDP-Große Anfrage: Umsetzung des Beschlusses 242340, Verlegung der Ladestation Giselherstraße 37 in Mehlem</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242340-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026832"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026279#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 200830-04 ST BBB-Anfrage: Bahnhof Mehlem Sachstand Sanierung und Ausbau Drucksachengruppe 200830</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#200830-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026279"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025801#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 200830-03 ST Vertagungsbitte zur BBB-Anfrage: Bahnhof Mehlem Sachstand Sanierung und Ausbau Drucksachengruppe 200830</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#200830-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025801"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025639#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 200830-02 BBB-Anfrage: Bahnhof Mehlem Sachstand Sanierung und Ausbau Drucksachengruppe 200830</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#200830-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025639"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025655#beratung-6</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „ungeändert beschlossen“ – 260277 Stellungnahmen sowie Feststellungsbeschluss zur 205. Änderung des Flächennutzungsplanes "Schloßallee" der Bundesstadt Bonn, im Stadtbezirk Bad Godesberg, Ortsteil Mehlem</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260277"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025655"/>
+<summary>Anhörung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026267#beratung-5</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 230605-11 Grundstück in Bonn-Mehlem, Rolandswerther Straße 140 d - Errichtung eines Einfamilienwohnhauses mit Garage Az.: 40216/2023</title>
+<updated>2026-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#230605-11"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026267"/>
+<summary>Kenntnisnahme am 2026-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025655#beratung-5</id>
+<title>Rat: „ungeändert beschlossen“ – 260277 Stellungnahmen sowie Feststellungsbeschluss zur 205. Änderung des Flächennutzungsplanes "Schloßallee" der Bundesstadt Bonn, im Stadtbezirk Bad Godesberg, Ortsteil Mehlem</title>
+<updated>2026-06-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260277"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025655"/>
+<summary>Entscheidung am 2026-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027861#vorlage</id>
+<title>Neue Vorlage 261110: GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem</title>
+<updated>2026-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261110"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027861"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027860#vorlage</id>
+<title>Neue Vorlage 261109: GRÜNEN-Große Anfrage: Bauliche Verbesserungen für den Fuß- und Radverkehr am Rheinufer in Mehlem</title>
+<updated>2026-06-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#261109"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027860"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027439#vorlage</id>
+<title>Neue Vorlage 242340-04 ST: Stellungnahme der Verwaltung zu "FDP-Große Anfrage: Umsetzung des Beschlusses 242340, Verlegung der Ladestation Giselherstraße 37 in Mehlem"</title>
+<updated>2026-06-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242340-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027439"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026079#vorlage</id>
+<title>Neue Vorlage 242338-03: Beanstandung eines Beschlusses der Bezirksvertretung Bad Godesberg vom 29.01.2025 zum Antrag: Fristgerechte und vereinfachte Genehmigungen von Veranstaltungen, u.a. des Caracciola Cups und der After-Zoch-Party in Mehlem</title>
+<updated>2026-05-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242338-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026079"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026078#vorlage</id>
+<title>Neue Vorlage 240860-03: Beanstandung eines Beschlusses der Bezirksvertretung Bad Godesberg vom 05.06.2024 zum Antrag "Genehmigung des Caracciola Cups im Drachensteinpark, Ortsteil Mehlem"</title>
+<updated>2026-05-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#240860-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026078"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026279#beratung-4</id>
+<title>Ausschuss für Mobilität und Verkehr: „vertagt“ – 200830-04 ST BBB-Anfrage: Bahnhof Mehlem Sachstand Sanierung und Ausbau Drucksachengruppe 200830</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#200830-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026279"/>
+<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025801#beratung-4</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 200830-03 ST Vertagungsbitte zur BBB-Anfrage: Bahnhof Mehlem Sachstand Sanierung und Ausbau Drucksachengruppe 200830</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#200830-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025801"/>
+<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025639#beratung-3</id>
+<title>Ausschuss für Mobilität und Verkehr: „vertagt - mit Maßgabe“ – 200830-02 BBB-Anfrage: Bahnhof Mehlem Sachstand Sanierung und Ausbau Drucksachengruppe 200830</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#200830-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025639"/>
+<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027603#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260873-01 ST FDP-Antrag: Beseitigung der Geruchsbelästigung, Instandsetzung der Trockentoilette am Beueler Rheinufer</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260873-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027603"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027321#beratung-3</id>
+<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 260873 FDP-Antrag: Beseitigung der Geruchsbelästigung, Instandsetzung der Trockentoilette am Beueler Rheinufer</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260873"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027321"/>
+<summary>Entscheidung am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026811#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260509-02 Abbau der Kleidercontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260509-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026811"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026676#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260726 Bürgerantrag: Erhalt der Rosskastanie im Spatzenbrunnenpark Mehlem</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260726"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026676"/>
+<summary>Entscheidung am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027546#vorlage</id>
+<title>Neue Vorlage 260907-01 ST: CDU-Große Anfrage: Hochwasserschutz Godesberger- und Mehlemer Bach und Katastrophenvorsorge</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260907-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027546"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027438#vorlage</id>
+<title>Neue Vorlage 242340-03: Mitteilungsvorlage zu "Interfraktioneller CDU-, BBB-, FDP-Antrag zur Verlegung der Ladestation Giselherstraße 37 in Mehlem"</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242340-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027438"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026279#beratung-3</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 200830-04 ST BBB-Anfrage: Bahnhof Mehlem Sachstand Sanierung und Ausbau Drucksachengruppe 200830</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#200830-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026279"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026060#beratung-3</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 253201-05 ST BBB-Anfrage: Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 7213-2 „Schloßallee“, Stadtbezirk Bad Godesberg, Ortsteil Mehlem Drucksachenfolge 253201</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026060"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026021#beratung-3</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 253201-04 ST BBB-Anfrage: Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 7213-2 „Schloßallee“, Stadtbezirk Bad Godesberg, Ortsteil Mehlem Drucksachenfolge 253201</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026021"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025853#beratung-2</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 253201-03 BBB-Anfrage: Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 7213-2 „Schloßallee“, Stadtbezirk Bad Godesberg, Ortsteil Mehlem Drucksachenfolge 253201</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025853"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025655#beratung-4</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 260277 Stellungnahmen sowie Feststellungsbeschluss zur 205. Änderung des Flächennutzungsplanes "Schloßallee" der Bundesstadt Bonn, im Stadtbezirk Bad Godesberg, Ortsteil Mehlem</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260277"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025655"/>
+<summary>Empfehlung am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025639#beratung-2</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen - mit Protokollnotiz“ – 200830-02 BBB-Anfrage: Bahnhof Mehlem Sachstand Sanierung und Ausbau Drucksachengruppe 200830</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#200830-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025639"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027603#vorlage</id>
+<title>Neue Vorlage 260873-01 ST: FDP-Antrag: Beseitigung der Geruchsbelästigung, Instandsetzung der Trockentoilette am Beueler Rheinufer</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260873-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027603"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026267#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 230605-11 Grundstück in Bonn-Mehlem, Rolandswerther Straße 140 d - Errichtung eines Einfamilienwohnhauses mit Garage Az.: 40216/2023</title>
+<updated>2026-05-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#230605-11"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026267"/>
+<summary>Kenntnisnahme am 2026-05-11; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025232#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 253201-02 Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 7213-2 „Schloßallee“, Stadtbezirk Bad Godesberg, Ortsteil Mehlem</title>
+<updated>2026-05-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025232"/>
+<summary>Kenntnisnahme am 2026-05-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027394#vorlage</id>
+<title>Neue Vorlage 260907: CDU-Große Anfrage: Hochwasserschutz Godesberger- und Mehlemer Bach und Katastrophenvorsorge</title>
+<updated>2026-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260907"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027394"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027392#vorlage</id>
+<title>Neue Vorlage 260906: CDU-Antrag: Prüfauftrag für die Errichtung einer Outdoor-Fitnessanlage in Mehlem</title>
+<updated>2026-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260906"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027392"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026811#vorlage</id>
+<title>Neue Vorlage 260509-02: Abbau der Kleidercontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260509-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026811"/>
+<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027321#vorlage</id>
+<title>Neue Vorlage 260873: FDP-Antrag: Beseitigung der Geruchsbelästigung, Instandsetzung der Trockentoilette am Beueler Rheinufer</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260873"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027321"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026279#vorlage</id>
+<title>Neue Vorlage 200830-04 ST: BBB-Anfrage: Bahnhof Mehlem Sachstand Sanierung und Ausbau Drucksachengruppe 200830</title>
+<updated>2026-05-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#200830-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026279"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026832#vorlage</id>
+<title>Neue Vorlage 242340-02: FDP-Große Anfrage: Umsetzung des Beschlusses 242340, Verlegung der Ladestation Giselherstraße 37 in Mehlem</title>
+<updated>2026-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#242340-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026832"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026817#vorlage</id>
+<title>Neue Vorlage 260787: FDP-Große Anfrage: Bauliche Maßnahmen Heisterbachst. / Ecke Rheinufer</title>
+<updated>2026-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260787"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026817"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026267#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 230605-11 Grundstück in Bonn-Mehlem, Rolandswerther Straße 140 d - Errichtung eines Einfamilienwohnhauses mit Garage Az.: 40216/2023</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#230605-11"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026267"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026250#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260509 FDP-Antrag: Abbau der Kleidercontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260509"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026250"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026249#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260508 FDP-Antrag: Erhöhung der Leerungsfrequenz der Altglascontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260508"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026249"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026135#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253276-02 BBB-Anfrage Bauarbeiten im Mehlemer Spatzenbrunnenpark hier: Beantwortungen der Protokollfragen aus der Sitzung 03.12.2025</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253276-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026135"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025979#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260246-02 AA Volt-Änderungsantrag: Befestigung des Geh- und Radweges Rolandswerther Straße 44 - 130 Antrag zur Vorlage 260246</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260246-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025979"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025950#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260246-01 ST Befestigung des Geh- und Radweges Rolandswerther Straße 44 - 130</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260246-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025950"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025655#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260277 Stellungnahmen sowie Feststellungsbeschluss zur 205. Änderung des Flächennutzungsplanes "Schloßallee" der Bundesstadt Bonn, im Stadtbezirk Bad Godesberg, Ortsteil Mehlem</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260277"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025655"/>
+<summary>Anhörung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025578#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260246 Grüne-Antrag: Befestigung des Geh- und Radweges Rolandswerther Straße 44 - 130</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260246"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025578"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024055#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253552-01 ST CDU-Große Anfrage: Pflege und Unterhaltung am Mehlemer Bach</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253552-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024055"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023771#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253552 CDU-Große Anfrage: Pflege und Unterhaltung am Mehlemer Bach</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253552"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023771"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026694#vorlage</id>
+<title>Neue Vorlage 260735: Bürgerantrag: Aufwertung des Parks des Mehlem'schen Hauses</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260735"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026694"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026676#vorlage</id>
+<title>Neue Vorlage 260726: Bürgerantrag: Erhalt der Rosskastanie im Spatzenbrunnenpark Mehlem</title>
+<updated>2026-04-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260726"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026676"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026476#vorlage</id>
+<title>Neue Vorlage 260638: Sachstand barrierefreier Ausbau Bahnhof Mehlem</title>
+<updated>2026-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260638"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026476"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026476#beratung-3</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen - mit Protokollnotiz“ – 260638 Sachstand barrierefreier Ausbau Bahnhof Mehlem</title>
+<updated>2026-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260638"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026476"/>
+<summary>Kenntnisnahme am 2026-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026267#vorlage</id>
+<title>Neue Vorlage 230605-11: Grundstück in Bonn-Mehlem, Rolandswerther Straße 140 d - Errichtung eines Einfamilienwohnhauses mit Garage Az.: 40216/2023</title>
+<updated>2026-04-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#230605-11"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026267"/>
+<summary>Mitteilungsvorlage · federführend: 63 Bauordnungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026135#vorlage</id>
+<title>Neue Vorlage 253276-02: BBB-Anfrage Bauarbeiten im Mehlemer Spatzenbrunnenpark hier: Beantwortungen der Protokollfragen aus der Sitzung 03.12.2025</title>
+<updated>2026-04-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253276-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026135"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026060#vorlage</id>
+<title>Neue Vorlage 253201-05 ST: BBB-Anfrage: Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 7213-2 „Schloßallee“, Stadtbezirk Bad Godesberg, Ortsteil Mehlem Drucksachenfolge 253201</title>
+<updated>2026-04-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#253201-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026060"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026250#vorlage</id>
+<title>Neue Vorlage 260509: FDP-Antrag: Abbau der Kleidercontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-03-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260509"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026250"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026249#vorlage</id>
+<title>Neue Vorlage 260508: FDP-Antrag: Erhöhung der Leerungsfrequenz der Altglascontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-03-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:mehlem#260508"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026249"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+</feed>

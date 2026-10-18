@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/253904</id>
+<title>Vorlage 253904: Aufstellungsbeschluss für die 1. Änderung des Bebauungsplans Nr. 7519-14, „An der Ziegelei“ der Bundesstadt Bonn im Stadtbezirk Hardtberg, Ortsteil Lengsdorf</title>
+<subtitle>Verlauf der Vorlage 253904: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-12-11T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/253904.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lengsdorf#253904"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024542#beratung-4</id>
+<title>Rat: „ungeändert beschlossen“ – 253904 Aufstellungsbeschluss für die 1. Änderung des Bebauungsplans Nr. 7519-14, „An der Ziegelei“ der Bundesstadt Bonn im Stadtbezirk Hardtberg, Ortsteil Lengsdorf</title>
+<updated>2025-12-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lengsdorf#253904"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024542"/>
+<summary>Entscheidung am 2025-12-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024542#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 253904 Aufstellungsbeschluss für die 1. Änderung des Bebauungsplans Nr. 7519-14, „An der Ziegelei“ der Bundesstadt Bonn im Stadtbezirk Hardtberg, Ortsteil Lengsdorf</title>
+<updated>2025-12-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lengsdorf#253904"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024542"/>
+<summary>Anhörung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024542#vorlage</id>
+<title>Neue Vorlage 253904: Aufstellungsbeschluss für die 1. Änderung des Bebauungsplans Nr. 7519-14, „An der Ziegelei“ der Bundesstadt Bonn im Stadtbezirk Hardtberg, Ortsteil Lengsdorf</title>
+<updated>2025-11-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lengsdorf#253904"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024542"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+</feed>

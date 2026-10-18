@@ -24,6 +24,7 @@
       <button type="button" class="toggle" data-panel="timeline-wrap" aria-controls="timeline-wrap" aria-pressed="true">Zeitleiste</button>
       <button type="button" class="toggle" data-panel="panel-detail" aria-controls="panel-detail" aria-pressed="true">Detail</button>
       <button type="button" class="toggle" data-panel="panel-wege" aria-controls="panel-wege" aria-pressed="false">Wege</button>
+      <button type="button" class="toggle" data-panel="panel-termine" aria-controls="panel-termine" aria-pressed="false">Termine</button>
       <button type="button" class="toggle mobile-only" data-panel="sources" aria-controls="sources" aria-pressed="false">Quellen</button>
       <button type="button" class="toggle" id="about-open" aria-haspopup="dialog">Über</button>
     </nav>
@@ -74,6 +75,7 @@
           </details>
         </form>
         <p class="count" id="count" aria-live="polite"></p>
+        <p class="subscribe" id="subscribe" hidden></p>
         <ol class="papers" id="papers" tabindex="-1"></ol>
       </div>
     </section>
@@ -96,6 +98,14 @@
       <div class="panel-body" id="wege"></div>
     </section>
 
+    <section id="panel-termine" class="glass" aria-labelledby="termine-heading" hidden>
+      <div class="panel-head">
+        <h2 id="termine-heading" tabindex="-1">Kommende Sitzungen</h2>
+        <button type="button" class="icon-btn" data-close="panel-termine" aria-label="Termine schließen">×</button>
+      </div>
+      <div class="panel-body" id="termine"></div>
+    </section>
+
     <div id="map" role="region" aria-label="Karte der Vorlagen im gewählten Gebiet. Alle Vorlagen stehen auch in der Liste."></div>
   </main>
 
@@ -106,6 +116,7 @@
         <p>OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteil- und Bezirksflächen der Stadt Bonn (CC0 1.0) · Straßen und Kartenhintergrund © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet.</p>
         <p id="stand"></p>
         <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a></p>
+        <p class="lod">Offene Daten: <a href="data/export/bonn/vorlagen.geojson">verortete Vorlagen (GeoJSON)</a> · <a href="data/export/bonn/termine.ics">Sitzungskalender (iCalendar)</a> · <a href="data/export/bonn/dcat.jsonld">Datensatzbeschreibung (DCAT-AP)</a></p>
       </div>
     </details>
   </aside>
@@ -140,6 +151,9 @@
 
       <h3>Wie sicher sind die Angaben?</h3>
       <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Einige sind erschlossen, etwa der Ort aus dem Titel einer Vorlage oder das Datum einer Sitzung. Sie sind als „abgeleitet“ gekennzeichnet. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt.</p>
+
+      <h3>Auf dem Laufenden bleiben</h3>
+      <p>Unter der Liste finden Sie einen <strong>Feed</strong> für das gewählte Gebiet, bei einer Vorlage einen Feed für genau diesen Vorgang. Ein Feed-Reader (zum Beispiel im Browser oder E-Mail-Programm) meldet dann neue Vorlagen und Beratungsergebnisse. Unter „Termine“ stehen die kommenden Sitzungen; sie lassen sich als Kalenderdatei in den eigenen Kalender übernehmen.</p>
 
       <h3>Was die Karte nicht kann</h3>
       <p>Sie ersetzt nicht das Original: Maßgeblich ist immer das Dokument im Ratsinformationssystem, zu dem jede Vorlage verlinkt. Nichtöffentliche Beratungen, die Arbeit innerhalb der Verwaltung und die Umsetzung von Beschlüssen sind von außen nicht einsehbar.</p>

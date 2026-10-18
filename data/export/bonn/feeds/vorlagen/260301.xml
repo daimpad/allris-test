@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/260301</id>
+<title>Vorlage 260301: Bebauungsplan 6222-3 "Zukunftsort Dransdorfer Berg", hier: Kostenbeteiligung der Stadt Bonn im Bebauungsplanverfahren</title>
+<subtitle>Verlauf der Vorlage 260301: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/260301.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dransdorf#260301"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025721#beratung-4</id>
+<title>Rat: „ungeändert beschlossen“ – 260301 Bebauungsplan 6222-3 "Zukunftsort Dransdorfer Berg", hier: Kostenbeteiligung der Stadt Bonn im Bebauungsplanverfahren</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dransdorf#260301"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025721"/>
+<summary>Entscheidung am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025721#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 260301 Bebauungsplan 6222-3 "Zukunftsort Dransdorfer Berg", hier: Kostenbeteiligung der Stadt Bonn im Bebauungsplanverfahren</title>
+<updated>2026-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dransdorf#260301"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025721"/>
+<summary>Empfehlung am 2026-04-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025721#vorlage</id>
+<title>Neue Vorlage 260301: Bebauungsplan 6222-3 "Zukunftsort Dransdorfer Berg", hier: Kostenbeteiligung der Stadt Bonn im Bebauungsplanverfahren</title>
+<updated>2026-04-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:dransdorf#260301"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025721"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+</feed>

@@ -1,0 +1,1152 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//RIS-Karte Bonn//Sitzungskalender//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005986
+DTSTAMP:20260918T140000Z
+DTSTART:20260918T140000Z
+SUMMARY:Beirat Bürgerbeteiligung (abgesagt)
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CANCELLED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005626
+DTSTAMP:20260922T160000Z
+DTSTART:20260922T160000Z
+DTEND:20260922T200500Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung: https://
+ www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005626\nEinladung: https:
+ //www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3208798&OTYP=41
+ \nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005626
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005887
+DTSTAMP:20260922T160000Z
+DTSTART:20260922T160000Z
+SUMMARY:Ausschuss für Digitalisierung\, Dienstleistung und Verwaltungsmode
+ rnisierung
+DESCRIPTION:Sitzung des Ausschusses für Digitalisierung\, Dienstleistung u
+ nd Verwaltungsmodernisierung\nTagesordnung: https://www.bonn.sitzung-onlin
+ e.de/public/TO010?SILFDNR=2005887\nEinladung: https://www.bonn.sitzung-onl
+ ine.de/public/doc?DOCTYP=108&DOLFDNR=3208753&OTYP=41\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005887
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005818
+DTSTAMP:20260923T160000Z
+DTSTART:20260923T160000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILF
+ DNR=2005818\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCT
+ YP=108&DOLFDNR=3210099&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005818
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005585
+DTSTAMP:20260924T150000Z
+DTSTART:20260924T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung: https://www.bonn.sitzung-onlin
+ e.de/public/TO010?SILFDNR=2005585\nEinladung: https://www.bonn.sitzung-onl
+ ine.de/public/doc?DOCTYP=108&DOLFDNR=3211352&OTYP=41\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005585
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006495
+DTSTAMP:20260928T170000Z
+DTSTART:20260928T170000Z
+DTEND:20260928T184100Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung: https://www.bonn.sitzung-onlin
+ e.de/public/TO010?SILFDNR=2006495\nEinladung: https://www.bonn.sitzung-onl
+ ine.de/public/doc?DOCTYP=108&DOLFDNR=3224151&OTYP=41\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006495
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005757
+DTSTAMP:20260929T160000Z
+DTSTART:20260929T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005
+ 757\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&D
+ OLFDNR=3212903&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005757
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005825
+DTSTAMP:20260930T160400Z
+DTSTART:20260930T160400Z
+SUMMARY:Ausschuss für Umwelt\, Klima und Lokale Agenda
+DESCRIPTION:Sitzung des Ausschusses für Umwelt\, Klima und Lokale Agenda\n
+ Tagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005
+ 825\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&D
+ OLFDNR=3215354&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005825
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005840
+DTSTAMP:20261001T160200Z
+DTSTART:20261001T160200Z
+SUMMARY:Sportausschuss
+DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung: https://www.bonn.si
+ tzung-online.de/public/TO010?SILFDNR=2005840\nEinladung: https://www.bonn.
+ sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3215412&OTYP=41\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005840
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006013
+DTSTAMP:20261001T160000Z
+DTSTART:20261001T160000Z
+DTEND:20261001T180900Z
+SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
+DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
+ on\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=
+ 2006013\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=1
+ 08&DOLFDNR=3215410&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006013
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005738
+DTSTAMP:20261006T160500Z
+DTSTART:20261006T160500Z
+DTEND:20261006T172000Z
+SUMMARY:Rechnungsprüfungsausschuss
+DESCRIPTION:Sitzung des Rechnungsprüfungsausschusses\nTagesordnung: https:
+ //www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005738\nEinladung: http
+ s://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3216534&OTYP=
+ 41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005738
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005864
+DTSTAMP:20261006T160000Z
+DTSTART:20261006T160000Z
+DTEND:20261006T190000Z
+SUMMARY:Kulturausschuss
+DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung: https://www.bonn.s
+ itzung-online.de/public/TO010?SILFDNR=2005864\nEinladung: https://www.bonn
+ .sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3218409&OTYP=41\nQuelle: 
+ OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005864
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005852
+DTSTAMP:20261007T150000Z
+DTSTART:20261007T150000Z
+DTEND:20261007T172200Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung: https://www.
+ bonn.sitzung-online.de/public/TO010?SILFDNR=2005852\nEinladung: https://ww
+ w.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3221706&OTYP=41\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005852
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006445
+DTSTAMP:20261007T150000Z
+DTSTART:20261007T150000Z
+SUMMARY:Naturschutzbeirat
+DESCRIPTION:Sitzung des Naturschutzbeirates\nTagesordnung: https://www.bonn
+ .sitzung-online.de/public/TO010?SILFDNR=2006445\nEinladung: https://www.bo
+ nn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3218871&OTYP=41\nQuelle
+ : OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006445
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005745
+DTSTAMP:20261008T160200Z
+DTSTART:20261008T160200Z
+DTEND:20261008T162800Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=
+ 2005745\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=1
+ 08&DOLFDNR=3222207&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005745
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005621
+DTSTAMP:20261013T150000Z
+DTSTART:20261013T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung: https://www.b
+ onn.sitzung-online.de/public/TO010?SILFDNR=2005621\nEinladung: https://www
+ .bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3229208&OTYP=41\nQue
+ lle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005621
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005888
+DTSTAMP:20261013T160000Z
+DTSTART:20261013T160000Z
+SUMMARY:Ausschuss für Digitalisierung\, Dienstleistung und Verwaltungsmode
+ rnisierung (abgesagt)
+DESCRIPTION:Sitzung des Ausschusses für Digitalisierung\, Dienstleistung u
+ nd Verwaltungsmodernisierung\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CANCELLED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005646
+DTSTAMP:20261014T150000Z
+DTSTART:20261014T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung: https://www.
+ bonn.sitzung-online.de/public/TO010?SILFDNR=2005646\nEinladung: https://ww
+ w.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3230473&OTYP=41\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005646
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005880
+DTSTAMP:20261014T160000Z
+DTSTART:20261014T160000Z
+DTEND:20261014T165200Z
+SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
+DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
+ ionales\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SIL
+ FDNR=2005880\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOC
+ TYP=108&DOLFDNR=3229938&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0
+ )
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005880
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006027
+DTSTAMP:20261014T160500Z
+DTSTART:20261014T160500Z
+DTEND:20261014T175200Z
+SUMMARY:Ausschuss für Kinder\, Jugend und Familie
+DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
+ sordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006027\
+ nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFD
+ NR=3229898&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006027
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005858
+DTSTAMP:20261015T160000Z
+DTSTART:20261015T160000Z
+DTEND:20261015T165100Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
+ ungsschutz\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?
+ SILFDNR=2005858\nEinladung: https://www.bonn.sitzung-online.de/public/doc?
+ DOCTYP=108&DOLFDNR=3228637&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 
+ 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005858
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005993
+DTSTAMP:20261015T150000Z
+DTSTART:20261015T150000Z
+SUMMARY:Beirat Kinder- und Jugendbeteiligung
+DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
+ g: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005993\nEinlad
+ ung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3232
+ 897&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005993
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005987
+DTSTAMP:20261016T140000Z
+DTSTART:20261016T140000Z
+SUMMARY:Beirat Bürgerbeteiligung
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung: https://
+ www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005987\nEinladung: https:
+ //www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3231129&OTYP=41
+ \nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005987
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005819
+DTSTAMP:20261103T170000Z
+DTSTART:20261103T170000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
+ adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005871
+DTSTAMP:20261103T170000Z
+DTSTART:20261103T170000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005611
+DTSTAMP:20261104T160000Z
+DTSTART:20261104T160000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005751
+DTSTAMP:20261104T170000Z
+DTSTART:20261104T170000Z
+SUMMARY:Schulausschuss
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005848
+DTSTAMP:20261104T170000Z
+DTSTART:20261104T170000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005586
+DTSTAMP:20261105T170000Z
+DTSTART:20261105T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005627
+DTSTAMP:20261110T170000Z
+DTSTART:20261110T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005812
+DTSTAMP:20261110T170000Z
+DTSTART:20261110T170000Z
+SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
+ ren
+DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
+ , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005966
+DTSTAMP:20261110T140000Z
+DTSTART:20261110T140000Z
+DTEND:20261110T170000Z
+SUMMARY:Städtebau- und Gestaltungsbeirat
+DESCRIPTION:Sitzung des Städtebau- und Gestaltungsbeirates\nTagesordnung n
+ och nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005587
+DTSTAMP:20261112T160000Z
+DTSTART:20261112T160000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005758
+DTSTAMP:20261117T170000Z
+DTSTART:20261117T170000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005859
+DTSTAMP:20261117T170000Z
+DTSTART:20261117T170000Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
+ ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005889
+DTSTAMP:20261118T170000Z
+DTSTART:20261118T170000Z
+SUMMARY:Ausschuss für Digitalisierung\, Dienstleistung und Verwaltungsmode
+ rnisierung
+DESCRIPTION:Sitzung des Ausschusses für Digitalisierung\, Dienstleistung u
+ nd Verwaltungsmodernisierung\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006014
+DTSTAMP:20261118T170000Z
+DTSTART:20261118T170000Z
+SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
+DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
+ on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005832
+DTSTAMP:20261119T170000Z
+DTSTART:20261119T170000Z
+SUMMARY:Sportausschuss
+DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005853
+DTSTAMP:20261119T160000Z
+DTSTART:20261119T160000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005620
+DTSTAMP:20261124T160000Z
+DTSTART:20261124T160000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005826
+DTSTAMP:20261125T170000Z
+DTSTART:20261125T170000Z
+SUMMARY:Ausschuss für Umwelt\, Klima und Lokale Agenda
+DESCRIPTION:Sitzung des Ausschusses für Umwelt\, Klima und Lokale Agenda\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006028
+DTSTAMP:20261125T170000Z
+DTSTART:20261125T170000Z
+SUMMARY:Ausschuss für Kinder-\, Jugend und Familie
+DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
+ sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
+ 0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006102
+DTSTAMP:20261125T160000Z
+DTSTART:20261125T160000Z
+SUMMARY:Naturschutzbeirat
+DESCRIPTION:Sitzung des Naturschutzbeirates\nTagesordnung noch nicht veröf
+ fentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005746
+DTSTAMP:20261126T170000Z
+DTSTART:20261126T170000Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005839
+DTSTAMP:20261126T170000Z
+DTSTART:20261126T170000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005994
+DTSTAMP:20261127T150000Z
+DTSTART:20261127T150000Z
+SUMMARY:Beirat Kinder- und Jugendbeteiligung
+DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
+ g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005739
+DTSTAMP:20261201T170000Z
+DTSTART:20261201T170000Z
+SUMMARY:Rechnungsprüfungsausschuss
+DESCRIPTION:Sitzung des Rechnungsprüfungsausschusses\nTagesordnung noch ni
+ cht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005865
+DTSTAMP:20261201T170000Z
+DTSTART:20261201T170000Z
+SUMMARY:Kulturausschuss
+DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung noch nicht veröffe
+ ntlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005872
+DTSTAMP:20261201T170000Z
+DTSTART:20261201T170000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005612
+DTSTAMP:20261202T160000Z
+DTSTART:20261202T160000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005647
+DTSTAMP:20261202T160000Z
+DTSTART:20261202T160000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005881
+DTSTAMP:20261202T170000Z
+DTSTART:20261202T170000Z
+SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
+DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
+ ionales\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der S
+ tadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005588
+DTSTAMP:20261203T170000Z
+DTSTART:20261203T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006558
+DTSTAMP:20261203T150000Z
+DTSTART:20261203T150000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr mit dem RSK
+DESCRIPTION:Gemeinsame Sitzung des Ausschusses für Mobilität und Verkehr 
+ mit dem RSK\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API d
+ er Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005988
+DTSTAMP:20261204T150000Z
+DTSTART:20261204T150000Z
+SUMMARY:Beirat Bürgerbeteiligung
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005628
+DTSTAMP:20261208T170000Z
+DTSTART:20261208T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005813
+DTSTAMP:20261208T170000Z
+DTSTART:20261208T170000Z
+SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
+ ren
+DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
+ , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005752
+DTSTAMP:20261209T170000Z
+DTSTART:20261209T170000Z
+SUMMARY:Schulausschuss
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005820
+DTSTAMP:20261209T170000Z
+DTSTART:20261209T170000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
+ adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005589
+DTSTAMP:20261210T160000Z
+DTSTART:20261210T160000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005833
+DTSTAMP:20261217T170000Z
+DTSTART:20261217T170000Z
+SUMMARY:Sportausschuss
+DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006583
+DTSTAMP:20270120T160000Z
+DTSTART:20270120T160000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr mit dem Rhein-Sieg-Kreis
+DESCRIPTION:Gemeinsame Sitzung des Ausschusses für Mobilität und Verkehr 
+ mit dem Rhein-Sieg-Kreis\nTagesordnung noch nicht veröffentlicht.\nQuelle
+ : OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006577
+DTSTAMP:20270127T170000Z
+DTSTART:20270127T170000Z
+SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
+ ren
+DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
+ , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006570
+DTSTAMP:20270128T170000Z
+DTSTART:20270128T170000Z
+SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
+DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
+ on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006485
+DTSTAMP:20270202T170000Z
+DTSTART:20270202T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006584
+DTSTAMP:20270203T170000Z
+DTSTART:20270203T170000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
+ adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006559
+DTSTAMP:20270216T160000Z
+DTSTART:20270216T160000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006549
+DTSTAMP:20270217T160000Z
+DTSTART:20270217T160000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006475
+DTSTAMP:20270218T160000Z
+DTSTART:20270218T160000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006178
+DTSTAMP:20270223T150000Z
+DTSTART:20270223T150000Z
+DTEND:20270223T180000Z
+SUMMARY:Kreiswahlausschuss
+DESCRIPTION:Sitzung des Kreiswahlausschusses\nTagesordnung noch nicht verö
+ ffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006571
+DTSTAMP:20270302T170000Z
+DTSTART:20270302T170000Z
+SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
+DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
+ on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006585
+DTSTAMP:20270310T170000Z
+DTSTART:20270310T170000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
+ adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006578
+DTSTAMP:20270311T170000Z
+DTSTART:20270311T170000Z
+SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
+ ren
+DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
+ , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006560
+DTSTAMP:20270316T160000Z
+DTSTART:20270316T160000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006486
+DTSTAMP:20270318T170000Z
+DTSTART:20270318T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006551
+DTSTAMP:20270407T150000Z
+DTSTART:20270407T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006476
+DTSTAMP:20270408T150000Z
+DTSTART:20270408T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006572
+DTSTAMP:20270414T160000Z
+DTSTART:20270414T160000Z
+SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
+DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
+ on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006561
+DTSTAMP:20270420T150000Z
+DTSTART:20270420T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006579
+DTSTAMP:20270422T160000Z
+DTSTART:20270422T160000Z
+SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
+ ren
+DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
+ , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006179
+DTSTAMP:20270429T140000Z
+DTSTART:20270429T140000Z
+DTEND:20270429T170000Z
+SUMMARY:Kreiswahlausschuss
+DESCRIPTION:Sitzung des Kreiswahlausschusses\nTagesordnung noch nicht verö
+ ffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006586
+DTSTAMP:20270429T160000Z
+DTSTART:20270429T160000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
+ adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006487
+DTSTAMP:20270504T160000Z
+DTSTART:20270504T160000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006552
+DTSTAMP:20270512T150000Z
+DTSTART:20270512T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006477
+DTSTAMP:20270513T150000Z
+DTSTART:20270513T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006562
+DTSTAMP:20270525T150000Z
+DTSTART:20270525T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006573
+DTSTAMP:20270526T160000Z
+DTSTART:20270526T160000Z
+SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
+DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
+ on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006587
+DTSTAMP:20270603T160000Z
+DTSTART:20270603T160000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
+ adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006488
+DTSTAMP:20270608T160000Z
+DTSTART:20270608T160000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006554
+DTSTAMP:20270616T150000Z
+DTSTART:20270616T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006478
+DTSTAMP:20270617T150000Z
+DTSTART:20270617T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006574
+DTSTAMP:20270630T160000Z
+DTSTART:20270630T160000Z
+SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
+DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
+ on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006588
+DTSTAMP:20270701T160000Z
+DTSTART:20270701T160000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
+ adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006563
+DTSTAMP:20270713T150000Z
+DTSTART:20270713T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006580
+DTSTAMP:20270714T160000Z
+DTSTART:20270714T160000Z
+SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
+ ren
+DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
+ , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006555
+DTSTAMP:20270901T150000Z
+DTSTART:20270901T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006489
+DTSTAMP:20270902T160000Z
+DTSTART:20270902T160000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006479
+DTSTAMP:20270907T150000Z
+DTSTART:20270907T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006565
+DTSTAMP:20270914T150000Z
+DTSTART:20270914T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006575
+DTSTAMP:20270923T160000Z
+DTSTART:20270923T160000Z
+SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
+DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
+ on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006581
+DTSTAMP:20270929T160000Z
+DTSTART:20270929T160000Z
+SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
+ ren
+DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
+ , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006556
+DTSTAMP:20271006T150000Z
+DTSTART:20271006T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006589
+DTSTAMP:20271006T160000Z
+DTSTART:20271006T160000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
+ adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006490
+DTSTAMP:20271007T160000Z
+DTSTART:20271007T160000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006481
+DTSTAMP:20271014T150000Z
+DTSTART:20271014T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006567
+DTSTAMP:20271019T150000Z
+DTSTART:20271019T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006582
+DTSTAMP:20271116T170000Z
+DTSTART:20271116T170000Z
+SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
+ ren
+DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
+ , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006557
+DTSTAMP:20271124T160000Z
+DTSTART:20271124T160000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006576
+DTSTAMP:20271125T170000Z
+DTSTART:20271125T170000Z
+SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
+DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
+ on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006568
+DTSTAMP:20271130T160000Z
+DTSTART:20271130T160000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006491
+DTSTAMP:20271202T170000Z
+DTSTART:20271202T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006590
+DTSTAMP:20271208T170000Z
+DTSTART:20271208T170000Z
+SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
+DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
+ ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
+ adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006482
+DTSTAMP:20271209T160000Z
+DTSTART:20271209T160000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

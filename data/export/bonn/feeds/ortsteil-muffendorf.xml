@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ortsteil-muffendorf</id>
+<title>RIS-Karte Bonn – Muffendorf</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Muffendorf</subtitle>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-muffendorf.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029911#vorlage</id>
+<title>Neue Vorlage 202262-02: BBB-Anfrage: Bauruine auf dem Grundstück Peter-Schwingen-Straße Ecke Muffendorfer Straße, Kennung Flurstücke 05431601700935-05431601700940; Drucksachengruppe 202262</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#202262-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029911"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029502#vorlage</id>
+<title>Neue Vorlage 261778: Bebauungsplan Nr. 8215-44, „Siebengebirgsterrassen“, Deutschherrenstraße, Fuß- und Fahrradweg zur Saint-Cloud-Straße</title>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#261778"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029502"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029214#vorlage</id>
+<title>Neue Vorlage 260951-01 AA: SPD-Bezirksfraktion: Satzungsbeschluss zur Denkmalbereichssatzung "Historischer Ortskern Bonn-Muffendorf" im Stadtbezirk Bad Godesberg, Ortsteil Muffendorf Antrag zur Vorlage 260951</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260951-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029214"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029214#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260951-01 AA SPD-Bezirksfraktion: Satzungsbeschluss zur Denkmalbereichssatzung "Historischer Ortskern Bonn-Muffendorf" im Stadtbezirk Bad Godesberg, Ortsteil Muffendorf Antrag zur Vorlage 260951</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260951-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029214"/>
+<summary>Anhörung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028734#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 232148-04 ST CDU-Große Anfrage: Aufstellung von zwei Dynamischen Rückmeldesystemen für Verkehrsteilnehmende („Dialog-displays“), DS 232148-02</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#232148-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028734"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028699#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 232148-03 CDU-Große Anfrage: Aufstellung von zwei Dynamischen Rückmeldesystemen für Verkehrsteilnehmende („Dialog-displays“), DS 232148-02</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#232148-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028699"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028554#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260913-01 ST BBB-Antrag: Abmarkierung von öffentlichen Kfz-Stellflächen in der  Klosterbergstraße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260913-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028554"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027501#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260951 Satzungsbeschluss zur Denkmalbereichssatzung "Historischer Ortskern Bonn-Muffendorf" im Stadtbezirk Bad Godesberg, Ortsteil Muffendorf</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260951"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027501"/>
+<summary>Anhörung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027406#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260913 BBB-Antrag: Abmarkierung von öffentlichen Kfz-Stellflächen in der  Klosterbergstraße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260913"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027406"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026373#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 260581 Grüne-Antrag: Goldbergweg</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260581"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026373"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028734#vorlage</id>
+<title>Neue Vorlage 232148-04 ST: CDU-Große Anfrage: Aufstellung von zwei Dynamischen Rückmeldesystemen für Verkehrsteilnehmende („Dialog-displays“), DS 232148-02</title>
+<updated>2026-08-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#232148-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028734"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028699#vorlage</id>
+<title>Neue Vorlage 232148-03: CDU-Große Anfrage: Aufstellung von zwei Dynamischen Rückmeldesystemen für Verkehrsteilnehmende („Dialog-displays“), DS 232148-02</title>
+<updated>2026-07-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#232148-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028699"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028554#vorlage</id>
+<title>Neue Vorlage 260913-01 ST: BBB-Antrag: Abmarkierung von öffentlichen Kfz-Stellflächen in der  Klosterbergstraße</title>
+<updated>2026-07-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260913-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028554"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027501#vorlage</id>
+<title>Neue Vorlage 260951: Satzungsbeschluss zur Denkmalbereichssatzung "Historischer Ortskern Bonn-Muffendorf" im Stadtbezirk Bad Godesberg, Ortsteil Muffendorf</title>
+<updated>2026-07-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260951"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027501"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027787#beratung-3</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 261069 Neues Familienzentrum in der Bundestadt Bonn zum Kindergartenjahr 2026/2027 Fröbel-Kindergarten Flügelnuss, Deutschherrenstr. 89, 53177 Bonn Träger Fröbel Bildung und Erziehung gemeinnützige GmbH, Salierring 47-53, 50667 Köln</title>
+<updated>2026-07-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#261069"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027787"/>
+<summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028036#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261091-01 ST Stellungnahme zu SPD-Große Anfrage: Leerstand in der Hicog-Siedlung Muffendorf/Pennenfeld sanktionieren</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#261091-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028036"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027935#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260908-02 ST CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260908-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027935"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027837#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261091 SPD-Große Anfrage: Leerstand in der Hicog-Siedlung Muffendorf/Pennenfeld sanktionieren</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#261091"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027837"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027594#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260908-01 ST CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260908-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027594"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027395#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260908 CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260908"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027395"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025714#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260299 Am Helpert 36a, 53177 Bonn</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025714"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028036#vorlage</id>
+<title>Neue Vorlage 261091-01 ST: Stellungnahme zu SPD-Große Anfrage: Leerstand in der Hicog-Siedlung Muffendorf/Pennenfeld sanktionieren</title>
+<updated>2026-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#261091-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028036"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027935#vorlage</id>
+<title>Neue Vorlage 260908-02 ST: CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-06-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260908-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027935"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027787#vorlage</id>
+<title>Neue Vorlage 261069: Neues Familienzentrum in der Bundestadt Bonn zum Kindergartenjahr 2026/2027 Fröbel-Kindergarten Flügelnuss, Deutschherrenstr. 89, 53177 Bonn Träger Fröbel Bildung und Erziehung gemeinnützige GmbH, Salierring 47-53, 50667 Köln</title>
+<updated>2026-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#261069"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027787"/>
+<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027837#vorlage</id>
+<title>Neue Vorlage 261091: SPD-Große Anfrage: Leerstand in der Hicog-Siedlung Muffendorf/Pennenfeld sanktionieren</title>
+<updated>2026-06-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#261091"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027837"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027594#vorlage</id>
+<title>Neue Vorlage 260908-01 ST: CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260908-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027594"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027406#vorlage</id>
+<title>Neue Vorlage 260913: BBB-Antrag: Abmarkierung von öffentlichen Kfz-Stellflächen in der  Klosterbergstraße</title>
+<updated>2026-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260913"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027406"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027395#vorlage</id>
+<title>Neue Vorlage 260908: CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260908"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027395"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026252#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260511 FDP-Antrag: Verlegung der Fahrradständer am Remi-Baert-Platz</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260511"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026252"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025797#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231871-10 Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-10"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025797"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025797#vorlage</id>
+<title>Neue Vorlage 231871-10: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche</title>
+<updated>2026-04-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-10"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025797"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026373#vorlage</id>
+<title>Neue Vorlage 260581: Grüne-Antrag: Goldbergweg</title>
+<updated>2026-04-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260581"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026373"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026252#vorlage</id>
+<title>Neue Vorlage 260511: FDP-Antrag: Verlegung der Fahrradständer am Remi-Baert-Platz</title>
+<updated>2026-03-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260511"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026252"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025169#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 241435-03 ST BBB-Anfrage: Sachstand Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf'; Drucksachengruppe 241435</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025169"/>
+<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025126#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 241435-02 BBB-Anfrage: Sachstand Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf'; Drucksachengruppe 241435</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025126"/>
+<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023821#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 252749-02 ST Erweiterung der Steingasse als Folgemaßnahme; hier: Stellungnahme zu 252749-01 ÄA</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#252749-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023821"/>
+<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023493#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 252749-01 AA Interfraktioneller Änderungsantrag BBB, CDU, SPD, FDP: Erweiterung der Steingasse als Folgemaßnahme Änderungsantrag zur Vorlage 252749</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#252749-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023493"/>
+<summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023328#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 212405-04 ST BBB-Anfrage: Grundstück Bonn-Muffendorf, Lehnpütz - Neubau von 6 Einfamilienhäusern, Drucksachengruppe 212405</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#212405-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023328"/>
+<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023125#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 212405-03 BBB-Anfrage: Grundstück Bonn-Muffendorf, Lehnpütz - Neubau von 6 Einfamilienhäusern, Drucksachengruppe 212405</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#212405-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023125"/>
+<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021959#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 252749 Erweiterung der Steingasse als Folgemaßnahme</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#252749"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021959"/>
+<summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025714#vorlage</id>
+<title>Neue Vorlage 260299: Am Helpert 36a, 53177 Bonn</title>
+<updated>2026-03-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#260299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025714"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023280#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231871-08 ST BBB-Antrag: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche, Drucksachengruppe 231871</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023280"/>
+<summary>Kenntnisnahme am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023117#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 231871-07 BBB-Antrag: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche, Drucksachengruppe 231871</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023117"/>
+<summary>Entscheidung am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025169#vorlage</id>
+<title>Neue Vorlage 241435-03 ST: BBB-Anfrage: Sachstand Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf'; Drucksachengruppe 241435</title>
+<updated>2026-01-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025169"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024778#vorlage</id>
+<title>Neue Vorlage 210526-09: Haus Vogt (Schulleiterhaus), Muffendorf hier: Stellungnahme der Verwaltung</title>
+<updated>2026-01-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#210526-09"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024778"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025126#vorlage</id>
+<title>Neue Vorlage 241435-02: BBB-Anfrage: Sachstand Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf'; Drucksachengruppe 241435</title>
+<updated>2026-01-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025126"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023288#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231871-09 ST BBB-Anfrage: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche Drucksachengruppe 231871</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-09%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023288"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023115#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231871-06 BBB-Anfrage: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche Drucksachengruppe 231871</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023115"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022352#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Maßgabe“ – 210526-08 ST BBB-Anfrage: Haus Vogt (Schulleiterhaus), Muffendorf hier: Stellungnahme der Verwaltung</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#210526-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022352"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020901#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Maßgabe“ – 210526-07 BBB-Anfrage: Haus Vogt (Schulleiterhaus), Muffendorf</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#210526-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020901"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023855#vorlage</id>
+<title>Neue Vorlage 241754-05: Bürgerantrag: Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-08-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023855"/>
+<summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023821#vorlage</id>
+<title>Neue Vorlage 252749-02 ST: Erweiterung der Steingasse als Folgemaßnahme; hier: Stellungnahme zu 252749-01 ÄA</title>
+<updated>2025-08-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#252749-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023821"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023493#vorlage</id>
+<title>Neue Vorlage 252749-01 AA: Interfraktioneller Änderungsantrag BBB, CDU, SPD, FDP: Erweiterung der Steingasse als Folgemaßnahme Änderungsantrag zur Vorlage 252749</title>
+<updated>2025-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#252749-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023493"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022843#beratung-5</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „geändert beschlossen“ – 253140 Veröffentlichung der Vorhabenliste: 164691 - Denkmalbereichssatzung „Historischer Ortskern Bonn-Muffendorf</title>
+<updated>2025-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#253140"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022843"/>
+<summary>Entscheidung am 2025-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023352#vorlage</id>
+<title>Neue Vorlage 241159-02 ST: BBB-Kleine Anfrage: Antrag zur Änderung des absoluten Halteverbots in der Muffendorfer Hauptstraße in ein eingeschränktes Halteverbot</title>
+<updated>2025-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241159-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023352"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023288#vorlage</id>
+<title>Neue Vorlage 231871-09 ST: BBB-Anfrage: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche Drucksachengruppe 231871</title>
+<updated>2025-06-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-09%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023288"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023280#vorlage</id>
+<title>Neue Vorlage 231871-08 ST: BBB-Antrag: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche, Drucksachengruppe 231871</title>
+<updated>2025-06-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023280"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023328#vorlage</id>
+<title>Neue Vorlage 212405-04 ST: BBB-Anfrage: Grundstück Bonn-Muffendorf, Lehnpütz - Neubau von 6 Einfamilienhäusern, Drucksachengruppe 212405</title>
+<updated>2025-06-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#212405-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023328"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022843#beratung-4</id>
+<title>Beirat Bürgerbeteiligung: „geändert beschlossen“ – 253140 Veröffentlichung der Vorhabenliste: 164691 - Denkmalbereichssatzung „Historischer Ortskern Bonn-Muffendorf</title>
+<updated>2025-06-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#253140"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022843"/>
+<summary>Empfehlung am 2025-06-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022843#beratung-3</id>
+<title>Beirat Kinder- und Jugendbeteiligung: „geändert beschlossen“ – 253140 Veröffentlichung der Vorhabenliste: 164691 - Denkmalbereichssatzung „Historischer Ortskern Bonn-Muffendorf</title>
+<updated>2025-06-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#253140"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022843"/>
+<summary>Empfehlung am 2025-06-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023125#vorlage</id>
+<title>Neue Vorlage 212405-03: BBB-Anfrage: Grundstück Bonn-Muffendorf, Lehnpütz - Neubau von 6 Einfamilienhäusern, Drucksachengruppe 212405</title>
+<updated>2025-06-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#212405-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023125"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023117#vorlage</id>
+<title>Neue Vorlage 231871-07: BBB-Antrag: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche, Drucksachengruppe 231871</title>
+<updated>2025-06-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023117"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023115#vorlage</id>
+<title>Neue Vorlage 231871-06: BBB-Anfrage: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche Drucksachengruppe 231871</title>
+<updated>2025-06-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023115"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022843#vorlage</id>
+<title>Neue Vorlage 253140: Veröffentlichung der Vorhabenliste: 164691 - Denkmalbereichssatzung „Historischer Ortskern Bonn-Muffendorf</title>
+<updated>2025-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#253140"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022843"/>
+<summary>Beschlussvorlage · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022699#beratung-2</id>
+<title>Rat: „geändert beschlossen“ – 241435-01 AA CDU-Änderungsantrag: 1. Neufassung des Aufstellungsbeschlusses gemäß § 10 Abs. 3 Denkmalschutzgesetz Nordrhein-Westfalen (DSchG NRW) für eine Denkmalbereichssatzung für den historischen Ortskern von Muffendorf 2. Beschluss über die Öffentliche Auslegung des Entwurfs der Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf' Antrag zur Vorlage 241435</title>
+<updated>2025-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022699"/>
+<summary>Entscheidung am 2025-05-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018752#beratung-7</id>
+<title>Rat: „geändert beschlossen“ – 241435 1. Neufassung des Aufstellungsbeschlusses gemäß § 10 Abs. 3 Denkmalschutzgesetz Nordrhein-Westfalen (DSchG NRW) für eine Denkmalbereichssatzung für den historischen Ortskern von Muffendorf 2. Beschluss über die Öffentliche Auslegung des Entwurfs der Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf'</title>
+<updated>2025-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018752"/>
+<summary>Entscheidung am 2025-05-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022733#vorlage</id>
+<title>Neue Vorlage 241159-01: BBB-Kleine Anfrage: Antrag zur Änderung des absoluten Halteverbots in der Muffendorfer Hauptstraße in ein eingeschränktes Halteverbot</title>
+<updated>2025-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241159-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022733"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022699#vorlage</id>
+<title>Neue Vorlage 241435-01 AA: CDU-Änderungsantrag: 1. Neufassung des Aufstellungsbeschlusses gemäß § 10 Abs. 3 Denkmalschutzgesetz Nordrhein-Westfalen (DSchG NRW) für eine Denkmalbereichssatzung für den historischen Ortskern von Muffendorf 2. Beschluss über die Öffentliche Auslegung des Entwurfs der Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf' Antrag zur Vorlage 241435</title>
+<updated>2025-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022699"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022352#vorlage</id>
+<title>Neue Vorlage 210526-08 ST: BBB-Anfrage: Haus Vogt (Schulleiterhaus), Muffendorf hier: Stellungnahme der Verwaltung</title>
+<updated>2025-04-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#210526-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022352"/>
+<summary>Stellungnahme der Verwaltung · federführend: Dezernat III · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022163#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241754-04 ST Bürgerantrag: Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022163"/>
+<summary>Kenntnisnahme am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021710#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241754-03 ST Bürgerantrag: Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021710"/>
+<summary>Kenntnisnahme am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020991#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241754-02 ST Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020991"/>
+<summary>Kenntnisnahme am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019718#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241754-01 ST Bürgerantrag: Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019718"/>
+<summary>Kenntnisnahme am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019547#beratung-6</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 241754 Bürgerantrag: Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019547"/>
+<summary>Entscheidung am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018752#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 241435 1. Neufassung des Aufstellungsbeschlusses gemäß § 10 Abs. 3 Denkmalschutzgesetz Nordrhein-Westfalen (DSchG NRW) für eine Denkmalbereichssatzung für den historischen Ortskern von Muffendorf 2. Beschluss über die Öffentliche Auslegung des Entwurfs der Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf'</title>
+<updated>2025-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018752"/>
+<summary>Empfehlung am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018752#beratung-4</id>
+<title>Unterausschuss Denkmalschutz: „ungeändert beschlossen“ – 241435 1. Neufassung des Aufstellungsbeschlusses gemäß § 10 Abs. 3 Denkmalschutzgesetz Nordrhein-Westfalen (DSchG NRW) für eine Denkmalbereichssatzung für den historischen Ortskern von Muffendorf 2. Beschluss über die Öffentliche Auslegung des Entwurfs der Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf'</title>
+<updated>2025-04-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018752"/>
+<summary>Anhörung am 2025-04-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021959#vorlage</id>
+<title>Neue Vorlage 252749: Erweiterung der Steingasse als Folgemaßnahme</title>
+<updated>2025-04-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#252749"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021959"/>
+<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022163#vorlage</id>
+<title>Neue Vorlage 241754-04 ST: Bürgerantrag: Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-04-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022163"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018752#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 241435 1. Neufassung des Aufstellungsbeschlusses gemäß § 10 Abs. 3 Denkmalschutzgesetz Nordrhein-Westfalen (DSchG NRW) für eine Denkmalbereichssatzung für den historischen Ortskern von Muffendorf 2. Beschluss über die Öffentliche Auslegung des Entwurfs der Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf'</title>
+<updated>2025-04-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018752"/>
+<summary>Empfehlung am 2025-04-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018752#vorlage</id>
+<title>Neue Vorlage 241435: 1. Neufassung des Aufstellungsbeschlusses gemäß § 10 Abs. 3 Denkmalschutzgesetz Nordrhein-Westfalen (DSchG NRW) für eine Denkmalbereichssatzung für den historischen Ortskern von Muffendorf 2. Beschluss über die Öffentliche Auslegung des Entwurfs der Denkmalbereichssatzung 'Historischer Ortskern Bonn-Muffendorf'</title>
+<updated>2025-03-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241435"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018752"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021365#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 252504 Straßenplanung für die Straße 'Steingasse' in Muffendorf gemäß dem tatsächlichem Ausbau</title>
+<updated>2025-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#252504"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021365"/>
+<summary>Entscheidung am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021135#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 242310-01 ST Bürgerantrag: Geschwindigkeitsmessungen im Bereich der Muffendorfer Hauptstraße</title>
+<updated>2025-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#242310-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021135"/>
+<summary>Kenntnisnahme am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020838#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 242310 Bürgerantrag: Geschwindigkeitsmessungen im Bereich der Muffendorfer Hauptstraße</title>
+<updated>2025-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#242310"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020838"/>
+<summary>Entscheidung am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020116#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 240277-02 ST Große Anfrage der SPD-Bezirksfraktion Bad Godesberg: Fahrrad-Schutzstreifen am Goldbergweg</title>
+<updated>2025-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#240277-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020116"/>
+<summary>Kenntnisnahme am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016129#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 240277-01 ST Große Anfrage der SPD-Bezirksfraktion Bad Godesberg: Fahrrad-Schutzstreifen am Goldbergweg</title>
+<updated>2025-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#240277-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016129"/>
+<summary>Kenntnisnahme am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015973#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 240277 Große Anfrage der SPD-Bezirksfraktion Bad Godesberg: Fahrrad-Schutzstreifen am Goldbergweg</title>
+<updated>2025-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#240277"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015973"/>
+<summary>Kenntnisnahme am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021710#vorlage</id>
+<title>Neue Vorlage 241754-03 ST: Bürgerantrag: Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-02-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021710"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021365#vorlage</id>
+<title>Neue Vorlage 252504: Straßenplanung für die Straße 'Steingasse' in Muffendorf gemäß dem tatsächlichem Ausbau</title>
+<updated>2025-02-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#252504"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021365"/>
+<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021279#vorlage</id>
+<title>Neue Vorlage 240986-62 AA: BBB-Änderungsantrag: Mittel für den Ankauf von Grundstücken zur Verbreiterung des Marienforster Steinweges im Abschnitt zwischen Goldbergweg; Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-01-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#240986-62%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021279"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018677#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Maßgabe“ – 231871-04 ST Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche</title>
+<updated>2025-01-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018677"/>
+<summary>Kenntnisnahme am 2025-01-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018425#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Maßgabe“ – 231871-03 BBB-Anfrage: Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche Drucksachengruppe 231871</title>
+<updated>2025-01-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231871-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018425"/>
+<summary>Kenntnisnahme am 2025-01-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021135#vorlage</id>
+<title>Neue Vorlage 242310-01 ST: Bürgerantrag: Geschwindigkeitsmessungen im Bereich der Muffendorfer Hauptstraße</title>
+<updated>2025-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#242310-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021135"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019547#vorlage</id>
+<title>Neue Vorlage 241754: Bürgerantrag: Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-01-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019547"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020991#vorlage</id>
+<title>Neue Vorlage 241754-02 ST: Maßnahmen zur Verbesserung der Verkehrssituation im Bereich der unteren Muffendorfer Straße</title>
+<updated>2025-01-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#241754-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020991"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020901#vorlage</id>
+<title>Neue Vorlage 210526-07: BBB-Anfrage: Haus Vogt (Schulleiterhaus), Muffendorf</title>
+<updated>2025-01-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#210526-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020901"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020838#vorlage</id>
+<title>Neue Vorlage 242310: Bürgerantrag: Geschwindigkeitsmessungen im Bereich der Muffendorfer Hauptstraße</title>
+<updated>2025-01-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#242310"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020838"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020491#beratung-3</id>
+<title>Unterausschuss Denkmalschutz: „zur Kenntnis genommen“ – 231158-07 ST BBB-Anfrage: Aufstellungsbeschluss zur Denkmalbereichssatzung Muffendorf</title>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231158-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020491"/>
+<summary>Kenntnisnahme am 2024-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020288#beratung-2</id>
+<title>Unterausschuss Denkmalschutz: „zur Kenntnis genommen“ – 231158-06 BBB-Anfrage: Aufstellungsbeschluss zur Denkmalbereichssatzung Muffendorf</title>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231158-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020288"/>
+<summary>Kenntnisnahme am 2024-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020491#vorlage</id>
+<title>Neue Vorlage 231158-07 ST: BBB-Anfrage: Aufstellungsbeschluss zur Denkmalbereichssatzung Muffendorf</title>
+<updated>2024-12-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#231158-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020491"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/4855#vorlage</id>
+<title>Neue Vorlage 200343: Fahrrad-Schutzstreifen am Goldbergweg</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:muffendorf#200343"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4855"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+</feed>

@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ortsteil-godesberg-villenviertel</id>
+<title>RIS-Karte Bonn – Godesberg-Villenviertel</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Godesberg-Villenviertel</subtitle>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-godesberg-villenviertel.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029839#vorlage</id>
+<title>Neue Vorlage 261880: Einwohnerfrage: Trafostation und Glasfaserverteiler am Hohenzollernplatz</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261880"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029839"/>
+<summary>Einwohnerfrage · federführend: Bezirksverwaltungsstelle Bad Godesberg · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029727#vorlage</id>
+<title>Neue Vorlage 261857: FDP-Große Anfrage: Erneuerung der Straßenbeleuchtung im Villenviertel</title>
+<updated>2026-10-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261857"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029727"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029032#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261368-01 ST Bürgerantrag: Prüfung von Maßnahmen an einem Straßenbaum in der Kolfhausstraße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261368-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029032"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028622#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 261395 Bürgerantrag- Einrichtung einer Tempo-30-Zone in der Wurzerstraße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261395"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028622"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028567#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 261368 Bürgerantrag: Prüfung von Maßnahmen an einem Straßenbaum in der Kolfhausstraße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261368"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028567"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029032#vorlage</id>
+<title>Neue Vorlage 261368-01 ST: Bürgerantrag: Prüfung von Maßnahmen an einem Straßenbaum in der Kolfhausstraße</title>
+<updated>2026-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261368-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029032"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028622#vorlage</id>
+<title>Neue Vorlage 261395: Bürgerantrag- Einrichtung einer Tempo-30-Zone in der Wurzerstraße</title>
+<updated>2026-07-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261395"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028622"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028567#vorlage</id>
+<title>Neue Vorlage 261368: Bürgerantrag: Prüfung von Maßnahmen an einem Straßenbaum in der Kolfhausstraße</title>
+<updated>2026-07-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261368"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028567"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027648#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 261000 Fällgenehmigung für eine Schwarz-Kiefer auf dem Baugrundstück Denglerstr. 17, 53173 Bonn</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261000"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027648"/>
+<summary>Entscheidung am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027648#vorlage</id>
+<title>Neue Vorlage 261000: Fällgenehmigung für eine Schwarz-Kiefer auf dem Baugrundstück Denglerstr. 17, 53173 Bonn</title>
+<updated>2026-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#261000"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027648"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027714#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 254045-02 AA Volt-Änderungsantrag zu Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung) Antrag zur Vorlage 254045</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#254045-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027714"/>
+<summary>Entscheidung am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027552#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 254045-01 ST Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung)</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#254045-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027552"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026459#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231309-03 ST FDP-Große Anfrage: Umsetzung des Beschlusses 231309 - Prüfauftrag: Errichtung eines Kreisverkehrs an der Kreuzung Ubierstraße/Denglerstraße</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231309-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026459"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026247#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231309-02 FDP-Große Anfrage: Umsetzung des Beschlusses 231309</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231309-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026247"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024867#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 254045 Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung)</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#254045"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024867"/>
+<summary>Entscheidung am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027714#vorlage</id>
+<title>Neue Vorlage 254045-02 AA: Volt-Änderungsantrag zu Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung) Antrag zur Vorlage 254045</title>
+<updated>2026-05-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#254045-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027714"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027552#vorlage</id>
+<title>Neue Vorlage 254045-01 ST: Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung)</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#254045-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027552"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026459#vorlage</id>
+<title>Neue Vorlage 231309-03 ST: FDP-Große Anfrage: Umsetzung des Beschlusses 231309 - Prüfauftrag: Errichtung eines Kreisverkehrs an der Kreuzung Ubierstraße/Denglerstraße</title>
+<updated>2026-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231309-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026459"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025805#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 242218-02 ST BBB-Große Anfrage: Baumaßnahmen im öffentlichen Verkehrsbereich im Jahr 2025 (Pos. 23) - 2026 (Pos. 21) im Stadtbezirk Bad Godesberg; hier laufende Kanalbaumaßnahme Plittersdorfer Straße zwischen Körnerstraße und Ubierstraße; Drucksachen 242218 und 254091</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#242218-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025805"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025610#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 242218-01 BBB-Bezirksfraktion-Große Anfrage: Baumaßnahmen im öffentlichen Verkehrsbereich im Jahr 2025 (Pos. 23) - 2026 (Pos. 21) im Stadtbezirk Bad Godesberg; hier laufende Kanalbaumaßnahme Plittersdorfer Straße zwischen Körnerstraße und Ubierstraße; Drucksachen 242218 und 254091</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#242218-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025610"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024658#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 232335-02 ST Grundstück in Bonn-Rüngsdorf, Mirbachstraße 10, / Wielandstraße 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Errichtung von zwei Wohngebäuden mit Tiefgarge (Großgarage) Aktenzeichen 40911/2022 Hier: Stellungnahme zur Großen Anfrage DS 232335-01</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#232335-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024658"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023134#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 232335-01 BBB-Anfrage: vormalige Liegenschaft der Lastenausgleichsbank (LAB, später DtA, heute KfW) Mirbachstraße 10 / Wielandstraße 4 - Errichtung von zwei Wohngebäuden mit Tiefgarage; hier Abbrucharbeiten Drucksachengruppe 232335</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#232335-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023134"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026247#vorlage</id>
+<title>Neue Vorlage 231309-02: FDP-Große Anfrage: Umsetzung des Beschlusses 231309</title>
+<updated>2026-03-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231309-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026247"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025805#vorlage</id>
+<title>Neue Vorlage 242218-02 ST: BBB-Große Anfrage: Baumaßnahmen im öffentlichen Verkehrsbereich im Jahr 2025 (Pos. 23) - 2026 (Pos. 21) im Stadtbezirk Bad Godesberg; hier laufende Kanalbaumaßnahme Plittersdorfer Straße zwischen Körnerstraße und Ubierstraße; Drucksachen 242218 und 254091</title>
+<updated>2026-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#242218-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025805"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025610#vorlage</id>
+<title>Neue Vorlage 242218-01: BBB-Bezirksfraktion-Große Anfrage: Baumaßnahmen im öffentlichen Verkehrsbereich im Jahr 2025 (Pos. 23) - 2026 (Pos. 21) im Stadtbezirk Bad Godesberg; hier laufende Kanalbaumaßnahme Plittersdorfer Straße zwischen Körnerstraße und Ubierstraße; Drucksachen 242218 und 254091</title>
+<updated>2026-02-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#242218-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025610"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024753#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253596-02 ST BBB-Antrag: Glascontainer in Grünanlage Wurzerstraße/ Ecke Mittelstraße, nähe REWE-Markt</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253596-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024753"/>
+<summary>Kenntnisnahme am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024097#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253596-01 ST BBB-Antrag: Glascontainer in Grünanlage Wurzerstraße/ Ecke Mittelstraße, nähe REWE-Markt</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253596-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024097"/>
+<summary>Kenntnisnahme am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023898#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 253616 BBB-Antrag: Korrektur der angezeigten Wegeführung einer Navigations-App im Bereich Theodor-Heuss-Straße/Koblenzer Straße/Friedrichallee</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023898"/>
+<summary>Entscheidung am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023849#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 253596 BBB-Antrag: Glascontainer in Grünanlage Wurzerstraße/ Ecke Mittelstraße, nähe REWE-Markt</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253596"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023849"/>
+<summary>Entscheidung am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024947#vorlage</id>
+<title>Neue Vorlage 202330-04: BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
+<updated>2025-12-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202330-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024947"/>
+<summary>Mitteilungsvorlage · federführend: Bezirksverwaltungsstelle Bad Godesberg · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024753#vorlage</id>
+<title>Neue Vorlage 253596-02 ST: BBB-Antrag: Glascontainer in Grünanlage Wurzerstraße/ Ecke Mittelstraße, nähe REWE-Markt</title>
+<updated>2025-12-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253596-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024753"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024658#vorlage</id>
+<title>Neue Vorlage 232335-02 ST: Grundstück in Bonn-Rüngsdorf, Mirbachstraße 10, / Wielandstraße 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Errichtung von zwei Wohngebäuden mit Tiefgarge (Großgarage) Aktenzeichen 40911/2022 Hier: Stellungnahme zur Großen Anfrage DS 232335-01</title>
+<updated>2025-12-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#232335-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024658"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024867#vorlage</id>
+<title>Neue Vorlage 254045: Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung)</title>
+<updated>2025-12-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#254045"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024867"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024097#vorlage</id>
+<title>Neue Vorlage 253596-01 ST: BBB-Antrag: Glascontainer in Grünanlage Wurzerstraße/ Ecke Mittelstraße, nähe REWE-Markt</title>
+<updated>2025-08-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253596-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024097"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023898#vorlage</id>
+<title>Neue Vorlage 253616: BBB-Antrag: Korrektur der angezeigten Wegeführung einer Navigations-App im Bereich Theodor-Heuss-Straße/Koblenzer Straße/Friedrichallee</title>
+<updated>2025-08-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023898"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023849#vorlage</id>
+<title>Neue Vorlage 253596: BBB-Antrag: Glascontainer in Grünanlage Wurzerstraße/ Ecke Mittelstraße, nähe REWE-Markt</title>
+<updated>2025-08-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253596"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023849"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022957#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 253192 Fällgenehmigung für eine Himalaja-Zeder und eine Schwarz-Kiefer auf dem Baugrundstück Mirbachstr. 10/Wielandstr. 4, 53173 Bonn im Rahmen eines Baugenehmigungsverfahrens</title>
+<updated>2025-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253192"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022957"/>
+<summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021798#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 202330-03 ST BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
+<updated>2025-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202330-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021798"/>
+<summary>Kenntnisnahme am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021626#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zurückgezogen“ – 202330-02 AA FDP-Änderungsantrag: Gedenken an Niklas Pöhler an der Rheinallee (DS alt: 1711673) Antrag zur Vorlage 202330</title>
+<updated>2025-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202330-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021626"/>
+<summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021612#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 202330-01 BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
+<updated>2025-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202330-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021612"/>
+<summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022957#beratung-3</id>
+<title>Baumkommission: „ungeändert beschlossen“ – 253192 Fällgenehmigung für eine Himalaja-Zeder und eine Schwarz-Kiefer auf dem Baugrundstück Mirbachstr. 10/Wielandstr. 4, 53173 Bonn im Rahmen eines Baugenehmigungsverfahrens</title>
+<updated>2025-06-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253192"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022957"/>
+<summary>Empfehlung am 2025-06-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023134#vorlage</id>
+<title>Neue Vorlage 232335-01: BBB-Anfrage: vormalige Liegenschaft der Lastenausgleichsbank (LAB, später DtA, heute KfW) Mirbachstraße 10 / Wielandstraße 4 - Errichtung von zwei Wohngebäuden mit Tiefgarage; hier Abbrucharbeiten Drucksachengruppe 232335</title>
+<updated>2025-06-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#232335-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023134"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022957#vorlage</id>
+<title>Neue Vorlage 253192: Fällgenehmigung für eine Himalaja-Zeder und eine Schwarz-Kiefer auf dem Baugrundstück Mirbachstr. 10/Wielandstr. 4, 53173 Bonn im Rahmen eines Baugenehmigungsverfahrens</title>
+<updated>2025-05-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#253192"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022957"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021798#vorlage</id>
+<title>Neue Vorlage 202330-03 ST: BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
+<updated>2025-03-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202330-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021798"/>
+<summary>Stellungnahme der Verwaltung · federführend: Bezirksverwaltungsstelle Bad Godesberg · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021831#vorlage</id>
+<title>Neue Vorlage 252698: Informationsbrief - Kanalsanierung Basteistraße</title>
+<updated>2025-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#252698"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021831"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021626#vorlage</id>
+<title>Neue Vorlage 202330-02 AA: FDP-Änderungsantrag: Gedenken an Niklas Pöhler an der Rheinallee (DS alt: 1711673) Antrag zur Vorlage 202330</title>
+<updated>2025-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202330-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021626"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021612#vorlage</id>
+<title>Neue Vorlage 202330-01: BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
+<updated>2025-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202330-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021612"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021284#vorlage</id>
+<title>Neue Vorlage 240986-67 AA: BBB-Änderungsantrag: Umbau der Kreuzung Aennchenplatz/Bonner Straße/Plittersdorfer Straße; Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-01-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#240986-67%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021284"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021280#vorlage</id>
+<title>Neue Vorlage 240986-63 AA: BBB-Änderungsantrag: Mittel für den Neuausbau der ehemaligen Endhaltestelle Rheinallee; Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-01-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#240986-63%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021280"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021167#vorlage</id>
+<title>Neue Vorlage 252456: Informationsbrief - Kanalbaumaßnahme Gneisenaustraße</title>
+<updated>2025-01-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#252456"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021167"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020996#vorlage</id>
+<title>Neue Vorlage 252396: Informationsbrief - Kanalerneuerung Plittersdorfer Straße</title>
+<updated>2025-01-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#252396"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020996"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020406#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241719-04 ST Baumbepflanzung und Versickerungsanlage zur Umsetzung der Schwammstadt auf dem Grünstreifen in der Augustastraße hier: Vertagungsbitte aufgrund Änderungsanträge DS241719-02AA &amp; DS241719-03AA</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020406"/>
+<summary>Kenntnisnahme am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020398#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 241719-03 AA FDP-Änderungsantrag: Anlage einer insektenfreundlichen Bepflanzung auf dem Grünstreifen in der Mitte der Augustastraße in Bad Godesberg</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020398"/>
+<summary>Entscheidung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020188#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 241719-02 AA Baumbepflanzung und Versickerungsanlage zur Umsetzung der Schwammstadt auf dem Grünstreifen in der Augustastraße - Änderungsantrag zu DS-Nr. 241719</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020188"/>
+<summary>Entscheidung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019997#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 241966 Kinderspielplatz Plittersdorfer Straße: hier: Einleitung Sanierung und Vergrößerung Sandspielbereich</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241966"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019997"/>
+<summary>Entscheidung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019848#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241719-01 ST CDU-Antrag: Anlage einer insektenfreundlichen Bepflanzung auf dem Grünstreifen in der Mitte der Augustastraße in Bad Godesberg</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019848"/>
+<summary>Kenntnisnahme am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019468#beratung-6</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 241719 CDU-Antrag: Anlage einer insektenfreundlichen Bepflanzung auf dem Grünstreifen in der Mitte der Augustastraße in Bad Godesberg</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019468"/>
+<summary>Entscheidung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020406#vorlage</id>
+<title>Neue Vorlage 241719-04 ST: Baumbepflanzung und Versickerungsanlage zur Umsetzung der Schwammstadt auf dem Grünstreifen in der Augustastraße hier: Vertagungsbitte aufgrund Änderungsanträge DS241719-02AA &amp; DS241719-03AA</title>
+<updated>2024-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020406"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020398#vorlage</id>
+<title>Neue Vorlage 241719-03 AA: FDP-Änderungsantrag: Anlage einer insektenfreundlichen Bepflanzung auf dem Grünstreifen in der Mitte der Augustastraße in Bad Godesberg</title>
+<updated>2024-11-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020398"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019997#vorlage</id>
+<title>Neue Vorlage 241966: Kinderspielplatz Plittersdorfer Straße: hier: Einleitung Sanierung und Vergrößerung Sandspielbereich</title>
+<updated>2024-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241966"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019997"/>
+<summary>Beschlussvorlage: Einleitung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020188#vorlage</id>
+<title>Neue Vorlage 241719-02 AA: Baumbepflanzung und Versickerungsanlage zur Umsetzung der Schwammstadt auf dem Grünstreifen in der Augustastraße - Änderungsantrag zu DS-Nr. 241719</title>
+<updated>2024-11-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020188"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019848#vorlage</id>
+<title>Neue Vorlage 241719-01 ST: CDU-Antrag: Anlage einer insektenfreundlichen Bepflanzung auf dem Grünstreifen in der Mitte der Augustastraße in Bad Godesberg</title>
+<updated>2024-10-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019848"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019468#vorlage</id>
+<title>Neue Vorlage 241719: CDU-Antrag: Anlage einer insektenfreundlichen Bepflanzung auf dem Grünstreifen in der Mitte der Augustastraße in Bad Godesberg</title>
+<updated>2024-10-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#241719"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019468"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017326#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 240881 Einleitung des Vergabeverfahrens Kanalbau: Schachtneubau und Linersanierung auf der Basteistraße (Haus-Nr. 82 bis Rheinallee)</title>
+<updated>2024-06-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#240881"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017326"/>
+<summary>Entscheidung am 2024-06-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015326#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 232335 Grundstück in Bonn-Rüngsdorf, Mirbachstraße 10, / Wielandstraße 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Errichtung von zwei Wohngebäuden mit Tiefgarge (Großgarage) Aktenzeichen 40911/2022</title>
+<updated>2024-06-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#232335"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015326"/>
+<summary>Kenntnisnahme am 2024-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017326#vorlage</id>
+<title>Neue Vorlage 240881: Einleitung des Vergabeverfahrens Kanalbau: Schachtneubau und Linersanierung auf der Basteistraße (Haus-Nr. 82 bis Rheinallee)</title>
+<updated>2024-05-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#240881"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017326"/>
+<summary>Beschlussvorlage: Einleitung · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016492#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 240492 Einleitung des Vergabeverfahrens zur Ergänzung Verkehrsgrün in Bad- Godesberg, Plittersdorf und Villenviertel</title>
+<updated>2024-04-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#240492"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016492"/>
+<summary>Entscheidung am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016492#vorlage</id>
+<title>Neue Vorlage 240492: Einleitung des Vergabeverfahrens zur Ergänzung Verkehrsgrün in Bad- Godesberg, Plittersdorf und Villenviertel</title>
+<updated>2024-03-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#240492"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016492"/>
+<summary>Beschlussvorlage: Einleitung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016457#vorlage</id>
+<title>Neue Vorlage 240474: Informationsbrief - Kanalsanierung Viktoriastraße</title>
+<updated>2024-03-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#240474"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016457"/>
+<summary>Informationsbrief · federführend: Stabsstellle Bürgerbeteiligung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015478#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 231929-02 AA FDP-Änderungsantrag: Bürgerantrag: Verbesserung der Sicherheit für Radfahrende im Bereich Königsplatz/Augustastraße Antrag zur Vorlage 231929</title>
+<updated>2024-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231929-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015478"/>
+<summary>Entscheidung am 2024-02-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015160#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 202012-04 ST BBB-Anfrage: Fußgängerunterführung Alte Bahhofstraße/Rheinallee</title>
+<updated>2024-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202012-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015160"/>
+<summary>Kenntnisnahme am 2024-02-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014628#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231929-01 ST Bürgerantrag: Verbesserung der Sicherheit für Radfahrende im Bereich Königsplatz/Augustastraße</title>
+<updated>2024-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231929-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014628"/>
+<summary>Kenntnisnahme am 2024-02-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014262#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 231929 Bürgerantrag: Verbesserung der Sicherheit für Radfahrende im Bereich Königsplatz/Augustastraße</title>
+<updated>2024-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231929"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014262"/>
+<summary>Entscheidung am 2024-02-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013242#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 202012-03 BBB-Anfrage: Fußgängerunterführung Alte Bahhofstraße/Rheinallee</title>
+<updated>2024-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202012-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013242"/>
+<summary>Kenntnisnahme am 2024-02-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015478#vorlage</id>
+<title>Neue Vorlage 231929-02 AA: FDP-Änderungsantrag: Bürgerantrag: Verbesserung der Sicherheit für Radfahrende im Bereich Königsplatz/Augustastraße Antrag zur Vorlage 231929</title>
+<updated>2024-01-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231929-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015478"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015326#vorlage</id>
+<title>Neue Vorlage 232335: Grundstück in Bonn-Rüngsdorf, Mirbachstraße 10, / Wielandstraße 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Errichtung von zwei Wohngebäuden mit Tiefgarge (Großgarage) Aktenzeichen 40911/2022</title>
+<updated>2024-01-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#232335"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015326"/>
+<summary>Mitteilungsvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015160#vorlage</id>
+<title>Neue Vorlage 202012-04 ST: BBB-Anfrage: Fußgängerunterführung Alte Bahhofstraße/Rheinallee</title>
+<updated>2023-12-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202012-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015160"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015105#vorlage</id>
+<title>Neue Vorlage 231311-04 AA: BBB-Antrag Bauvorhaben auf dem Gelände der ehemaligen Deutschen Ausgleichsbank (vormals Lastenausgleichsbank), Grundstück in Bonn-Rüngsdorf, Mirbachstr. 10/ Wielandstr. 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Bauvoranfrage zur Errichtung von 2 Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Aktenzeichen: 40911/2022 Drucksachen 231311 und 232073</title>
+<updated>2023-11-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231311-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015105"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015105#beratung-2</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „abgelehnt“ – 231311-04 AA BBB-Antrag Bauvorhaben auf dem Gelände der ehemaligen Deutschen Ausgleichsbank (vormals Lastenausgleichsbank), Grundstück in Bonn-Rüngsdorf, Mirbachstr. 10/ Wielandstr. 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Bauvoranfrage zur Errichtung von 2 Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Aktenzeichen: 40911/2022 Drucksachen 231311 und 232073</title>
+<updated>2023-11-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231311-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015105"/>
+<summary>Entscheidung am 2023-11-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014623#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 232073 Grundstück in Bonn-Rüngsdorf, Mirbachstr. 10/ Wielandstr. 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Bauvoranfrage zur Errichtung von 2 Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Aktenzeichen: 40911/2022</title>
+<updated>2023-11-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#232073"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014623"/>
+<summary>Anhörung am 2023-11-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014324#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zur Kenntnis genommen“ – 231311-03 ST Grundstück in Bonn Mirbachstraße / Rüngsdorf Wielandstraße - Errichtung von zwei Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Az.: 40911/2022</title>
+<updated>2023-11-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231311-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014324"/>
+<summary>Kenntnisnahme am 2023-11-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014126#beratung-2</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „abgelehnt“ – 231311-02 BBB-Antrag: Grundstück in Bonn Mirbachstraße / Rüngsdorf Wielandstraße - Errichtung von zwei Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Az.: 40911/2022</title>
+<updated>2023-11-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231311-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014126"/>
+<summary>Entscheidung am 2023-11-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012994#beratung-6</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zurückgezogen“ – 231311 Grundstück in Bonn Mirbachstraße / Rüngsdorf Wielandstraße - Errichtung von zwei Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Az.: 40911/2022</title>
+<updated>2023-11-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231311"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012994"/>
+<summary>Anhörung am 2023-11-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014628#vorlage</id>
+<title>Neue Vorlage 231929-01 ST: Bürgerantrag: Verbesserung der Sicherheit für Radfahrende im Bereich Königsplatz/Augustastraße</title>
+<updated>2023-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231929-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014628"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014623#vorlage</id>
+<title>Neue Vorlage 232073: Grundstück in Bonn-Rüngsdorf, Mirbachstr. 10/ Wielandstr. 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Bauvoranfrage zur Errichtung von 2 Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Aktenzeichen: 40911/2022</title>
+<updated>2023-11-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#232073"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014623"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013814#beratung-5</id>
+<title>Rat: „ungeändert beschlossen“ – 231710 Aufhebung des Zielbeschlusses über eine Neubebauung mit Wohn- und Gewerbenutzung im Bereich der Rheinallee 17, Ortsteil Godesberg-Villenviertel, Stadtbezirk Bad Godesberg</title>
+<updated>2023-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231710"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013814"/>
+<summary>Entscheidung am 2023-11-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013227#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 231417 Fällgenehmigung für zwei Säulen-Eichen auf dem Grundstück Otto-Kühne-Platz 5, 53173 Bonn</title>
+<updated>2023-10-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231417"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013227"/>
+<summary>Entscheidung am 2023-10-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013180#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231309-01 ST Prüfauftrag: Errichtung eines Kreisverkehrs an der Kreuzung Ubierstraße/Denglerstraße</title>
+<updated>2023-10-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231309-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013180"/>
+<summary>Kenntnisnahme am 2023-10-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012993#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 231309 Prüfauftrag: Errichtung eines Kreisverkehrs an der Kreuzung Ubierstraße/Denglerstraße</title>
+<updated>2023-10-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231309"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012993"/>
+<summary>Entscheidung am 2023-10-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013814#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 231710 Aufhebung des Zielbeschlusses über eine Neubebauung mit Wohn- und Gewerbenutzung im Bereich der Rheinallee 17, Ortsteil Godesberg-Villenviertel, Stadtbezirk Bad Godesberg</title>
+<updated>2023-10-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231710"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013814"/>
+<summary>Empfehlung am 2023-10-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014324#vorlage</id>
+<title>Neue Vorlage 231311-03 ST: Grundstück in Bonn Mirbachstraße / Rüngsdorf Wielandstraße - Errichtung von zwei Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Az.: 40911/2022</title>
+<updated>2023-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231311-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014324"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014262#vorlage</id>
+<title>Neue Vorlage 231929: Bürgerantrag: Verbesserung der Sicherheit für Radfahrende im Bereich Königsplatz/Augustastraße</title>
+<updated>2023-10-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231929"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014262"/>
+<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014126#vorlage</id>
+<title>Neue Vorlage 231311-02: BBB-Antrag: Grundstück in Bonn Mirbachstraße / Rüngsdorf Wielandstraße - Errichtung von zwei Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Az.: 40911/2022</title>
+<updated>2023-10-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231311-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014126"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013814#vorlage</id>
+<title>Neue Vorlage 231710: Aufhebung des Zielbeschlusses über eine Neubebauung mit Wohn- und Gewerbenutzung im Bereich der Rheinallee 17, Ortsteil Godesberg-Villenviertel, Stadtbezirk Bad Godesberg</title>
+<updated>2023-10-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231710"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013814"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013227#beratung-3</id>
+<title>Baumkommission: „ungeändert beschlossen“ – 231417 Fällgenehmigung für zwei Säulen-Eichen auf dem Grundstück Otto-Kühne-Platz 5, 53173 Bonn</title>
+<updated>2023-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231417"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013227"/>
+<summary>Empfehlung am 2023-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013180#vorlage</id>
+<title>Neue Vorlage 231309-01 ST: Prüfauftrag: Errichtung eines Kreisverkehrs an der Kreuzung Ubierstraße/Denglerstraße</title>
+<updated>2023-08-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231309-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013180"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013227#vorlage</id>
+<title>Neue Vorlage 231417: Fällgenehmigung für zwei Säulen-Eichen auf dem Grundstück Otto-Kühne-Platz 5, 53173 Bonn</title>
+<updated>2023-08-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231417"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013227"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013321#vorlage</id>
+<title>Neue Vorlage 231311-01 DA: BBB -Dringlichkeitsantrag Grundstück in Bonn Mirbachstraße / Rüngsdorf Wielandstraße - Errichtung von zwei Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Az.: 40911/2022 Antrag zur Vorlage 231311</title>
+<updated>2023-08-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231311-01%20DA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013321"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013321#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen - mit Protokollnotiz“ – 231311-01 DA BBB -Dringlichkeitsantrag Grundstück in Bonn Mirbachstraße / Rüngsdorf Wielandstraße - Errichtung von zwei Wohngebäuden mit Tiefgarage (Großgarage), Gebäude mittlerer Höhe Az.: 40911/2022 Antrag zur Vorlage 231311</title>
+<updated>2023-08-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#231311-01%20DA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013321"/>
+<summary>Entscheidung am 2023-08-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013242#vorlage</id>
+<title>Neue Vorlage 202012-03: BBB-Anfrage: Fußgängerunterführung Alte Bahhofstraße/Rheinallee</title>
+<updated>2023-08-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-villenviertel#202012-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013242"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ortsteil-pennenfeld</id>
+<title>RIS-Karte Bonn – Pennenfeld</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Pennenfeld</subtitle>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-pennenfeld.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029502#vorlage</id>
+<title>Neue Vorlage 261778: Bebauungsplan Nr. 8215-44, „Siebengebirgsterrassen“, Deutschherrenstraße, Fuß- und Fahrradweg zur Saint-Cloud-Straße</title>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261778"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029502"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029220#vorlage</id>
+<title>Neue Vorlage 252709-04 DA: Volt-Dringlichkeitsantrag: Interimslösung für den Sportpark Pennenfeld</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252709-04%20DA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029220"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029220#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 252709-04 DA Volt-Dringlichkeitsantrag: Interimslösung für den Sportpark Pennenfeld</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252709-04%20DA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029220"/>
+<summary>Anregung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029220#beratung-2</id>
+<title>Sportausschuss: „zurückgezogen“ – 252709-04 DA Volt-Dringlichkeitsantrag: Interimslösung für den Sportpark Pennenfeld</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252709-04%20DA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029220"/>
+<summary>Empfehlung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029009#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261409-01 ST GRÜNE Große Anfrage: Ruhender Verkehr in der Reihenhaussiedlung Max-Planck-Straße in Pennenfeld, hier: Vertagungsbitte</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261409-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029009"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028648#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261409 GRÜNE Große Anfrage: Ruhender Verkehr in der Reihenhaussiedlung Max-Planck-Straße in Pennenfeld</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261409"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028648"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028547#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261361 CDU Große Anfrage: Fahrradplatz in der Max-Planck-Straße vor der Hausnummer 107</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261361"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028547"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028116#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 231642-03 ST BBB-Große Anfrage: Überwachung des Verkehrs auf der Koblenzer Straße Drucksachengruppe 231642</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231642-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028116"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027862#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 231642-02 BBB-Große Anfrage: Überwachung des Verkehrs auf der Koblenzer Straße Drucksachengruppe 231642</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231642-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027862"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027651#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 261002 Fällgenehmigung für eine Douglasie und eine Zeder auf dem Grundstück Zanderstr. 45, 53177 Bonn</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261002"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027651"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029009#vorlage</id>
+<title>Neue Vorlage 261409-01 ST: GRÜNE Große Anfrage: Ruhender Verkehr in der Reihenhaussiedlung Max-Planck-Straße in Pennenfeld, hier: Vertagungsbitte</title>
+<updated>2026-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261409-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029009"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027651#vorlage</id>
+<title>Neue Vorlage 261002: Fällgenehmigung für eine Douglasie und eine Zeder auf dem Grundstück Zanderstr. 45, 53177 Bonn</title>
+<updated>2026-08-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261002"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027651"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028648#vorlage</id>
+<title>Neue Vorlage 261409: GRÜNE Große Anfrage: Ruhender Verkehr in der Reihenhaussiedlung Max-Planck-Straße in Pennenfeld</title>
+<updated>2026-07-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261409"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028648"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028547#vorlage</id>
+<title>Neue Vorlage 261361: CDU Große Anfrage: Fahrradplatz in der Max-Planck-Straße vor der Hausnummer 107</title>
+<updated>2026-07-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261361"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028547"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027787#beratung-3</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 261069 Neues Familienzentrum in der Bundestadt Bonn zum Kindergartenjahr 2026/2027 Fröbel-Kindergarten Flügelnuss, Deutschherrenstr. 89, 53177 Bonn Träger Fröbel Bildung und Erziehung gemeinnützige GmbH, Salierring 47-53, 50667 Köln</title>
+<updated>2026-07-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261069"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027787"/>
+<summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028036#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261091-01 ST Stellungnahme zu SPD-Große Anfrage: Leerstand in der Hicog-Siedlung Muffendorf/Pennenfeld sanktionieren</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261091-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028036"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027935#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260908-02 ST CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#260908-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027935"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027837#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261091 SPD-Große Anfrage: Leerstand in der Hicog-Siedlung Muffendorf/Pennenfeld sanktionieren</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261091"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027837"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027594#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260908-01 ST CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#260908-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027594"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027395#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260908 CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#260908"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027395"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028116#vorlage</id>
+<title>Neue Vorlage 231642-03 ST: BBB-Große Anfrage: Überwachung des Verkehrs auf der Koblenzer Straße Drucksachengruppe 231642</title>
+<updated>2026-06-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231642-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028116"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028036#vorlage</id>
+<title>Neue Vorlage 261091-01 ST: Stellungnahme zu SPD-Große Anfrage: Leerstand in der Hicog-Siedlung Muffendorf/Pennenfeld sanktionieren</title>
+<updated>2026-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261091-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028036"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027935#vorlage</id>
+<title>Neue Vorlage 260908-02 ST: CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-06-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#260908-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027935"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027787#vorlage</id>
+<title>Neue Vorlage 261069: Neues Familienzentrum in der Bundestadt Bonn zum Kindergartenjahr 2026/2027 Fröbel-Kindergarten Flügelnuss, Deutschherrenstr. 89, 53177 Bonn Träger Fröbel Bildung und Erziehung gemeinnützige GmbH, Salierring 47-53, 50667 Köln</title>
+<updated>2026-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261069"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027787"/>
+<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027862#vorlage</id>
+<title>Neue Vorlage 231642-02: BBB-Große Anfrage: Überwachung des Verkehrs auf der Koblenzer Straße Drucksachengruppe 231642</title>
+<updated>2026-06-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231642-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027862"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027837#vorlage</id>
+<title>Neue Vorlage 261091: SPD-Große Anfrage: Leerstand in der Hicog-Siedlung Muffendorf/Pennenfeld sanktionieren</title>
+<updated>2026-06-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#261091"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027837"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027435#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 220374-05 ST FDP-Große Anfrage: Umsetzung des Beschlusses DS 220374-01, Verbesserung der Schulradwege für das Schulzentrum Pennenfeld</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#220374-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027435"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026896#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253611-04 BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026896"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026838#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 220374-04 FDP-Große Anfrage: Umsetzung des Beschlusses DS 220374-01, Verbesserung der Schulradwege für das Schulzentrum Pennenfeld</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#220374-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026838"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027435#vorlage</id>
+<title>Neue Vorlage 220374-05 ST: FDP-Große Anfrage: Umsetzung des Beschlusses DS 220374-01, Verbesserung der Schulradwege für das Schulzentrum Pennenfeld</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#220374-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027435"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027594#vorlage</id>
+<title>Neue Vorlage 260908-01 ST: CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#260908-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027594"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027395#vorlage</id>
+<title>Neue Vorlage 260908: CDU-Große Anfrage: Leerstand und Sanierungsmaßnahmen bei der Hicog-Siedlung Muffendorf/Pennenfeld</title>
+<updated>2026-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#260908"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027395"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026896#vorlage</id>
+<title>Neue Vorlage 253611-04: BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2026-05-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026896"/>
+<summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026838#vorlage</id>
+<title>Neue Vorlage 220374-04: FDP-Große Anfrage: Umsetzung des Beschlusses DS 220374-01, Verbesserung der Schulradwege für das Schulzentrum Pennenfeld</title>
+<updated>2026-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#220374-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026838"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022512#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 252421-02 N-Vorlage Fällung einer Moor-Birke auf dem städtischen Grundstück Gemarkung Godesberg, Flur 3, Nr. 755, Koblenzer Straße</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252421-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022512"/>
+<summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024312#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253611-03 ST BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024312"/>
+<summary>Kenntnisnahme am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024311#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253611-02 ST FDP-Änderungsantrag als Ergänzungsantrag zu DS 253611 BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024311"/>
+<summary>Kenntnisnahme am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024048#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 253611-01 AA FDP-Änderungsantrag als Ergänzungsantrag zu DS 253611 BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024048"/>
+<summary>Entscheidung am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023898#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 253616 BBB-Antrag: Korrektur der angezeigten Wegeführung einer Navigations-App im Bereich Theodor-Heuss-Straße/Koblenzer Straße/Friedrichallee</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023898"/>
+<summary>Entscheidung am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023891#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 253611 BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023891"/>
+<summary>Entscheidung am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021075#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 220722-06 Aufwertung der Teerflächen in Pennenfeld (DS 220722) Hier: Ergebnis des Prüfauftrages</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#220722-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021075"/>
+<summary>Kenntnisnahme am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023797#beratung-4</id>
+<title>Rat: „geändert beschlossen“ – 253567 Grundsatzbeschluss zur Errichtung zweier 3-Feld-Sporthallen in vertikaler Bauweise sowie zur Festlegung des Raumprogramms am Standort Sportpark Pennenfeld</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253567"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023797"/>
+<summary>Entscheidung am 2025-12-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023797#vorlage</id>
+<title>Neue Vorlage 253567: Grundsatzbeschluss zur Errichtung zweier 3-Feld-Sporthallen in vertikaler Bauweise sowie zur Festlegung des Raumprogramms am Standort Sportpark Pennenfeld</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253567"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023797"/>
+<summary>Beschlussvorlage · federführend: 52 Sport- und Bäderamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023797#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 253567 Grundsatzbeschluss zur Errichtung zweier 3-Feld-Sporthallen in vertikaler Bauweise sowie zur Festlegung des Raumprogramms am Standort Sportpark Pennenfeld</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253567"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023797"/>
+<summary>Anhörung am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021543#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 252578 Veröffentlichung der Vorhabenliste: 164686 - Kinderfreundliche Kommune: Belebung des öffentlichen Raums für Jugendliche – hier: Pennenfeld</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252578"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021543"/>
+<summary>Entscheidung am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024312#vorlage</id>
+<title>Neue Vorlage 253611-03 ST: BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2025-10-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024312"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024311#vorlage</id>
+<title>Neue Vorlage 253611-02 ST: FDP-Änderungsantrag als Ergänzungsantrag zu DS 253611 BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2025-10-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024311"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024048#vorlage</id>
+<title>Neue Vorlage 253611-01 AA: FDP-Änderungsantrag als Ergänzungsantrag zu DS 253611 BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2025-08-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024048"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023891#vorlage</id>
+<title>Neue Vorlage 253611: BBB-Antrag: Schutz der Baumbeete entlang der Koblenzer Straße, Bad Godesberg - Umsetzung von Vorgaben der Gestaltungs- und Werbesatzung Bad Godesberg</title>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253611"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023891"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023898#vorlage</id>
+<title>Neue Vorlage 253616: BBB-Antrag: Korrektur der angezeigten Wegeführung einer Navigations-App im Bereich Theodor-Heuss-Straße/Koblenzer Straße/Friedrichallee</title>
+<updated>2025-08-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#253616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023898"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022512#vorlage</id>
+<title>Neue Vorlage 252421-02: N-Vorlage Fällung einer Moor-Birke auf dem städtischen Grundstück Gemarkung Godesberg, Flur 3, Nr. 755, Koblenzer Straße</title>
+<updated>2025-04-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252421-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022512"/>
+<summary>Beschlussvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021588#beratung-4</id>
+<title>Unterausschuss Denkmalschutz: „zur Kenntnis genommen“ – 252421-01 Fällung einer Moor-Birke auf dem städtischen Grundstück Gemarkung Godesberg, Flur 3, Nr. 755, Koblenzer Straße</title>
+<updated>2025-04-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252421-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021588"/>
+<summary>Kenntnisnahme am 2025-04-08; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021588#beratung-3</id>
+<title>Baumkommission: „zur Kenntnis genommen“ – 252421-01 Fällung einer Moor-Birke auf dem städtischen Grundstück Gemarkung Godesberg, Flur 3, Nr. 755, Koblenzer Straße</title>
+<updated>2025-04-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252421-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021588"/>
+<summary>Kenntnisnahme am 2025-04-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021075#vorlage</id>
+<title>Neue Vorlage 220722-06: Aufwertung der Teerflächen in Pennenfeld (DS 220722) Hier: Ergebnis des Prüfauftrages</title>
+<updated>2025-03-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#220722-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021075"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021543#beratung-4</id>
+<title>Beirat Bürgerbeteiligung: „geändert beschlossen“ – 252578 Veröffentlichung der Vorhabenliste: 164686 - Kinderfreundliche Kommune: Belebung des öffentlichen Raums für Jugendliche – hier: Pennenfeld</title>
+<updated>2025-03-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252578"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021543"/>
+<summary>Empfehlung am 2025-03-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021588#vorlage</id>
+<title>Neue Vorlage 252421-01: Fällung einer Moor-Birke auf dem städtischen Grundstück Gemarkung Godesberg, Flur 3, Nr. 755, Koblenzer Straße</title>
+<updated>2025-03-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252421-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021588"/>
+<summary>Mitteilungsvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021543#beratung-3</id>
+<title>Beirat Kinder- und Jugendbeteiligung: „geändert beschlossen“ – 252578 Veröffentlichung der Vorhabenliste: 164686 - Kinderfreundliche Kommune: Belebung des öffentlichen Raums für Jugendliche – hier: Pennenfeld</title>
+<updated>2025-03-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252578"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021543"/>
+<summary>Empfehlung am 2025-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021543#vorlage</id>
+<title>Neue Vorlage 252578: Veröffentlichung der Vorhabenliste: 164686 - Kinderfreundliche Kommune: Belebung des öffentlichen Raums für Jugendliche – hier: Pennenfeld</title>
+<updated>2025-02-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252578"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021543"/>
+<summary>Beschlussvorlage · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021287#vorlage</id>
+<title>Neue Vorlage 240986-70 AA: BBB-Änderungsantrag: Umbau der Kreuzung Koblenzer Straße/Friedrich-Ebert-Straße;  Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-01-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#240986-70%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021287"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021052#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 252421 Fällung einer Moor-Birke auf dem städtischen Grundstück Gemarkung Godesberg, Flur 3, Nr. 755, Koblenzer Straße</title>
+<updated>2025-01-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252421"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021052"/>
+<summary>Entscheidung am 2025-01-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021052#beratung-3</id>
+<title>Baumkommission: „ungeändert beschlossen“ – 252421 Fällung einer Moor-Birke auf dem städtischen Grundstück Gemarkung Godesberg, Flur 3, Nr. 755, Koblenzer Straße</title>
+<updated>2025-01-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252421"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021052"/>
+<summary>Empfehlung am 2025-01-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021052#vorlage</id>
+<title>Neue Vorlage 252421: Fällung einer Moor-Birke auf dem städtischen Grundstück Gemarkung Godesberg, Flur 3, Nr. 755, Koblenzer Straße</title>
+<updated>2025-01-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#252421"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021052"/>
+<summary>Beschlussvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020302#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 242111 CDU-Dringlichkeitsantrag: Sportpark Pennenfeld und Sporthallensituation in Bad Godesberg</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#242111"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020302"/>
+<summary>Entscheidung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019903#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 220722-05 CDU-Antrag: Aufwertung der Teerflächen in Pennenfeld Antrag zur Vorlage 220722</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#220722-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019903"/>
+<summary>Entscheidung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020302#vorlage</id>
+<title>Neue Vorlage 242111: CDU-Dringlichkeitsantrag: Sportpark Pennenfeld und Sporthallensituation in Bad Godesberg</title>
+<updated>2024-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#242111"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020302"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019903#vorlage</id>
+<title>Neue Vorlage 220722-05: CDU-Antrag: Aufwertung der Teerflächen in Pennenfeld Antrag zur Vorlage 220722</title>
+<updated>2024-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#220722-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019903"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019706#vorlage</id>
+<title>Neue Vorlage 241835: Informationsbrief - Erweiterungsneubau G8-G9 auf dem Grundstück des Konrad-Adenauer-Gymnasiums</title>
+<updated>2024-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#241835"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019706"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018641#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241291-01 ST BBB-Anfrage Sondernutzungsgenehmigung öffentlicher Verkehrsflächen Koblenzer Straße 58-62</title>
+<updated>2024-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#241291-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018641"/>
+<summary>Kenntnisnahme am 2024-09-18; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018428#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241291 BBB-Anfrage Sondernutzungsgenehmigung öffentlicher Verkehrsflächen Koblenzer Straße 58-62</title>
+<updated>2024-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#241291"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018428"/>
+<summary>Kenntnisnahme am 2024-09-18; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018641#vorlage</id>
+<title>Neue Vorlage 241291-01 ST: BBB-Anfrage Sondernutzungsgenehmigung öffentlicher Verkehrsflächen Koblenzer Straße 58-62</title>
+<updated>2024-08-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#241291-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018641"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018428#vorlage</id>
+<title>Neue Vorlage 241291: BBB-Anfrage Sondernutzungsgenehmigung öffentlicher Verkehrsflächen Koblenzer Straße 58-62</title>
+<updated>2024-07-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#241291"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018428"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016943#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 240688 Fällung von 19 satzungsgeschützten städtischen Bäumen im Bauantragsverfahren auf dem Grundstück des Konrad-Adenauer-Gymnasiums, Max-Planck-Straße 24 in Bonn-Pennenfeld</title>
+<updated>2024-06-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#240688"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016943"/>
+<summary>Entscheidung am 2024-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016726#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 240623 Grundstück in Bonn-Bad Godesberg, Koblenzer Straße 65 - Errichtung eines Sommergartens als Außengastronomie Az.: 40014/2024</title>
+<updated>2024-05-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#240623"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016726"/>
+<summary>Anhörung am 2024-05-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016943#beratung-3</id>
+<title>Baumkommission: „ungeändert beschlossen“ – 240688 Fällung von 19 satzungsgeschützten städtischen Bäumen im Bauantragsverfahren auf dem Grundstück des Konrad-Adenauer-Gymnasiums, Max-Planck-Straße 24 in Bonn-Pennenfeld</title>
+<updated>2024-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#240688"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016943"/>
+<summary>Empfehlung am 2024-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016943#vorlage</id>
+<title>Neue Vorlage 240688: Fällung von 19 satzungsgeschützten städtischen Bäumen im Bauantragsverfahren auf dem Grundstück des Konrad-Adenauer-Gymnasiums, Max-Planck-Straße 24 in Bonn-Pennenfeld</title>
+<updated>2024-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#240688"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016943"/>
+<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016726#vorlage</id>
+<title>Neue Vorlage 240623: Grundstück in Bonn-Bad Godesberg, Koblenzer Straße 65 - Errichtung eines Sommergartens als Außengastronomie Az.: 40014/2024</title>
+<updated>2024-04-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#240623"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016726"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016082#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 240327 Einleitung des Vergabeverfahrens (beschränkte Ausschreibung UVgO) zur Durchführung der Entrümpelung der Stadthalle Bad Godesberg, Koblenzer Straße 80, 53177 Bonn</title>
+<updated>2024-03-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#240327"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016082"/>
+<summary>Entscheidung am 2024-03-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016082#vorlage</id>
+<title>Neue Vorlage 240327: Einleitung des Vergabeverfahrens (beschränkte Ausschreibung UVgO) zur Durchführung der Entrümpelung der Stadthalle Bad Godesberg, Koblenzer Straße 80, 53177 Bonn</title>
+<updated>2024-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#240327"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016082"/>
+<summary>Beschlussvorlage: Einleitung · federführend: 03 Amt für Wirtschaftsförderung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014149#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231605-01 ST BBB-Große Anfrage „Abzugsanlage Gastronomiebetrieb in der Koblenzer Straße, Bad Godesberg“</title>
+<updated>2024-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231605-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014149"/>
+<summary>Kenntnisnahme am 2024-02-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013594#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231605 BBB-Große Anfrage „Abzugsanlage Gastronomiebetrieb in der Koblenzer Straße, Bad Godesberg“</title>
+<updated>2024-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231605"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013594"/>
+<summary>Kenntnisnahme am 2024-02-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015347#vorlage</id>
+<title>Neue Vorlage 231642-01 ST: BBB-Antrag Überwachung des Verkehrs auf der Koblenzer Straße</title>
+<updated>2023-12-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231642-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015347"/>
+<summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013189#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 230003-06 ST Geplante Nutzung der ehemaligen Polizeiwache an der Zeppelinstraße</title>
+<updated>2023-11-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#230003-06%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013189"/>
+<summary>Kenntnisnahme am 2023-11-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012983#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 230003-03 BBB-Anfrage: Geplante Nutzung der ehemaligen Polizeiwache an der Zeppelinstraße</title>
+<updated>2023-11-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#230003-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012983"/>
+<summary>Kenntnisnahme am 2023-11-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014183#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 231250-03 ST BBB-Antrag: Durchgang Koblenzer Straße / Hubertinumshof Drucksachengruppe 231250</title>
+<updated>2023-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231250-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014183"/>
+<summary>Kenntnisnahme am 2023-11-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014116#beratung-3</id>
+<title>Rat: „abgelehnt“ – 231250-02 BBB-Antrag: Durchgang Koblenzer Straße / Hubertinumshof Drucksachengruppe 231250</title>
+<updated>2023-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231250-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014116"/>
+<summary>Entscheidung am 2023-11-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013485#beratung-6</id>
+<title>Rat: „ungeändert beschlossen“ – 231555 Entwurfsplanung für die Erweiterung des Konrad-Adenauer-Gymnasiums, Max-Planck-Straße 24, 53177 Bonn - Pennenfeld infolge der Umstellung G8-G9</title>
+<updated>2023-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231555"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013485"/>
+<summary>Entscheidung am 2023-11-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014496#vorlage</id>
+<title>Neue Vorlage 232027: Interfraktioneller Dringlichkeitsantrag: Kurzfristige Maßnahmen Sporthalle Pennenfeld</title>
+<updated>2023-10-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#232027"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014496"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014496#beratung-3</id>
+<title>Betriebsausschuss SGB: „ungeändert beschlossen“ – 232027 Interfraktioneller Dringlichkeitsantrag: Kurzfristige Maßnahmen Sporthalle Pennenfeld</title>
+<updated>2023-10-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#232027"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014496"/>
+<summary>Anregung am 2023-10-26; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014496#beratung-2</id>
+<title>Sportausschuss: „ungeändert beschlossen“ – 232027 Interfraktioneller Dringlichkeitsantrag: Kurzfristige Maßnahmen Sporthalle Pennenfeld</title>
+<updated>2023-10-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#232027"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014496"/>
+<summary>Empfehlung am 2023-10-26; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013665#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 231642 BBB-Antrag Überwachung des Verkehrs auf der Koblenzer Straße</title>
+<updated>2023-10-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231642"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013665"/>
+<summary>Entscheidung am 2023-10-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013027#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231250-01 ST Durchgang Koblenzer Straße / Hubertinumshof</title>
+<updated>2023-10-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231250-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013027"/>
+<summary>Kenntnisnahme am 2023-10-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012895#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231250 BBB-Große Anfrage: Durchgang Koblenzer Straße / Hubertinumshof</title>
+<updated>2023-10-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231250"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012895"/>
+<summary>Kenntnisnahme am 2023-10-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014116#vorlage</id>
+<title>Neue Vorlage 231250-02: BBB-Antrag: Durchgang Koblenzer Straße / Hubertinumshof Drucksachengruppe 231250</title>
+<updated>2023-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231250-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014116"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013485#beratung-4</id>
+<title>Schulausschuss: „ungeändert beschlossen“ – 231555 Entwurfsplanung für die Erweiterung des Konrad-Adenauer-Gymnasiums, Max-Planck-Straße 24, 53177 Bonn - Pennenfeld infolge der Umstellung G8-G9</title>
+<updated>2023-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231555"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013485"/>
+<summary>Empfehlung am 2023-10-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013665#vorlage</id>
+<title>Neue Vorlage 231642: BBB-Antrag Überwachung des Verkehrs auf der Koblenzer Straße</title>
+<updated>2023-10-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231642"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013665"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014183#vorlage</id>
+<title>Neue Vorlage 231250-03 ST: BBB-Antrag: Durchgang Koblenzer Straße / Hubertinumshof Drucksachengruppe 231250</title>
+<updated>2023-10-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231250-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014183"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014149#vorlage</id>
+<title>Neue Vorlage 231605-01 ST: BBB-Große Anfrage „Abzugsanlage Gastronomiebetrieb in der Koblenzer Straße, Bad Godesberg“</title>
+<updated>2023-10-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231605-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014149"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012081#beratung-7</id>
+<title>Rat: „geändert beschlossen“ – 221911-04 Grüne-Antrag: Sanierung der Sporthalle Pennenfeld</title>
+<updated>2023-09-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#221911-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012081"/>
+<summary>Entscheidung am 2023-09-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013485#beratung-3</id>
+<title>Betriebsausschuss SGB: „ungeändert beschlossen“ – 231555 Entwurfsplanung für die Erweiterung des Konrad-Adenauer-Gymnasiums, Max-Planck-Straße 24, 53177 Bonn - Pennenfeld infolge der Umstellung G8-G9</title>
+<updated>2023-09-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#231555"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013485"/>
+<summary>Empfehlung am 2023-09-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013436#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 221911-05 AA CDU-Änderungsantrag: Sanierung/Neubau der Sporthalle Pennenfeld Antrag zur Vorlage 221911-04</title>
+<updated>2023-09-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:pennenfeld#221911-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013436"/>
+<summary>Anhörung am 2023-09-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

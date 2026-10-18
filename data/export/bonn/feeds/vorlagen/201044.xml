@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/201044</id>
+<title>Vorlage 201044: "Tempo 30“ in der Bahnhofstraße in Lessenich (Stadtbezirk Bonn) sowie Planung eines Fußgängerüberweges</title>
+<subtitle>Verlauf der Vorlage 201044: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2022-03-02T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/201044.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lessenich-messdorf#201044"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6441#folge-201044-02</id>
+<title>Mitteilungsvorlage 201044-02: "Tempo 30“ in der Bahnhofstraße in Lessenich (Stadtbezirk Bonn) sowie Planung eines Fußgängerüberweges</title>
+<updated>2022-03-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lessenich-messdorf#201044"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6441"/>
+<summary>Folgevorlage zu 201044</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6441#folge-201044-1 ST</id>
+<title>Stellungnahme der Verwaltung 201044-1 ST: "Tempo 30“ in der Bahnhofstraße in Lessenich (Stadtbezirk Bonn) sowie Planung eines Fußgängerüberweges - Stellungnahme der Verwaltung</title>
+<updated>2020-06-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lessenich-messdorf#201044"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6441"/>
+<summary>Folgevorlage zu 201044</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6441#vorlage</id>
+<title>Neue Vorlage 201044: "Tempo 30“ in der Bahnhofstraße in Lessenich (Stadtbezirk Bonn) sowie Planung eines Fußgängerüberweges</title>
+<updated>2020-06-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lessenich-messdorf#201044"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6441"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+</feed>

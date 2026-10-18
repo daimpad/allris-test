@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/230882</id>
+<title>Vorlage 230882: Bürgerantrag: Einrichtung eines Friedwaldes/Ruheforstes im Hardtbergwald</title>
+<subtitle>Verlauf der Vorlage 230882: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-03-04T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/230882.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#230882"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012074#vorlage</id>
+<title>Neue Vorlage 230882: Bürgerantrag: Einrichtung eines Friedwaldes/Ruheforstes im Hardtbergwald</title>
+<updated>2025-03-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#230882"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012074"/>
+<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012074#folge-230882-03 AA</id>
+<title>Änderungsantrag 230882-03 AA: CDU-Änderungsantrag: Einrichtung eines Friedwaldes/Ruheforstes im Hardtbergwald Antrag zur Vorlage 230882</title>
+<updated>2024-01-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#230882"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012074"/>
+<summary>Folgevorlage zu 230882</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012074#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 230882 Bürgerantrag: Einrichtung eines Friedwaldes/Ruheforstes im Hardtbergwald</title>
+<updated>2024-01-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#230882"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012074"/>
+<summary>Entscheidung am 2024-01-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012074#folge-230882-02 ST</id>
+<title>Stellungnahme der Verwaltung 230882-02 ST: Bürgerantrag: Einrichtung eines Friedwaldes/Ruheforstes im Hardtbergwald</title>
+<updated>2024-01-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#230882"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012074"/>
+<summary>Folgevorlage zu 230882</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012074#folge-230882-01 ST</id>
+<title>Stellungnahme der Verwaltung 230882-01 ST: Bürgerantrag: Einrichtung eines Friedwaldes/Ruheforstes im Hardtbergwald hier: Vertagungsbitte</title>
+<updated>2023-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2025#230882"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012074"/>
+<summary>Folgevorlage zu 230882</summary>
+</entry>
+</feed>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/190450</id>
+<title>Vorlage 190450: Komplexe Verfahren der Bürgerbeteiligung (alt:1911164)</title>
+<subtitle>Verlauf der Vorlage 190450: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2020-05-15T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/190450.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2019#190450"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/914#beratung-6</id>
+<title>Beirat Bürgerbeteiligung: „zur Kenntnis genommen“ – 190450 Komplexe Verfahren der Bürgerbeteiligung (alt:1911164)</title>
+<updated>2020-05-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2019#190450"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=914"/>
+<summary>Kenntnisnahme am 2020-05-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/914#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger und Lokale Agenda: „zur Kenntnis genommen“ – 190450 Komplexe Verfahren der Bürgerbeteiligung (alt:1911164)</title>
+<updated>2020-03-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2019#190450"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=914"/>
+<summary>Kenntnisnahme am 2020-03-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/914#folge-190450-1 ST</id>
+<title>Stellungnahme der Verwaltung 190450-1 ST: Komplexe Verfahren der Bürgerbeteiligung (alt:1911164)</title>
+<updated>2020-02-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2019#190450"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=914"/>
+<summary>Folgevorlage zu 190450</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/914#vorlage</id>
+<title>Neue Vorlage 190450: Komplexe Verfahren der Bürgerbeteiligung (alt:1911164)</title>
+<updated>2019-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2019#190450"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=914"/>
+<summary>Große Anfrage · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+</feed>

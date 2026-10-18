@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/252549</id>
+<title>Vorlage 252549: FDP-Antrag: Verkehrsmessstellen Venusberg</title>
+<subtitle>Verlauf der Vorlage 252549: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-06-26T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/252549.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:venusberg#252549"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021478#beratung-4</id>
+<title>Hauptausschuss: „abgelehnt“ – 252549 FDP-Antrag: Verkehrsmessstellen Venusberg</title>
+<updated>2025-06-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:venusberg#252549"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021478"/>
+<summary>Entscheidung am 2025-06-26; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021478#beratung-3</id>
+<title>Ausschuss für Mobilität und Verkehr: „abgelehnt“ – 252549 FDP-Antrag: Verkehrsmessstellen Venusberg</title>
+<updated>2025-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:venusberg#252549"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021478"/>
+<summary>Empfehlung am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021478#folge-252549-01 ST</id>
+<title>Stellungnahme der Verwaltung 252549-01 ST: FDP-Antrag: Verkehrsmessstellen Venusberg</title>
+<updated>2025-03-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:venusberg#252549"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021478"/>
+<summary>Folgevorlage zu 252549</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021478#vorlage</id>
+<title>Neue Vorlage 252549: FDP-Antrag: Verkehrsmessstellen Venusberg</title>
+<updated>2025-02-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:venusberg#252549"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021478"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+</feed>

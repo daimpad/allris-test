@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/253157</id>
+<title>Vorlage 253157: CDU-Antrag: Verbesserung der Busanbindung von Buschdorf mit Tannenbusch-Mitte</title>
+<subtitle>Verlauf der Vorlage 253157: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-08-18T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/253157.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:buschdorf#253157"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022882#folge-253157-02</id>
+<title>Mitteilungsvorlage 253157-02: Verbesserung der Busanbindung von Buschdorf mit Tannenbusch-Mitte</title>
+<updated>2025-08-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:buschdorf#253157"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022882"/>
+<summary>Folgevorlage zu 253157</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022882#folge-253157-01 ST</id>
+<title>Stellungnahme der Verwaltung 253157-01 ST: CDU-Antrag: Verbesserung der Busanbindung von Buschdorf mit Tannenbusch-Mitte</title>
+<updated>2025-06-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:buschdorf#253157"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022882"/>
+<summary>Folgevorlage zu 253157</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022882#vorlage</id>
+<title>Neue Vorlage 253157: CDU-Antrag: Verbesserung der Busanbindung von Buschdorf mit Tannenbusch-Mitte</title>
+<updated>2025-05-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:buschdorf#253157"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022882"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+</feed>

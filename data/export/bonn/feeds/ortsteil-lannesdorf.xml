@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ortsteil-lannesdorf</id>
+<title>RIS-Karte Bonn – Lannesdorf</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Lannesdorf</subtitle>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-lannesdorf.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029502#vorlage</id>
+<title>Neue Vorlage 261778: Bebauungsplan Nr. 8215-44, „Siebengebirgsterrassen“, Deutschherrenstraße, Fuß- und Fahrradweg zur Saint-Cloud-Straße</title>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261778"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029502"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029063#vorlage</id>
+<title>Neue Vorlage 253551-03 ST: CDU-Antrag: Anschaffung von neuen Bänken auf dem Dorfplatz in Lannesdorf und dem Parkplatz Hoverstr./ Lannesdorfer Str.</title>
+<updated>2026-09-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253551-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029063"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029445#vorlage</id>
+<title>Neue Vorlage 261744: CDU-Antrag: Nachnutzung der ehemaligen König-Fahd-Akademie in Lannesdorf</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261744"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029445"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028809#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 253551-02 CDU-Große Anfrage: Anschaffung von neuen Bänken auf dem Dorfplatz in Lannesdorf und auf dem Parkplatz Hoverstr./ Lannesdorfer Str.</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253551-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028809"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028759#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 261377-01 ST Vertagungsbitte Bürgerantrag: Einrichtung einer verkehrsabhängigen Ampelanlage im Bereich Kreuzung Floßweg/Ellesdorfer Straße in Lannesdorf</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261377-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028759"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028578#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 261377 Bürgerantrag: Einrichtung einer verkehrsabhängigen Ampelanlage im Bereich Kreuzung Floßweg/Ellesdorfer Straße in Lannesdorf</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261377"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028578"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028547#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261361 CDU Große Anfrage: Fahrradplatz in der Max-Planck-Straße vor der Hausnummer 107</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261361"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028547"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027673#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 221504-11 Ausschreibungsergebnis Carsharing; Änderung des Standortes in Lannesdorf</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#221504-11"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027673"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028759#vorlage</id>
+<title>Neue Vorlage 261377-01 ST: Vertagungsbitte Bürgerantrag: Einrichtung einer verkehrsabhängigen Ampelanlage im Bereich Kreuzung Floßweg/Ellesdorfer Straße in Lannesdorf</title>
+<updated>2026-08-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261377-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028759"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027673#vorlage</id>
+<title>Neue Vorlage 221504-11: Ausschreibungsergebnis Carsharing; Änderung des Standortes in Lannesdorf</title>
+<updated>2026-08-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#221504-11"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027673"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028809#vorlage</id>
+<title>Neue Vorlage 253551-02: CDU-Große Anfrage: Anschaffung von neuen Bänken auf dem Dorfplatz in Lannesdorf und auf dem Parkplatz Hoverstr./ Lannesdorfer Str.</title>
+<updated>2026-08-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253551-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028809"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028578#vorlage</id>
+<title>Neue Vorlage 261377: Bürgerantrag: Einrichtung einer verkehrsabhängigen Ampelanlage im Bereich Kreuzung Floßweg/Ellesdorfer Straße in Lannesdorf</title>
+<updated>2026-07-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261377"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028578"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028547#vorlage</id>
+<title>Neue Vorlage 261361: CDU Große Anfrage: Fahrradplatz in der Max-Planck-Straße vor der Hausnummer 107</title>
+<updated>2026-07-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261361"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028547"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027787#beratung-3</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 261069 Neues Familienzentrum in der Bundestadt Bonn zum Kindergartenjahr 2026/2027 Fröbel-Kindergarten Flügelnuss, Deutschherrenstr. 89, 53177 Bonn Träger Fröbel Bildung und Erziehung gemeinnützige GmbH, Salierring 47-53, 50667 Köln</title>
+<updated>2026-07-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261069"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027787"/>
+<summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027787#vorlage</id>
+<title>Neue Vorlage 261069: Neues Familienzentrum in der Bundestadt Bonn zum Kindergartenjahr 2026/2027 Fröbel-Kindergarten Flügelnuss, Deutschherrenstr. 89, 53177 Bonn Träger Fröbel Bildung und Erziehung gemeinnützige GmbH, Salierring 47-53, 50667 Köln</title>
+<updated>2026-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#261069"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027787"/>
+<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026811#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260509-02 Abbau der Kleidercontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#260509-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026811"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026811#vorlage</id>
+<title>Neue Vorlage 260509-02: Abbau der Kleidercontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#260509-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026811"/>
+<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026250#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260509 FDP-Antrag: Abbau der Kleidercontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#260509"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026250"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026249#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260508 FDP-Antrag: Erhöhung der Leerungsfrequenz der Altglascontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#260508"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026249"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026250#vorlage</id>
+<title>Neue Vorlage 260509: FDP-Antrag: Abbau der Kleidercontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-03-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#260509"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026250"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026249#vorlage</id>
+<title>Neue Vorlage 260508: FDP-Antrag: Erhöhung der Leerungsfrequenz der Altglascontainer an der Bushaltestelle Antoniterstraße</title>
+<updated>2026-03-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#260508"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026249"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024840#beratung-4</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 254035 Genehmigung der baureifen Ausbauplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des vorhabenbezogenen Bebauungsplanes Nr. 7014-1 „Deutschherrenstraße 175-187“ im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf</title>
+<updated>2026-03-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#254035"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024840"/>
+<summary>Empfehlung am 2026-03-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025542#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 202275-05 ST BBB-Antrag: Aufhebung einer Tempo 30-Regelung in der Ellesdorfer Straße; hier: Stellungnahme der Verwaltung zu DS 202275-04</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#202275-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025542"/>
+<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024840#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 254035 Genehmigung der baureifen Ausbauplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des vorhabenbezogenen Bebauungsplanes Nr. 7014-1 „Deutschherrenstraße 175-187“ im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#254035"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024840"/>
+<summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023890#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 202275-04 BBB-Antrag: Aufhebung einer Tempo 30-Regelung in der Ellesdorfer Straße</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#202275-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023890"/>
+<summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025542#vorlage</id>
+<title>Neue Vorlage 202275-05 ST: BBB-Antrag: Aufhebung einer Tempo 30-Regelung in der Ellesdorfer Straße; hier: Stellungnahme der Verwaltung zu DS 202275-04</title>
+<updated>2026-02-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#202275-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025542"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025153#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260058 Grüne-Dringlichkeitsantrag: Winterdienst vor der städtischen Kita im Sommerbergweg</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#260058"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025153"/>
+<summary>Entscheidung am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025153#vorlage</id>
+<title>Neue Vorlage 260058: Grüne-Dringlichkeitsantrag: Winterdienst vor der städtischen Kita im Sommerbergweg</title>
+<updated>2026-01-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#260058"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025153"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024840#vorlage</id>
+<title>Neue Vorlage 254035: Genehmigung der baureifen Ausbauplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des vorhabenbezogenen Bebauungsplanes Nr. 7014-1 „Deutschherrenstraße 175-187“ im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#254035"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024840"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024603#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 242334-01 ST interfraktionelle Große Anfrage: Unfallstatistik in der Straße Am Noßbacher Weg / K14 auf ihrem gesamten Verlauf</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242334-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024603"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023957#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 231266-03 Fußgängerüberweg über die Drachenburgstraße</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#231266-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023957"/>
+<summary>Entscheidung am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023475#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 241869-05 ST Bürgerantrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße hier: Vertagungsbitte zu der Maßgabe Ortstermin</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023475"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023456#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 241869-04 AA FDP-Änderungsantrag als Prüfauftrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße Antrag zur Vorlage 241869</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023456"/>
+<summary>Entscheidung am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022232#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 241869-03 ST Bürgerantrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße hier: Stellungnahme zum Änderungsantrag DS 241869-02 AA</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022232"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022207#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 221504-09 AA FDP-Änderungsantrag: Ausschreibungsergebnis Carsharing, Änderung des Standortes in Lannesdorf Antrag zur Vorlage 221504</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#221504-09%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022207"/>
+<summary>Entscheidung am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022198#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 241869-02 AA Grüne-Änderungsantrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße Antrag zur Vorlage 241869</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022198"/>
+<summary>Entscheidung am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020877#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 242334 interfraktionelle Große Anfrage: Unfallstatistik in der Straße Am Noßbacher Weg / K14 auf ihrem gesamten Verlauf</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242334"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020877"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020472#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 241869-01 ST Bürgerantrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020472"/>
+<summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019773#beratung-7</id>
+<title>Bezirksvertretung Bad Godesberg: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 241869 Bürgerantrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019773"/>
+<summary>Entscheidung am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017714#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 221504-08 Ausschreibungsergebnis Carsharing; Änderung des Standortes in Lannesdorf</title>
+<updated>2025-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#221504-08"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017714"/>
+<summary>Entscheidung am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024603#vorlage</id>
+<title>Neue Vorlage 242334-01 ST: interfraktionelle Große Anfrage: Unfallstatistik in der Straße Am Noßbacher Weg / K14 auf ihrem gesamten Verlauf</title>
+<updated>2025-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242334-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024603"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023957#vorlage</id>
+<title>Neue Vorlage 231266-03: Fußgängerüberweg über die Drachenburgstraße</title>
+<updated>2025-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#231266-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023957"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024298#vorlage</id>
+<title>Neue Vorlage 253762: Informationsbrief - Informationsveranstaltung zur Bonner Wärmewende - Lannesdorf/Mehlem</title>
+<updated>2025-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253762"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024298"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023073#beratung-6</id>
+<title>Rat: „ungeändert beschlossen“ – 253260 Stellungnahmen sowie Feststellungsbeschluss zur 202. Änderung des Flächennutzungsplanes der Bundesstadt Bonn, im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf „Deutschherrenstraße“</title>
+<updated>2025-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253260"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023073"/>
+<summary>Entscheidung am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020921#beratung-6</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 252359 202. Änderung des Flächennutzungsplanes der Bundesstadt Bonn, Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf „Deutschherrenstraße“ Hier: Veröffentlichung aufgrund eines Formfehlers</title>
+<updated>2025-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#252359"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020921"/>
+<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024046#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253551-01 ST CDU-Antrag: Anschaffung von neuen Bänken auf dem Dorfplatz in Lannesdorf und dem Parkplatz Hoverstr./ Lannesdorfer Str.</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253551-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024046"/>
+<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023770#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 253551 CDU-Antrag: Anschaffung von neuen Bänken auf dem Dorfplatz in Lannesdorf und dem Parkplatz Hoverstr./ Lannesdorfer Str.</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253551"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023770"/>
+<summary>Entscheidung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023099#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241167-04 ST BBB-Anfrage: Genehmigung, Duldung bzw. Abriss von Aufbauten in Landschaftsschutzgebieten von Friesdorf, Lannesdorf und im Bereich beiderseites der Elisabethstraße Drucksachengruppe 241167</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241167-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023099"/>
+<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022183#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 240255-12 ST BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-12%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022183"/>
+<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021762#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 240255-11 ST BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-11%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021762"/>
+<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021214#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 240255-08 BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-08"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021214"/>
+<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020454#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241167-03 ST BBB-Anfrage: Genehmigung, Duldung bzw. Abriss von Aufbauten in Landschaftsschutzgebieten von Friesdorf, Lannesdorf und im Bereich beiderseites der Elisabethstraße Drucksachengruppe 241167</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241167-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020454"/>
+<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018922#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241167-02 BBB-Anfrage: Genehmigung, Duldung bzw. Abriss von Aufbauten in Landschaftsschutzgebieten von Friesdorf, Lannesdorf und im Bereich beiderseites der Elisabethstraße Drucksachengruppe 241167</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241167-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018922"/>
+<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024046#vorlage</id>
+<title>Neue Vorlage 253551-01 ST: CDU-Antrag: Anschaffung von neuen Bänken auf dem Dorfplatz in Lannesdorf und dem Parkplatz Hoverstr./ Lannesdorfer Str.</title>
+<updated>2025-08-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253551-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024046"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023890#vorlage</id>
+<title>Neue Vorlage 202275-04: BBB-Antrag: Aufhebung einer Tempo 30-Regelung in der Ellesdorfer Straße</title>
+<updated>2025-08-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#202275-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023890"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023099#vorlage</id>
+<title>Neue Vorlage 241167-04 ST: BBB-Anfrage: Genehmigung, Duldung bzw. Abriss von Aufbauten in Landschaftsschutzgebieten von Friesdorf, Lannesdorf und im Bereich beiderseites der Elisabethstraße Drucksachengruppe 241167</title>
+<updated>2025-07-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241167-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023099"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023770#vorlage</id>
+<title>Neue Vorlage 253551: CDU-Antrag: Anschaffung von neuen Bänken auf dem Dorfplatz in Lannesdorf und dem Parkplatz Hoverstr./ Lannesdorfer Str.</title>
+<updated>2025-07-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253551"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023770"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023073#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „ungeändert beschlossen“ – 253260 Stellungnahmen sowie Feststellungsbeschluss zur 202. Änderung des Flächennutzungsplanes der Bundesstadt Bonn, im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf „Deutschherrenstraße“</title>
+<updated>2025-07-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253260"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023073"/>
+<summary>Anhörung am 2025-07-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023588#beratung-2</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 242352-01 AA Beschluss zur frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des vorhabenbezogenen Bebauungsplanes Nr. 7114-3 "Mallwitzstraße 18" im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf Antrag zur Vorlage 242352</title>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242352-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023588"/>
+<summary>Entscheidung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023073#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 253260 Stellungnahmen sowie Feststellungsbeschluss zur 202. Änderung des Flächennutzungsplanes der Bundesstadt Bonn, im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf „Deutschherrenstraße“</title>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253260"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023073"/>
+<summary>Empfehlung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020902#beratung-6</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 242352 Beschluss zur frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des vorhabenbezogenen Bebauungsplanes Nr. 7114-3 "Mallwitzstraße 18" im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf</title>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242352"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020902"/>
+<summary>Entscheidung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023588#vorlage</id>
+<title>Neue Vorlage 242352-01 AA: Beschluss zur frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des vorhabenbezogenen Bebauungsplanes Nr. 7114-3 "Mallwitzstraße 18" im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf Antrag zur Vorlage 242352</title>
+<updated>2025-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242352-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023588"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020921#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 252359 202. Änderung des Flächennutzungsplanes der Bundesstadt Bonn, Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf „Deutschherrenstraße“ Hier: Veröffentlichung aufgrund eines Formfehlers</title>
+<updated>2025-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#252359"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020921"/>
+<summary>Kenntnisnahme am 2025-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022183#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 240255-12 ST BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-07-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-12%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022183"/>
+<summary>Kenntnisnahme am 2025-07-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021762#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 240255-11 ST BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-07-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-11%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021762"/>
+<summary>Kenntnisnahme am 2025-07-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021214#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 240255-08 BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-07-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-08"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021214"/>
+<summary>Kenntnisnahme am 2025-07-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023475#vorlage</id>
+<title>Neue Vorlage 241869-05 ST: Bürgerantrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße hier: Vertagungsbitte zu der Maßgabe Ortstermin</title>
+<updated>2025-06-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023475"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020902#beratung-4</id>
+<title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „ungeändert beschlossen“ – 242352 Beschluss zur frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des vorhabenbezogenen Bebauungsplanes Nr. 7114-3 "Mallwitzstraße 18" im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf</title>
+<updated>2025-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242352"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020902"/>
+<summary>Anhörung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023456#vorlage</id>
+<title>Neue Vorlage 241869-04 AA: FDP-Änderungsantrag als Prüfauftrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße Antrag zur Vorlage 241869</title>
+<updated>2025-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023456"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022844#beratung-5</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „ungeändert beschlossen“ – 253141 Veröffentlichung der Vorhabenliste: 164692 - Aufstellung des Bebauungsplanes Nr. 7114-3  "Mallwitzstraße 18" im Ortsteil Lannesdorf</title>
+<updated>2025-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253141"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022844"/>
+<summary>Entscheidung am 2025-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023073#vorlage</id>
+<title>Neue Vorlage 253260: Stellungnahmen sowie Feststellungsbeschluss zur 202. Änderung des Flächennutzungsplanes der Bundesstadt Bonn, im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf „Deutschherrenstraße“</title>
+<updated>2025-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253260"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023073"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022844#beratung-4</id>
+<title>Beirat Bürgerbeteiligung: „ungeändert beschlossen“ – 253141 Veröffentlichung der Vorhabenliste: 164692 - Aufstellung des Bebauungsplanes Nr. 7114-3  "Mallwitzstraße 18" im Ortsteil Lannesdorf</title>
+<updated>2025-06-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253141"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022844"/>
+<summary>Empfehlung am 2025-06-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022844#beratung-3</id>
+<title>Beirat Kinder- und Jugendbeteiligung: „ungeändert beschlossen“ – 253141 Veröffentlichung der Vorhabenliste: 164692 - Aufstellung des Bebauungsplanes Nr. 7114-3  "Mallwitzstraße 18" im Ortsteil Lannesdorf</title>
+<updated>2025-06-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253141"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022844"/>
+<summary>Empfehlung am 2025-06-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022232#vorlage</id>
+<title>Neue Vorlage 241869-03 ST: Bürgerantrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße hier: Stellungnahme zum Änderungsantrag DS 241869-02 AA</title>
+<updated>2025-06-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022232"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020921#beratung-3</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 252359 202. Änderung des Flächennutzungsplanes der Bundesstadt Bonn, Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf „Deutschherrenstraße“ Hier: Veröffentlichung aufgrund eines Formfehlers</title>
+<updated>2025-06-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#252359"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020921"/>
+<summary>Kenntnisnahme am 2025-06-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020902#beratung-3</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „ungeändert beschlossen“ – 242352 Beschluss zur frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des vorhabenbezogenen Bebauungsplanes Nr. 7114-3 "Mallwitzstraße 18" im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf</title>
+<updated>2025-06-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242352"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020902"/>
+<summary>Empfehlung am 2025-06-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022844#vorlage</id>
+<title>Neue Vorlage 253141: Veröffentlichung der Vorhabenliste: 164692 - Aufstellung des Bebauungsplanes Nr. 7114-3  "Mallwitzstraße 18" im Ortsteil Lannesdorf</title>
+<updated>2025-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#253141"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022844"/>
+<summary>Beschlussvorlage · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020902#vorlage</id>
+<title>Neue Vorlage 242352: Beschluss zur frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des vorhabenbezogenen Bebauungsplanes Nr. 7114-3 "Mallwitzstraße 18" im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf</title>
+<updated>2025-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242352"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020902"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022183#vorlage</id>
+<title>Neue Vorlage 240255-12 ST: BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-05-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-12%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022183"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021762#beratung-3</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 240255-11 ST BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-11%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021762"/>
+<summary>Kenntnisnahme am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021214#beratung-2</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 240255-08 BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-08"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021214"/>
+<summary>Kenntnisnahme am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020921#vorlage</id>
+<title>Neue Vorlage 252359: 202. Änderung des Flächennutzungsplanes der Bundesstadt Bonn, Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf „Deutschherrenstraße“ Hier: Veröffentlichung aufgrund eines Formfehlers</title>
+<updated>2025-04-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#252359"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020921"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021880#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 252721 Fällgenehmigung für eine Blaue-Atlas-Zeder auf dem Grundstück An der Nesselburg 88, 53179 Bonn</title>
+<updated>2025-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#252721"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021880"/>
+<summary>Entscheidung am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021880#beratung-3</id>
+<title>Baumkommission: „ungeändert beschlossen“ – 252721 Fällgenehmigung für eine Blaue-Atlas-Zeder auf dem Grundstück An der Nesselburg 88, 53179 Bonn</title>
+<updated>2025-04-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#252721"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021880"/>
+<summary>Empfehlung am 2025-04-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022207#vorlage</id>
+<title>Neue Vorlage 221504-09 AA: FDP-Änderungsantrag: Ausschreibungsergebnis Carsharing, Änderung des Standortes in Lannesdorf Antrag zur Vorlage 221504</title>
+<updated>2025-03-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#221504-09%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022207"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022198#vorlage</id>
+<title>Neue Vorlage 241869-02 AA: Grüne-Änderungsantrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße Antrag zur Vorlage 241869</title>
+<updated>2025-03-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022198"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021880#vorlage</id>
+<title>Neue Vorlage 252721: Fällgenehmigung für eine Blaue-Atlas-Zeder auf dem Grundstück An der Nesselburg 88, 53179 Bonn</title>
+<updated>2025-03-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#252721"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021880"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020472#vorlage</id>
+<title>Neue Vorlage 241869-01 ST: Bürgerantrag: Überarbeitung des Stadtbaumkonzeptes bezogen auf die Straßen: Floßweg, Im Gries und Antoniterstraße</title>
+<updated>2025-03-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241869-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020472"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017714#vorlage</id>
+<title>Neue Vorlage 221504-08: Ausschreibungsergebnis Carsharing; Änderung des Standortes in Lannesdorf</title>
+<updated>2025-03-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#221504-08"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017714"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021762#vorlage</id>
+<title>Neue Vorlage 240255-11 ST: BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-11%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021762"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020454#vorlage</id>
+<title>Neue Vorlage 241167-03 ST: BBB-Anfrage: Genehmigung, Duldung bzw. Abriss von Aufbauten in Landschaftsschutzgebieten von Friesdorf, Lannesdorf und im Bereich beiderseites der Elisabethstraße Drucksachengruppe 241167</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241167-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020454"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021214#vorlage</id>
+<title>Neue Vorlage 240255-08: BBB-Anfrage Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes; hier Austausch von Weichen und Schienen sowie Stellwerkstechnik auf der linksrheinischen Eisenbahnstrecke zw. Bonn Hauptbahnhof und Betriebsbahnhof „Neuer Weg“ in Mehlem in den Jahren 2024/25 Drucksachenfolge 240255</title>
+<updated>2025-01-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#240255-08"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021214"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/5278#beratung-5</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zurückgezogen“ – 190477-2 AA Beschluss über die grundsätzlichen Entwicklungsziele für das Gebiet "In den Schleiden" im Ortsteil Lannesdorf, Stadtbezirk Bad Godesberg (Zielbeschluss) - Ergebnisse der Fachgutachten Antrag zur Vorlage 190477</title>
+<updated>2025-01-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#190477-2%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5278"/>
+<summary>Entscheidung am 2025-01-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/3541#beratung-5</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zurückgezogen“ – 190477-1 AA Beschluss über die grundsätzlichen Entwicklungsziele für das Gebiet "In den Schleiden" im Ortsteil Lannesdorf, Stadtbezirk Bad Godesberg (Zielbeschluss) - Ergebnisse der Fachgutachten Antrag zur Vorlage 190477</title>
+<updated>2025-01-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#190477-1%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3541"/>
+<summary>Entscheidung am 2025-01-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019959#beratung-2</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zurückgezogen“ – 190477-05 AA CDU-Änderungsantrag: Beschluss über die grundsätzlichen Entwicklungsziele für das Gebiet "In den Schleiden" im Ortsteil Lannesdorf, Stadtbezirk Bad Godesberg (Zielbeschluss) - Ergebnisse der Fachgutachten Antrag zur Vorlage 190477</title>
+<updated>2025-01-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#190477-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019959"/>
+<summary>Entscheidung am 2025-01-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/1005#beratung-12</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zurückgezogen“ – 190477 Beschluss über die grundsätzlichen Entwicklungsziele für das Gebiet "In den Schleiden" im Ortsteil Lannesdorf, Stadtbezirk Bad Godesberg (Zielbeschluss) - Ergebnisse der Fachgutachten</title>
+<updated>2025-01-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#190477"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=1005"/>
+<summary>Entscheidung am 2025-01-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020877#vorlage</id>
+<title>Neue Vorlage 242334: interfraktionelle Große Anfrage: Unfallstatistik in der Straße Am Noßbacher Weg / K14 auf ihrem gesamten Verlauf</title>
+<updated>2025-01-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242334"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020877"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020187#beratung-3</id>
+<title>Ausschuss für Mobilität und Verkehr: „nicht abgestimmt“ – 241684-04 AA Änderungsantrag der Grünen-Bezirksfraktion: Prüfauftrag zum Ausbau der Wendestelle „Stadthalle“ und zur Verlängerung der Stadtbahn nach Lannesdorf im Rahmen der Anpassung des Stadtbahnkonzeptes 2026 – Antrag zur Vorlage 241684</title>
+<updated>2024-12-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241684-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020187"/>
+<summary>Empfehlung am 2024-12-05; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020371#vorlage</id>
+<title>Neue Vorlage 242142: CDU-Dringlichkeitsantrag: Räumung der Gartenhütten in Lannesdorf sowie in umliegenden Bereichen</title>
+<updated>2024-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#242142"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020371"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020187#vorlage</id>
+<title>Neue Vorlage 241684-04 AA: Änderungsantrag der Grünen-Bezirksfraktion: Prüfauftrag zum Ausbau der Wendestelle „Stadthalle“ und zur Verlängerung der Stadtbahn nach Lannesdorf im Rahmen der Anpassung des Stadtbahnkonzeptes 2026 – Antrag zur Vorlage 241684</title>
+<updated>2024-11-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:lannesdorf#241684-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020187"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+</feed>

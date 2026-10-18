@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ortsteil-bonn-zentrum</id>
+<title>RIS-Karte Bonn – Bonn-Zentrum</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Bonn-Zentrum</subtitle>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-bonn-zentrum.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029907#vorlage</id>
+<title>Neue Vorlage 261906: Große Anfrage Grüne Fraktion - Auswirkungen der vierspurigen Verkehrsführung im Bereich Oxfordstraße/Berliner Platz</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261906"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029907"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029773#vorlage</id>
+<title>Neue Vorlage 261671-01 ST: Stellungnahme zum Bürgerantrag: Antrag auf Verbot des Links-Abbiegens für den Individualverkehr von der Budapester Straße auf die Thomas-Mann-Straße</title>
+<updated>2026-10-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261671-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029773"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029772#vorlage</id>
+<title>Neue Vorlage 261858-01 ST: Stellungnahme zum Bürgerantrag: Antrag auf Sperrung des Linksabbiegers vom Belderberg (B 9) in Fahrtrichtung Bertha-von-Suttner-Platz bis zur Wiedereröffnung der Nordbrücke</title>
+<updated>2026-10-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261858-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029772"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029698#vorlage</id>
+<title>Neue Vorlage 260677-02 ST: Ergänzende Information zu Linke-Bezirksfraktion-Antrag: Zusätzliche Sitzgelegenheiten für den Münsterplatz</title>
+<updated>2026-10-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260677-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029698"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029728#vorlage</id>
+<title>Neue Vorlage 261858: Bürgerantrag: Antrag auf Sperrung des Linksabbiegers vom Belderberg (B 9) in Fahrtrichtung Bertha-von-Suttner-Platz bis zur Wiedereröffnung der Nordbrücke</title>
+<updated>2026-10-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261858"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029728"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029720#vorlage</id>
+<title>Neue Vorlage 261854: Bürgerantrag: Rücknahme der Eingriffe in den Fahrradverkehr auf der Verkehrsachse Kennedybrücke – Bertha-von-Suttner-Platz – Oxfordstraße – Adenauerallee</title>
+<updated>2026-10-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261854"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029720"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029577#vorlage</id>
+<title>Neue Vorlage 261812: Veröffentlichung der Vorhabenliste: 164703 - "Neugestaltung Kaiserplatz/Am Neutor"</title>
+<updated>2026-10-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261812"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029577"/>
+<summary>Beschlussvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029644#vorlage</id>
+<title>Neue Vorlage 261830: Linke-Bezirksfraktion-Antrag: ÖPNV-Vorrang in der Thomas-Mann-Straße zwischen Budapester Str. und Berliner Platz</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261830"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029644"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029284#vorlage</id>
+<title>Neue Vorlage 260808-02 ST: CDU-Bezirksfraktion-Antrag: Öffnung der Stockenstraße für Zweiräder in Richtung Markt</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260808-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029284"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029390#vorlage</id>
+<title>Neue Vorlage 261717: Bürgerantrag: Antrag auf Erteilung einer Genehmigung für die Anbringung eines taktilen Auffindefeldes vor dem SANIFAIR-Standort im Bereich Sternstraße 34</title>
+<updated>2026-09-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261717"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029390"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029313#vorlage</id>
+<title>Neue Vorlage 261412-01 AA: Änderungsantrag CDU-SPD: Controllingberichte der Stabsstelle Konferenzzentrum/Beethovenhalle für das I.-IV. Quartal 2025 und das I. Quartal 2026 Antrag zur Vorlage 261412</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261412-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029313"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029313#beratung-2</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen - mit Maßgabe“ – 261412-01 AA Änderungsantrag CDU-SPD: Controllingberichte der Stabsstelle Konferenzzentrum/Beethovenhalle für das I.-IV. Quartal 2025 und das I. Quartal 2026 Antrag zur Vorlage 261412</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261412-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029313"/>
+<summary>Entscheidung am 2026-09-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028975#beratung-4</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „zur Kenntnis genommen“ – 261567 Controllingbericht der Stabsstelle Konferenzzentrum/Beethovenhalle für das I.-II. Quartal 2026 (Stichtag 30. Juni 2026)</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261567"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028975"/>
+<summary>Kenntnisnahme am 2026-09-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028657#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „geändert beschlossen“ – 261412 Controllingberichte der Stabsstelle Konferenzzentrum/Beethovenhalle für das I.-IV. Quartal 2025 und das I. Quartal 2026</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261412"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028657"/>
+<summary>Entscheidung am 2026-09-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029117#vorlage</id>
+<title>Neue Vorlage 260365-02 ST: Bürgerantrag: Optimierung Lkw-Verkehr im Bereich der Kölnstraße/Änderung der Durchfahrtszeiten</title>
+<updated>2026-09-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260365-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029117"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029250#vorlage</id>
+<title>Neue Vorlage 261671: Bürgerantrag: Antrag auf Verbot des Links-Abbiegens für den Individualverkehr von der Budapester Straße auf die Thomas-Mann-Straße</title>
+<updated>2026-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261671"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029250"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029227#vorlage</id>
+<title>Neue Vorlage 261665: SPD-Bezirksfraktion: Umsetzung Mehrwegangebot Pützchens Markt 2026</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261665"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029227"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029227#beratung-2</id>
+<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 261665 SPD-Bezirksfraktion: Umsetzung Mehrwegangebot Pützchens Markt 2026</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261665"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029227"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029103#vorlage</id>
+<title>Neue Vorlage 261618: Taskforce Nordbrücke - Maßnahmen auf der Oxfordstraße</title>
+<updated>2026-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261618"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029103"/>
+<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028975#vorlage</id>
+<title>Neue Vorlage 261567: Controllingbericht der Stabsstelle Konferenzzentrum/Beethovenhalle für das I.-II. Quartal 2026 (Stichtag 30. Juni 2026)</title>
+<updated>2026-08-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261567"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028975"/>
+<summary>Mitteilungsvorlage · federführend: II-1 Stabsstelle Konferenzzentrum/Beethovenhalle · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028602#vorlage</id>
+<title>Neue Vorlage 260920-01 ST: Bau Straße Am Hauptbahnhof</title>
+<updated>2026-08-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260920-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028602"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028709#vorlage</id>
+<title>Neue Vorlage 261098-02: N-Vorlage zu Grüne-Bezirksfraktion-Antrag: Schnellbus SB 60 - Halt Bertha-von-Suttner-Platz</title>
+<updated>2026-08-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261098-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028709"/>
+<summary>Beschlussvorlage: Auftrag · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028506#vorlage</id>
+<title>Neue Vorlage 240588-02: Koalitionsantrag: Digitale Fahrgastanzeige an der U-/Stadtbahnhaltestelle Universität/Markt</title>
+<updated>2026-08-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#240588-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028506"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028951#vorlage</id>
+<title>Neue Vorlage 261552: SPD-Bezirksfraktion: Fahrbahnmarkierung zur Lenkung des Kraftfahrzeugverkehrs und Verbesserung der Verkehrssicherheit an der Kreuzung Heerstraße/Rosental/Kölnstraße in Bonn</title>
+<updated>2026-08-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261552"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028951"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028941#vorlage</id>
+<title>Neue Vorlage 261544: Bürgerantrag: Anordnung von Tempo 30 im Bereich der Kölnstraße zwischen An der Josefshöhe und Chlodwigsplatz</title>
+<updated>2026-08-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261544"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028941"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027939#vorlage</id>
+<title>Neue Vorlage 261145: Sachstandsbericht und Ausblick zu den Parkraumkonzepten Bonn-Zentrum &amp; Bonn-Castell</title>
+<updated>2026-08-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261145"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027939"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028780#vorlage</id>
+<title>Neue Vorlage 260820-01 ST: Stellungnahme zu BBB-Fraktion-Antrag: Erhalt von Parkplätzen in der Wachsbleiche</title>
+<updated>2026-08-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260820-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028780"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028011#vorlage</id>
+<title>Neue Vorlage 260677-01 ST: Stellungnahme zu Linke-Bezirksfraktion-Antrag: Zusätzliche Sitzgelegenheiten für den Münsterplatz</title>
+<updated>2026-08-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260677-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028011"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028657#vorlage</id>
+<title>Neue Vorlage 261412: Controllingberichte der Stabsstelle Konferenzzentrum/Beethovenhalle für das I.-IV. Quartal 2025 und das I. Quartal 2026</title>
+<updated>2026-08-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261412"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028657"/>
+<summary>Beschlussvorlage · federführend: II-1 Stabsstelle Konferenzzentrum/Beethovenhalle · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028783#vorlage</id>
+<title>Neue Vorlage 261472: Bürgerantrag: Einrichtung einer Fahrverbotszone für Lkw im Bereich der Kölnstraße in der Zeit von 22.00 bis 07.00 Uhr</title>
+<updated>2026-08-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261472"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028783"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028779#vorlage</id>
+<title>Neue Vorlage 261470: Bürgerantrag: Versetzung eines Tempo-30-Verkehrsschildes im Bereich Unterführung Gerhardstraße in Neu-Vilich</title>
+<updated>2026-08-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261470"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028779"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028029#vorlage</id>
+<title>Neue Vorlage 253041-02 ST: Umsetzung Wesselstraße</title>
+<updated>2026-07-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#253041-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028029"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028658#vorlage</id>
+<title>Neue Vorlage 261413: Bürgerantrag-Sperrung der Langgasse für den Durchgangsverkehr</title>
+<updated>2026-07-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261413"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028658"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028628#vorlage</id>
+<title>Neue Vorlage 253682-05: BBB-Antrag: Unterbringung Stadtmuseum in der alten Münsterschule, Windeckstraße 1; Drucksachenfolge 253682</title>
+<updated>2026-07-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#253682-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028628"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027732#beratung-3</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „vertagt“ – 253041-01 Grüne-Große Anfrage: Umsetzung Wesselstraße</title>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#253041-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027732"/>
+<summary>Kenntnisnahme am 2026-07-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027541#beratung-4</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 260962 Stellungnahmen sowie Satzungsbeschluss zur Aufhebung des Fluchtlinienplans B 222, Stadtbezirk Bonn, Ortsteil Bonn-Zentrum</title>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260962"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027541"/>
+<summary>Empfehlung am 2026-07-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028523#vorlage</id>
+<title>Neue Vorlage 261352: Informationsbrief - Kanalsanierung Kölnstraße und Am Johanneskreuz</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261352"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028523"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027741#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 261045 Controllingbericht der Stabsstelle Konferenzzentrum/Beethovenhalle für das I. Quartal 2026 (Stichtag 31. März 2026)</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261045"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027741"/>
+<summary>Kenntnisnahme am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026839#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 260798 Controllingbericht der Stabsstelle Konferenzzentrum/Beethovenhalle für das I.–IV. Quartal 2025 (Stichtag 31. Dezember 2025)</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260798"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026839"/>
+<summary>Kenntnisnahme am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028025#vorlage</id>
+<title>Neue Vorlage 260736-01 ST: Stellungnahme zu Bürgerantrag: Aufnahme der Poststraße in das Straßenverzeichnis der Anwohnergebiete</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260736-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028025"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028160#vorlage</id>
+<title>Neue Vorlage 260271-02 ST: Stellungnahme zu Große Anfrage der GRÜNEN-Fraktion - Planungsstand und weiteres Vorgehen am Bertha-von-Suttner-Platz</title>
+<updated>2026-07-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260271-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028160"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027995#beratung-5</id>
+<title>Beirat Bürgerbeteiligung: „geändert beschlossen“ – 261177 Veröffentlichung der Vorhabenliste: 164700 - Parkraumkonzept Bonn-Zentrum &amp; -Castell</title>
+<updated>2026-07-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261177"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027995"/>
+<summary>Empfehlung am 2026-07-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027995#beratung-4</id>
+<title>Beirat Kinder- und Jugendbeteiligung: „geändert beschlossen“ – 261177 Veröffentlichung der Vorhabenliste: 164700 - Parkraumkonzept Bonn-Zentrum &amp; -Castell</title>
+<updated>2026-06-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261177"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027995"/>
+<summary>Empfehlung am 2026-06-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027741#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „geändert beschlossen“ – 261045 Controllingbericht der Stabsstelle Konferenzzentrum/Beethovenhalle für das I. Quartal 2026 (Stichtag 31. März 2026)</title>
+<updated>2026-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261045"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027741"/>
+<summary>Kenntnisnahme am 2026-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026839#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „geändert beschlossen“ – 260798 Controllingbericht der Stabsstelle Konferenzzentrum/Beethovenhalle für das I.–IV. Quartal 2025 (Stichtag 31. Dezember 2025)</title>
+<updated>2026-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260798"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026839"/>
+<summary>Kenntnisnahme am 2026-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027833#vorlage</id>
+<title>Neue Vorlage 232134-05 ST: Stellungnahme zum Grüne-Bezirksfraktion-Antrag: Kostenaufstellung zur Realisierung DS 232134-03 ST BV Bonn</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#232134-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027833"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027833#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 232134-05 ST Stellungnahme zum Grüne-Bezirksfraktion-Antrag: Kostenaufstellung zur Realisierung DS 232134-03 ST BV Bonn</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#232134-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027833"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027830#beratung-2</id>
+<title>Bezirksvertretung Bonn: „vertagt“ – 261086 CDU-Bezirksfraktion-Große Anfrage: Sicherheit auf dem Fuß- und Radweg Höhe Ärztehaus Kölnstr. 480</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261086"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027830"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027763#beratung-2</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 261058 CDU-Antrag: Rechtsabbieger von der Kennedybrücke in die Doetschstraße</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261058"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027763"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027732#beratung-2</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253041-01 Grüne-Große Anfrage: Umsetzung Wesselstraße</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#253041-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027732"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027441#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260365-01 ST Stellungnahme zum Bürgerantrag: Optimierung Lkw-Verkehr im Bereich der Kölnstraße/Änderung der Durchfahrtszeiten</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260365-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027441"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026874#beratung-2</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260820 BBB-Fraktion-Antrag: Erhalt von Parkplätzen in der Wachsbleiche</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260820"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026874"/>
+<summary>Anhörung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026858#beratung-3</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260808 CDU-Bezirksfraktion-Antrag: Öffnung der Stockenstraße für Zweiräder in Richtung Markt</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260808"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026858"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026855#beratung-2</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260807 Bürgerantrag: Antrag auf Maßnahmen zur Verkehrslenkung, Lärmminderung und Geschwindigkeitskontrolle in der Kölnstraße nach Sperrung der Nordbrücke</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260807"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026855"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026791#beratung-2</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 232134-04 Grüne-Bezirksfraktion-Antrag: Kostenaufstellung zur Realisierung DS 232134-03 ST BV Bonn</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#232134-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026791"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026697#beratung-2</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 260736 Bürgerantrag: Aufnahme der Poststraße in das Straßenverzeichnis der Anwohnergebiete</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260736"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026697"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026558#beratung-2</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 260677 Linke-Bezirksfraktion-Antrag: Zusätzliche Sitzgelegenheiten für den Münsterplatz</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260677"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026558"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025894#beratung-3</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 260365 Bürgerantrag: Optimierung Lkw-Verkehr im Bereich der Kölnstraße/Änderung der Durchfahrtszeiten</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260365"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025894"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025644#beratung-5</id>
+<title>Bezirksvertretung Bonn: „vertagt“ – 260271 Große Anfrage der GRÜNEN Fraktion - Planungsstand und weiteres Vorgehen am Bertha-von-Suttner-Platz</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260271"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025644"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025533#beratung-3</id>
+<title>Bezirksvertretung Bonn: „vertagt“ – 260218 Grüne-Bezirksfraktion-Große Anfrage zum Kaiserplatz</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260218"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025533"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025341#beratung-2</id>
+<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253173-03 Bürgerantrag: Antrag auf Umsetzung des beschlossenen Änderungsantrages 253173-01 - Vorübergehende Verkehrsführung auf der Bornheimer Straße und der Guido-Westerwelle-Brücke bis zur Herstellung der Rampe Thomastraße</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#253173-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025341"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027995#vorlage</id>
+<title>Neue Vorlage 261177: Veröffentlichung der Vorhabenliste: 164700 - Parkraumkonzept Bonn-Zentrum &amp; -Castell</title>
+<updated>2026-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261177"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027995"/>
+<summary>Beschlussvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027541#vorlage</id>
+<title>Neue Vorlage 260962: Stellungnahmen sowie Satzungsbeschluss zur Aufhebung des Fluchtlinienplans B 222, Stadtbezirk Bonn, Ortsteil Bonn-Zentrum</title>
+<updated>2026-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260962"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027541"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028085#vorlage</id>
+<title>Neue Vorlage 261215: Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahren Nr. 6325-1 „Kölnstraße/Otto-Hahn-Straße“ zwischen Kölnstraße, Otto-Hahn-Straße und Im großen Garten</title>
+<updated>2026-06-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261215"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028085"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027851#vorlage</id>
+<title>Neue Vorlage 253942-02: SPD-Bezirksfraktion-Antrag: Einrichtung eines Grünpfeils für Radfahrende an der Kreuzung Belderberg/ Rathausgasse</title>
+<updated>2026-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#253942-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027851"/>
+<summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027846#vorlage</id>
+<title>Neue Vorlage 261098: Grüne-Bezirksfraktion-Antrag: Schnellbus SB 60 - Halt Bertha-von-Suttner-Platz</title>
+<updated>2026-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261098"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027846"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027741#vorlage</id>
+<title>Neue Vorlage 261045: Controllingbericht der Stabsstelle Konferenzzentrum/Beethovenhalle für das I. Quartal 2026 (Stichtag 31. März 2026)</title>
+<updated>2026-06-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261045"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027741"/>
+<summary>Mitteilungsvorlage · federführend: II-1 Stabsstelle Konferenzzentrum/Beethovenhalle · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027830#vorlage</id>
+<title>Neue Vorlage 261086: CDU-Bezirksfraktion-Große Anfrage: Sicherheit auf dem Fuß- und Radweg Höhe Ärztehaus Kölnstr. 480</title>
+<updated>2026-06-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261086"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027830"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026791#vorlage</id>
+<title>Neue Vorlage 232134-04: Grüne-Bezirksfraktion-Antrag: Kostenaufstellung zur Realisierung DS 232134-03 ST BV Bonn</title>
+<updated>2026-06-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#232134-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026791"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027763#vorlage</id>
+<title>Neue Vorlage 261058: CDU-Antrag: Rechtsabbieger von der Kennedybrücke in die Doetschstraße</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#261058"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027763"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027732#vorlage</id>
+<title>Neue Vorlage 253041-01: Grüne-Große Anfrage: Umsetzung Wesselstraße</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#253041-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027732"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027425#beratung-2</id>
+<title>Ausschuss für Mobilität und Verkehr: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260920 Antrag GRÜNE-Fraktion - Bau Straße Am Hauptbahnhof</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260920"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027425"/>
+<summary>Entscheidung am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025775#beratung-5</id>
+<title>Ausschuss für Mobilität und Verkehr: „vertagt“ – 260271-01 ST Große Anfrage der GRÜNEN Fraktion - Planungsstand und weiteres Vorgehen am Bertha-von-Suttner-Platz</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260271-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025775"/>
+<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025644#beratung-4</id>
+<title>Ausschuss für Mobilität und Verkehr: „vertagt“ – 260271 Große Anfrage der GRÜNEN Fraktion - Planungsstand und weiteres Vorgehen am Bertha-von-Suttner-Platz</title>
+<updated>2026-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260271"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025644"/>
+<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026460#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „zur Kenntnis genommen“ – 260334-02 Beantwortung einer Große Anfrage zur Beethovenhalle</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260334-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026460"/>
+<summary>Kenntnisnahme am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027525#vorlage</id>
+<title>Neue Vorlage 260195-03 ST: Stellungnahme zu Bürgerantrag: Maßnahmen zur Verbesserung der Situation im Bereich der Unterführung Poppelsdorfer Allee/Kaiserplatz - ergänzende Stellungnahme zur STN DS260195-1</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260195-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027525"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027441#vorlage</id>
+<title>Neue Vorlage 260365-01 ST: Stellungnahme zum Bürgerantrag: Optimierung Lkw-Verkehr im Bereich der Kölnstraße/Änderung der Durchfahrtszeiten</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260365-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027441"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026839#vorlage</id>
+<title>Neue Vorlage 260798: Controllingbericht der Stabsstelle Konferenzzentrum/Beethovenhalle für das I.–IV. Quartal 2025 (Stichtag 31. Dezember 2025)</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260798"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026839"/>
+<summary>Mitteilungsvorlage · federführend: II-1 Stabsstelle Konferenzzentrum/Beethovenhalle · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026686#beratung-3</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 252942-03 ST BBB-Anfrage: Grundstück in Bonn, Markt 8 - Umbau des Sternhotels und Aufstockung des rückwärtigen Gebäudeflügels Az.: 10723/2024</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#252942-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026686"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026070#beratung-3</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 252942-02 ST BBB-Anfrage Grundstück in Bonn, Markt 8 - Umbau des Sternhotels und Aufstockung des rückwärtigen Gebäudeflügels Az.: 10723/2024 Antrag zur Vorlage 252942</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#252942-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026070"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025990#beratung-3</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 254029-02 ST Stellungnahme der Verwaltung zur Anfrage des BBB zum Neubau des Parkhaus Bonn Hbf, Quantiusstraße; Plangenehmigung gemäß § 18 Abs. 1 Allgemeines Eisenbahngesetz (AEG) in Verbindung mit § 74 Abs. 6 Verwaltungsverfahrensgesetz (VwVfG)</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#254029-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025990"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025854#beratung-2</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 254029-01 BBB Anfrage Neubau des Parkhaus Bonn Hbf, Quantiusstraße; Plangenehmigung gemäß § 18 Abs. 1 Allgemeines Eisenbahngesetz (AEG) in Verbindung mit § 74 Abs. 6 Verwaltungsverfahrensgesetz (VwVfG) Drucksachenfolge 254029</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#254029-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025854"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025843#beratung-2</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 252942-01 BBB-Anfrage Grundstück in Bonn, Markt 8 - Umbau des Sternhotels und Aufstockung des rückwärtigen Gebäudeflügels Az.: 10723/2024 Antrag zur Vorlage 252942</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#252942-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025843"/>
+<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027328#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260808-01 ST Vertagungsbitte zum CDU-Bezirksfraktion-Antrag: Öffnung der Stockenstraße für Zweiräder in Richtung Markt</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260808-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027328"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026651#beratung-3</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 260717 „Hall of Fame“ am Brassertufer: 4. Graffiti-Wettbewerb zur Gestaltung eines temporären Sommerbildes</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260717"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026651"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025683#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260195-01 ST Stellungnahme zum Bürgerantrag: Maßnahmen zur Verbesserung der Situation im Bereich der Unterführung Poppelsdorfer Allee/Kaiserplatz</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260195-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025683"/>
+<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025491#beratung-3</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 260195 Bürgerantrag: Maßnahmen zur Verbesserung der Situation im Bereich der Unterführung Poppelsdorfer Allee/Kaiserplatz</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260195"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025491"/>
+<summary>Entscheidung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027557#vorlage</id>
+<title>Neue Vorlage 260967: Informationsbrief - Bauverzögerung des barrierefreien Umbaus der Unterführung Belderberg</title>
+<updated>2026-05-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260967"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027557"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027477#vorlage</id>
+<title>Neue Vorlage 240382-01: Umgestaltung der Brüdergasse - Unterbrechung der Straßenbauarbeiten</title>
+<updated>2026-05-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#240382-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027477"/>
+<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027425#vorlage</id>
+<title>Neue Vorlage 260920: Antrag GRÜNE-Fraktion - Bau Straße Am Hauptbahnhof</title>
+<updated>2026-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260920"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027425"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025848#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 260334-01 ST FDP-Große Anfrage: Beethovenhalle</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260334-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025848"/>
+<summary>Kenntnisnahme am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025775#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 260271-01 ST Große Anfrage der GRÜNEN Fraktion - Planungsstand und weiteres Vorgehen am Bertha-von-Suttner-Platz</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260271-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025775"/>
+<summary>Kenntnisnahme am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025644#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 260271 Große Anfrage der GRÜNEN Fraktion - Planungsstand und weiteres Vorgehen am Bertha-von-Suttner-Platz</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260271"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025644"/>
+<summary>Kenntnisnahme am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027328#vorlage</id>
+<title>Neue Vorlage 260808-01 ST: Vertagungsbitte zum CDU-Bezirksfraktion-Antrag: Öffnung der Stockenstraße für Zweiräder in Richtung Markt</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260808-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027328"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026874#vorlage</id>
+<title>Neue Vorlage 260820: BBB-Fraktion-Antrag: Erhalt von Parkplätzen in der Wachsbleiche</title>
+<updated>2026-04-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260820"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026874"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026651#vorlage</id>
+<title>Neue Vorlage 260717: „Hall of Fame“ am Brassertufer: 4. Graffiti-Wettbewerb zur Gestaltung eines temporären Sommerbildes</title>
+<updated>2026-04-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260717"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026651"/>
+<summary>Mitteilungsvorlage · federführend: 41 Kulturamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025848#beratung-3</id>
+<title>Ausschuss für Wirtschaft, Liegenschaften und Arbeit: „zur Kenntnis genommen“ – 260334-01 ST FDP-Große Anfrage: Beethovenhalle</title>
+<updated>2026-04-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260334-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025848"/>
+<summary>Kenntnisnahme am 2026-04-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026858#vorlage</id>
+<title>Neue Vorlage 260808: CDU-Bezirksfraktion-Antrag: Öffnung der Stockenstraße für Zweiräder in Richtung Markt</title>
+<updated>2026-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260808"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026858"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026855#vorlage</id>
+<title>Neue Vorlage 260807: Bürgerantrag: Antrag auf Maßnahmen zur Verkehrslenkung, Lärmminderung und Geschwindigkeitskontrolle in der Kölnstraße nach Sperrung der Nordbrücke</title>
+<updated>2026-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#260807"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026855"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026686#vorlage</id>
+<title>Neue Vorlage 252942-03 ST: BBB-Anfrage: Grundstück in Bonn, Markt 8 - Umbau des Sternhotels und Aufstockung des rückwärtigen Gebäudeflügels Az.: 10723/2024</title>
+<updated>2026-04-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#252942-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026686"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

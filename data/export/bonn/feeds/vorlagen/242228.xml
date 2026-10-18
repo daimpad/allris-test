@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242228</id>
+<title>Vorlage 242228: Mitteilung über Gefahrenbaumfällungen (die der Baumschutzsatzung unterliegen) im Stadtbezirk Bonn</title>
+<subtitle>Verlauf der Vorlage 242228: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-01-27T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/242228.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2024#242228"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020648#beratung-3</id>
+<title>Baumkommission: „zur Kenntnis genommen“ – 242228 Mitteilung über Gefahrenbaumfällungen (die der Baumschutzsatzung unterliegen) im Stadtbezirk Bonn</title>
+<updated>2025-01-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2024#242228"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020648"/>
+<summary>Kenntnisnahme am 2025-01-27; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020648#vorlage</id>
+<title>Neue Vorlage 242228: Mitteilung über Gefahrenbaumfällungen (die der Baumschutzsatzung unterliegen) im Stadtbezirk Bonn</title>
+<updated>2024-12-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2024#242228"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020648"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+</feed>

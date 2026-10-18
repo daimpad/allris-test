@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ortsteil-godesberg-nord</id>
+<title>RIS-Karte Bonn – Godesberg-Nord</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Godesberg-Nord</subtitle>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-godesberg-nord.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029874#vorlage</id>
+<title>Neue Vorlage 220380-05: CDU-Antrag: Bauliche Umgestaltung des Kreuzungsbereiches Hochkreuzallee/Klufterstraße/Friesdorfer Straße durch Gehwegaufweitungen an den Querungsbereichen des Fußverkehrs</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220380-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029874"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028849#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 261503 Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Brenigs Ziegelei/Friesdorfer Straße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#261503"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028849"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028838#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 220380-04 ST ST zu CDU-Große Anfrage: Verbesserung der Schulwege an der Kreuzung Hochkreuzallee / Klufterstraße / Friesdorfer Straße, DS 220380-03</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220380-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028838"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028548#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 220380-03 CDU-Große Anfrage: Verbesserung der Schulwege an der Kreuzung Hochkreuzallee / Klufterstraße / Friesdorfer Straße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220380-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028548"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027963#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 220380-02 Prüfergebnis zu CDU-Antrag: Fußwege sicherer machen - Umbau Kreuzung Hochkreuzallee/ Klufterstraße/ Friesdorfer Straße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220380-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027963"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028838#vorlage</id>
+<title>Neue Vorlage 220380-04 ST: ST zu CDU-Große Anfrage: Verbesserung der Schulwege an der Kreuzung Hochkreuzallee / Klufterstraße / Friesdorfer Straße, DS 220380-03</title>
+<updated>2026-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220380-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028838"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028849#vorlage</id>
+<title>Neue Vorlage 261503: Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Brenigs Ziegelei/Friesdorfer Straße</title>
+<updated>2026-08-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#261503"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028849"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027963#vorlage</id>
+<title>Neue Vorlage 220380-02: Prüfergebnis zu CDU-Antrag: Fußwege sicherer machen - Umbau Kreuzung Hochkreuzallee/ Klufterstraße/ Friesdorfer Straße</title>
+<updated>2026-08-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220380-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027963"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028548#vorlage</id>
+<title>Neue Vorlage 220380-03: CDU-Große Anfrage: Verbesserung der Schulwege an der Kreuzung Hochkreuzallee / Klufterstraße / Friesdorfer Straße</title>
+<updated>2026-07-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220380-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028548"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026786#beratung-3</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „geändert beschlossen“ – 260774 Übernahme Trägerschaft für die viergruppige Kindertageseinrichtung im Planungsraum Godesberg-Mitte-West, Bezirk Bad Godesberg-Zentrum, Friesdorfer Str. 57</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#260774"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026786"/>
+<summary>Entscheidung am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026786#vorlage</id>
+<title>Neue Vorlage 260774: Übernahme Trägerschaft für die viergruppige Kindertageseinrichtung im Planungsraum Godesberg-Mitte-West, Bezirk Bad Godesberg-Zentrum, Friesdorfer Str. 57</title>
+<updated>2026-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#260774"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026786"/>
+<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026321#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260553 Fällgenehmigung für eine Säulen-Pappel auf dem Grundstück Promenadenweg 148, 53175 Bonn</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#260553"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026321"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025973#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 220469-04 ST Bürgerantrag: Verbesserung der Verkehrssituation im Bereich Bernkasteler Straße bis Friesdorfer Straße</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220469-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025973"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025307#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231127-02 ST Prüfergebnis zu DS 231127 - Signalisierte Querung für den Fußverkehr auf der Friesdorfer Straße</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231127-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025307"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014477#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 231127-01 AA Signalisierte Querung für den Fußverkehr auf der Friesdorfer Straße Antrag zur Vorlage 231127</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231127-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014477"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013268#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 220469-03 AA Grüne-AA: Verbesserung der Verkehrssituation im Bereich Bernkasteler Straße bis Friesdorfer Straße Antrag zur Vorlage 220469</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220469-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013268"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012644#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 231127 Signalisierte Querung für den Fußverkehr auf der Friesdorfer Straße</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231127"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012644"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2006587#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 220469-02 ST Verbesserung der Verkehrssituation im Bereich Bernkasteler Straße bis Friesdorfer Straße</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220469-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006587"/>
+<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2005391#beratung-7</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 220469 Bürgerantrag: Verbesserung der Verkehrssituation im Bereich Bernkasteler Straße bis Friesdorfer Straße</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220469"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005391"/>
+<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025973#vorlage</id>
+<title>Neue Vorlage 220469-04 ST: Bürgerantrag: Verbesserung der Verkehrssituation im Bereich Bernkasteler Straße bis Friesdorfer Straße</title>
+<updated>2026-04-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220469-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025973"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026321#vorlage</id>
+<title>Neue Vorlage 260553: Fällgenehmigung für eine Säulen-Pappel auf dem Grundstück Promenadenweg 148, 53175 Bonn</title>
+<updated>2026-04-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#260553"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026321"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025307#vorlage</id>
+<title>Neue Vorlage 231127-02 ST: Prüfergebnis zu DS 231127 - Signalisierte Querung für den Fußverkehr auf der Friesdorfer Straße</title>
+<updated>2026-03-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231127-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025307"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025176#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253578-01 ST Bürgerantrag: Antrag auf Parkerlaubnis im Bereich Truchseßstraße zwischen Pionierstraße und Weißenburgstraße</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#253578-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025176"/>
+<summary>Kenntnisnahme am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023815#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 253578 Bürgerantrag: Antrag auf Parkerlaubnis im Bereich Truchseßstraße zwischen Pionierstraße und Weißenburgstraße</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#253578"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023815"/>
+<summary>Entscheidung am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025176#vorlage</id>
+<title>Neue Vorlage 253578-01 ST: Bürgerantrag: Antrag auf Parkerlaubnis im Bereich Truchseßstraße zwischen Pionierstraße und Weißenburgstraße</title>
+<updated>2026-01-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#253578-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025176"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021383#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 242272-01 ST Bürgerantrag: Hühnerhaltung auf dem Grundstück Friesdorfer Straße 253</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#242272-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021383"/>
+<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020760#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 242272 Bürgerantrag: Hühnerhaltung auf dem Grundstück Friesdorfer Straße 253</title>
+<updated>2025-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#242272"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020760"/>
+<summary>Entscheidung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023815#vorlage</id>
+<title>Neue Vorlage 253578: Bürgerantrag: Antrag auf Parkerlaubnis im Bereich Truchseßstraße zwischen Pionierstraße und Weißenburgstraße</title>
+<updated>2025-07-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#253578"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023815"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023060#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 253252 Grundstück in Bonn-Bad Godesberg, Friesdorfer Straße 124 - Nutzungsänderung für die Erweiterung einer Shisha-Bar im Kellergeschoss Az.: 40699/2024</title>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#253252"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023060"/>
+<summary>Anhörung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021190#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 242345-01 AA Grüne-AA: „Alles-Rot“-Schaltung Ampelkreuzung Hochkreuzallee / Martin-Luther-Allee bzw. Godesberger Straße – zu DS 242345</title>
+<updated>2025-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#242345-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021190"/>
+<summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023060#vorlage</id>
+<title>Neue Vorlage 253252: Grundstück in Bonn-Bad Godesberg, Friesdorfer Straße 124 - Nutzungsänderung für die Erweiterung einer Shisha-Bar im Kellergeschoss Az.: 40699/2024</title>
+<updated>2025-06-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#253252"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023060"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021747#beratung-3</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „geändert beschlossen“ – 252666 Vergabe der Trägerschaft für die noch zu errichtende viergruppige Kindertageseinrichtung in der Friesdorfer Str. 57 in 53173 Bonn („Wohnen unter der Godesburg")</title>
+<updated>2025-04-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#252666"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021747"/>
+<summary>Entscheidung am 2025-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021383#vorlage</id>
+<title>Neue Vorlage 242272-01 ST: Bürgerantrag: Hühnerhaltung auf dem Grundstück Friesdorfer Straße 253</title>
+<updated>2025-04-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#242272-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021383"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021338#beratung-5</id>
+<title>Rat: „ungeändert beschlossen“ – 252492 Erlass einer Veränderungssperre für ein Gebiet im Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord, zwischen Friesdorfer Straße, Pionierstraße, Dietrichstraße sowie der Straße „An Brenigs Ziegelei“</title>
+<updated>2025-03-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#252492"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021338"/>
+<summary>Entscheidung am 2025-03-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021747#vorlage</id>
+<title>Neue Vorlage 252666: Vergabe der Trägerschaft für die noch zu errichtende viergruppige Kindertageseinrichtung in der Friesdorfer Str. 57 in 53173 Bonn („Wohnen unter der Godesburg")</title>
+<updated>2025-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#252666"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021747"/>
+<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021338#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 252492 Erlass einer Veränderungssperre für ein Gebiet im Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord, zwischen Friesdorfer Straße, Pionierstraße, Dietrichstraße sowie der Straße „An Brenigs Ziegelei“</title>
+<updated>2025-02-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#252492"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021338"/>
+<summary>Empfehlung am 2025-02-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021338#vorlage</id>
+<title>Neue Vorlage 252492: Erlass einer Veränderungssperre für ein Gebiet im Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord, zwischen Friesdorfer Straße, Pionierstraße, Dietrichstraße sowie der Straße „An Brenigs Ziegelei“</title>
+<updated>2025-02-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#252492"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021338"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021190#vorlage</id>
+<title>Neue Vorlage 242345-01 AA: Grüne-AA: „Alles-Rot“-Schaltung Ampelkreuzung Hochkreuzallee / Martin-Luther-Allee bzw. Godesberger Straße – zu DS 242345</title>
+<updated>2025-01-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#242345-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021190"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020760#vorlage</id>
+<title>Neue Vorlage 242272: Bürgerantrag: Hühnerhaltung auf dem Grundstück Friesdorfer Straße 253</title>
+<updated>2024-12-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#242272"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020760"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017698#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen - mit Maßgabe“ – 241044 Fällgenehmigung für einen Spitz-Ahorn auf dem Grundstück Friesdorfer Str. 213, 53175 Bonn</title>
+<updated>2024-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#241044"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017698"/>
+<summary>Entscheidung am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017497#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „geändert beschlossen“ – 240963 Bürgerantrag: Antrag auf Parkerlaubnis-Markierung im Bereich Promenadenweg vor den Häusern Nr. 73 - 89</title>
+<updated>2024-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#240963"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017497"/>
+<summary>Entscheidung am 2024-09-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017698#beratung-3</id>
+<title>Baumkommission: „ungeändert beschlossen - mit Maßgabe“ – 241044 Fällgenehmigung für einen Spitz-Ahorn auf dem Grundstück Friesdorfer Str. 213, 53175 Bonn</title>
+<updated>2024-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#241044"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017698"/>
+<summary>Empfehlung am 2024-09-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018869#vorlage</id>
+<title>Neue Vorlage 240963-01 AA: BBB-ÄA "Bürgerantrag auf Parkerlaubnis-Markierung im Bereich Promenadenweg vor den Häusern 73 - 89 - DS 240963</title>
+<updated>2024-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#240963-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018869"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018869#beratung-2</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 240963-01 AA BBB-ÄA "Bürgerantrag auf Parkerlaubnis-Markierung im Bereich Promenadenweg vor den Häusern 73 - 89 - DS 240963</title>
+<updated>2024-08-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#240963-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018869"/>
+<summary>Entscheidung am 2024-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017598#beratung-3</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 241004 Fördermittel als plusKITA für die städtische Kindertageseinrichtung 'Truchseßstraße 44'</title>
+<updated>2024-06-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#241004"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017598"/>
+<summary>Entscheidung am 2024-06-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017698#vorlage</id>
+<title>Neue Vorlage 241044: Fällgenehmigung für einen Spitz-Ahorn auf dem Grundstück Friesdorfer Str. 213, 53175 Bonn</title>
+<updated>2024-06-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#241044"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017698"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017030#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 240735 Fällung von 24 städtischen Bäumen auf und neben dem Grundstück Friesdorfer Straße 57, 53173 Bonn-Bad Godesberg</title>
+<updated>2024-06-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#240735"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017030"/>
+<summary>Entscheidung am 2024-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017598#vorlage</id>
+<title>Neue Vorlage 241004: Fördermittel als plusKITA für die städtische Kindertageseinrichtung 'Truchseßstraße 44'</title>
+<updated>2024-06-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#241004"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017598"/>
+<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017497#vorlage</id>
+<title>Neue Vorlage 240963: Bürgerantrag: Antrag auf Parkerlaubnis-Markierung im Bereich Promenadenweg vor den Häusern Nr. 73 - 89</title>
+<updated>2024-05-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#240963"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017497"/>
+<summary>Anregungen und Beschwerden · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017030#beratung-3</id>
+<title>Baumkommission: „ungeändert beschlossen - mit Maßgabe“ – 240735 Fällung von 24 städtischen Bäumen auf und neben dem Grundstück Friesdorfer Straße 57, 53173 Bonn-Bad Godesberg</title>
+<updated>2024-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#240735"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017030"/>
+<summary>Empfehlung am 2024-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017030#vorlage</id>
+<title>Neue Vorlage 240735: Fällung von 24 städtischen Bäumen auf und neben dem Grundstück Friesdorfer Straße 57, 53173 Bonn-Bad Godesberg</title>
+<updated>2024-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#240735"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017030"/>
+<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016031#beratung-3</id>
+<title>Rat: „ungeändert beschlossen“ – 231142-02 Bürgerantrag: Änderung der Straßenreinigungsklasse Sankt-Augustinus-Straße 7 - 13</title>
+<updated>2024-03-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231142-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016031"/>
+<summary>Entscheidung am 2024-03-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016031#vorlage</id>
+<title>Neue Vorlage 231142-02: Bürgerantrag: Änderung der Straßenreinigungsklasse Sankt-Augustinus-Straße 7 - 13</title>
+<updated>2024-02-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231142-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016031"/>
+<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012986#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 231307 Bürgerantrag: „Fahrradstraßen“, insbesondere im Gebiet des Stadtbezirks Bad Godesberg</title>
+<updated>2024-02-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231307"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012986"/>
+<summary>Entscheidung am 2024-02-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013651#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231142-01 ST Bürgerantrag: Änderung der Straßenreinigungsklasse Sankt-Augustinus-Straße 7 - 13</title>
+<updated>2023-12-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231142-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013651"/>
+<summary>Kenntnisnahme am 2023-12-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012686#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 231142 Bürgerantrag: Änderung der Straßenreinigungsklasse Sankt-Augustinus-Straße 7 - 13</title>
+<updated>2023-12-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231142"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012686"/>
+<summary>Entscheidung am 2023-12-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014181#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231694-03 ST BBB-Antrag Außengastronomie vor dem Haus Friesdorfer Straße 2 Drucksachengruppe 231694</title>
+<updated>2023-11-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231694-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014181"/>
+<summary>Kenntnisnahme am 2023-11-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013865#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231694-01 ST BBB-Anfrage Außengastronomie vor dem Haus Friesdorfer Straße 2</title>
+<updated>2023-11-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231694-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013865"/>
+<summary>Kenntnisnahme am 2023-11-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013779#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231694 BBB-Anfrage Außengastronomie vor dem Haus Friesdorfer Straße 2</title>
+<updated>2023-11-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231694"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013779"/>
+<summary>Kenntnisnahme am 2023-11-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014181#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 231694-03 ST BBB-Antrag Außengastronomie vor dem Haus Friesdorfer Straße 2 Drucksachengruppe 231694</title>
+<updated>2023-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231694-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014181"/>
+<summary>Kenntnisnahme am 2023-11-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014117#beratung-3</id>
+<title>Rat: „abgelehnt“ – 231694-02 BBB-Antrag Außengastronomie vor dem Haus Friesdorfer Straße 2 Drucksachengruppe 231694</title>
+<updated>2023-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231694-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014117"/>
+<summary>Entscheidung am 2023-11-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014477#vorlage</id>
+<title>Neue Vorlage 231127-01 AA: Signalisierte Querung für den Fußverkehr auf der Friesdorfer Straße Antrag zur Vorlage 231127</title>
+<updated>2023-10-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231127-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014477"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014117#vorlage</id>
+<title>Neue Vorlage 231694-02: BBB-Antrag Außengastronomie vor dem Haus Friesdorfer Straße 2 Drucksachengruppe 231694</title>
+<updated>2023-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231694-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014117"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014181#vorlage</id>
+<title>Neue Vorlage 231694-03 ST: BBB-Antrag Außengastronomie vor dem Haus Friesdorfer Straße 2 Drucksachengruppe 231694</title>
+<updated>2023-10-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231694-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014181"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013585#beratung-3</id>
+<title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „zur Kenntnis genommen“ – 231600 Erneuerung des Beschlusses zur Aufstellung des Bebauungsplans Nr. 6817-1 „Im Bendel“, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord</title>
+<updated>2023-09-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231600"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013585"/>
+<summary>Kenntnisnahme am 2023-09-26; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013865#vorlage</id>
+<title>Neue Vorlage 231694-01 ST: BBB-Anfrage Außengastronomie vor dem Haus Friesdorfer Straße 2</title>
+<updated>2023-09-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231694-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013865"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013779#vorlage</id>
+<title>Neue Vorlage 231694: BBB-Anfrage Außengastronomie vor dem Haus Friesdorfer Straße 2</title>
+<updated>2023-09-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231694"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013779"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013391#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 231503 Grundstück Bonn-Bad Godesberg Nord, Dietrichstr. 106 (Gemarkung Godesberg, Flur 10, Flurstück 45) - Nutzungsänderung einer Fabrikhalle zu einem Handel mit und Vertrieb von Lebensmitteln aller Art und Produkten des tägl. Bedarfs Aktenzeichen: 40237/2023</title>
+<updated>2023-09-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231503"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013391"/>
+<summary>Anhörung am 2023-09-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013350#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 231481 Grundstück in Bonn-Bad Godesberg, Friesdorfer Straße 178 - Wohnbebauung auf Grundstück mit Unterkünften (Gießereigrundstück) Az.: 40367/2023</title>
+<updated>2023-09-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231481"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013350"/>
+<summary>Anhörung am 2023-09-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013348#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 231479 Grundstück in Bonn-Bad Godesberg, Friesdorfer Straße 137, 139, 180 - Wohnbebauung auf ehemaligen Gießereiflächen Az.: 40366/2023</title>
+<updated>2023-09-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231479"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013348"/>
+<summary>Anhörung am 2023-09-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013651#vorlage</id>
+<title>Neue Vorlage 231142-01 ST: Bürgerantrag: Änderung der Straßenreinigungsklasse Sankt-Augustinus-Straße 7 - 13</title>
+<updated>2023-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231142-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013651"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013585#vorlage</id>
+<title>Neue Vorlage 231600: Erneuerung des Beschlusses zur Aufstellung des Bebauungsplans Nr. 6817-1 „Im Bendel“, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord</title>
+<updated>2023-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231600"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013585"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012896#beratung-6</id>
+<title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „geändert beschlossen“ – 231251 Aufstellung des Bebauungsplans Nr. 6817-4, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord; „Weststraße“</title>
+<updated>2023-08-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231251"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012896"/>
+<summary>Empfehlung am 2023-08-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013350#vorlage</id>
+<title>Neue Vorlage 231481: Grundstück in Bonn-Bad Godesberg, Friesdorfer Straße 178 - Wohnbebauung auf Grundstück mit Unterkünften (Gießereigrundstück) Az.: 40367/2023</title>
+<updated>2023-08-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231481"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013350"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013348#vorlage</id>
+<title>Neue Vorlage 231479: Grundstück in Bonn-Bad Godesberg, Friesdorfer Straße 137, 139, 180 - Wohnbebauung auf ehemaligen Gießereiflächen Az.: 40366/2023</title>
+<updated>2023-08-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231479"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013348"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012896#beratung-5</id>
+<title>Rat: „geändert beschlossen“ – 231251 Aufstellung des Bebauungsplans Nr. 6817-4, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord; „Weststraße“</title>
+<updated>2023-08-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231251"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012896"/>
+<summary>Entscheidung am 2023-08-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012594#beratung-5</id>
+<title>Rat: „geändert beschlossen“ – 231103 Erneuter Beschluss zur Aufstellung des Bebauungsplans Nr. 6817-1 „Im Bendel“, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord</title>
+<updated>2023-08-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231103"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012594"/>
+<summary>Entscheidung am 2023-08-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013391#vorlage</id>
+<title>Neue Vorlage 231503: Grundstück Bonn-Bad Godesberg Nord, Dietrichstr. 106 (Gemarkung Godesberg, Flur 10, Flurstück 45) - Nutzungsänderung einer Fabrikhalle zu einem Handel mit und Vertrieb von Lebensmitteln aller Art und Produkten des tägl. Bedarfs Aktenzeichen: 40237/2023</title>
+<updated>2023-08-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231503"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013391"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012644#vorlage</id>
+<title>Neue Vorlage 231127: Signalisierte Querung für den Fußverkehr auf der Friesdorfer Straße</title>
+<updated>2023-08-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231127"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012644"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012896#beratung-4</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 231251 Aufstellung des Bebauungsplans Nr. 6817-4, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord; „Weststraße“</title>
+<updated>2023-08-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231251"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012896"/>
+<summary>Empfehlung am 2023-08-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012594#beratung-4</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 231103 Erneuter Beschluss zur Aufstellung des Bebauungsplans Nr. 6817-1 „Im Bendel“, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord</title>
+<updated>2023-08-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231103"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012594"/>
+<summary>Empfehlung am 2023-08-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012896#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 231251 Aufstellung des Bebauungsplans Nr. 6817-4, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord; „Weststraße“</title>
+<updated>2023-08-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231251"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012896"/>
+<summary>Empfehlung am 2023-08-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012594#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 231103 Erneuter Beschluss zur Aufstellung des Bebauungsplans Nr. 6817-1 „Im Bendel“, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord</title>
+<updated>2023-08-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231103"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012594"/>
+<summary>Anhörung am 2023-08-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013268#vorlage</id>
+<title>Neue Vorlage 220469-03 AA: Grüne-AA: Verbesserung der Verkehrssituation im Bereich Bernkasteler Straße bis Friesdorfer Straße Antrag zur Vorlage 220469</title>
+<updated>2023-08-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#220469-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013268"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012986#vorlage</id>
+<title>Neue Vorlage 231307: Bürgerantrag: „Fahrradstraßen“, insbesondere im Gebiet des Stadtbezirks Bad Godesberg</title>
+<updated>2023-07-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231307"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012986"/>
+<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012896#vorlage</id>
+<title>Neue Vorlage 231251: Aufstellung des Bebauungsplans Nr. 6817-4, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord; „Weststraße“</title>
+<updated>2023-07-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231251"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012896"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012594#vorlage</id>
+<title>Neue Vorlage 231103: Erneuter Beschluss zur Aufstellung des Bebauungsplans Nr. 6817-1 „Im Bendel“, Stadtbezirk Bad Godesberg, Ortsteil Godesberg-Nord</title>
+<updated>2023-07-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231103"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012594"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012686#vorlage</id>
+<title>Neue Vorlage 231142: Bürgerantrag: Änderung der Straßenreinigungsklasse Sankt-Augustinus-Straße 7 - 13</title>
+<updated>2023-06-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#231142"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012686"/>
+<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/721#vorlage</id>
+<title>Neue Vorlage 190366: Bürgerantrag : Belebung des Geländes Michaelschule ( Friesdorfer Straße)</title>
+<updated>2023-06-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#190366"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=721"/>
+<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Co-Dezernat · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2011962#vorlage</id>
+<title>Neue Vorlage 230676-001 AA: FDP-Änderungsantrag Grundstück in Bonn-Bad Godesberg, Dietrichstraße 112 - Nutzungsänderung einer Fabrikhalle als Ausweichquartier für die Feuerwehr (FW III) auf 6 Jahre befristet für den Neubau der FW III Az.: 40363/2022 Antrag zur Vorlage 230676</title>
+<updated>2023-04-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#230676-001%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011962"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2011962#beratung-2</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zurückgezogen“ – 230676-001 AA FDP-Änderungsantrag Grundstück in Bonn-Bad Godesberg, Dietrichstraße 112 - Nutzungsänderung einer Fabrikhalle als Ausweichquartier für die Feuerwehr (FW III) auf 6 Jahre befristet für den Neubau der FW III Az.: 40363/2022 Antrag zur Vorlage 230676</title>
+<updated>2023-04-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#230676-001%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011962"/>
+<summary>Entscheidung am 2023-04-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2011623#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 230676 Grundstück in Bonn-Bad Godesberg, Dietrichstraße 112 - Nutzungsänderung einer Fabrikhalle als Ausweichquartier für die Feuerwehr (FW III) auf 6 Jahre befristet für den Neubau der FW III Az.: 40363/2022</title>
+<updated>2023-04-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#230676"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011623"/>
+<summary>Anhörung am 2023-04-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2011768#vorlage</id>
+<title>Neue Vorlage 230752: Informationsbrief - Kanalerneuerung Truchseßstraße</title>
+<updated>2023-04-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#230752"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011768"/>
+<summary>Informationsbrief · federführend: Stabsstellle Bürgerbeteiligung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2011623#vorlage</id>
+<title>Neue Vorlage 230676: Grundstück in Bonn-Bad Godesberg, Dietrichstraße 112 - Nutzungsänderung einer Fabrikhalle als Ausweichquartier für die Feuerwehr (FW III) auf 6 Jahre befristet für den Neubau der FW III Az.: 40363/2022</title>
+<updated>2023-04-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#230676"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011623"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2009227#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 222236 Abbruch und Neubau der Feuerwache III, Friesdorfer Straße 160, Fällung von sechs städtischen Bäumen im Rahmen des Baugenehmigungsverfahrens.</title>
+<updated>2023-03-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#222236"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009227"/>
+<summary>Entscheidung am 2023-03-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2010262#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 222443-01 ST Baustellensituation Bushaltestellen Koblenzer Straße und Weißenburgstraße</title>
+<updated>2023-03-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#222443-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010262"/>
+<summary>Kenntnisnahme am 2023-03-01; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2009839#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 222443 Bürgerantrag: Baustellensituation Bushaltestellen Koblenzer Straße und Weißenburgstraße</title>
+<updated>2023-03-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#222443"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009839"/>
+<summary>Entscheidung am 2023-03-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2010619#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 222440-02 AA Grüne AA zum Bürgerantrag: Parksituation im Veedel "Unter der Godesburg" Änderungsantrag zur Vorlage 222440</title>
+<updated>2023-02-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#222440-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010619"/>
+<summary>Entscheidung am 2023-02-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2010079#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 222440-01 ST Parksituation im Veedel "Unter der Godesburg"</title>
+<updated>2023-02-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#222440-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010079"/>
+<summary>Kenntnisnahme am 2023-02-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2009835#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 222440 Bürgerantrag: Parksituation im Veedel "Unter der Godesburg"</title>
+<updated>2023-02-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:godesberg-nord#222440"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009835"/>
+<summary>Entscheidung am 2023-02-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+</feed>

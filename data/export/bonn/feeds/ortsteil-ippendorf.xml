@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/ortsteil-ippendorf</id>
+<title>RIS-Karte Bonn – Ippendorf</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Ippendorf</subtitle>
+<updated>2026-10-01T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-ippendorf.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029578#vorlage</id>
+<title>Neue Vorlage 261765-01 ST: CDU-Bezirksfraktion-Kleine Anfrage: Baumwachstum an der Erich-Böger-Straße 9,13 und 17</title>
+<updated>2026-10-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#261765-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029578"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029481#vorlage</id>
+<title>Neue Vorlage 261767: CDU-Bezirksfraktion-Antrag: Öffnung des Stationsweg und Wallfahrtweg für den Radverkehr</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#261767"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029481"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029480#vorlage</id>
+<title>Neue Vorlage 261766: CDU-Bezirksfraktion-Antrag: Instandsetzung der Brücke am Tepenticher Loch in Ippendorf</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#261766"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029480"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029479#vorlage</id>
+<title>Neue Vorlage 261765: CDU-Bezirksfraktion-Kleine Anfrage: Baumwachstum an der Erich-Böger-Straße 9,13 und 17</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#261765"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029479"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029113#vorlage</id>
+<title>Neue Vorlage 261533-01 ST: Vertagungsbitte zum Bürgerantrag: Prüfung und Planung einer Rad- und Fußwegverbindung zwischen Bonn-Röttgen und Bonn-Ippendorf</title>
+<updated>2026-09-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#261533-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029113"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028918#vorlage</id>
+<title>Neue Vorlage 261533: Bürgerantrag: Prüfung und Planung einer Rad- und Fußwegverbindung zwischen Bonn-Röttgen und Bonn-Ippendorf</title>
+<updated>2026-08-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#261533"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028918"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028589#vorlage</id>
+<title>Neue Vorlage 261380: Fällgenehmigung für eine Schwarz-Kiefer auf dem Grundstück Gierolstraße 23, 53127 Bonn</title>
+<updated>2026-08-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#261380"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028589"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026948#beratung-4</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 260851 Grundhafte Sanierung Haager Weg zwischen Robert-Koch-Straße und Sertürnerstraße</title>
+<updated>2026-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260851"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026948"/>
+<summary>Entscheidung am 2026-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028152#vorlage</id>
+<title>Neue Vorlage 254003-02: Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028152"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026270#beratung-3</id>
+<title>Sportausschuss: „ungeändert beschlossen“ – 260520 Beteiligung an den Verfahrenskosten zur Änderung des Bebauungsplanes Nr. 7618-8 für die Sportanlagen in Ippendorf</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260520"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026270"/>
+<summary>Entscheidung am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027126#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260361-01 ST Stellungnahme zum Bürgerantrag: Antrag auf Fahrbahnsanierung im Bereich Ippendorfer Allee "Hausnummern 36/37 bis Abzweig 'Im Acker' “</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260361-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027126"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026948#beratung-3</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 260851 Grundhafte Sanierung Haager Weg zwischen Robert-Koch-Straße und Sertürnerstraße</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260851"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026948"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025890#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 260361 Bürgerantrag: Antrag auf Fahrbahnsanierung im Bereich Ippendorfer Allee "Hausnummern 36/37 bis Abzweig 'Im Acker' “</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260361"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025890"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026270#vorlage</id>
+<title>Neue Vorlage 260520: Beteiligung an den Verfahrenskosten zur Änderung des Bebauungsplanes Nr. 7618-8 für die Sportanlagen in Ippendorf</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260520"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026270"/>
+<summary>Beschlussvorlage · federführend: 52 Sport- und Bäderamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027126#vorlage</id>
+<title>Neue Vorlage 260361-01 ST: Stellungnahme zum Bürgerantrag: Antrag auf Fahrbahnsanierung im Bereich Ippendorfer Allee "Hausnummern 36/37 bis Abzweig 'Im Acker' “</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260361-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027126"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026948#vorlage</id>
+<title>Neue Vorlage 260851: Grundhafte Sanierung Haager Weg zwischen Robert-Koch-Straße und Sertürnerstraße</title>
+<updated>2026-05-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260851"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026948"/>
+<summary>Beschlussvorlage: Einleitung · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026390#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 260407-01 ST Bürgerantrag: Optimierung der Parksituation auf der Ippendorfer Allee im Bereich zwischen Stationsweg und Ferdinandstraße</title>
+<updated>2026-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260407-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026390"/>
+<summary>Kenntnisnahme am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026034#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „ungeändert beschlossen - mit Maßgabe“ – 260407 Bürgerantrag: Optimierung der Parksituation auf der Ippendorfer Allee im Bereich zwischen Stationsweg und Ferdinandstraße</title>
+<updated>2026-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260407"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026034"/>
+<summary>Entscheidung am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026501#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253159-03 ST BBB-Anfrage: Sanierung der Straßendecken auf den Zufahrtswegen zum Universitätsklinikum Bonn (UKB), Haager Weg und Sigmund-Freud-Straße; Drucksachengruppe 253159</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253159-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026501"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026375#beratung-2</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253159-02 BBB-Anfrage: Sanierung der Straßendecken auf den Zufahrtswegen zum Universitätsklinikum Bonn (UKB), Haager Weg und Sigmund-Freud-Straße; Drucksachengruppe 253159</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253159-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026375"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025735#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260217-01 ST Stellungnahme zum Grüne-Bezirksfraktion-Antrag: Begradigung des Bürgersteigs im Bereich Haager Weg</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260217-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025735"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025532#beratung-3</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 260217 Grüne-Bezirksfraktion-Antrag: Begradigung des Bürgersteigs im Bereich Haager Weg</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260217"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025532"/>
+<summary>Entscheidung am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026501#vorlage</id>
+<title>Neue Vorlage 253159-03 ST: BBB-Anfrage: Sanierung der Straßendecken auf den Zufahrtswegen zum Universitätsklinikum Bonn (UKB), Haager Weg und Sigmund-Freud-Straße; Drucksachengruppe 253159</title>
+<updated>2026-04-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253159-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026501"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026390#vorlage</id>
+<title>Neue Vorlage 260407-01 ST: Bürgerantrag: Optimierung der Parksituation auf der Ippendorfer Allee im Bereich zwischen Stationsweg und Ferdinandstraße</title>
+<updated>2026-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260407-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026390"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026034#vorlage</id>
+<title>Neue Vorlage 260407: Bürgerantrag: Optimierung der Parksituation auf der Ippendorfer Allee im Bereich zwischen Stationsweg und Ferdinandstraße</title>
+<updated>2026-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260407"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026034"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026375#vorlage</id>
+<title>Neue Vorlage 253159-02: BBB-Anfrage: Sanierung der Straßendecken auf den Zufahrtswegen zum Universitätsklinikum Bonn (UKB), Haager Weg und Sigmund-Freud-Straße; Drucksachengruppe 253159</title>
+<updated>2026-04-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253159-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026375"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025784#beratung-3</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 260325 Grundstück in Bonn-Endenich, Stationsweg 9 - Nutzungsänderung des privaten Schwimmbades in eine Kinder-Schwimmschule Az.: 10778/2025</title>
+<updated>2026-03-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260325"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025784"/>
+<summary>Anhörung am 2026-03-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025735#vorlage</id>
+<title>Neue Vorlage 260217-01 ST: Stellungnahme zum Grüne-Bezirksfraktion-Antrag: Begradigung des Bürgersteigs im Bereich Haager Weg</title>
+<updated>2026-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260217-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025735"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025890#vorlage</id>
+<title>Neue Vorlage 260361: Bürgerantrag: Antrag auf Fahrbahnsanierung im Bereich Ippendorfer Allee "Hausnummern 36/37 bis Abzweig 'Im Acker' “</title>
+<updated>2026-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260361"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025890"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025784#vorlage</id>
+<title>Neue Vorlage 260325: Grundstück in Bonn-Endenich, Stationsweg 9 - Nutzungsänderung des privaten Schwimmbades in eine Kinder-Schwimmschule Az.: 10778/2025</title>
+<updated>2026-03-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260325"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025784"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025437#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 254003-01 ST Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<updated>2026-03-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025437"/>
+<summary>Kenntnisnahme am 2026-03-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024736#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 254003 Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<updated>2026-03-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024736"/>
+<summary>Entscheidung am 2026-03-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025437#vorlage</id>
+<title>Neue Vorlage 254003-01 ST: Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<updated>2026-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025437"/>
+<summary>Stellungnahme der Verwaltung · federführend: 41 Kulturamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025532#vorlage</id>
+<title>Neue Vorlage 260217: Grüne-Bezirksfraktion-Antrag: Begradigung des Bürgersteigs im Bereich Haager Weg</title>
+<updated>2026-02-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#260217"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025532"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023307#beratung-3</id>
+<title>Bezirksvertretung Bonn: „vertagt“ – 240465-01 ST Einführung von Tempo 30 im Bereich Trierer Straße/Im Wingert bis Einmündung Melbweg wegen Lärmschutz</title>
+<updated>2025-12-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#240465-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023307"/>
+<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016440#beratung-3</id>
+<title>Bezirksvertretung Bonn: „vertagt - mit Maßgabe“ – 240465 Einführung von Tempo 30 im Bereich Trierer Straße/Im Wingert bis Einmündung Melbweg wegen Lärmschutz</title>
+<updated>2025-12-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#240465"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016440"/>
+<summary>Entscheidung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024736#vorlage</id>
+<title>Neue Vorlage 254003: Gedenktafel Dr. von Braunmühl in Ippendorf</title>
+<updated>2025-11-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#254003"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024736"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024147#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 242186-01 ST Bürgerantrag: Schulwegsicherung Haager Weg/Kiefernweg</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242186-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024147"/>
+<summary>Kenntnisnahme am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020540#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 242186 Bürgerantrag: Schulwegsicherung Haager Weg/Kiefernweg</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242186"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020540"/>
+<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024491#vorlage</id>
+<title>Neue Vorlage 253876: Informationsbrief - Kanalerneuerung Ligusterweg / Im Acker</title>
+<updated>2025-10-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253876"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024491"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024147#vorlage</id>
+<title>Neue Vorlage 242186-01 ST: Bürgerantrag: Schulwegsicherung Haager Weg/Kiefernweg</title>
+<updated>2025-10-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242186-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024147"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024299#vorlage</id>
+<title>Neue Vorlage 253763: Informationsbrief - Informationsveranstaltung zur Bonner Wärmewende - Ippendorf</title>
+<updated>2025-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253763"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024299"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023364#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 252922-01 ST Bürgerantrag: Ersatzpflanzung von Straßenbäumen in der Ippendorfer Allee</title>
+<updated>2025-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#252922-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023364"/>
+<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022394#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 252922 Bürgerantrag: Ersatzpflanzung von Straßenbäumen in der Ippendorfer Allee</title>
+<updated>2025-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#252922"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022394"/>
+<summary>Entscheidung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023265#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 253362 Grundstück in Bonn-Ippendorf, Auf dem Heidgen 52 - Errichtung einer Gaube und Änderung Dachgeschoss in separate WE Az. 10805/2024</title>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253362"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023265"/>
+<summary>Anhörung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023364#vorlage</id>
+<title>Neue Vorlage 252922-01 ST: Bürgerantrag: Ersatzpflanzung von Straßenbäumen in der Ippendorfer Allee</title>
+<updated>2025-07-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#252922-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023364"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023307#vorlage</id>
+<title>Neue Vorlage 240465-01 ST: Einführung von Tempo 30 im Bereich Trierer Straße/Im Wingert bis Einmündung Melbweg wegen Lärmschutz</title>
+<updated>2025-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#240465-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023307"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023265#vorlage</id>
+<title>Neue Vorlage 253362: Grundstück in Bonn-Ippendorf, Auf dem Heidgen 52 - Errichtung einer Gaube und Änderung Dachgeschoss in separate WE Az. 10805/2024</title>
+<updated>2025-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253362"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023265"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022874#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253144-01 ST Bürgerantrag: Anbringung eines Verkehrsspiegels im Bereich der Spreestraße in Bonn-Ippendorf</title>
+<updated>2025-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253144-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022874"/>
+<summary>Kenntnisnahme am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022849#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 253144 Bürgerantrag: Anbringung eines Verkehrsspiegels im Bereich der Spreestraße in Bonn-Ippendorf</title>
+<updated>2025-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253144"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022849"/>
+<summary>Entscheidung am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022703#vorlage</id>
+<title>Neue Vorlage 241500-01: Ergebnis Prüfauftrag Baumpflanzungen Röttgener Straße</title>
+<updated>2025-05-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#241500-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022703"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022874#vorlage</id>
+<title>Neue Vorlage 253144-01 ST: Bürgerantrag: Anbringung eines Verkehrsspiegels im Bereich der Spreestraße in Bonn-Ippendorf</title>
+<updated>2025-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253144-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022874"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022849#vorlage</id>
+<title>Neue Vorlage 253144: Bürgerantrag: Anbringung eines Verkehrsspiegels im Bereich der Spreestraße in Bonn-Ippendorf</title>
+<updated>2025-05-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#253144"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022849"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022194#beratung-3</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 242313-02 ST Stellungnahme zu FDP - Große Anfrage: Radweg Ippendorf - Röttgen</title>
+<updated>2025-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242313-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022194"/>
+<summary>Kenntnisnahme am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021238#beratung-3</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 242313-01 ST FDP - Große Anfrage: Radweg Ippendorf - Röttgen</title>
+<updated>2025-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242313-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021238"/>
+<summary>Kenntnisnahme am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020843#beratung-4</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 242313 FDP - Große Anfrage: Radweg Ippendorf - Röttgen</title>
+<updated>2025-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242313"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020843"/>
+<summary>Kenntnisnahme am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022194#vorlage</id>
+<title>Neue Vorlage 242313-02 ST: Stellungnahme zu FDP - Große Anfrage: Radweg Ippendorf - Röttgen</title>
+<updated>2025-04-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242313-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022194"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022394#vorlage</id>
+<title>Neue Vorlage 252922: Bürgerantrag: Ersatzpflanzung von Straßenbäumen in der Ippendorfer Allee</title>
+<updated>2025-04-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#252922"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022394"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021238#vorlage</id>
+<title>Neue Vorlage 242313-01 ST: FDP - Große Anfrage: Radweg Ippendorf - Röttgen</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242313-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021238"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020843#vorlage</id>
+<title>Neue Vorlage 242313: FDP - Große Anfrage: Radweg Ippendorf - Röttgen</title>
+<updated>2025-01-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242313"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020843"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020221#vorlage</id>
+<title>Neue Vorlage 201072-07 ST: BBB-Anfrage: Bauvorhaben auf dem Grundstück Bonn-Ippendorf, Am Engelspfad 28; Sachstandsanfrage</title>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#201072-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020221"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020540#vorlage</id>
+<title>Neue Vorlage 242186: Bürgerantrag: Schulwegsicherung Haager Weg/Kiefernweg</title>
+<updated>2024-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#242186"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020540"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020101#vorlage</id>
+<title>Neue Vorlage 201072-06: BBB-Anfrage: Bauvorhaben auf dem Grundstück Bonn-Ippendorf, Am Engelspfad 28; Sachstandsanfrage</title>
+<updated>2024-11-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#201072-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020101"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019656#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241619-01 ST Bürgerantrag: Erlaubnis für Gehwegparken im Quellenweg wegen hoher Unfallgefahr für die Anlieger</title>
+<updated>2024-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#241619-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019656"/>
+<summary>Kenntnisnahme am 2024-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019207#beratung-3</id>
+<title>Bezirksvertretung Bonn: „abgelehnt“ – 241619 Bürgerantrag: Erlaubnis für Gehwegparken im Quellenweg wegen hoher Unfallgefahr für die Anlieger</title>
+<updated>2024-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#241619"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019207"/>
+<summary>Entscheidung am 2024-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018777#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 241443 Grundstück in Bonn, Trierer Straße 108 - Errichtung eines Mehrfamilienhauses mit Tiefgarage Az.: 10006/2023</title>
+<updated>2024-10-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#241443"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018777"/>
+<summary>Anhörung am 2024-10-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019656#vorlage</id>
+<title>Neue Vorlage 241619-01 ST: Bürgerantrag: Erlaubnis für Gehwegparken im Quellenweg wegen hoher Unfallgefahr für die Anlieger</title>
+<updated>2024-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#241619-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019656"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018893#beratung-2</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 241500 Grüne-Antrag: Prüfauftrag Baumpflanzungen Röttgener Straße</title>
+<updated>2024-09-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#241500"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018893"/>
+<summary>Entscheidung am 2024-09-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019207#vorlage</id>
+<title>Neue Vorlage 241619: Bürgerantrag: Erlaubnis für Gehwegparken im Quellenweg wegen hoher Unfallgefahr für die Anlieger</title>
+<updated>2024-09-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#241619"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019207"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018893#vorlage</id>
+<title>Neue Vorlage 241500: Grüne-Antrag: Prüfauftrag Baumpflanzungen Röttgener Straße</title>
+<updated>2024-08-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#241500"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018893"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018777#vorlage</id>
+<title>Neue Vorlage 241443: Grundstück in Bonn, Trierer Straße 108 - Errichtung eines Mehrfamilienhauses mit Tiefgarage Az.: 10006/2023</title>
+<updated>2024-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#241443"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018777"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016771#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 240506-01 ST Große Anfrage - Grüne-Bezirksfraktion: Lärmmessungen Ippendorfer Allee</title>
+<updated>2024-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#240506-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016771"/>
+<summary>Kenntnisnahme am 2024-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016513#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 240506 Große Anfrage - Grüne-Bezirksfraktion: Lärmmessungen Ippendorfer Allee</title>
+<updated>2024-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#240506"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016513"/>
+<summary>Kenntnisnahme am 2024-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016771#vorlage</id>
+<title>Neue Vorlage 240506-01 ST: Große Anfrage - Grüne-Bezirksfraktion: Lärmmessungen Ippendorfer Allee</title>
+<updated>2024-04-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#240506-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016771"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016513#vorlage</id>
+<title>Neue Vorlage 240506: Große Anfrage - Grüne-Bezirksfraktion: Lärmmessungen Ippendorfer Allee</title>
+<updated>2024-03-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#240506"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016513"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016440#vorlage</id>
+<title>Neue Vorlage 240465: Einführung von Tempo 30 im Bereich Trierer Straße/Im Wingert bis Einmündung Melbweg wegen Lärmschutz</title>
+<updated>2024-03-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#240465"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016440"/>
+<summary>Anregungen und Beschwerden · federführend: Stabsstellle Bürgerbeteiligung · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015066#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 231177-01 ST Bürgerantrag: Aufhebung von Tempo 50 in Trierer Straße sowie Einrichtung von Querungshilfen in der Clemens-August-Straße</title>
+<updated>2024-01-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231177-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015066"/>
+<summary>Kenntnisnahme am 2024-01-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012740#beratung-3</id>
+<title>Bezirksvertretung Bonn: „abgelehnt“ – 231177 Bürgerantrag: Aufhebung von Tempo 50 in Trierer Straße sowie Einrichtung von Querungshilfen in der Clemens-August-Straße</title>
+<updated>2024-01-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231177"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012740"/>
+<summary>Entscheidung am 2024-01-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015066#vorlage</id>
+<title>Neue Vorlage 231177-01 ST: Bürgerantrag: Aufhebung von Tempo 50 in Trierer Straße sowie Einrichtung von Querungshilfen in der Clemens-August-Straße</title>
+<updated>2023-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231177-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015066"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013990#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 231800 Grundstück in Bonn-Kessenich, Am Birkenbruch 39 - Errichtung eines Einfamilienhauses nach Teilung eines Grundstücks Az. 10212/2023</title>
+<updated>2023-10-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231800"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013990"/>
+<summary>Anhörung am 2023-10-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012795#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 231195 Grundstück in Bonn-Ippendorf, Im Eichholz - Errichtung eines Wohnhauses Az.: 10903/2022</title>
+<updated>2023-10-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231195"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012795"/>
+<summary>Anhörung am 2023-10-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013758#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 221699-03 ST Bürgerantrag: Sanierung der Trierer Straße</title>
+<updated>2023-10-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#221699-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013758"/>
+<summary>Kenntnisnahme am 2023-10-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013483#beratung-2</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 221699-02 Bürgerantrag: Sanierung des Straßenbelages der Trierer Straße</title>
+<updated>2023-10-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#221699-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013483"/>
+<summary>Entscheidung am 2023-10-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013990#vorlage</id>
+<title>Neue Vorlage 231800: Grundstück in Bonn-Kessenich, Am Birkenbruch 39 - Errichtung eines Einfamilienhauses nach Teilung eines Grundstücks Az. 10212/2023</title>
+<updated>2023-10-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231800"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013990"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013758#vorlage</id>
+<title>Neue Vorlage 221699-03 ST: Bürgerantrag: Sanierung der Trierer Straße</title>
+<updated>2023-10-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#221699-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013758"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013565#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zur Kenntnis genommen“ – 201072-05 ST BBB-Anfrage: Bauvorhaben auf dem Grundstück Bonn-Ippendorf, Am Engelspfad 28</title>
+<updated>2023-09-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#201072-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013565"/>
+<summary>Kenntnisnahme am 2023-09-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013080#beratung-2</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zur Kenntnis genommen“ – 201072-04 BBB-Anfrage: Bauvorhaben auf dem Grundstück Bonn-Ippendorf, Am Engelspfad 28</title>
+<updated>2023-09-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#201072-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013080"/>
+<summary>Kenntnisnahme am 2023-09-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013649#vorlage</id>
+<title>Neue Vorlage 231637: Grundstück in Bonn, Trierer Straße 108 - Errichtung eines Mehrfamilienwohnhauses mit Tiefgarage Az.: 10006/2023</title>
+<updated>2023-09-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231637"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013649"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013115#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 230462-02 ST Tempo 30 auf der Ippendorfer Allee zwischen den Einmündungen Stationsweg und Im Acker</title>
+<updated>2023-09-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#230462-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013115"/>
+<summary>Kenntnisnahme am 2023-09-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012304#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 230462-01 ST Tempo 30 auf der Ippendorfer Allee zwischen den Einmündungen Stationsweg und Im Acker</title>
+<updated>2023-09-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#230462-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012304"/>
+<summary>Kenntnisnahme am 2023-09-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2010935#beratung-4</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 230462 Bürgerantrag: Tempo 30 auf der Ippendorfer Allee zwischen den Einmündungen Stationsweg und Im Acker</title>
+<updated>2023-09-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#230462"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010935"/>
+<summary>Entscheidung am 2023-09-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013565#vorlage</id>
+<title>Neue Vorlage 201072-05 ST: BBB-Anfrage: Bauvorhaben auf dem Grundstück Bonn-Ippendorf, Am Engelspfad 28</title>
+<updated>2023-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#201072-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013565"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013648#vorlage</id>
+<title>Neue Vorlage 231636: Informationsbrief: Kanalbaumaßnahme Starenweg</title>
+<updated>2023-09-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231636"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013648"/>
+<summary>Informationsbrief · federführend: Stabsstellle Bürgerbeteiligung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013483#vorlage</id>
+<title>Neue Vorlage 221699-02: Bürgerantrag: Sanierung des Straßenbelages der Trierer Straße</title>
+<updated>2023-08-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#221699-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013483"/>
+<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012795#vorlage</id>
+<title>Neue Vorlage 231195: Grundstück in Bonn-Ippendorf, Im Eichholz - Errichtung eines Wohnhauses Az.: 10903/2022</title>
+<updated>2023-08-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231195"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012795"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013008#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 231321 Grundstück in Bonn, Röttgener Straße 38, 40, 42, 44 - Errichtung eines Mehrfamilienwohnhauses Az.: 10330/2022</title>
+<updated>2023-08-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#231321"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013008"/>
+<summary>Anhörung am 2023-08-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012291#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 230866-01 ST Tempo 30 Ippendorfer Allee</title>
+<updated>2023-08-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#230866-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012291"/>
+<summary>Kenntnisnahme am 2023-08-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012051#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 230866 Grüne/u.w.-Antrag: Tempo 30 Ippendorfer Allee</title>
+<updated>2023-08-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#230866"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012051"/>
+<summary>Entscheidung am 2023-08-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013115#vorlage</id>
+<title>Neue Vorlage 230462-02 ST: Tempo 30 auf der Ippendorfer Allee zwischen den Einmündungen Stationsweg und Im Acker</title>
+<updated>2023-07-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#230462-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013115"/>
+<summary>Stellungnahme der Verwaltung · federführend: Bezirksverwaltungsstelle Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013080#vorlage</id>
+<title>Neue Vorlage 201072-04: BBB-Anfrage: Bauvorhaben auf dem Grundstück Bonn-Ippendorf, Am Engelspfad 28</title>
+<updated>2023-07-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ippendorf#201072-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013080"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

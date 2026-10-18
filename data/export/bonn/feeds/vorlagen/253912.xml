@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/253912</id>
+<title>Vorlage 253912: Sitzungstermine der Bezirksvertretung Hardtberg 2026</title>
+<subtitle>Verlauf der Vorlage 253912: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-12-02T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/253912.xml"/>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=bezirk:hardtberg#253912"/>
+<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024559#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253912 Sitzungstermine der Bezirksvertretung Hardtberg 2026</title>
+<updated>2025-12-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=bezirk:hardtberg#253912"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024559"/>
+<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024559#vorlage</id>
+<title>Neue Vorlage 253912: Sitzungstermine der Bezirksvertretung Hardtberg 2026</title>
+<updated>2025-11-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=bezirk:hardtberg#253912"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024559"/>
+<summary>Mitteilungsvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>
