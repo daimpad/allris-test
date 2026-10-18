@@ -38,7 +38,7 @@ def _paper_detail(db, pid):
         "m.name AS meeting, m.start_date, m.cancelled, a.number, a.result, a.public "
         "FROM consultation c LEFT JOIN organization g ON g.id = c.organization_id "
         "LEFT JOIN meeting m ON m.id = c.meeting_id LEFT JOIN agenda_item a ON a.id = c.agenda_item_id "
-        "WHERE c.paper_id = ? ORDER BY m.start_date IS NULL, m.start_date, c.position", (pid,)).fetchall()
+        "WHERE c.paper_id = ? ORDER BY c.position", (pid,)).fetchall()
     resp = db.execute(
         "SELECT r.kind, r.method, r.evidence, r.derived, o.label, o.name FROM paper_responsibility r "
         "LEFT JOIN organization o ON o.id = r.organization_id WHERE r.paper_id = ?", (pid,)).fetchall()
@@ -115,9 +115,16 @@ def export():
     export_all()
 
 
-def _meta(db, **extra):
+def _meta(db, stable=False, **extra):
+    """Metadaten je Datei. stable=True (Gebietsdateien für ganz Bonn): ohne Erzeugungs- und
+    Abrufzeitpunkte, damit sich eine Datei nur ändert, wenn sich ihr Inhalt ändert; die Zeitpunkte
+    stehen in index.json."""
+    sources = [dict(r) for r in db.execute("SELECT * FROM source")]
+    if stable:
+        return {**extra, "sources": [{k: v for k, v in s.items() if k != "retrieved_at"} for s in sources],
+                "note": DERIVED_NOTE}
     return {**extra, "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-            "sources": [dict(r) for r in db.execute("SELECT * FROM source")], "note": DERIVED_NOTE}
+            "sources": sources, "note": DERIVED_NOTE}
 
 
 def slug(name):
@@ -138,7 +145,12 @@ def export_all():
     out = config.EXPORT / "bonn"
     shutil.rmtree(out, ignore_errors=True)
     cache = {}
-    detail = lambda pid: cache.setdefault(pid, _paper_detail(db, pid))
+
+    def detail(pid):
+        if pid not in cache:
+            cache[pid] = _paper_detail(db, pid)
+        return cache[pid]
+
     order = "ORDER BY p.date DESC, p.reference"
     index = {"ortsteile": [], "bezirke": [], "ohne_ortsbezug": []}
     areas = {}
@@ -149,7 +161,7 @@ def export_all():
             "SELECT DISTINCT pl.paper_id FROM paper_location pl JOIN location l ON l.id = pl.location_id "
             f"JOIN paper p ON p.id = pl.paper_id WHERE l.ortsteil = ? {order}", (name,))]
         _dump(out / "ortsteile" / f"{slug(name)}.json",
-              {"meta": _meta(db, ortsteil=name, stadtbezirk=bezirk, count=len(ids)),
+              {"meta": _meta(db, True, ortsteil=name, stadtbezirk=bezirk, count=len(ids)),
                "papers": [detail(i) for i in ids]})
         index["ortsteile"].append({"name": name, "slug": slug(name), "stadtbezirk": bezirk,
                                    "count": len(ids)})
@@ -164,19 +176,22 @@ def export_all():
             f"ON l2.id = pl2.location_id WHERE l2.ortsteil IS NOT NULL AND l2.stadtbezirk = ?) {order}",
             (name, name))]
         _dump(out / "bezirke" / f"{slug(name)}.json",
-              {"meta": _meta(db, stadtbezirk=name, count=len(ids)), "papers": [detail(i) for i in ids]})
+              {"meta": _meta(db, True, stadtbezirk=name, count=len(ids)), "papers": [detail(i) for i in ids]})
         index["bezirke"].append({"name": name, "slug": slug(name), "count": len(ids)})
         areas[f"bezirk:{slug(name)}"] = ids
 
+    # ohne Ortsbezug: auch Vorlagen, deren Orte weder einem Ortsteil noch einem Stadtbezirk zugeordnet
+    # werden konnten (z. B. Straße ohne Koordinate), damit keine Vorlage verloren geht
+    placed = ("SELECT pl.paper_id FROM paper_location pl JOIN location l ON l.id = pl.location_id "
+              "WHERE l.ortsteil IS NOT NULL OR l.level = 'stadtbezirk'")
     years = [r[0] for r in db.execute(
-        "SELECT DISTINCT substr(date, 1, 4) y FROM paper WHERE id NOT IN "
-        "(SELECT paper_id FROM paper_location) ORDER BY y DESC")]
+        f"SELECT DISTINCT substr(date, 1, 4) y FROM paper WHERE id NOT IN ({placed}) ORDER BY y DESC")]
     for year in years:
         ids = [r[0] for r in db.execute(
-            "SELECT p.id FROM paper p WHERE substr(p.date, 1, 4) = ? AND p.id NOT IN "
-            f"(SELECT paper_id FROM paper_location) {order}", (year,))]
+            f"SELECT p.id FROM paper p WHERE substr(p.date, 1, 4) = ? AND p.id NOT IN ({placed}) {order}",
+            (year,))]
         _dump(out / "ohne-ortsbezug" / f"{year}.json",
-              {"meta": _meta(db, jahr=year, count=len(ids)), "papers": [detail(i) for i in ids]})
+              {"meta": _meta(db, True, jahr=year, count=len(ids)), "papers": [detail(i) for i in ids]})
         index["ohne_ortsbezug"].append({"jahr": year, "count": len(ids)})
         areas[f"ohne:{year}"] = ids
     areas["gesamt"] = [r[0] for r in db.execute("SELECT id FROM paper")]
@@ -289,7 +304,7 @@ def _time_index(db, areas, cache):
 
     terms = json.loads(config.LEGISLATIVE_TERMS.read_text()) if config.LEGISLATIVE_TERMS.exists() else []
     return {
-        "meta": _meta(db, note="vorlage = Datum der Vorlage (OParl-API, belegt); sitzung = Sitzungsdatum "
+        "meta": _meta(db, True, note="vorlage = Datum der Vorlage (OParl-API, belegt); sitzung = Sitzungsdatum "
                                 "der Beratungen (über OParl-Lite verknüpft, abgeleitet)"),
         "months": months, "categories": types + ["Sonstige"],
         "data_start": min(p["date"] for p in papers if p["date"]),
@@ -310,7 +325,7 @@ def _meetings(db):
         if not m.get("start"):
             continue
         org = (m.get("organization") or [None])[0]
-        out.append({"date": m["start"][:10], "gremium": names.get(org, "unbekannt"), "name": m.get("name"),
+        out.append({"date": proc.local_day(m["start"]), "gremium": names.get(org, "unbekannt"), "name": m.get("name"),
                     "cancelled": bool(m.get("cancelled")), "state": m.get("meetingState"),
                     "source_object": m["id"]})
     return sorted(out, key=lambda x: x["date"])
@@ -323,16 +338,15 @@ def _paths(db, cache, top=12):
     by_type = defaultdict(Counter)
     totals = Counter()
     for p in cache.values():
-        stations, final = proc.path_key(p)
-        by_type[p["paper_type"]][(stations, final)] += 1
+        by_type[p["paper_type"]][proc.path_key(p)] += 1
         totals[p["paper_type"]] += 1
     out = []
     for ptype, n in totals.most_common():
-        paths = [{"stations": list(st), "final": fin, "count": c}
-                 for (st, fin), c in by_type[ptype].most_common(top)]
+        paths = [{"stations": list(st), "final": fin, "final_kind": kind, "count": c}
+                 for (st, fin, kind), c in by_type[ptype].most_common(top)]
         out.append({"paper_type": ptype, "count": n, "distinct_paths": len(by_type[ptype]),
                     "paths": paths})
-    return {"meta": _meta(db, note="Weg = Folge der Beratungen (Gremium, Rolle) laut OParl-API; Ende = "
+    return {"meta": _meta(db, True, note="Weg = Folge der Beratungen (Gremium, Rolle) laut OParl-API; Ende = "
                                    "Ergebnis der entscheidenden Beratung (OParl-Lite) oder Stand"),
             "types": out}
 

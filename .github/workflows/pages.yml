@@ -1,5 +1,5 @@
 # Daten aus der OParl-API (Stadt Bonn) und OParl-Lite abrufen, aufbereiten, prüfen und die
-# Ratskarte mit allen Exporten über GitHub Pages veröffentlichen. Die fertige Seite steht zusätzlich
+# RIS-Karte mit allen Exporten über GitHub Pages veröffentlichen. Die fertige Seite steht zusätzlich
 # im Branch `deploy`, aus dem eigene Server sie abrufen können (z. B. Plesk-Git). Läuft bei jedem Push auf main,
 # täglich früh am Morgen (die Quelle wird täglich aktualisiert) und auf Knopfdruck.
 name: Daten aktualisieren und Seite veröffentlichen

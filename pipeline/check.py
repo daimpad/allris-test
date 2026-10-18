@@ -28,6 +28,9 @@ def check():
             "SELECT COUNT(DISTINCT pl.paper_id) FROM paper_location pl "
             "JOIN location l ON l.id = pl.location_id WHERE l.ortsteil IS NOT NULL"),
         f"Vorlagen in {config.PILOT_ORTSTEIL} (Stufe A)": one(
+            "SELECT COUNT(DISTINCT pl.paper_id) FROM paper_location pl JOIN location l "
+            "ON l.id = pl.location_id WHERE l.ortsteil = ? AND pl.stage = 'A'", config.PILOT_ORTSTEIL),
+        f"Vorlagen in {config.PILOT_ORTSTEIL} (alle Stufen)": one(
             "SELECT COUNT(DISTINCT pl.paper_id) FROM paper_location pl "
             "JOIN location l ON l.id = pl.location_id WHERE l.ortsteil = ?", config.PILOT_ORTSTEIL),
         "Ortsteile mit mind. einer Vorlage": one(
@@ -35,7 +38,7 @@ def check():
     }
     print("Kennzahl\tPhase 0\tjetzt")
     for k, v in found.items():
-        print(f"{k}\t{PHASE0[k] if PHASE0[k] is not None else '–'}\t{v}")
+        print(f"{k}\t{PHASE0.get(k) if PHASE0.get(k) is not None else '–'}\t{v}")
 
     cons = one("SELECT COUNT(*) FROM consultation")
     print("\nVerknüpfung Beratung ↔ Sitzung (OParl-Lite)")
@@ -96,11 +99,13 @@ def check():
         print(f"  Vorlagen mit Ortsteil wie Stufe A, Ebene {kind}:",
               pct(sum(hits.values()), len(hits)) + note)
 
-    streets = [r[0] for r in db.execute(
-        "SELECT street FROM location WHERE street IS NOT NULL AND source = 'oparl-bonn'")]
-    with_number = [s for s in streets if re.search(r"\d", s)]
+    # Straße und Beschreibung der Orte aus der OParl-API; Postleitzahlen sind keine Hausnummern
+    texts = [r[0] for r in db.execute(
+        "SELECT street FROM location WHERE street IS NOT NULL AND source = 'oparl-bonn' UNION ALL "
+        "SELECT description FROM location WHERE description IS NOT NULL AND source = 'oparl-bonn'")]
+    with_number = [s for s in texts if re.search(r"\d", re.sub(r"\b5[0-9]{4}\b", "", s))]
     print("\nDatenschutz")
-    print("Orte mit Hausnummer im Straßenfeld:", len(with_number))
+    print("Orte mit Hausnummer in Straße oder Beschreibung:", len(with_number), with_number[:5])
     db.close()
     if with_number:
         raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Ortsangaben (CLAUDE.md 5.2).")

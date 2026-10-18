@@ -3,107 +3,156 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ratskarte Bonn</title>
+  <title>RIS-Karte Bonn</title>
   <meta name="description" content="Vorlagen aus dem Bonner Ratsinformationssystem räumlich, zeitlich und nach Akteuren erschlossen – mit Prozessschritten, Evidenzstatus und Quellenangabe.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="list-open detail-open">
-  <h1 class="visually-hidden">Ratskarte Bonn</h1>
-  <div id="map" aria-label="Karte der Vorlagen im gewählten Gebiet. Alle Vorlagen stehen auch in der Liste."></div>
+  <header>
+    <h1 class="visually-hidden">RIS-Karte Bonn</h1>
+    <nav class="nav glass" aria-label="Ansicht">
+      <div class="brand" aria-hidden="true">RIS-Karte Bonn</div>
+      <label class="visually-hidden" for="f-area">Gebiet</label>
+      <select id="f-area"></select>
+      <button type="button" class="toggle" data-panel="panel-list" aria-controls="panel-list" aria-pressed="true">Liste</button>
+      <button type="button" class="toggle" data-panel="timeline-wrap" aria-controls="timeline-wrap" aria-pressed="true">Zeitleiste</button>
+      <button type="button" class="toggle" data-panel="panel-detail" aria-controls="panel-detail" aria-pressed="true">Detail</button>
+      <button type="button" class="toggle" data-panel="panel-wege" aria-controls="panel-wege" aria-pressed="false">Wege</button>
+      <button type="button" class="toggle mobile-only" data-panel="sources" aria-controls="sources" aria-pressed="false">Quellen</button>
+      <button type="button" class="toggle" id="about-open" aria-haspopup="dialog">Über</button>
+    </nav>
+  </header>
 
-  <nav class="nav glass" aria-label="Ansicht">
-    <div class="brand" aria-hidden="true">Ratskarte Bonn<small>vorläufige Fassung</small></div>
-    <label class="visually-hidden" for="f-area">Gebiet</label>
-    <select id="f-area"></select>
-    <button type="button" class="toggle" data-panel="panel-list" aria-controls="panel-list" aria-pressed="true">Liste</button>
-    <button type="button" class="toggle" data-panel="timeline-wrap" aria-controls="timeline-wrap" aria-pressed="true">Zeitleiste</button>
-    <button type="button" class="toggle" data-panel="panel-detail" aria-controls="panel-detail" aria-pressed="true">Detail</button>
-    <button type="button" class="toggle" data-panel="panel-wege" aria-controls="panel-wege" aria-pressed="false">Wege</button>
-  </nav>
-
-  <section id="panel-list" class="panel glass" aria-labelledby="list-heading">
-    <div class="panel-head">
-      <h2 id="list-heading">Vorlagen</h2>
-      <button type="button" class="icon-btn" data-close="panel-list" aria-label="Liste einklappen">‹</button>
-    </div>
-    <div class="panel-body">
-      <form class="filters" id="filters" role="search" aria-label="Vorlagen filtern">
-        <label>Stichwort
-          <input type="search" id="f-text" placeholder="z. B. Radweg, Kita, 261856" autocomplete="off">
-        </label>
-        <div class="filter-row">
-          <label>Vorlagenart
-            <select id="f-type"><option value="">alle</option></select>
+  <main>
+    <section id="panel-list" class="panel glass" aria-labelledby="list-heading">
+      <div class="panel-head">
+        <h2 id="list-heading" tabindex="-1">Vorlagen</h2>
+        <button type="button" class="icon-btn" data-close="panel-list" aria-label="Liste einklappen">‹</button>
+      </div>
+      <div class="panel-body">
+        <form class="filters" id="filters" role="search" aria-label="Vorlagen filtern">
+          <label>Stichwort
+            <input type="search" id="f-text" placeholder="z. B. Radweg, Kita, 261856" autocomplete="off">
           </label>
-          <label>Stand
-            <select id="f-stand">
-              <option value="">alle</option>
-              <option>entschieden</option>
-              <option>in Beratung</option>
-              <option>offen</option>
-              <option>ohne Beratungsfolge</option>
-            </select>
-          </label>
-        </div>
-        <details class="acc">
-          <summary>Weitere Filter</summary>
-          <div class="filters">
-            <label>Federführendes Amt
-              <select id="f-amt"><option value="">alle</option></select>
+          <div class="filter-row">
+            <label>Vorlagenart
+              <select id="f-type"><option value="">alle</option></select>
             </label>
-            <label>Gremium
-              <select id="f-gremium"><option value="">alle</option></select>
+            <label>Stand
+              <select id="f-stand">
+                <option value="">alle</option>
+                <option>entschieden</option>
+                <option>beraten, ohne Entscheidung</option>
+                <option>in Beratung</option>
+                <option>offen</option>
+                <option>ohne Beratungsfolge</option>
+              </select>
             </label>
-            <fieldset id="f-conf">
-              <legend>Verortung</legend>
-              <label class="check"><input type="checkbox" value="hoch" checked> hoch <span class="hint">(Koordinate der Stadt)</span></label>
-              <label class="check"><input type="checkbox" value="mittel" checked> mittel <span class="hint">(aus dem Titel)</span></label>
-              <label class="check"><input type="checkbox" value="niedrig" checked> niedrig <span class="hint">(mehrdeutig)</span></label>
-            </fieldset>
           </div>
-        </details>
-      </form>
-      <p class="count" id="count" aria-live="polite"></p>
-      <ol class="papers" id="papers" tabindex="-1"></ol>
-    </div>
-  </section>
+          <details class="acc" id="more-filters">
+            <summary>Weitere Filter<span class="active-filters" id="active-filters"></span></summary>
+            <div class="filters">
+              <label>Federführendes Amt
+                <select id="f-amt"><option value="">alle</option></select>
+              </label>
+              <label>Gremium
+                <select id="f-gremium"><option value="">alle</option></select>
+              </label>
+              <fieldset id="f-conf">
+                <legend>Ortsangabe</legend>
+                <label class="check"><input type="checkbox" value="hoch" checked> gesichert <span class="hint">(Koordinate der Stadt)</span></label>
+                <label class="check"><input type="checkbox" value="mittel" checked> erschlossen <span class="hint">(Name im Titel)</span></label>
+                <label class="check"><input type="checkbox" value="niedrig" checked> unsicher <span class="hint">(mehrdeutig)</span></label>
+              </fieldset>
+            </div>
+          </details>
+        </form>
+        <p class="count" id="count" aria-live="polite"></p>
+        <ol class="papers" id="papers" tabindex="-1"></ol>
+      </div>
+    </section>
 
-  <section id="timeline-wrap" class="glass" aria-label="Zeitleiste"></section>
+    <section id="timeline-wrap" class="glass" aria-label="Zeitleiste"></section>
 
-  <section id="panel-detail" class="panel glass" aria-labelledby="detail-heading">
-    <div class="panel-head">
-      <h2 id="detail-heading">Vorgang</h2>
-      <button type="button" class="icon-btn" data-close="panel-detail" aria-label="Detail einklappen">›</button>
-    </div>
-    <div class="panel-body detail" id="detail" aria-live="polite" tabindex="-1">
-      <p class="empty">Eine Vorlage in der Liste oder auf der Karte auswählen.</p>
-    </div>
-  </section>
+    <section id="panel-detail" class="panel glass" aria-labelledby="detail-heading">
+      <div class="panel-head">
+        <h2 id="detail-heading" tabindex="-1">Vorgang</h2>
+        <button type="button" class="icon-btn" data-close="panel-detail" aria-label="Detail einklappen">›</button>
+      </div>
+      <div class="panel-body detail" id="detail"></div>
+    </section>
 
-  <section id="panel-wege" class="glass" aria-labelledby="wege-heading" hidden>
-    <div class="panel-head">
-      <h2 id="wege-heading">Typische Wege nach Vorlagenart</h2>
-      <button type="button" class="icon-btn" data-close="panel-wege" aria-label="Wege schließen">×</button>
-    </div>
-    <div class="panel-body" id="wege"></div>
-  </section>
+    <section id="panel-wege" class="glass" aria-labelledby="wege-heading" hidden>
+      <div class="panel-head">
+        <h2 id="wege-heading" tabindex="-1">Typische Wege nach Vorlagenart</h2>
+        <button type="button" class="icon-btn" data-close="panel-wege" aria-label="Wege schließen">×</button>
+      </div>
+      <div class="panel-body" id="wege"></div>
+    </section>
+
+    <div id="map" role="region" aria-label="Karte der Vorlagen im gewählten Gebiet. Alle Vorlagen stehen auch in der Liste."></div>
+  </main>
 
   <aside id="sources" class="glass" aria-label="Quellen und Lizenzen">
     <details class="acc">
       <summary>Quellen, Lizenzen und Datenstand</summary>
       <div>
-        <p>OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteil- und Bezirksflächen der Stadt Bonn (CC0 1.0) · Straßen © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet.</p>
+        <p>OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteil- und Bezirksflächen der Stadt Bonn (CC0 1.0) · Straßen und Kartenhintergrund © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet.</p>
         <p id="stand"></p>
         <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a></p>
       </div>
     </details>
   </aside>
+
+  <dialog id="about" class="glass" aria-labelledby="about-heading">
+    <div class="panel-head">
+      <h2 id="about-heading">Über die RIS-Karte Bonn</h2>
+      <button type="button" class="icon-btn" id="about-close" aria-label="Schließen">×</button>
+    </div>
+    <div class="about-body">
+      <h3>Worum geht es?</h3>
+      <p>Die RIS-Karte zeigt, womit sich der Rat, die Bezirksvertretungen und die Ausschüsse der Stadt Bonn beschäftigen – auf einer Karte, auf einer Zeitleiste und als Liste. Grundlage ist das Ratsinformationssystem (RIS) der Stadt Bonn. Dort stehen alle öffentlichen Vorlagen seit Oktober 2019.</p>
+
+      <h3>Was ist eine Vorlage?</h3>
+      <p>Ein Schriftstück, über das ein politisches Gremium berät: etwa ein Antrag einer Fraktion, eine Beschlussvorlage der Verwaltung, eine Anfrage, eine Stellungnahme oder ein Bürgerantrag. Jede Vorlage hat eine Drucksachennummer, zum Beispiel 261856.</p>
+
+      <h3>So benutzen Sie die Karte</h3>
+      <ol>
+        <li>Wählen Sie oben ein Gebiet: einen Ortsteil, einen Stadtbezirk oder „stadtweit“.</li>
+        <li>Klicken Sie in der Liste oder auf der Karte eine Vorlage an.</li>
+        <li>Rechts sehen Sie den Vorgang: wer ihn eingebracht hat, welches Amt zuständig ist und welche Gremien wann darüber beraten haben.</li>
+        <li>Mit der Zeitleiste grenzen Sie den Zeitraum ein. Alle Flächen lassen sich über die Leiste oben ein- und ausklappen.</li>
+      </ol>
+
+      <h3>Was bedeutet der Stand?</h3>
+      <dl>
+        <dt>entschieden</dt><dd>Das zuständige Gremium hat abschließend entschieden, zum Beispiel beschlossen oder abgelehnt.</dd>
+        <dt>beraten, ohne Entscheidung</dt><dd>Die Vorlage wurde beraten, eine Entscheidung war nicht vorgesehen – etwa bei Mitteilungen, die zur Kenntnis genommen werden.</dd>
+        <dt>in Beratung</dt><dd>Einige Beratungen haben stattgefunden, andere stehen noch aus oder wurden vertagt.</dd>
+        <dt>offen</dt><dd>Die Vorlage ist noch in keiner Sitzung behandelt worden.</dd>
+      </dl>
+
+      <h3>Wie sicher sind die Angaben?</h3>
+      <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Einige sind erschlossen, etwa der Ort aus dem Titel einer Vorlage oder das Datum einer Sitzung. Sie sind als „abgeleitet“ gekennzeichnet. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt.</p>
+
+      <h3>Was die Karte nicht kann</h3>
+      <p>Sie ersetzt nicht das Original: Maßgeblich ist immer das Dokument im Ratsinformationssystem, zu dem jede Vorlage verlinkt. Nichtöffentliche Beratungen, die Arbeit innerhalb der Verwaltung und die Umsetzung von Beschlüssen sind von außen nicht einsehbar.</p>
+
+      <h3>Selbst mitwirken</h3>
+      <p>Sitzungen des Rates und der Bezirksvertretungen sind in der Regel öffentlich. Mit einem Bürgerantrag (§ 24 Gemeindeordnung NRW) können Sie Anregungen und Beschwerden selbst einbringen.</p>
+
+      <h3>Wer steckt dahinter?</h3>
+      <p>Ein offenes Projekt, entstanden für den Hackathon „Hack den Stadtrat“. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
+    </div>
+  </dialog>
+
+  <p class="visually-hidden" id="announce" aria-live="polite"></p>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
