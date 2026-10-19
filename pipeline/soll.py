@@ -151,8 +151,26 @@ def stammnummer(reference):
     return (reference or "").split("-")[0].strip()
 
 
+def folge(typ):
+    """Fragen und Berichte, die einem Vorgang folgen (wie is_followup in vorgang.py des Originals)."""
+    t = typ or ""
+    return t.startswith(("Mitteilungsvorlage", "Informationsbrief")) or "Anfrage" in t or "Einwohnerfrage" in t
+
+
+def hauptweg(ps, head):
+    """Vorlagen eines Vorgangs, die für Zuordnung und Abgleich zählen (Phase 4): ohne spätere Fragen und Berichte
+    anderer Art; Stellungnahmen und Änderungsanträge gehören zur vorausgehenden Vorlage."""
+    weg, zaehlt = [], True
+    for p in sorted(ps, key=lambda p: p[1]):
+        if p[3] not in SIDE:
+            zaehlt = p is head or p[3] == head[3] or not folge(p[3])
+        if zaehlt:
+            weg.append(p)
+    return weg
+
+
 def abgleich(db, modell):
-    """Je Vorgang: Verfahren, Sicherheit, Gremien (Ist/Soll) und Passung."""
+    """Je Vorgang: Verfahren, Sicherheit, Gremien (Ist/Soll) und Passung; Gremien nur aus dem Hauptweg."""
     cons = collections.defaultdict(list)
     for pid, cls, role in db.execute("SELECT c.paper_id, o.classification, c.role FROM consultation c "
                                      "JOIN organization o ON o.id = c.organization_id"):
@@ -163,8 +181,9 @@ def abgleich(db, modell):
     rows = []
     for st, ps in sorted(groups.items()):
         head = next((p for p in ps if p[1].strip() == st), None) or next((p for p in ps if p[3] not in SIDE), ps[0])
-        arts = {c for p in ps for c, _ in cons[p[0]] if c}
-        entsch = {c for p in ps for c, r in cons[p[0]] if c and r == "Entscheidung"}
+        weg = hauptweg(ps, head)
+        arts = {c for p in weg for c, _ in cons[p[0]] if c}
+        entsch = {c for p in weg for c, r in cons[p[0]] if c and r == "Entscheidung"}
         vid, sure, why = assign(head[3], head[2], arts, entsch, modell.ohne_soll)
         ist, soll = {BAHN[a] for a in arts if a in BAHN}, modell.bahnen(vid)
         # Beiräte bildet das Modell nicht ab: Vorgänge, die nur dort beraten wurden, werden nicht abgeglichen

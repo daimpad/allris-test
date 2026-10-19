@@ -35,7 +35,7 @@ Jede Korrektur prüft beim Laden, ob der alte Wert noch in der Quelle steht. Wei
 | Passung der Gremien | Phase 0 | Phase 1 |
 |---|---|---|
 | passt | 11.451 (81 %) | 13.646 (97 %) |
-| weicht ab | 2.356 | 2 (Einwohnerfragen mit Beratung in Ausschuss oder Rat) |
+| weicht ab | 2.356 | 2 (Einwohnerfragen mit Beratung in Ausschuss oder Rat; seit Phase 4 nur noch 221004) |
 | ohne Beratung (seit Phase 4: „nur Beirat“) | 297 | 297 |
 | ohne Soll | – | 159 (Bürgerbrief) |
 
