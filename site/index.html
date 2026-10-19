@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Content-Security-Policy: Skripte nur von hier und cdnjs (mit Integritätsprüfung), keine Inline-Skripte;
+  <!-- Content-Security-Policy: Skripte, Stile und Schrift nur von hier (Leaflet und Schrift lokal in vendor/ und fonts/,
+       Bibliotheken mit Integritätsprüfung), keine Inline-Skripte;
        Verbindungen nur zu den Daten der Seite, den unterstützten Anbietern des Ratsassistenten und lokalen Modellen.
        Inline-Stile bleiben erlaubt (Leaflet, Balken der Auswertung). -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://cdnjs.cloudflare.com; connect-src 'self' https://api.anthropic.com https://api.mistral.ai https://openrouter.ai http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://api.anthropic.com https://api.mistral.ai https://openrouter.ai http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'">
   <title>RIS-Karte Bonn – Ratsinformationen der Stadt Bonn auf Karte und Zeitleiste</title>
   <meta name="description" content="Was berät der Bonner Stadtrat? Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste – mit Verfahrensstand, Gremien, Ämtern und Quellen.">
   <meta name="author" content="Damian Paderta">
@@ -44,17 +45,15 @@
      "codeRepository": "https://github.com/daimpad/allris-test"}
   ]}
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css" integrity="sha512-ENrTWqddXrLJsQS2A86QmvA17PkJ0GVm1bqj5aTgpeMAfDKN2+SIOLpKG8R/6KkimnhTb+VW5qqUHB/r1zaRgg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css" integrity="sha512-fYyZwU1wU0QWB4Yutd/Pvhy5J1oWAwFXun1pt+Bps04WSe4Aq6tyHlT4+MHSJhD8JlLfgLuC4CbCnX5KHSjyCg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==">
+  <link rel="stylesheet" href="vendor/markercluster/MarkerCluster.min.css" integrity="sha512-ENrTWqddXrLJsQS2A86QmvA17PkJ0GVm1bqj5aTgpeMAfDKN2+SIOLpKG8R/6KkimnhTb+VW5qqUHB/r1zaRgg==">
+  <link rel="stylesheet" href="vendor/markercluster/MarkerCluster.Default.min.css" integrity="sha512-fYyZwU1wU0QWB4Yutd/Pvhy5J1oWAwFXun1pt+Bps04WSe4Aq6tyHlT4+MHSJhD8JlLfgLuC4CbCnX5KHSjyCg==">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="list-closed detail-open">
   <noscript><div class="noscript glass"><p><strong>RIS-Karte Bonn</strong> zeigt Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste. Für die Karte wird JavaScript benötigt.</p>
-    <p>Die Daten gibt es auch ohne Karte: <a href="data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="data/export/bonn/vorlagen.geojson">GeoJSON</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a> · <a href="https://datenatlas.de/impressum">Impressum</a></p></div></noscript>
+    <p>Die Daten gibt es auch ohne Karte: <a href="data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="data/export/bonn/vorlagen.geojson">GeoJSON</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a> · <a href="https://datenatlas.de/impressum">Impressum</a> · <a href="https://datenatlas.de/datenschutz">Datenschutz</a></p></div></noscript>
   <!-- Symbole (eigene Strichzeichnungen, 24er-Raster) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
@@ -207,7 +206,7 @@
         <div>
           <p>OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteil- und Bezirksflächen sowie Geltungsbereiche der Bebauungspläne der Stadt Bonn (CC0 1.0) · Straßen und Kartenhintergrund © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet.</p>
           <p id="stand"></p>
-          <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/bonn/termine.ics">Sitzungskalender (iCalendar)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a> · <a href="https://datenatlas.de/impressum" target="_blank" rel="noopener">Impressum</a> · <a href="mailto:contact@nozilla.de">Kontakt</a></p>
+          <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/bonn/termine.ics">Sitzungskalender (iCalendar)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a> · <a href="https://datenatlas.de/impressum" target="_blank" rel="noopener">Impressum</a> · <a href="https://datenatlas.de/datenschutz" target="_blank" rel="noopener">Datenschutz</a> · <a href="mailto:contact@nozilla.de">Kontakt</a></p>
         </div>
       </details>
     </section>
@@ -428,16 +427,17 @@
       <h3>Wer steckt dahinter?</h3>
       <p>Die RIS-Karte hat Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“ erstellt. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
 
-      <h3 id="about-impressum" tabindex="-1">Kontakt und Impressum</h3>
+      <h3 id="about-impressum" tabindex="-1">Kontakt, Impressum und Datenschutz</h3>
+      <p>Schrift und Programmbibliotheken kommen vom Server dieser Seite. Nur die Kartenkacheln lädt Ihr Browser von OpenStreetMap (tile.openstreetmap.org). Der Ratsassistent sendet Fragen erst, wenn Sie ihn einrichten, und nur an den gewählten Anbieter.</p>
       <p>Kontakt: <a href="mailto:contact@nozilla.de">contact@nozilla.de</a><br>
-        <a href="https://datenatlas.de/impressum" target="_blank" rel="noopener">Impressum<span class="visually-hidden"> (datenatlas.de, neuer Tab)</span></a></p>
+        <a href="https://datenatlas.de/impressum" target="_blank" rel="noopener">Impressum<span class="visually-hidden"> (datenatlas.de, neuer Tab)</span></a> · <a href="https://datenatlas.de/datenschutz" target="_blank" rel="noopener">Datenschutz<span class="visually-hidden"> (datenatlas.de, neuer Tab)</span></a></p>
     </div>
   </dialog>
 
   <p class="visually-hidden" id="announce" aria-live="polite"></p>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js" integrity="sha512-TiMWaqipFi2Vqt4ugRzsF8oRoGFlFFuqIi30FFxEPNw58Ov9mOy6LgC05ysfkxwLE0xVeZtmr92wVg9siAFRWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="vendor/leaflet/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g=="></script>
+  <script src="vendor/markercluster/leaflet.markercluster.min.js" integrity="sha512-TiMWaqipFi2Vqt4ugRzsF8oRoGFlFFuqIi30FFxEPNw58Ov9mOy6LgC05ysfkxwLE0xVeZtmr92wVg9siAFRWA=="></script>
   <script src="timeline.js"></script>
   <script src="app.js"></script>
   <script src="tour.js"></script>

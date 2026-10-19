@@ -117,9 +117,13 @@ Der Workflow schreibt die fertige Seite nach jedem Lauf zusätzlich in den Branc
 
 Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site.webmanifest`), Beschreibung, canonical, Open Graph und Twitter-Karte mit Vorschaubild (`og-image.jpg`), strukturierte Daten (schema.org `WebSite`, `WebApplication`), `noscript`-Hinweis mit Links zu den Daten und eine Fehlerseite (`404.html`). `python -m pipeline seo` schreibt `robots.txt` und `sitemap.xml` in die zusammengestellte Seite und setzt `SITE_URL` in die absoluten Adressen ein. Bei GitHub Pages liegt die Seite unter einem Unterpfad; dort werten Suchmaschinen `robots.txt` nicht aus, die Sitemap lässt sich in der Search Console einreichen.
 
+## Fremdcode und externe Dienste
+
+Leaflet 1.9.4 (BSD-2-Clause) und Leaflet.markercluster 1.5.3 (MIT) liegen in `site/vendor/`, die Schrift Inter (SIL Open Font License 1.1) in `site/fonts/` – jeweils mit Lizenzdatei, Integritätsprüfung (SRI) bleibt aktiv. Die Seite lädt nichts von fremden Servern außer den Kartenkacheln von OpenStreetMap; der Ratsassistent verbindet sich nur mit dem gewählten Anbieter.
+
 ## Impressum und Kontakt
 
-Erstellt von Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“. Impressum: https://datenatlas.de/impressum
+Erstellt von Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“. Impressum: https://datenatlas.de/impressum · Datenschutz: https://datenatlas.de/datenschutz
 
 ## Aufbau des Repositorys
 

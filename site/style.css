@@ -2,6 +2,12 @@
    Karte vollflächig; alle Bedienflächen als einklappbares Glas darüber.
    Abweichung: Text und Primärschaltflächen nutzen ein dunkleres Violett (--accent-ink, --accent-fill),
    weil #8b5cf6 mit weißer bzw. auf weißer Fläche die WCAG-AA-Kontraste nicht erreicht. */
+/* Schrift Inter (SIL Open Font License, fonts/LICENSE-Inter.txt), lokal statt über Google Fonts */
+@font-face {
+  font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url("fonts/inter-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 :root {
   --bg: #fafaff;
   --bg-gradient: radial-gradient(at 20% 0%, #ffe0f0 0%, transparent 50%),
