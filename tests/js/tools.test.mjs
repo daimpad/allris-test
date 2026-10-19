@@ -31,6 +31,7 @@ const VORLAGE = {
   reference: "261088", name: "CDU-Antrag: Bäume an der Frongasse 12", paper_type: "Antrag", date: "2026-06-02",
   amt: "66 Tiefbauamt", web: "https://example.org/vo", main_file: null, source_object: "https://example.org/oparl/papers/1",
   stand: "in Beratung", parties: ["CDU"], plans: [],
+  soll: { verfahren: "antrag-bv", sicherheit: "hoch", grund: "Antrag mit Beratung in der Bezirksvertretung", passung: "weicht ab", ist: ["bv", "rat"], abweichung: ["rat"] },
   responsibility: [{ kind: "federfuehrend", label: "66 Tiefbauamt", name: "66-2 Straßenbau", derived: false }],
   originators: [{ actor: "CDU", actor_type: "Bezirksfraktion", derived: true, evidence: "CDU-Antrag" }],
   themes: [{ theme: "umwelt", method: "stichwort", evidence: "bäume", confidence: "niedrig" }],
@@ -79,10 +80,19 @@ const BAUSTELLEN = {
   ],
 };
 
+const SOLL = {
+  meta: { quelle: "Verfahrensmodell aus „Bonn entscheidet“ (MIT)", hinweis: "Vereinfachtes Modell, keine Rechtsauskunft." },
+  bahnen: { bvm: "Bezirksverordnete · Bezirksfraktion", bv: "Bezirksvertretung", rat: "Rat" },
+  verfahren: { "antrag-bv": { titel: "Antrag in der Bezirksvertretung", schritte: [
+    { id: "b1", label: "Antrag einreichen", was: "Antrag einreichen", bahn: "bvm", beleg: "GeschO § 23", links: [{ label: "Geschäftsordnung des Rates § 23", url: "https://example.org/gescho" }] },
+    { id: "b2", label: "Bezirksvertretung entscheidet", was: "Beratung und Beschluss", bahn: "bv", beleg: "BezS § 7" },
+    { id: "b3", label: "Anhörung", was: "Anhörung", bahn: "bv", eigen: true, beleg: "BezS § 9" }] } },
+  ohne_soll: { "Bürgerbrief": "kein Soll angenommen." },
+};
 const FILES = {
   "glossar.json": GLOSSAR, "bonn/suche.json": SUCHE, "bonn/chat/orte.json": ORTE, "bonn/chat/vorlagen/2610.json": { papers: { 261088: VORLAGE } },
   "bonn/chat/gremien.json": GREMIEN, "bonn/zeit.json": ZEIT, "bonn/chat/datenstand.json": DATENSTAND,
-  "bonn/plaene.json": PLAENE, "bonn/baustellen.json": BAUSTELLEN,
+  "bonn/plaene.json": PLAENE, "bonn/baustellen.json": BAUSTELLEN, "bonn/soll.json": SOLL,
 };
 const tools = () => createTools({
   today: "2026-10-18",
@@ -153,7 +163,19 @@ test("hole_prozesslinie: Schritte mit Evidenzstatus und Erläuterung", async () 
   assert.equal(rat.datum_status, "unklar");
   assert.equal(rat.hinweis, GLOSSAR.hinweise.ohne_sitzung);
   assert.equal(p.schritte[2].ergebnis, "vertagt");
-  assert.deepEqual(Object.keys(p.evidenzstatus), ["belegt"]);
+  assert.deepEqual(Object.keys(p.evidenzstatus), ["belegt", "soll"]);
+});
+
+test("hole_prozesslinie: Soll nach Regelwerk mit Befund und Rechtsgrundlage", async () => {
+  const s = (await tools().run("hole_prozesslinie", { drucksache: "261088" })).soll_nach_regelwerk;
+  assert.equal(s.verfahren, "Antrag in der Bezirksvertretung");
+  assert.equal(s.zuordnung_status, "abgeleitet");
+  assert.match(s.befund, /Rat; .*Befund, keine Bewertung/);
+  assert.deepEqual(s.schritte.map((x) => x.status), ["soll", "belegt", "belegt"]);
+  assert.equal(s.schritte[0].abgleich, "nicht abgeglichen");
+  assert.deepEqual(s.schritte[0].links, ["https://example.org/gescho"]);
+  assert.equal(s.schritte[2].ergaenzung_ris_karte, true);
+  assert.match(s.quelle, /keine Rechtsauskunft/);
 });
 
 test("suche_ort: Straße, Ortsteil, Umkreis", async () => {

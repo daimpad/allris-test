@@ -35,7 +35,9 @@ Jeder Schritt der Prozesslinie hat einen **Evidenzstatus**:
 - **abgeleitet** – erschlossen, etwa das Datum einer Beratung oder die Einreichenden aus dem Titel;
 - **nicht öffentlich** – findet statt, ist aber von außen nicht einsehbar, etwa die Vorbereitung in der Verwaltung;
 - **unklar** – aus öffentlichen Quellen nicht bestimmbar, vor allem, ob ein Beschluss umgesetzt wurde;
-- **soll** – nur in der Planchronik: ein Verfahrensschritt nach Baugesetzbuch, zu dem keine Vorlage vorliegt. Das heißt nicht, dass er fehlt.
+- **soll** – ein Schritt, den das Regelwerk vorsieht, der in den Daten aber nicht dokumentiert ist. Das heißt nicht, dass er fehlt.
+
+Unter **„Nach Regelwerk (Soll)“** zeigt jeder Vorgang, welches Verfahren Gemeindeordnung, Geschäftsordnung des Rates, Hauptsatzung, Bezirkssatzung und Zuständigkeitsordnung vorsehen: die Schritte mit Rechtsgrundlage und Link, die Fristen vor einer Sitzung und „Wer entscheidet was?“ mit dem Abschnitt der Zuständigkeitsordnung. Das Modell stammt aus dem Projekt [„Bonn entscheidet“](https://github.com/anster2025/bonn-entscheidet) (MIT) und ist um eigene, belegte Schritte ergänzt. Die Zuordnung zum Verfahren ist abgeleitet. Abgeglichen wird nur, welche Gremienarten beraten haben. Weicht das ab, erscheint ein **Befund**; ein Befund ist keine Bewertung und kein Regelverstoß. Die Planchronik zeigt die Schritte nach Baugesetzbuch.
 
 Der **Stand** einer Vorlage ist *entschieden*, *beraten, ohne Entscheidung*, *in Beratung*, *offen* oder *ohne Beratungsfolge*. Lücken bleiben als eigene Schritte sichtbar.
 
@@ -57,7 +59,7 @@ Diese Anzeige ist vorläufig, bis eine Stichprobe von Hand geprüft ist. Der Vol
 - Vorlagen vor Oktober 2019 und nichtöffentliche Beratungen sind nicht enthalten.
 - Ein Straßenpunkt steht für die ganze Straße, nicht für ein Gebäude.
 - Einreichende stehen nicht strukturiert in der Quelle; sie werden aus Vorlagenart und Titel erschlossen.
-- Was Zuständigkeitsordnung und Bezirkssatzung vorsehen, ist noch nicht erfasst.
+- Das Soll nach Regelwerk ist ein vereinfachtes Modell und keine Rechtsauskunft. Reihenfolge, Fristen und Rollen werden nicht abgeglichen.
 - Stichproben zur Verortung, zu den Themen und zu den Baustellen werden noch von Hand geprüft. Vorprüfungen durch KI sind als solche gekennzeichnet und ersetzen diese Prüfung nicht.
 
 ## Datenquellen und Lizenzen

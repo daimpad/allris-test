@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import datetime, timezone
 
-from . import chat, config, glossar, plans, process as proc, publish, topics
+from . import chat, config, glossar, plans, process as proc, publish, soll, topics
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -74,6 +74,7 @@ def _paper_detail(db, pid):
     d["themes"] = topics.themes(d)
     d["parties"] = topics.parties(d)
     d["steps"] = [{k: v for k, v in s.items() if v not in (None, [], False)} for s in proc.steps(d)]
+    d["soll"] = soll.lookup(db, p["reference"])
     return d
 
 
@@ -232,6 +233,8 @@ def export_all():
     reg = plans.register(cache.values(), _plans())
     _dump(out / "plaene.json", {"meta": {**_meta(db, True), "note": "Pläne und Inkrafttreten belegt (Stadt Bonn, "
                                          "Lage der Bebauungspläne); Verfahrensschritte aus dem Titel abgeleitet"}, **reg})
+    # Soll-Modell: Verfahren nach Regelwerk, Fristen, Zuständigkeit (Anzeige in der Prozesslinie)
+    _dump(out / "soll.json", soll.site_data())
 
     _dump(out / "index.json", {"meta": _meta(db), **index})
     db.close()
