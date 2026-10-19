@@ -25,7 +25,7 @@ Lizenzen stehen je Datei in `LICENSE-DATA.md`. `LIESMICH.txt` beschreibt Inhalt 
 | Nummernschema, Änderungspläne | geklärt (Phase 1: Grundnummer, Änderungen, Mehrdeutigkeit mit Konfidenz niedrig) |
 | Bauherr bzw. Träger | erfasst (Feld `traeger`); andere Träger getrennt |
 | Historische Baustellendaten | Anfrage an opendata@bonn.de vom Auftraggeber versandt (19.10.2026), Antwort offen |
-| Schwelle der Freischaltung | Vorschlag 70 % plausibel je Stufe; „hoch“ vorläufig sichtbar (Entscheidung 19.10.2026); Prüfung von Hand offen |
+| Schwelle der Freischaltung | Vorschlag 70 % plausibel je Stufe; „hoch“ sichtbar; Prüfung von Hand abgeschlossen (6/6 plausibel), Hinweis „vorläufig“ entfallen (19.10.2026) |
 | Lizenz je Datensatz | Bebauungspläne CC0 (Katalog der Stadt); Baustellen CC0 laut Auftraggeber, Bestätigung der Stadt mit der Anfrage |
 
 ## Noch zu tun (Auftraggeber)

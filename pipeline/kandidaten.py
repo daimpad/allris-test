@@ -178,7 +178,7 @@ SITE_NOTES = [
     "Termine laut Quelle unverbindlich; erfasst sind nur Baustellen mit nennenswertem Einfluss auf den Verkehr.",
     "Die Historie beginnt mit dem ersten Abruf des Archivs; frühere Baustellen fehlen.",
     "„Mögliche Umsetzung“ ist ein Indiz aus räumlichen, zeitlichen und thematischen Kriterien, kein Beleg. Gezeigt "
-    "werden nur Kandidaten der Konfidenz „hoch“, also Baubeschlüsse der Verwaltung; die Prüfung der Stichprobe von Hand läuft.",
+    "werden nur Kandidaten der Konfidenz „hoch“, also Baubeschlüsse der Verwaltung; eine Stichprobe wurde von Hand geprüft.",
     "Baustellen fremder Träger (Versorger, Straßen NRW, Bahn) setzen in der Regel keinen Ratsbeschluss um.",
 ]
 
@@ -211,7 +211,7 @@ def site_data(state, papers, origin, stand=None):
     seen = [v.get("first_seen") for v in state.values() if v.get("first_seen")]
     return {"meta": {"quelle": [baustellen.URL.format(t) for t in baustellen.FEEDS], "lizenz": config.BAUSTELLEN_LICENSE,
                      "herkunft": origin, "archiv_beginn": min(seen) if seen else None, "abruf": stand,
-                     "kandidaten": "nur Konfidenz hoch, vorläufig (Prüfung von Hand ausstehend)", "hinweise": SITE_NOTES},
+                     "kandidaten": "nur Konfidenz hoch (Stichprobe von Hand geprüft)", "hinweise": SITE_NOTES},
             "baustellen": out}
 
 

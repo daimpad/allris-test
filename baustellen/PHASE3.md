@@ -28,7 +28,7 @@ Audit: `data/export/baustellen_kandidaten.tsv` (alle Kandidaten mit Kriterien, B
 
 ## Stichprobe (30 Kandidaten)
 
-`data/export/baustellen/stichprobe_kandidaten.tsv` – hoch vor mittel, höchstens zwei je Baustelle, ein Vorgang je Baustelle; wird nie überschrieben. Prüfung von Hand ausstehend (Spalte `pruefvermerk`).
+`data/export/baustellen/stichprobe_kandidaten.tsv` – hoch vor mittel, höchstens zwei je Baustelle, ein Vorgang je Baustelle; wird nie überschrieben. Prüfung von Hand abgeschlossen (Spalte `pruefvermerk`).
 
 KI-Vorprüfung (`vorpruefung_kandidaten.tsv`, gekennzeichnet, ersetzt nicht die Prüfung von Hand):
 
@@ -39,7 +39,7 @@ KI-Vorprüfung (`vorpruefung_kandidaten.tsv`, gekennzeichnet, ersetzt nicht die 
 
 Befund: „mittel“ besteht überwiegend aus Bürgeranträgen zu Tempo 30, Ampeln oder Parkregeln in derselben Straße. Das Thema Verkehr trennt dort nicht, das Bau-Stichwort schon.
 
-## Prüfung von Hand (begonnen 19.10.2026)
+## Prüfung von Hand (abgeschlossen 19.10.2026)
 
 | Kandidaten | Ergebnis | Folge |
 |---|---|---|
@@ -54,6 +54,7 @@ Befund: „mittel“ besteht überwiegend aus Bürgeranträgen zu Tempo 30, Ampe
 - „mittel“: 2 plausibel, 6 unklar, 13 nicht plausibel (10 % plausibel). Die Stufe bleibt verborgen.
 - Die vorgeschlagene Schwelle (70 % plausibel je Stufe) erreicht nur „hoch“.
 - Die KI-Vorprüfung stimmte in allen Fällen mit dem Urteil von Hand überein. Die Regel zu Baubeschlüssen hat erst der Auftraggeber festgelegt.
+- Freischaltung: „hoch“ bleibt sichtbar, der Hinweis „vorläufig“ entfällt (Entscheidung des Auftraggebers 19.10.2026). Die Anzeige bleibt ein Indiz, der Vollzug „unklar“.
 
 ## Empfehlung
 
@@ -64,4 +65,4 @@ Befund: „mittel“ besteht überwiegend aus Bürgeranträgen zu Tempo 30, Ampe
 
 ## Nächster Schritt
 
-Prüfung von Hand. Danach Phase 4: Anzeige als „möglicher Zusammenhang“ mit den erfüllten Kriterien.
+Nachprüfen, sobald das Archiv weitere Baustellen erfasst hat; neue Kandidaten „hoch“ erscheinen im Änderungsprotokoll.

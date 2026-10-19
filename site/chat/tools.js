@@ -104,7 +104,7 @@ export const TOOLS = [
   },
   {
     name: "suche_baustellen",
-    description: "Gemeldete Baustellen der Stadt Bonn (Straße, Maßnahme, Träger, Zeitraum unverbindlich) und mögliche Umsetzungen von Beschlüssen (Indiz aus Ort, Zeit und Thema, vorläufig, kein Beleg). Suche nach Straße, Stadtbezirk, Drucksache oder Umkreis eines Punktes.",
+    description: "Gemeldete Baustellen der Stadt Bonn (Straße, Maßnahme, Träger, Zeitraum unverbindlich) und mögliche Umsetzungen von Beschlüssen (Indiz aus Ort, Zeit und Thema, kein Beleg). Suche nach Straße, Stadtbezirk, Drucksache oder Umkreis eines Punktes.",
     parameters: {
       type: "object", additionalProperties: false,
       properties: {
@@ -523,7 +523,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
         traeger: b.traeger, anderer_traeger: b.fremd, von: b.von, bis: b.bis, termine: "unverbindlich", stand: stand(b),
         ...(near ? { abstand_m: Math.round(b._d) } : {}),
         moegliche_umsetzung: b.kandidaten.map((c) => ({ drucksache: c.drucksache, titel: short(c.titel), entschieden_am: c.entschieden_am,
-          abstand_m: c.abstand_m, kriterien: c.kriterien, evidenz: "abgeleitet, vorläufig – Indiz, kein Beleg" })),
+          abstand_m: c.abstand_m, kriterien: c.kriterien, evidenz: "abgeleitet – Indiz, kein Beleg" })),
       }));
       return { ...page(items, a.seite), archiv_beginn: d.meta.archiv_beginn, abruf: d.meta.abruf, hinweise: d.meta.hinweise,
         quelle: `Stadt Bonn, Baustellen – ${d.meta.lizenz}` };

@@ -8,6 +8,11 @@ on:
 permissions:
   contents: read
 
+# Ein neuer Push bricht ältere Läufe desselben Pull Requests ab; Läufe auf main laufen vollständig.
+concurrency:
+  group: tests-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   test:
     runs-on: ubuntu-latest

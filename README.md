@@ -52,7 +52,7 @@ Ob ein Beschluss umgesetzt ist, steht in keiner öffentlichen Schnittstelle. Ein
 - der Titel nennt eine passende Baumaßnahme;
 - die Vorlage ist ein Baubeschluss, also eine Beschlussvorlage der Verwaltung; ein Bürgerantrag oder Antrag, der eine Planung anstößt, zählt nicht.
 
-Diese Anzeige ist vorläufig, bis eine Stichprobe von Hand geprüft ist. Der Vollzug bleibt daneben „unklar“. Baustellen von Versorgern, Straßen NRW oder der Bahn setzen in der Regel keinen Ratsbeschluss um und werden getrennt gezeigt. Die Historie der Baustellen beginnt mit dem Archiv am 19.10.2026.
+Eine Stichprobe von 30 Kandidaten ist von Hand geprüft; alle Kandidaten, die diese Kriterien erfüllen, waren plausibel. Der Vollzug bleibt daneben „unklar“. Baustellen von Versorgern, Straßen NRW oder der Bahn setzen in der Regel keinen Ratsbeschluss um und werden getrennt gezeigt. Die Historie der Baustellen beginnt mit dem Archiv am 19.10.2026.
 
 ## Grenzen
 
