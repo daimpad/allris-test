@@ -47,6 +47,13 @@ Befund: „mittel“ besteht überwiegend aus Bürgeranträgen zu Tempo 30, Ampe
 | 7–12 | wie Vorprüfung: 4 plausibel, 1 unklar, 1 nicht plausibel | 211463 (Grundsatzbeschluss Stiftsplatz) bleibt „mittel“; kein neues Bau-Stichwort |
 | 13–18 | wie Vorprüfung: 1 plausibel, 1 unklar, 4 nicht plausibel (Tempo 30, Parkverbot, Glascontainer) | keine |
 | 19–24 | wie Vorprüfung: 3 unklar, 3 nicht plausibel | keine |
+| 25–30 | wie Vorprüfung: 1 unklar, 5 nicht plausibel | keine |
+
+**Ergebnis (30 von 30 geprüft):**
+- „hoch“ nach der neuen Regel (nur Baubeschlüsse): 6 von 6 plausibel (100 %). Die 3 Bürgeranträge mit Planungsbezug sind nun „mittel“.
+- „mittel“: 2 plausibel, 6 unklar, 13 nicht plausibel (10 % plausibel). Die Stufe bleibt verborgen.
+- Die vorgeschlagene Schwelle (70 % plausibel je Stufe) erreicht nur „hoch“.
+- Die KI-Vorprüfung stimmte in allen Fällen mit dem Urteil von Hand überein. Die Regel zu Baubeschlüssen hat erst der Auftraggeber festgelegt.
 
 ## Empfehlung
 
