@@ -82,5 +82,31 @@ class Auffindbarkeit(unittest.TestCase):
             self.assertIsNone(re.search(r"lastmod", (site / "sitemap.xml").read_text(encoding="utf-8")))
 
 
+class Gebietsseiten(unittest.TestCase):
+    def test_seiten_und_sitemap(self):
+        paper = {"reference": "261856", "name": "Radweg <Endenicher> Straße", "paper_type": "Antrag", "date": "2026-05-04",
+                 "stand": "in Beratung", "web": "https://example.org/vo?x=1&y=2", "themes": [{"theme": "verkehr"}]}
+        with tempfile.TemporaryDirectory() as tmp:
+            site = Path(tmp)
+            base = site / "data" / "export" / "bonn"
+            (base / "ortsteile").mkdir(parents=True)
+            (base / "index.json").write_text(json.dumps({
+                "ortsteile": [{"name": "Endenich", "slug": "endenich", "stadtbezirk": "Bonn", "count": 1},
+                              {"name": "Leer", "slug": "leer", "stadtbezirk": "Bonn", "count": 0}],
+                "bezirke": [{"name": "Bonn", "slug": "bonn", "count": 0}], "ohne_ortsbezug": []}), encoding="utf-8")
+            (base / "ortsteile" / "endenich.json").write_text(json.dumps({"meta": {}, "papers": [paper]}), encoding="utf-8")
+            seo.write(site, "https://ris-bonn.example/")
+            page = (site / "ortsteil" / "endenich" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('<link rel="canonical" href="https://ris-bonn.example/ortsteil/endenich/">', page)
+            self.assertIn("Radweg &lt;Endenicher&gt; Straße", page)
+            self.assertIn('href="https://example.org/vo?x=1&amp;y=2"', page)
+            self.assertIn('href="../../?gebiet=ortsteil:endenich#261856"', page)
+            self.assertFalse((site / "ortsteil" / "leer").exists())
+            self.assertIn('href="../ortsteil/endenich/"', (site / "gebiete" / "index.html").read_text(encoding="utf-8"))
+            urls = [e.text for e in ET.parse(site / "sitemap.xml").getroot().iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
+            self.assertIn("https://ris-bonn.example/ortsteil/endenich/", urls)
+            self.assertIn("https://ris-bonn.example/gebiete/", urls)
+
+
 if __name__ == "__main__":
     unittest.main()

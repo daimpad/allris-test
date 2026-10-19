@@ -115,7 +115,7 @@ Der Workflow schreibt die fertige Seite nach jedem Lauf zusätzlich in den Branc
 
 ## Auffindbarkeit
 
-Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site.webmanifest`), Beschreibung, canonical, Open Graph und Twitter-Karte mit Vorschaubild (`og-image.jpg`), strukturierte Daten (schema.org `WebSite`, `WebApplication`), `noscript`-Hinweis mit Links zu den Daten und eine Fehlerseite (`404.html`). `python -m pipeline seo` schreibt `robots.txt` und `sitemap.xml` in die zusammengestellte Seite und setzt `SITE_URL` in die absoluten Adressen ein. Hauptadresse ist `https://ris-bonn.datenatlas.de/` (Standard von `SITE_URL`) mit `robots.txt` an der Wurzel; der Spiegel auf GitHub Pages verweist per canonical darauf. Die Sitemap lässt sich in der Google Search Console einreichen.
+Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site.webmanifest`), Beschreibung, canonical, Open Graph und Twitter-Karte mit Vorschaubild (`og-image.jpg`), strukturierte Daten (schema.org `WebSite`, `WebApplication`), `noscript`-Hinweis mit Links zu den Daten und eine Fehlerseite (`404.html`). `python -m pipeline seo` schreibt `robots.txt`, `sitemap.xml` und statische Seiten je Ortsteil und Stadtbezirk mit Übersicht (`gebiete/`, `pipeline/gebietsseiten.py`: Kennzahlen, Themen, 20 jüngste Vorlagen, Links zu Karte und Original) in die zusammengestellte Seite und setzt `SITE_URL` in die absoluten Adressen ein. Hauptadresse ist `https://ris-bonn.datenatlas.de/` (Standard von `SITE_URL`) mit `robots.txt` an der Wurzel; der Spiegel auf GitHub Pages verweist per canonical darauf. Die Sitemap lässt sich in der Google Search Console einreichen.
 
 ## Fremdcode und externe Dienste
 
