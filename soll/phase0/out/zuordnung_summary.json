@@ -1,0 +1,306 @@
+{
+ "vorgaenge": 14104,
+ "vorlagen": 24915,
+ "verfahren": [
+  [
+   "beschlussvorlage",
+   3008
+  ],
+  [
+   "mitteilung",
+   2986
+  ],
+  [
+   "buergerantrag",
+   1651
+  ],
+  [
+   "ausschuss-entscheidung",
+   1340
+  ],
+  [
+   "grosse-anfrage",
+   1302
+  ],
+  [
+   "antrag-bv",
+   1231
+  ],
+  [
+   "nichtoeffentlich",
+   878
+  ],
+  [
+   "antrag-rat",
+   852
+  ],
+  [
+   "dringlichkeitsantrag",
+   332
+  ],
+  [
+   "bauleitplanung",
+   245
+  ],
+  [
+   "kleine-anfrage",
+   134
+  ],
+  [
+   "dringlichkeitsentscheidung",
+   82
+  ],
+  [
+   "einwohnerfrage",
+   63
+  ]
+ ],
+ "sicherheit": [
+  [
+   "hoch",
+   12581
+  ],
+  [
+   "mittel",
+   1523
+  ]
+ ],
+ "ohne_eigenes_verfahren": [
+  [
+   "Bürgerbrief",
+   159
+  ],
+  [
+   "Stellungnahme der Verwaltung",
+   6
+  ]
+ ],
+ "passung": [
+  [
+   "passt",
+   11451
+  ],
+  [
+   "weicht ab",
+   2356
+  ],
+  [
+   "ohne Beratung",
+   297
+  ]
+ ],
+ "passung_je_verfahren": {
+  "antrag-bv": [
+   [
+    "passt",
+    1231
+   ]
+  ],
+  "antrag-rat": [
+   [
+    "weicht ab",
+    745
+   ],
+   [
+    "passt",
+    100
+   ],
+   [
+    "ohne Beratung",
+    7
+   ]
+  ],
+  "ausschuss-entscheidung": [
+   [
+    "passt",
+    1277
+   ],
+   [
+    "weicht ab",
+    63
+   ]
+  ],
+  "bauleitplanung": [
+   [
+    "passt",
+    243
+   ],
+   [
+    "ohne Beratung",
+    2
+   ]
+  ],
+  "beschlussvorlage": [
+   [
+    "passt",
+    2939
+   ],
+   [
+    "ohne Beratung",
+    69
+   ]
+  ],
+  "buergerantrag": [
+   [
+    "passt",
+    1651
+   ]
+  ],
+  "dringlichkeitsantrag": [
+   [
+    "weicht ab",
+    244
+   ],
+   [
+    "passt",
+    84
+   ],
+   [
+    "ohne Beratung",
+    4
+   ]
+  ],
+  "dringlichkeitsentscheidung": [
+   [
+    "passt",
+    82
+   ]
+  ],
+  "einwohnerfrage": [
+   [
+    "passt",
+    61
+   ],
+   [
+    "weicht ab",
+    2
+   ]
+  ],
+  "grosse-anfrage": [
+   [
+    "weicht ab",
+    1168
+   ],
+   [
+    "passt",
+    120
+   ],
+   [
+    "ohne Beratung",
+    14
+   ]
+  ],
+  "kleine-anfrage": [
+   [
+    "weicht ab",
+    134
+   ]
+  ],
+  "mitteilung": [
+   [
+    "passt",
+    2893
+   ],
+   [
+    "ohne Beratung",
+    93
+   ]
+  ],
+  "nichtoeffentlich": [
+   [
+    "passt",
+    770
+   ],
+   [
+    "ohne Beratung",
+    108
+   ]
+  ]
+ },
+ "abweichung_bahnen": [
+  [
+   [
+    "grosse-anfrage",
+    "bv"
+   ],
+   523
+  ],
+  [
+   [
+    "grosse-anfrage",
+    "aus"
+   ],
+   506
+  ],
+  [
+   [
+    "antrag-rat",
+    "aus"
+   ],
+   351
+  ],
+  [
+   [
+    "antrag-rat",
+    "aus,rat"
+   ],
+   202
+  ],
+  [
+   [
+    "antrag-rat",
+    "aus,bv"
+   ],
+   108
+  ],
+  [
+   [
+    "dringlichkeitsantrag",
+    "bv"
+   ],
+   99
+  ],
+  [
+   [
+    "dringlichkeitsantrag",
+    "aus"
+   ],
+   72
+  ],
+  [
+   [
+    "ausschuss-entscheidung",
+    "aus,bv"
+   ],
+   63
+  ],
+  [
+   [
+    "grosse-anfrage",
+    "aus,rat"
+   ],
+   60
+  ],
+  [
+   [
+    "antrag-rat",
+    "aus,bv,rat"
+   ],
+   53
+  ],
+  [
+   [
+    "grosse-anfrage",
+    "aus,bv"
+   ],
+   53
+  ],
+  [
+   [
+    "kleine-anfrage",
+    "aus,rat"
+   ],
+   53
+  ]
+ ]
+}

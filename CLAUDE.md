@@ -110,7 +110,7 @@ Eine öffentliche, statisch auslieferbare Webanwendung, die Ratsinformationen in
 - Stufe C (Volltext, Sprachmodell) zurückgestellt, bis die Lizenz der PDFs geklärt ist
 - Stichprobe zur Prüfung von Hand: `data/export/endenich/stichprobe_pruefung.tsv` (50 Vorlagen) und `data/export/baustellen/stichprobe_kandidaten.tsv` (30 Kandidaten) ausstehend; Text im Dialog „Über“ gegenlesen
 - Eigene Domain läuft (19.10.2026), `SITE_URL` umgestellt; offen: Google Search Console (Eigentum bestätigen, Sitemap einreichen). Verbesserungsliste als GitHub-Issues #23–#35; Datenschutzerklärung (`site/datenschutz.html`) vor Veröffentlichung rechtlich gegenlesen lassen
-- Soll-Modell der Prozessebene (Zuständigkeitsordnung, Bezirkssatzung) nicht formalisiert
+- Soll-Modell der Prozessebene: Übernahme aus „Bonn entscheidet“ (anster2025/bonn-entscheidet, MIT, feste Kopie) geprüft – Phase 0 `soll/phase0/BERICHT.md` (Zuordnung 99 %, Belege 18/20 bestätigt, Zuständigkeitsordnung 331/333 wortgleich); Phase 1 (Übernahme mit eigenen Ergänzungen) nach Freigabe; Kontakt zum Autor später
 - Beitrag an OParl-Lite (Felder `location`, `underDirectionOf`) als Issue auf Codeberg – nur nach Rückfrage, da nach außen wirksam
 - Hackathon-Rahmen: Datum, Teilnehmende, erwartetes Ergebnisformat (Demo, Repository, Datensatz)
 
