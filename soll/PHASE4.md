@@ -51,11 +51,26 @@ Wirkung in Endenich (574 Vorlagen):
 | vertagt | 14 | 14 |
 | ohne Soll | 7 | 7 |
 
-## Offene Empfehlung (nach Freigabe)
+## Nachtrag: Befund nur aus dem Hauptweg (umgesetzt nach Freigabe, 19.10.2026)
 
-**Befund nur aus dem Hauptweg:** Der Abgleich zählt bisher die Gremien aller Vorlagen einer Stammnummer. Folgevorlagen anderer Art (Große Anfragen, Mitteilungen zum Thema) erzeugen dadurch Scheinbefunde wie bei 230577.
+Zuordnung und Abgleich zählen nur den Hauptweg eines Vorgangs (`hauptweg` in `pipeline/soll.py`):
+- Spätere Fragen und Berichte anderer Art zählen nicht: Anfragen, Einwohnerfragen, Mitteilungen, Informationsbriefe. So regelt es auch das Original (`is_followup`, `current_main`).
+- Stellungnahmen und Änderungsanträge gehören zu der Vorlage, die ihnen vorausgeht.
+- Andere Folgevorlagen setzen den Weg fort, etwa eine Dringlichkeitsentscheidung zu einer Beschlussvorlage.
 
-Vorschlag: Abgeglichen werden nur die Hauptvorlage und Vorlagen gleicher Art; Stellungnahmen und Änderungsanträge zählen mit. Das betrifft höchstens die zwei Befunde, verändert aber die Definition aus Phase 1.
+Ein erster, weiter gefasster Entwurf (alle Vorlagen anderer Art ausschließen, alle Stellungnahmen einschließen) hätte zwei Fehler erzeugt:
+- Bei 230577 wäre der Scheinbefund geblieben, weil die Stellungnahmen zu den Großen Anfragen weiter gezählt hätten.
+- Bei 261798 wäre die Dringlichkeitsentscheidung herausgefallen, die die Beschlussvorlage fortführt.
+
+Wirkung auf alle 14.104 Vorgänge:
+
+| Änderung | Vorgänge |
+|---|---|
+| Befund entfällt (230577) | 1; es bleibt 221004 |
+| Verfahren „Antrag im Rat“ → „Antrag in der Bezirksvertretung“ (spätere Kleine Anfrage oder Mitteilung zum Stand der Umsetzung in Rat oder Ausschuss; geprüft an 190300, 211355) | 11 |
+| geänderte Gremien Ist ohne Wirkung auf Verfahren oder Passung | 61 |
+
+Die Stichprobe bleibt unverändert. Ihre Zeile zu 230577 zeigt noch den alten Befund; die Prüfung von Hand bewertet ihn mit dem neuen Stand.
 
 ## Prüfung
 

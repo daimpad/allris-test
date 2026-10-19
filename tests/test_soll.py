@@ -89,9 +89,16 @@ class Zuordnung(unittest.TestCase):
                                      ('p3', '261001', 'Frage', 'Einwohnerfrage', '2026-01-02'),
                                      ('p4', '261002', 'Brief', 'Bürgerbrief', '2026-01-03'),
                                      ('p5', '261003', 'Info', 'Mitteilungsvorlage', '2026-01-04'),
-                                     ('p6', '261004', 'Info', 'Mitteilungsvorlage', '2026-01-05');
+                                     ('p6', '261004', 'Info', 'Mitteilungsvorlage', '2026-01-05'),
+                                     ('p7', '261005', 'Frage', 'Einwohnerfrage', '2026-01-06'),
+                                     ('p8', '261005-01', 'Anfrage', 'Große Anfrage', '2026-02-01'),
+                                     ('p9', '261005-02 ST', 'Antwort', 'Stellungnahme der Verwaltung', '2026-02-10'),
+                                     ('p10', '261006', 'Vorlage', 'Beschlussvorlage', '2026-03-01'),
+                                     ('p11', '261006-01', 'Eil', 'Dringlichkeitsentscheidung OB', '2026-03-10');
             INSERT INTO consultation VALUES ('p1', 'aus', 'Empfehlung'), ('p2', 'rat', 'Entscheidung'), ('p3', 'rat', 'Kenntnisnahme'),
-                                            ('p5', 'beirat', 'Kenntnisnahme');
+                                            ('p5', 'beirat', 'Kenntnisnahme'), ('p7', 'bv', 'Kenntnisnahme'),
+                                            ('p8', 'rat', 'Kenntnisnahme'), ('p9', 'rat', 'Kenntnisnahme'),
+                                            ('p10', 'beirat', 'Entscheidung'), ('p11', 'rat', 'Genehmigung');
         """)
         return db
 
@@ -102,6 +109,9 @@ class Zuordnung(unittest.TestCase):
         self.assertEqual((rows["261001"]["passung"], rows["261001"]["abweichung"]), ("weicht ab", "rat"))
         self.assertEqual(rows["261002"]["passung"], "ohne Soll")
         self.assertEqual((rows["261003"]["passung"], rows["261004"]["passung"]), ("nur Beirat", "ohne Beratung"))
+        # spätere Große Anfrage samt Stellungnahme zählt nicht; eine Dringlichkeitsentscheidung setzt den Weg fort
+        self.assertEqual((rows["261005"]["passung"], rows["261005"]["ist_bahnen"], rows["261005"]["dokumente"]), ("passt", "bv", 3))
+        self.assertEqual((rows["261006"]["passung"], rows["261006"]["ist_bahnen"]), ("passt", "rat"))
 
     def test_lookup_je_vorlage(self):
         db = self._db()
