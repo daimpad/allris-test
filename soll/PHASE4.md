@@ -95,6 +95,7 @@ Die Prüfvermerke stehen in `data/export/soll/stichprobe_soll.tsv` (Spalten `pru
 |---|---|---|
 | 1–6 | bestätigt; bei 200556 Mitwirkung teilweise | Der Hinweis auf die Offenlage erscheint nur noch bei offenen oder vertagten Verfahren (`regel_bedingungen` in `data/soll/ergaenzungen.json`) |
 | 7–12 | bestätigt | 221004: Befund bleibt (Verweisung an den Schulausschuss); 230577: kein Befund richtig (Stand nach Hauptweg) |
+| 13–18 | bestätigt | 241058, 253500: Sicherheit „mittel“ reicht; kein eigenes Verfahren für Verwaltungsvorlagen zur Entscheidung in der Bezirksvertretung |
 
 ## Noch zu tun (Auftraggeber)
 
