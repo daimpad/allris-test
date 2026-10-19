@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import datetime, timezone
 
-from . import chat, config, glossar, process as proc, publish, topics
+from . import chat, config, glossar, plans, process as proc, publish, topics
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -64,11 +64,10 @@ def _paper_detail(db, pid):
                             "JOIN paper p ON p.id = r.child_id WHERE r.parent_id = ? "
                             "ORDER BY p.date"),
         "locations": locs,
-        # Plannummern im Titel; area = Geltungsbereich im Datensatz der rechtskräftigen Pläne gefunden
-        "plans": [{"nr": nr, "evidence": ev,
-                   "area": any(l["level"] == "bebauungsplan" and (l["name"] or "").split(" ")[1:2] == [nr]
-                               or (l["name"] or "").startswith(f"Bebauungsplan {nr} ") for l in locs)}
-                  for nr, ev in db.execute("SELECT plan_nr, evidence FROM paper_plan WHERE paper_id = ?", (pid,))],
+        # Plannummern im Titel (Methode B3); match = Treffer im Datensatz der rechtskräftigen Pläne,
+        # names = zugeordnete Pläne (Teilpläne, Grundnummer), area = Geltungsbereich vorhanden
+        "plans": [_plan_entry(nr, ev, match) for nr, ev, match in
+                  db.execute("SELECT plan_nr, evidence, match FROM paper_plan WHERE paper_id = ?", (pid,))],
         "source_object": pid,
     }
     d["stand"] = proc.stand(d)
@@ -229,6 +228,10 @@ def export_all():
     publish.write_dcat(out / "dcat.jsonld", min(p["date"] for p in cache.values() if p["date"]),
                        stand[:10] or datetime.now(timezone.utc).date().isoformat())
     n_shards = chat.write_chat(out / "chat", db, cache, meetings, sources, _meta(db, True))
+    # Bebauungspläne: Register je Plannummer (Grundlage der Planchronik)
+    reg = plans.register(cache.values(), _plans())
+    _dump(out / "plaene.json", {"meta": {**_meta(db, True), "note": "Pläne und Inkrafttreten belegt (Stadt Bonn, "
+                                         "Lage der Bebauungspläne); Verfahrensschritte aus dem Titel abgeleitet"}, **reg})
 
     _dump(out / "index.json", {"meta": _meta(db), **index})
     db.close()
@@ -272,6 +275,10 @@ def export_pilot(ortsteil=config.PILOT_ORTSTEIL):
                                "ON l2.id = pl2.location_id WHERE l2.ortsteil = ?)", (ortsteil,)))
     _write_tsv(config.EXPORT / "audit_geokodierung_bonn.tsv", AUDIT_COLUMNS, _audit_rows(db))
     _write_tsv(config.EXPORT / "audit_bebauungsplaene.tsv", PLAN_AUDIT, plan_audit_rows(db))
+    # Pilot: Vorlagen mit Plannummer, die im Ortsteil liegen oder ihn im Titel nennen
+    _write_tsv(out / "audit_bebauungsplaene.tsv", PLAN_AUDIT, plan_audit_rows(
+        db, "WHERE p.id IN (SELECT pl2.paper_id FROM paper_location pl2 JOIN location l2 ON l2.id = pl2.location_id "
+            "WHERE l2.ortsteil = ?) OR p.name LIKE ?", (ortsteil, f"%{ortsteil}%")))
     _sample(db, out, ortsteil)
     db.close()
     print(f"{len(papers)} Vorlagen, {len(features)} Punkte → {out}")
@@ -448,26 +455,45 @@ PROCESS_AUDIT = ["drucksache", "schritt", "bezeichnung", "status", "datum", "dat
                  "fundstelle", "pruefvermerk"]
 
 
-PLAN_AUDIT = ["drucksache", "titel", "plannummer", "fundstelle", "geltungsbereich", "inkraft_seit", "ortsteile",
-              "pruefstatus"]
+PLAN_AUDIT = ["drucksache", "titel", "plannummer", "fundstelle", "treffer", "geltungsbereich", "inkraft_seit",
+              "ortsteile", "konfidenz", "zurueckgestellt", "pruefstatus"]
+_PLANS = None
 
 
-def plan_audit_rows(db):
-    """Je Plannummer im Titel: Treffer im Datensatz der rechtskräftigen Pläne und berührte Ortsteile."""
-    from .plans import Plans
-    plans = Plans()
+def _plans():
+    global _PLANS
+    if _PLANS is None:
+        from .plans import Plans
+        _PLANS = Plans()
+    return _PLANS
+
+
+def _plan_entry(nr, evidence, match):
+    hits = _plans().classify(nr)[1]
+    return {"nr": nr, "evidence": evidence, "match": match or "nicht_im_datensatz",
+            "names": sorted({f["properties"]["name"] for f in hits}), "area": bool(hits)}
+
+
+def plan_audit_rows(db, where="", args=()):
+    """Je Plannummer im Titel (B3): Treffer im Datensatz der rechtskräftigen Pläne, berührte Ortsteile, Konfidenz
+    und die Ortsbezüge aus dem Titel, die dem eindeutigen Plan weichen."""
+    from .plans import CONFIDENCE
     out = []
-    for ref, name, pid, nr, ev in db.execute(
-            "SELECT p.reference, p.name, p.id, pp.plan_nr, pp.evidence FROM paper_plan pp "
-            "JOIN paper p ON p.id = pp.paper_id ORDER BY p.date DESC, p.reference"):
-        hits = plans.match(nr)
-        ortsteile = sorted({r[0] for r in db.execute(
+    for ref, name, pid, nr, ev, match in db.execute(
+            "SELECT p.reference, p.name, p.id, pp.plan_nr, pp.evidence, pp.match FROM paper_plan pp "
+            f"JOIN paper p ON p.id = pp.paper_id {where} ORDER BY p.date DESC, p.reference", args):
+        hits = _plans().classify(nr)[1]
+        names = sorted({f["properties"]["name"] for f in hits})
+        ortsteile = sorted({r[0] for n in names for r in db.execute(
             "SELECT l.ortsteil FROM paper_location pl JOIN location l ON l.id = pl.location_id "
-            "WHERE pl.paper_id = ? AND pl.method = 'bebauungsplan' AND l.description LIKE ?",
-            (pid, f"Bebauungsplan {nr}%"))})
-        out.append([ref, name, nr, ev, "; ".join(f["properties"]["name"] for f in hits) or "nicht im Datensatz",
-                    "; ".join(f["properties"]["inkraft_seit"] or "" for f in hits), "; ".join(ortsteile),
-                    "ungeprüft" if hits else "kein rechtskräftiger Plan (Verfahren?)"])
+            "WHERE pl.paper_id = ? AND pl.method = 'bebauungsplan' AND l.description = ?", (pid, f"Bebauungsplan {n}"))})
+        back = "; ".join(f"{e} ({m}, {ot or 'ohne Ortsteil'})" for e, m, ot in db.execute(
+            "SELECT DISTINCT pp.evidence, pp.method, l.ortsteil FROM plan_precedence pp JOIN location l ON l.id = pp.location_id "
+            "WHERE pp.paper_id = ? ORDER BY 1, 3", (pid,)))
+        out.append([ref, name, nr, ev, match, "; ".join(names) or "nicht im Datensatz",
+                    "; ".join(sorted({f["properties"]["inkraft_seit"] or "" for f in hits})), "; ".join(ortsteile),
+                    CONFIDENCE.get(match, "–"), back,
+                    "ungeprüft" if hits else "kein rechtskräftiger Plan (Verfahren oder aufgehoben)"])
     return out
 
 

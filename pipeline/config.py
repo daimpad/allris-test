@@ -23,6 +23,7 @@ STADTBEZIRKE = GEO / "stadtbezirke_bonn.geojson"
 # Aktualisierung ohne Overpass auskommt. Neu erzeugen mit `python -m pipeline gazetteer`.
 STRASSEN = GEO / "strassen_bonn.json"
 BPLAN = GEO / "bebauungsplaene_bonn.geojson"
+PLAN_LOG = GEO / "bebauungsplaene_protokoll.tsv"  # Änderungen zwischen Abrufen (neu, entfallen, Inkrafttreten)
 BPLAN_URL = "https://stadtplan.bonn.de/geojson?Thema=20074"
 DB = BUILD / "allris.sqlite"
 

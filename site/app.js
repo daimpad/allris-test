@@ -404,7 +404,7 @@
   function drawLegend() {
     const rows = colorBy === "thema"
       ? [...Object.entries(THEMES).map(([k, v]) => [THEME_COLOR[k], v]), [NO_THEME, "ohne Thema"]]
-      : [[color("hoch"), "Ort gesichert (Koordinate der Stadt)"], [color("mittel"), "Ort erschlossen (Name im Titel)"], [color("niedrig"), "Ort unsicher (mehrdeutig)"]];
+      : [[color("hoch"), "Ort gesichert (Koordinate oder eindeutiger Bebauungsplan der Stadt)"], [color("mittel"), "Ort erschlossen (Name im Titel)"], [color("niedrig"), "Ort unsicher (mehrdeutig)"]];
     legendEl.innerHTML = `<summary>Legende: ${colorBy === "thema" ? "Thema" : "Sicherheit des Orts"}</summary><ul>${rows
       .map(([c, t]) => `<li><span class="swatch" style="background:${c}" aria-hidden="true"></span>${esc(t)}</li>`).join("")}</ul>
       ${colorBy === "thema" ? '<p class="hint">Bei mehreren Themen zählt das erste. Themen sind abgeleitet.</p>' : ""}`;
@@ -609,19 +609,23 @@
   const loadPlans = () => (plansData ||= fetch(GEO.bplan).then((r) => (r.ok ? r.json() : { features: [] })).catch(() => ({ features: [] })));
   async function showPlans(p, fit) {
     if (planLayer) { planLayer.remove(); planLayer = null; }
-    const nrs = (p.plans || []).filter((x) => x.area).map((x) => x.nr);
-    if (!nrs.length) return;
+    const withArea = (p.plans || []).filter((x) => x.area);
+    if (!withArea.length) return;
+    const names = (x) => x.names || [x.nr];  // ältere Exporte ohne names
     const data = await loadPlans();
     if (selected !== p) return;
-    const feats = data.features.filter((f) => nrs.includes(f.properties.name.split(" ")[0]));
+    const wanted = new Set(withArea.flatMap(names));
+    const feats = data.features.filter((f) => wanted.has(f.properties.name));
     planLayer = L.geoJSON({ type: "FeatureCollection", features: feats }, {
       style: { color: "#0f0f14", weight: 2, dashArray: "6 4", fillColor: "#7c3aed", fillOpacity: 0.12 }, interactive: false,
     }).addTo(map);
     if (fit && feats.length) map.fitBounds(planLayer.getBounds(), { ...mapPadding(), maxZoom: 17 });
-    for (const nr of nrs) {
-      const li = document.querySelector(`#detail .plans li[data-plan="${CSS.escape(nr)}"] .plan-meta`);
+    for (const x of withArea) {
+      const li = document.querySelector(`#detail .plans li[data-plan="${CSS.escape(x.nr)}"] .plan-meta`);
       if (!li) continue;
-      li.innerHTML = feats.filter((f) => f.properties.name.split(" ")[0] === nr).map((f) =>
+      const nr = x.nr, own = new Set(names(x));
+      li.innerHTML = (x.match === "grundnummer" ? "– im Datensatz nur die Grundnummer:<br>" : x.match === "mehrdeutig" ? "– mehrere Pläne passen:<br>" : "")
+        + [...new Map(feats.filter((f) => own.has(f.properties.name)).map((f) => [f.properties.name, f])).values()].map((f) =>
         `– ${f.properties.name !== nr ? esc(f.properties.name) + ", " : ""}rechtskräftig seit ${fmtDate(f.properties.inkraft_seit)} · ${link(f.properties.plan, "Plan (PDF)")}${f.properties.begruendung ? " · " + link(f.properties.begruendung, "Begründung (PDF)") : ""}`).join("<br>");
     }
   }
@@ -681,7 +685,7 @@
       ${participate(p)}
       <h4>Ortsbezug</h4><ul class="locs">${locs}</ul>
       ${(p.plans || []).length ? `<h4>Bebauungspläne</h4><ul class="locs plans">${p.plans.map((x) => `<li data-plan="${esc(x.nr)}"><strong>Bebauungsplan ${esc(x.nr)}</strong>
-        ${x.area ? '<span class="plan-meta">– Geltungsbereich auf der Karte</span>' : " – nicht im Datensatz der rechtskräftigen Pläne (vermutlich noch im Verfahren); keine Fläche verfügbar"}
+        ${x.area ? '<span class="plan-meta">– Geltungsbereich auf der Karte</span>' : " – nicht im Datensatz der rechtskräftigen Pläne (im Verfahren oder aufgehoben); keine Fläche verfügbar"}
         <br><span class="meta">Fundstelle: „${esc(x.evidence)}“</span></li>`).join("")}</ul>` : ""}
       <p class="links">${link(reportLink(p), "Verortung falsch? Hinweis geben", "btn btn-secondary")}
         ${hasPaperFeed(p) ? `<a class="btn btn-soft" href="${BONN}feeds/vorlagen/${slug(p.reference)}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Diesen Vorgang abonnieren</a>` : ""}</p>
