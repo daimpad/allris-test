@@ -1,20 +1,20 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 574,
-  "generated_at": "2026-10-19T15:27:07+00:00",
+  "count": 573,
+  "generated_at": "2026-10-19T17:06:17+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-19T15:21:49+00:00"
+    "retrieved_at": "2026-10-19T17:01:18+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-19T15:25:02+00:00"
+    "retrieved_at": "2026-10-19T17:04:12+00:00"
    },
    {
     "name": "osm",
@@ -32,7 +32,7 @@
     "name": "bplan-bonn",
     "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
-    "retrieved_at": "2026-10-19T15:22:09+00:00"
+    "retrieved_at": "2026-10-19T17:01:34+00:00"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
@@ -42884,205 +42884,6 @@
     "passung": "passt",
     "ist": [
      "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "230981",
-   "name": "Informationsbrief: Veränderte Verkehrsregelung in der Max-Bruch-Straße",
-   "paper_type": "Informationsbrief",
-   "date": "2023-05-17",
-   "amt": "Stabsstellle Bürgerbeteiligung",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012280",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2519908&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "Stabsstellle Bürgerbeteiligung",
-     "name": "Stabsstellle Bürgerbeteiligung"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/321",
-     "method": "paper_type",
-     "evidence": "Informationsbrief",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Ausschuss für Mobilität und Verkehr",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    },
-    {
-     "position": 1,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Rat",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    },
-    {
-     "position": 2,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    },
-    {
-     "position": 3,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Hauptausschuss",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Max-Bruch-Straße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.078083,
-     "lat": 50.726372,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Max-Bruch-Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
-   "stand": "offen",
-   "themes": [
-    {
-     "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Informationsbrief",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2023-05-17",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Ausschuss für Mobilität und Verkehr",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "beratung",
-     "label": "Rat",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "beratung",
-     "label": "Hauptausschuss",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    }
-   ],
-   "soll": {
-    "verfahren": "mitteilung",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Informationsbrief“",
-    "passung": "passt",
-    "ist": [
-     "aus",
-     "bv",
-     "rat"
     ],
     "abweichung": []
    }
