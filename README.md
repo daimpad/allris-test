@@ -76,7 +76,7 @@ Unter „Assistent“ beantwortet ein Sprachmodell Fragen zu Bonner Ratsvorgäng
 - Stufe B wertet nur Titel aus; Orte, die nur im Dokument stehen, fehlen. Gleichnamige Straßen ohne eingrenzenden Hinweis bleiben mehrdeutig.
 - Die Punkte der Stufe A stehen für die ganze Straße, nicht für das Objekt; bei langen Straßen kann der Ortsteil abweichen.
 - Einreichende stehen in der Quelle nicht strukturiert; sie werden aus Vorlagenart und Titel abgeleitet (bei rund 60 % der Anträge und Anfragen erkennbar). Namen von Privatpersonen werden nicht ausgewiesen.
-- Die Stichprobe von 50 Endenicher Vorlagen (`data/export/endenich/stichprobe_pruefung.tsv`) ist noch nicht von Hand geprüft.
+- Die Stichprobe von 50 Endenicher Vorlagen (`data/export/endenich/stichprobe_pruefung.tsv`) ist noch nicht von Hand geprüft. Eine Vorprüfung durch KI (`vorpruefung_verortung.tsv`, 19.10.2026) hält 42 Zuordnungen für richtig, 4 für teilweise zutreffend, 2 für unklar und 2 für falsch; sie ersetzt die Prüfung von Hand nicht. Die Vorprüfung der Themen (`vorpruefung_themen.tsv`, 50 Zeilen) ergab 30 passende, 9 fragliche und 9 unpassende Zuordnungen sowie 2 fehlende; die Hauptursachen (Abteilung 61-3 Stadtverkehr als „Bauen“, „Umweltspur“ als „Umwelt“) sind behoben.
 
 ## Pipeline
 

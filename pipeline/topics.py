@@ -28,6 +28,9 @@ AMT = {"02": "beteiligung", "03": "wirtschaft", "05": "beteiligung", "20": "wirt
        "51": "kinder", "52": "kultur", "56": "umwelt", "61": "bauen", "62": "bauen", "63": "bauen", "66": "verkehr",
        "67": "umwelt", "68": "umwelt", "85": "bauen"}
 AMT_NAME = [(re.compile(r"Seniorenzentren"), "soziales")]
+# Abteilungen, deren Thema vom Amt abweicht (Stichprobe 19.10.2026: 61-3 Stadtverkehr gehört zum Stadtplanungsamt,
+# bearbeitet aber Verkehrsplanung)
+AMT_UNIT = {"61-3": "verkehr"}
 
 # Gremium (Name) → Thema; Reihenfolge zählt („Soziales, … Wohnen“ vor „Wohnen, Planung“).
 # Sonderfälle in GREMIUM_SPECIAL werden vorher geprüft.
@@ -53,10 +56,10 @@ NO_THEME_GREMIEN = re.compile(r"^(Rat|Hauptausschuss|Bezirksvertretung)\b")
 KEYWORDS = {
     "verkehr": r"radweg|radverkehr|fahrrad|\bparken|parkpl[aä]tz|parkraum|anwohnerpark|haltestelle|\bbus(se|linie|spur)?\b|"
                r"ampel|tempo ?30|\bverkehr|verkehrs|straßenbahn|stadtbahn|öpnv|kreuzung|gehweg|fußweg|zebrastreifen|"
-               r"querungshilfe|carsharing|scooter|mobilität|einbahnstraße",
+               r"querungshilfe|carsharing|scooter|mobilität|einbahnstraße|umweltspur|sonderspur|fahrspur|ladezone|lieferzone",
     "bauen": r"bebauungsplan|flächennutzungsplan|bauvorhaben|neubau|wohnungsbau|bauleitpl|denkmal|städtebau|"
              r"quartiersentwicklung|baugenehmigung|bauantrag",
-    "umwelt": r"\bbäume\b|\bbaum\b|baumfäll|baumschutz|baumpflanz|straßenbäume|klima|umwelt|naturschutz|grünfläche|"
+    "umwelt": r"\bbäume\b|\bbaum\b|baumfäll|baumschutz|baumpflanz|straßenbäume|klima|umwelt(?!spur)|naturschutz|grünfläche|"
               r"grünanlage|biotop|lärm|abfall|\bmüll|luftqualität|hochwasser|insekt|blühwiese|begrünung",
     "bildung": r"schule|gymnasium|\bogs\b|schulhof|schulweg|bildung",
     "kinder": r"\bkita|kindertages|spielplatz|jugend|\bkinder",
@@ -71,7 +74,10 @@ KEYWORDS = {
 KEYWORD_RX = {k: re.compile(v) for k, v in KEYWORDS.items()}
 
 
-def _amt_theme(label):
+def _amt_theme(label, name=None):
+    unit = re.match(r"(\d\d-\d)", name or "")
+    if unit and unit.group(1) in AMT_UNIT:
+        return AMT_UNIT[unit.group(1)]
     m = re.match(r"(\d\d)", label or "")
     if m and m.group(1) in AMT:
         return AMT[m.group(1)]
@@ -91,9 +97,10 @@ def themes(p):
     """Themen einer exportierten Vorlage: [{theme, method, evidence, confidence}], je Thema der stärkste Hinweis."""
     hints = []
     for r in p["responsibility"]:
-        t = _amt_theme(r.get("label"))
+        t = _amt_theme(r.get("label"), r.get("name"))
         if t:
-            hints.append((t, "amt", r["label"], "mittel"))
+            unit = (r.get("name") or "")[:4] in AMT_UNIT
+            hints.append((t, "amt", r["name"] if unit else r["label"], "mittel"))
     for s in p["process"]:
         t = _gremium_theme(s.get("gremium"))
         if t:

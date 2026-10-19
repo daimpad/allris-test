@@ -35,6 +35,17 @@ class Themen(unittest.TestCase):
         self.assertEqual(ids(paper("Verkehrssicherheit an der Schule")), [("verkehr", "stichwort"), ("bildung", "stichwort")])
 
 
+    def test_abteilung_stadtverkehr_und_umweltspur(self):
+        # Stichprobe 19.10.2026: 61-3 Stadtverkehr gehört zum Stadtplanungsamt, bearbeitet aber Verkehr
+        p = {"name": "Umweltspur auf dem Hermann-Wandersleb-Ring", "process": [],
+             "responsibility": [{"label": "61 Stadtplanungsamt", "name": "61-3 Stadtverkehr"}]}
+        self.assertEqual(topics.themes(p), [{"theme": "verkehr", "method": "amt", "evidence": "61-3 Stadtverkehr", "confidence": "mittel"}])
+        p = {"name": "Bebauungsplan", "process": [], "responsibility": [{"label": "61 Stadtplanungsamt", "name": "61-4 Planungsrecht"}]}
+        self.assertEqual(ids(p), [("bauen", "amt")])
+        self.assertEqual(ids(paper("Umweltspur Endenicher Straße")), [("verkehr", "stichwort")])
+        self.assertEqual(ids(paper("Umweltbericht")), [("umwelt", "stichwort")])
+
+
 class Parteien(unittest.TestCase):
     def test_bezirksfraktion_und_kategorien(self):
         p = paper("x", originators=[("Grüne-Bezirksfraktion Beuel", "Bezirksfraktion"), ("CDU", "Fraktion/Gruppe"),
