@@ -270,6 +270,13 @@ dl.facts dt { color: var(--text-muted); } dl.facts dd { margin: 0; }
 .plan-papers li { margin: 0 0 6px; }
 .map-legend .swatch-plan { border-radius: 2px; background: rgba(14, 116, 144, 0.15); border: 1.5px solid #0e7490; box-shadow: none; }
 .map-legend .btn { margin-top: 6px; }
+.site-marker { background: none; border: 0; }
+.site-icon { display: inline-block; width: 14px; height: 14px; border-radius: 3px; transform: rotate(45deg); box-sizing: border-box; flex: none; }
+.site-marker .site-icon { margin: 2px; box-shadow: 0 0 0 1.5px #fff, 0 1px 4px rgba(15, 15, 20, 0.35); }
+.site-aktuell { background: #c2410c; border: 2px solid #7c2d12; }
+.site-geplant { background: #fff; border: 2px dashed #c2410c; }
+.site-fremd { background: #8a8a96; border: 2px solid #4b4b55; }
+.map-legend li .site-icon { width: 11px; height: 11px; margin: 0 1px; }
 
 /* Zeitleiste über der Karte */
 #timeline-wrap { position: fixed; top: var(--top); left: calc(var(--list-w) + 32px); right: calc(var(--detail-w) + 32px); z-index: 800; padding: 10px 14px 6px; transition: left .35s cubic-bezier(0.16, 1, 0.3, 1), right .35s cubic-bezier(0.16, 1, 0.3, 1); max-height: calc(22vh + 90px); overflow: auto; }
@@ -297,6 +304,8 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .tl-bar-4 { fill: #34d399; } .tl-bar-5 { fill: #fbbf24; } .tl-bar-6 { fill: #cbd5e1; } .tl-bar-7 { fill: #7c3aed; }
 .tl-meet { fill: #0f0f14; } .tl-meet.future { fill: #fff; stroke: #0f0f14; stroke-width: 1.2; } .tl-meet.cancelled { fill: #fff; stroke: #9a5200; stroke-dasharray: 2 1; }
 .tl-term { fill: rgba(124, 58, 237, 0.12); stroke: rgba(124, 58, 237, 0.35); }
+.tl-has-sites .tl-stage { height: clamp(106px, 18vh, 146px); }
+.tl-site { cursor: pointer; } .tl-site.fremd { fill-opacity: 0.45; stroke: #c2410c; stroke-width: 0.8; stroke-dasharray: 2 1.5; }
 .tl-step { fill: #0f0f14; stroke: #fff; stroke-width: 1.5; cursor: pointer; } .tl-step.derived { fill: #7c3aed; }
 .tl-brush { fill: rgba(196, 181, 253, 0.22); stroke: rgba(124, 58, 237, 0.5); }
 .tl-today { stroke: #db2777; stroke-width: 1.5; } .tl-today-label { fill: #9d174d; }
