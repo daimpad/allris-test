@@ -87,6 +87,14 @@ Die Stichprobe bleibt unverändert. Ihre Zeile zu 230577 zeigt noch den alten Be
 - d+aus, d+bv: Beleg um GeschO § 7 Abs. 5 ergänzt;
 - a+bv, e+bv: Anhörung nur in Angelegenheiten nach BezS § 9.
 
+## Prüfung der Stichprobe von Hand (begonnen 19.10.2026)
+
+Die Prüfvermerke stehen in `data/export/soll/stichprobe_soll.tsv` (Spalten `pruef_*`, `pruefvermerk`).
+
+| Vorgänge | Ergebnis | Folge |
+|---|---|---|
+| 1–6 | bestätigt; bei 200556 Mitwirkung teilweise | Der Hinweis auf die Offenlage erscheint nur noch bei offenen oder vertagten Verfahren (`regel_bedingungen` in `data/soll/ergaenzungen.json`) |
+
 ## Noch zu tun (Auftraggeber)
 
 - Stichprobe von Hand prüfen (Spalten `pruef_*`, `pruefvermerk`).

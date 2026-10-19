@@ -88,6 +88,12 @@ class Modell:
             if r["was"] != a["alt"]:
                 raise ValueError(f"Umformulierung passt nicht zur Quelle: {a['id']}")
             r["was"], r["umformuliert"] = a["neu"], True
+        for b in self.extra.get("regel_bedingungen", {}).get("regeln", []):
+            w = by_id[b["id"]]["wenn"]
+            if set(b["wenn"]) & set(w):
+                raise ValueError(f"Bedingung besteht schon in der Quelle: {b['id']}")
+            w.update(b["wenn"])
+            by_id[b["id"]]["bedingung_ergaenzt"] = b["grund"]
 
     def _korrigiere(self, k):
         if k["datei"] == "zustaendigkeitsordnung.json":
