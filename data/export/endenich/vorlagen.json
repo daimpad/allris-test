@@ -1,20 +1,20 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 576,
-  "generated_at": "2026-10-19T09:39:46+00:00",
+  "count": 574,
+  "generated_at": "2026-10-19T10:46:05+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-19T09:35:32+00:00"
+    "retrieved_at": "2026-10-19T10:42:04+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-19T09:38:22+00:00"
+    "retrieved_at": "2026-10-19T10:45:03+00:00"
    },
    {
     "name": "osm",
@@ -32,7 +32,7 @@
     "name": "bplan-bonn",
     "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
-    "retrieved_at": "2026-10-19T09:35:48+00:00"
+    "retrieved_at": "2026-10-19T10:42:22+00:00"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
@@ -10142,6 +10142,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplanverfahren Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -13254,6 +13256,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplanverfahrens Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -17148,6 +17152,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -21882,7 +21888,9 @@
    "plans": [
     {
      "nr": "7522-77",
-     "evidence": "Bebauungsplans Nr. 7522-77",
+     "evidence": "Satzungsbeschluss zur Aufhebung des Bebauungsplans Nr. 7522-77",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -26906,6 +26914,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -28148,6 +28158,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -28570,6 +28582,8 @@
     {
      "nr": "7522-77",
      "evidence": "Bebauungsplans Nr. 7522-77",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -40671,30 +40685,20 @@
      "lat": 50.735432,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplan Nr. 6322-3",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011639",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072251,
-     "lat": 50.735946,
-     "stage": "B",
-     "method": "strasse+ortsteil",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011639",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-3",
      "evidence": "Bebauungsplan Nr. 6322-3",
+     "match": "eindeutig",
+     "names": [
+      "6322-3"
+     ],
      "area": true
     }
    ],
@@ -45634,30 +45638,20 @@
      "lat": 50.734904,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-2",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010054",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072251,
-     "lat": 50.735946,
-     "stage": "B",
-     "method": "strasse+ortsteil",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010054",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-2",
      "evidence": "Bebauungsplanes Nr. 6322-2",
+     "match": "eindeutig",
+     "names": [
+      "6322-2 Teil A"
+     ],
      "area": true
     }
    ],
@@ -47024,6 +47018,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -48859,30 +48855,20 @@
      "lat": 50.735432,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-3",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008042",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072251,
-     "lat": 50.735946,
-     "stage": "B",
-     "method": "strasse+ortsteil",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008042",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-3",
      "evidence": "Bebauungsplanes Nr. 6322-3",
+     "match": "eindeutig",
+     "names": [
+      "6322-3"
+     ],
      "area": true
     }
    ],
@@ -49823,6 +49809,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -49983,6 +49971,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -50811,6 +50801,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -53168,6 +53160,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -54850,6 +54844,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -55032,6 +55028,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -55399,6 +55397,8 @@
     {
      "nr": "6421-1",
      "evidence": "Bebauungsplan Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
      "area": false
     }
    ],
@@ -61442,44 +61442,20 @@
      "lat": 50.735432,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplan Nr. 6322-3",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003061",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072251,
-     "lat": 50.735946,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003061",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Nordstadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.073776,
-     "lat": 50.739016,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003061",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-3",
      "evidence": "Bebauungsplan Nr. 6322-3",
+     "match": "eindeutig",
+     "names": [
+      "6322-3"
+     ],
      "area": true
     }
    ],
@@ -63424,44 +63400,20 @@
      "lat": 50.735432,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplan Nr. 6322-3",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002434",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072251,
-     "lat": 50.735946,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002434",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Nordstadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.073776,
-     "lat": 50.739016,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002434",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-3",
      "evidence": "Bebauungsplan Nr. 6322-3",
+     "match": "eindeutig",
+     "names": [
+      "6322-3"
+     ],
      "area": true
     }
    ],
@@ -64719,30 +64671,20 @@
      "lat": 50.734904,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-2",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001892",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "ortsteil",
-     "name": "Endenich",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070351,
-     "lat": 50.725238,
-     "stage": "B",
-     "method": "ortsteil_name",
-     "confidence": "mittel",
-     "evidence": "Endenich",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001892",
-     "source": "geo-bonn"
     }
    ],
    "plans": [
     {
      "nr": "6322-2",
      "evidence": "Bebauungsplanes Nr. 6322-2",
+     "match": "eindeutig",
+     "names": [
+      "6322-2 Teil A"
+     ],
      "area": true
     }
    ],
@@ -66709,30 +66651,20 @@
      "lat": 50.734904,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-2",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000706",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "ortsteil",
-     "name": "Endenich",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070351,
-     "lat": 50.725238,
-     "stage": "B",
-     "method": "ortsteil_name",
-     "confidence": "mittel",
-     "evidence": "Endenich",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000706",
-     "source": "geo-bonn"
     }
    ],
    "plans": [
     {
      "nr": "6322-2",
      "evidence": "Bebauungsplanes Nr. 6322-2",
+     "match": "eindeutig",
+     "names": [
+      "6322-2 Teil A"
+     ],
      "area": true
     }
    ],
@@ -68992,152 +68924,6 @@
    ]
   },
   {
-   "reference": "210525-01 ST",
-   "name": "BBB-Anfrage: Sachstand Bebauungsplanverfahren 'An den Lappenstrünken', Flodelingsweg für den Bereich des Bebauungsplangebietes Nr. 6320-18 (ehemals Bebauungsplan Nr. 7520-2)",
-   "paper_type": "Stellungnahme der Verwaltung",
-   "date": "2021-04-26",
-   "amt": "61 Stadtplanungsamt",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000338",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2012659&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "61 Stadtplanungsamt",
-     "name": "61-4 Planungsrecht"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/228",
-     "method": "paper_type",
-     "evidence": "Stellungnahme der Verwaltung",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/499",
-     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
-     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
-     "start_date": "2021-10-07T16:02:00.000Z",
-     "cancelled": 0,
-     "number": "1.6.1",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "210525",
-     "paper_type": "Große Anfrage",
-     "name": "BBB-Anfrage: Sachstand Bebauungsplanverfahren 'An den Lappenstrünken', Flodelingsweg für den Bereich des Bebauungsplangebietes Nr. 6320-18 (ehemals Bebauungsplan Nr. 7520-2)",
-     "date": "2021-04-06"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "bebauungsplan",
-     "name": "Bebauungsplan 7520-2",
-     "ortsteil": "Lengsdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.073211,
-     "lat": 50.7144,
-     "stage": "B",
-     "method": "bebauungsplan",
-     "confidence": "mittel",
-     "evidence": "Bebauungsplan Nr. 7520-2",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000338",
-     "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Flodelingsweg",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070917,
-     "lat": 50.720693,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Flodelingsweg",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000338",
-     "source": "osm"
-    }
-   ],
-   "plans": [
-    {
-     "nr": "7520-2",
-     "evidence": "Bebauungsplan Nr. 7520-2",
-     "area": true
-    }
-   ],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000338",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000338",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-04-26",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000338",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Ausschuss für Wohnen, Planung und Bauen",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-07",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "1.6.1",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ]
-  },
-  {
    "reference": "210274-01 ST",
    "name": "Bürgerantrag: Gerhard-Domagk-Straße + Linienführung 631/632",
    "paper_type": "Stellungnahme der Verwaltung",
@@ -69374,44 +69160,20 @@
      "lat": 50.735432,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplan Nr. 6322-3",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10601",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072251,
-     "lat": 50.735946,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10601",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Nordstadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.073776,
-     "lat": 50.739016,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10601",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-3",
      "evidence": "Bebauungsplan Nr. 6322-3",
+     "match": "eindeutig",
+     "names": [
+      "6322-3"
+     ],
      "area": true
     }
    ],
@@ -69632,163 +69394,6 @@
      "date_source": "oparl-lite",
      "number": "6.12",
      "result": "abgelehnt",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ]
-  },
-  {
-   "reference": "210525",
-   "name": "BBB-Anfrage: Sachstand Bebauungsplanverfahren 'An den Lappenstrünken', Flodelingsweg für den Bereich des Bebauungsplangebietes Nr. 6320-18 (ehemals Bebauungsplan Nr. 7520-2)",
-   "paper_type": "Große Anfrage",
-   "date": "2021-04-06",
-   "amt": "01-2 Ratsbüro",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000148",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2006494&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "01-2 Ratsbüro",
-     "name": "01-2 Ratsbüro"
-    },
-    {
-     "kind": "fachlich",
-     "method": "stellungnahme",
-     "evidence": "210525-01 ST",
-     "derived": 1,
-     "label": "61 Stadtplanungsamt",
-     "name": "61-4 Planungsrecht"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "BBB",
-     "actor_type": "Fraktion/Gruppe",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/143",
-     "method": "title",
-     "evidence": "BBB-Anfrage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/499",
-     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
-     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
-     "start_date": "2021-10-07T16:02:00.000Z",
-     "cancelled": 0,
-     "number": "1.6",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [
-    {
-     "reference": "210525-01 ST",
-     "paper_type": "Stellungnahme der Verwaltung",
-     "name": "BBB-Anfrage: Sachstand Bebauungsplanverfahren 'An den Lappenstrünken', Flodelingsweg für den Bereich des Bebauungsplangebietes Nr. 6320-18 (ehemals Bebauungsplan Nr. 7520-2)",
-     "date": "2021-04-26"
-    }
-   ],
-   "locations": [
-    {
-     "level": "bebauungsplan",
-     "name": "Bebauungsplan 7520-2",
-     "ortsteil": "Lengsdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.073211,
-     "lat": 50.7144,
-     "stage": "B",
-     "method": "bebauungsplan",
-     "confidence": "mittel",
-     "evidence": "Bebauungsplan Nr. 7520-2",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000148",
-     "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Flodelingsweg",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070917,
-     "lat": 50.720693,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Flodelingsweg",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000148",
-     "source": "osm"
-    }
-   ],
-   "plans": [
-    {
-     "nr": "7520-2",
-     "evidence": "Bebauungsplan Nr. 7520-2",
-     "area": true
-    }
-   ],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000148",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "BBB"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Große Anfrage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000148",
-     "actors": [
-      "BBB"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-04-06",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000148",
-     "note": "datum"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "date": "2021-04-26",
-     "source": "oparl-bonn",
-     "reference": "210525-01 ST",
-     "title": "BBB-Anfrage: Sachstand Bebauungsplanverfahren 'An den Lappenstrünken', Flodelingsweg für den Bereich des Bebauungsplangebietes Nr. 6320-18 (ehemals Bebauungsplan Nr. 7520-2)"
-    },
-    {
-     "typ": "beratung",
-     "label": "Ausschuss für Wohnen, Planung und Bauen",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-07",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "1.6",
-     "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite"
     }
@@ -70584,44 +70189,20 @@
      "lat": 50.735432,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplan Nr. 6322-3",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10123",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072251,
-     "lat": 50.735946,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10123",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Nordstadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.073776,
-     "lat": 50.739016,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10123",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-3",
      "evidence": "Bebauungsplan Nr. 6322-3",
+     "match": "eindeutig",
+     "names": [
+      "6322-3"
+     ],
      "area": true
     }
    ],
@@ -78358,44 +77939,20 @@
      "lat": 50.735432,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplan Nr. 6322-3",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7043",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072251,
-     "lat": 50.735946,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7043",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Nordstadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.073776,
-     "lat": 50.739016,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7043",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-3",
      "evidence": "Bebauungsplan Nr. 6322-3",
+     "match": "eindeutig",
+     "names": [
+      "6322-3"
+     ],
      "area": true
     }
    ],
@@ -81342,30 +80899,20 @@
      "lat": 50.734904,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-2",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5451",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "ortsteil",
-     "name": "Endenich",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070351,
-     "lat": 50.725238,
-     "stage": "B",
-     "method": "ortsteil_name",
-     "confidence": "mittel",
-     "evidence": "Endenich",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5451",
-     "source": "geo-bonn"
     }
    ],
    "plans": [
     {
      "nr": "6322-2",
      "evidence": "Bebauungsplanes Nr. 6322-2",
+     "match": "eindeutig",
+     "names": [
+      "6322-2 Teil A"
+     ],
      "area": true
     }
    ],
@@ -81856,44 +81403,20 @@
      "lat": 50.734904,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
-     "evidence": "Bebauungsplan Nr. 6322-2",
+     "confidence": "hoch",
+     "evidence": "Satzungsbeschluss Bebauungsplan Nr. 6322-2",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5075",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Am Propsthof",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072251,
-     "lat": 50.735946,
-     "stage": "B",
-     "method": "strasse+ortsteil",
-     "confidence": "mittel",
-     "evidence": "Am Propsthof",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5075",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Siemensstraße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.06871,
-     "lat": 50.737339,
-     "stage": "B",
-     "method": "strasse+ortsteil",
-     "confidence": "mittel",
-     "evidence": "Siemensstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5075",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-2",
-     "evidence": "Bebauungsplan Nr. 6322-2",
+     "evidence": "Satzungsbeschluss Bebauungsplan Nr. 6322-2",
+     "match": "eindeutig",
+     "names": [
+      "6322-2 Teil A"
+     ],
      "area": true
     }
    ],
@@ -82056,30 +81579,20 @@
      "lat": 50.734904,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-2",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5293",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "ortsteil",
-     "name": "Endenich",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070351,
-     "lat": 50.725238,
-     "stage": "B",
-     "method": "ortsteil_name",
-     "confidence": "mittel",
-     "evidence": "Endenich",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/5293",
-     "source": "geo-bonn"
     }
    ],
    "plans": [
     {
      "nr": "6322-2",
      "evidence": "Bebauungsplanes Nr. 6322-2",
+     "match": "eindeutig",
+     "names": [
+      "6322-2 Teil A"
+     ],
      "area": true
     }
    ],
@@ -83333,30 +82846,20 @@
      "lat": 50.734904,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-2",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4022",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "ortsteil",
-     "name": "Endenich",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070351,
-     "lat": 50.725238,
-     "stage": "B",
-     "method": "ortsteil_name",
-     "confidence": "mittel",
-     "evidence": "Endenich",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4022",
-     "source": "geo-bonn"
     }
    ],
    "plans": [
     {
      "nr": "6322-2",
      "evidence": "Bebauungsplanes Nr. 6322-2",
+     "match": "eindeutig",
+     "names": [
+      "6322-2 Teil A"
+     ],
      "area": true
     }
    ],
@@ -84672,30 +84175,20 @@
      "lat": 50.734904,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-2",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4450",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "ortsteil",
-     "name": "Endenich",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070351,
-     "lat": 50.725238,
-     "stage": "B",
-     "method": "ortsteil_name",
-     "confidence": "mittel",
-     "evidence": "Endenich",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4450",
-     "source": "geo-bonn"
     }
    ],
    "plans": [
     {
      "nr": "6322-2",
      "evidence": "Bebauungsplanes Nr. 6322-2",
+     "match": "eindeutig",
+     "names": [
+      "6322-2 Teil A"
+     ],
      "area": true
     }
    ],
@@ -88963,30 +88456,20 @@
      "lat": 50.735628,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-1",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2826",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Václav-Havel-Platz",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.067574,
-     "lat": 50.736429,
-     "stage": "B",
-     "method": "strasse+ortsteil",
-     "confidence": "mittel",
-     "evidence": "Václav-Havel-Platz",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2826",
-     "source": "osm"
     }
    ],
    "plans": [
     {
      "nr": "6322-1",
      "evidence": "Bebauungsplanes Nr. 6322-1",
+     "match": "eindeutig",
+     "names": [
+      "6322-1"
+     ],
      "area": true
     }
    ],
@@ -89169,30 +88652,20 @@
      "lat": 50.734904,
      "stage": "B",
      "method": "bebauungsplan",
-     "confidence": "mittel",
+     "confidence": "hoch",
      "evidence": "Bebauungsplanes Nr. 6322-2",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/618",
      "source": "bplan-bonn"
-    },
-    {
-     "level": "ortsteil",
-     "name": "Endenich",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070351,
-     "lat": 50.725238,
-     "stage": "B",
-     "method": "ortsteil_name",
-     "confidence": "mittel",
-     "evidence": "Endenich",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/618",
-     "source": "geo-bonn"
     }
    ],
    "plans": [
     {
      "nr": "6322-2",
      "evidence": "Bebauungsplanes Nr. 6322-2",
+     "match": "eindeutig",
+     "names": [
+      "6322-2 Teil A"
+     ],
      "area": true
     }
    ],

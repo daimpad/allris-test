@@ -1285,8 +1285,6 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 210742	datum_vorlage	2021-04-28	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 210742	folgevorlage: 210742-01 ST	2021-05-11	oparl-bonn	belegt	Stellungnahme der Verwaltung
 210742	beratung: Bezirksvertretung Bonn (Entscheidung)	2021-05-18	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
-210525-01 ST	datum_vorlage	2021-04-26	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-210525-01 ST	beratung: Ausschuss für Wohnen, Planung und Bauen (Kenntnisnahme)	2021-10-07	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 210274-01 ST	datum_vorlage	2021-04-13	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 210274-01 ST	beratung: Ausschuss für Beteiligung der Bürgerinnen und Bürger (Kenntnisnahme)	2021-06-02	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201308-02 ST	datum_vorlage	2021-04-09	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
@@ -1296,9 +1294,6 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 210558	datum_vorlage	2021-04-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 210558	folgevorlage: 210558-01 ST	2021-07-13	oparl-bonn	belegt	Stellungnahme der Verwaltung
 210558	beratung: Bezirksvertretung Bonn (Entscheidung)	2021-08-24	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
-210525	datum_vorlage	2021-04-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-210525	folgevorlage: 210525-01 ST	2021-04-26	oparl-bonn	belegt	Stellungnahme der Verwaltung
-210525	beratung: Ausschuss für Wohnen, Planung und Bauen (Kenntnisnahme)	2021-10-07	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 210501	datum_vorlage	2021-03-31	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 210501	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 210501	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
