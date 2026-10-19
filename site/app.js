@@ -808,7 +808,7 @@
   const yes = (v) => (v ? "erfüllt" : "nicht erfüllt");
   function candHtml(c, withSite) {
     return `<li>${withSite ? "" : `<button type="button" class="link-btn" data-open-ref="${esc(c.drucksache)}">${esc(c.drucksache)}</button> – ${esc(c.titel)}<br>`}
-      <span class="meta">Entschieden ${fmtDate(c.entschieden_am)} · Kriterien: räumlich ${yes(c.kriterien.raeumlich)} (${esc(c.abstand_m)} m, höchstens 150 m) · zeitlich ${yes(c.kriterien.zeitlich)} (Baubeginn nach der Entscheidung) · gleiche Straße ${yes(c.kriterien.strasse)} · Tiefbau oder Verkehr ${yes(c.kriterien.thema)} · Bau-Stichwort passend zur Maßnahme ${yes(c.kriterien.stichwort)}</span></li>`;
+      <span class="meta">Entschieden ${fmtDate(c.entschieden_am)} · Kriterien: räumlich ${yes(c.kriterien.raeumlich)} (${esc(c.abstand_m)} m, höchstens 150 m) · zeitlich ${yes(c.kriterien.zeitlich)} (Baubeginn nach der Entscheidung) · gleiche Straße ${yes(c.kriterien.strasse)} · Tiefbau oder Verkehr ${yes(c.kriterien.thema)} · Bau-Stichwort passend zur Maßnahme ${yes(c.kriterien.stichwort)}${c.kriterien.baubeschluss ? " · Baubeschluss (Beschlussvorlage) erfüllt" : ""}</span></li>`;
   }
   const UMSETZUNG_HINT = "Indiz, kein Beleg: Ort, Zeit und Thema passen zusammen. Vorläufig – die Prüfung einer Stichprobe von Hand steht aus. Termine der Baustellen sind laut Quelle unverbindlich.";
   function showSite(id) {
@@ -840,7 +840,7 @@
       ${changes ? `<h4>Geänderte Termine</h4><ul class="related">${changes}</ul>` : ""}
       <h4>Mögliche Umsetzung</h4>
       ${b.kandidaten.length ? `<p class="hint"><span class="derived">abgeleitet · vorläufig</span> ${esc(UMSETZUNG_HINT)}</p><ul class="related plan-papers">${b.kandidaten.map((c) => candHtml(c)).join("")}</ul>`
-        : `<p>${b.fremd ? "Für Baustellen anderer Träger werden keine Beschlüsse gesucht." : "Kein Beschluss erfüllt alle Kriterien (räumlich, zeitlich, gleiche Straße, Tiefbau oder Verkehr, Bau-Stichwort)."}</p>`}
+        : `<p>${b.fremd ? "Für Baustellen anderer Träger werden keine Beschlüsse gesucht." : "Kein Beschluss erfüllt alle Kriterien (räumlich, zeitlich, gleiche Straße, Tiefbau oder Verkehr, Bau-Stichwort, Baubeschluss)."}</p>`}
       <details class="acc"><summary>Was diese Angaben nicht zeigen</summary><ul>${bau.meta.hinweise.map((h) => `<li>${esc(h)}</li>`).join("")}</ul></details>
       <details class="acc"><summary>Quellen</summary><ul>
         <li>Baustellen: Stadt Bonn, ${bau.meta.quelle.map((u) => link(u, esc(u.replace("https://", "")))).join(", ")} – ${esc(bau.meta.lizenz)}</li>

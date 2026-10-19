@@ -71,7 +71,7 @@ Jeder Ortsbezug trägt `stage`, `method`, `confidence`, `evidence` und `source_o
 ## Baustellen
 
 - `baustellen.yml` ruft täglich um 05:23 UTC die Feeds 14403, 14698 und 14755 ab (bis zu 10 Versuche, Prüfung gegen `numberMatched`) und schreibt in den Branch `archiv`: `baustellen.json` (Zustand je Baustelle), `protokoll.tsv` (neu, geändert, entfallen), Momentaufnahmen bei Änderungen, `STAND.json`. Eine Baustelle gilt nur bei vollständigem Abruf aller Feeds als entfallen.
-- `kandidaten`: Kriterien räumlich (≤ 150 m), zeitlich, gleiche Straße, Amt 66/61-3 oder Thema Verkehr, Bau-Stichwort passend zur Maßnahme; Konfidenz hoch, mittel, niedrig, „fremd“ für andere Träger. Audit `data/export/baustellen_kandidaten.tsv`, Stichprobe `data/export/baustellen/stichprobe_kandidaten.tsv` (wird nie überschrieben).
+- `kandidaten`: Kriterien räumlich (≤ 150 m), zeitlich, gleiche Straße, Amt 66/61-3 oder Thema Verkehr, Bau-Stichwort passend zur Maßnahme; „hoch“ nur für Baubeschlüsse (Beschlussvorlage, Dringlichkeits- oder Eilentscheidung), sonst höchstens „mittel“; Konfidenz hoch, mittel, niedrig, „fremd“ für andere Träger. Audit `data/export/baustellen_kandidaten.tsv`, Stichprobe `data/export/baustellen/stichprobe_kandidaten.tsv` (wird nie überschrieben).
 - `baustellen-seite`: `baustellen.json` für die Seite aus dem Archiv, sonst aus den Feeds; Adressen ohne Hausnummer; nur Kandidaten mit Konfidenz hoch.
 
 ## Seite

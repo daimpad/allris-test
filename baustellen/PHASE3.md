@@ -11,6 +11,7 @@ Stand: 19.10.2026. Ergebnis ist ein **Kandidat** („möglicher Zusammenhang“)
 | Straße | Straßenname der Baustelle (Bezeichnung, Adresse) gleich einem Straßennamen der Vorlage | Nähe allein trifft oft die Querstraße |
 | thematisch | Amt 66 (Tiefbau) oder 61-3 (Stadtverkehr) oder Thema Verkehr | Zuständigkeit für Straßenbau |
 | Stichwort | Bau-Stichwort im Titel passend zur Maßnahme (Kanalbau: Kanal, Entwässerung …; sonst Ausbau, Umgestaltung, Erneuerung …) | trennt Baubeschlüsse von verkehrsrechtlichen Anordnungen |
+| Baubeschluss | „hoch“ nur für Beschlussvorlagen, Dringlichkeits- und Eilentscheidungen (ergänzt 19.10.2026 nach Prüfung der Stichprobe) | Bürgeranträge und Anträge mit Planungsbezug sind kein Baubeschluss |
 
 Konfidenz: **hoch** = alle Kriterien; **mittel** = räumlich, zeitlich, Straße und thematisch oder Stichwort; **niedrig** = übrige. Baustellen fremder Träger (SWB Bonn-Netz, Straßen NRW, Deutsche Bahn) stehen getrennt als **fremd**.
 
@@ -37,6 +38,12 @@ KI-Vorprüfung (`vorpruefung_kandidaten.tsv`, gekennzeichnet, ersetzt nicht die 
 | mittel (21) | 2 | 6 | 13 |
 
 Befund: „mittel“ besteht überwiegend aus Bürgeranträgen zu Tempo 30, Ampeln oder Parkregeln in derselben Straße. Das Thema Verkehr trennt dort nicht, das Bau-Stichwort schon.
+
+## Prüfung von Hand (begonnen 19.10.2026)
+
+| Kandidaten | Ergebnis | Folge |
+|---|---|---|
+| 1–6 (hoch) | plausibel; 212110 und 221785 sind Bürgeranträge mit Planungsbezug | „hoch“ nur noch für Baubeschlüsse (Kriterium Baubeschluss); Kandidaten mit „hoch“ in ganz Bonn von 11 auf 7 |
 
 ## Empfehlung
 

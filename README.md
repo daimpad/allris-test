@@ -43,13 +43,14 @@ Der **Stand** einer Vorlage ist *entschieden*, *beraten, ohne Entscheidung*, *in
 
 ## Baustellen und Beschlüsse
 
-Ob ein Beschluss umgesetzt ist, steht in keiner öffentlichen Schnittstelle. Eine Baustelle kann ein **Indiz** sein, aber kein Beleg. Die Karte zeigt bei einer Vorlage die Station **„Mögliche Umsetzung“** nur, wenn alle fünf Kriterien zutreffen:
+Ob ein Beschluss umgesetzt ist, steht in keiner öffentlichen Schnittstelle. Eine Baustelle kann ein **Indiz** sein, aber kein Beleg. Die Karte zeigt bei einer Vorlage die Station **„Mögliche Umsetzung“** nur, wenn alle sechs Kriterien zutreffen:
 
 - die Baustelle liegt höchstens 150 m vom Ort der Vorlage entfernt;
 - sie beginnt nach der Entscheidung;
 - beide betreffen dieselbe Straße;
 - die Vorlage gehört zu Tiefbau oder Verkehr;
-- der Titel nennt eine passende Baumaßnahme.
+- der Titel nennt eine passende Baumaßnahme;
+- die Vorlage ist ein Baubeschluss, also eine Beschlussvorlage der Verwaltung; ein Bürgerantrag oder Antrag, der eine Planung anstößt, zählt nicht.
 
 Diese Anzeige ist vorläufig, bis eine Stichprobe von Hand geprüft ist. Der Vollzug bleibt daneben „unklar“. Baustellen von Versorgern, Straßen NRW oder der Bahn setzen in der Regel keinen Ratsbeschluss um und werden getrennt gezeigt. Die Historie der Baustellen beginnt mit dem Archiv am 19.10.2026.
 
