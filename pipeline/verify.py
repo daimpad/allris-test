@@ -4,6 +4,7 @@ import json
 import random
 import sqlite3
 import zipfile
+from pathlib import Path
 
 from . import config
 from .export import _meetings, _paper_detail, _write_tsv
@@ -121,23 +122,59 @@ Inhalt
 - strassen_bonn.json: Straßenverzeichnis (OSM) mit Ortsteilen je Straße
 - LICENSE-DATA.md: Quellen und Lizenzen je Datei
 
+Bebauungspläne
+- geo/bebauungsplaene_bonn.geojson: Geltungsbereiche der rechtskräftigen Pläne (Stadt Bonn, CC0)
+- geo/bebauungsplaene_protokoll.tsv: Änderungen am Planbestand zwischen zwei Abrufen
+- bonn/plaene.json: Planregister – je Plannummer aus Vorlagentiteln die Pläne (belegt), Ortsteile und
+  die Vorlagen chronologisch mit den im Titel genannten Verfahrensschritten nach BauGB (abgeleitet)
+- audit_bebauungsplaene.tsv, endenich/audit_bebauungsplaene.tsv: Zuordnung Vorlage ↔ Plan (Methode
+  B3, Treffer, Konfidenz, Fundstelle, zurückgestellte Straßen-Ortsbezüge)
+
+Baustellen
+- bonn/baustellen.json: Baustellen der Stadt für die Seite (Adresse ohne Hausnummer, Termine
+  unverbindlich) mit möglichen Umsetzungen nur der Konfidenz „hoch“ (vorläufig)
+- baustellen_kandidaten.tsv: Audit aller Kandidaten Beschluss ↔ Baustelle mit den Kriterien
+  räumlich (≤ 150 m), zeitlich, gleiche Straße, Amt/Thema, Bau-Stichwort, Begründung und Prüfvermerk;
+  Konfidenz hoch, mittel, niedrig, „fremd“ für andere Träger
+- baustellen/stichprobe_kandidaten.tsv: Stichprobe (30) zur Prüfung von Hand;
+  baustellen/vorpruefung_kandidaten.tsv: Vorprüfung durch KI, gekennzeichnet, ersetzt sie nicht
+- baustellen_archiv/protokoll.tsv, baustellen_archiv/STAND.json: Ereignisse des täglichen Archivs
+  (neu, geändert, entfallen) und letzter Abruf je Feed, falls das Archiv vorlag
+- berichte/: Berichte der Phasen 0 bis 5 (Bebauungspläne und Baustellen)
+
+Grenzen: Eine Baustelle ist kein Beleg für die Umsetzung eines Beschlusses. Termine sind laut Quelle
+unverbindlich; die Historie der Baustellen beginnt mit dem Archiv (19.10.2026). Pläne im Verfahren
+sind im Datensatz der Stadt nicht enthalten.
+
 Abgeleitete Angaben (Einreichende, fachliche Zuständigkeit, Ortsbezüge der Stufe B und
 „vererbt“) sind in den Feldern method, confidence und evidence gekennzeichnet.
 Quellcode und Dokumentation: https://github.com/daimpad/allris-test
 """
 
 
-def package():
+def package(target=None, archive=None):
     """Zip-Paket der Ergebnisse unter data/export/allris-bonn-export.zip."""
-    target = config.EXPORT / "allris-bonn-export.zip"
+    target = Path(target or config.EXPORT / "allris-bonn-export.zip")
+    archive = Path(archive or config.BAUSTELLEN_ARCHIV)
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("allris-bonn/LIESMICH.txt", PACKAGE_README)
         z.write(config.ROOT / "data" / "LICENSE-DATA.md", "allris-bonn/LICENSE-DATA.md")
         z.write(config.STRASSEN, "allris-bonn/strassen_bonn.json")
         for path in sorted(config.EXPORT.rglob("*")):
-            if path.is_file() and path != target and not {"feeds", "chat"} & set(path.parts):
+            if path.is_file() and path.suffix != ".zip" and not {"feeds", "chat"} & set(path.parts):
                 z.write(path, "allris-bonn/" + str(path.relative_to(config.EXPORT)))
         for path in sorted((config.ROOT / "prozess").glob("*")):
             if path.suffix in (".md", ".tsv"):
                 z.write(path, "allris-bonn/prozess/" + path.name)
+        # Bebauungspläne und Baustellen: Flächen, Protokolle, Berichte
+        for name in ("bebauungsplaene_bonn.geojson", "bebauungsplaene_protokoll.tsv"):
+            if (config.GEO / name).exists():
+                z.write(config.GEO / name, "allris-bonn/geo/" + name)
+        for name in ("protokoll.tsv", "STAND.json"):
+            if (archive / name).exists():
+                z.write(archive / name, "allris-bonn/baustellen_archiv/" + name)
+        reports = [config.ROOT / "baustellen" / "phase0" / "BERICHT.md", *sorted((config.ROOT / "baustellen").glob("PHASE*.md"))]
+        for path in reports:
+            if path.exists():
+                z.write(path, "allris-bonn/berichte/" + ("PHASE0.md" if path.name == "BERICHT.md" else path.name))
     print(f"Datenpaket → {target} ({target.stat().st_size // 1024} KB)")

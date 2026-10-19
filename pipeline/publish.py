@@ -237,6 +237,12 @@ def write_dcat(path, data_start, modified):
                  "Häufigste Abfolgen von Beratungen und Ergebnissen je Vorlagenart."),
             dist("Sitzungskalender (iCalendar)", "bonn/termine.ics", "text/calendar", "cc0",
                  "Sitzungen von Rat, Ausschüssen, Beiräten und Bezirksvertretungen mit Links zur Tagesordnung."),
+            dist("Planregister Bebauungspläne (JSON)", "bonn/plaene.json", "application/json", "cc0",
+                 "Je Plannummer aus Vorlagentiteln: rechtskräftige Pläne mit Inkrafttreten (Stadt Bonn), Ortsteile und "
+                 "Vorlagen mit den im Titel genannten Verfahrensschritten nach BauGB (abgeleitet)."),
+            dist("Baustellen und mögliche Umsetzungen (JSON)", "bonn/baustellen.json", "application/json", "cc0",
+                 "Gemeldete Baustellen der Stadt Bonn (Termine unverbindlich, Archiv ab 19.10.2026) mit möglichen "
+                 "Umsetzungen von Beschlüssen der Konfidenz hoch – ein Indiz, kein Beleg."),
         ],
     }
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
