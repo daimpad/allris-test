@@ -291,7 +291,7 @@
     const oparl = meta.sources.find((s) => s.name === "oparl-bonn") || {};
     dataStand = (oparl.retrieved_at || meta.generated_at || new Date().toISOString()).slice(0, 10);
     papers = data.papers;
-    document.title = `RIS-Karte Bonn – ${area.kind === "ohne" ? "Vorlagen ohne Ortsbezug " + area.key : area.name}`;
+    document.title = `RIS-Karte Bonn – Ratsvorlagen ${area.kind === "ohne" ? "ohne Ortsbezug " + area.key : "in " + area.name}`;
     $("#f-conf").hidden = area.kind === "ohne";
     fillFilters();
     drawOutline();

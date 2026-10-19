@@ -88,6 +88,9 @@ jobs:
           cp data/LICENSE-DATA.md _site/data/
           cp data/geo/*.geojson _site/data/geo/
 
+      - name: Auffindbarkeit (robots.txt, sitemap.xml, Adressen für SITE_URL)
+        run: python -m pipeline seo
+
       # Ohne Datenpaket (Zip, täglich vollständig neu), damit die Historie nur um die Änderungen
       # wächst; auf dem eigenen Server verweist der Link auf das Paket bei GitHub Pages.
       - name: Fertige Seite in den Branch deploy schreiben

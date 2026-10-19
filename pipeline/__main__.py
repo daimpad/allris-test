@@ -1,7 +1,7 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-streets|gazetteer|build|export|check|verify|package|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-streets|gazetteer|build|export|check|verify|package|seo|all}"""
 import sys
 
-from . import build, check, export, fetch, geocode, verify
+from . import build, check, export, fetch, geocode, seo, verify
 
 STEPS = {
     "fetch": fetch.fetch_all,
@@ -17,6 +17,7 @@ STEPS = {
     "check": check.check,
     "verify": verify.verify,
     "package": verify.package,
+    "seo": seo.write,  # nach dem Zusammenstellen der Seite in _site
 }
 
 

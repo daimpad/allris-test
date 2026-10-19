@@ -7,8 +7,43 @@
        Verbindungen nur zu den Daten der Seite, den unterstützten Anbietern des Ratsassistenten und lokalen Modellen.
        Inline-Stile bleiben erlaubt (Leaflet, Balken der Auswertung). -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://cdnjs.cloudflare.com; connect-src 'self' https://api.anthropic.com https://api.mistral.ai https://openrouter.ai http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'">
-  <title>RIS-Karte Bonn</title>
-  <meta name="description" content="Vorlagen aus dem Bonner Ratsinformationssystem räumlich, zeitlich und nach Akteuren erschlossen – mit Prozessschritten, Evidenzstatus und Quellenangabe.">
+  <title>RIS-Karte Bonn – Ratsinformationen der Stadt Bonn auf Karte und Zeitleiste</title>
+  <meta name="description" content="Was berät der Bonner Stadtrat? Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste – mit Verfahrensstand, Gremien, Ämtern und Quellen.">
+  <meta name="author" content="Damian Paderta">
+  <meta name="robots" content="index, follow">
+  <!-- Adressen: pipeline/seo.py ersetzt https://daimpad.github.io/allris-test/ beim Veröffentlichen durch SITE_URL -->
+  <link rel="canonical" href="https://daimpad.github.io/allris-test/">
+  <meta name="theme-color" content="#7c3aed">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RIS-Karte Bonn">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="RIS-Karte Bonn – Was berät der Bonner Stadtrat?">
+  <meta property="og:description" content="Was berät der Bonner Stadtrat? Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste – mit Verfahrensstand, Gremien, Ämtern und Quellen.">
+  <meta property="og:url" content="https://daimpad.github.io/allris-test/">
+  <meta property="og:image" content="https://daimpad.github.io/allris-test/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="RIS-Karte Bonn: Karte von Bonn-Zentrum mit gebündelten Ratsvorlagen">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- strukturierte Daten (nur Daten, wird nicht ausgeführt; mit der CSP vereinbar) -->
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@graph": [
+    {"@type": "WebSite", "@id": "https://daimpad.github.io/allris-test/#website", "url": "https://daimpad.github.io/allris-test/", "name": "RIS-Karte Bonn", "inLanguage": "de",
+     "description": "Was berät der Bonner Stadtrat? Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste – mit Verfahrensstand, Gremien, Ämtern und Quellen."},
+    {"@type": "WebApplication", "@id": "https://daimpad.github.io/allris-test/#app", "url": "https://daimpad.github.io/allris-test/", "name": "RIS-Karte Bonn", "inLanguage": "de",
+     "applicationCategory": "ReferenceApplication", "operatingSystem": "Web-Browser", "isAccessibleForFree": true,
+     "image": "https://daimpad.github.io/allris-test/og-image.jpg", "license": "https://opensource.org/licenses/MIT",
+     "creator": {"@type": "Person", "name": "Damian Paderta"},
+     "spatialCoverage": {"@type": "City", "name": "Bonn"},
+     "isBasedOn": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
+     "codeRepository": "https://github.com/daimpad/allris-test"}
+  ]}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
@@ -18,6 +53,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="list-closed detail-open">
+  <noscript><div class="noscript glass"><p><strong>RIS-Karte Bonn</strong> zeigt Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste. Für die Karte wird JavaScript benötigt.</p>
+    <p>Die Daten gibt es auch ohne Karte: <a href="data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="data/export/bonn/vorlagen.geojson">GeoJSON</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a> · <a href="https://datenatlas.de/impressum">Impressum</a></p></div></noscript>
   <!-- Symbole (eigene Strichzeichnungen, 24er-Raster) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
@@ -170,7 +207,7 @@
         <div>
           <p>OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Ortsteil- und Bezirksflächen sowie Geltungsbereiche der Bebauungspläne der Stadt Bonn (CC0 1.0) · Straßen und Kartenhintergrund © OpenStreetMap-Mitwirkende (ODbL 1.0). Abgeleitete Angaben sind gekennzeichnet.</p>
           <p id="stand"></p>
-          <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/bonn/termine.ics">Sitzungskalender (iCalendar)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a></p>
+          <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/bonn/termine.ics">Sitzungskalender (iCalendar)</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a> · <a href="https://datenatlas.de/impressum" target="_blank" rel="noopener">Impressum</a> · <a href="mailto:contact@nozilla.de">Kontakt</a></p>
         </div>
       </details>
     </section>
@@ -389,7 +426,11 @@
       <p>Sitzungen des Rates und der Bezirksvertretungen sind in der Regel öffentlich. Mit einem Bürgerantrag (§ 24 Gemeindeordnung NRW) können Sie Anregungen und Beschwerden selbst einbringen. Wie das geht, erklärt die <a href="https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php" target="_blank" rel="noopener">Seite der Stadt Bonn zum Bürgerantrag</a>.</p>
 
       <h3>Wer steckt dahinter?</h3>
-      <p>Ein offenes Projekt, entstanden für den Hackathon „Hack den Stadtrat“. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
+      <p>Die RIS-Karte hat Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“ erstellt. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
+
+      <h3 id="about-impressum" tabindex="-1">Kontakt und Impressum</h3>
+      <p>Kontakt: <a href="mailto:contact@nozilla.de">contact@nozilla.de</a><br>
+        <a href="https://datenatlas.de/impressum" target="_blank" rel="noopener">Impressum<span class="visually-hidden"> (datenatlas.de, neuer Tab)</span></a></p>
     </div>
   </dialog>
 

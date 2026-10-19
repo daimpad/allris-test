@@ -20,7 +20,7 @@ Projektauftrag, Entscheidungen und offene Punkte stehen in `CLAUDE.md` (Abschnit
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m pipeline all            # fetch → build → export → check → verify → package
-.venv/bin/python -m pipeline <schritt>      # fetch-papers | fetch-organizations | fetch-meetings | fetch-plans | fetch-lite | fetch-streets | gazetteer | build | export | check | verify | package
+.venv/bin/python -m pipeline <schritt>      # fetch-papers | fetch-organizations | fetch-meetings | fetch-plans | fetch-lite | fetch-streets | gazetteer | build | export | check | verify | package | seo
 ```
 
 | Modul | Aufgabe |
@@ -64,5 +64,5 @@ python3 -m http.server -d _site 8765
 
 - Arbeitsbranch `claude/new-session-r8w4my`; nach jedem Merge von `main` neu ansetzen; jede Änderung als Pull Request.
 - `.github/workflows/pages.yml`: Abruf (mit Rückfall auf den letzten Stand) → Build → Export → Prüfung → Paket → GitHub Pages und Branch `deploy` (fertige Seite plus `.htaccess`, ohne Zip).
-- `SITE_URL` (Umgebungsvariable) bestimmt absolute Links in Feeds, Kalender und DCAT.
+- `SITE_URL` (Umgebungsvariable) bestimmt absolute Links in Feeds, Kalender und DCAT sowie canonical, Open Graph, strukturierte Daten, `robots.txt` und `sitemap.xml` (`python -m pipeline seo` nach dem Zusammenstellen von `_site`).
 - Nach dem Merge die veröffentlichte Seite im Browser prüfen.

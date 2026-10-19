@@ -111,11 +111,20 @@ Der Workflow schreibt die fertige Seite nach jedem Lauf zusätzlich in den Branc
 1. Subdomain anlegen und ein SSL-Zertifikat (Let's Encrypt) ausstellen.
 2. „Git“ bei der Subdomain: entferntes Repository `https://github.com/daimpad/allris-test.git`, Branch `deploy`, automatische Bereitstellung in das Dokumentstammverzeichnis.
 3. Die von Plesk angezeigte Webhook-URL in GitHub unter Settings → Webhooks eintragen (Ereignis: push). Dann holt der Server jede neue Fassung selbst.
+4. Im Workflow `SITE_URL` auf die neue Adresse setzen; damit folgen Feeds, Kalender, DCAT, canonical, Open Graph, `robots.txt` und `sitemap.xml`.
+
+## Auffindbarkeit
+
+Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site.webmanifest`), Beschreibung, canonical, Open Graph und Twitter-Karte mit Vorschaubild (`og-image.jpg`), strukturierte Daten (schema.org `WebSite`, `WebApplication`), `noscript`-Hinweis mit Links zu den Daten und eine Fehlerseite (`404.html`). `python -m pipeline seo` schreibt `robots.txt` und `sitemap.xml` in die zusammengestellte Seite und setzt `SITE_URL` in die absoluten Adressen ein. Bei GitHub Pages liegt die Seite unter einem Unterpfad; dort werten Suchmaschinen `robots.txt` nicht aus, die Sitemap lässt sich in der Search Console einreichen.
+
+## Impressum und Kontakt
+
+Erstellt von Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“. Impressum: https://datenatlas.de/impressum
 
 ## Aufbau des Repositorys
 
 - `pipeline/` – Abruf, Aufbereitung, Geokodierung (`geocode.py`), Akteure (`actors.py`), Prozessschritte (`process.py`), Export, Prüfung
-- `site/` – statische Seite (Leaflet, OSM-Kacheln, Zeitleiste in `timeline.js`), WCAG 2.1 AA geprüft mit axe-core
+- `site/` – statische Seite (Leaflet, OSM-Kacheln, Zeitleiste in `timeline.js`, Tour in `tour.js`), WCAG 2.1 AA geprüft mit axe-core
 - `prozess/` – Exploration der Prozessebene (Bericht, Stichprobe Endenich)
 - `data/` – Gremien, Ämter, Flächen, Straßenverzeichnis, Pilot-Export, Lizenzen
 - `phase0/` – Explorationsbericht und Audit der Phase 0
