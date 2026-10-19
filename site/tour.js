@@ -19,9 +19,9 @@
       title: "Gebiet wählen",
       text: "Ein Ortsteil, ein ganzer Stadtbezirk oder Vorlagen ohne Ortsbezug je Jahr. Voreingestellt ist Bonn-Zentrum. Karte, Liste und Zeitleiste zeigen jeweils das gewählte Gebiet." },
     { before: (ui) => { if (MOBILE.matches) ui.panel("panel-detail", false); }, rect: (ui) => ui.areaRect(), fallback: "#map",
-      beacons: [".marker-cluster, path.leaflet-interactive", ".map-color", ".map-legend"],
+      beacons: [".marker-cluster, path.leaflet-interactive", ".map-color", ".map-plans", ".map-legend"],
       title: "Die Karte",
-      text: "Jeder Punkt ist eine Vorlage mit Ortsbezug; Zahlen fassen nahe Punkte zusammen, ein Klick zoomt hinein. Die Farbe zeigt, wie sicher der Ort ist: grün gesichert (Koordinate oder Bebauungsplan der Stadt), braun erschlossen (Name im Titel), violett unsicher. „Farbe nach Thema“ färbt die Punkte stattdessen nach Thema; die Legende erklärt die Farben. „Farbige Karte“ schaltet den Hintergrund um." },
+      text: "Jeder Punkt ist eine Vorlage mit Ortsbezug; Zahlen fassen nahe Punkte zusammen, ein Klick zoomt hinein. Die Farbe zeigt, wie sicher der Ort ist: grün gesichert (Koordinate oder Bebauungsplan der Stadt), braun erschlossen (Name im Titel), violett unsicher. „Farbe nach Thema“ färbt die Punkte stattdessen nach Thema; die Legende erklärt die Farben. „Bebauungspläne“ blendet die Geltungsbereiche der rechtskräftigen Pläne ein; ein Klick auf eine Fläche öffnet die Planchronik. „Farbige Karte“ schaltet den Hintergrund um." },
     { before: (ui) => ui.panel("panel-list", true), target: "#panel-list", beacons: ["#f-text", "#more-filters > summary"],
       title: "Die Liste",
       text: () => "Alle Vorlagen des Gebiets – gleichwertig zur Karte und mit der Tastatur bedienbar. Filter nach Stichwort, Vorlagenart, Stand, Thema und Partei; unter „Weitere Filter“ nach Amt, Gremium und Sicherheit der Ortsangabe."
