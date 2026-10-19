@@ -6,7 +6,7 @@
   const PILOT = "data/export/endenich/vorlagen.json";
   const GEO = { ortsteil: "data/geo/ortsteile_bonn.geojson", bezirk: "data/geo/stadtbezirke_bonn.geojson",
     bplan: "data/geo/bebauungsplaene_bonn.geojson" };
-  const DEFAULT_AREA = "ortsteil:endenich";
+  const DEFAULT_AREA = "ortsteil:bonn-zentrum";
   const REPO = "https://github.com/daimpad/allris-test";
   const RANK = { hoch: 3, mittel: 2, niedrig: 1 };
   const LIST_STEP = 200;
@@ -35,7 +35,14 @@
     <li>Inhalte nichtöffentlicher Beratungen und Vorlagen vor Oktober 2019.</li>
     <li>Sitzungen und Ergebnisse, die OParl-Lite (noch) nicht verknüpft.</li></ul>
     <p class="hint">Abweichungen zwischen Regel und Ablauf sind Befunde, keine Bewertung.</p></details>`;
-  const INTRO = `<div class="intro"><p><strong>So geht's:</strong> Oben ein Gebiet wählen, dann in der Liste oder auf der Karte eine Vorlage anklicken. Hier erscheint der Vorgang: wer ihn eingebracht hat, welches Amt zuständig ist und welche Gremien wann beraten haben.</p>
+  // Startfenster „Los geht's“ im Vorgang, solange keine Vorlage gewählt ist; die Tour steht in site/tour.js
+  const INTRO = `<div class="intro">
+    <p class="intro-lead">Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – wo, wann und wer ist beteiligt?</p>
+    <button type="button" class="btn btn-cta tour-cta" data-tour><span class="tour-cta-dot" aria-hidden="true"></span>Tour durch alle Funktionen</button>
+    <p><strong>So geht's:</strong> Oben ein Gebiet wählen, dann auf der Karte oder in der Liste eine Vorlage anklicken. Hier erscheint der Vorgang: wer ihn eingebracht hat, welches Amt zuständig ist und welche Gremien wann beraten haben.</p>
+    <p class="intro-actions">
+      <button type="button" class="btn btn-soft" data-show="panel-list"><svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>Liste öffnen</button>
+      <button type="button" class="btn btn-soft" data-show="timeline-wrap"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Zeitleiste öffnen</button></p>
     <p>Eine <strong>Vorlage</strong> ist ein Schriftstück, über das Rat, Bezirksvertretung oder Ausschüsse beraten – etwa ein Antrag, eine Beschlussvorlage oder ein Bürgerantrag. Mehr unter „Über“.</p></div>${LIMITS}`;
 
   const $ = (s) => document.querySelector(s);
@@ -85,6 +92,12 @@
     const target = el.querySelector("h2[tabindex], .tl-stage, summary");
     if (target) target.focus();
   }
+  function showIntro() {
+    $("#detail-heading").textContent = "Los geht's";
+    $("#detail").innerHTML = INTRO;
+    const t = toggleFor("timeline-wrap");
+    if (t && t.hidden) $('#detail [data-show="timeline-wrap"]').hidden = true;
+  }
   function closePanel(id) {
     setPanel(id, false);
     const t = toggleFor(id);
@@ -99,6 +112,8 @@
     }
     const c = e.target.closest("[data-close]");
     if (c) closePanel(c.dataset.close);
+    const s = e.target.closest("[data-show]");
+    if (s) { setPanel(s.dataset.show, true); focusPanel(s.dataset.show); }
   });
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape" || $("#about").open) return;
@@ -282,7 +297,7 @@
     drawOutline();
     selected = null;
     shown = LIST_STEP;
-    if (!keepState) $("#detail").innerHTML = INTRO;
+    if (!keepState) showIntro();
     if (tl && zeit) {
       const series = zeit.areas[`${area.kind}:${area.key}`] || zeit.areas.gesamt;
       tl.setData({ months: zeit.months, categories: zeit.categories, density: series, meetings: zeit.meetings,
@@ -571,6 +586,7 @@
       : "<li>stadtweit / ohne Ortsbezug</li>";
     const rel = (arr) => arr.map((r) => `<li>${esc(r.reference)} · ${esc(r.paper_type)} – ${esc(r.name)}</li>`).join("");
     const sources = meta.sources.map((s) => `<li>${esc(s.name)}: ${esc(s.license)}${s.retrieved_at ? ` · Abruf ${esc(String(s.retrieved_at).slice(0, 10))}` : ""}</li>`).join("");
+    $("#detail-heading").textContent = "Vorgang";
     $("#detail").innerHTML = `
       <h3 tabindex="-1">${esc(p.name)}</h3>
       <dl class="facts">
@@ -871,8 +887,6 @@
       setPanel("timeline-wrap", false);
       toggleFor("timeline-wrap").hidden = true;
     }
-    if (MOBILE.matches) { setPanel("panel-detail", false); setPanel("timeline-wrap", false); }
-    else if (NARROW.matches) setPanel("panel-detail", false);
     applyLayout();
     MOBILE.addEventListener("change", applyLayout);
     NARROW.addEventListener("change", applyLayout);
@@ -918,14 +932,17 @@
     await loadArea(params.get("gebiet") || DEFAULT_AREA, true);
     if (params.get("partei")) { fillParties(); $("#f-party").value = params.get("partei"); render(); }
     const von = params.get("von"), bis = params.get("bis");
+    // Startzustand: nur „Los geht's“; Liste und Zeitleiste öffnen sich, wenn der Link Filter oder einen Zeitraum enthält
+    if (["thema", "partei", "suche"].some((k) => params.get(k))) setPanel("panel-list", true);
     if (tl && ISO_DAY.test(von || "") && ISO_DAY.test(bis || "")) {
+      setPanel("timeline-wrap", true);
       tl.setState({ von, bis, zoom: params.get("zoom"), achse: params.get("achse") });
       range = [von, bis];
       render();
     }
     const initial = papers.find((p) => p.reference === ref);
     if (initial) select(initial);
-    else $("#detail").innerHTML = INTRO;
+    else showIntro();
     syncUrl();
   }
   // Schnittstelle für den Ratsassistenten (site/chat/ui.js): Vorlage öffnen, Kontext der Karte
@@ -940,6 +957,27 @@
     },
     context() {
       return { gebiet: area ? area.name : null, von: range ? range[0] : null, bis: range ? range[1] : null };
+    },
+    // für die Tour (site/tour.js): Flächen und Menüs öffnen, ein Beispiel zeigen, Lage des Gebiets auf der Karte
+    ui: {
+      panel(id, open) { if (!toggleFor(id) || !toggleFor(id).hidden) setPanel(id, open); },
+      menu(id) { if (id) openMega(id); else closeMega(); },
+      example() {
+        if (selected) return true;
+        const list = filtered();
+        // jüngste entschiedene Vorlage mit Ort auf der Karte, Entscheidung und Folgevorlage (selbst keine Folgevorlage)
+        const has = (x, typ) => x.steps.some((s) => s.typ === typ);
+        const p = list.filter((x) => x.stand === "entschieden" && !x.reference.includes("-") && has(x, "entscheidung") && has(x, "folgevorlage")
+          && (markers.get(x.reference) || []).length).sort((a, b) => String(b.date).localeCompare(String(a.date)))[0] || list[0];
+        if (p) select(p);
+        return Boolean(p);
+      },
+      areaRect() {
+        if (!outline) return null;
+        const b = outline.getBounds(), r = map.getContainer().getBoundingClientRect();
+        const nw = map.latLngToContainerPoint(b.getNorthWest()), se = map.latLngToContainerPoint(b.getSouthEast());
+        return { left: r.left + nw.x, top: r.top + nw.y, right: r.left + se.x, bottom: r.top + se.y };
+      },
     },
   };
 
