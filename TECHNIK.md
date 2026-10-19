@@ -44,6 +44,8 @@ Tests: `.venv/bin/python -m unittest discover tests` und `node --test "tests/js/
 
 ## Geokodierung
 
+Die Verortung ist regelbasiert. Sie nutzt reguläre Ausdrücke und Geometrie (shapely), kein Sprachmodell, und arbeitet nur mit Titel und Metadaten der Vorlagen. Sie läuft im Schritt `build` (`pipeline/build.py`) und schreibt die Tabellen `location` (Orte) und `paper_location` (Ortsbezug je Vorlage) in die SQLite-Datenbank. `export` gibt die Ergebnisse an Seite, GeoJSON und Audits weiter.
+
 | Stufe | Methode | Konfidenz |
 |---|---|---|
 | A | `location` aus der OParl-API (Punkt der Stadt; Ortsteil per Point-in-Polygon) | hoch |
@@ -51,7 +53,130 @@ Tests: `.venv/bin/python -m unittest discover tests` und `node --test "tests/js/
 | B3 | Plannummern im Titel (Listen, Zusätze wie „Teil A“), abgeglichen mit den Geltungsbereichen: eindeutig, Grundnummer, mehrdeutig, nicht im Datensatz; Ortsteile über Überschneidung ab 5 %; ein eindeutiger Plan hat Vorrang vor Straßen- und Ortsnamen | hoch bei eindeutigem Plan, sonst niedrig |
 | C | Volltext mit Sprachmodell | zurückgestellt (Lizenz der PDFs) |
 
-Jeder Ortsbezug trägt `stage`, `method`, `confidence`, `evidence` und `source_object`. Audits: `data/export/audit_geokodierung_bonn.tsv`, `data/export/audit_bebauungsplaene.tsv`; Stichprobe `data/export/endenich/stichprobe_pruefung.tsv` mit KI-Vorprüfung `vorpruefung_verortung.tsv`.
+### Grundlagen
+
+- **Flächen:** 51 Ortsteile und 4 Stadtbezirke der Stadt Bonn (CC0) in `data/geo/`.
+  - `pipeline/geo.py` hält sie in einem räumlichen Index (STRtree).
+  - Er beantwortet zwei Fragen: In welchem Ortsteil liegt ein Punkt (Point-in-Polygon)? Welche Ortsteile schneidet eine Fläche, und zu welchem Anteil?
+- **Straßenverzeichnis** (`python -m pipeline gazetteer` → `data/geo/strassen_bonn.json`, `Gazetteer._streets` in `pipeline/geocode.py`), derzeit 2.376 Straßennamen:
+  1. Abruf aller benannten OSM-Ways mit `highway`-Tag im Stadtgebiet, in Kacheln über Overpass. Haltestellen, geplante, abgerissene und aufgegebene Wege bleiben außen vor (`SKIP_HIGHWAY`).
+  2. Abschnitte gleichen Namens werden zusammengeführt. Abschnitte, die mehr als 150 m auseinanderliegen, gelten als getrennte Lagen (`component`). Derzeit haben 23 Namen mehr als eine Lage, zum Beispiel „Kapellenstraße“.
+  3. Jede Lage wird mit den Ortsteilen verschnitten, in einer flächentreuen Projektion in Metern. Ein Ortsteil zählt, wenn mindestens 150 m oder 15 % der Straße darin liegen.
+  4. Je Straße und Ortsteil gilt als Punkt die Mitte des längsten Abschnitts. Ein Straßenpunkt steht damit für die Straße im Ortsteil, nicht für ein Gebäude.
+  5. Straßennamen, die nur in den OParl-Orten der Stadt vorkommen, werden zur Laufzeit ergänzt (`_add_points`, Quelle `oparl-bonn`).
+- **Namensvarianten der Ortsteile** (`ORTSTEIL_ALIASES`):
+  - Teilnamen zusammengesetzter Ortsteile, etwa „Lessenich“ und „Meßdorf“ für „Lessenich/Meßdorf“.
+  - Adjektive auf „-er“ wie „Endenicher“.
+  - Für die Bezirke Bad Godesberg, Beuel und Hardtberg die Namen samt Adjektiv (`BEZIRKE`).
+  - Ortsteil- und Bezirksnamen sind als Straßennamen gesperrt, damit „Beuel“ nicht als Straße gilt.
+
+### Ablauf je Vorlage
+
+**Stufe A – Ort der Stadt** (`pipeline/build.py`, Schleife über `location`)
+- Enthält die Vorlage in der OParl-API ein Feld `location` mit Punktgeometrie, wird die Koordinate übernommen, Konfidenz „hoch“, Methode `oparl_location`.
+- Der Ortsteil ergibt sich per Point-in-Polygon.
+- Orte ohne Koordinate werden mit Konfidenz „niedrig“ gespeichert und erscheinen nicht auf der Karte.
+- Straße und Beschreibung werden wörtlich übernommen. `check` bricht ab, sobald darin eine Ziffer außer einer Postleitzahl steht.
+
+**Stufe B – Namen im Titel** (`Gazetteer.locate` in `pipeline/geocode.py`)
+1. **Straßen:**
+   - Ein regulärer Ausdruck enthält alle Straßennamen ab vier Zeichen, die längsten zuerst. So gewinnt „Marienforster Steinweg“ vor „Steinweg“.
+   - Es gelten Wortgrenzen, und „Straße“ wird auch als „Strasse“ oder „Str.“ erkannt.
+   - Gefundene Stellen werden im Titel ausgeblendet, damit ein Ortsteilname in einem Straßennamen nicht doppelt zählt.
+2. **Ortsteile:** im verbleibenden Text, mit den Varianten oben. Auch nach einem Bindestrich wird gesucht, etwa „Bonn-Endenich“.
+3. **Stadtbezirke:** ebenso im verbleibenden Text.
+4. **Eingrenzung einer Straße** (`_resolve_street`), in dieser Reihenfolge:
+
+   | Lage | Methode | Konfidenz |
+   |---|---|---|
+   | Der Titel nennt einen Ortsteil, in dem die Straße liegt | `strasse+ortsteil` | mittel |
+   | Mehrere getrennte Lagen; der genannte Bezirk oder der Bezirk der befassten Bezirksvertretung lässt genau eine übrig | `strasse+bezirk` | mittel |
+   | Mehrere Lagen, keine Eingrenzung möglich | `strasse_mehrdeutig` | niedrig |
+   | Eine Lage, die außerhalb des Bezirks der befassten Bezirksvertretung oder des genannten Bezirks liegt | `strasse` | niedrig |
+   | Eine Lage ohne Widerspruch | `strasse` | mittel |
+
+   Namen, die im Titel oft keine Straße meinen („Rheinufer“, „Markt“, „Kirchberg“, „Wasserland“), erhalten stets „niedrig“.
+5. **Ortsteile ohne Straßentreffer:** Ein genannter Ortsteil, für den keine Straße gefunden wurde, wird als Fläche mit innerem Punkt eingetragen.
+   - Methode `ortsteil_name` oder `ortsteil_adjektiv`, Konfidenz „mittel“.
+   - Die Konfidenz sinkt auf „niedrig“, wenn der Ortsteil nicht im Bezirk der befassten Bezirksvertretung liegt.
+6. **Stadtbezirke ohne Treffer darunter:** Ein Bezirk, für den kein Ortsteil oder keine Straße gefunden wurde, wird eingetragen. Methode `stadtbezirk_name` mit „mittel“, `stadtbezirk_adjektiv` mit „niedrig“.
+
+**B3 – Bebauungspläne** (`plan_numbers` in `pipeline/geocode.py`, `pipeline/plans.py`)
+- **Erkennung im Titel:**
+  - Eine Plannummer zählt nur hinter einem Stichwort: „Bebauungsplan“ (auch mit Tippfehlern), „B-Plan“, „Bauleitplan“, „Satzung“ oder „Vorhaben- und Erschließungsplan“.
+  - Erkannt werden auch Listen („6322-2 und 6322-3“) und Zusätze („a“, „II“, „Teil A“).
+  - Flurstückskennungen werden vorher entfernt.
+- **Abgleich mit den 1.128 Geltungsbereichen** (`Plans.classify`):
+
+  | Treffer | Bedeutung | Konfidenz |
+  |---|---|---|
+  | eindeutig | genau ein Plan | hoch |
+  | grundnummer | der Titel nennt einen Zusatz, der Datensatz nur die Grundnummer | niedrig |
+  | mehrdeutig | mehrere Pläne | niedrig |
+  | nicht im Datensatz | kein rechtskräftiger Plan, etwa weil er noch im Verfahren ist | keine Fläche |
+
+- **Ortsteile:** Die Planfläche wird mit den Ortsteilen verschnitten. Ein Ortsteil zählt ab 5 % der Planfläche, sonst der mit dem größten Anteil. Der Punkt ist ein innerer Punkt der Schnittfläche.
+- **Vorrang:** Bei einem eindeutigen Plan entfallen die übrigen Ortsbezüge der Stufe B derselben Vorlage, weil der Geltungsbereich genauer ist als ein Straßenname im Titel.
+
+**Vererbung** (`_inherited` in `pipeline/build.py`)
+- Eine Vorlage ohne eigenen Ortsbezug, zum Beispiel eine Stellungnahme oder ein Änderungsantrag, übernimmt die Ortsbezüge ihrer übergeordneten Vorlage (`superordinatedPaper`).
+- Methode `vererbt`, Stufe B, Konfidenz höchstens „mittel“.
+- Als Beleg dient die Drucksachennummer der übergeordneten Vorlage.
+
+**Zusammenführung** (`_locations` in `pipeline/export.py`)
+- Belegt Stufe A einen Ortsteil, entfallen dort die Treffer der Stufe B. Bebauungspläne bleiben stehen.
+- Vorlagen ganz ohne Ortsbezug stehen unter „stadtweit / ohne Ortsbezug“.
+
+### Jeder Ortsbezug trägt
+
+- `stage` (A, B), `method` (siehe oben), `confidence` (hoch, mittel, niedrig);
+- `evidence`: die Fundstelle im Titel bzw. die Beschreibung der Stadt;
+- `source_object`: die OParl-ID der Vorlage oder des Orts;
+- `source` des Orts: `oparl-bonn`, `osm`, `geo-bonn` oder `bplan-bonn`; daraus folgt die Lizenzzeile.
+
+### Kennzahlen (Stand 19.10.2026)
+
+| Kennzahl | Wert |
+|---|---|
+| Vorlagen | 24.915 |
+| mit Ortsbezug insgesamt | 10.781 (43,3 %) |
+| Stufe A | 1.816 (7,3 %) |
+| Stufe B einschließlich B3 | 10.409 (41,8 %) |
+| B3 mit eindeutigem Plan | 321 von 556 Vorlagen mit Plannummer |
+| vererbt | 159 |
+
+Die Zahlen gibt `python -m pipeline check` aus.
+
+### Prüfung
+
+- **Gegenprobe:**
+  - `check` vergleicht Stufe B mit Stufe A bei den 1.816 Vorlagen mit Ort der Stadt.
+  - Für 87,1 % findet Stufe B ebenfalls einen Ortsteil.
+  - Bei Straßen aus OSM stimmt der Ortsteil in 96,0 % der Fälle.
+  - Das Audit vermerkt je Treffer „bestätigt durch Stufe A“ oder „abweichend von Stufe A“.
+- **Prüfprotokolle:**
+  - `data/export/audit_geokodierung_bonn.tsv` enthält eine Zeile je Ortsbezug mit Drucksache, Stufe, Methode, Treffer, Ortsteil, Konfidenz, Fundstelle, Quellobjekt und Prüfstatus.
+  - `data/export/audit_bebauungsplaene.tsv` enthält eine Zeile je Plannummer mit der Trefferklasse.
+- **Stichprobe:** `data/export/endenich/stichprobe_pruefung.tsv` umfasst 50 Vorlagen und wird nie überschrieben. Die KI-Vorprüfung `vorpruefung_verortung.tsv` ist gekennzeichnet und ersetzt die Prüfung von Hand nicht.
+- **Datenschutz:**
+  - Es gibt keine Hausnummern und keine Wohnadressen.
+  - Bürgeranträge erscheinen nur auf Straßen- oder Ortsteilebene.
+  - `check` bricht die Pipeline ab, wenn eine Ortsangabe der Stadt eine Hausnummer enthält.
+- **Tests:**
+  - `tests/test_geocode.py`: Abkürzungen, längster Name, Eingrenzung mehrdeutiger Straßen, Ortsteilvarianten, Konfidenz bei abweichendem Bezirk, Plannummern.
+  - `tests/test_plans.py`: Einstufung, Teilpläne, Flächenanteile je Ortsteil.
+
+### Ausgabe
+
+- `export` schreibt die Ortsbezüge je Vorlage in die Gebietsdateien unter `data/export/bonn/`.
+- Die Datei `data/export/bonn/vorlagen.geojson` (`write_geojson` in `pipeline/publish.py`) enthält einen Punkt je Vorlage und Ort, mit Stufe, Methode, Konfidenz, Fundstelle, Quelle und Link ins Ratsinformationssystem.
+- Lizenzen: Orte aus OSM unter ODbL 1.0, Stand und Ergebnisse aus OParl-Lite unter CC BY 4.0, übrige Felder CC0 1.0.
+
+### Grenzen
+
+- Orte, die nur im Dokument stehen, fehlen, weil Stufe C zurückgestellt ist.
+- Ein Straßenpunkt steht für die ganze Straße im Ortsteil.
+- Ein Name im Titel kann etwas anderes meinen als einen Ort, etwa eine Einrichtung, die nach einer Straße benannt ist. Solche Fälle sollen die Stichprobe und die Rückmeldung „Verortung falsch?“ aufdecken.
 
 ## Prozessebene und Zeitleiste
 
