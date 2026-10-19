@@ -56,6 +56,7 @@
 
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null;
   let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, planOn = false, allPlans = null, shownPlan = null;
+  let bau = null, bauOn = false, bauLayer = null, shownSite = null, bauByRef = new Map();
   // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
   let search = null, searchLoading = null;
   const THEMES = {  // wie pipeline/topics.THEMES
@@ -98,6 +99,7 @@
   }
   function showIntro() {
     shownPlan = null;
+    shownSite = null;
     $("#detail-heading").textContent = "Los geht's";
     $("#detail").innerHTML = INTRO;
     const t = toggleFor("timeline-wrap");
@@ -308,6 +310,7 @@
       tl.setData({ months: zeit.months, categories: zeit.categories, density: series, meetings: zeit.meetings,
         terms: zeit.terms, dataStart: zeit.data_start, dataStand });
       tl.select(null);
+      tl.setSites(areaSites());
     }
     subscribeArea();
     if (!$("#panel-termine").hidden) showTermine();
@@ -383,6 +386,22 @@
       },
     });
     new PlanToggle().addTo(map);
+    // Baustellen der Stadt (Archiv bzw. Feeds); nur mit Gesamtexport
+    bauOn = new URLSearchParams(location.search).get("baustellen") === "1";
+    const BauToggle = L.Control.extend({
+      options: { position: "bottomright" },
+      onAdd() {
+        const b = L.DomUtil.create("button", "map-style map-bau");
+        b.type = "button";
+        b.textContent = "Baustellen";
+        b.setAttribute("aria-pressed", String(bauOn));
+        b.hidden = !bau;
+        b.addEventListener("click", () => { bauOn = !bauOn; b.setAttribute("aria-pressed", String(bauOn)); drawSites(); syncUrl(); });
+        L.DomEvent.disableClickPropagation(b);
+        return b;
+      },
+    });
+    new BauToggle().addTo(map);
     const Legend = L.Control.extend({
       options: { position: "bottomleft" },
       onAdd() {
@@ -425,9 +444,16 @@
       .map(([c, t]) => `<li><span class="swatch" style="background:${c}" aria-hidden="true"></span>${esc(t)}</li>`).join("")}</ul>
       ${colorBy === "thema" ? '<p class="hint">Bei mehreren Themen zählt das erste. Themen sind abgeleitet.</p>' : ""}
       ${planOn ? `<ul><li><span class="swatch swatch-plan" aria-hidden="true"></span>Geltungsbereich eines rechtskräftigen Bebauungsplans (Stadt Bonn)</li></ul>
-        ${planIndexUrl() ? '<button type="button" class="btn btn-soft" id="plan-list">Pläne im Gebiet als Liste</button>' : ""}` : ""}`;
+        ${planIndexUrl() ? '<button type="button" class="btn btn-soft" id="plan-list">Pläne im Gebiet als Liste</button>' : ""}` : ""}
+      ${bauOn && bau ? `<ul><li><span class="site-icon site-aktuell" aria-hidden="true"></span>Baustelle der Stadt, laufend</li>
+        <li><span class="site-icon site-geplant" aria-hidden="true"></span>Baustelle der Stadt, geplant</li>
+        <li><span class="site-icon site-fremd" aria-hidden="true"></span>Baustelle anderer Träger (Versorger, Straßen NRW, Bahn)</li></ul>
+        <p class="hint">Termine unverbindlich; Archiv seit ${fmtDate(bau.meta.archiv_beginn)}.</p>
+        <button type="button" class="btn btn-soft" id="bau-list">Baustellen im Gebiet als Liste</button>` : ""}`;
     const b = legendEl.querySelector("#plan-list");
     if (b) b.addEventListener("click", showPlanList);
+    const bl = legendEl.querySelector("#bau-list");
+    if (bl) bl.addEventListener("click", showSiteList);
   }
   function drawMarkers(list) {
     lastMarkers = list;
@@ -743,6 +769,111 @@
     $("#detail h3").focus();
   }
 
+  // --- Baustellen (data/export/bonn/baustellen.json, pipeline/kandidaten.py) -----------------------------
+  const TODAY = new Date().toISOString().slice(0, 10);
+  const siteState = (b) => (!b.aktiv ? "entfallen" : b.von && b.von > TODAY ? "geplant" : "aktuell");
+  const SITE_STATE = { aktuell: "laufend", geplant: "geplant", entfallen: "nicht mehr gemeldet" };
+  const siteClass = (b) => (b.fremd ? "site-fremd" : `site-${siteState(b)}`);
+  // Punkt in Fläche (gerade-ungerade über alle Ringe, Löcher eingeschlossen)
+  function inGeom(lon, lat, g) {
+    const polys = g.type === "Polygon" ? [g.coordinates] : g.type === "MultiPolygon" ? g.coordinates : [];
+    return polys.some((rings) => {
+      let inside = false;
+      for (const ring of rings) for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+        const [xi, yi] = ring[i], [xj, yj] = ring[j];
+        if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) inside = !inside;
+      }
+      return inside;
+    });
+  }
+  function areaFeature() {
+    if (area.kind === "ortsteil") return geo.ortsteil.features.find((f) => f.properties.ortsteil_bez === area.name);
+    if (area.kind === "bezirk") return geo.bezirk.features.find((f) => f.properties.bezirk_bez === area.name);
+    return null;
+  }
+  function areaSites() {
+    if (!bau) return [];
+    const f = area && areaFeature();
+    return f ? bau.baustellen.filter((b) => inGeom(b.lon, b.lat, f.geometry)) : bau.baustellen;
+  }
+  function drawSites() {
+    if (legendEl) drawLegend();
+    if (bauLayer) { bauLayer.remove(); bauLayer = null; }
+    if (!bauOn || !bau) return;
+    bauLayer = L.layerGroup(bau.baustellen.filter((b) => b.aktiv).map((b) => L.marker([b.lat, b.lon], {
+      icon: L.divIcon({ className: "site-marker", html: `<span class="site-icon ${siteClass(b)}"></span>`, iconSize: [18, 18], iconAnchor: [9, 9] }),
+      title: `Baustelle ${b.bezeichnung} (${SITE_STATE[siteState(b)]})`, keyboard: true, riseOnHover: true,
+    }).on("click", () => showSite(b.id)))).addTo(map);
+  }
+  const yes = (v) => (v ? "erfüllt" : "nicht erfüllt");
+  function candHtml(c, withSite) {
+    return `<li>${withSite ? "" : `<button type="button" class="link-btn" data-open-ref="${esc(c.drucksache)}">${esc(c.drucksache)}</button> – ${esc(c.titel)}<br>`}
+      <span class="meta">Entschieden ${fmtDate(c.entschieden_am)} · Kriterien: räumlich ${yes(c.kriterien.raeumlich)} (${esc(c.abstand_m)} m, höchstens 150 m) · zeitlich ${yes(c.kriterien.zeitlich)} (Baubeginn nach der Entscheidung) · gleiche Straße ${yes(c.kriterien.strasse)} · Tiefbau oder Verkehr ${yes(c.kriterien.thema)} · Bau-Stichwort passend zur Maßnahme ${yes(c.kriterien.stichwort)}</span></li>`;
+  }
+  const UMSETZUNG_HINT = "Indiz, kein Beleg: Ort, Zeit und Thema passen zusammen. Vorläufig – die Prüfung einer Stichprobe von Hand steht aus. Termine der Baustellen sind laut Quelle unverbindlich.";
+  function showSite(id) {
+    const b = bau && bau.baustellen.find((x) => x.id === String(id));
+    if (!b) return;
+    selected = null;
+    shownPlan = null;
+    shownSite = b.id;
+    document.querySelectorAll(".papers button[data-ref]").forEach((x) => x.setAttribute("aria-current", "false"));
+    if (tl) tl.select(null);
+    highlight();
+    if (planLayer) { planLayer.remove(); planLayer = null; }
+    map.setView([b.lat, b.lon], Math.max(map.getZoom(), 16), { animate: !REDUCED });
+    const state = siteState(b);
+    const changes = b.aenderungen.map((a) => `<li>${fmtDate(a.datum)}: ${a.feld === "von" ? "Beginn" : "Ende"} ${esc(a.alt || "–")} → ${esc(a.neu || "–")}</li>`).join("");
+    $("#detail-heading").textContent = "Baustelle";
+    $("#detail").innerHTML = `
+      <h3 tabindex="-1">${esc(b.bezeichnung)}</h3>
+      <dl class="facts">
+        ${b.strasse && b.strasse !== b.bezeichnung ? `<dt>Straße</dt><dd>${esc(b.strasse)}</dd>` : ""}
+        <dt>Stadtbezirk</dt><dd>${esc(b.stadtbezirk || "–")}</dd>
+        <dt>Maßnahme</dt><dd>${esc(b.massnahme || "–")}</dd>
+        <dt>Träger</dt><dd>${esc(b.traeger || "–")}${b.fremd ? '<br><span class="hint">Anderer Träger: setzt in der Regel keinen Ratsbeschluss um.</span>' : ""}</dd>
+        <dt>Zeitraum</dt><dd>${fmtDate(b.von)} – ${fmtDate(b.bis)} <span class="derived">laut Quelle unverbindlich</span></dd>
+        <dt>Stand</dt><dd>${SITE_STATE[state]}${b.entfallen ? ` (seit ${fmtDate(b.entfallen)})` : ""}</dd>
+        ${b.sperrung ? `<dt>Sperrung</dt><dd>${esc(b.sperrung)}</dd>` : ""}
+        <dt>Im Archiv seit</dt><dd>${fmtDate(b.seit)}${b.seit === bau.meta.archiv_beginn ? " (Beginn des Archivs)" : ""}</dd>
+      </dl>
+      ${changes ? `<h4>Geänderte Termine</h4><ul class="related">${changes}</ul>` : ""}
+      <h4>Mögliche Umsetzung</h4>
+      ${b.kandidaten.length ? `<p class="hint"><span class="derived">abgeleitet · vorläufig</span> ${esc(UMSETZUNG_HINT)}</p><ul class="related plan-papers">${b.kandidaten.map((c) => candHtml(c)).join("")}</ul>`
+        : `<p>${b.fremd ? "Für Baustellen anderer Träger werden keine Beschlüsse gesucht." : "Kein Beschluss erfüllt alle Kriterien (räumlich, zeitlich, gleiche Straße, Tiefbau oder Verkehr, Bau-Stichwort)."}</p>`}
+      <details class="acc"><summary>Was diese Angaben nicht zeigen</summary><ul>${bau.meta.hinweise.map((h) => `<li>${esc(h)}</li>`).join("")}</ul></details>
+      <details class="acc"><summary>Quellen</summary><ul>
+        <li>Baustellen: Stadt Bonn, ${bau.meta.quelle.map((u) => link(u, esc(u.replace("https://", "")))).join(", ")} – ${esc(bau.meta.lizenz)}</li>
+        <li>Abruf: ${esc(String(bau.meta.abruf || "–").slice(0, 10))} (${esc(bau.meta.herkunft)}); Baustellen-ID ${esc(b.id)}</li>
+        <li>Mögliche Umsetzung: abgeleitet (pipeline/kandidaten.py), Audit ${link(REPO + "/blob/main/data/export/baustellen_kandidaten.tsv", "baustellen_kandidaten.tsv")}</li></ul></details>`;
+    $("#announce").textContent = `Baustelle ${b.bezeichnung} geöffnet`;
+    if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
+    $("#detail").scrollTop = 0;
+    syncUrl();
+  }
+  function showSiteList() {
+    const list = areaSites().filter((b) => b.aktiv);
+    selected = null;
+    shownPlan = null;
+    shownSite = null;
+    highlight();
+    $("#detail-heading").textContent = "Baustellen";
+    $("#detail").innerHTML = `<h3 tabindex="-1">Baustellen · ${esc(area.name || "ganz Bonn")}</h3>
+      <p class="hint">Gemeldete Baustellen mit Einfluss auf den Verkehr; Termine unverbindlich.</p>
+      ${list.length ? `<ul class="related plan-papers">${list.map((b) => `<li><button type="button" class="link-btn" data-open-site="${esc(b.id)}">${esc(b.bezeichnung)}</button> · ${esc(b.massnahme || "")} · ${fmtDate(b.von)} – ${fmtDate(b.bis)} · ${SITE_STATE[siteState(b)]}${b.fremd ? " · anderer Träger" : ""}${b.kandidaten.length ? ' · <span class="derived">mögliche Umsetzung</span>' : ""}</li>`).join("")}</ul>` : "<p>In diesem Gebiet ist derzeit keine Baustelle gemeldet.</p>"}`;
+    if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
+    $("#detail h3").focus();
+  }
+  // Station „mögliche Umsetzung“ in der Prozesslinie (neben dem Vollzug, der unklar bleibt)
+  function umsetzungHtml(p) {
+    const hits = bauByRef.get(p.reference) || [];
+    if (!hits.length) return "";
+    return `<li class="step" data-status="abgeleitet"><span class="mark mark-abgeleitet" aria-hidden="true"></span>
+      <div class="step-head">Mögliche Umsetzung<span class="step-status">abgeleitet, vorläufig</span></div>
+      <div class="step-body">${hits.map(({ b, c }) => `Baustelle <button type="button" class="link-btn" data-open-site="${esc(b.id)}">${esc(b.bezeichnung)}</button>, ${esc(b.massnahme || "")}, ${fmtDate(b.von)} – ${fmtDate(b.bis)} (unverbindlich)<ul class="related">${candHtml(c, true)}</ul>`).join("")}
+        <div class="hint">${esc(UMSETZUNG_HINT)} Der Vollzug bleibt unklar.</div></div></li>`;
+  }
+
   // Beteiligung: nächste Sitzung eines beteiligten Gremiums (laut Sitzungsliste der Stadt), Bürgerantrag
   const BUERGERANTRAG = "https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php";
   function participate(p) {
@@ -764,6 +895,7 @@
   function select(p, fromMap) {
     selected = p;
     shownPlan = null;
+    shownSite = null;
     document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", String(b.dataset.ref === p.reference)));
     syncUrl();
     if (tl) tl.select(p);
@@ -794,7 +926,7 @@
       <div class="links">${link(p.web, "Original im Ratsinformationssystem", "btn btn-primary")}
         ${link(p.main_file, "Dokument (PDF)", "btn btn-secondary")}</div>
       <h4>Prozesslinie</h4>
-      <ol class="steps">${p.steps.map(stepHtml).join("")}</ol>
+      <ol class="steps">${p.steps.map(stepHtml).join("")}${umsetzungHtml(p)}</ol>
       ${legend()}${glossary(p)}
       ${participate(p)}
       <h4>Ortsbezug</h4><ul class="locs">${locs}</ul>
@@ -828,6 +960,8 @@
   $("#detail").addEventListener("click", (e) => {
     const plan = e.target.closest("[data-open-plan]");
     if (plan) { showPlan(plan.dataset.openPlan); return; }
+    const site = e.target.closest("[data-open-site]");
+    if (site) { showSite(site.dataset.openSite); return; }
     const ref = e.target.closest("[data-open-ref]");
     if (ref) { const p = papers.find((x) => x.reference === ref.dataset.openRef); if (p) select(p); else window.risKarte.open(ref.dataset.openRef); return; }
     const b = e.target.closest(".jump");
@@ -1065,6 +1199,8 @@
     state.farbe = colorBy === "thema" ? "thema" : "";
     state.plaene = planOn ? "1" : "";
     state.plan = !selected && shownPlan ? shownPlan : "";
+    state.baustellen = bauOn ? "1" : "";
+    state.baustelle = !selected && shownSite ? shownSite : "";
     for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
     history.replaceState(null, "", url);
@@ -1076,6 +1212,13 @@
     const glossar = fetch(GLOSSAR_URL).then((r) => (r.ok ? r.json() : null)).catch(() => null);
     try { index = await fetch(BONN + "index.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { index = null; }
     if (index) { try { zeit = await fetch(BONN + "zeit.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { zeit = null; } }
+    // Baustellen mit möglichen Umsetzungen (nur Konfidenz hoch); ohne Datei bleibt die Funktion ausgeblendet
+    if (index) { try { bau = await fetch(BONN + "baustellen.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { bau = null; } }
+    if (bau && !bau.baustellen.length) bau = null;
+    for (const b of bau ? bau.baustellen : []) for (const c of b.kandidaten) {
+      if (!bauByRef.has(c.drucksache)) bauByRef.set(c.drucksache, []);
+      bauByRef.get(c.drucksache).push({ b, c });
+    }
     const g = await glossar;
     if (g) ({ ergebnisse: GLOSSAR, hinweise: NOTES, schritte: STEP_LABEL, evidenz: STATUS_TEXT } = g);
     [geo.ortsteil, geo.bezirk] = await Promise.all([fetch(GEO.ortsteil).then((r) => r.json()), fetch(GEO.bezirk).then((r) => r.json())]);
@@ -1085,6 +1228,7 @@
       tl = Timeline.create($("#timeline-wrap"), {
         onRange(a, b) { range = [a, b]; shown = LIST_STEP; render(); syncUrl(); },
         onDate(d) { tl.center(d); },
+        onSite(id) { showSite(id); },
       });
     } else {
       setPanel("timeline-wrap", false);
@@ -1144,9 +1288,11 @@
       render();
     }
     if (planOn) drawAllPlans();
+    if (bauOn) drawSites();
     const initial = papers.find((p) => p.reference === ref);
     if (initial) select(initial);
     else if (params.get("plan")) await showPlan(params.get("plan"));
+    else if (params.get("baustelle") && bau && bau.baustellen.some((b) => b.id === params.get("baustelle"))) showSite(params.get("baustelle"));
     else showIntro();
     syncUrl();
   }

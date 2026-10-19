@@ -154,6 +154,89 @@ def _tsv(path, rows):
     path.write_text("\t".join(TSV) + "\n" + "".join("\t".join(clean(r[k]) for k in TSV) + "\n" for r in rows), encoding="utf-8")
 
 
+def without_number(addr):
+    """Adresse nur auf Straßenebene: Hausnummern (auch Bereiche) entfallen."""
+    return re.sub(r"\s+\d+\s*[a-zA-Z]?(?:\s*[-–/]\s*\d+\s*[a-zA-Z]?)*\s*$", "", (addr or "").strip()) or None
+
+
+def iso(d):
+    v = parse_de(d)
+    return v.isoformat() if v else None
+
+
+SITE_NOTES = [
+    "Termine laut Quelle unverbindlich; erfasst sind nur Baustellen mit nennenswertem Einfluss auf den Verkehr.",
+    "Die Historie beginnt mit dem ersten Abruf des Archivs; frühere Baustellen fehlen.",
+    "„Mögliche Umsetzung“ ist ein Indiz aus räumlichen, zeitlichen und thematischen Kriterien, kein Beleg. Gezeigt "
+    "werden nur Kandidaten der Konfidenz „hoch“, vorläufig: die Prüfung einer Stichprobe von Hand steht aus.",
+    "Baustellen fremder Träger (Versorger, Straßen NRW, Bahn) setzen in der Regel keinen Ratsbeschluss um.",
+]
+
+
+def site_data(state, papers, origin, stand=None):
+    """Baustellen für die Seite: alle aus dem Archiv (aktive und entfallene), Adresse ohne Hausnummer, Termine als
+    ISO-Datum, Kandidaten nur mit Konfidenz „hoch“."""
+    active = {k: v["angaben"] for k, v in state.items() if v.get("aktiv", True)}
+    cands = {}
+    for c in candidates({k: v["angaben"] for k, v in state.items()}, papers):
+        if c["konfidenz"] == "hoch":
+            cands.setdefault(c["baustelle_id"], []).append({
+                "drucksache": c["drucksache"], "titel": c["titel"], "entschieden_am": c["entschieden_am"],
+                "abstand_m": c["abstand_m"], "begruendung": c["begruendung"], "kriterien": {"raeumlich": True, "zeitlich": True, "strasse": True, "thema": True,
+                                                            "stichwort": True}, "konfidenz": "hoch"})
+    out = []
+    for bid, v in state.items():
+        a = v["angaben"]
+        if a.get("lon") is None:
+            continue
+        out.append({
+            "id": bid, "bezeichnung": a.get("bezeichnung"), "strasse": without_number(a.get("adresse")),
+            "stadtbezirk": a.get("stadtbezirk_bez"), "von": iso(a.get("von")), "bis": iso(a.get("bis")),
+            "traeger": a.get("traeger"), "fremd": not OWN.search(a.get("traeger") or ""), "massnahme": a.get("massnahme"),
+            "sperrung": a.get("sperrung"), "lon": a["lon"], "lat": a["lat"], "aktiv": bid in active,
+            "seit": v.get("first_seen"), "entfallen": v.get("entfallen"),
+            "aenderungen": [x for x in v.get("aenderungen", []) if x.get("feld") in ("von", "bis")],
+            "kandidaten": sorted(cands.get(bid, []), key=lambda c: (c["abstand_m"], c["drucksache"]))})
+    out.sort(key=lambda b: (b["von"] or "", b["id"]))
+    seen = [v.get("first_seen") for v in state.values() if v.get("first_seen")]
+    return {"meta": {"quelle": [baustellen.URL.format(t) for t in baustellen.FEEDS], "lizenz": config.BAUSTELLEN_LICENSE,
+                     "herkunft": origin, "archiv_beginn": min(seen) if seen else None, "abruf": stand,
+                     "kandidaten": "nur Konfidenz hoch, vorläufig (Prüfung von Hand ausstehend)", "hinweise": SITE_NOTES},
+            "baustellen": out}
+
+
+def write_site(out=None, archive=None, fetcher=None):
+    """data/export/bonn/baustellen.json aus dem Archiv; fehlt es, aus den drei Feeds; scheitert auch das, eine leere
+    Liste mit Hinweis (der Build der Seite bricht nicht ab)."""
+    out = Path(out or config.EXPORT / "bonn")
+    base = Path(archive or config.BAUSTELLEN_ARCHIV)
+    state, origin, stand = None, "Archiv", None
+    if (base / "baustellen.json").exists():
+        state = json.loads((base / "baustellen.json").read_text(encoding="utf-8"))
+        if (base / "STAND.json").exists():
+            stand = max((v.get("abruf") or "" for v in json.loads((base / "STAND.json").read_text(encoding="utf-8")).values()), default=None)
+    else:
+        origin, state = "Feeds (ohne Archiv)", {}
+        for thema in baustellen.FEEDS:
+            try:
+                feats, _ = (fetcher or baustellen.fetch)(thema)
+            except RuntimeError as err:
+                print(f"Baustellen: {err}")
+                continue
+            for bid, a in baustellen.normalize(feats).items():
+                state[bid] = {"angaben": a, "aktiv": True}
+        stand = date.today().isoformat() if state else None
+    data = site_data(state, load_papers(out), origin, stand)
+    if not state:
+        data["meta"]["fehler"] = "Baustellen derzeit nicht abrufbar"
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "baustellen.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    n = sum(len(b["kandidaten"]) for b in data["baustellen"])
+    print(f"Baustellen für die Seite ({origin}): {len(data['baustellen'])}, davon {sum(b['aktiv'] for b in data['baustellen'])} aktiv; "
+          f"{n} mögliche Umsetzungen (hoch) → {out / 'baustellen.json'}")
+    return data
+
+
 def write():
     """Audit aller Kandidaten und Stichprobe (die Stichprobe wird nie überschrieben)."""
     sites, origin = load_sites()

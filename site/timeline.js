@@ -7,9 +7,11 @@
 //   tl.setData({ months, density, meetings, terms, dataStart, dataStand, dimension })
 //   tl.setPapers(papers)           Einzelobjekte des Gebiets (für Woche/Tag und Auswahlspur)
 //   tl.select(paper | null)        Stationen einer Vorlage in der Auswahlspur zeigen
+//   tl.setSites(baustellen)        Baustellen des Gebiets als eigene Spur (Zeiträume, Termine unverbindlich)
+//     options.onSite(id)           Klick auf eine Baustelle
 //   tl.setRange(from, to), tl.center(isoDate), tl.getState(), tl.setState(state)
 //
-// Spuren: Übersicht (Minimap), Dichte, Sitzungen, Kontext (Wahlperioden), Auswahl.
+// Spuren: Übersicht (Minimap), Dichte, Sitzungen, Kontext (Wahlperioden), Auswahl, Baustellen (falls vorhanden).
 // Bedienung: Ziehen, Shift/Trackpad-Scroll, ‹ ›, + −, Strg/Cmd+Mausrad, Doppelklick, Pfeiltasten,
 // Pos1/Ende; Zeitraum über zwei Schieberegler (role="slider").
 (function (global) {
@@ -50,8 +52,8 @@
   const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function create(root, options) {
-    const o = Object.assign({ onRange() {}, onDate() {} }, options);
-    let data = null, papers = [], selected = null, preview = false, level = 1;
+    const o = Object.assign({ onRange() {}, onDate() {}, onSite() {} }, options);
+    let data = null, papers = [], selected = null, preview = false, level = 1, sites = [];
     let view = [0, 1], range = [0, 1], extent = [0, 1], debounce;
 
     root.classList.add("tl");
@@ -101,12 +103,14 @@
           <li>Verwaltungsinterne Vorlaufzeiten vor dem Datum der Vorlage.</li>
           <li>Den Vollzug von Beschlüssen (Beschlusskontrolle ohne Schnittstelle).</li>
           <li>Sitzungsdaten von Beratungen, die OParl-Lite (noch) nicht verknüpft; sie fehlen in der Achse „Sitzungsdatum“.</li>
+          <li>Baustellen vor Beginn des Archivs; ihre Termine sind laut Quelle unverbindlich (Balken mit unscharfen Enden).</li>
         </ul>
       </details>`;
     const svg = root.querySelector(".tl-svg"), stage = root.querySelector(".tl-stage");
     const handles = [...root.querySelectorAll(".tl-handle")];
     const dimSel = root.querySelector("[data-act=dim]");
-    const LAYOUT = { mini: [0, 14], density: [20, 70], meet: [74, 98], ctx: [100, 110], sel: [112, 128] };
+    const LAYOUT = { mini: [0, 14], density: [20, 70], meet: [74, 98], ctx: [100, 110], sel: [112, 128], bau: [131, 145] };
+    const H = () => (sites.length ? 146 : 130);  // Höhe der Zeichenfläche; die Baustellenspur nur bei Bedarf
 
     // --- Skalen ---------------------------------------------------------------------------------
     // Breite nur beim Zeichnen lesen; sonst erzwingt jede Umrechnung ein neues Layout
@@ -164,8 +168,12 @@
       if (!data) return;
       width = stage.clientWidth || 600;
       const w = W();
-      svg.setAttribute("viewBox", `0 0 ${w} 130`);
+      svg.setAttribute("viewBox", `0 0 ${w} ${H()}`);
+      root.classList.toggle("tl-has-sites", sites.length > 0);
       svg.innerHTML = "";
+      // Verlauf für unscharfe Enden (unverbindliche Termine)
+      const defs = el("defs", {}, svg), grad = el("linearGradient", { id: "tl-fuzzy", x1: 0, x2: 1, y1: 0, y2: 0 }, defs);
+      for (const [off, op] of [[0, 0.15], [0.12, 1], [0.88, 1], [1, 0.15]]) el("stop", { offset: off, "stop-color": "#c2410c", "stop-opacity": op }, grad);
       const cats = data.categories.concat(["Sitzungen", "Vorlagen"]);
 
       // kein Datenbestand
@@ -244,6 +252,30 @@
         }
       }
 
+      // Baustellen: Zeitraum je Baustelle, auf bis zu drei Bahnen verteilt; gestrichelt = anderer Träger
+      if (sites.length && !compact) {
+        // Bahnen zuerst verteilen, dann zeichnen: wenige Baustellen erhalten breitere Balken
+        const vis = [], lanes = [];
+        for (const b of sites) {
+          if (!b.von) continue;
+          const a = t(b.von), e = b.bis ? t(b.bis) + DAY : a + DAY;
+          if (e < view[0] || a > view[1]) continue;
+          let lane = lanes.findIndex((end) => end < a);
+          if (lane < 0) lane = lanes.length < 3 ? lanes.length : lanes.indexOf(Math.min(...lanes));
+          lanes[lane] = Math.max(lanes[lane] || 0, e);
+          vis.push([b, a, e, lane]);
+        }
+        const lh = (LAYOUT.bau[1] - LAYOUT.bau[0]) / Math.max(1, lanes.length);
+        if (lv.bin !== "month") el("text", { x: 4, y: LAYOUT.bau[0] + 8, class: "tl-label tl-row" }, svg).textContent = "Baustellen";
+        for (const [b, a, e, lane] of vis) {
+          const x0 = Math.max(x(a), -2), x1 = Math.min(x(e), w + 2);
+          const r = el("rect", { x: x0, y: LAYOUT.bau[0] + lane * lh + 0.5, width: Math.max(2, x1 - x0), height: Math.max(2, lh - 1.5), rx: 2,
+            class: `tl-site${b.fremd ? " fremd" : ""}`, fill: "url(#tl-fuzzy)" }, svg);
+          el("title", {}, r).textContent = `Baustelle ${b.bezeichnung}: ${de(a)} – ${b.bis ? de(t(b.bis)) : "offen"} (unverbindlich)${b.fremd ? " · anderer Träger" : ""}${b.kandidaten && b.kandidaten.length ? " · mögliche Umsetzung" : ""}`;
+          r.addEventListener("click", () => o.onSite(b.id));
+        }
+      }
+
       // Brush, heute, Datenstand
       const bx0 = x(range[0]), bx1 = x(range[1]);
       el("rect", { x: bx0, y: LAYOUT.density[0], width: Math.max(0, bx1 - bx0), height: LAYOUT.sel[1] - LAYOUT.density[0], class: "tl-brush" }, svg);
@@ -251,7 +283,7 @@
       const stand = t(data.dataStand), close = Math.abs(x(stand) - x(today)) < 70;
       for (const [ms, cls, label, dy] of [[today, "tl-today", "heute", 0], [stand, "tl-stand", "Datenstand", close ? 10 : 0]]) {
         if (ms < view[0] || ms > view[1]) continue;
-        el("line", { x1: x(ms), x2: x(ms), y1: LAYOUT.mini[1] + 2, y2: LAYOUT.sel[1], class: cls }, svg);
+        el("line", { x1: x(ms), x2: x(ms), y1: LAYOUT.mini[1] + 2, y2: sites.length ? LAYOUT.bau[1] : LAYOUT.sel[1], class: cls }, svg);
         el("text", { x: x(ms) + 3, y: LAYOUT.sel[1] - 1 - dy, class: `tl-label ${cls}-label` }, svg).textContent = label;
       }
 
@@ -348,7 +380,7 @@
         drag = { kind: "handle", i: +e.target.dataset.h };
       } else {
         const rect = stage.getBoundingClientRect(), py = e.clientY - rect.top, px = e.clientX - rect.left;
-        const scale = 130 / rect.height;
+        const scale = H() / rect.height;
         if (py * scale <= LAYOUT.mini[1]) {
           const c = extent[0] + (px / W()) * (extent[1] - extent[0]);
           setLevel(level, c);
@@ -425,6 +457,7 @@
         setRange(range[0], range[1], true);
       },
       setPapers(p) { papers = p || []; if (data) setRange(range[0], range[1], true); },
+      setSites(list) { sites = list || []; draw(); },
       // preview: nur angedeutet (Zeiger über einem Listeneintrag), nicht ausgewählt
       select(p, isPreview) { selected = p; preview = Boolean(p && isPreview); draw(); },
       reset() { if (data) setRange(extent[0], fullEnd(), true); },

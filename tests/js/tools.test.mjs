@@ -60,18 +60,38 @@ const ZEIT = {
 };
 const DATENSTAND = { sources: [{ name: "oparl-bonn", url: "https://example.org", license: "CC0 1.0", retrieved_at: "2026-10-18T12:00:00+00:00" }], papers: 3, gaps: ["Vorlagen vor Oktober 2019 sind nicht enthalten."] };
 
+const PLAENE = {
+  schritte: [{ id: "aufstellung", label: "Aufstellungsbeschluss", fundstelle: "§ 2 Abs. 1 BauGB" }, { id: "satzung", label: "Satzungsbeschluss", fundstelle: "§ 10 Abs. 1 BauGB" }],
+  plaene: [{ nr: "6122-1", treffer: "eindeutig", ortsteile: ["Dransdorf"],
+    plaene: [{ name: "6122-1", inkraft_seit: "2025-06-04", plan: "https://example.org/p.pdf", begruendung: "https://example.org/b.pdf" }],
+    vorlagen: [{ drucksache: "190535", datum: "2019-10-28", titel: "Aufstellung des Bebauungsplanes Nr. 6122-1 Grootestraße", art: "Mitteilungsvorlage", stand: "entschieden", schritte: ["aufstellung"], arten: [] }] }],
+};
+const BAUSTELLEN = {
+  meta: { lizenz: "CC0 1.0", archiv_beginn: "2026-10-19", abruf: "2026-10-19T05:23:00+00:00", hinweise: ["Termine unverbindlich."] },
+  baustellen: [
+    { id: "9746", bezeichnung: "Siemensstraße", strasse: "Siemensstraße", stadtbezirk: "Bonn", von: "2026-08-03", bis: "2027-03-31", traeger: "Bundesstadt Bonn - Amt 66-2", fremd: false,
+      massnahme: "Straßenbau", lon: 7.0712, lat: 50.7299, aktiv: true,
+      kandidaten: [{ drucksache: "240553", titel: "Umgestaltung der Siemensstraße", entschieden_am: "2024-05-28", abstand_m: 9, kriterien: { raeumlich: true }, konfidenz: "hoch" }] },
+    { id: "9001", bezeichnung: "Kölnstraße", strasse: "Kölnstraße", stadtbezirk: "Bonn", von: "2026-11-02", bis: "2026-12-01", traeger: "SWB Bonn-Netz", fremd: true,
+      massnahme: "Leitungsbau", lon: 7.0, lat: 50.74, aktiv: true, kandidaten: [] },
+    { id: "8000", bezeichnung: "Alte Baustelle", strasse: null, stadtbezirk: "Beuel", von: "2026-01-01", bis: "2026-09-01", traeger: "Bundesstadt Bonn - Amt 66-5", fremd: false,
+      massnahme: "Kanalbau", lon: 7.1, lat: 50.73, aktiv: false, kandidaten: [] },
+  ],
+};
+
 const FILES = {
   "glossar.json": GLOSSAR, "bonn/suche.json": SUCHE, "bonn/chat/orte.json": ORTE, "bonn/chat/vorlagen/2610.json": { papers: { 261088: VORLAGE } },
   "bonn/chat/gremien.json": GREMIEN, "bonn/zeit.json": ZEIT, "bonn/chat/datenstand.json": DATENSTAND,
+  "bonn/plaene.json": PLAENE, "bonn/baustellen.json": BAUSTELLEN,
 };
 const tools = () => createTools({
   today: "2026-10-18",
   load: async (p) => { if (!(p in FILES)) throw new Error(`HTTP 404 ${p}`); return structuredClone(FILES[p]); },
 });
 
-test("Werkzeugdefinitionen: acht Werkzeuge mit Objekt-Schema", () => {
-  assert.equal(TOOLS.length, 8);
-  assert.equal(new Set(TOOLS.map((t) => t.name)).size, 8);
+test("Werkzeugdefinitionen: zehn Werkzeuge mit Objekt-Schema", () => {
+  assert.equal(TOOLS.length, 10);
+  assert.equal(new Set(TOOLS.map((t) => t.name)).size, 10);
   for (const t of TOOLS) {
     assert.equal(t.parameters.type, "object");
     assert.ok(t.description.length > 30, t.name);
@@ -180,6 +200,33 @@ test("erklaere_begriff und datenstand", async () => {
   assert.equal(d.papers, 3);
 });
 
+test("suche_bebauungsplan: Planchronik mit Soll-Schritten, Liste nach Ortsteil", async () => {
+  const t = tools();
+  const r = await t.run("suche_bebauungsplan", { nummer: "6122-1" });
+  assert.equal(r.plaene[0].rechtskraeftig_seit, "2025-06-04");
+  assert.deepEqual(r.verfahrensschritte.map((s) => s.status), ["abgeleitet", "soll", "belegt"]);
+  assert.equal(r.verfahrensschritte[0].vorlagen[0].drucksache, "190535");
+  assert.equal(r.vorlagen.treffer_gesamt, 1);
+  assert.equal((await t.run("suche_bebauungsplan", { ortsteil: "Dransdorf" })).items[0].nummer, "6122-1");
+  assert.equal((await t.run("suche_bebauungsplan", { stichwort: "Grootestraße" })).treffer_gesamt, 1);
+  assert.ok((await t.run("suche_bebauungsplan", { nummer: "9999-9" })).fehler);
+});
+
+test("suche_baustellen: Straße, Drucksache, Umkreis, beendete nur auf Wunsch", async () => {
+  const t = tools();
+  const r = await t.run("suche_baustellen", { ort: "Siemensstraße" });
+  assert.equal(r.items[0].stand, "laufend");
+  assert.match(r.items[0].moegliche_umsetzung[0].evidenz, /kein Beleg/);
+  assert.equal((await t.run("suche_baustellen", { drucksache: "240553" })).items[0].baustelle_id, "9746");
+  assert.equal((await t.run("suche_baustellen", {})).treffer_gesamt, 2);
+  assert.equal((await t.run("suche_baustellen", { auch_beendete: true })).treffer_gesamt, 3);
+  const near = await t.run("suche_baustellen", { lat: 50.73, lon: 7.0713, radius_m: 200 });
+  assert.deepEqual(near.items.map((x) => x.baustelle_id), ["9746"]);
+  const fremd = await t.run("suche_baustellen", { ort: "Kölnstraße" });
+  assert.equal(fremd.items[0].anderer_traeger, true);
+  assert.equal(fremd.items[0].stand, "geplant");
+});
+
 test("Fehler und Begrenzung", async () => {
   const t = tools();
   assert.ok((await t.run("gibt_es_nicht", {})).fehler);
@@ -199,7 +246,9 @@ test("echter Export: alle Werkzeuge, Größe, Datenschutz", { skip: !REAL && "ke
     ["hole_vorlage", { drucksache: "261798" }], ["hole_prozesslinie", { drucksache: "261798" }],
     ["suche_ort", { ort: "Endenich" }], ["suche_ort", { lat: 50.7295, lon: 7.0614 }],
     ["liste_sitzungen", {}], ["hole_gremium_oder_amt", { name: "Rat" }], ["erklaere_begriff", { begriff: "vertagt" }], ["datenstand", {}],
+    ["suche_bebauungsplan", { nummer: "6122-1" }], ["suche_bebauungsplan", { ortsteil: "Endenich" }],
   ];
+  if (await access(new URL("bonn/baustellen.json", ROOT)).then(() => true, () => false)) calls.push(["suche_baustellen", { stadtbezirk: "Bonn" }]);
   for (const [n, a] of calls) {
     const r = await t.run(n, a);
     assert.ok(!r.fehler, `${n}: ${r.fehler}`);

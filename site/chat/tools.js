@@ -89,6 +89,35 @@ export const TOOLS = [
     parameters: { type: "object", additionalProperties: false, required: ["begriff"], properties: { begriff: { type: "string" } } },
   },
   {
+    name: "suche_bebauungsplan",
+    description: "Bebauungspläne, deren Nummer im Titel von Vorlagen steht: mit Nummer die Planchronik (Inkrafttreten mit Plan und Begründung laut Stadt Bonn, Verfahrensschritte nach BauGB als Soll mit Fundstelle, zugeordnete Vorlagen), sonst eine Liste nach Ortsteil oder Stichwort.",
+    parameters: {
+      type: "object", additionalProperties: false,
+      properties: {
+        nummer: { type: "string", description: "Plannummer, z. B. 6122-1" },
+        ortsteil: { type: "string", description: "Ortsteil, z. B. Dransdorf" },
+        stichwort: { type: "string", description: "Wörter im Titel einer zugeordneten Vorlage" },
+        seite: SEITE,
+      },
+    },
+  },
+  {
+    name: "suche_baustellen",
+    description: "Gemeldete Baustellen der Stadt Bonn (Straße, Maßnahme, Träger, Zeitraum unverbindlich) und mögliche Umsetzungen von Beschlüssen (Indiz aus Ort, Zeit und Thema, vorläufig, kein Beleg). Suche nach Straße, Stadtbezirk, Drucksache oder Umkreis eines Punktes.",
+    parameters: {
+      type: "object", additionalProperties: false,
+      properties: {
+        ort: { type: "string", description: "Straße oder Bezeichnung der Baustelle" },
+        stadtbezirk: { type: "string", enum: ["Bonn", "Bad Godesberg", "Beuel", "Hardtberg"] },
+        drucksache: { type: "string", description: "Baustellen, die als mögliche Umsetzung dieser Vorlage gelten" },
+        lat: { type: "number" }, lon: { type: "number" },
+        radius_m: { type: "integer", minimum: 50, maximum: 2000, description: "Umkreis in Metern (Standard 300)" },
+        auch_beendete: { type: "boolean", description: "auch Baustellen, die nicht mehr gemeldet sind (Archiv)" },
+        seite: SEITE,
+      },
+    },
+  },
+  {
     name: "datenstand",
     description: "Datenstand: Abrufzeitpunkte und Lizenzen der Quellen, Umfang, Anteil verorteter Vorlagen, bekannte Lücken.",
     parameters: { type: "object", additionalProperties: false, properties: {} },
@@ -144,6 +173,8 @@ export function createTools({ load, today = berlinToday() } = {}) {
   const places = () => get("bonn/chat/orte.json");
   const status = () => get("bonn/chat/datenstand.json");
   const glossar = () => get("glossar.json");
+  const plaene = () => get("bonn/plaene.json");
+  const baustellen = () => get("bonn/baustellen.json");
 
   async function paper(ref) {
     const r = String(ref ?? "").trim();
@@ -401,6 +432,59 @@ export function createTools({ load, today = berlinToday() } = {}) {
       return hits.length
         ? { gefunden: true, eintraege: hits.slice(0, 5) }
         : { gefunden: false, hinweis: "Nicht im Glossar. Eine allgemeine Erklärung ist als solche zu kennzeichnen.", begriffe: g.begriffe.map((b) => b.begriff) };
+    },
+
+    async suche_bebauungsplan(a) {
+      const d = await plaene();
+      const mask = await masker();
+      const vorlage = (v) => ({ drucksache: v.drucksache, datum: v.datum, art: v.art, titel: short(mask(v.titel, v.art)), stand: v.stand });
+      const hinweise = ["Erfasst sind Pläne, deren Nummer im Titel einer Vorlage ab Oktober 2019 steht.",
+        "Verfahrensschritte: Soll nach BauGB; eine Vorlage ist einem Schritt zugeordnet, wenn ihr Titel ihn nennt (abgeleitet). „soll“ heißt: keine Vorlage nennt den Schritt – nicht, dass er fehlt. Vereinfachte Verfahren (§§ 13, 13a BauGB) haben weniger Schritte."];
+      if (a.nummer) {
+        const q = norm(a.nummer);
+        const e = d.plaene.find((x) => norm(x.nr) === q) || d.plaene.find((x) => x.plaene.some((v) => norm(v.name) === q));
+        if (!e) throw new ToolError(`Kein Bebauungsplan „${a.nummer}“ in den Titeln der Vorlagen.`, { hinweis: hinweise[0] });
+        return {
+          nummer: e.nr, zuordnung: e.treffer, ortsteile: e.ortsteile,
+          plaene: e.plaene.map((v) => ({ plan: v.name, rechtskraeftig_seit: v.inkraft_seit, plan_pdf: v.plan, begruendung_pdf: v.begruendung, evidenz: "belegt (Stadt Bonn)" })),
+          verfahrensschritte: [...d.schritte.map((st) => {
+            const hits = e.vorlagen.filter((v) => (v.schritte || []).includes(st.id));
+            return { schritt: st.label, fundstelle: st.fundstelle, status: hits.length ? "abgeleitet" : "soll", vorlagen: hits.map((v) => ({ drucksache: v.drucksache, datum: v.datum })) };
+          }), { schritt: "Inkrafttreten (Bekanntmachung)", fundstelle: "§ 10 Abs. 3 BauGB",
+            status: e.plaene.some((v) => v.inkraft_seit) ? "belegt" : "soll", datum: e.plaene.map((v) => v.inkraft_seit).filter(Boolean).sort().pop() || null }],
+          vorlagen: page(e.vorlagen.map(vorlage), a.seite),
+          hinweise, quelle: "Stadt Bonn, Lage der Bebauungspläne (CC0); Vorlagen: OParl-API Stadt Bonn (CC0)",
+        };
+      }
+      let list = d.plaene;
+      if (a.ortsteil) { const o = resolve([...new Set(d.plaene.flatMap((e) => e.ortsteile))].sort(), a.ortsteil, "Ortsteil"); list = list.filter((e) => e.ortsteile.some((x) => o.includes(x))); }
+      if (a.stichwort) { const w = words(a.stichwort); list = list.filter((e) => e.vorlagen.some((v) => w.every((x) => norm(v.titel).includes(x)))); }
+      const items = list.map((e) => ({ nummer: e.nr, zuordnung: e.treffer, ortsteile: e.ortsteile, rechtskraeftig_seit: e.plaene.map((v) => v.inkraft_seit).filter(Boolean).sort().pop() || null,
+        vorlagen: e.vorlagen.length, letzte_vorlage: vorlage(e.vorlagen[e.vorlagen.length - 1]) }));
+      return { ...page(items, a.seite), hinweise, quelle: "Stadt Bonn, Lage der Bebauungspläne (CC0); Vorlagen: OParl-API Stadt Bonn (CC0)" };
+    },
+
+    async suche_baustellen(a) {
+      const d = await baustellen();
+      let list = d.baustellen.filter((b) => a.auch_beendete || b.aktiv);
+      if (a.ort) { const w = words(a.ort); list = list.filter((b) => w.every((x) => norm(`${b.bezeichnung} ${b.strasse || ""}`).includes(x))); }
+      if (a.stadtbezirk) list = list.filter((b) => b.stadtbezirk === a.stadtbezirk);
+      if (a.drucksache) list = list.filter((b) => b.kandidaten.some((c) => norm(c.drucksache) === norm(a.drucksache)));
+      const near = a.lat != null && a.lon != null;
+      if (near) {
+        const rad = a.radius_m || 300;
+        list = list.map((b) => ({ ...b, _d: dist(a.lat, a.lon, b.lat, b.lon) })).filter((b) => b._d <= rad).sort((x, y) => x._d - y._d);
+      }
+      const stand = (b) => (!b.aktiv ? "nicht mehr gemeldet" : b.von && b.von > today ? "geplant" : "laufend");
+      const items = list.map((b) => ({
+        baustelle_id: b.id, bezeichnung: b.bezeichnung, strasse: b.strasse, stadtbezirk: b.stadtbezirk, massnahme: b.massnahme,
+        traeger: b.traeger, anderer_traeger: b.fremd, von: b.von, bis: b.bis, termine: "unverbindlich", stand: stand(b),
+        ...(near ? { abstand_m: Math.round(b._d) } : {}),
+        moegliche_umsetzung: b.kandidaten.map((c) => ({ drucksache: c.drucksache, titel: short(c.titel), entschieden_am: c.entschieden_am,
+          abstand_m: c.abstand_m, kriterien: c.kriterien, evidenz: "abgeleitet, vorläufig – Indiz, kein Beleg" })),
+      }));
+      return { ...page(items, a.seite), archiv_beginn: d.meta.archiv_beginn, abruf: d.meta.abruf, hinweise: d.meta.hinweise,
+        quelle: `Stadt Bonn, Baustellen – ${d.meta.lizenz}` };
     },
 
     async datenstand() {

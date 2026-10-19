@@ -81,5 +81,42 @@ class Kandidaten(unittest.TestCase):
             self.assertEqual((sites, origin), ({}, "Feed 14698 (direkt)"))
 
 
+class Seite(unittest.TestCase):
+    def test_ohne_hausnummer(self):
+        self.assertEqual(kandidaten.without_number("Kölnstraße 464-480"), "Kölnstraße")
+        self.assertEqual(kandidaten.without_number("Siemensstraße 50 a"), "Siemensstraße")
+        self.assertEqual(kandidaten.without_number("Am Burgweiher"), "Am Burgweiher")
+
+    def test_seitendaten_nur_hoch(self):
+        state = {"1": {"angaben": site(), "aktiv": True, "first_seen": "2026-10-19", "aenderungen": [
+                       {"datum": "2026-10-20", "feld": "bis", "alt": "31.12.2026", "neu": "31.03.2027"},
+                       {"datum": "2026-10-20", "feld": "sperrung", "alt": "a", "neu": "b"}]},
+                 "2": {"angaben": site("Gerichtsweg", lon=7.09, lat=50.74), "aktiv": False, "first_seen": "2026-10-19", "entfallen": "2026-10-21"}}
+        papers = [paper(), paper("2", "Tempo 30 in der Siemensstraße", amt="61-3 Stadtverkehr")]
+        d = kandidaten.site_data(state, papers, "Archiv", "2026-10-21T05:23:00+00:00")
+        b = {x["id"]: x for x in d["baustellen"]}
+        self.assertEqual([c["drucksache"] for c in b["1"]["kandidaten"]], ["240553"])  # „mittel“ entfällt
+        self.assertEqual((b["1"]["strasse"], b["1"]["von"], b["1"]["fremd"], b["2"]["aktiv"]), ("Siemensstraße", "2026-08-03", False, False))
+        self.assertEqual([a["feld"] for a in b["1"]["aenderungen"]], ["bis"])
+        self.assertEqual(d["meta"]["archiv_beginn"], "2026-10-19")
+
+    def test_rueckfall_auf_feeds_und_leere_liste(self):
+        feature = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.0712, 50.7299]},
+                   "properties": {"baustelle_id": 9746, **{k: v for k, v in site().items() if k not in ("lon", "lat")},
+                                  "stadtbezirk_bez": "Bonn"}}
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "bonn"
+            (out / "ortsteile").mkdir(parents=True)
+            (out / "ortsteile" / "x.json").write_text(json.dumps({"papers": [paper()]}), encoding="utf-8")
+            d = kandidaten.write_site(out, Path(tmp) / "fehlt", fetcher=lambda thema: ([feature], 1))
+            self.assertEqual((d["meta"]["herkunft"], len(d["baustellen"]), len(d["baustellen"][0]["kandidaten"])), ("Feeds (ohne Archiv)", 1, 1))
+
+            def broken(thema):
+                raise RuntimeError("HTTP 400")
+            d = kandidaten.write_site(out, Path(tmp) / "fehlt", fetcher=broken)
+            self.assertEqual((d["baustellen"], d["meta"]["fehler"]), ([], "Baustellen derzeit nicht abrufbar"))
+            self.assertTrue((out / "baustellen.json").exists())
+
+
 if __name__ == "__main__":
     unittest.main()
