@@ -2,7 +2,7 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 574,
-  "generated_at": "2026-10-19T13:38:35+00:00",
+  "generated_at": "2026-10-19T13:48:26+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -10937,7 +10937,7 @@
     "verfahren": "mitteilung",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Mitteilungsvorlage“",
-    "passung": "ohne Beratung",
+    "passung": "nur Beirat",
     "ist": [],
     "abweichung": []
    }
@@ -14373,7 +14373,7 @@
     "verfahren": "antrag-rat",
     "sicherheit": "mittel",
     "grund": "Antrag ohne bekanntes Gremium; angenommen: Rat oder Ausschuss",
-    "passung": "ohne Beratung",
+    "passung": "nur Beirat",
     "ist": [],
     "abweichung": []
    }
@@ -94388,7 +94388,7 @@
     "verfahren": "bauleitplanung",
     "sicherheit": "hoch",
     "grund": "Bauleitplanung (Titel)",
-    "passung": "ohne Beratung",
+    "passung": "nur Beirat",
     "ist": [],
     "abweichung": []
    }

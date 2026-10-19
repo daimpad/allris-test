@@ -36,7 +36,7 @@ Jede Korrektur prüft beim Laden, ob der alte Wert noch in der Quelle steht. Wei
 |---|---|---|
 | passt | 11.451 (81 %) | 13.646 (97 %) |
 | weicht ab | 2.356 | 2 (Einwohnerfragen mit Beratung in Ausschuss oder Rat) |
-| ohne Beratung | 297 | 297 |
+| ohne Beratung (seit Phase 4: „nur Beirat“) | 297 | 297 |
 | ohne Soll | – | 159 (Bürgerbrief) |
 
 Sicherheit der Zuordnung: hoch 12.581, mittel 1.364.

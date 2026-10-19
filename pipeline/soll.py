@@ -167,7 +167,9 @@ def abgleich(db, modell):
         entsch = {c for p in ps for c, r in cons[p[0]] if c and r == "Entscheidung"}
         vid, sure, why = assign(head[3], head[2], arts, entsch, modell.ohne_soll)
         ist, soll = {BAHN[a] for a in arts if a in BAHN}, modell.bahnen(vid)
-        passung = "ohne Soll" if vid is None else "ohne Beratung" if not ist else "passt" if ist <= soll else "weicht ab"
+        # Beiräte bildet das Modell nicht ab: Vorgänge, die nur dort beraten wurden, werden nicht abgeglichen
+        passung = ("ohne Soll" if vid is None else ("nur Beirat" if arts else "ohne Beratung") if not ist
+                   else "passt" if ist <= soll else "weicht ab")
         rows.append({"stammnummer": st, "jahr": (head[4] or "")[:4], "typ": head[3], "verfahren": vid or "",
                      "sicherheit": sure or "", "grund": why, "dokumente": len(ps), "ist_bahnen": ",".join(sorted(ist)),
                      "soll_bahnen": ",".join(sorted(soll)), "passung": passung,

@@ -82,12 +82,16 @@ class Zuordnung(unittest.TestCase):
             CREATE TABLE paper (id, reference, name, paper_type, date);
             CREATE TABLE organization (id, classification);
             CREATE TABLE consultation (paper_id, organization_id, role);
-            INSERT INTO organization VALUES ('rat', 'Rat'), ('bv', 'Bezirksvertretungen'), ('aus', 'Ratsgremien');
+            INSERT INTO organization VALUES ('rat', 'Rat'), ('bv', 'Bezirksvertretungen'), ('aus', 'Ratsgremien'),
+                                            ('beirat', 'Beiräte und Kommissionen');
             INSERT INTO paper VALUES ('p1', '261000', 'Antrag A', 'Antrag', '2026-01-01'),
                                      ('p2', '261000-01 ST', 'Stellungnahme', 'Stellungnahme der Verwaltung', '2026-02-01'),
                                      ('p3', '261001', 'Frage', 'Einwohnerfrage', '2026-01-02'),
-                                     ('p4', '261002', 'Brief', 'Bürgerbrief', '2026-01-03');
-            INSERT INTO consultation VALUES ('p1', 'aus', 'Empfehlung'), ('p2', 'rat', 'Entscheidung'), ('p3', 'rat', 'Kenntnisnahme');
+                                     ('p4', '261002', 'Brief', 'Bürgerbrief', '2026-01-03'),
+                                     ('p5', '261003', 'Info', 'Mitteilungsvorlage', '2026-01-04'),
+                                     ('p6', '261004', 'Info', 'Mitteilungsvorlage', '2026-01-05');
+            INSERT INTO consultation VALUES ('p1', 'aus', 'Empfehlung'), ('p2', 'rat', 'Entscheidung'), ('p3', 'rat', 'Kenntnisnahme'),
+                                            ('p5', 'beirat', 'Kenntnisnahme');
         """)
         return db
 
@@ -97,6 +101,7 @@ class Zuordnung(unittest.TestCase):
         self.assertEqual((rows["261000"]["verfahren"], rows["261000"]["dokumente"], rows["261000"]["passung"]), ("antrag-rat", 2, "passt"))
         self.assertEqual((rows["261001"]["passung"], rows["261001"]["abweichung"]), ("weicht ab", "rat"))
         self.assertEqual(rows["261002"]["passung"], "ohne Soll")
+        self.assertEqual((rows["261003"]["passung"], rows["261004"]["passung"]), ("nur Beirat", "ohne Beratung"))
 
     def test_lookup_je_vorlage(self):
         db = self._db()

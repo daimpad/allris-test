@@ -19,7 +19,7 @@ Das Original leitet den Status eines Vorgangs aus eigenen Abrufen ab. Hier wird 
 
 | Merkmal | Ableitung |
 |---|---|
-| Status | Stand der Vorlage: „entschieden“ → abgeschlossen; „beraten, ohne Entscheidung“ → abgeschlossen bei Kenntnisnahme oder Erledigung, vertagt bei Vertagung, sonst unklar; „in Beratung“, „offen“ → offen oder vertagt; „ohne Beratungsfolge“ → unklar (Mitteilung: zur Kenntnis) |
+| Status | Stand der Vorlage: „entschieden“ → abgeschlossen; „beraten, ohne Entscheidung“ → vertagt bei Vertagung, sonst unklar; „in Beratung“, „offen“ → offen oder vertagt; „ohne Beratungsfolge“ → unklar. Ohne Termin schließen Kenntnisnahme oder Erledigung (ohne ausstehende Entscheidung), eine Mitteilung und die Genehmigung durch den Rat den Vorgang (ergänzt in Phase 4, `soll/PHASE4.md`) |
 | Abschluss | Ergebnisgruppen des Originals (beschlossen, abgelehnt, zur Kenntnis, erledigt) aus dem wörtlichen Ergebnis |
 | Termin | nächste Beratung dieser Vorlage ab heute ohne Ergebnis (Sitzung über OParl-Lite verknüpft) |
 | Ebene | „bezirk“, wenn nur Bezirksvertretungen beraten, sonst „stadt“ |

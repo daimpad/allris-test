@@ -3,7 +3,9 @@
 // Genutzt von site/app.js (dynamischer Import) und site/chat/tools.js; Tests: tests/js/mitwirken.test.mjs.
 // Übertragung auf unsere Daten (abgeleitet, Einordnung, keine Rechtsauskunft):
 // - status: Stand der Vorlage (process.py) und Ergebnisse der Beratungen → offen, vertagt, abgeschlossen, unklar;
-//   abschluss nach den Ergebnisgruppen des Originals (gruppe in einordnung.py); ein offener Vorgang ohne Termin
+//   abschluss nach den Ergebnisgruppen des Originals (gruppe in einordnung.py); Kenntnisnahme oder Erledigung
+//   (ohne ausstehende Entscheidung), Mitteilung ohne Termin und Genehmigung durch den Rat schließen den Vorgang;
+//   ein offener Vorgang ohne Termin
 //   und ohne Datum in den letzten 12 Monaten gilt als „unklar“ (eigene Festlegung: meist fehlt die Verknüpfung)
 // - termin: nächste Beratung dieser Vorlage mit Datum ab heute ohne Ergebnis (Sitzung über OParl-Lite verknüpft)
 // - ebene: „bezirk“, wenn nur Bezirksvertretungen beraten, sonst „stadt“; ohne Beratung keine Ebene
@@ -44,11 +46,17 @@ export function kontext(p, today) {
     abschluss = g === "offen" || g === "vertagt" ? null : g;
   } else if (p.stand === "beraten, ohne Entscheidung") {
     if (last === "vertagt") status = "vertagt";
-    else if (last === "zur Kenntnis" || last === "erledigt") { status = "abgeschlossen"; abschluss = last; }
   } else if (p.stand === "in Beratung" || p.stand === "offen") {
     status = last === "vertagt" ? "vertagt" : "offen";
-  } else if (p.stand === "ohne Beratungsfolge" && vid === "mitteilung") {
-    status = "abgeschlossen"; abschluss = "zur Kenntnis";
+  }
+  // wie im Original (status_2026): Kenntnisnahme oder Erledigung schließt den Vorgang, ebenso eine Mitteilung ohne
+  // weiteren Termin; die Genehmigung einer Dringlichkeits- oder Eilentscheidung durch den Rat ist ein Beschluss
+  if (status !== "abgeschlossen" && !termin) {
+    const genehmigt = results.find((s) => /Genehmigung/i.test(s.role || "") && gruppe(s.result) === "beschlossen");
+    if (genehmigt) { status = "abgeschlossen"; abschluss = "beschlossen"; }
+    // außer eine entscheidende Beratung steht noch aus (im Original: verbindliche Beratung ohne Sitzung)
+    else if ((last === "zur Kenntnis" || last === "erledigt") && !berat.some((s) => s.typ === "entscheidung" && !s.result)) { status = "abgeschlossen"; abschluss = last; }
+    else if (vid === "mitteilung") { status = "abgeschlossen"; abschluss = "zur Kenntnis"; }
   }
   const dates = [p.date, ...berat.map((s) => s.date)].filter(Boolean).sort();
   if ((status === "offen" || status === "vertagt") && !termin && dates.length && dates[dates.length - 1] < addDays(today, -365)) status = "unklar";
