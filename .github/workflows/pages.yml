@@ -92,8 +92,11 @@ jobs:
           path: _archiv
         continue-on-error: true
 
+      # Audit aller Kandidaten täglich neu; die Stichprobe zur Prüfung von Hand bleibt unverändert
       - name: Baustellen und mögliche Umsetzungen
-        run: python -m pipeline baustellen-seite
+        run: |
+          python -m pipeline baustellen-seite
+          python -m pipeline kandidaten
         env:
           BAUSTELLEN_ARCHIV: _archiv
         continue-on-error: true
@@ -104,6 +107,8 @@ jobs:
 
       - name: Datenpaket
         run: python -m pipeline package
+        env:
+          BAUSTELLEN_ARCHIV: _archiv
 
       - name: Seite zusammenstellen (Frontend, Exporte, Flächen)
         run: |
