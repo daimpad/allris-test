@@ -917,6 +917,7 @@
       <details class="acc"><summary>Quelle des Soll-Modells</summary><ul>
         <li>${esc(d.meta.quelle)} · ${link("https://github.com/anster2025/bonn-entscheidet", "Bonn entscheidet")}</li>
         <li>${esc(d.meta.hinweis)}</li></ul></details>`;
+    fillMitwirken(p, d);
   }
 
   // Station „mögliche Umsetzung“ in der Prozesslinie (neben dem Vollzug, der unklar bleibt)
@@ -937,14 +938,40 @@
     const next = zeit && p.stand !== "entschieden"
       ? zeit.meetings.find((m) => m.date >= today && !m.cancelled && gremien.has(m.gremium)) : null;
     const onAgenda = next && p.steps.some((s) => s.label === next.gremium && s.date === next.date);
-    const meeting = next ? `<li>Nächste Sitzung eines beteiligten Gremiums: <strong>${esc(next.gremium)}</strong>, ${fmtDay(next.date)}${next.time ? `, ${esc(next.time)} Uhr` : ""}${onAgenda ? " – die Vorlage steht dort auf der Tagesordnung <span class=\"derived\">abgeleitet, über OParl-Lite</span>" : ""}.
+    const meeting = next ? `<li data-generic="sitzung" data-key="${esc(next.gremium)}|${esc(next.date)}">Nächste Sitzung eines beteiligten Gremiums: <strong>${esc(next.gremium)}</strong>, ${fmtDay(next.date)}${next.time ? `, ${esc(next.time)} Uhr` : ""}${onAgenda ? " – die Vorlage steht dort auf der Tagesordnung <span class=\"derived\">abgeleitet, über OParl-Lite</span>" : ""}.
       ${link(next.web, "Tagesordnung") || "Die Tagesordnung erscheint etwa zwei Wochen vorher."} Die Sitzung ist in der Regel öffentlich; Sie können zuhören.</li>` : "";
-    const done = p.stand === "entschieden" ? "<li>Das Verfahren ist entschieden. Neue Anliegen zum Thema lassen sich mit einem Bürgerantrag einbringen.</li>" : "";
+    const done = p.stand === "entschieden" ? "<li data-generic=\"done\">Das Verfahren ist entschieden. Neue Anliegen zum Thema lassen sich mit einem Bürgerantrag einbringen.</li>" : "";
     return `<section class="participate" aria-labelledby="participate-h"><h4 id="participate-h">Selbst mitwirken</h4><ul>
       ${meeting}${done}
-      <li>Mit einem <a href="${BUERGERANTRAG}" target="_blank" rel="noopener">Bürgerantrag nach § 24 GO NRW<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a> bringen Sie Anregungen und Beschwerden selbst ein.</li>
-      ${hasPaperFeed(p) ? "<li>Mit dem Feed „Diesen Vorgang abonnieren“ (unten) erfahren Sie von neuen Beratungen und Ergebnissen.</li>" : ""}
-    </ul></section>`;
+      <li data-generic="buergerantrag">Mit einem <a href="${BUERGERANTRAG}" target="_blank" rel="noopener">Bürgerantrag nach § 24 GO NRW<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a> bringen Sie Anregungen und Beschwerden selbst ein.</li>
+      ${hasPaperFeed(p) ? "<li data-generic=\"feed\">Mit dem Feed „Diesen Vorgang abonnieren“ (unten) erfahren Sie von neuen Beratungen und Ergebnissen.</li>" : ""}
+    </ul><p class="hint mitwirken-hint" hidden></p></section>`;
+  }
+  // Mitwirkung nach Regelwerk (site/mitwirken.js): ersetzt die allgemeinen Hinweise, wo eine Regel genauer ist
+  let mitwirkenMod = null;
+  async function fillMitwirken(p, d) {
+    const ul = document.querySelector("#detail .participate ul");
+    if (!ul || !d?.mitwirken) return;
+    let res;
+    try { res = (await (mitwirkenMod ||= import("./mitwirken.js"))).mitwirken(p, d, zeit ? zeit.meetings : [], new Date().toISOString().slice(0, 10)); }
+    catch (e) { return; }
+    if (selected !== p || !ul.isConnected || !res.regeln.length) return;
+    const ids = new Set(res.regeln.map((r) => r.id));
+    const drop = (sel) => ul.querySelector(sel)?.remove();
+    const termin = res.kontext.termin;
+    if (res.kontext.status === "abgeschlossen") drop('[data-generic="sitzung"]');  // Vorgang erledigt: kein Sitzungshinweis
+    if (ids.has("sitzung-besuchen") && termin) drop(`[data-generic="sitzung"][data-key="${CSS.escape(termin.gremium + "|" + termin.datum)}"]`);
+    if (ids.has("eigener-buergerantrag")) drop('[data-generic="buergerantrag"]');
+    if (["entschieden", "abgelehnt", "erledigt"].some((x) => ids.has(x))) drop('[data-generic="done"]');
+    const items = res.regeln.map((r) => `<li data-rule="${esc(r.id)}">${esc(r.text)}
+      ${r.id === "eigener-buergerantrag" ? `<a href="${BUERGERANTRAG}" target="_blank" rel="noopener">Zum Bürgerantrag<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a>` : ""}
+      ${r.sitzung?.web ? link(r.sitzung.web, "Tagesordnung") : ""}
+      <br><span class="meta">Frist: ${esc(r.frist)}${r.verstrichen ? " – verstrichen" : ""}${r.links.length ? ` · ${lawLinks(r.links)}` : r.beleg ? ` · ${esc(r.beleg)}` : ""}</span></li>`).join("");
+    const feed = ul.querySelector('[data-generic="feed"]');
+    if (feed) feed.insertAdjacentHTML("beforebegin", items); else ul.insertAdjacentHTML("beforeend", items);
+    const hint = document.querySelector("#detail .mitwirken-hint");
+    hint.textContent = "Hinweise nach dem Regelwerk: vereinfachtes Modell aus „Bonn entscheidet“, Anrede angepasst. Stand und Termin sind aus den Daten abgeleitet. Keine Rechtsauskunft.";
+    hint.hidden = false;
   }
 
   function select(p, fromMap) {
