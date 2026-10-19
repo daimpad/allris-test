@@ -1,7 +1,7 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|kandidaten|all}"""
 import sys
 
-from . import baustellen, build, check, export, fetch, geocode, seo, verify
+from . import baustellen, build, check, export, fetch, geocode, kandidaten, seo, verify
 
 STEPS = {
     "fetch": fetch.fetch_all,
@@ -19,6 +19,7 @@ STEPS = {
     "package": verify.package,
     "seo": seo.write,  # nach dem Zusammenstellen der Seite in _site
     "baustellen": baustellen.archive,  # Archiv der Baustellen (eigener Workflow, Branch archiv)
+    "kandidaten": kandidaten.write,  # Kandidaten Beschluss ↔ Baustelle (Audit, Stichprobe)
 }
 
 

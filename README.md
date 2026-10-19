@@ -119,7 +119,9 @@ Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site
 
 ## Archiv der Baustellen
 
-Die Stadt Bonn veröffentlicht Baustellen nur mit dem aktuellen Stand. `baustellen.yml` ruft die drei Feeds täglich ab (`python -m pipeline baustellen`, mit Wiederholung und Prüfung der Anzahl) und schreibt in den Branch `archiv`: Zustand je Baustelle mit erstem und letztem Auftreten und geänderten Terminen, ein Ereignisprotokoll und Momentaufnahmen bei Änderungen. Eine Baustelle gilt nur als entfallen, wenn alle Feeds vollständig abgerufen wurden. Lizenz CC0 (laut Auftraggeber). Auf der Seite erscheinen die Baustellen noch nicht; eine Verknüpfung mit Beschlüssen wäre nur ein Indiz („möglicher Zusammenhang“), nie ein Beleg.
+Die Stadt Bonn veröffentlicht Baustellen nur mit dem aktuellen Stand. `baustellen.yml` ruft die drei Feeds täglich ab (`python -m pipeline baustellen`, mit Wiederholung und Prüfung der Anzahl) und schreibt in den Branch `archiv`: Zustand je Baustelle mit erstem und letztem Auftreten und geänderten Terminen, ein Ereignisprotokoll und Momentaufnahmen bei Änderungen. Eine Baustelle gilt nur als entfallen, wenn alle Feeds vollständig abgerufen wurden. Lizenz CC0 (laut Auftraggeber). Auf der Seite erscheinen die Baustellen noch nicht.
+
+`python -m pipeline kandidaten` sucht zu jeder Baustelle der Stadt entschiedene Vorlagen in bis zu 150 m Abstand, deren Entscheidung vor dem Baubeginn liegt, und weist die Kriterien gleiche Straße, Amt bzw. Thema und Bau-Stichwort einzeln aus (Konfidenz hoch, mittel, niedrig; fremde Träger getrennt). Ein Kandidat ist ein möglicher Zusammenhang, kein Beleg für eine Umsetzung. Audit: `data/export/baustellen_kandidaten.tsv`; Stichprobe zur Prüfung von Hand und Bericht: `data/export/baustellen/`, `baustellen/PHASE3.md`.
 
 ## Fremdcode und externe Dienste
 
