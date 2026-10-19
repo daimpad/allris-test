@@ -146,6 +146,9 @@ Soll-Modell der Prozessebene
 - soll/: Verfahrensmodell und Zuständigkeitsordnung aus „Bonn entscheidet“ (feste Kopie, MIT) mit eigenen
   Ergänzungen und Korrekturen (ergaenzungen.json) und Quelle (QUELLE.md)
 - audit_soll.tsv: Verfahren je Vorgang (Stammnummer), Sicherheit, Grund, beratende Gremien Ist und Soll, Passung
+- bonn/soll.json: Verfahren mit Schritten und Rechtsgrundlagen, Fristen, Zuständigkeit für die Seite; je Vorlage
+  das Feld soll (Zuordnung abgeleitet; Abweichungen sind Befunde, keine Bewertung; keine Rechtsauskunft)
+- berichte/soll/: Berichte der Phasen 1 und 2
 
 Grenzen: Eine Baustelle ist kein Beleg für die Umsetzung eines Beschlusses. Termine sind laut Quelle
 unverbindlich; die Historie der Baustellen beginnt mit dem Archiv (19.10.2026). Pläne im Verfahren
@@ -184,4 +187,6 @@ def package(target=None, archive=None):
         for path in reports:
             if path.exists():
                 z.write(path, "allris-bonn/berichte/" + ("PHASE0.md" if path.name == "BERICHT.md" else path.name))
+        for path in sorted((config.ROOT / "soll").glob("PHASE*.md")):
+            z.write(path, "allris-bonn/berichte/soll/" + path.name)
     print(f"Datenpaket → {target} ({target.stat().st_size // 1024} KB)")

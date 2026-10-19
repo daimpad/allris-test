@@ -21,6 +21,45 @@ BAULEIT_RE = re.compile(r"Bebauungsplan|Satzungsbeschluss|Aufstellungsbeschluss|
                         r"Flächennutzungsplan|frühzeitige[nr]? (Öffentlichkeits)?[Bb]eteiligung", re.I)
 BAULEIT_SICHER = re.compile(r"Bebauungsplan|Flächennutzungsplan(änderung)?\b.*(Aufstellung|"
                             r"Offenlage|Satzung|Beteiligung|Änderung)", re.I)
+# Rechtsgrundlagen als Links (nach recht.py in bonn-entscheidet, MIT): Kurzform → (Name, Adresse)
+_ORTSRECHT = "https://www.bonn.de/service-bieten/stadtpolitik-ortsrecht/ortsrecht/"
+GESETZE = {
+    "GeschO": ("Geschäftsordnung des Rates", _ORTSRECHT + "rat-ausschuesse-allgemeines/geschaeftsordnung-des-rates-der-bundesstadt-bonn.php"),
+    "HS": ("Hauptsatzung", _ORTSRECHT + "rat-ausschuesse-allgemeines/hauptsatzung.php"),
+    "BezS": ("Bezirkssatzung", _ORTSRECHT + "rat-ausschuesse-allgemeines/bezirkssatzung.php"),
+    "ZustO": ("Zuständigkeitsordnung", _ORTSRECHT + "rat-ausschuesse-allgemeines/zustaendigkeitsordnung-ratsausschuesse.php"),
+    "Satzung": ("Satzung Einwohnerantrag und Bürgerbegehren", _ORTSRECHT + "recht-sicherheit/"
+                "satzung-zum-verfahren-bei-einwohnerantraegen-buergerbegehren-und-buergerentscheiden.php"),
+    "Leitlinien": ("Leitlinien Beteiligung", "https://www.bonn.de/medien-global/amt-30/ortsrecht/Bonn_Leitlinien_fuer_Beteiligung_2026.pdf"),
+    "GO NRW": ("Gemeindeordnung NRW", "https://recht.nrw.de/lrgv/gesetz/"
+               "01012026-gemeindeordnung-fuer-das-land-nordrhein-westfalen-bekanntmachung-der/"),
+    "BauGB": ("Baugesetzbuch", "https://www.gesetze-im-internet.de/bbaug/"),
+}
+_PREFIX = ("GeschO", "HS", "BezS", "ZustO", "Satzung", "Leitlinien")
+_SUFFIX_RE = re.compile(r"(§§?\s*[^;§]*?)\s*\b(GO NRW|BauGB)\b")
+_PREFIX_RE = re.compile(r"\b(" + "|".join(_PREFIX) + r")\b\s*(.*?)(?=\s*[,;]\s*(?:\b(?:" + "|".join(_PREFIX) + r")\b|§)|\s*$)")
+
+
+def rechtsgrundlagen(beleg):
+    """„§ 24 GO NRW, GeschO § 27“ → [{label, url}] in der Reihenfolge des Vorkommens; Unbekanntes entfällt."""
+    if not beleg:
+        return []
+    found, rest = [], beleg
+    for m in _SUFFIX_RE.finditer(beleg):
+        found.append((m.start(), m.group(2), m.group(1).strip(" ,(")))
+        rest = rest[:m.start()] + " " * (m.end() - m.start()) + rest[m.end():]
+    for m in _PREFIX_RE.finditer(rest):
+        found.append((m.start(), m.group(1), m.group(2).strip(" ,;)")))
+    out, seen = [], set()
+    for _, kurz, para in sorted(found):
+        name, url = GESETZE[kurz]
+        label = f"{name} {para}".strip()
+        if label not in seen:
+            seen.add(label)
+            out.append({"label": label, "url": url})
+    return out
+
+
 AUDIT = ["stammnummer", "jahr", "typ", "verfahren", "sicherheit", "grund", "dokumente", "ist_bahnen",
          "soll_bahnen", "passung", "abweichung"]
 
@@ -126,6 +165,47 @@ def abgleich(db, modell):
                      "soll_bahnen": ",".join(sorted(soll)), "passung": passung,
                      "abweichung": ",".join(sorted(ist - soll)) if passung == "weicht ab" else ""})
     return rows
+
+
+_INDEX = {"db": None, "rows": {}}
+
+
+def lookup(db, reference):
+    """Soll-Angaben zum Vorgang einer Vorlage (für den Export); einmal je Datenbankverbindung berechnet."""
+    if _INDEX["db"] is not db:
+        _INDEX.update(db=db, rows={r["stammnummer"]: r for r in abgleich(db, Modell())})
+    r = _INDEX["rows"].get(stammnummer(reference))
+    if not r:
+        return None
+    return {"verfahren": r["verfahren"] or None, "sicherheit": r["sicherheit"] or None, "grund": r["grund"],
+            "passung": r["passung"], "ist": r["ist_bahnen"].split(",") if r["ist_bahnen"] else [],
+            "abweichung": r["abweichung"].split(",") if r["abweichung"] else []}
+
+
+def site_data(modell=None):
+    """Verfahren, Bahnen, Fristen und Zuständigkeit für die Seite (data/export/bonn/soll.json)."""
+    m = modell or Modell()
+    step = lambda s: {k: v for k, v in {"id": s["id"], "label": s.get("label") or s["was"], "was": s["was"],
+                                         "bahn": s.get("bahn"), "beleg": s.get("beleg"),
+                                         "links": rechtsgrundlagen(s.get("beleg")), "eigen": s.get("eigen")}.items() if v}
+    verfahren = {vid: {"titel": v["titel"], "kurz": v.get("kurz"), "jedes_gremium": v.get("jedes_gremium", False),
+                       "schritte": [step(s) for s in v["schritte"]]} for vid, v in m.verfahren.items()}
+    # Zuordnung zum Gremium nur bei gleichem Namen; frühere Ausschüsse (andere Namen) erhalten keinen Abschnitt
+    zusto = {a["titel"]: {"nr": a["nr"], "rechte": [{k: r[k] for k in ("nr", "art", "inhalt", "an_bezirksvertretung")}
+                                                     for r in a["rechte"]]}
+             for a in m.zusto["ausschuesse"] if a["rechte"]}
+    return {
+        "meta": {"quelle": "Verfahrensmodell und Zuständigkeitsordnung aus „Bonn entscheidet“ (anster2025/bonn-entscheidet, "
+                           "Commit 26641f7, MIT) mit Ergänzungen und Korrekturen der RIS-Karte Bonn",
+                 "zusto_stand": m.zusto.get("stand"), "zusto_url": GESETZE["ZustO"][1],
+                 "hinweis": "Vereinfachtes Modell des Regelwerks, keine Rechtsauskunft. Abweichungen sind Befunde, keine Bewertung."},
+        "bahnen": {b["id"]: b["name"] for b in m.quelle["bahnen"]},
+        "verfahren": verfahren,
+        "fristen": [dict(f, links=rechtsgrundlagen(f.get("beleg"))) for f in m.quelle["fristen"]],
+        "zustaendigkeit": [dict(z, links=rechtsgrundlagen(z.get("beleg"))) for z in m.quelle["zustaendigkeit"]],
+        "zusto": zusto,
+        "ohne_soll": m.ohne_soll,
+    }
 
 
 def write():

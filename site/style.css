@@ -393,6 +393,9 @@ body.chat-open .leaflet-left { left: calc(var(--chat-w) + 32px); }
 .empty-list { padding: 14px 4px; color: var(--text-muted); }
 .empty-list p { margin: 0 0 8px; }
 .papers .more { padding: 10px 4px; }
+.soll { margin: 16px 0 8px; }
+.befund { margin: 6px 0; padding: 6px 8px; border-radius: 10px; background: rgba(124, 58, 237, 0.07); border: 1px dashed rgba(124, 58, 237, 0.45); font-size: 13px; color: var(--text); }
+.soll dl dt { font-weight: 600; margin-top: 6px; } .soll dl dd { margin: 0 0 4px; }
 .participate { margin: 16px 0 8px; padding: 10px 14px 4px; border-radius: 14px; background: rgba(124, 58, 237, 0.07); }
 .participate h4 { margin-top: 2px; }
 .participate ul { margin: 6px 0 8px; padding-left: 18px; font-size: 14px; }

@@ -60,7 +60,7 @@ class Zuordnung(unittest.TestCase):
         self.assertEqual(a("Dringlichkeitsentscheidung OB", "x", set(), set())[0], "dringlichkeitsentscheidung")
         self.assertEqual(a("Bürgerbrief", "x", set(), set(), {"Bürgerbrief": "…"})[0], None)
 
-    def test_abgleich(self):
+    def _db(self):
         db = sqlite3.connect(":memory:")
         db.executescript("""
             CREATE TABLE paper (id, reference, name, paper_type, date);
@@ -73,10 +73,44 @@ class Zuordnung(unittest.TestCase):
                                      ('p4', '261002', 'Brief', 'Bürgerbrief', '2026-01-03');
             INSERT INTO consultation VALUES ('p1', 'aus', 'Empfehlung'), ('p2', 'rat', 'Entscheidung'), ('p3', 'rat', 'Kenntnisnahme');
         """)
+        return db
+
+    def test_abgleich(self):
+        db = self._db()
         rows = {r["stammnummer"]: r for r in soll.abgleich(db, soll.Modell())}
         self.assertEqual((rows["261000"]["verfahren"], rows["261000"]["dokumente"], rows["261000"]["passung"]), ("antrag-rat", 2, "passt"))
         self.assertEqual((rows["261001"]["passung"], rows["261001"]["abweichung"]), ("weicht ab", "rat"))
         self.assertEqual(rows["261002"]["passung"], "ohne Soll")
+
+    def test_lookup_je_vorlage(self):
+        db = self._db()
+        s = soll.lookup(db, "261000-01 ST")
+        self.assertEqual((s["verfahren"], s["passung"], s["ist"]), ("antrag-rat", "passt", ["aus", "rat"]))
+        self.assertEqual(soll.lookup(db, "261001")["abweichung"], ["rat"])
+        self.assertIsNone(soll.lookup(db, "999999"))
+
+
+class Seite(unittest.TestCase):
+    def test_rechtsgrundlagen(self):
+        r = soll.rechtsgrundlagen("§ 24 GO NRW, GeschO §§ 7 Abs. 4, 9; BezS § 9")
+        self.assertEqual([x["label"] for x in r], ["Gemeindeordnung NRW § 24", "Geschäftsordnung des Rates §§ 7 Abs. 4, 9",
+                                                   "Bezirkssatzung § 9"])
+        self.assertTrue(all(x["url"].startswith("https://") for x in r))
+        self.assertEqual(soll.rechtsgrundlagen("ZustO")[0]["url"], soll.Modell().zusto["quelle"])
+        self.assertEqual(soll.rechtsgrundlagen(None), [])
+
+    def test_site_data(self):
+        d = soll.site_data()
+        self.assertIn("keine Rechtsauskunft", d["meta"]["hinweis"])
+        self.assertEqual(set(d["bahnen"]), {"ew", "rm", "bvm", "vw", "bv", "aus", "rat"})
+        schritte = [s for v in d["verfahren"].values() for s in v["schritte"]]
+        self.assertTrue(all(s.get("links") for s in schritte if s.get("beleg") and re.search(r"GeschO|BezS|GO NRW", s["beleg"])))
+        self.assertGreaterEqual(sum(1 for s in schritte if s.get("eigen")), 9)
+        self.assertTrue(d["verfahren"]["mitteilung"]["jedes_gremium"])
+        self.assertEqual(d["zusto"]["Ausschuss für Planen, Bauen und Denkmalschutz"]["nr"], "VII")
+        self.assertNotIn("Alle Ausschüsse und Unterausschüsse", d["zusto"])  # ohne Einzelrechte
+        self.assertTrue(all(f["links"] for f in d["fristen"] if f.get("beleg")))
+        self.assertIn("Bürgerbrief", d["ohne_soll"])
 
 
 if __name__ == "__main__":

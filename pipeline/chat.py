@@ -27,7 +27,7 @@ LUECKEN = [
     "Den Vollzug von Beschlüssen zeigt keine öffentliche Schnittstelle (Beschlusskontrolle).",
     "Ergebnisse und Sitzungstermine der Beratungen stammen aus OParl-Lite; nicht jede Beratung ist verknüpft.",
     "Einreichende, Themen, Parteien und Ortsbezüge der Stufe B sind abgeleitet und nicht vollständig geprüft.",
-    "Was das Regelwerk vorsieht (Zuständigkeitsordnung, Bezirkssatzung), ist nicht formalisiert.",
+    "Das Soll nach Regelwerk ist ein vereinfachtes Modell; abgeglichen wird nur, welche Gremienarten beraten haben.",
     "Abstimmungsergebnisse einzelner Fraktionen oder Personen sind nicht enthalten.",
 ]
 
@@ -44,6 +44,7 @@ def compact(p):
     d["originators"] = [{"actor": o["actor"], "actor_type": o["actor_type"], "derived": bool(o["derived"]),
                          "evidence": o["evidence"]} for o in p["originators"]]
     d["themes"] = p["themes"]
+    d["soll"] = p.get("soll")  # Soll nach Regelwerk (pipeline/soll.py), fehlt in älteren Exporten
     d["locations"] = [{k: loc[k] for k in LOC_FIELDS} for loc in p["locations"]]
     d["superordinated"] = [{k: r[k] for k in REL_FIELDS} for r in p["superordinated"]]
     d["subordinated"] = [{k: r[k] for k in REL_FIELDS} for r in p["subordinated"]]

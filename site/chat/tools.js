@@ -175,6 +175,35 @@ export function createTools({ load, today = berlinToday() } = {}) {
   const glossar = () => get("glossar.json");
   const plaene = () => get("bonn/plaene.json");
   const baustellen = () => get("bonn/baustellen.json");
+  const sollModell = () => get("bonn/soll.json");
+
+  // Soll nach Regelwerk (bonn/soll.json): Verfahren, Schritte mit Rechtsgrundlage, Abgleich der Gremienarten
+  async function sollAngaben(p, used) {
+    const s = p.soll;
+    if (!s) return {};
+    let d = null;
+    try { d = await sollModell(); } catch (e) { d = null; }
+    const v = d && s.verfahren ? d.verfahren[s.verfahren] : null;
+    const name = (b) => d?.bahnen[b] ?? b;
+    const o = { verfahren: v ? v.titel : null, zuordnung: s.grund, zuordnung_status: "abgeleitet", sicherheit: s.sicherheit, abgleich: s.passung };
+    if (s.passung === "weicht ab") o.befund = `Beraten hat auch ${s.abweichung.map(name).join(", ")}; das Regelwerk sieht das für dieses Verfahren nicht vor. Befund, keine Bewertung.`;
+    if (v) {
+      const ist = new Set(s.ist);
+      o.schritte = v.schritte.map((st) => {
+        const gremium = ["bv", "aus", "rat"].includes(st.bahn);
+        const status = gremium && ist.has(st.bahn) ? "belegt" : "soll";
+        used.add(status);
+        const x = { schritt: st.label, status, abgleich: status === "belegt" ? "Gremienart hat beraten" : gremium ? "keine Beratung dieser Gremienart" : "nicht abgeglichen" };
+        if (st.bahn) x.wer = name(st.bahn);
+        if (st.beleg) x.rechtsgrundlage = st.beleg;
+        if (st.links?.length) x.links = st.links.map((l) => l.url).filter((u, i, a) => a.indexOf(u) === i);
+        if (st.eigen) x.ergaenzung_ris_karte = true;
+        return x;
+      });
+    } else if (!s.verfahren) o.hinweis = d?.ohne_soll[p.paper_type] ?? "Kein Soll angenommen.";
+    if (d) o.quelle = `${d.meta.quelle}. ${d.meta.hinweis}`;
+    return { soll_nach_regelwerk: o };
+  }
 
   async function paper(ref) {
     const r = String(ref ?? "").trim();
@@ -318,6 +347,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
       return {
         drucksache: p.reference, titel: short(mask(p.name, p.paper_type)), stand: p.stand, stand_erklaerung: g.staende[p.stand] ?? null,
         schritte: out, folgevorlagen_gesamt: folge.length,
+        ...(await sollAngaben(p, used)),
         evidenzstatus: Object.fromEntries([...used].map((k) => [k, g.evidenz[k]])),
         quelle_id: p.source_object, quelle: "Beratungsfolge: OParl-API Stadt Bonn (CC0); Sitzungsdatum und Ergebnis: OParl-Lite (CC BY 4.0)",
       };
