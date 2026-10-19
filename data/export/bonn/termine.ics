@@ -6,15 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
 X-WR-TIMEZONE:Europe/Berlin
 BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005986
-DTSTAMP:20260918T140000Z
-DTSTART:20260918T140000Z
-SUMMARY:Beirat Bürgerbeteiligung (abgesagt)
-DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
- t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CANCELLED
-END:VEVENT
-BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005626
 DTSTAMP:20260922T160000Z
 DTSTART:20260922T160000Z
