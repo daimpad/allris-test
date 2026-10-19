@@ -142,6 +142,11 @@ Baustellen
   (neu, geändert, entfallen) und letzter Abruf je Feed, falls das Archiv vorlag
 - berichte/: Berichte der Phasen 0 bis 5 (Bebauungspläne und Baustellen)
 
+Soll-Modell der Prozessebene
+- soll/: Verfahrensmodell und Zuständigkeitsordnung aus „Bonn entscheidet“ (feste Kopie, MIT) mit eigenen
+  Ergänzungen und Korrekturen (ergaenzungen.json) und Quelle (QUELLE.md)
+- audit_soll.tsv: Verfahren je Vorgang (Stammnummer), Sicherheit, Grund, beratende Gremien Ist und Soll, Passung
+
 Grenzen: Eine Baustelle ist kein Beleg für die Umsetzung eines Beschlusses. Termine sind laut Quelle
 unverbindlich; die Historie der Baustellen beginnt mit dem Archiv (19.10.2026). Pläne im Verfahren
 sind im Datensatz der Stadt nicht enthalten.
@@ -166,6 +171,8 @@ def package(target=None, archive=None):
         for path in sorted((config.ROOT / "prozess").glob("*")):
             if path.suffix in (".md", ".tsv"):
                 z.write(path, "allris-bonn/prozess/" + path.name)
+        for path in sorted((config.ROOT / "data" / "soll").glob("*")):
+            z.write(path, "allris-bonn/soll/" + path.name)
         # Bebauungspläne und Baustellen: Flächen, Protokolle, Berichte
         for name in ("bebauungsplaene_bonn.geojson", "bebauungsplaene_protokoll.tsv"):
             if (config.GEO / name).exists():

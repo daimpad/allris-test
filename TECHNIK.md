@@ -59,6 +59,11 @@ Jeder Ortsbezug trägt `stage`, `method`, `confidence`, `evidence` und `source_o
 - Planchronik: Register je Plannummer (`plaene.json`) mit Verfahrensschritten nach BauGB aus dem Titel (§ 2 Abs. 1, § 3 Abs. 1, § 3 Abs. 2, § 10 Abs. 1; Inkrafttreten § 10 Abs. 3 aus den Plandaten).
 - Zeitleiste: Monatsaggregate je Gebiet (`zeit.json`), feinere Stufen aus den geladenen Vorlagen; Spur der Baustellen mit unscharfen Enden. Audit der Datumsangaben: `data/export/endenich/audit_zeit.tsv`; Abgleich mit der OParl-API: `data/export/verifikation_zeit.tsv`.
 
+## Soll-Modell der Prozessebene
+
+- `data/soll/`: Verfahrensmodell (13 Verfahren mit Schritten, Bahnen, Fristen, Belegen) und Zuständigkeitsordnung (18 Ausschüsse, 333 Rechte) aus „Bonn entscheidet“ (anster2025/bonn-entscheidet, Commit `26641f7`, MIT) als feste Kopie; `ergaenzungen.json` mit eigenen Schritten (Wege in Ausschuss und Bezirksvertretung, Kleine Anfrage, Anhörung der Bezirksvertretung) und drei Korrekturen, jeweils mit Beleg; `QUELLE.md`.
+- `pipeline/soll.py` (`python -m pipeline soll`): ordnet jeden Vorgang (Stammnummer) einem Verfahren zu (Regeln aus `einordnung.py` übernommen), gleicht die beratenden Gremienarten mit dem Soll ab und schreibt `data/export/audit_soll.tsv` (ohne Titel). Prüfung vor der Übernahme: `soll/phase0/BERICHT.md`; Stand: `soll/PHASE1.md`.
+
 ## Baustellen
 
 - `baustellen.yml` ruft täglich um 05:23 UTC die Feeds 14403, 14698 und 14755 ab (bis zu 10 Versuche, Prüfung gegen `numberMatched`) und schreibt in den Branch `archiv`: `baustellen.json` (Zustand je Baustelle), `protokoll.tsv` (neu, geändert, entfallen), Momentaufnahmen bei Änderungen, `STAND.json`. Eine Baustelle gilt nur bei vollständigem Abruf aller Feeds als entfallen.

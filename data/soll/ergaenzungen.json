@@ -1,0 +1,38 @@
+{
+ "hinweis": "Eigene Ergänzungen und Korrekturen der RIS-Karte Bonn zum übernommenen Verfahrensmodell (verfahren.json, zustaendigkeitsordnung.json aus anster2025/bonn-entscheidet, Commit 26641f7). Grundlage: soll/phase0/BERICHT.md. Jeder Eintrag hat einen Beleg; abgerufen am 19.10.2026 auf bonn.de.",
+ "stand": "2026-10-19",
+ "zusaetzliche_schritte": {
+  "antrag-rat": [
+   {"id": "a+aus", "bahn": "aus", "was": "Fachausschuss berät vor oder entscheidet über den Antrag", "label": "Fachausschuss", "beleg": "GeschO § 22 Abs. 1, § 7 Abs. 6"},
+   {"id": "a+bv", "bahn": "bv", "was": "Bezirksvertretung wird angehört, wenn der Antrag ihren Stadtbezirk betrifft", "label": "Anhörung BV", "beleg": "BezS § 9"}
+  ],
+  "grosse-anfrage": [
+   {"id": "g+aus", "bahn": "aus", "was": "Große Anfrage in einem Fachausschuss", "label": "Fachausschuss", "beleg": "GeschO § 22 Abs. 1, § 11"},
+   {"id": "g+bv", "bahn": "bv", "was": "Große Anfrage in der Bezirksvertretung; ein Mitglied genügt", "label": "Bezirksvertretung", "beleg": "GeschO § 23 Abs. 1, 3"}
+  ],
+  "dringlichkeitsantrag": [
+   {"id": "d+aus", "bahn": "aus", "was": "Dringlichkeitsantrag in einem Fachausschuss", "label": "Fachausschuss", "beleg": "GeschO § 22 Abs. 1"},
+   {"id": "d+bv", "bahn": "bv", "was": "Dringlichkeitsantrag in der Bezirksvertretung", "label": "Bezirksvertretung", "beleg": "GeschO § 23 Abs. 1"}
+  ],
+  "kleine-anfrage": [
+   {"id": "k+gremium", "bahn": "aus", "was": "Anfrage und Antwort werden einem Gremium zur Kenntnis gebracht", "label": "Kenntnisnahme", "beleg": "GeschO § 12 Abs. 3, § 22 Abs. 1"},
+   {"id": "k+bv", "bahn": "bv", "was": "Anfrage und Antwort werden der Bezirksvertretung zur Kenntnis gebracht", "label": "Kenntnisnahme", "beleg": "GeschO § 12 Abs. 3, § 23 Abs. 1"},
+   {"id": "k+rat", "bahn": "rat", "was": "Anfrage und Antwort werden dem Rat zur Kenntnis gebracht", "label": "Kenntnisnahme", "beleg": "GeschO § 12 Abs. 3"}
+  ],
+  "ausschuss-entscheidung": [
+   {"id": "e+bv", "bahn": "bv", "was": "Bezirksvertretung wird vor der Entscheidung angehört", "label": "Anhörung BV", "beleg": "BezS § 9"}
+  ]
+ },
+ "korrekturen": [
+  {"datei": "zustaendigkeitsordnung.json", "ausschuss": "VII", "nr": "2.16", "feld": "an_bezirksvertretung", "alt": false, "neu": true,
+   "beleg": "Zuständigkeitsordnung, Stand 9.7.2026: „Empfehlung an die zuständige Bezirksvertretung“"},
+  {"datei": "zustaendigkeitsordnung.json", "ausschuss": "VIII", "nr": "1.10", "feld": "an_bezirksvertretung", "alt": false, "neu": true,
+   "beleg": "Zuständigkeitsordnung, Stand 9.7.2026: „Empfehlung an die zuständige Bezirksvertretung“"},
+  {"datei": "verfahren.json", "verfahren": "beschlussvorlage", "ausgang": "Kosten ohne Haushaltsmittel", "feld": "dann",
+   "alt": "Finanzausschuss berät vor dem Rat", "neu": "Unterausschuss des Hauptausschusses Finanzen und Beteiligungsmanagement berät vor dem Rat",
+   "beleg": "GeschO § 22 Abs. 8"}
+ ],
+ "ohne_soll": {
+  "Bürgerbrief": "Geschäftsordnung, Hauptsatzung und Satzungen nennen kein Verfahren; kein Soll angenommen."
+ }
+}
