@@ -1,0 +1,177 @@
+{
+ "schritte_in_titeln": {
+  "Anfrage/Antrag/Stellungnahme (Folgevorlage)": 263,
+  "Aufstellungsbeschluss / Einleitung": 142,
+  "Frühzeitige Beteiligung (§ 3 Abs. 1 / § 4 Abs. 1 BauGB)": 125,
+  "Änderung": 122,
+  "kein Schritt-Stichwort": 108,
+  "Satzungsbeschluss (§ 10 BauGB)": 95,
+  "Aufhebung": 28,
+  "Offenlage / Veröffentlichung (§ 3 Abs. 2 BauGB)": 65
+ },
+ "plaene_vor_nach": {
+  "Plan nur mit Vorlagen nach Inkrafttreten": 50,
+  "Plan mit Vorlagen vor Inkrafttreten (Verfahren im RIS sichtbar)": 35
+ },
+ "vorlagen_mit_plan_geltungsbereich": 296,
+ "vergleich": {
+  "Straßenpunkt ≤ 250 m vom Geltungsbereich": 137,
+  "nur Plan, kein Straßentreffer": 87,
+  "Straßenpunkt im Geltungsbereich": 62,
+  "Straßenpunkt 250–1000 m": 10
+ },
+ "ortsteil_gleich": 207,
+ "vergleich_n": 209,
+ "stichprobe": [
+  [
+   "231025-03 ST",
+   "6222-2",
+   "Dransdorf",
+   "Justus-von-Liebig-Straße",
+   117,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Änderungsantrag der Koalition - Aufstellungsbeschluss sowie Beschluss zur Öffentlichen Auslegung des Bebauungs"
+  ],
+  [
+   "190409",
+   "7425-11",
+   "Buschdorf",
+   "Buschdorfer Straße",
+   218,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Einstellung des Verfahrens zur 1. Änderung Bebauungsplan Nr. 7425-11, Stadtbezirk Bonn, Ortsteil Buschdorf, „B"
+  ],
+  [
+   "200793",
+   "6920-1",
+   "Ramersdorf",
+   "Im Alten Wingert; Königswinterer Straße; Rastenweg",
+   95,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Beschluss zur frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des vorha"
+  ],
+  [
+   "191004-1 ST",
+   "7623-19",
+   "Nordstadt",
+   "Bornheimer Straße; Ellerstraße; Hochstadenring; Spessartstraße",
+   0,
+   "Straßenpunkt im Geltungsbereich",
+   "ja",
+   "Bürgerantrag: Verkehrsführung im Bereich Spessartstraße / Ellerstraße / Bornheimer Straße und Hochstadenring i"
+  ],
+  [
+   "221871-01 AA",
+   "7014-1",
+   "Lannesdorf",
+   "Deutschherrenstraße",
+   5,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Einleitungsbeschluss sowie Beschluss zur öffentlichen Auslegung des Entwurfs des vorhabenbezogenen Bebauungspl"
+  ],
+  [
+   "200216-1 AA",
+   "6918-2",
+   "Hochkreuz",
+   "Kennedyallee",
+   407,
+   "Straßenpunkt 250–1000 m",
+   "ja",
+   "Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 6918-2, Stadtbezirk Bad Godesbe"
+  ],
+  [
+   "253067",
+   "6920-1",
+   "Ramersdorf",
+   "Rastenweg",
+   199,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Beschluss zur Einleitung des Planverfahrens sowie Veröffentlichung des vorhabenbezogenen Bebauungsplans Nr. 69"
+  ],
+  [
+   "201308-01 AA",
+   "6322-3",
+   "Endenich",
+   "Am Propsthof",
+   25,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Bebauungsplan Nr. 6322-3 \"Am Propsthof\" - Mitteilung über die weitere Verfahrensweise Antrag zur Vorlage 20130"
+  ],
+  [
+   "212137",
+   "6719-7",
+   "Gronau",
+   "Joseph-Beuys-Allee",
+   35,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Weiterführung des Verfahrens Bebauungsplan Nr. 6719-7, Stadtbezirk Bonn, Ortsteil Gronau, „Joseph-Beuys-Allee“"
+  ],
+  [
+   "201250",
+   "7022-1",
+   "Holzlar",
+   "Am Rehsprung",
+   162,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Aufstellung und öffentliche Auslegung des vorhabenbezogenen Bebauungsplans Nr. 7022-1 der Bundesstadt Bonn, St"
+  ],
+  [
+   "232236",
+   "7014-1",
+   "Lannesdorf",
+   "Deutschherrenstraße",
+   5,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 7014-1 Deutschherrenstraße 175-"
+  ],
+  [
+   "230516",
+   "6820-2",
+   "Limperich",
+   "Himmerichweg; Landgrabenweg",
+   26,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Beschluss zur öffentlichen Auslegung des Entwurfs des des vorhabenbezogenen Bebauungsplanes Nr. 6820-2 „R(h)ei"
+  ],
+  [
+   "221871-02 ST",
+   "7014-1",
+   "Lannesdorf",
+   "Deutschherrenstraße",
+   5,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Einleitungsbeschluss sowie Beschluss zur öffentlichen Auslegung des Entwurfs des vorhabenbezogenen Bebauungspl"
+  ],
+  [
+   "220393-02 ST",
+   "6621-2",
+   "Südstadt",
+   "Loestraße",
+   5,
+   "Straßenpunkt ≤ 250 m vom Geltungsbereich",
+   "ja",
+   "Koalitionsänderungsantrag: Aufstellungsbeschluss sowie Beschluss zur öffentlichen Auslegung des Bebauungsplans"
+  ],
+  [
+   "201824",
+   "6323-1; 7423-78",
+   "Tannenbusch",
+   "Schneidemühler Straße",
+   0,
+   "Straßenpunkt im Geltungsbereich",
+   "ja",
+   "Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB zum vorhabenbezogenen Bebauungsplan Nr. 6323"
+  ]
+ ]
+}

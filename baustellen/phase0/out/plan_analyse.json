@@ -1,0 +1,187 @@
+{
+ "stand_db": [
+  [
+   "oparl-bonn",
+   "2026-10-18T12:13:36+00:00"
+  ],
+  [
+   "oparl-lite",
+   "2026-10-18T12:16:04+00:00"
+  ],
+  [
+   "osm",
+   "2026-10-17T15:49:06+00:00"
+  ],
+  [
+   "geo-bonn",
+   "2026-10-17"
+  ],
+  [
+   "bplan-bonn",
+   "2026-10-18T18:31:59+00:00"
+  ]
+ ],
+ "vorlagen_gesamt": 24915,
+ "pipeline_regex_vorlagen": 523,
+ "pipeline_regex_paare": 545,
+ "erweitert_vorlagen": 556,
+ "nur_erweitert_vorlagen": 33,
+ "nur_pipeline_vorlagen": 0,
+ "stadtweit": {
+  "vorlagen": 556,
+  "paare": 626,
+  "paare_je_klasse": {
+   "nicht_im_datensatz": 258,
+   "eindeutig": 366,
+   "nur_grundnummer": 2
+  },
+  "nummern_je_klasse": {
+   "nicht_im_datensatz": 56,
+   "eindeutig": 85,
+   "nur_grundnummer": 1
+  },
+  "vorlagen_je_bester_klasse": {
+   "nicht_im_datensatz": 233,
+   "eindeutig": 321,
+   "nur_grundnummer": 2
+  },
+  "distinct_nummern": 142
+ },
+ "endenich": {
+  "vorlagen": 34,
+  "paare": 36,
+  "paare_je_klasse": {
+   "eindeutig": 19,
+   "nicht_im_datensatz": 17
+  },
+  "nummern_je_klasse": {
+   "eindeutig": 4,
+   "nicht_im_datensatz": 3
+  },
+  "vorlagen_je_bester_klasse": {
+   "eindeutig": 19,
+   "nicht_im_datensatz": 15
+  },
+  "distinct_nummern": 7
+ },
+ "plaene_im_datensatz_endenich": [
+  "6322-1",
+  "6322-2 Teil A",
+  "6322-3",
+  "7422-3",
+  "7521-1",
+  "7521-10",
+  "7521-17",
+  "7521-19",
+  "7521-2",
+  "7521-20",
+  "7521-23",
+  "7521-25",
+  "7521-28",
+  "7521-48",
+  "7521-49",
+  "7521-5",
+  "7521-63",
+  "7521-83",
+  "7521-9",
+  "7521-91",
+  "7522-1",
+  "7522-12",
+  "7522-18",
+  "7522-23",
+  "7522-37",
+  "7522-4",
+  "7522-55",
+  "7522-72",
+  "7522-78",
+  "7522-79",
+  "7522-85",
+  "7522-93",
+  "7620-57",
+  "7621-18",
+  "7621-19",
+  "7621-28",
+  "7621-4",
+  "7621-53",
+  "7621-56"
+ ],
+ "vorlagen_mit_aenderung_im_titel": 122,
+ "plaene_im_datensatz_von_vorlagen_referenziert": 86,
+ "neueste_plaene_mit_vorlagen": [
+  [
+   "2026-09-23",
+   "6920-1",
+   9
+  ],
+  [
+   "2026-09-23",
+   "6719-5",
+   13
+  ],
+  [
+   "2026-07-08",
+   "6220-1",
+   15
+  ],
+  [
+   "2026-05-27",
+   "6822-1",
+   4
+  ],
+  [
+   "2026-02-11",
+   "8023-16",
+   5
+  ],
+  [
+   "2026-01-14",
+   "7014-1",
+   16
+  ],
+  [
+   "2025-10-22",
+   "6522-7",
+   6
+  ],
+  [
+   "2025-10-15",
+   "6622-3",
+   12
+  ],
+  [
+   "2025-10-15",
+   "6323-1",
+   6
+  ],
+  [
+   "2025-06-04",
+   "6122-1",
+   17
+  ],
+  [
+   "2025-01-15",
+   "6719-2",
+   9
+  ],
+  [
+   "2024-10-23",
+   "6522-6",
+   3
+  ],
+  [
+   "2024-08-28",
+   "6820-2",
+   13
+  ],
+  [
+   "2024-07-24",
+   "6222-2",
+   18
+  ],
+  [
+   "2024-02-28",
+   "6224-2",
+   7
+  ]
+ ]
+}
