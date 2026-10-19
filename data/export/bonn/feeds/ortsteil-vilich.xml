@@ -3,11 +3,35 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-vilich</id>
 <title>RIS-Karte Bonn – Vilich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Vilich</subtitle>
-<updated>2026-10-08T00:00:00Z</updated>
+<updated>2026-10-15T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-vilich.xml"/>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich"/>
 <author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029562#beratung-5</id>
+<title>Beirat Kinder- und Jugendbeteiligung: „geändert beschlossen“ – 261805 Veröffentlichung der Vorhabenliste: 164702 - Aufstellung des vorhabenbezogenen Bebauungsplans „Gartenstraße“</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261805"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029562"/>
+<summary>Empfehlung am 2026-10-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029507#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 261470-02 ST Bürgerantrag: Versetzung eines Tempo-30-Verkehrsschildes im Bereich Unterführung Gerhardstraße in Neu-Vilich</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261470-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029507"/>
+<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028900#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260621-02 ST Grüne Antrag: Umsetzung von Ad-hoc Maßnahmen zur Verbesserung der Verkehrssicherheit für Radfahrende auf der Siegburger Straße von der Kreuzung Pützchen Chaussee bis zur Maria-Montessori-Allee.</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260621-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028900"/>
+<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029662#vorlage</id>
 <title>Neue Vorlage 261453-01 ST: Vertagungsbitte zu Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Geislarstraße und Öffnung der Einbahnstraße im Bereich Stiftsstraße zwischen Dixstraße und Wittestraße für den Radverkehr</title>
@@ -22,7 +46,7 @@
 <updated>2026-10-01T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261805"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029562"/>
-<summary>Beschlussvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: offen</summary>
+<summary>Beschlussvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029507#vorlage</id>
@@ -30,7 +54,7 @@
 <updated>2026-09-30T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261470-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029507"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029529#vorlage</id>
@@ -38,7 +62,7 @@
 <updated>2026-09-24T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261721-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029529"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029492#vorlage</id>
@@ -54,7 +78,7 @@
 <updated>2026-09-18T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260621-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028900"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029371#vorlage</id>
@@ -78,7 +102,7 @@
 <updated>2026-09-16T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261721"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029396"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029346#vorlage</id>
@@ -114,11 +138,11 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028573#beratung-3</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260160-01 ST Instandsetzung und langfristige Sicherung des Feldweges zwischen Vilich und Geislar</title>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260160-01 ST Instandsetzung und langfristige Sicherung des Feldweges zwischen Vilich und Geislar</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260160-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028573"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028562#beratung-3</id>
@@ -146,19 +170,19 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027644#beratung-2</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260621-01 AA FDP-Änderungsantrag: Grüne Antrag: Umsetzung von Ad-hoc Maßnahmen zur Verbesserung der Verkehrssicherheit für Radfahrende auf der Siegburger Straße von der Kreuzung Pützchen Chaussee bis zur Maria-Montessori-Allee. Antrag zur Vorlage 260621</title>
+<title>Bezirksvertretung Beuel: „zurückgezogen“ – 260621-01 AA FDP-Änderungsantrag: Grüne Antrag: Umsetzung von Ad-hoc Maßnahmen zur Verbesserung der Verkehrssicherheit für Radfahrende auf der Siegburger Straße von der Kreuzung Pützchen Chaussee bis zur Maria-Montessori-Allee. Antrag zur Vorlage 260621</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260621-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027644"/>
-<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026447#beratung-3</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260621 Grüne Antrag: Umsetzung von Ad-hoc Maßnahmen zur Verbesserung der Verkehrssicherheit für Radfahrende auf der Siegburger Straße von der Kreuzung Pützchen Chaussee bis zur Maria-Montessori-Allee.</title>
+<title>Bezirksvertretung Beuel: „erledigt durch Stellungnahme der Verwaltung“ – 260621 Grüne Antrag: Umsetzung von Ad-hoc Maßnahmen zur Verbesserung der Verkehrssicherheit für Radfahrende auf der Siegburger Straße von der Kreuzung Pützchen Chaussee bis zur Maria-Montessori-Allee.</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260621"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026447"/>
-<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025646#beratung-3</id>
@@ -178,11 +202,11 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025393#beratung-3</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260160 CDU-, Grüne-, SPD-Bezirksfraktion, Linke, FDP -Antrag: Instandsetzung und langfristige Sicherung des Feldweges zwischen Vilich und Geislar</title>
+<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 260160 CDU-, Grüne-, SPD-Bezirksfraktion, Linke, FDP -Antrag: Instandsetzung und langfristige Sicherung des Feldweges zwischen Vilich und Geislar</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260160"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025393"/>
-<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023602#beratung-4</id>
@@ -214,7 +238,7 @@
 <updated>2026-08-31T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261323-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029042"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028573#vorlage</id>
@@ -222,7 +246,7 @@
 <updated>2026-08-31T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260160-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028573"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028807#vorlage</id>
@@ -230,7 +254,7 @@
 <updated>2026-08-17T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261470-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028807"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028738#vorlage</id>
@@ -254,7 +278,7 @@
 <updated>2026-08-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261470"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028779"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028769#vorlage</id>
@@ -262,7 +286,7 @@
 <updated>2026-08-05T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261462"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028769"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028752#vorlage</id>
@@ -334,7 +358,7 @@
 <updated>2026-07-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#261323"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028420"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028320#beratung-2</id>
@@ -550,7 +574,7 @@
 <updated>2026-05-21T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260621-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027644"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027512#vorlage</id>
@@ -638,7 +662,7 @@
 <updated>2026-04-08T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260621"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026447"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026191#vorlage</id>
@@ -766,7 +790,7 @@
 <updated>2026-02-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#260160"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025393"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025182#vorlage</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#253900-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025272"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025272#beratung-2</id>
-<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 253900-02 AA Volt-/Linke-Änderungsantrag zu Bürgerantrag: Bau einer Beleuchtung am Fuß- und Fahrradweg entlang der B56 zwischen Kreuzung B56/Gerhardstraße bis hinter die DB-Eisenbahn-/S13-Brücke Abzweig nach Neu-Vilich Antrag zur Vorlage 253900</title>
-<updated>2026-01-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#253900-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025272"/>
-<summary>Entscheidung am 2026-01-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024801#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 253900-01 ST Bürgerantrag: Bau einer Beleuchtung am Fuß- und Fahrradweg entlang der B56 zwischen Kreuzung B56/Gerhardstraße bis hinter die DB-Eisenbahn-/S13-Brücke Abzweig nach Neu-Vilich</title>
-<updated>2026-01-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#253900-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024801"/>
-<summary>Kenntnisnahme am 2026-01-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024537#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 253900 Bürgerantrag: Bau einer Beleuchtung am Fuß- und Fahrradweg entlang der B56 zwischen Kreuzung B56/Gerhardstraße bis hinter die DB-Eisenbahn-/S13-Brücke Abzweig nach Neu-Vilich</title>
-<updated>2026-01-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:vilich#253900"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024537"/>
-<summary>Entscheidung am 2026-01-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

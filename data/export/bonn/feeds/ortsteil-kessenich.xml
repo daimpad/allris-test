@@ -3,18 +3,42 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-kessenich</id>
 <title>RIS-Karte Bonn – Kessenich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Kessenich</subtitle>
-<updated>2026-10-11T00:00:00Z</updated>
+<updated>2026-10-13T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-kessenich.xml"/>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich"/>
 <author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029586#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 261644-01 ST Vertagungsbitte zum Bürgerantrag: Prüfung der Freihaltung des Straßenbahngleisbereichs zwischen Reuterstraße und Quirinusplatz</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261644-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029586"/>
+<summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029265#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 261349-01 ST Stellungnahme zum Bürgerantrag: Einrichtung eines Fußgängerüberwegs (Zebrastreifen) im Kreuzungsbereich Franz-Lohe-Straße/ August-Bier-Straße</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261349-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029265"/>
+<summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028815#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 261327-01 ST Stellungnahme zum Grüne-Bezirksfraktion-Antrag  zur Beschilderung der Graf-Stauffenberg-Straße zwischen der Einmündung Heinrich-Lützeler-Straße und der Einmündung Im Wingert mit dem Schild Zeichen 277.1 (Verbot des Überholens von einspurigen Fahrzeugen für mehrspurige Kraftfahrzeuge) sowie Markierung der Fahrstreifenbegrenzung mit dem Zeichen 295 (durchgezogene Linie)</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261327-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028815"/>
+<summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029774#vorlage</id>
 <title>Neue Vorlage 260540-02 ST: Stellungnahme zum Grüne-Bezirksfraktion-Antrag: Schaffung eines Tempo-30-Lückenschlusses in der Karl-Barth-Straße</title>
 <updated>2026-10-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#260540-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029774"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029586#vorlage</id>
@@ -22,7 +46,7 @@
 <updated>2026-10-07T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261644-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029586"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029265#vorlage</id>
@@ -30,7 +54,7 @@
 <updated>2026-10-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261349-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029265"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029686#vorlage</id>
@@ -62,7 +86,7 @@
 <updated>2026-09-23T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#260128-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029540"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028815#vorlage</id>
@@ -70,7 +94,7 @@
 <updated>2026-09-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261327-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028815"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029394#vorlage</id>
@@ -78,7 +102,7 @@
 <updated>2026-09-15T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261719"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029394"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029183#vorlage</id>
@@ -86,7 +110,7 @@
 <updated>2026-09-01T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261644"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029183"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028994#vorlage</id>
@@ -118,7 +142,7 @@
 <updated>2026-08-05T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261327"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028441"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028597#vorlage</id>
@@ -134,7 +158,7 @@
 <updated>2026-08-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#260540-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026464"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028689#vorlage</id>
@@ -182,7 +206,7 @@
 <updated>2026-07-13T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#261349"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028519"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028149#beratung-3</id>
@@ -226,11 +250,11 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026301#beratung-2</id>
-<title>Bezirksvertretung Bonn: „vertagt - mit Maßgabe“ – 260540 Grüne-Bezirksfraktion-Antrag: Schaffung eines Tempo-30-Lückenschlusses in der Karl-Barth-Straße</title>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 260540 Grüne-Bezirksfraktion-Antrag: Schaffung eines Tempo-30-Lückenschlusses in der Karl-Barth-Straße</title>
 <updated>2026-06-23T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#260540"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026301"/>
-<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026050#beratung-3</id>
@@ -462,7 +486,7 @@
 <updated>2026-03-31T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#260540"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026301"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026304#vorlage</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#254047"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024869"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024541#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253795-01 ST Bürgerantrag: Antrag auf verkehrsberuhigende Maßnahmen im Bereich Bergstraße/Burbacher Straße/Kessenicher Straße/Hans-Riegel-Straße in Bonn-Kessenich</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#253795-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024541"/>
-<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024350#beratung-3</id>
-<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 253795 Bürgerantrag: Antrag auf verkehrsberuhigende Maßnahmen im Bereich Bergstraße/Burbacher Straße/Kessenicher Straße/Hans-Riegel-Straße in Bonn-Kessenich</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#253795"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024350"/>
-<summary>Entscheidung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024541#vorlage</id>
-<title>Neue Vorlage 253795-01 ST: Bürgerantrag: Antrag auf verkehrsberuhigende Maßnahmen im Bereich Bergstraße/Burbacher Straße/Kessenicher Straße/Hans-Riegel-Straße in Bonn-Kessenich</title>
-<updated>2025-11-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:kessenich#253795-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024541"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

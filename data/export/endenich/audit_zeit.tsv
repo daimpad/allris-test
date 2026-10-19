@@ -2,7 +2,7 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 261798-01	datum_vorlage	2026-10-13	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 261798-01	beratung: Rat (Genehmigung)			unklar	Beratung ohne verknüpfte Sitzung
 261553-01 ST	datum_vorlage	2026-10-09	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-261553-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+261553-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2026-10-13	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 261529-06	datum_vorlage	2026-10-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 261529-06	beratung: Bezirksvertretung Bonn (Entscheidung)			unklar	Beratung ohne verknüpfte Sitzung
 261529-07	datum_vorlage	2026-10-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert

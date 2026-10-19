@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-schwarzrheindorf-vilich-rheindorf</id>
 <title>RIS-Karte Bonn – Schwarzrheindorf / Vilich-Rheindorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Schwarzrheindorf / Vilich-Rheindorf</subtitle>
-<updated>2026-10-08T00:00:00Z</updated>
+<updated>2026-10-14T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-schwarzrheindorf-vilich-rheindorf.xml"/>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029679#beratung-3</id>
+<title>Bezirksvertretung Beuel: „vertagt“ – 261466-02 ST Grüne Große Anfrage: Sachstand zur Einrichtung einer zusätzliche Bushaltestelle an der Kreuzung Niederkasseler Straße/Liestraße</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261466-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029679"/>
+<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029662#vorlage</id>
 <title>Neue Vorlage 261453-01 ST: Vertagungsbitte zu Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Geislarstraße und Öffnung der Einbahnstraße im Bereich Stiftsstraße zwischen Dixstraße und Wittestraße für den Radverkehr</title>
@@ -22,7 +30,7 @@
 <updated>2026-10-07T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261466-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029679"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029756#vorlage</id>
@@ -30,7 +38,7 @@
 <updated>2026-10-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261506-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029756"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029492#vorlage</id>
@@ -66,7 +74,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029018#beratung-3</id>
-<title>Bezirksvertretung Beuel: „vertagt“ – 261508-01 ST Optimierung der Ampelschaltung der Ampel für Zufußgehende und Radfahrende bei Querung der B56 von der KöWi in die Niederkasseler Straße</title>
+<title>Bezirksvertretung Beuel: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261508-01 ST Optimierung der Ampelschaltung der Ampel für Zufußgehende und Radfahrende bei Querung der B56 von der KöWi in die Niederkasseler Straße</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261508-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029018"/>
@@ -82,7 +90,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028857#beratung-3</id>
-<title>Bezirksvertretung Beuel: „vertagt - mit Maßgabe“ – 261508 Grüne-Antrag: Optimierung der Ampelschaltung der Ampel für Zufußgehende und Radfahrende bei Querung der B56 von der KöWi in die Niederkasseler Straße</title>
+<title>Bezirksvertretung Beuel: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261508 Grüne-Antrag: Optimierung der Ampelschaltung der Ampel für Zufußgehende und Radfahrende bei Querung der B56 von der KöWi in die Niederkasseler Straße</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261508"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028857"/>
@@ -98,11 +106,11 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028855#beratung-2</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261506 Grüne-Bezirksfraktion-Antrag zur Nordbrückensperrung: Optimierung der verkehrlichen Maßnahmen in Schwarzrheindorf/Combahnviertel</title>
+<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 261506 Grüne-Bezirksfraktion-Antrag zur Nordbrückensperrung: Optimierung der verkehrlichen Maßnahmen in Schwarzrheindorf/Combahnviertel</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261506"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028855"/>
-<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028774#beratung-2</id>
@@ -182,7 +190,7 @@
 <updated>2026-08-18T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261506"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028855"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028738#vorlage</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#242214-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023398"/>
 <summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023319#beratung-5</id>
-<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 253385 Wohnbauliche Entwicklung im Bereich ‚Kommentalweg‘ im Stadtbezirk Bonn-Beuel, Ortsteil Vilich-Rheindorf</title>
-<updated>2025-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#253385"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023319"/>
-<summary>Anhörung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

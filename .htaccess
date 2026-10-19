@@ -5,6 +5,8 @@ AddDefaultCharset utf-8
 AddType application/json .json
 AddType application/geo+json .geojson
 AddType text/tab-separated-values .tsv
+AddType application/manifest+json .webmanifest
+AddType image/svg+xml .svg
 AddCharset utf-8 .json .geojson .tsv .md .js .css
 
 <IfModule mod_deflate.c>
@@ -16,6 +18,10 @@ AddCharset utf-8 .json .geojson .tsv .md .js .css
   ExpiresActive On
   ExpiresByType application/json "access plus 1 hour"
   ExpiresByType application/geo+json "access plus 1 day"
+  ExpiresByType image/png "access plus 1 week"
+  ExpiresByType image/svg+xml "access plus 1 week"
+  ExpiresByType image/x-icon "access plus 1 week"
 </IfModule>
 
 RedirectMatch 404 /\.git
+ErrorDocument 404 /404.html

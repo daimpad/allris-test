@@ -3,18 +3,26 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-hoholz</id>
 <title>RIS-Karte Bonn – Hoholz</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Hoholz</subtitle>
-<updated>2026-10-04T00:00:00Z</updated>
+<updated>2026-10-14T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-hoholz.xml"/>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:hoholz"/>
 <author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029372#beratung-3</id>
+<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261521-01 ST Bürgerantrag: Antrag auf verkehrsberuhigende Maßnahmen im Bereich Siebengebirgsstraße</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:hoholz#261521-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029372"/>
+<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029372#vorlage</id>
 <title>Neue Vorlage 261521-01 ST: Bürgerantrag: Antrag auf verkehrsberuhigende Maßnahmen im Bereich Siebengebirgsstraße</title>
 <updated>2026-10-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:hoholz#261521-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029372"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028879#vorlage</id>
@@ -22,7 +30,7 @@
 <updated>2026-08-13T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:hoholz#261521"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028879"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025472#vorlage</id>

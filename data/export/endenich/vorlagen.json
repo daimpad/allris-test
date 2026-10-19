@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 576,
-  "generated_at": "2026-10-19T06:35:08+00:00",
+  "generated_at": "2026-10-19T08:47:58+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-19T06:30:05+00:00"
+    "retrieved_at": "2026-10-19T08:27:18+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-19T06:33:03+00:00"
+    "retrieved_at": "2026-10-19T08:45:53+00:00"
    },
    {
     "name": "osm",
@@ -222,15 +222,15 @@
      "position": 0,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": null,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005621",
      "gremium": "Bezirksvertretung Bonn",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2026-10-13T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "2.9.1",
+     "result": "zur Kenntnis genommen - mit Maßgabe",
+     "public": 1,
+     "status": "beraten"
     }
    ],
    "superordinated": [
@@ -274,7 +274,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029611",
-   "stand": "offen",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -319,9 +319,13 @@
      "role": "Kenntnisnahme",
      "status": "belegt",
      "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "date": "2026-10-13",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "2.9.1",
+     "result": "zur Kenntnis genommen - mit Maßgabe",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     }
    ]
   },
@@ -1445,8 +1449,8 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": "6.9.1",
-     "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
+     "number": "6.8.1",
+     "result": "zur Kenntnis genommen",
      "public": 1,
      "status": "beraten"
     }
@@ -1506,7 +1510,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029126",
-   "stand": "in Beratung",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "bauen",
@@ -1552,11 +1556,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "number": "6.9.1",
-     "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
+     "number": "6.8.1",
+     "result": "zur Kenntnis genommen",
      "stand": "beraten",
-     "result_source": "oparl-lite",
-     "schleife": true
+     "result_source": "oparl-lite"
     }
    ]
   },
@@ -2340,8 +2343,8 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": "2.19",
-     "result": "vertagt",
+     "number": "2.9",
+     "result": "zur Kenntnis genommen - mit Maßgabe",
      "public": 1,
      "status": "beraten"
     }
@@ -2387,7 +2390,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028952",
-   "stand": "in Beratung",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -2427,11 +2430,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "number": "2.19",
-     "result": "vertagt",
+     "number": "2.9",
+     "result": "zur Kenntnis genommen - mit Maßgabe",
      "stand": "beraten",
-     "result_source": "oparl-lite",
-     "schleife": true
+     "result_source": "oparl-lite"
     },
     {
      "typ": "folgevorlage",
@@ -4167,7 +4169,7 @@
      "meeting": "Sitzung der Bezirksvertretung Bonn",
      "start_date": "2026-06-23T15:00:00.000Z",
      "cancelled": 0,
-     "number": "6.47.1",
+     "number": "6.38.1",
      "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
      "public": 1,
      "status": "beraten"
@@ -4248,7 +4250,7 @@
      "date": "2026-06-23",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
-     "number": "6.47.1",
+     "number": "6.38.1",
      "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
      "stand": "beraten",
      "result_source": "oparl-lite",
@@ -5116,7 +5118,7 @@
      "meeting": "Sitzung der Bezirksvertretung Bonn",
      "start_date": "2026-06-23T15:00:00.000Z",
      "cancelled": 0,
-     "number": "6.9",
+     "number": "6.8",
      "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
      "public": 1,
      "status": "beraten"
@@ -5234,7 +5236,7 @@
      "date": "2026-06-23",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
-     "number": "6.9",
+     "number": "6.8",
      "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
      "stand": "beraten",
      "result_source": "oparl-lite",
@@ -5834,7 +5836,7 @@
      "meeting": "Sitzung der Bezirksvertretung Bonn",
      "start_date": "2026-06-23T15:00:00.000Z",
      "cancelled": 0,
-     "number": "6.47",
+     "number": "6.38",
      "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
      "public": 1,
      "status": "beraten"
@@ -5932,7 +5934,7 @@
      "date": "2026-06-23",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
-     "number": "6.47",
+     "number": "6.38",
      "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
      "stand": "beraten",
      "result_source": "oparl-lite",

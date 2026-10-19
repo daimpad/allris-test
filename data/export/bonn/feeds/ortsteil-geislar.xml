@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-geislar</id>
 <title>RIS-Karte Bonn – Geislar</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Geislar</subtitle>
-<updated>2026-10-08T00:00:00Z</updated>
+<updated>2026-10-14T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-geislar.xml"/>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar"/>
 <author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029679#beratung-3</id>
+<title>Bezirksvertretung Beuel: „vertagt“ – 261466-02 ST Grüne Große Anfrage: Sachstand zur Einrichtung einer zusätzliche Bushaltestelle an der Kreuzung Niederkasseler Straße/Liestraße</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#261466-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029679"/>
+<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029662#vorlage</id>
 <title>Neue Vorlage 261453-01 ST: Vertagungsbitte zu Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Geislarstraße und Öffnung der Einbahnstraße im Bereich Stiftsstraße zwischen Dixstraße und Wittestraße für den Radverkehr</title>
@@ -22,7 +30,7 @@
 <updated>2026-10-07T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#261466-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029679"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029371#vorlage</id>
@@ -42,7 +50,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029018#beratung-3</id>
-<title>Bezirksvertretung Beuel: „vertagt“ – 261508-01 ST Optimierung der Ampelschaltung der Ampel für Zufußgehende und Radfahrende bei Querung der B56 von der KöWi in die Niederkasseler Straße</title>
+<title>Bezirksvertretung Beuel: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261508-01 ST Optimierung der Ampelschaltung der Ampel für Zufußgehende und Radfahrende bei Querung der B56 von der KöWi in die Niederkasseler Straße</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#261508-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029018"/>
@@ -58,7 +66,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028857#beratung-3</id>
-<title>Bezirksvertretung Beuel: „vertagt - mit Maßgabe“ – 261508 Grüne-Antrag: Optimierung der Ampelschaltung der Ampel für Zufußgehende und Radfahrende bei Querung der B56 von der KöWi in die Niederkasseler Straße</title>
+<title>Bezirksvertretung Beuel: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261508 Grüne-Antrag: Optimierung der Ampelschaltung der Ampel für Zufußgehende und Radfahrende bei Querung der B56 von der KöWi in die Niederkasseler Straße</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#261508"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028857"/>
@@ -82,11 +90,11 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028573#beratung-3</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260160-01 ST Instandsetzung und langfristige Sicherung des Feldweges zwischen Vilich und Geislar</title>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260160-01 ST Instandsetzung und langfristige Sicherung des Feldweges zwischen Vilich und Geislar</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#260160-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028573"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026497#beratung-3</id>
@@ -98,11 +106,11 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025393#beratung-3</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260160 CDU-, Grüne-, SPD-Bezirksfraktion, Linke, FDP -Antrag: Instandsetzung und langfristige Sicherung des Feldweges zwischen Vilich und Geislar</title>
+<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 260160 CDU-, Grüne-, SPD-Bezirksfraktion, Linke, FDP -Antrag: Instandsetzung und langfristige Sicherung des Feldweges zwischen Vilich und Geislar</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#260160"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025393"/>
-<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024719#beratung-3</id>
@@ -126,7 +134,7 @@
 <updated>2026-08-31T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#260160-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028573"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029018#vorlage</id>
@@ -334,7 +342,7 @@
 <updated>2026-02-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#260160"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025393"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025161#vorlage</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#231709"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013808"/>
 <summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2013327#vorlage</id>
-<title>Neue Vorlage 231470: Koalitionsantrag: Entschärfung der Gefahrensituation L16 Niederkasseler Straße Querung Liestraße</title>
-<updated>2023-08-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:geislar#231470"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013327"/>
-<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 </feed>
