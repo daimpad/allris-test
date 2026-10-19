@@ -14,7 +14,7 @@ Du arbeitest als Webentwickler:in mit Erfahrung in Open-Data-Pipelines und Geoda
 | Punkt | Entscheidung |
 |---|---|
 | Projektname / Repository | `allris-bonn`, öffentlich auf GitHub als `daimpad/allris-test`; die Seite heißt **RIS-Karte Bonn** |
-| Veröffentlichung | GitHub Pages (https://daimpad.github.io/allris-test/), täglich 04:17 UTC neu erzeugt; zusätzlich Branch `deploy` mit der fertigen Seite für `ris-bonn.datenatlas.de` (netcup-Webhosting, Plesk-Git mit Webhook) |
+| Veröffentlichung | Hauptadresse https://ris-bonn.datenatlas.de/ (netcup-Webhosting, Plesk-Git aus dem Branch `deploy` mit Webhook; `SITE_URL`); Spiegel auf GitHub Pages (https://daimpad.github.io/allris-test/); täglich 04:17 UTC neu erzeugt |
 | Gestaltung | Leiste mit Suche (ganz Bonn, Schnellfilter) und Mega-Menüs Auswertung, Mitmachen, Daten; interaktive Angebote als deutliche Schaltflächen; Liste und Vorgang in der Breite ziehbar; Karte vollflächig, alle Flächen einklappbar darüber; Glass-Stil (DESIGN.md „Arc Browser Glass“), Akzent für Text abgedunkelt (Kontrast); Kartenhintergrund grau mit Umschalter „Farbige Karte“; Quellen stets im Akkordeon; beim Start nur das Fenster „Los geht's“ mit Tour durch alle Funktionen, Standardgebiet Bonn-Zentrum; WCAG 2.1 AA |
 | Code-Lizenz | MIT |
 | Räumlicher Umfang | Ganz Bonn; Pilot und erste Auslieferung: Ortsteil **Endenich** (Stadtbezirk Bonn) |
@@ -109,7 +109,7 @@ Eine öffentliche, statisch auslieferbare Webanwendung, die Ratsinformationen in
 - Themen und Parteien: Grundversion umgesetzt (Abschnitt 9); offen sind die Prüfung der Zuordnung an einer Stichprobe (`audit_themen.tsv`), ein Themen-Layer auf der Karte und die Suche im Volltext der Dokumente (abhängig von der PDF-Lizenz)
 - Stufe C (Volltext, Sprachmodell) zurückgestellt, bis die Lizenz der PDFs geklärt ist
 - Stichprobe zur Prüfung von Hand: `data/export/endenich/stichprobe_pruefung.tsv` (50 Vorlagen) ausstehend; Text im Dialog „Über“ gegenlesen
-- Eigene Domain: A-Eintrag `ris-bonn` muss auf die Web-Adresse des Hostings zeigen (91.204.46.169, nicht die Mail-Adresse .171); danach Let's-Encrypt-Zertifikat, Plesk-Git (Branch `deploy`) und Webhook; anschließend `SITE_URL` auf `https://ris-bonn.datenatlas.de/` umstellen (gilt auch für canonical, Open Graph, `robots.txt`, `sitemap.xml`); Google Search Console: Eigentum bestätigen und Sitemap einreichen
+- Eigene Domain läuft (19.10.2026), `SITE_URL` umgestellt; offen: Google Search Console (Eigentum bestätigen, Sitemap einreichen). Verbesserungsliste als GitHub-Issues
 - Soll-Modell der Prozessebene (Zuständigkeitsordnung, Bezirkssatzung) nicht formalisiert
 - Beitrag an OParl-Lite (Felder `location`, `underDirectionOf`) als Issue auf Codeberg – nur nach Rückfrage, da nach außen wirksam
 - Hackathon-Rahmen: Datum, Teilnehmende, erwartetes Ergebnisformat (Demo, Repository, Datensatz)

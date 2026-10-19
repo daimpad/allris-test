@@ -63,4 +63,4 @@ SOURCES = {
 PILOT_ORTSTEIL = "Endenich"
 
 # Öffentliche Adresse der Seite (für absolute Links in Feeds, Kalender und DCAT-Beschreibung)
-SITE_URL = os.environ.get("SITE_URL", "https://daimpad.github.io/allris-test/")
+SITE_URL = os.environ.get("SITE_URL", "https://ris-bonn.datenatlas.de/")

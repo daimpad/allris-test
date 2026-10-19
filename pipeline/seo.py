@@ -9,7 +9,7 @@ from xml.sax.saxutils import escape
 
 from . import config
 
-DEFAULT_URL = "https://daimpad.github.io/allris-test/"
+DEFAULT_URL = "https://daimpad.github.io/allris-test/"  # Platzhalter in site/, wird durch SITE_URL ersetzt
 PAGES = ("index.html", "404.html")
 
 

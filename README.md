@@ -2,7 +2,7 @@
 
 Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschließen: Wo liegt eine Vorlage, wo steht das Verfahren, wer ist beteiligt? Jede Angabe ist auf ihr Quellobjekt rückführbar; abgeleitete Angaben sind gekennzeichnet. Pilot und erste Auslieferung: Ortsteil Endenich.
 
-**Seite:** https://daimpad.github.io/allris-test/ (vorläufige Fassung) · **Datenpaket:** https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip
+**Seite:** https://ris-bonn.datenatlas.de/ (Spiegel: https://daimpad.github.io/allris-test/) · **Datenpaket:** https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip
 
 ## Was die Seite zeigt
 
@@ -111,11 +111,11 @@ Der Workflow schreibt die fertige Seite nach jedem Lauf zusätzlich in den Branc
 1. Subdomain anlegen und ein SSL-Zertifikat (Let's Encrypt) ausstellen.
 2. „Git“ bei der Subdomain: entferntes Repository `https://github.com/daimpad/allris-test.git`, Branch `deploy`, automatische Bereitstellung in das Dokumentstammverzeichnis.
 3. Die von Plesk angezeigte Webhook-URL in GitHub unter Settings → Webhooks eintragen (Ereignis: push). Dann holt der Server jede neue Fassung selbst.
-4. Im Workflow `SITE_URL` auf die neue Adresse setzen; damit folgen Feeds, Kalender, DCAT, canonical, Open Graph, `robots.txt` und `sitemap.xml`.
+4. `SITE_URL` (Standard in `pipeline/config.py`, sonst Umgebungsvariable) bestimmt die Hauptadresse; ihr folgen Feeds, Kalender, DCAT, canonical, Open Graph, `robots.txt` und `sitemap.xml`.
 
 ## Auffindbarkeit
 
-Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site.webmanifest`), Beschreibung, canonical, Open Graph und Twitter-Karte mit Vorschaubild (`og-image.jpg`), strukturierte Daten (schema.org `WebSite`, `WebApplication`), `noscript`-Hinweis mit Links zu den Daten und eine Fehlerseite (`404.html`). `python -m pipeline seo` schreibt `robots.txt` und `sitemap.xml` in die zusammengestellte Seite und setzt `SITE_URL` in die absoluten Adressen ein. Bei GitHub Pages liegt die Seite unter einem Unterpfad; dort werten Suchmaschinen `robots.txt` nicht aus, die Sitemap lässt sich in der Search Console einreichen.
+Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site.webmanifest`), Beschreibung, canonical, Open Graph und Twitter-Karte mit Vorschaubild (`og-image.jpg`), strukturierte Daten (schema.org `WebSite`, `WebApplication`), `noscript`-Hinweis mit Links zu den Daten und eine Fehlerseite (`404.html`). `python -m pipeline seo` schreibt `robots.txt` und `sitemap.xml` in die zusammengestellte Seite und setzt `SITE_URL` in die absoluten Adressen ein. Hauptadresse ist `https://ris-bonn.datenatlas.de/` (Standard von `SITE_URL`) mit `robots.txt` an der Wurzel; der Spiegel auf GitHub Pages verweist per canonical darauf. Die Sitemap lässt sich in der Google Search Console einreichen.
 
 ## Fremdcode und externe Dienste
 
