@@ -576,6 +576,24 @@
     }
   }
 
+  // Beteiligung: nächste Sitzung eines beteiligten Gremiums (laut Sitzungsliste der Stadt), Bürgerantrag
+  const BUERGERANTRAG = "https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php";
+  function participate(p) {
+    const today = new Date().toISOString().slice(0, 10);
+    const gremien = new Set(p.steps.filter((s) => s.typ === "beratung" || s.typ === "entscheidung").map((s) => s.label));
+    const next = zeit && p.stand !== "entschieden"
+      ? zeit.meetings.find((m) => m.date >= today && !m.cancelled && gremien.has(m.gremium)) : null;
+    const onAgenda = next && p.steps.some((s) => s.label === next.gremium && s.date === next.date);
+    const meeting = next ? `<li>Nächste Sitzung eines beteiligten Gremiums: <strong>${esc(next.gremium)}</strong>, ${fmtDay(next.date)}${next.time ? `, ${esc(next.time)} Uhr` : ""}${onAgenda ? " – die Vorlage steht dort auf der Tagesordnung <span class=\"derived\">abgeleitet, über OParl-Lite</span>" : ""}.
+      ${link(next.web, "Tagesordnung") || "Die Tagesordnung erscheint etwa zwei Wochen vorher."} Die Sitzung ist in der Regel öffentlich; Sie können zuhören.</li>` : "";
+    const done = p.stand === "entschieden" ? "<li>Das Verfahren ist entschieden. Neue Anliegen zum Thema lassen sich mit einem Bürgerantrag einbringen.</li>" : "";
+    return `<section class="participate" aria-labelledby="participate-h"><h4 id="participate-h">Selbst mitwirken</h4><ul>
+      ${meeting}${done}
+      <li>Mit einem <a href="${BUERGERANTRAG}" target="_blank" rel="noopener">Bürgerantrag nach § 24 GO NRW<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a> bringen Sie Anregungen und Beschwerden selbst ein.</li>
+      ${hasPaperFeed(p) ? "<li>Mit dem Feed „Diesen Vorgang abonnieren“ (unten) erfahren Sie von neuen Beratungen und Ergebnissen.</li>" : ""}
+    </ul></section>`;
+  }
+
   function select(p, fromMap) {
     selected = p;
     document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", String(b.dataset.ref === p.reference)));
@@ -610,6 +628,7 @@
       <h4>Prozesslinie</h4>
       <ol class="steps">${p.steps.map(stepHtml).join("")}</ol>
       ${legend()}${glossary(p)}
+      ${participate(p)}
       <h4>Ortsbezug</h4><ul class="locs">${locs}</ul>
       ${(p.plans || []).length ? `<h4>Bebauungspläne</h4><ul class="locs plans">${p.plans.map((x) => `<li data-plan="${esc(x.nr)}"><strong>Bebauungsplan ${esc(x.nr)}</strong>
         ${x.area ? '<span class="plan-meta">– Geltungsbereich auf der Karte</span>' : " – nicht im Datensatz der rechtskräftigen Pläne (vermutlich noch im Verfahren); keine Fläche verfügbar"}
