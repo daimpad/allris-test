@@ -44,6 +44,7 @@ Befund: „mittel“ besteht überwiegend aus Bürgeranträgen zu Tempo 30, Ampe
 | Kandidaten | Ergebnis | Folge |
 |---|---|---|
 | 1–6 (hoch) | plausibel; 212110 und 221785 sind Bürgeranträge mit Planungsbezug | „hoch“ nur noch für Baubeschlüsse (Kriterium Baubeschluss); Kandidaten mit „hoch“ in ganz Bonn von 11 auf 7 |
+| 7–12 | wie Vorprüfung: 4 plausibel, 1 unklar, 1 nicht plausibel | 211463 (Grundsatzbeschluss Stiftsplatz) bleibt „mittel“; kein neues Bau-Stichwort |
 
 ## Empfehlung
 
