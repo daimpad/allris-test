@@ -31,7 +31,7 @@
   const LIMITS = `<details class="acc"><summary>Was diese Darstellung nicht zeigen kann</summary><ul>
     <li>Verwaltungsinterne Abläufe vor dem Datum der Vorlage (Erarbeitung, Mitzeichnung, Freigaben).</li>
     <li>Den Vollzug von Beschlüssen: Die Beschlusskontrolle hat keine öffentliche Schnittstelle.</li>
-    <li>Was das Regelwerk vorsieht (Soll): Zuständigkeitsordnung und Bezirkssatzung sind noch nicht formalisiert.</li>
+    <li>Ob jeder Schritt nach Regelwerk eingehalten wurde: Das Soll ist ein vereinfachtes Modell; abgeglichen wird nur, welche Gremienarten beraten haben, nicht Reihenfolge, Fristen oder Rollen.</li>
     <li>Inhalte nichtöffentlicher Beratungen und Vorlagen vor Oktober 2019.</li>
     <li>Sitzungen und Ergebnisse, die OParl-Lite (noch) nicht verknüpft.</li></ul>
     <p class="hint">Abweichungen zwischen Regel und Ablauf sind Befunde, keine Bewertung.</p></details>`;
@@ -635,7 +635,7 @@
   }
   function legend() {
     return `<details class="acc"><summary>Legende Evidenzstatus</summary><div class="legend">${["belegt", "abgeleitet", "nicht_öffentlich", "unklar"]
-      .map((s) => `<span><span class="mark mark-${s}" aria-hidden="true">${s === "unklar" ? "?" : ""}</span><strong>${STATUS[s]}</strong> – ${STATUS_TEXT[s] || ""}</span>`).join("")}
+      .concat("soll").map((s) => `<span><span class="mark mark-${s}" aria-hidden="true">${s === "unklar" ? "?" : ""}</span><strong>${STATUS[s]}</strong> – ${STATUS_TEXT[s] || ""}</span>`).join("")}
       <span class="hint">Linie: durchgezogen = belegt, gestrichelt = abgeleitet, gepunktet = nicht öffentlich oder unklar.</span></div></details>`;
   }
   function glossary(p) {
@@ -864,6 +864,61 @@
     if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
     $("#detail h3").focus();
   }
+  // Soll-Modell (data/export/bonn/soll.json): Verfahren nach Regelwerk aus „Bonn entscheidet“ (MIT) mit Ergänzungen;
+  // abgeglichen wird je Vorgang nur, welche Gremienarten beraten haben (pipeline/soll.py)
+  let sollData = null;
+  const loadSoll = () => (sollData ||= index ? fetch(BONN + "soll.json").then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null));
+  const GREMIUM_BAHN = new Set(["bv", "aus", "rat"]);
+  const lawLinks = (links) => (links || []).map((l) => link(l.url, esc(l.label))).filter(Boolean).join(" · ");
+  function sollStep(st, d, ist) {
+    const status = GREMIUM_BAHN.has(st.bahn) && ist.has(st.bahn) ? "belegt" : "soll";
+    const note = status === "belegt" ? "Gremienart hat beraten (belegt)" : GREMIUM_BAHN.has(st.bahn) ? "soll, keine Beratung dieser Gremienart" : "soll, nicht abgeglichen";
+    const who = st.bahn ? `Wer: ${esc(d.bahnen[st.bahn] || st.bahn)}<br>` : "";
+    return `<li class="step" data-status="${status}"><span class="mark mark-${status}" aria-hidden="true"></span>
+      <div class="step-head">${esc(st.label)}<span class="step-status">${note}</span></div>
+      <div class="step-body">${who}${st.was !== st.label ? esc(st.was) + "<br>" : ""}${st.links ? `Rechtsgrundlage: ${lawLinks(st.links)}` : st.beleg ? `Rechtsgrundlage: ${esc(st.beleg)}` : ""}
+        ${st.eigen ? ' <span class="derived">Ergänzung der RIS-Karte</span>' : ""}</div></li>`;
+  }
+  function zustoHtml(p, d) {
+    const names = [...new Set(p.steps.filter((s) => s.typ === "beratung" || s.typ === "entscheidung").map((s) => s.label))];
+    const hits = names.filter((n) => d.zusto[n]);
+    const sections = hits.map((n) => {
+      const z = d.zusto[n];
+      const ent = z.rechte.filter((r) => r.art === "Entscheidung");
+      return `<p><strong>${esc(n)}</strong> – Zuständigkeitsordnung, Abschnitt ${esc(z.nr)}: ${z.rechte.length} Rechte, davon ${ent.length} Entscheidungen.</p>
+        ${ent.length ? `<details class="acc"><summary>Entscheidungsrechte (${ent.length})</summary><ul>${ent.map((r) =>
+          `<li>${esc(z.nr)} ${esc(r.nr)}: ${esc(r.inhalt)}${r.an_bezirksvertretung ? " (Empfehlung an die zuständige Bezirksvertretung)" : ""}</li>`).join("")}</ul></details>` : ""}`;
+    }).join("");
+    return sections ? `${sections}<p class="hint">Welches Recht im Einzelfall greift, steht nur in der Vorlage. Zuordnung über den Namen des Gremiums; frühere Ausschüsse mit anderem Namen erscheinen nicht. ${link(d.meta.zusto_url, "Zuständigkeitsordnung")}, Stand ${esc(d.meta.zusto_stand || "")}.</p>` : "";
+  }
+  async function showSoll(p) {
+    const box = document.querySelector("#detail .soll-box");
+    if (!box) return;
+    const d = await loadSoll();
+    if (selected !== p || !box.isConnected) return;
+    if (!d) { box.innerHTML = '<p class="hint">Das Soll-Modell konnte nicht geladen werden.</p>'; return; }
+    const s = p.soll;
+    const ist = new Set(s.ist);
+    const v = s.verfahren && d.verfahren[s.verfahren];
+    const befund = s.passung === "weicht ab"
+      ? `<div class="befund"><strong>Befund:</strong> Beraten hat auch ${esc(s.abweichung.map((b) => d.bahnen[b] || b).join(", "))}. Das Regelwerk sieht das für dieses Verfahren nicht vor. Das ist ein Befund, keine Bewertung; das Modell ist vereinfacht.</div>`
+      : s.passung === "ohne Beratung" ? '<p class="hint">In den Daten ist keine Beratung verzeichnet; ein Abgleich entfällt.</p>' : "";
+    const body = v ? `<p><strong>${esc(v.titel)}</strong>${v.kurz ? ` – ${esc(v.kurz)}` : ""}<br>
+        <span class="derived">Zuordnung abgeleitet: ${esc(s.grund)}; Sicherheit ${esc(s.sicherheit)}</span></p>${befund}
+      <p class="hint">Schritte nach Regelwerk. Nicht jeder Schritt kommt in jedem Fall vor. Abgeglichen wird nur, ob eine Gremienart beraten hat.</p>
+      <ol class="steps">${v.schritte.map((st) => sollStep(st, d, ist)).join("")}</ol>`
+      : `<p>Vorlagenart „${esc(p.paper_type)}“: ${esc(d.ohne_soll[p.paper_type] || "kein Verfahren im Regelwerk; kein Soll angenommen.")}</p>`;
+    const zusto = zustoHtml(p, d);
+    box.innerHTML = `${body}
+      <details class="acc"><summary>Wer entscheidet was?</summary><div>${zusto}<dl>${d.zustaendigkeit.map((z) =>
+        `<dt>${esc(z.frage)}</dt><dd>${esc(z.antwort)}${z.links.length ? `<br><span class="meta">Fundstelle: ${lawLinks(z.links)}</span>` : ""}</dd>`).join("")}</dl></div></details>
+      <details class="acc"><summary>Fristen vor einer Sitzung</summary><ul>${d.fristen.map((f) =>
+        `<li><strong>${esc(f.label)}</strong>: ${esc(f.was)}${f.links.length ? ` · ${lawLinks(f.links)}` : ""}</li>`).join("")}</ul></details>
+      <details class="acc"><summary>Quelle des Soll-Modells</summary><ul>
+        <li>${esc(d.meta.quelle)} · ${link("https://github.com/anster2025/bonn-entscheidet", "Bonn entscheidet")}</li>
+        <li>${esc(d.meta.hinweis)}</li></ul></details>`;
+  }
+
   // Station „mögliche Umsetzung“ in der Prozesslinie (neben dem Vollzug, der unklar bleibt)
   function umsetzungHtml(p) {
     const hits = bauByRef.get(p.reference) || [];
@@ -928,6 +983,7 @@
       <h4>Prozesslinie</h4>
       <ol class="steps">${p.steps.map(stepHtml).join("")}${umsetzungHtml(p)}</ol>
       ${legend()}${glossary(p)}
+      ${p.soll && index ? '<section class="soll" aria-labelledby="soll-h"><h4 id="soll-h">Nach Regelwerk (Soll)</h4><div class="soll-box"><p class="hint">Wird geladen …</p></div></section>' : ""}
       ${participate(p)}
       <h4>Ortsbezug</h4><ul class="locs">${locs}</ul>
       ${(p.plans || []).length ? `<h4>Bebauungspläne</h4><ul class="locs plans">${p.plans.map((x) => `<li data-plan="${esc(x.nr)}"><strong>Bebauungsplan ${esc(x.nr)}</strong>
@@ -945,6 +1001,7 @@
     $("#announce").textContent = `Vorgang ${p.reference} geöffnet: ${p.name}`;
     fillMitmachen();
     showPlans(p, !fromMap);
+    if (p.soll && index) showSoll(p);
     if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
     $("#detail").scrollTop = 0;
     const ms = markers.get(p.reference) || [];
