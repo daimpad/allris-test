@@ -129,6 +129,9 @@ class Seite(unittest.TestCase):
         self.assertTrue(all(x["url"].startswith("https://") for x in r))
         self.assertEqual(soll.rechtsgrundlagen("ZustO")[0]["url"], soll.Modell().zusto["quelle"])
         self.assertEqual(soll.rechtsgrundlagen(None), [])
+        # mehrere Paragrafen eines Gesetzes bleiben zusammen (eigene Ergänzungen, z. B. d+aus)
+        self.assertEqual([x["label"] for x in soll.rechtsgrundlagen("GeschO § 22 Abs. 1, § 7 Abs. 6; ZustO")],
+                         ["Geschäftsordnung des Rates § 22 Abs. 1, § 7 Abs. 6", "Zuständigkeitsordnung"])
 
     def test_site_data(self):
         d = soll.site_data()

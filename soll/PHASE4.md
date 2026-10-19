@@ -80,9 +80,15 @@ Die Stichprobe bleibt unverändert. Ihre Zeile zu 230577 zeigt noch den alten Be
 - Browser auf Desktop (1440 px) und Mobil (390 px): axe-core ohne Verstöße.
 - Datenpaket: Stichprobe, Vorprüfung und Berichte der Phasen 1 bis 4 (`berichte/soll/`); Lizenzzeile in `data/LICENSE-DATA.md`.
 
+## Belege der Ergänzungen (geprüft 19.10.2026)
+
+`soll/pruefung/belege_ergaenzungen.tsv` enthält 13 Belege (10 Schritte, 3 Korrekturen) mit dem Wortlaut der Fundstelle und der KI-Vorprüfung. Der Auftraggeber hat 8 bestätigt und 5 als teilweise eingestuft; diese sind präzisiert:
+- a+aus: Beleg um die Zuständigkeitsordnung ergänzt;
+- d+aus, d+bv: Beleg um GeschO § 7 Abs. 5 ergänzt;
+- a+bv, e+bv: Anhörung nur in Angelegenheiten nach BezS § 9.
+
 ## Noch zu tun (Auftraggeber)
 
 - Stichprobe von Hand prüfen (Spalten `pruef_*`, `pruefvermerk`).
-- Belege der eigenen Ergänzungen in `data/soll/ergaenzungen.json` von Hand prüfen.
 - Über die offene Empfehlung entscheiden.
 - Kontakt zum Autor von „Bonn entscheidet“; ein Hinweis auf die zwei Merkmale der Zuständigkeitsordnung (Phase 0) ist möglich.

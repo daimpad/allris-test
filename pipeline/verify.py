@@ -150,6 +150,8 @@ Soll-Modell der Prozessebene
   das Feld soll (Zuordnung abgeleitet; Abweichungen sind Befunde, keine Bewertung; keine Rechtsauskunft)
 - soll/stichprobe_soll.tsv: Stichprobe (30 Vorgänge) zur Prüfung von Hand (Zuordnung, Befund, Mitwirkung;
   Spalten pruef_*); soll/vorpruefung_soll.tsv: Vorprüfung durch KI, gekennzeichnet, ersetzt sie nicht
+- soll/pruefung/belege_ergaenzungen.tsv: Belege der eigenen Ergänzungen mit Wortlaut der Fundstelle,
+  KI-Vorprüfung und Prüfvermerk von Hand
 - berichte/soll/: Berichte der Phasen 1 bis 4
 
 Grenzen: Eine Baustelle ist kein Beleg für die Umsetzung eines Beschlusses. Termine sind laut Quelle
@@ -191,4 +193,6 @@ def package(target=None, archive=None):
                 z.write(path, "allris-bonn/berichte/" + ("PHASE0.md" if path.name == "BERICHT.md" else path.name))
         for path in sorted((config.ROOT / "soll").glob("PHASE*.md")):
             z.write(path, "allris-bonn/berichte/soll/" + path.name)
+        for path in sorted((config.ROOT / "soll" / "pruefung").glob("*.tsv")):
+            z.write(path, "allris-bonn/soll/pruefung/" + path.name)
     print(f"Datenpaket → {target} ({target.stat().st_size // 1024} KB)")
