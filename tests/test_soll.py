@@ -45,6 +45,9 @@ class Modell(unittest.TestCase):
         d = soll.site_data(self.m)
         self.assertEqual([r["id"] for r in d["mitwirken"]], [r["id"] for r in raw["einfluss_regeln"]])
         self.assertTrue(next(r for r in d["mitwirken"] if r["id"] == "sitzung-besuchen")["links"])
+        # ergänzte Bedingung: Offenlage-Hinweis nur bei offenen Verfahren (Quelle ohne Status-Bedingung)
+        self.assertEqual(next(r for r in d["mitwirken"] if r["id"] == "offenlage")["wenn"]["status"], ["offen", "vertagt"])
+        self.assertNotIn("status", next(r for r in raw["einfluss_regeln"] if r["id"] == "offenlage")["wenn"])
 
     def test_korrektur_passt_nicht_zur_quelle(self):
         with tempfile.TemporaryDirectory() as tmp:

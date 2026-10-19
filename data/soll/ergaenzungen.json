@@ -59,6 +59,13 @@
    "neu": "Wie es um den Vorgang steht, zeigen die Daten nicht. Fragen Sie eine Fraktion oder Bezirksverordnete: Sie können per Anfrage bei der Verwaltung nachhaken. Eigene Fragen stellen Sie in der Einwohnerfragestunde einer Bezirksvertretung."}
   ]
  },
+ "regel_bedingungen": {
+  "hinweis": "Zusätzliche Bedingungen für Einflussregeln (einfluss_regeln); die Regel selbst bleibt unverändert.",
+  "regeln": [
+   {"id": "offenlage", "wenn": {"status": ["offen", "vertagt"]},
+    "grund": "Der Hinweis auf die Offenlage ist nur sinnvoll, solange das Verfahren läuft; Entscheidung des Auftraggebers bei der Prüfung der Stichprobe (200556), 19.10.2026"}
+  ]
+ },
  "ohne_soll": {
   "Bürgerbrief": "Geschäftsordnung, Hauptsatzung und Satzungen nennen kein Verfahren; kein Soll angenommen."
  }
