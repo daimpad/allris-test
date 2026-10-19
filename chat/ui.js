@@ -18,6 +18,7 @@ const TOOL_LABEL = {
   suche_vorlagen: "Vorlagen suchen", hole_vorlage: "Vorlage abrufen", hole_prozesslinie: "Prozesslinie abrufen",
   suche_ort: "Orte suchen", liste_sitzungen: "Sitzungen abrufen", hole_gremium_oder_amt: "Gremium oder Amt abrufen",
   erklaere_begriff: "Begriff nachschlagen", datenstand: "Datenstand abrufen",
+  suche_bebauungsplan: "Bebauungspläne suchen", suche_baustellen: "Baustellen suchen",
 };
 
 const store = {

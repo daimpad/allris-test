@@ -213,6 +213,62 @@
     "@type": "dct:RightsStatement",
     "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
    }
+  },
+  {
+   "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/plaene.json",
+   "@type": "dcat:Distribution",
+   "dct:title": {
+    "@language": "de",
+    "@value": "Planregister Bebauungspläne (JSON)"
+   },
+   "dct:description": {
+    "@language": "de",
+    "@value": "Je Plannummer aus Vorlagentiteln: rechtskräftige Pläne mit Inkrafttreten (Stadt Bonn), Ortsteile und Vorlagen mit den im Titel genannten Verfahrensschritten nach BauGB (abgeleitet)."
+   },
+   "dcat:accessURL": {
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/plaene.json"
+   },
+   "dcat:downloadURL": {
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/plaene.json"
+   },
+   "dcat:mediaType": {
+    "@id": "https://www.iana.org/assignments/media-types/application/json"
+   },
+   "dct:license": {
+    "@id": "http://publications.europa.eu/resource/authority/licence/CC0"
+   },
+   "dct:rights": {
+    "@type": "dct:RightsStatement",
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
+   }
+  },
+  {
+   "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/baustellen.json",
+   "@type": "dcat:Distribution",
+   "dct:title": {
+    "@language": "de",
+    "@value": "Baustellen und mögliche Umsetzungen (JSON)"
+   },
+   "dct:description": {
+    "@language": "de",
+    "@value": "Gemeldete Baustellen der Stadt Bonn (Termine unverbindlich, Archiv ab 19.10.2026) mit möglichen Umsetzungen von Beschlüssen der Konfidenz hoch – ein Indiz, kein Beleg."
+   },
+   "dcat:accessURL": {
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/baustellen.json"
+   },
+   "dcat:downloadURL": {
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/baustellen.json"
+   },
+   "dcat:mediaType": {
+    "@id": "https://www.iana.org/assignments/media-types/application/json"
+   },
+   "dct:license": {
+    "@id": "http://publications.europa.eu/resource/authority/licence/CC0"
+   },
+   "dct:rights": {
+    "@type": "dct:RightsStatement",
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
+   }
   }
  ]
 }
