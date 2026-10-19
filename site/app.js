@@ -55,7 +55,7 @@
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null;
-  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [];
+  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null;
   // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
   let search = null, searchLoading = null;
   const THEMES = {  // wie pipeline/topics.THEMES
@@ -64,6 +64,10 @@
     kultur: "Kultur und Sport", wirtschaft: "Wirtschaft und Finanzen", sicherheit: "Sicherheit und Ordnung",
     beteiligung: "Beteiligung, Integration und Internationales",
   };
+  // Farben der Themen auf der Karte (in Anlehnung an Okabe-Ito, unterscheidbar bei Farbfehlsichtigkeit; weißer Rand)
+  const THEME_COLOR = { verkehr: "#0072b2", bauen: "#d55e00", umwelt: "#009e73", bildung: "#cc79a7", kinder: "#e69f00",
+    soziales: "#882255", kultur: "#56b4e9", wirtschaft: "#8c6d1f", sicherheit: "#332288", beteiligung: "#44aa99" };
+  const NO_THEME = "#8a8a96";
   const THEME_METHOD = { amt: "Amt", gremium: "Gremium", stichwort: "Stichwort im Titel" };
 
   // --- Flächen ein- und ausklappen ---------------------------------------------------------------
@@ -343,6 +347,37 @@
       },
     });
     new MapStyle().addTo(map);
+    // Farbe der Punkte: Sicherheit der Ortsangabe (Standard) oder Thema; Legende darunter
+    colorBy = new URLSearchParams(location.search).get("farbe") === "thema" ? "thema" : "sicherheit";
+    const ColorBy = L.Control.extend({
+      options: { position: "bottomright" },
+      onAdd() {
+        const b = L.DomUtil.create("button", "map-style map-color");
+        b.type = "button";
+        b.textContent = "Farbe nach Thema";
+        b.setAttribute("aria-pressed", String(colorBy === "thema"));
+        b.addEventListener("click", () => {
+          colorBy = colorBy === "thema" ? "sicherheit" : "thema";
+          b.setAttribute("aria-pressed", String(colorBy === "thema"));
+          drawMarkers(lastMarkers);
+          syncUrl();
+        });
+        L.DomEvent.disableClickPropagation(b);
+        return b;
+      },
+    });
+    new ColorBy().addTo(map);
+    const Legend = L.Control.extend({
+      options: { position: "bottomleft" },
+      onAdd() {
+        const d = L.DomUtil.create("details", "map-legend");
+        d.open = !MOBILE.matches;
+        L.DomEvent.disableClickPropagation(d);
+        L.DomEvent.disableScrollPropagation(d);
+        return d;
+      },
+    });
+    legendEl = new Legend().addTo(map).getContainer();
     cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 40, animate: !REDUCED }).addTo(map);
   }
   function mapPadding() {
@@ -361,14 +396,29 @@
     map.fitBounds(outline.getBounds(), mapPadding());
   }
   const color = (c) => getComputedStyle(document.documentElement).getPropertyValue("--" + c).trim();
+  function markerColor(p, l) {
+    if (colorBy !== "thema") return color(l.confidence);
+    const t = (p.themes || [])[0];
+    return t ? THEME_COLOR[t.theme] || NO_THEME : NO_THEME;
+  }
+  function drawLegend() {
+    const rows = colorBy === "thema"
+      ? [...Object.entries(THEMES).map(([k, v]) => [THEME_COLOR[k], v]), [NO_THEME, "ohne Thema"]]
+      : [[color("hoch"), "Ort gesichert (Koordinate der Stadt)"], [color("mittel"), "Ort erschlossen (Name im Titel)"], [color("niedrig"), "Ort unsicher (mehrdeutig)"]];
+    legendEl.innerHTML = `<summary>Legende: ${colorBy === "thema" ? "Thema" : "Sicherheit des Orts"}</summary><ul>${rows
+      .map(([c, t]) => `<li><span class="swatch" style="background:${c}" aria-hidden="true"></span>${esc(t)}</li>`).join("")}</ul>
+      ${colorBy === "thema" ? '<p class="hint">Bei mehreren Themen zählt das erste. Themen sind abgeleitet.</p>' : ""}`;
+  }
   function drawMarkers(list) {
+    lastMarkers = list;
+    if (legendEl) drawLegend();
     cluster.clearLayers();
     markers.clear();
     for (const p of list) {
       const ms = areaLocs(p).filter((l) => (l.level === "strasse" || l.level === "bebauungsplan") && l.lon != null).map((l) => {
-        const m = L.circleMarker([l.lat, l.lon], { ...MARKER, fillColor: color(l.confidence) })
+        const m = L.circleMarker([l.lat, l.lon], { ...MARKER, fillColor: markerColor(p, l) })
           .bindTooltip(`${esc(p.reference)} · ${esc(l.name)}`).on("click", () => select(p, true));
-        m.baseColor = color(l.confidence);
+        m.baseColor = markerColor(p, l);
         return m;
       });
       ms.forEach((m) => cluster.addLayer(m));
@@ -889,6 +939,7 @@
     if (tl && range) { const s = tl.getState(); for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.set(k, s[k]); }
     else for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.delete(k);
     const state = { thema: $("#f-theme").value, partei: $("#f-party").value, suche: scope() === "bonn" ? "bonn" : "" };
+    state.farbe = colorBy === "thema" ? "thema" : "";
     for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
     history.replaceState(null, "", url);
