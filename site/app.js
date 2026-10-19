@@ -448,7 +448,7 @@
       ${bauOn && bau ? `<ul><li><span class="site-icon site-aktuell" aria-hidden="true"></span>Baustelle der Stadt, laufend</li>
         <li><span class="site-icon site-geplant" aria-hidden="true"></span>Baustelle der Stadt, geplant</li>
         <li><span class="site-icon site-fremd" aria-hidden="true"></span>Baustelle anderer Träger (Versorger, Straßen NRW, Bahn)</li></ul>
-        <p class="hint">Termine unverbindlich; Archiv seit ${fmtDate(bau.meta.archiv_beginn)}.</p>
+        <p class="hint">Termine unverbindlich; ${bau.meta.archiv_beginn ? `Archiv seit ${fmtDate(bau.meta.archiv_beginn)}` : "aktueller Stand, ohne Archiv"}.</p>
         <button type="button" class="btn btn-soft" id="bau-list">Baustellen im Gebiet als Liste</button>` : ""}`;
     const b = legendEl.querySelector("#plan-list");
     if (b) b.addEventListener("click", showPlanList);
