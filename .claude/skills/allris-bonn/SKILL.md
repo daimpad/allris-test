@@ -12,6 +12,7 @@ Projektauftrag, Entscheidungen und offene Punkte stehen in `CLAUDE.md` (Abschnit
 - **Quellentreu:** Jede angezeigte Angabe ist auf ihr Quellobjekt (OParl-ID) rückführbar. Abgeleitetes wird gekennzeichnet (`method`, `confidence`, `evidence`; Prozessschritte mit Evidenzstatus belegt / abgeleitet / nicht_öffentlich / unklar). Lücken bleiben sichtbar, nichts wird erfunden.
 - **Datenschutz:** keine Wohnadressen natürlicher Personen; Bürgeranträge nur auf Straßen- oder Ortsteilebene. `python -m pipeline check` bricht ab, wenn Hausnummern in Ortsangaben auftauchen.
 - **Lizenzen:** OParl-API Stadt Bonn und Geodaten der Stadt CC0; OParl-Lite (Sitzungen, TOPs, Ergebnisse) CC BY 4.0; OSM ODbL. Neue Quelle → `config.SOURCES`, `data/LICENSE-DATA.md`, README, Quellen-Akkordeon der Seite.
+- **Dokumentation:** `README.md` nur inhaltlich und erklärend (für Bürger:innen, ohne Dateipfade und Befehle); Technisches (Pipeline, Dateien, URL-Parameter, Workflows, Betrieb) in `TECHNIK.md`.
 - **Stabile Ausgaben:** Gebietsdateien, Feeds und Kalender tragen keine Erzeugungszeitpunkte, damit sich der Branch `deploy` nur bei Inhaltsänderungen ändert. Die Stichprobe zur Prüfung von Hand (`stichprobe_pruefung.tsv`) wird nie überschrieben.
 - **Sprache:** Oberfläche, Kommentare und Commit-Nachrichten auf Deutsch, sachlich und ohne Superlative; Texte für Laien verständlich.
 
