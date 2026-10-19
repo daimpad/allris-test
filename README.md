@@ -2,7 +2,7 @@
 
 Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschließen: Wo liegt eine Vorlage, wo steht das Verfahren, wer ist beteiligt? Jede Angabe ist auf ihr Quellobjekt rückführbar; abgeleitete Angaben sind gekennzeichnet. Pilot und erste Auslieferung: Ortsteil Endenich.
 
-**Seite:** https://daimpad.github.io/allris-test/ (vorläufige Fassung) · **Datenpaket:** https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip
+**Seite:** https://ris-bonn.datenatlas.de/ (Spiegel: https://daimpad.github.io/allris-test/) · **Datenpaket:** https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip
 
 ## Was die Seite zeigt
 
@@ -12,7 +12,7 @@ Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschlie�
 - **Wer?** Federführendes Amt; bei der Sammelklasse „Co-Dezernat“ zusätzlich das fachlich zuständige Amt; befasste Gremien; Einreichende.
 - **Themen und Parteien:** Filter nach zehn übergeordneten Themen und nach Partei bzw. Fraktion (aus den Einreichenden; Bezirksfraktionen zählen zu ihrer Partei, Koalitionsanträge sind eine eigene Kategorie), wahlweise mit Stellungnahmen und Folgevorlagen zu ihren Anträgen; Suche im Gebiet oder in ganz Bonn (`suche.json`). Themen sind abgeleitet aus federführendem bzw. fachlich zuständigem Amt, beratendem Fachausschuss und Stichworten im Titel; jede Zuordnung nennt ihre Fundstelle (Audit: `data/export/endenich/audit_themen.tsv`).
 - **Abonnieren:** Atom-Feed je Gebiet (neue Vorlagen und Beratungsergebnisse) und je Vorlage (Beratungen, Ergebnisse, Folgevorlagen; für Vorlagen ab dem Vorjahr oder noch nicht abgeschlossen). **Termine:** kommende Sitzungen mit Link zu Tagesordnung und Einladung, Vorlagen des Gebiets auf der Tagesordnung, Kalenderdatei (`termine.ics`).
-- Der Kartenhintergrund (OpenStreetMap) ist grau gefiltert, damit die Marker hervortreten; „Farbige Karte“ schaltet um.
+- Der Kartenhintergrund (OpenStreetMap) ist grau gefiltert, damit die Marker hervortreten; „Farbige Karte“ schaltet um. „Farbe nach Thema“ färbt die Punkte nach dem ersten Thema statt nach der Sicherheit der Ortsangabe (Legende auf der Karte, URL-Parameter `farbe=thema`).
 - **Einstieg:** Beim Start ist nur das Fenster „Los geht's“ offen (Standardgebiet Bonn-Zentrum); Liste und Zeitleiste öffnen sich dort oder über die Leiste, bei Direktlinks mit Filtern oder Zeitraum sofort. Eine **Tour** (`site/tour.js`) stellt in 14 Schritten alle Funktionen vor: Die Umgebung wird abgedunkelt, das erklärte Element pulsierend gerahmt, erwähnte Einzelheiten mit pulsierenden Punkten markiert; ein Beispielvorgang zeigt die Prozesslinie. Bedienung mit Pfeiltasten und Esc; bei reduzierter Bewegung ohne Animation.
 - Die Karte füllt den Bildschirm; Liste, Zeitleiste und Vorgang liegen als einklappbare Flächen darüber, Liste und Vorgang lassen sich am Rand breiter ziehen (Maus oder Pfeiltasten, die Breite merkt sich der Browser). Die Leiste oben enthält eine Suche über ganz Bonn mit Schnellfiltern (Themen, Parteien) und die Menüs **Auswertung** (Kennzahlen zum Gebiet, Verfahrenswege), **Mitmachen** (Termine, Kalender, Feeds, Hinweis geben) und **Daten** (Downloads, Quellen im Akkordeon).
 - Filter: Gebiet, Stichwort, Vorlagenart, Zeitraum, Amt, Gremium, Stand des Verfahrens, Konfidenz der Verortung. Direktlinks mit Zustand: `?gebiet=ortsteil:endenich&von=2025-10-18&bis=2026-10-18&zoom=Quartal&achse=vorlage#191010`.
@@ -33,7 +33,7 @@ Code: MIT (`LICENSE`). Daten: `data/LICENSE-DATA.md` (je Datei).
 
 ## Datenstand
 
-Die Seite wird täglich neu erzeugt (Workflow `pages.yml`, 04:17 UTC) und bei jedem Push auf `main`. Die Abrufzeitpunkte je Quelle stehen im Footer der Seite und in `meta.sources` jedes Exports.
+Die Seite wird täglich neu erzeugt (Workflow `pages.yml`, 04:17 UTC) und bei jedem Push auf `main`. Die Geltungsbereiche der Bebauungspläne werden montags und auf Knopfdruck neu abgerufen (der Dienst braucht bis zu 15 Minuten), sonst gilt der zwischengespeicherte Stand. `live.yml` prüft nach jeder Veröffentlichung und täglich um 06:41 UTC Hauptadresse und Spiegel (Erreichbarkeit, Datenschutzseite, `robots.txt`, Sitemap, Datenstand höchstens zwei Tage alt); bei Fehlern benachrichtigt GitHub per E-Mail. Die Abrufzeitpunkte je Quelle stehen im Footer der Seite und in `meta.sources` jedes Exports.
 
 ## Geokodierung
 
@@ -76,7 +76,7 @@ Unter „Assistent“ beantwortet ein Sprachmodell Fragen zu Bonner Ratsvorgäng
 - Stufe B wertet nur Titel aus; Orte, die nur im Dokument stehen, fehlen. Gleichnamige Straßen ohne eingrenzenden Hinweis bleiben mehrdeutig.
 - Die Punkte der Stufe A stehen für die ganze Straße, nicht für das Objekt; bei langen Straßen kann der Ortsteil abweichen.
 - Einreichende stehen in der Quelle nicht strukturiert; sie werden aus Vorlagenart und Titel abgeleitet (bei rund 60 % der Anträge und Anfragen erkennbar). Namen von Privatpersonen werden nicht ausgewiesen.
-- Die Stichprobe von 50 Endenicher Vorlagen (`data/export/endenich/stichprobe_pruefung.tsv`) ist noch nicht von Hand geprüft.
+- Die Stichprobe von 50 Endenicher Vorlagen (`data/export/endenich/stichprobe_pruefung.tsv`) ist noch nicht von Hand geprüft. Eine Vorprüfung durch KI (`vorpruefung_verortung.tsv`, 19.10.2026) hält 42 Zuordnungen für richtig, 4 für teilweise zutreffend, 2 für unklar und 2 für falsch; sie ersetzt die Prüfung von Hand nicht. Die Vorprüfung der Themen (`vorpruefung_themen.tsv`, 50 Zeilen) ergab 30 passende, 9 fragliche und 9 unpassende Zuordnungen sowie 2 fehlende; die Hauptursachen (Abteilung 61-3 Stadtverkehr als „Bauen“, „Umweltspur“ als „Umwelt“) sind behoben.
 
 ## Pipeline
 
@@ -111,11 +111,11 @@ Der Workflow schreibt die fertige Seite nach jedem Lauf zusätzlich in den Branc
 1. Subdomain anlegen und ein SSL-Zertifikat (Let's Encrypt) ausstellen.
 2. „Git“ bei der Subdomain: entferntes Repository `https://github.com/daimpad/allris-test.git`, Branch `deploy`, automatische Bereitstellung in das Dokumentstammverzeichnis.
 3. Die von Plesk angezeigte Webhook-URL in GitHub unter Settings → Webhooks eintragen (Ereignis: push). Dann holt der Server jede neue Fassung selbst.
-4. Im Workflow `SITE_URL` auf die neue Adresse setzen; damit folgen Feeds, Kalender, DCAT, canonical, Open Graph, `robots.txt` und `sitemap.xml`.
+4. `SITE_URL` (Standard in `pipeline/config.py`, sonst Umgebungsvariable) bestimmt die Hauptadresse; ihr folgen Feeds, Kalender, DCAT, canonical, Open Graph, `robots.txt` und `sitemap.xml`.
 
 ## Auffindbarkeit
 
-Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site.webmanifest`), Beschreibung, canonical, Open Graph und Twitter-Karte mit Vorschaubild (`og-image.jpg`), strukturierte Daten (schema.org `WebSite`, `WebApplication`), `noscript`-Hinweis mit Links zu den Daten und eine Fehlerseite (`404.html`). `python -m pipeline seo` schreibt `robots.txt` und `sitemap.xml` in die zusammengestellte Seite und setzt `SITE_URL` in die absoluten Adressen ein. Bei GitHub Pages liegt die Seite unter einem Unterpfad; dort werten Suchmaschinen `robots.txt` nicht aus, die Sitemap lässt sich in der Search Console einreichen.
+Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site.webmanifest`), Beschreibung, canonical, Open Graph und Twitter-Karte mit Vorschaubild (`og-image.jpg`), strukturierte Daten (schema.org `WebSite`, `WebApplication`), `noscript`-Hinweis mit Links zu den Daten und eine Fehlerseite (`404.html`). `python -m pipeline seo` schreibt `robots.txt`, `sitemap.xml` und statische Seiten je Ortsteil und Stadtbezirk mit Übersicht (`gebiete/`, `pipeline/gebietsseiten.py`: Kennzahlen, Themen, 20 jüngste Vorlagen, Links zu Karte und Original) in die zusammengestellte Seite und setzt `SITE_URL` in die absoluten Adressen ein. Hauptadresse ist `https://ris-bonn.datenatlas.de/` (Standard von `SITE_URL`) mit `robots.txt` an der Wurzel; der Spiegel auf GitHub Pages verweist per canonical darauf. Die Sitemap lässt sich in der Google Search Console einreichen.
 
 ## Fremdcode und externe Dienste
 
@@ -123,7 +123,7 @@ Leaflet 1.9.4 (BSD-2-Clause) und Leaflet.markercluster 1.5.3 (MIT) liegen in `si
 
 ## Impressum und Kontakt
 
-Erstellt von Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“. Impressum: https://datenatlas.de/impressum · Datenschutz: https://datenatlas.de/datenschutz
+Erstellt von Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“. Impressum: https://nozilla.de/impressum/ · Datenschutz: `datenschutz.html` (eigene Seite)
 
 ## Aufbau des Repositorys
 

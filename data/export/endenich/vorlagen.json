@@ -2,7 +2,7 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 576,
-  "generated_at": "2026-10-18T18:46:22+00:00",
+  "generated_at": "2026-10-19T08:52:27+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -1509,9 +1509,9 @@
    "stand": "in Beratung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -2707,14 +2707,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -3461,14 +3455,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "haltestelle",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -3920,14 +3908,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parkplätz",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -4484,9 +4466,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -4877,14 +4859,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parkplätz",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -5186,9 +5162,9 @@
    "stand": "in Beratung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -6641,14 +6617,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -6785,14 +6755,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parkplätz",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -8653,7 +8617,14 @@
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024241",
    "stand": "beraten, ohne Entscheidung",
-   "themes": [],
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "stichwort",
+     "evidence": "ladezone",
+     "confidence": "niedrig"
+    }
+   ],
    "parties": [
     "Verwaltung"
    ],
@@ -8789,14 +8760,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parkplätz",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -8927,14 +8892,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -10361,14 +10320,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parkplätz",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -10687,14 +10640,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -11164,14 +11111,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "anwohnerpark",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -11434,7 +11375,14 @@
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023155",
    "stand": "entschieden",
-   "themes": [],
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "stichwort",
+     "evidence": "ladezone",
+     "confidence": "niedrig"
+    }
+   ],
    "parties": [
     "Einwohner:innen"
    ],
@@ -11827,9 +11775,9 @@
    "stand": "offen",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -14060,9 +14008,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -14324,12 +14272,6 @@
      "method": "gremium",
      "evidence": "Ausschuss für Mobilität und Verkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -14640,14 +14582,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parkraum",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -14933,9 +14869,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -15403,12 +15339,6 @@
      "method": "stichwort",
      "evidence": "verkehr",
      "confidence": "niedrig"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [],
@@ -15542,14 +15472,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "anwohnerpark",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -15829,9 +15753,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -16118,14 +16042,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -16531,14 +16449,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parkraum",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -17416,14 +17328,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -18871,9 +18777,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -22143,14 +22049,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parken",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -22295,14 +22195,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parkplatz",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -22627,12 +22521,6 @@
      "method": "amt",
      "evidence": "61 Stadtplanungsamt",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -22952,14 +22840,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parkplatz",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -24629,14 +24511,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parken",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -25124,14 +25000,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -25836,14 +25706,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "parken",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -25992,14 +25856,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -26343,12 +26201,6 @@
      "method": "gremium",
      "evidence": "Ausschuss für Mobilität und Verkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -26595,14 +26447,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -28549,14 +28395,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -29234,9 +29074,9 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
+     "method": "amt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
     },
     {
      "theme": "bauen",
@@ -29739,14 +29579,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -30206,14 +30040,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -30650,9 +30478,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -30998,9 +30826,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -31536,14 +31364,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -31883,14 +31705,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -32036,14 +31852,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -32179,14 +31989,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -32447,14 +32251,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -32593,14 +32391,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -33290,14 +33082,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -33506,14 +33292,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -34065,14 +33845,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -35264,14 +35038,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -35572,9 +35340,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -35699,14 +35467,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -36180,14 +35942,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -36666,14 +36422,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -36797,9 +36547,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -37080,14 +36830,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -37662,12 +37406,6 @@
      "method": "amt",
      "evidence": "61 Stadtplanungsamt",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -38462,14 +38200,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -38594,14 +38326,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -38900,14 +38626,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -39185,14 +38905,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -39361,14 +39075,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "gehweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -39658,9 +39366,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "umwelt",
+     "theme": "verkehr",
      "method": "stichwort",
-     "evidence": "umwelt",
+     "evidence": "umweltspur",
      "confidence": "niedrig"
     }
    ],
@@ -39779,14 +39487,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -39942,14 +39644,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -40834,9 +40530,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -41245,12 +40941,6 @@
      "method": "amt",
      "evidence": "66 Tiefbauamt",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     },
     {
      "theme": "wirtschaft",
@@ -42658,14 +42348,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "radweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -47198,12 +46882,6 @@
      "method": "gremium",
      "evidence": "Ausschuss für Mobilität und Verkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -49703,9 +49381,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -50806,12 +50484,6 @@
      "method": "gremium",
      "evidence": "Ausschuss für Mobilität und Verkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -51392,14 +51064,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "radweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -51706,21 +51372,9 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -51900,14 +51554,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "haltestelle",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -52340,12 +51988,6 @@
      "method": "stichwort",
      "evidence": "verkehr",
      "confidence": "niedrig"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [],
@@ -52614,14 +52256,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "haltestelle",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -53701,12 +53337,6 @@
      "method": "gremium",
      "evidence": "Ausschuss für Mobilität und Verkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -53866,21 +53496,9 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -54429,21 +54047,9 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -54653,14 +54259,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "radweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -54821,14 +54421,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "radweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -57631,21 +57225,9 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "tempo 30",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -60566,21 +60148,9 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "tempo 30",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -61537,21 +61107,9 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -62236,12 +61794,6 @@
      "theme": "verkehr",
      "method": "stichwort",
      "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
      "confidence": "niedrig"
     }
    ],
@@ -63321,14 +62873,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -64325,12 +63871,6 @@
      "method": "gremium",
      "evidence": "Ausschuss für Mobilität und Verkehr",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [],
@@ -69683,9 +69223,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -70538,9 +70078,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     },
     {
@@ -72716,14 +72256,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -73432,14 +72966,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "radweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -74848,14 +74376,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -75111,14 +74633,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -75580,9 +75096,9 @@
    "stand": "offen",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -75731,14 +75247,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "anwohnerpark",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -75900,9 +75410,9 @@
    "stand": "offen",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -76050,9 +75560,9 @@
    "stand": "offen",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -76173,14 +75683,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -77079,9 +76583,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -77244,9 +76748,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -77394,14 +76898,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "radweg",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -77994,14 +77492,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "anwohnerpark",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -78184,9 +77676,15 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "bauen",
+     "method": "gremium",
+     "evidence": "Ausschuss für Planung, Verkehr und Denkmalschutz",
      "confidence": "mittel"
     }
    ],
@@ -78663,9 +78161,9 @@
    "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -79174,9 +78672,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -80098,14 +79596,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "fahrrad",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -80575,9 +80067,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "bauen",
+     "theme": "verkehr",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -80945,14 +80437,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "querungshilfe",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -83436,14 +82922,8 @@
    "themes": [
     {
      "theme": "verkehr",
-     "method": "stichwort",
-     "evidence": "verkehr",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bauen",
      "method": "amt",
-     "evidence": "61 Stadtplanungsamt",
+     "evidence": "61-3 Stadtverkehr",
      "confidence": "mittel"
     }
    ],
@@ -87402,16 +86882,16 @@
    "stand": "entschieden",
    "themes": [
     {
+     "theme": "verkehr",
+     "method": "stichwort",
+     "evidence": "umweltspur",
+     "confidence": "niedrig"
+    },
+    {
      "theme": "bauen",
      "method": "amt",
      "evidence": "61 Stadtplanungsamt",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -87553,9 +87033,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "umwelt",
+     "theme": "verkehr",
      "method": "stichwort",
-     "evidence": "umwelt",
+     "evidence": "umweltspur",
      "confidence": "niedrig"
     }
    ],
@@ -87942,16 +87422,16 @@
    "stand": "entschieden",
    "themes": [
     {
+     "theme": "verkehr",
+     "method": "stichwort",
+     "evidence": "fahrspur",
+     "confidence": "niedrig"
+    },
+    {
      "theme": "bauen",
      "method": "amt",
      "evidence": "61 Stadtplanungsamt",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [],
@@ -88073,16 +87553,16 @@
    "stand": "entschieden",
    "themes": [
     {
+     "theme": "verkehr",
+     "method": "stichwort",
+     "evidence": "fahrspur",
+     "confidence": "niedrig"
+    },
+    {
      "theme": "bauen",
      "method": "amt",
      "evidence": "61 Stadtplanungsamt",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [],
@@ -88192,7 +87672,7 @@
     {
      "theme": "verkehr",
      "method": "stichwort",
-     "evidence": "verkehr",
+     "evidence": "fahrspur",
      "confidence": "niedrig"
     },
     {
@@ -88200,12 +87680,6 @@
      "method": "amt",
      "evidence": "61 Stadtplanungsamt",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [],
@@ -88957,7 +88431,7 @@
     {
      "theme": "verkehr",
      "method": "stichwort",
-     "evidence": "verkehr",
+     "evidence": "fahrspur",
      "confidence": "niedrig"
     },
     {
@@ -88965,12 +88439,6 @@
      "method": "amt",
      "evidence": "61 Stadtplanungsamt",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -90153,9 +89621,9 @@
    "stand": "entschieden",
    "themes": [
     {
-     "theme": "umwelt",
+     "theme": "verkehr",
      "method": "stichwort",
-     "evidence": "umwelt",
+     "evidence": "umweltspur",
      "confidence": "niedrig"
     }
    ],
@@ -90312,7 +89780,7 @@
     {
      "theme": "verkehr",
      "method": "stichwort",
-     "evidence": "verkehr",
+     "evidence": "fahrspur",
      "confidence": "niedrig"
     },
     {
@@ -90320,12 +89788,6 @@
      "method": "gremium",
      "evidence": "Ausschuss für Planung, Verkehr und Denkmalschutz",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [],
@@ -91458,16 +90920,16 @@
    "stand": "entschieden",
    "themes": [
     {
+     "theme": "verkehr",
+     "method": "stichwort",
+     "evidence": "fahrspur",
+     "confidence": "niedrig"
+    },
+    {
      "theme": "bauen",
      "method": "gremium",
      "evidence": "Ausschuss für Planung, Verkehr und Denkmalschutz",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [],
@@ -91660,16 +91122,16 @@
    "stand": "entschieden",
    "themes": [
     {
+     "theme": "verkehr",
+     "method": "stichwort",
+     "evidence": "fahrspur",
+     "confidence": "niedrig"
+    },
+    {
      "theme": "bauen",
      "method": "gremium",
      "evidence": "Ausschuss für Planung, Verkehr und Denkmalschutz",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [
@@ -91895,7 +91357,7 @@
     {
      "theme": "verkehr",
      "method": "stichwort",
-     "evidence": "verkehr",
+     "evidence": "fahrspur",
      "confidence": "niedrig"
     },
     {
@@ -91903,12 +91365,6 @@
      "method": "gremium",
      "evidence": "Ausschuss für Planung, Verkehr und Denkmalschutz",
      "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "umwelt",
-     "confidence": "niedrig"
     }
    ],
    "parties": [

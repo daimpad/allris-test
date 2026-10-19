@@ -348,11 +348,20 @@ body.detail-closed #timeline-wrap { right: 16px; }
 /* Kartenhintergrund grau (Standard) oder farbig; der Filter wirkt nur auf die Kacheln */
 #map.map-gray .leaflet-tile-pane { filter: grayscale(1) contrast(.9) brightness(1.08); }
 .map-style { font: 500 13px/1 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); cursor: pointer; }
+.map-legend { font: 400 12.5px/1.4 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); max-width: 260px; }
+.map-legend summary { cursor: pointer; font-weight: 600; }
+.map-legend ul { list-style: none; margin: 6px 0 0; padding: 0; }
+.map-legend li { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+.map-legend .swatch { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(15, 15, 20, 0.25); flex: none; }
+.map-legend .hint { margin: 6px 0 0; }
 .map-style[aria-pressed="true"] { background: var(--accent-fill); color: #fff; border-color: transparent; }
 
 /* Kartensteuerung und Namensnennung neben den Flächen, nicht darunter */
 .leaflet-right { transition: right .35s cubic-bezier(0.16, 1, 0.3, 1); }
 body.detail-open .leaflet-right { right: calc(var(--detail-w) + 16px); }
+.leaflet-left { transition: left .35s cubic-bezier(0.16, 1, 0.3, 1); }
+body.list-open .leaflet-left { left: calc(var(--list-w) + 16px); }
+body.chat-open .leaflet-left { left: calc(var(--chat-w) + 32px); }
 
 /* Über (Dialog) */
 #about { border: 1px solid var(--border); border-radius: var(--radius); padding: 0; width: min(680px, calc(100vw - 32px)); max-height: calc(100vh - 48px); color: var(--text); background: var(--surface-strong); box-shadow: var(--shadow); }
@@ -369,6 +378,13 @@ body.detail-open .leaflet-right { right: calc(var(--detail-w) + 16px); }
 .empty-list { padding: 14px 4px; color: var(--text-muted); }
 .empty-list p { margin: 0 0 8px; }
 .papers .more { padding: 10px 4px; }
+.participate { margin: 16px 0 8px; padding: 10px 14px 4px; border-radius: 14px; background: rgba(124, 58, 237, 0.07); }
+.participate h4 { margin-top: 2px; }
+.participate ul { margin: 6px 0 8px; padding-left: 18px; font-size: 14px; }
+.participate li { margin-bottom: 6px; }
+.taken { color: var(--text-muted); font-style: italic; }
+.locs .taken-group { list-style: none; margin-left: -18px; color: var(--text-muted); }
+.locs .taken-group ul { color: var(--text); margin-top: 4px; }
 .active-filters { color: var(--accent-ink); font-weight: 500; }
 .intro p { margin: 0 0 10px; }
 /* Startfenster „Los geht's“ mit pulsierender Schaltfläche zur Tour */
@@ -550,6 +566,7 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
   #timeline-wrap .tl-presets, #timeline-wrap .tl-jumps, #timeline-wrap .tl-dim, #timeline-wrap .tl-hint { display: none; }
   .leaflet-bottom { bottom: 176px; }
   body.detail-open .leaflet-right { right: 0; }
+  body.list-open .leaflet-left, body.chat-open .leaflet-left { left: 0; }
   .step .jump { display: none; }
   .map-style { min-height: 44px; }
   .tl-btn, .tl-chip, .icon-btn, .chip { min-width: 44px; min-height: 44px; }

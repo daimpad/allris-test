@@ -7,21 +7,23 @@ Ohne Zeitstempel (kein lastmod), damit sich der Branch deploy nur bei Inhaltsän
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from . import config
+from . import config, gebietsseiten
 
-DEFAULT_URL = "https://daimpad.github.io/allris-test/"
-PAGES = ("index.html", "404.html")
+DEFAULT_URL = "https://daimpad.github.io/allris-test/"  # Platzhalter in site/, wird durch SITE_URL ersetzt
+PAGES = ("index.html", "404.html", "datenschutz.html")
+SITEMAP = ("", "datenschutz.html")  # Pfade relativ zu SITE_URL
 
 
 def robots(site_url):
     return f"User-agent: *\nAllow: /\n\nSitemap: {site_url}sitemap.xml\n"
 
 
-def sitemap(site_url):
+def sitemap(site_url, extra=()):
+    urls = "".join(f"  <url><loc>{escape(site_url + path)}</loc>{'' if path else '<changefreq>daily</changefreq>'}</url>\n"
+                   for path in (*SITEMAP, *extra))
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            f"  <url><loc>{escape(site_url)}</loc><changefreq>daily</changefreq></url>\n"
-            "</urlset>\n")
+            f"{urls}</urlset>\n")
 
 
 def write(site=Path("_site"), site_url=None):
@@ -33,5 +35,6 @@ def write(site=Path("_site"), site_url=None):
         if page.exists():
             page.write_text(page.read_text(encoding="utf-8").replace(DEFAULT_URL, site_url), encoding="utf-8")
     (site / "robots.txt").write_text(robots(site_url), encoding="utf-8")
-    (site / "sitemap.xml").write_text(sitemap(site_url), encoding="utf-8")
+    areas = gebietsseiten.write(site, site_url)
+    (site / "sitemap.xml").write_text(sitemap(site_url, areas), encoding="utf-8")
     print(f"robots.txt, sitemap.xml und Adressen für {site_url}")

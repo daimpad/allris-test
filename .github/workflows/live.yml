@@ -1,0 +1,55 @@
+# Prüft nach jeder Veröffentlichung und täglich, ob die Seite unter der Hauptadresse und auf GitHub Pages
+# erreichbar ist und aktuelle Daten zeigt. Schlägt die Prüfung fehl, benachrichtigt GitHub per E-Mail
+# (Einstellungen → Notifications → Actions: „Notify on failed workflows“).
+name: Live-Prüfung
+
+on:
+  workflow_run:
+    workflows: ["Daten aktualisieren und Seite veröffentlichen"]
+    types: [completed]
+  schedule:
+    - cron: "41 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Veröffentlichung abgeschlossen?
+        if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion != 'success'
+        run: |
+          echo "::error::Der Lauf „Daten aktualisieren und Seite veröffentlichen“ endete mit ${{ github.event.workflow_run.conclusion }}"
+          exit 1
+
+      # Der eigene Server holt den Branch deploy per Webhook; etwas Zeit lassen
+      - name: Warten auf die Bereitstellung
+        if: github.event_name == 'workflow_run'
+        run: sleep 180
+
+      - name: Hauptadresse und Spiegel prüfen
+        run: |
+          set -u
+          fail=0
+          check() {  # Adresse, erwarteter Inhalt
+            body=$(curl -fsSL --retry 3 --retry-delay 10 "$1") || { echo "::error::$1 nicht erreichbar"; fail=1; return; }
+            echo "$body" | grep -q "$2" || { echo "::error::$1 enthält nicht „$2“"; fail=1; return; }
+            echo "ok  $1"
+          }
+          for base in https://ris-bonn.datenatlas.de/ https://daimpad.github.io/allris-test/; do
+            check "$base" "RIS-Karte"
+            check "${base}data/export/bonn/index.json" "generated_at"
+            check "${base}datenschutz.html" "Verantwortlich"
+          done
+          check https://ris-bonn.datenatlas.de/robots.txt "Sitemap: https://ris-bonn.datenatlas.de/sitemap.xml"
+          check https://ris-bonn.datenatlas.de/sitemap.xml "<urlset"
+          # Datenstand höchstens zwei Tage alt
+          stand=$(curl -fsSL https://ris-bonn.datenatlas.de/data/export/bonn/index.json | python3 -c 'import json,sys;print(json.load(sys.stdin)["meta"]["generated_at"][:10])') || stand=""
+          if [ -z "$stand" ] || [ $(( ( $(date -u +%s) - $(date -u -d "$stand" +%s) ) / 86400 )) -gt 2 ]; then
+            echo "::error::Datenstand auf ris-bonn.datenatlas.de ist älter als zwei Tage (${stand:-unbekannt})"; fail=1
+          else
+            echo "ok  Datenstand $stand"
+          fi
+          exit $fail
