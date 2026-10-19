@@ -55,7 +55,7 @@
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null;
-  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null;
+  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, planOn = false, allPlans = null, shownPlan = null;
   // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
   let search = null, searchLoading = null;
   const THEMES = {  // wie pipeline/topics.THEMES
@@ -97,6 +97,7 @@
     if (target) target.focus();
   }
   function showIntro() {
+    shownPlan = null;
     $("#detail-heading").textContent = "Los geht's";
     $("#detail").innerHTML = INTRO;
     const t = toggleFor("timeline-wrap");
@@ -367,6 +368,21 @@
       },
     });
     new ColorBy().addTo(map);
+    // Geltungsbereiche aller rechtskräftigen Bebauungspläne als abschaltbare Ebene (erst beim Einschalten geladen)
+    planOn = new URLSearchParams(location.search).get("plaene") === "1";
+    const PlanToggle = L.Control.extend({
+      options: { position: "bottomright" },
+      onAdd() {
+        const b = L.DomUtil.create("button", "map-style map-plans");
+        b.type = "button";
+        b.textContent = "Bebauungspläne";
+        b.setAttribute("aria-pressed", String(planOn));
+        b.addEventListener("click", () => { planOn = !planOn; b.setAttribute("aria-pressed", String(planOn)); drawAllPlans(); syncUrl(); });
+        L.DomEvent.disableClickPropagation(b);
+        return b;
+      },
+    });
+    new PlanToggle().addTo(map);
     const Legend = L.Control.extend({
       options: { position: "bottomleft" },
       onAdd() {
@@ -407,7 +423,11 @@
       : [[color("hoch"), "Ort gesichert (Koordinate oder eindeutiger Bebauungsplan der Stadt)"], [color("mittel"), "Ort erschlossen (Name im Titel)"], [color("niedrig"), "Ort unsicher (mehrdeutig)"]];
     legendEl.innerHTML = `<summary>Legende: ${colorBy === "thema" ? "Thema" : "Sicherheit des Orts"}</summary><ul>${rows
       .map(([c, t]) => `<li><span class="swatch" style="background:${c}" aria-hidden="true"></span>${esc(t)}</li>`).join("")}</ul>
-      ${colorBy === "thema" ? '<p class="hint">Bei mehreren Themen zählt das erste. Themen sind abgeleitet.</p>' : ""}`;
+      ${colorBy === "thema" ? '<p class="hint">Bei mehreren Themen zählt das erste. Themen sind abgeleitet.</p>' : ""}
+      ${planOn ? `<ul><li><span class="swatch swatch-plan" aria-hidden="true"></span>Geltungsbereich eines rechtskräftigen Bebauungsplans (Stadt Bonn)</li></ul>
+        ${planIndexUrl() ? '<button type="button" class="btn btn-soft" id="plan-list">Pläne im Gebiet als Liste</button>' : ""}` : ""}`;
+    const b = legendEl.querySelector("#plan-list");
+    if (b) b.addEventListener("click", showPlanList);
   }
   function drawMarkers(list) {
     lastMarkers = list;
@@ -630,6 +650,99 @@
     }
   }
 
+  // Planebene: alle Geltungsbereiche; Klick öffnet die Planchronik
+  const PLAN_STYLE = { color: "#0e7490", weight: 1.5, fillColor: "#0e7490", fillOpacity: 0.08 };
+  async function drawAllPlans() {
+    if (legendEl) drawLegend();
+    if (!planOn) { if (allPlans) { allPlans.remove(); allPlans = null; } return; }
+    const data = await loadPlans();
+    if (!planOn || allPlans) return;
+    allPlans = L.geoJSON(data, {
+      style: PLAN_STYLE,
+      onEachFeature: (f, layer) => layer.bindTooltip(`Bebauungsplan ${esc(f.properties.name)}`, { sticky: true })
+        .on("click", () => showPlan(f.properties.name)),
+    }).addTo(map);
+    allPlans.bringToBack();
+    if (outline) outline.bringToBack();
+  }
+  // Register je Plannummer (data/export/bonn/plaene.json): Vorlagen chronologisch, Verfahrensschritte abgeleitet
+  let planReg = null;
+  const planIndexUrl = () => (index ? BONN + "plaene.json" : null);
+  const loadPlanReg = () => (planReg ||= (planIndexUrl() ? fetch(planIndexUrl()).then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null)));
+  const PLAN_MATCH = { eindeutig: "eindeutig zugeordnet", grundnummer: "im Datensatz nur die Grundnummer", mehrdeutig: "mehrere Pläne passen",
+    nicht_im_datensatz: "nicht unter den rechtskräftigen Plänen (im Verfahren oder aufgehoben)" };
+  async function showPlan(key) {
+    const [reg, data] = await Promise.all([loadPlanReg(), loadPlans()]);
+    const entries = reg ? reg.plaene.filter((e) => e.nr === key || e.plaene.some((v) => v.name === key)) : [];
+    const names = new Set([key, ...entries.flatMap((e) => e.plaene.map((v) => v.name))]);
+    const feats = [...new Map(data.features.filter((f) => names.has(f.properties.name)).map((f) => [f.properties.name, f])).values()];
+    const vorlagen = [...new Map(entries.flatMap((e) => e.vorlagen).map((v) => [v.drucksache, v])).values()]
+      .sort((a, b) => String(a.datum).localeCompare(String(b.datum)) || a.drucksache.localeCompare(b.drucksache));
+    selected = null;
+    shownPlan = key;
+    document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", "false"));
+    if (tl) tl.select(null);
+    highlight();
+    if (planLayer) { planLayer.remove(); planLayer = null; }
+    if (feats.length) {
+      planLayer = L.geoJSON({ type: "FeatureCollection", features: feats }, {
+        style: { color: "#0f0f14", weight: 2, dashArray: "6 4", fillColor: "#0e7490", fillOpacity: 0.15 }, interactive: false }).addTo(map);
+      map.fitBounds(planLayer.getBounds(), { ...mapPadding(), maxZoom: 17 });
+    }
+    const facts = feats.map((f) => `<li><strong>${esc(f.properties.name)}</strong> – rechtskräftig seit ${fmtDate(f.properties.inkraft_seit)}
+      <span class="derived">belegt, Stadt Bonn</span><br>${link(f.properties.plan, "Plan (PDF)")}${f.properties.begruendung ? " · " + link(f.properties.begruendung, "Begründung (PDF)") : ""}</li>`).join("");
+    const ortsteile = [...new Set(entries.flatMap((e) => e.ortsteile))];
+    const match = [...new Set(entries.map((e) => e.treffer))].map((t) => PLAN_MATCH[t] || t).join("; ");
+    const item = (v) => `<li><button type="button" class="link-btn" data-open-ref="${esc(v.drucksache)}">${esc(v.drucksache)}</button> · ${fmtDate(v.datum)} · ${esc(v.art || "")}<br>${esc(v.titel)}</li>`;
+    const steps = (reg ? reg.schritte : []).map((st) => {
+      const hits = vorlagen.filter((v) => (v.schritte || []).includes(st.id));
+      const status = hits.length ? "abgeleitet" : "soll";
+      return `<li class="step" data-status="${status}"><span class="mark mark-${status}" aria-hidden="true"></span>
+        <div class="step-head">${esc(st.label)}<span class="step-status">${status === "soll" ? "soll, keine Vorlage zugeordnet" : "abgeleitet aus dem Titel"}</span></div>
+        <div class="step-body">Fundstelle: ${esc(st.fundstelle)}${hits.length ? `<ul class="related">${hits.map(item).join("")}</ul>
+          <button type="button" class="jump" data-date="${esc(hits[0].datum)}">in der Zeitleiste zeigen</button>` : ""}</div></li>`;
+    }).join("");
+    const inkraft = feats.map((f) => f.properties.inkraft_seit).filter(Boolean).sort().pop();
+    const final = `<li class="step" data-status="${inkraft ? "belegt" : "soll"}"><span class="mark mark-${inkraft ? "belegt" : "soll"}" aria-hidden="true"></span>
+      <div class="step-head">Inkrafttreten (Bekanntmachung)<span class="step-status">${inkraft ? "belegt, Stadt Bonn" : "soll, nicht unter den rechtskräftigen Plänen"}</span></div>
+      <div class="step-body">Fundstelle: § 10 Abs. 3 BauGB${inkraft ? `<br>${fmtDate(inkraft)}` : ""}</div></li>`;
+    $("#detail-heading").textContent = "Bebauungsplan";
+    $("#detail").innerHTML = `
+      <h3 tabindex="-1">Bebauungsplan ${esc(key)}</h3>
+      ${facts ? `<ul class="locs plans">${facts}</ul>` : '<p class="hint">Kein Geltungsbereich im Datensatz der rechtskräftigen Pläne (im Verfahren oder aufgehoben).</p>'}
+      <dl class="facts">${ortsteile.length ? `<dt>Ortsteile</dt><dd>${esc(ortsteile.join(", "))}</dd>` : ""}
+        ${match ? `<dt>Zuordnung</dt><dd>${esc(match)} <span class="derived">abgeleitet, Plannummer im Titel</span></dd>` : ""}</dl>
+      ${reg ? `<h4>Planchronik</h4>
+        <p class="hint">Verfahrensschritte nach BauGB als Soll; eine Vorlage ist einem Schritt zugeordnet, wenn ihr Titel ihn nennt (abgeleitet). Vereinfachte Verfahren (§§ 13, 13a BauGB) kennen weniger Schritte. „soll“ heißt: keine Vorlage seit Oktober 2019 nennt den Schritt – nicht, dass er fehlt.</p>
+        <ol class="steps">${steps}${final}</ol>
+        <h4>Vorlagen mit dieser Plannummer (${vorlagen.length})</h4>
+        ${vorlagen.length ? `<ol class="related plan-papers">${vorlagen.map(item).join("")}</ol>` : "<p>Keine Vorlage seit Oktober 2019 nennt diese Plannummer im Titel.</p>"}` : ""}
+      <details class="acc"><summary>Quellen</summary><ul>
+        <li>Geltungsbereich, Inkrafttreten, Plan und Begründung: Stadt Bonn, Lage der Bebauungspläne (CC0)</li>
+        <li>Vorlagen: OParl-API der Stadt Bonn (CC0); Zuordnung über die Plannummer im Titel (abgeleitet)</li></ul></details>`;
+    $("#announce").textContent = `Bebauungsplan ${key} geöffnet`;
+    if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
+    $("#detail").scrollTop = 0;
+    syncUrl();
+  }
+  // Tastatur- und Listenzugang zur Planebene: Pläne mit Vorlagen im gewählten Gebiet
+  async function showPlanList() {
+    const reg = await loadPlanReg();
+    if (!reg) return;
+    const inArea = (e) => area.kind !== "ortsteil" || e.ortsteile.includes(area.name);
+    const refs = new Set(papers.map((p) => p.reference));
+    const list = reg.plaene.filter((e) => inArea(e) && e.vorlagen.some((v) => refs.has(v.drucksache)));
+    selected = null;
+    shownPlan = null;
+    highlight();
+    $("#detail-heading").textContent = "Bebauungspläne";
+    $("#detail").innerHTML = `<h3 tabindex="-1">Bebauungspläne mit Vorlagen · ${esc(area.name || "")}</h3>
+      <p class="hint">Pläne, deren Nummer im Titel einer Vorlage dieses Gebiets steht. Die Karte zeigt alle rechtskräftigen Pläne der Stadt.</p>
+      ${list.length ? `<ul class="related">${list.map((e) => `<li><button type="button" class="link-btn" data-open-plan="${esc(e.nr)}">Bebauungsplan ${esc(e.nr)}</button> · ${e.vorlagen.length} ${e.vorlagen.length === 1 ? "Vorlage" : "Vorlagen"}</li>`).join("")}</ul>` : "<p>Keine Vorlage dieses Gebiets nennt eine Plannummer.</p>"}`;
+    if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
+    $("#detail h3").focus();
+  }
+
   // Beteiligung: nächste Sitzung eines beteiligten Gremiums (laut Sitzungsliste der Stadt), Bürgerantrag
   const BUERGERANTRAG = "https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php";
   function participate(p) {
@@ -650,6 +763,7 @@
 
   function select(p, fromMap) {
     selected = p;
+    shownPlan = null;
     document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", String(b.dataset.ref === p.reference)));
     syncUrl();
     if (tl) tl.select(p);
@@ -686,7 +800,8 @@
       <h4>Ortsbezug</h4><ul class="locs">${locs}</ul>
       ${(p.plans || []).length ? `<h4>Bebauungspläne</h4><ul class="locs plans">${p.plans.map((x) => `<li data-plan="${esc(x.nr)}"><strong>Bebauungsplan ${esc(x.nr)}</strong>
         ${x.area ? '<span class="plan-meta">– Geltungsbereich auf der Karte</span>' : " – nicht im Datensatz der rechtskräftigen Pläne (im Verfahren oder aufgehoben); keine Fläche verfügbar"}
-        <br><span class="meta">Fundstelle: „${esc(x.evidence)}“</span></li>`).join("")}</ul>` : ""}
+        <br><span class="meta">Fundstelle: „${esc(x.evidence)}“</span>
+        ${planIndexUrl() ? `<br><button type="button" class="link-btn" data-open-plan="${esc(x.nr)}">Planchronik öffnen</button>` : ""}</li>`).join("")}</ul>` : ""}
       <p class="links">${link(reportLink(p), "Verortung falsch? Hinweis geben", "btn btn-secondary")}
         ${hasPaperFeed(p) ? `<a class="btn btn-soft" href="${BONN}feeds/vorlagen/${slug(p.reference)}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Diesen Vorgang abonnieren</a>` : ""}</p>
       ${p.superordinated.length ? `<details class="acc"><summary>Bezieht sich auf (${p.superordinated.length})</summary><ul class="related">${rel(p.superordinated)}</ul></details>` : ""}
@@ -711,6 +826,10 @@
     }
   }
   $("#detail").addEventListener("click", (e) => {
+    const plan = e.target.closest("[data-open-plan]");
+    if (plan) { showPlan(plan.dataset.openPlan); return; }
+    const ref = e.target.closest("[data-open-ref]");
+    if (ref) { const p = papers.find((x) => x.reference === ref.dataset.openRef); if (p) select(p); else window.risKarte.open(ref.dataset.openRef); return; }
     const b = e.target.closest(".jump");
     if (b && tl) { if ($("#timeline-wrap").hidden) setPanel("timeline-wrap", true); tl.center(b.dataset.date); }
   });
@@ -944,6 +1063,8 @@
     else for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.delete(k);
     const state = { thema: $("#f-theme").value, partei: $("#f-party").value, suche: scope() === "bonn" ? "bonn" : "" };
     state.farbe = colorBy === "thema" ? "thema" : "";
+    state.plaene = planOn ? "1" : "";
+    state.plan = !selected && shownPlan ? shownPlan : "";
     for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
     history.replaceState(null, "", url);
@@ -1022,8 +1143,10 @@
       range = [von, bis];
       render();
     }
+    if (planOn) drawAllPlans();
     const initial = papers.find((p) => p.reference === ref);
     if (initial) select(initial);
+    else if (params.get("plan")) await showPlan(params.get("plan"));
     else showIntro();
     syncUrl();
   }
