@@ -33,7 +33,7 @@ Code: MIT (`LICENSE`). Daten: `data/LICENSE-DATA.md` (je Datei).
 
 ## Datenstand
 
-Die Seite wird täglich neu erzeugt (Workflow `pages.yml`, 04:17 UTC) und bei jedem Push auf `main`. Die Abrufzeitpunkte je Quelle stehen im Footer der Seite und in `meta.sources` jedes Exports.
+Die Seite wird täglich neu erzeugt (Workflow `pages.yml`, 04:17 UTC) und bei jedem Push auf `main`. Die Geltungsbereiche der Bebauungspläne werden montags und auf Knopfdruck neu abgerufen (der Dienst braucht bis zu 15 Minuten), sonst gilt der zwischengespeicherte Stand. `live.yml` prüft nach jeder Veröffentlichung und täglich um 06:41 UTC Hauptadresse und Spiegel (Erreichbarkeit, Datenschutzseite, `robots.txt`, Sitemap, Datenstand höchstens zwei Tage alt); bei Fehlern benachrichtigt GitHub per E-Mail. Die Abrufzeitpunkte je Quelle stehen im Footer der Seite und in `meta.sources` jedes Exports.
 
 ## Geokodierung
 

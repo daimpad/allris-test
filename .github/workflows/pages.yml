@@ -44,6 +44,7 @@ jobs:
             data/raw/organizations.json
             data/raw/verwaltungsbereiche.json
             data/raw/STAND.json
+            data/geo/bebauungsplaene_bonn.geojson
           key: raw-${{ github.run_id }}
           restore-keys: raw-
 
@@ -59,8 +60,16 @@ jobs:
         run: python -m pipeline fetch-meetings
         continue-on-error: true
 
-      - name: Abruf Bebauungspläne (Geltungsbereiche, Stadt Bonn)
-        run: python -m pipeline fetch-plans
+      # Der Dienst braucht bis zu 15 Minuten; die Geltungsbereiche ändern sich selten. Abruf daher montags
+      # und auf Knopfdruck, sonst gilt der Stand aus dem Zwischenspeicher bzw. dem Repository.
+      - name: Abruf Bebauungspläne (Geltungsbereiche, Stadt Bonn; montags und auf Knopfdruck)
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%u)" = "1" ]; then
+            python -m pipeline fetch-plans
+          else
+            echo "Bebauungspläne: vorhandener Stand ($(python -c 'import json;print(json.load(open("data/geo/bebauungsplaene_bonn.geojson"))["meta"]["retrieved_at"])'))"
+          fi
+        timeout-minutes: 25
         continue-on-error: true
 
       - name: Abruf OParl-Lite (Sitzungen, Tagesordnungspunkte)
