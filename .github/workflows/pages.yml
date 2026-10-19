@@ -82,6 +82,7 @@ jobs:
           python -m pipeline build
           python -m pipeline export
           python -m pipeline check
+          python -m pipeline soll
 
       # Baustellen für die Seite: aus dem Archiv (Branch archiv, täglich 05:23 UTC), sonst direkt aus den Feeds;
       # mögliche Umsetzungen nur mit Konfidenz hoch (vorläufig). Scheitert beides, bleibt die Ebene ausgeblendet.
