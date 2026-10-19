@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 574,
-  "generated_at": "2026-10-19T14:08:36+00:00",
+  "generated_at": "2026-10-19T14:20:35+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-19T14:04:22+00:00"
+    "retrieved_at": "2026-10-19T14:15:59+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-19T14:06:54+00:00"
+    "retrieved_at": "2026-10-19T14:18:30+00:00"
    },
    {
     "name": "osm",
@@ -32,7 +32,7 @@
     "name": "bplan-bonn",
     "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
-    "retrieved_at": "2026-10-19T14:04:45+00:00"
+    "retrieved_at": "2026-10-19T14:16:18+00:00"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
@@ -22429,16 +22429,11 @@
     "verfahren": "einwohnerfrage",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Einwohnerfrage“",
-    "passung": "weicht ab",
+    "passung": "passt",
     "ist": [
-     "aus",
-     "bv",
-     "rat"
+     "bv"
     ],
-    "abweichung": [
-     "aus",
-     "rat"
-    ]
+    "abweichung": []
    }
   },
   {
@@ -25778,16 +25773,11 @@
     "verfahren": "einwohnerfrage",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Einwohnerfrage“",
-    "passung": "weicht ab",
+    "passung": "passt",
     "ist": [
-     "aus",
-     "bv",
-     "rat"
+     "bv"
     ],
-    "abweichung": [
-     "aus",
-     "rat"
-    ]
+    "abweichung": []
    }
   },
   {
@@ -26141,16 +26131,11 @@
     "verfahren": "einwohnerfrage",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Einwohnerfrage“",
-    "passung": "weicht ab",
+    "passung": "passt",
     "ist": [
-     "aus",
-     "bv",
-     "rat"
+     "bv"
     ],
-    "abweichung": [
-     "aus",
-     "rat"
-    ]
+    "abweichung": []
    }
   },
   {
@@ -35978,16 +35963,11 @@
     "verfahren": "einwohnerfrage",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Einwohnerfrage“",
-    "passung": "weicht ab",
+    "passung": "passt",
     "ist": [
-     "aus",
-     "bv",
-     "rat"
+     "bv"
     ],
-    "abweichung": [
-     "aus",
-     "rat"
-    ]
+    "abweichung": []
    }
   },
   {
@@ -37378,16 +37358,11 @@
     "verfahren": "einwohnerfrage",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Einwohnerfrage“",
-    "passung": "weicht ab",
+    "passung": "passt",
     "ist": [
-     "aus",
-     "bv",
-     "rat"
+     "bv"
     ],
-    "abweichung": [
-     "aus",
-     "rat"
-    ]
+    "abweichung": []
    }
   },
   {
@@ -38109,16 +38084,11 @@
     "verfahren": "einwohnerfrage",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Einwohnerfrage“",
-    "passung": "weicht ab",
+    "passung": "passt",
     "ist": [
-     "aus",
-     "bv",
-     "rat"
+     "bv"
     ],
-    "abweichung": [
-     "aus",
-     "rat"
-    ]
+    "abweichung": []
    }
   },
   {
@@ -46280,16 +46250,11 @@
     "verfahren": "einwohnerfrage",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Einwohnerfrage“",
-    "passung": "weicht ab",
+    "passung": "passt",
     "ist": [
-     "aus",
-     "bv",
-     "rat"
+     "bv"
     ],
-    "abweichung": [
-     "aus",
-     "rat"
-    ]
+    "abweichung": []
    }
   },
   {
