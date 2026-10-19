@@ -9,7 +9,10 @@ Kriterien:
 - zeitlich: die Vorlage ist entschieden, und die Baustelle beginnt am oder nach dem Tag der Entscheidung;
 - thematisch: federführend oder fachlich Tiefbauamt (66) bzw. Stadtverkehr (61-3) oder Thema Verkehr;
 - Stichwort: Bau-Stichwort im Titel, passend zur Maßnahme der Baustelle (Kanalbau: Kanal, Entwässerung, Abwasser;
-  sonst Ausbau, Umgestaltung, Erneuerung, Sanierung …).
+  sonst Ausbau, Umgestaltung, Erneuerung, Sanierung …);
+- Baubeschluss: Konfidenz „hoch“ nur für Beschlussvorlagen, Dringlichkeits- und Eilentscheidungen. Bürgeranträge,
+  Anträge und Änderungsanträge mit Planungsbezug höchstens „mittel“ (Entscheidung des Auftraggebers bei der Prüfung
+  der Stichprobe, 19.10.2026).
 Baustellen fremder Träger (Versorger, Straßen NRW, Bahn) setzen in der Regel keinen Ratsbeschluss um und werden
 getrennt ausgewiesen."""
 import json
@@ -25,6 +28,7 @@ OWN = re.compile(r"Bundesstadt Bonn|^Amt \d|Stadt Bonn", re.I)
 BUILD = re.compile(r"(?i)ausbau|umbau|umgestaltung|neugestaltung|erneuerung|sanierung|neubau|baureife planung|"
                    r"ausführungsplanung|herstellung|verbreiterung|instandsetzung|radweg(?!benutzung)|gehweg|fahrbahn|"
                    r"baumaßnahme|baubeginn")
+BAUBESCHLUSS = ("Beschlussvorlage", "Dringlichkeitsentscheidung", "Eilentscheidung")
 SEWER = re.compile(r"(?i)kanal|entwässerung|abwasser|regenwasser|starkregen")
 TSV = ["konfidenz", "baustelle_id", "bezeichnung", "massnahme", "traeger", "von", "bis", "drucksache", "titel",
        "entschieden_am", "abstand_m", "kriterium_strasse", "kriterium_thema", "kriterium_stichwort", "begruendung",
@@ -61,6 +65,10 @@ def decided_on(p):
 def build_word(title, massnahme):
     """Bau-Stichwort im Titel, das zur Maßnahme passt (Kanalbau verlangt einen Bezug zur Entwässerung)."""
     return bool((SEWER if "kanal" in (massnahme or "").lower() else BUILD).search(title or ""))
+
+
+def baubeschluss(p):
+    return (p.get("paper_type") or "").startswith(BAUBESCHLUSS)
 
 
 def thematic(p):
@@ -111,10 +119,11 @@ def candidates(sites, papers):
             if dist > MAX_DIST or not begin or begin < when:
                 continue
             same, theme, word = bool(names & pstreets), thematic(p), build_word(p["name"], s.get("massnahme"))
+            bau = baubeschluss(p)
             if not own:
                 conf = "fremd"
             elif same and theme and word:
-                conf = "hoch"
+                conf = "hoch" if bau else "mittel"
             elif same and (theme or word):
                 conf = "mittel"
             else:
@@ -122,6 +131,7 @@ def candidates(sites, papers):
             why = [f"{round(dist)} m entfernt", "gleiche Straße" if same else "andere Straße",
                    f"Baubeginn {s.get('von')} nach Entscheidung {when.strftime('%d.%m.%Y')}",
                    "Tiefbau/Verkehr" if theme else "anderes Amt/Thema", "Bau-Stichwort passend zur Maßnahme" if word else "kein passendes Bau-Stichwort",
+                   "Baubeschluss" if bau else f"kein Baubeschluss ({p.get('paper_type') or 'Vorlagenart unbekannt'})",
                    "städtischer Träger" if own else f"fremder Träger ({s.get('traeger')})"]
             out.append({"konfidenz": conf, "baustelle_id": bid, "bezeichnung": s.get("bezeichnung"), "massnahme": s.get("massnahme"),
                         "traeger": s.get("traeger"), "von": s.get("von"), "bis": s.get("bis"), "drucksache": p["reference"],
@@ -168,7 +178,7 @@ SITE_NOTES = [
     "Termine laut Quelle unverbindlich; erfasst sind nur Baustellen mit nennenswertem Einfluss auf den Verkehr.",
     "Die Historie beginnt mit dem ersten Abruf des Archivs; frühere Baustellen fehlen.",
     "„Mögliche Umsetzung“ ist ein Indiz aus räumlichen, zeitlichen und thematischen Kriterien, kein Beleg. Gezeigt "
-    "werden nur Kandidaten der Konfidenz „hoch“, vorläufig: die Prüfung einer Stichprobe von Hand steht aus.",
+    "werden nur Kandidaten der Konfidenz „hoch“, also Baubeschlüsse der Verwaltung; eine Stichprobe wurde von Hand geprüft.",
     "Baustellen fremder Träger (Versorger, Straßen NRW, Bahn) setzen in der Regel keinen Ratsbeschluss um.",
 ]
 
@@ -183,7 +193,7 @@ def site_data(state, papers, origin, stand=None):
             cands.setdefault(c["baustelle_id"], []).append({
                 "drucksache": c["drucksache"], "titel": c["titel"], "entschieden_am": c["entschieden_am"],
                 "abstand_m": c["abstand_m"], "begruendung": c["begruendung"], "kriterien": {"raeumlich": True, "zeitlich": True, "strasse": True, "thema": True,
-                                                            "stichwort": True}, "konfidenz": "hoch"})
+                                                            "stichwort": True, "baubeschluss": True}, "konfidenz": "hoch"})
     out = []
     for bid, v in state.items():
         a = v["angaben"]
@@ -201,7 +211,7 @@ def site_data(state, papers, origin, stand=None):
     seen = [v.get("first_seen") for v in state.values() if v.get("first_seen")]
     return {"meta": {"quelle": [baustellen.URL.format(t) for t in baustellen.FEEDS], "lizenz": config.BAUSTELLEN_LICENSE,
                      "herkunft": origin, "archiv_beginn": min(seen) if seen else None, "abruf": stand,
-                     "kandidaten": "nur Konfidenz hoch, vorläufig (Prüfung von Hand ausstehend)", "hinweise": SITE_NOTES},
+                     "kandidaten": "nur Konfidenz hoch (Stichprobe von Hand geprüft)", "hinweise": SITE_NOTES},
             "baustellen": out}
 
 

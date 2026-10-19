@@ -13,8 +13,8 @@ def site(bez="Siemensstraße", von="03.08.2026", traeger="Bundesstadt Bonn - Amt
 
 
 def paper(ref="240553", name="Umgestaltung der Siemensstraße – Vorplanung", amt="66 Tiefbauamt", stand="entschieden",
-          decided="2024-05-28", street="Siemensstraße", lon=7.0713, lat=50.7299, method="strasse"):
-    return {"reference": ref, "name": name, "amt": amt, "stand": stand, "responsibility": [], "themes": [],
+          decided="2024-05-28", street="Siemensstraße", lon=7.0713, lat=50.7299, method="strasse", typ="Beschlussvorlage"):
+    return {"reference": ref, "name": name, "paper_type": typ, "amt": amt, "stand": stand, "responsibility": [], "themes": [],
             "steps": [{"typ": "beratung", "date": "2024-05-01"}, {"typ": "entscheidung", "date": decided}],
             "locations": [{"level": "strasse", "name": street, "lon": lon, "lat": lat, "method": method}]}
 
@@ -48,6 +48,14 @@ class Kandidaten(unittest.TestCase):
         self.assertEqual((c["kriterium_strasse"], c["kriterium_thema"], c["kriterium_stichwort"], c["pruefvermerk"]),
                          ("ja", "ja", "ja", "ungeprüft"))
         self.assertIn("Baubeginn 03.08.2026 nach Entscheidung 28.05.2024", c["begruendung"])
+
+    def test_nur_baubeschluesse_hoch(self):
+        sites = {"1": site()}
+        papers = [paper(), paper("212110", "Bürgerantrag: Ausbauplanung Siemensstraße", typ="Bürgerantrag § 24 GO - Öffentlich"),
+                  paper("240553-01 AA", "Änderungsantrag: Umgestaltung der Siemensstraße", typ="Änderungsantrag")]
+        got = {c["drucksache"]: c for c in kandidaten.candidates(sites, papers)}
+        self.assertEqual({k: v["konfidenz"] for k, v in got.items()}, {"240553": "hoch", "212110": "mittel", "240553-01 AA": "mittel"})
+        self.assertIn("kein Baubeschluss (Bürgerantrag § 24 GO - Öffentlich)", got["212110"]["begruendung"])
 
     def test_ausschluesse(self):
         sites = {"1": site()}

@@ -60,10 +60,12 @@
   ]
  },
  "regel_bedingungen": {
-  "hinweis": "Zusätzliche Bedingungen für Einflussregeln (einfluss_regeln); die Regel selbst bleibt unverändert.",
+  "hinweis": "Zusätzliche Bedingungen für Einflussregeln (einfluss_regeln); die Regel selbst bleibt unverändert. Neue Bedingungen nur, wo die Quelle keine hat; Ausschlüsse (nicht_*) dürfen erweitert werden.",
   "regeln": [
    {"id": "offenlage", "wenn": {"status": ["offen", "vertagt"]},
-    "grund": "Der Hinweis auf die Offenlage ist nur sinnvoll, solange das Verfahren läuft; Entscheidung des Auftraggebers bei der Prüfung der Stichprobe (200556), 19.10.2026"}
+    "grund": "Der Hinweis auf die Offenlage ist nur sinnvoll, solange das Verfahren läuft; Entscheidung des Auftraggebers bei der Prüfung der Stichprobe (200556), 19.10.2026"},
+   {"id": "eigener-buergerantrag", "wenn": {"nicht_verfahren": ["buergerantrag"]},
+    "grund": "Bei einem Bürgerantrag wirkt der Hinweis auf einen eigenen Bürgerantrag doppelt; Entscheidung des Auftraggebers bei der Prüfung der Stichprobe (261453), 19.10.2026"}
   ]
  },
  "ohne_soll": {

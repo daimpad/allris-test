@@ -95,6 +95,15 @@ Die Prüfvermerke stehen in `data/export/soll/stichprobe_soll.tsv` (Spalten `pru
 |---|---|---|
 | 1–6 | bestätigt; bei 200556 Mitwirkung teilweise | Der Hinweis auf die Offenlage erscheint nur noch bei offenen oder vertagten Verfahren (`regel_bedingungen` in `data/soll/ergaenzungen.json`) |
 | 7–12 | bestätigt | 221004: Befund bleibt (Verweisung an den Schulausschuss); 230577: kein Befund richtig (Stand nach Hauptweg) |
+| 13–18 | bestätigt | 241058, 253500: Sicherheit „mittel“ reicht; kein eigenes Verfahren für Verwaltungsvorlagen zur Entscheidung in der Bezirksvertretung |
+| 19–24 | bestätigt | 253869: Informationsbrief ohne Termin gilt zu Recht als erledigt |
+| 25–30 | bestätigt; bei 261453 Mitwirkung teilweise | 261294: Sicherheit „mittel“ reicht; bei Bürgeranträgen entfällt der Hinweis auf einen eigenen Bürgerantrag (Regel und allgemeiner Hinweis) |
+
+**Ergebnis (30 von 30 geprüft):**
+- Verfahren: 30 bestätigt; bei den 5 Vorgängen mit Sicherheit „mittel“ reicht diese Einstufung, ein eigenes Verfahren ist nicht nötig.
+- Abgleich und Befund: 30 bestätigt. Es bleibt der Befund 221004; der Befund 230577 ist seit dem Abgleich aus dem Hauptweg entfallen.
+- Mitwirkung: 28 bestätigt, 2 teilweise. Daraus folgen zwei Anpassungen der Regeln: Offenlage nur bei offenen Verfahren; kein Hinweis auf einen eigenen Bürgerantrag bei Bürgeranträgen.
+- Die KI-Vorprüfung lag in 29 von 30 Fällen gleich. Abweichung: Bei 261453 hatte sie den doppelten Hinweis nicht beanstandet.
 
 ## Noch zu tun (Auftraggeber)
 
