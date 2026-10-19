@@ -45,7 +45,7 @@ Sicherheit der Zuordnung: hoch 12.581, mittel 1.364.
 
 - Die Passung prüft nur, ob die beratenden **Gremienarten** im Soll vorkommen. Reihenfolge, Fristen und Rollen (Empfehlung, Entscheidung) prüft sie nicht. Die Ergänzungen schließen Lücken des Modells; dass die Passung dadurch steigt, ist erwartbar und kein unabhängiger Beleg.
 - Das Soll ist ein vereinfachtes Modell des Regelwerks, keine Rechtsauskunft. Die Fassungen von Geschäftsordnung und Satzungen gelten zum Stand des Abrufs, 19.10.2026.
-- Die Belege der Ergänzungen sind von mir aus den Rechtstexten abgeleitet und nicht von Hand geprüft.
+- Die Belege der Ergänzungen sind aus den Rechtstexten abgeleitet; am 19.10.2026 von Hand geprüft (8 bestätigt, 5 teilweise, präzisiert; `soll/pruefung/belege_ergaenzungen.tsv`).
 
 ## Nächster Schritt
 

@@ -37,7 +37,9 @@ GESETZE = {
 }
 _PREFIX = ("GeschO", "HS", "BezS", "ZustO", "Satzung", "Leitlinien")
 _SUFFIX_RE = re.compile(r"(§§?\s*[^;§]*?)\s*\b(GO NRW|BauGB)\b")
-_PREFIX_RE = re.compile(r"\b(" + "|".join(_PREFIX) + r")\b\s*(.*?)(?=\s*[,;]\s*(?:\b(?:" + "|".join(_PREFIX) + r")\b|§)|\s*$)")
+# Abweichend vom Original reicht ein Verweis bis zum nächsten Gesetz oder Semikolon, damit „GeschO § 22 Abs. 1, § 7 Abs. 5“
+# beide Paragrafen behält
+_PREFIX_RE = re.compile(r"\b(" + "|".join(_PREFIX) + r")\b\s*(.*?)(?=\s*[,;]\s*\b(?:" + "|".join(_PREFIX) + r")\b|\s*;|\s*$)")
 
 
 def rechtsgrundlagen(beleg):
