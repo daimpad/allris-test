@@ -117,6 +117,10 @@ Der Workflow schreibt die fertige Seite nach jedem Lauf zusätzlich in den Branc
 
 Favicons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, Symbole im `site.webmanifest`), Beschreibung, canonical, Open Graph und Twitter-Karte mit Vorschaubild (`og-image.jpg`), strukturierte Daten (schema.org `WebSite`, `WebApplication`), `noscript`-Hinweis mit Links zu den Daten und eine Fehlerseite (`404.html`). `python -m pipeline seo` schreibt `robots.txt`, `sitemap.xml` und statische Seiten je Ortsteil und Stadtbezirk mit Übersicht (`gebiete/`, `pipeline/gebietsseiten.py`: Kennzahlen, Themen, 20 jüngste Vorlagen, Links zu Karte und Original) in die zusammengestellte Seite und setzt `SITE_URL` in die absoluten Adressen ein. Hauptadresse ist `https://ris-bonn.datenatlas.de/` (Standard von `SITE_URL`) mit `robots.txt` an der Wurzel; der Spiegel auf GitHub Pages verweist per canonical darauf. Die Sitemap lässt sich in der Google Search Console einreichen.
 
+## Archiv der Baustellen
+
+Die Stadt Bonn veröffentlicht Baustellen nur mit dem aktuellen Stand. `baustellen.yml` ruft die drei Feeds täglich ab (`python -m pipeline baustellen`, mit Wiederholung und Prüfung der Anzahl) und schreibt in den Branch `archiv`: Zustand je Baustelle mit erstem und letztem Auftreten und geänderten Terminen, ein Ereignisprotokoll und Momentaufnahmen bei Änderungen. Eine Baustelle gilt nur als entfallen, wenn alle Feeds vollständig abgerufen wurden. Lizenz CC0 (laut Auftraggeber). Auf der Seite erscheinen die Baustellen noch nicht; eine Verknüpfung mit Beschlüssen wäre nur ein Indiz („möglicher Zusammenhang“), nie ein Beleg.
+
 ## Fremdcode und externe Dienste
 
 Leaflet 1.9.4 (BSD-2-Clause) und Leaflet.markercluster 1.5.3 (MIT) liegen in `site/vendor/`, die Schrift Inter (SIL Open Font License 1.1) in `site/fonts/` – jeweils mit Lizenzdatei, Integritätsprüfung (SRI) bleibt aktiv. Die Seite lädt nichts von fremden Servern außer den Kartenkacheln von OpenStreetMap; der Ratsassistent verbindet sich nur mit dem gewählten Anbieter.

@@ -63,5 +63,11 @@ SOURCES = {
 
 PILOT_ORTSTEIL = "Endenich"
 
+# Archiv der Baustellen (Branch „archiv“, im Workflow nach _archiv ausgecheckt)
+BAUSTELLEN_ARCHIV = Path(os.environ.get("BAUSTELLEN_ARCHIV", ROOT / "_archiv"))
+# noch nicht in SOURCES, solange die Baustellen nicht auf der Seite erscheinen
+BAUSTELLEN_LICENSE = ("CC0 1.0 (Stadt Bonn, Baustellen tagesaktuell und geplant; Lizenz laut Auftraggeber, die Datensätze "
+                      "sind nicht mehr im Katalog von opendata.bonn.de)")
+
 # Öffentliche Adresse der Seite (für absolute Links in Feeds, Kalender und DCAT-Beschreibung)
 SITE_URL = os.environ.get("SITE_URL", "https://ris-bonn.datenatlas.de/")
