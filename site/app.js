@@ -902,6 +902,7 @@
     const v = s.verfahren && d.verfahren[s.verfahren];
     const befund = s.passung === "weicht ab"
       ? `<div class="befund"><strong>Befund:</strong> Beraten hat auch ${esc(s.abweichung.map((b) => d.bahnen[b] || b).join(", "))}. Das Regelwerk sieht das für dieses Verfahren nicht vor. Das ist ein Befund, keine Bewertung; das Modell ist vereinfacht.</div>`
+      : s.passung === "nur Beirat" ? '<p class="hint">Beraten hat nur ein Beirat. Beiräte bildet das Modell nicht ab; ein Abgleich entfällt.</p>'
       : s.passung === "ohne Beratung" ? '<p class="hint">In den Daten ist keine Beratung verzeichnet; ein Abgleich entfällt.</p>' : "";
     const body = v ? `<p><strong>${esc(v.titel)}</strong>${v.kurz ? ` – ${esc(v.kurz)}` : ""}<br>
         <span class="derived">Zuordnung abgeleitet: ${esc(s.grund)}; Sicherheit ${esc(s.sicherheit)}</span></p>${befund}

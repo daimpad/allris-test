@@ -148,7 +148,9 @@ Soll-Modell der Prozessebene
 - audit_soll.tsv: Verfahren je Vorgang (Stammnummer), Sicherheit, Grund, beratende Gremien Ist und Soll, Passung
 - bonn/soll.json: Verfahren mit Schritten und Rechtsgrundlagen, Fristen, Zuständigkeit für die Seite; je Vorlage
   das Feld soll (Zuordnung abgeleitet; Abweichungen sind Befunde, keine Bewertung; keine Rechtsauskunft)
-- berichte/soll/: Berichte der Phasen 1 bis 3
+- soll/stichprobe_soll.tsv: Stichprobe (30 Vorgänge) zur Prüfung von Hand (Zuordnung, Befund, Mitwirkung;
+  Spalten pruef_*); soll/vorpruefung_soll.tsv: Vorprüfung durch KI, gekennzeichnet, ersetzt sie nicht
+- berichte/soll/: Berichte der Phasen 1 bis 4
 
 Grenzen: Eine Baustelle ist kein Beleg für die Umsetzung eines Beschlusses. Termine sind laut Quelle
 unverbindlich; die Historie der Baustellen beginnt mit dem Archiv (19.10.2026). Pläne im Verfahren

@@ -64,6 +64,23 @@ test("Einordnung: entschieden, alte offene Vorgänge unklar, ohne Soll keine Reg
   assert.deepEqual(mitwirken(vorlage({ soll: { verfahren: null } }), SOLL, MEETINGS, HEUTE).regeln, []);
 });
 
+test("Einordnung: Genehmigung durch den Rat, Kenntnisnahme, Mitteilung (Korrekturen aus der Stichprobe)", () => {
+  const eil = vorlage({ stand: "beraten, ohne Entscheidung", soll: { verfahren: "dringlichkeitsentscheidung" }, steps: [
+    { typ: "beratung", label: "Hauptausschuss", role: "Eilentscheidung", result: "ungeändert beschlossen", date: "2020-04-23" },
+    { typ: "beratung", label: "Rat", role: "Genehmigung", result: "ungeändert beschlossen", date: "2020-06-18" }] });
+  assert.deepEqual([kontext(eil, HEUTE).status, kontext(eil, HEUTE).abschluss], ["abgeschlossen", "beschlossen"]);
+  const verwiesen = vorlage({ stand: "in Beratung", soll: { verfahren: "einwohnerfrage" }, steps: [
+    { typ: "beratung", label: "Bezirksvertretung Bonn", result: "verwiesen", date: "2022-06-07" },
+    { typ: "beratung", label: "Schulausschuss", result: "zur Kenntnis genommen", date: "2022-08-18" }] });
+  assert.deepEqual([kontext(verwiesen, HEUTE).status, kontext(verwiesen, HEUTE).abschluss], ["abgeschlossen", "zur Kenntnis"]);
+  const ausstehend = vorlage({ stand: "in Beratung", steps: [
+    { typ: "beratung", label: "Bezirksvertretung Bonn", result: "zur Kenntnis genommen", date: "2026-09-01" },
+    { typ: "entscheidung", label: "Rat" }] });
+  assert.equal(kontext(ausstehend, HEUTE).status, "offen");
+  const info = vorlage({ stand: "offen", soll: { verfahren: "mitteilung" }, steps: [{ typ: "beratung", label: "Rat", role: "Kenntnisnahme" }] });
+  assert.deepEqual([kontext(info, HEUTE).status, kontext(info, HEUTE).abschluss], ["abgeschlossen", "zur Kenntnis"]);
+});
+
 test("echter Export: Regeln in Sie-Form mit Rechtsgrundlagen", { skip: !(await access(SOLL_URL).then(() => true, () => false)) }, async () => {
   const s = JSON.parse(await readFile(SOLL_URL, "utf8"));
   assert.equal(s.mitwirken.length, 14);

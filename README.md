@@ -60,7 +60,7 @@ Diese Anzeige ist vorläufig, bis eine Stichprobe von Hand geprüft ist. Der Vol
 - Ein Straßenpunkt steht für die ganze Straße, nicht für ein Gebäude.
 - Einreichende stehen nicht strukturiert in der Quelle; sie werden aus Vorlagenart und Titel erschlossen.
 - Das Soll nach Regelwerk ist ein vereinfachtes Modell und keine Rechtsauskunft. Reihenfolge, Fristen und Rollen werden nicht abgeglichen.
-- Stichproben zur Verortung, zu den Themen und zu den Baustellen werden noch von Hand geprüft. Vorprüfungen durch KI sind als solche gekennzeichnet und ersetzen diese Prüfung nicht.
+- Stichproben zur Verortung, zu den Themen, zu den Baustellen und zum Soll nach Regelwerk werden noch von Hand geprüft. Vorprüfungen durch KI sind als solche gekennzeichnet und ersetzen diese Prüfung nicht.
 
 ## Datenquellen und Lizenzen
 
