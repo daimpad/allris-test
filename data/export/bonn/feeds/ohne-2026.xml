@@ -4,15 +4,15 @@
 <title>RIS-Karte Bonn – stadtweit / ohne Ortsbezug 2026</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2026</subtitle>
 <updated>2026-10-18T00:00:00Z</updated>
-<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ohne-2026.xml"/>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026"/>
-<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ohne-2026.xml"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026"/>
+<author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029734#vorlage</id>
 <title>Neue Vorlage 261808-01 ST: Grüne-Große Anfrage: Europäische Woche der Abfallvermeidung</title>
 <updated>2026-10-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261808-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261808-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029734"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
@@ -20,7 +20,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028978#vorlage</id>
 <title>Neue Vorlage 261568: Potenzialstudie „Natürliche CO2-Senken in der Bundesstadt Bonn“ und konkrete Umsetzungsansätze im laufenden Verwaltungsgeschäft</title>
 <updated>2026-10-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261568"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261568"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028978"/>
 <summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
@@ -28,7 +28,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029959#vorlage</id>
 <title>Neue Vorlage 261933: Punkte der nichtöffentlichen Sitzung</title>
 <updated>2026-10-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261933"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261933"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029959"/>
 <summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
 </entry>
@@ -36,7 +36,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029954#vorlage</id>
 <title>Neue Vorlage 261931: BBB-Fraktion-Große Anfrage: Haushalt; Sachstand finanzwirksame Leistungen an umliegende Gebietskörperschaften bzw. deren Einwohner</title>
 <updated>2026-10-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261931"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261931"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029954"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -44,7 +44,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029939#vorlage</id>
 <title>Neue Vorlage 261923: Kleine Anfrage der Grünen Ratsfraktion zur OGS-Betreuung</title>
 <updated>2026-10-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261923"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261923"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029939"/>
 <summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -52,7 +52,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029906#vorlage</id>
 <title>Neue Vorlage 261876-02 ST: Stellungnahme: Geschützt Silvester feiern/Schutz in der Silvesternacht</title>
 <updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261876-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261876-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029906"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
 </entry>
@@ -60,7 +60,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029895#vorlage</id>
 <title>Neue Vorlage 261876-01 AA: Grüner Änderungsantrag zu "Geschützt Silvester feiern/Schutz in der Silvesternacht" Antrag zur Vorlage 261876</title>
 <updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261876-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261876-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029895"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -68,7 +68,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029879#vorlage</id>
 <title>Neue Vorlage 261898: Mitteilung zu den Ergebnissen der Umfrage zu den Auswirkungen der Nordbrückensperrung auf die Wirtschaft</title>
 <updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261898"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261898"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029879"/>
 <summary>Mitteilungsvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
 </entry>
@@ -76,7 +76,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029824#vorlage</id>
 <title>Neue Vorlage 261836-01 ST: Große Anfrage-Linke: Antragsbearbeitung Bildung und Teilhabe</title>
 <updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261836-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261836-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029824"/>
 <summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
 </entry>
@@ -84,7 +84,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029691#vorlage</id>
 <title>Neue Vorlage 261842: 4. Änderung der Entgeltordnung für sonstige Leistungen der Feuerwehr der Bundesstadt Bonn</title>
 <updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261842"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261842"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029691"/>
 <summary>Beschlussvorlage · federführend: 37 Feuerwehr und Rettungsdienst · Stand: offen</summary>
 </entry>
@@ -92,7 +92,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029688#vorlage</id>
 <title>Neue Vorlage 261840: 11. Satzung zur Änderung der Satzung über die Erhebung von Kostenersatz für Leistungen der Feuerwehr der Bundesstadt Bonn</title>
 <updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261840"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261840"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029688"/>
 <summary>Beschlussvorlage · federführend: 37 Feuerwehr und Rettungsdienst · Stand: offen</summary>
 </entry>
@@ -100,7 +100,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029639#vorlage</id>
 <title>Neue Vorlage 261775-01 ST: FDP-Prüfauftrag: Oberirdische Zisternen als Sofortmaßnahme zur Wasserversorgung von Parks und als Löschwasserreserve</title>
 <updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261775-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261775-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029639"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
@@ -108,7 +108,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029344#vorlage</id>
 <title>Neue Vorlage 261073-01 ST: Jahresabschluss 2025 der VEBOWAG</title>
 <updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261073-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261073-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029344"/>
 <summary>Stellungnahme der Verwaltung · federführend: 01-4 Referat Beteiligungsmanagement · Stand: offen</summary>
 </entry>
@@ -116,7 +116,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029878#vorlage</id>
 <title>Neue Vorlage 261897: Grüne-Antrag: Einführung eines Tarifkorridors für vorbestellte Taxifahrten</title>
 <updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261897"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261897"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029878"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -124,7 +124,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029852#vorlage</id>
 <title>Neue Vorlage 261885: FDP/Grüne-Antrag: Freier ÖPNV am 05. und 06. Dezember 2026 (verkaufsoffener Sonntag)</title>
 <updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261885"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261885"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029852"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -132,7 +132,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029844#vorlage</id>
 <title>Neue Vorlage 261882: Sitzungstermine der Bezirksvertretung Bonn in 2027</title>
 <updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261882"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261882"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029844"/>
 <summary>Mitteilungsvorlage · federführend: Bezirksverwaltungsstelle Bonn · Stand: offen</summary>
 </entry>
@@ -140,7 +140,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029486#beratung-5</id>
 <title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 261771 Stand der Bestandsbewertung öffentlicher Toilettenanlagen in Bonn</title>
 <updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261771"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261771"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029486"/>
 <summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -148,7 +148,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029354#beratung-3</id>
 <title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261464-01 ST Verbesserung der Verkehrssituation für Radfahrende rund um den Brückenkopf Kennedybrücke</title>
 <updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261464-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261464-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029354"/>
 <summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -156,7 +156,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029210#beratung-3</id>
 <title>Ausschuss für Kinder, Jugend und Familie: „zur Kenntnis genommen“ – 261658 Stellungnahme der AG 78 Jugendförderung Bonn zum Sondervermögen „Infrastruktur und Klimaneutralität“</title>
 <updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261658"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261658"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029210"/>
 <summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -164,7 +164,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029186#beratung-3</id>
 <title>Bezirksvertretung Beuel: „vertagt“ – 260870-01 ST FDP - Große Anfrage: Landschaftsbaumaßnahmen auf dem Ennertsportplatz</title>
 <updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260870-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260870-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029186"/>
 <summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -172,7 +172,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029884#vorlage</id>
 <title>Neue Vorlage 261901: Antrag der Grünen Ratsfraktion: Weiterentwicklung des Anmeldeverfahrens an weiterführenden Schulen</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261901"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261901"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029884"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -180,7 +180,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029883#vorlage</id>
 <title>Neue Vorlage 261900: Antrag der Grünen Ratsfraktion: Elternbefragung zum Bedarf an Gesamtschulplätzen in Bonn</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261900"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261900"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029883"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -188,7 +188,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029877#vorlage</id>
 <title>Neue Vorlage 261569-01 AA: Änderungsantrag Linke: Veröffentlichung der Vorhabenliste: 164701 - Parkpflege- und Entwicklungskonzept Rheinaue Antrag zur Vorlage 261569 - Erweiterung des Beteiligungsverfahrens</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261569-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261569-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029877"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -196,7 +196,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029876#vorlage</id>
 <title>Neue Vorlage 261896: Keine weitere Prüfung der Aufgabe der Schauspielsparte des Theaters Bonn</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261896"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261896"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029876"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -204,7 +204,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029875#vorlage</id>
 <title>Neue Vorlage 261895: CDU/SPD/FDP-Antrag: BFD bei Feuerwehr Bonn</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261895"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261895"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029875"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -212,7 +212,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029871#vorlage</id>
 <title>Neue Vorlage 261893: Sitzungstermine für den Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren für das Jahr 2027</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261893"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261893"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029871"/>
 <summary>Mitteilungsvorlage · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
 </entry>
@@ -220,7 +220,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029870#vorlage</id>
 <title>Neue Vorlage 261892: CDU-Große Anfrage: Auftritte von Anna Netrebko an der Oper Bonn - Haltung der Stadtverwaltung und Umgang mit den politischen Kontroversen</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261892"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261892"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029870"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -228,7 +228,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029862#vorlage</id>
 <title>Neue Vorlage 261890: Kooperationsantrag CDU/SPD/FDP: Verlagerung der Wache GABI in den Bereich des Hauptbahnhofs</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261890"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261890"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029862"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -236,7 +236,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029858#vorlage</id>
 <title>Neue Vorlage 261253-01 AA: FDP-Änderungsantrag: Strategische Entwicklung ausgewählter Leerstands- Liegenschaften des SGB zur Schaffung von Wohnraum Antrag zur Vorlage 261253</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261253-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261253-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029858"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -244,7 +244,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029846#vorlage</id>
 <title>Neue Vorlage 261883: Sitzungstermine des Ausschusses für Chancengerechtigkeit und Integration der Bundesstadt Bonn in 2026</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261883"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261883"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029846"/>
 <summary>Mitteilungsvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
 </entry>
@@ -252,7 +252,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029820#vorlage</id>
 <title>Neue Vorlage 261876: SPD-Fraktion: Geschützt Silvester feiern/Schutz in der Silvesternacht</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261876"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261876"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029820"/>
 <summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -260,7 +260,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029791#vorlage</id>
 <title>Neue Vorlage 261813-01 ST: Stellungnahme zum Antrag: Änderung der Haushaltssperre</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261813-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261813-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029791"/>
 <summary>Stellungnahme der Verwaltung · federführend: 20 Stadtkämmerei · Stand: offen</summary>
 </entry>
@@ -268,7 +268,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029761#vorlage</id>
 <title>Neue Vorlage 260945-03: Konzept zur flexiblen und rechtssicheren Schulbuchbeschaffung gem. § 75a GO NRW</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260945-03"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260945-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029761"/>
 <summary>Beschlussvorlage · federführend: 40 Schulamt · Stand: offen</summary>
 </entry>
@@ -276,7 +276,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029685#vorlage</id>
 <title>Neue Vorlage 261594-01: CDU-SPD-FDP Kooperation: Qualifizierung der Verwaltungsspitze im behördlichen Krisenmanagement</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261594-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261594-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029685"/>
 <summary>Stellungnahme der Verwaltung · federführend: 10 Personal- und Organisationsamt · Stand: offen</summary>
 </entry>
@@ -284,7 +284,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029656#vorlage</id>
 <title>Neue Vorlage 261835: Seniorenzentren Pflegesatzanpassung 2026</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261835"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261835"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029656"/>
 <summary>Beschlussvorlage · federführend: Seniorenzentren der Bundesstadt Bonn · Stand: offen</summary>
 </entry>
@@ -292,7 +292,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029607#beratung-4</id>
 <title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 261100-01 Große Anfrage der Grünen-Fraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261100-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261100-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029607"/>
 <summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -300,7 +300,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028078#beratung-3</id>
 <title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260789-02 ST Stellungnahme zu Große Anfrage der Grünen-Bezirksfraktion: Einrichtung von Fahrradbügeln als laufendes Geschäft der Verwaltung</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260789-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260789-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028078"/>
 <summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -308,7 +308,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029834#vorlage</id>
 <title>Neue Vorlage 261879: Volt-Anfrage: Wartezeiten und Verfahren bei verspäteter Busbegleitung im Schülerspezialverkehr</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261879"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261879"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029834"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -316,7 +316,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029822#vorlage</id>
 <title>Neue Vorlage 261491-02 ST: Stellungnahme zum Änderungsantrag: Fortschreibung der Richtlinien zur Förderung von Gewaltprävention</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261491-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261491-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029822"/>
 <summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -324,7 +324,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029809#vorlage</id>
 <title>Neue Vorlage 261811-01 ST: Stellungnahme zur Großen Anfrage der Grünen Ratsfraktion: Sprachförderung in Bonner Kindertageseinrichtungen und Übergang zu den ABC-Klassen</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261811-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261811-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029809"/>
 <summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -332,7 +332,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029805#vorlage</id>
 <title>Neue Vorlage 261807-01 ST: Stellungnahme der Verwaltung zu Grünen-Große Anfrage: Europäische Klimaschutzinitiative „eumayors“</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261807-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261807-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029805"/>
 <summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -340,7 +340,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029803#vorlage</id>
 <title>Neue Vorlage 261809-01 ST: Vertagungsbitte zu Grüne-Große Anfrage: Europäisches Zentrum für mittelfristige Wettervorhersage (EZMW/ECMWF)</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261809-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261809-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029803"/>
 <summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: in Beratung</summary>
 </entry>
@@ -348,7 +348,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029802#vorlage</id>
 <title>Neue Vorlage 261806-01 ST: Stellungnahme zum Antrag von SPD/FDP/Volt-Antrag: Sicherung der Bundeszuschüsse für wichtige internationale Veranstaltungstage in Bonn im Rahmen der Zusatzvereinbarung zum Bonn-Berlin-Gesetz</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261806-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261806-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029802"/>
 <summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -356,7 +356,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029775#vorlage</id>
 <title>Neue Vorlage 261748-01 ST: Kosten der OGS</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261748-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261748-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029775"/>
 <summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
 </entry>
@@ -364,7 +364,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029738#vorlage</id>
 <title>Neue Vorlage 261733-01: 11. Satzung zur Änderung der Hundesteuersatzung der Bundesstadt Bonn</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261733-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261733-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029738"/>
 <summary>Beschlussvorlage · federführend: 21 Kassen- und Steueramt · Stand: offen</summary>
 </entry>
@@ -372,7 +372,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029653#vorlage</id>
 <title>Neue Vorlage 261791-01 ST: CDU-Antrag: Erarbeitung eines modifizierten Raum- und Nutzungsprogramms für eine finanzierbare Sanierung der Stadthalle sowie Überprüfung des Denkmalstatus</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261791-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261791-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029653"/>
 <summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
 </entry>
@@ -380,7 +380,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029339#vorlage</id>
 <title>Neue Vorlage 261696: Förderung des Bundeswettbewerbs "Jugend musiziert 2027"</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261696"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261696"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029339"/>
 <summary>Beschlussvorlage · federführend: 41 Kulturamt · Stand: offen</summary>
 </entry>
@@ -388,7 +388,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028741#vorlage</id>
 <title>Neue Vorlage 261444: Vorstellung Abteilung Liegenschaften</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261444"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261444"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028741"/>
 <summary>Mitteilungsvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
 </entry>
@@ -396,7 +396,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028078#vorlage</id>
 <title>Neue Vorlage 260789-02 ST: Stellungnahme zu Große Anfrage der Grünen-Bezirksfraktion: Einrichtung von Fahrradbügeln als laufendes Geschäft der Verwaltung</title>
 <updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260789-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260789-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028078"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -404,7 +404,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029823#vorlage</id>
 <title>Neue Vorlage 261877: Bürgerantrag: Antrag zur Einhaltung der Fristen bei Baumfällanträgen</title>
 <updated>2026-10-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261877"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261877"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029823"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
@@ -412,7 +412,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029817#vorlage</id>
 <title>Neue Vorlage 261514-02 ST: Stellungnahme zum Änderungsantrag: Änderung der „Richtlinien zur Förderung der Jugendarbeit – Maßnahmen, Beschaffungen und Investitionen“</title>
 <updated>2026-10-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261514-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261514-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029817"/>
 <summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -420,7 +420,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029784#vorlage</id>
 <title>Neue Vorlage 261740-01 ST: Vertagungsbitte zu Linke Große Anfrage: Schwerlastverkehr im Stadtbezirk Bonn infolge der Sperrung der Nordbrücke</title>
 <updated>2026-10-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261740-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261740-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029784"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -428,7 +428,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029700#vorlage</id>
 <title>Neue Vorlage 261529-05 ST: Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz</title>
 <updated>2026-10-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261529-05%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261529-05%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029700"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
@@ -436,7 +436,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029626#vorlage</id>
 <title>Neue Vorlage 261656-02 ST: BBB-Anfrage: Stärkung und Festigung der Region Bonn als Zentrum für Cyber- und Informationssicherheit</title>
 <updated>2026-10-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261656-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261656-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029626"/>
 <summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
 </entry>
@@ -444,7 +444,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029804#vorlage</id>
 <title>Neue Vorlage 261700-01 AA: Volt-Änderungsantrag zu Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2027 Antrag zur Vorlage 261700</title>
 <updated>2026-10-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261700-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261700-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029804"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -452,7 +452,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029800#vorlage</id>
 <title>Neue Vorlage 261873: Bürgerantrag: Antrag zur finanziellen Bezuschussung von Stoffwindeln</title>
 <updated>2026-10-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261873"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261873"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029800"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
@@ -460,7 +460,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029798#vorlage</id>
 <title>Neue Vorlage 261872: Bürgerantrag: Antrag auf Beibehaltung der Buslinie 610 und 611</title>
 <updated>2026-10-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261872"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261872"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029798"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
@@ -468,7 +468,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029795#vorlage</id>
 <title>Neue Vorlage 261871: Kleine Anfrage der Grünen Ratsfraktion zu Schulstraßen</title>
 <updated>2026-10-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261871"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261871"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029795"/>
 <summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -476,7 +476,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029780#vorlage</id>
 <title>Neue Vorlage 261769-02 ST: Vertagungsbitte zur CDU-Bezirksfraktion-Große Anfrage: Unterhalt der Brücken über den Engelsbach im Melbtal unterhalb des Sport Wissenschaftliche Instituts. hier: Vertagungsbitte</title>
 <updated>2026-10-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261769-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261769-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029780"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -484,7 +484,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029762#vorlage</id>
 <title>Neue Vorlage 261525-02 ST: Vertagungsbitte zur BBB-Anfrage: Schutz der Bevölkerung vor Waldbränden</title>
 <updated>2026-10-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261525-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261525-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029762"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
 </entry>
@@ -492,7 +492,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029186#vorlage</id>
 <title>Neue Vorlage 260870-01 ST: FDP - Große Anfrage: Landschaftsbaumaßnahmen auf dem Ennertsportplatz</title>
 <updated>2026-10-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260870-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260870-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029186"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
 </entry>
@@ -500,7 +500,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029782#vorlage</id>
 <title>Neue Vorlage 261448-02 AA: FDP-Änderungsantrag: FDP-Antrag: Verbesserung der Sicherheit für Fußgänger auf der Kennedy Brücke, sichtbare Trennung von Radweg und Fußweg Antrag zur Vorlage 261448</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261448-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261448-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029782"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -508,7 +508,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029781#vorlage</id>
 <title>Neue Vorlage 261055-03 AA: FDP-Änderungsantrag: Aufforstung im FFH- und Naturschutzgebiet Ennert Antrag zur Vorlage 261055</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261055-03%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261055-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029781"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
@@ -516,7 +516,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029771#vorlage</id>
 <title>Neue Vorlage 261578-02 AA: Änderungsantrag CDU-SPD-FDP: Einsparungen im Wirtschaftsplan SGB 2027 Antrag zur Vorlage 261578</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261578-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261578-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029771"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
@@ -524,7 +524,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029748#vorlage</id>
 <title>Neue Vorlage 261340-01: Hitzemaßnahmen in Schulen</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261340-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261340-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029748"/>
 <summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
 </entry>
@@ -532,7 +532,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029747#vorlage</id>
 <title>Neue Vorlage 261610-01 ST: Große Anfrage der Linke-Fraktion: Maßnahmen der Stadt Bonn zur Prävention von Rechtsextremismus und zum Schutz von Betroffenen rechter Gewalt</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261610-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261610-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029747"/>
 <summary>Stellungnahme der Verwaltung · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
 </entry>
@@ -540,7 +540,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029707#vorlage</id>
 <title>Neue Vorlage 261693-01 ST: Stellungnahme zur Linken Großen Anfrage 261693: Arbeitszeiten und Entlohnung des Vorderhauspersonals im Theater- und Opernbetrieb</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261693-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261693-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029707"/>
 <summary>Stellungnahme der Verwaltung · federführend: 46 Theater der Bundesstadt Bonn · Stand: offen</summary>
 </entry>
@@ -548,7 +548,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029664#vorlage</id>
 <title>Neue Vorlage 261686-01 ST: Stellungnahme zum Interfraktionellen Antrag zur Unterstützung der jüdischen Gemeinde bei der Errichtung einer neuen Synagoge nebst Gemeinde-, Bildungs- und Sozialzentrum</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261686-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261686-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029664"/>
 <summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
 </entry>
@@ -556,7 +556,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029619#vorlage</id>
 <title>Neue Vorlage 261751-01: Gefahr von Wald- und Buschbränden</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261751-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261751-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029619"/>
 <summary>Stellungnahme der Verwaltung · federführend: 37 Feuerwehr und Rettungsdienst · Stand: offen</summary>
 </entry>
@@ -564,7 +564,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029377#beratung-3</id>
 <title>Naturschutzbeirat: „vertagt“ – 261611-01 ST Antrag: Verpachtung städtischer landwirtschaftlicher Flächen</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261611-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261611-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029377"/>
 <summary>Kenntnisnahme am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -572,7 +572,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029354#vorlage</id>
 <title>Neue Vorlage 261464-01 ST: Verbesserung der Verkehrssituation für Radfahrende rund um den Brückenkopf Kennedybrücke</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261464-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261464-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029354"/>
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
 </entry>
@@ -580,7 +580,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029337#beratung-3</id>
 <title>Naturschutzbeirat: „ungeändert beschlossen - mit Protokollnotiz“ – 261695 Baugrunderkundungsarbeiten zur geplanten Seilbahnstation Rheinauen auf dem Gelände des linksrheinischen Rheinauenparks, Bereich Rheinland-Pfalz-Pavillon, Charles-de-Gaulle Straße</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261695"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261695"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029337"/>
 <summary>Entscheidung am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -588,7 +588,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029326#vorlage</id>
 <title>Neue Vorlage 261241-02 ST: Große Anfrage der AfD-Fraktion: Erhalt der Möglichkeit von Barzahlungen in öffentlichen Verkehrsmitteln.</title>
 <updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261241-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261241-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029326"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
@@ -596,7 +596,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029769#vorlage</id>
 <title>Neue Vorlage 260127-31 AA: Volt-Änderungsantrag zu 260127-30 AA: Zukunft Bonner Bühnen - Grundsatzbeschluss: Bauliche Zukunft der Theaterliegenschaften</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260127-31%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260127-31%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029769"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -604,7 +604,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029768#vorlage</id>
 <title>Neue Vorlage 261724-01 AA: Neufassung der Nutzungs- und Gebührenordnung der Stadtbibliothek Bonn und Erhöhung der Gebühren Antrag zur Vorlage 261724</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261724-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261724-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029768"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -612,7 +612,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029766#vorlage</id>
 <title>Neue Vorlage 261307-01 AA: Linke-Bezirksfraktion-Änderungsantrag: Kosten- und Organisationsvergleich zum Betrieb des Bonner Wochenmarktes: Ausschreibung eines Dienstleistungskonzessionsvertrages für den Bonner Wochenmarkt Antrag zur Vorlage 261307</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261307-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261307-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029766"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -620,7 +620,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029763#vorlage</id>
 <title>Neue Vorlage 261572-03 AA: BBB-Änderungsantrag zur Vorlage 261572 zur "N-Vorlage zu DS 1912103 Bürgerantrag: Umbenennung der NS-belasteten Straßennamen"</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261572-03%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261572-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029763"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -628,7 +628,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029760#vorlage</id>
 <title>Neue Vorlage 261865: Entwicklung einer kommunalen Strategie „Moderne Seniorenpolitik“ in der Bundesstadt Bonn Zukunft braucht Erfahrung – Moderne Seniorenpolitik als Querschnittsaufgabe</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261865"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261865"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029760"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -636,7 +636,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029755#vorlage</id>
 <title>Neue Vorlage 260127-30 AA: FDP/SPD/CDU-Änderungsantrag: Zukunft Bonner Bühnen - Grundsatzbeschluss; hier: Variante F; Bauliche Zukunft der Theaterliegenschaften Antrag zur Vorlage 260127</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260127-30%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260127-30%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029755"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -644,7 +644,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029754#vorlage</id>
 <title>Neue Vorlage 260772-03 AA: FDP-Änderungsantrag: 13. Satzung zur Änderung der Betriebssatzung der Stadt Bonn für die eigenbetriebsähnliche Einrichtung Städtisches Gebäudemanagement Bonn, Maßnahmen zur Beschleunigung von Baumaßnahmen des SGB und Neuausrichtung des Berichtswesens zu Bauvorhaben des SGB Antrag zur Vorlage 260772</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260772-03%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260772-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029754"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -652,7 +652,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029753#vorlage</id>
 <title>Neue Vorlage 261863: Tagesordnungspunkte in nichtöffentlicher Sitzung Beirat Kinder- und Jugendbeteiligung 15.10.2026</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261863"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261863"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029753"/>
 <summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -660,7 +660,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029713#vorlage</id>
 <title>Neue Vorlage 261851: Jahresbericht 2025 über die Arbeit des Sachgebietes „Wohnraumstärkung“</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261851"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261851"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029713"/>
 <summary>Mitteilungsvorlage · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
 </entry>
@@ -668,7 +668,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029582#vorlage</id>
 <title>Neue Vorlage 260127-29 ST: Ergänzende Stellungnahme zur BBB Großen Anfrage (260127-02) Zukunft Bonner Bühnen - Grundsatzbeschluss: Bauliche Zukunft der Theaterliegenschaften Drucksachenfolge 260127</title>
 <updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260127-29%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260127-29%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029582"/>
 <summary>Stellungnahme der Verwaltung · federführend: Dezernat IV · Stand: offen</summary>
 </entry>
@@ -676,7 +676,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029741#vorlage</id>
 <title>Neue Vorlage 261861: Grünen-Antrag: Zukunft des Schauspiels</title>
 <updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261861"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261861"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029741"/>
 <summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -684,7 +684,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029729#vorlage</id>
 <title>Neue Vorlage 261810-01 ST: Große Anfrage der Grünen Ratsfraktion zur Nutzung der Flexibilisierungsmittel nach §48 KiBiz</title>
 <updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261810-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261810-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029729"/>
 <summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -692,7 +692,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029723#vorlage</id>
 <title>Neue Vorlage 261514-01 AA: Änderungsantrag zu Drs. 261514 - Änderung der „Richtlinien zur Förderung der Jugendarbeit – Maßnahmen, Beschaffungen und Investitionen“ – Anpassung nach Stellungnahme AG 78 Jugendförderung</title>
 <updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261514-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261514-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029723"/>
 <summary>Änderungsantrag · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
 </entry>
@@ -700,7 +700,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029719#vorlage</id>
 <title>Neue Vorlage 261491-01 AA: Änderungsantrag zu Drs. 261491 - Fortschreibung der Richtlinien zur Förderung von Gewaltprävention - 100% Förderung für Jugendverbände beibehalten</title>
 <updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261491-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261491-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029719"/>
 <summary>Änderungsantrag · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
 </entry>
@@ -708,7 +708,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029717#vorlage</id>
 <title>Neue Vorlage 261853: BBB-Anfrage:  „Amtshilfeersuchen der städtischen Ausländerbehörde Bonn“</title>
 <updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261853"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261853"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029717"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -716,7 +716,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029710#vorlage</id>
 <title>Neue Vorlage 260772-02 ST: Linke-Änderungsantrag: 13. Satzung zur Änderung der Betriebssatzung der Stadt Bonn für die eigenbetriebsähnliche Einrichtung Städtisches Gebäudemanagement Bonn, Maßnahmen zur Beschleunigung von Baumaßnahmen und Neuausrichtung des Berichtswesens zu Bauvorhaben - Stellungnahme der Verwaltung</title>
 <updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260772-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260772-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029710"/>
 <summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
 </entry>
@@ -724,7 +724,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029462#vorlage</id>
 <title>Neue Vorlage 260809-03 ST: Ergänzende Stellungnahme zu: Verfahrensbeschleunigung in der Bauleitplanung - "Planungsturbo" durch Politik und Verwaltung</title>
 <updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260809-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260809-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029462"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
@@ -732,7 +732,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029190#vorlage</id>
 <title>Neue Vorlage 261646: Gewährung von Zuschüssen an Vereine für das Jahr 2026</title>
 <updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261646"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261646"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029190"/>
 <summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: offen</summary>
 </entry>
@@ -740,7 +740,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029607#vorlage</id>
 <title>Neue Vorlage 261100-01: Große Anfrage der Grünen-Fraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege</title>
 <updated>2026-10-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261100-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261100-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029607"/>
 <summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: in Beratung</summary>
 </entry>
@@ -748,7 +748,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029594#vorlage</id>
 <title>Neue Vorlage 261814: Seniorenzentren Stadt Bonn Controlling 2. Quartal 2026</title>
 <updated>2026-10-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261814"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261814"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029594"/>
 <summary>Mitteilungsvorlage · federführend: Seniorenzentren der Bundesstadt Bonn · Stand: offen</summary>
 </entry>
@@ -756,7 +756,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029449#vorlage</id>
 <title>Neue Vorlage 261570-01 ST: Stellungnahme zum Bürgerantrag: Antrag auf Prüfung der Erfassung und Entfernung unsachgemäß abgestellter Leihfahrräder und E-Scooter</title>
 <updated>2026-10-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261570-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261570-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029449"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
 </entry>
@@ -764,7 +764,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029695#vorlage</id>
 <title>Neue Vorlage 261562-02 ST: Vertagungsbitte zur BSW/SBI-Großen Anfrage: Miet-, Reinigungs-, Sicherheits- und Hausmeisterkosten der Flüchtlingsunterkünfte</title>
 <updated>2026-10-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261562-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261562-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029695"/>
 <summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
 </entry>
@@ -772,7 +772,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029649#vorlage</id>
 <title>Neue Vorlage 261779-01 ST: Vertagungsbitte zum Volt-Antrag: Digitale Abrechnung von Krankentransportfahrten voranbringen</title>
 <updated>2026-10-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261779-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261779-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029649"/>
 <summary>Stellungnahme der Verwaltung · federführend: 37 Feuerwehr und Rettungsdienst · Stand: offen</summary>
 </entry>
@@ -780,7 +780,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029704#vorlage</id>
 <title>Neue Vorlage 260772-01 AA: Linke-Änderungsantrag: 13. Satzung zur Änderung der Betriebssatzung der Stadt Bonn für die eigenbetriebsähnliche Einrichtung Städtisches Gebäudemanagement Bonn, Maßnahmen zur Beschleunigung von Baumaßnahmen und Neuausrichtung des Berichtswesens zu Bauvorhaben, Antrag zur Vorlage 260772</title>
 <updated>2026-10-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#260772-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260772-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029704"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -788,7 +788,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029694#vorlage</id>
 <title>Neue Vorlage 261845: Linke-Fraktion Große Anfrage: Evaluation des freien Eintritts für Kinder und Jugendliche während der Sommerferien</title>
 <updated>2026-10-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261845"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261845"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029694"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -796,7 +796,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029672#vorlage</id>
 <title>Neue Vorlage 261838: Wirtschaftsplan 2027 der bonnorange AöR</title>
 <updated>2026-10-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261838"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261838"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029672"/>
 <summary>Mitteilungsvorlage · federführend: 01-4 Referat Beteiligungsmanagement · Stand: offen</summary>
 </entry>
@@ -804,7 +804,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029606#vorlage</id>
 <title>Neue Vorlage 261301-01 ST: Stellungnahme der Verwaltung zur GA der Grünen: Zukunft Bonner Bühnen</title>
 <updated>2026-10-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2026#261301-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261301-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029606"/>
 <summary>Stellungnahme der Verwaltung · federführend: Dezernat IV · Stand: offen</summary>
 </entry>

@@ -4,15 +4,15 @@
 <title>Vorlage 210007: Ruhestörungen Poppelsdorfer Allee und Brassertufer</title>
 <subtitle>Verlauf der Vorlage 210007: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
 <updated>2021-03-17T00:00:00Z</updated>
-<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/vorlagen/210007.xml"/>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#210007"/>
-<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/vorlagen/210007.xml"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#210007"/>
+<author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/9801#folge-210007-01 ST</id>
 <title>Stellungnahme der Verwaltung 210007-01 ST: Ruhestörungen Poppelsdorfer Allee und Brassertufer</title>
 <updated>2021-03-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#210007"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#210007"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9801"/>
 <summary>Folgevorlage zu 210007</summary>
 </entry>
@@ -20,7 +20,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/9801#vorlage</id>
 <title>Neue Vorlage 210007: Ruhestörungen Poppelsdorfer Allee und Brassertufer</title>
 <updated>2021-02-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:bonn-zentrum#210007"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#210007"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9801"/>
 <summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>

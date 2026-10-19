@@ -55,7 +55,7 @@
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null;
-  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [];
+  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null;
   // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
   let search = null, searchLoading = null;
   const THEMES = {  // wie pipeline/topics.THEMES
@@ -64,6 +64,10 @@
     kultur: "Kultur und Sport", wirtschaft: "Wirtschaft und Finanzen", sicherheit: "Sicherheit und Ordnung",
     beteiligung: "Beteiligung, Integration und Internationales",
   };
+  // Farben der Themen auf der Karte (in Anlehnung an Okabe-Ito, unterscheidbar bei Farbfehlsichtigkeit; weißer Rand)
+  const THEME_COLOR = { verkehr: "#0072b2", bauen: "#d55e00", umwelt: "#009e73", bildung: "#cc79a7", kinder: "#e69f00",
+    soziales: "#882255", kultur: "#56b4e9", wirtschaft: "#8c6d1f", sicherheit: "#332288", beteiligung: "#44aa99" };
+  const NO_THEME = "#8a8a96";
   const THEME_METHOD = { amt: "Amt", gremium: "Gremium", stichwort: "Stichwort im Titel" };
 
   // --- Flächen ein- und ausklappen ---------------------------------------------------------------
@@ -343,6 +347,37 @@
       },
     });
     new MapStyle().addTo(map);
+    // Farbe der Punkte: Sicherheit der Ortsangabe (Standard) oder Thema; Legende darunter
+    colorBy = new URLSearchParams(location.search).get("farbe") === "thema" ? "thema" : "sicherheit";
+    const ColorBy = L.Control.extend({
+      options: { position: "bottomright" },
+      onAdd() {
+        const b = L.DomUtil.create("button", "map-style map-color");
+        b.type = "button";
+        b.textContent = "Farbe nach Thema";
+        b.setAttribute("aria-pressed", String(colorBy === "thema"));
+        b.addEventListener("click", () => {
+          colorBy = colorBy === "thema" ? "sicherheit" : "thema";
+          b.setAttribute("aria-pressed", String(colorBy === "thema"));
+          drawMarkers(lastMarkers);
+          syncUrl();
+        });
+        L.DomEvent.disableClickPropagation(b);
+        return b;
+      },
+    });
+    new ColorBy().addTo(map);
+    const Legend = L.Control.extend({
+      options: { position: "bottomleft" },
+      onAdd() {
+        const d = L.DomUtil.create("details", "map-legend");
+        d.open = !MOBILE.matches;
+        L.DomEvent.disableClickPropagation(d);
+        L.DomEvent.disableScrollPropagation(d);
+        return d;
+      },
+    });
+    legendEl = new Legend().addTo(map).getContainer();
     cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 40, animate: !REDUCED }).addTo(map);
   }
   function mapPadding() {
@@ -361,14 +396,29 @@
     map.fitBounds(outline.getBounds(), mapPadding());
   }
   const color = (c) => getComputedStyle(document.documentElement).getPropertyValue("--" + c).trim();
+  function markerColor(p, l) {
+    if (colorBy !== "thema") return color(l.confidence);
+    const t = (p.themes || [])[0];
+    return t ? THEME_COLOR[t.theme] || NO_THEME : NO_THEME;
+  }
+  function drawLegend() {
+    const rows = colorBy === "thema"
+      ? [...Object.entries(THEMES).map(([k, v]) => [THEME_COLOR[k], v]), [NO_THEME, "ohne Thema"]]
+      : [[color("hoch"), "Ort gesichert (Koordinate der Stadt)"], [color("mittel"), "Ort erschlossen (Name im Titel)"], [color("niedrig"), "Ort unsicher (mehrdeutig)"]];
+    legendEl.innerHTML = `<summary>Legende: ${colorBy === "thema" ? "Thema" : "Sicherheit des Orts"}</summary><ul>${rows
+      .map(([c, t]) => `<li><span class="swatch" style="background:${c}" aria-hidden="true"></span>${esc(t)}</li>`).join("")}</ul>
+      ${colorBy === "thema" ? '<p class="hint">Bei mehreren Themen zählt das erste. Themen sind abgeleitet.</p>' : ""}`;
+  }
   function drawMarkers(list) {
+    lastMarkers = list;
+    if (legendEl) drawLegend();
     cluster.clearLayers();
     markers.clear();
     for (const p of list) {
       const ms = areaLocs(p).filter((l) => (l.level === "strasse" || l.level === "bebauungsplan") && l.lon != null).map((l) => {
-        const m = L.circleMarker([l.lat, l.lon], { ...MARKER, fillColor: color(l.confidence) })
+        const m = L.circleMarker([l.lat, l.lon], { ...MARKER, fillColor: markerColor(p, l) })
           .bindTooltip(`${esc(p.reference)} · ${esc(l.name)}`).on("click", () => select(p, true));
-        m.baseColor = color(l.confidence);
+        m.baseColor = markerColor(p, l);
         return m;
       });
       ms.forEach((m) => cluster.addLayer(m));
@@ -450,10 +500,13 @@
   function itemHtml(p) {
     const c = bestConfidence(p);
     const conf = area.kind === "ohne" ? "" : `<span class="conf conf-${c}">${CONF[c]}</span>`;
+    // Ort nur von der übergeordneten Vorlage übernommen (Folgevorlage ohne eigenen Ortsbezug)
+    const own = areaLocs(p);
+    const taken = own.length && own.every((l) => l.method === "vererbt") ? '<span class="taken">Ort übernommen</span>' : "";
     return `<li><button type="button" data-ref="${esc(p.reference)}" aria-current="${selected === p}">
       <span class="title">${esc(p.name)}</span>
       <span class="meta"><span>${esc(p.reference)}</span><span>${fmtDate(p.date)}</span><span>${esc(p.paper_type)}</span>
-      <span>${esc(p.stand)}</span>${conf}${themeTags(p.themes)}</span></button></li>`;
+      <span>${esc(p.stand)}</span>${conf}${taken}${themeTags(p.themes)}</span></button></li>`;
   }
   const themeTags = (ts) => (ts || []).slice(0, 2).map((t) => `<span class="theme">${esc(THEMES[t.theme || t])}</span>`).join("");
 
@@ -573,6 +626,24 @@
     }
   }
 
+  // Beteiligung: nächste Sitzung eines beteiligten Gremiums (laut Sitzungsliste der Stadt), Bürgerantrag
+  const BUERGERANTRAG = "https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php";
+  function participate(p) {
+    const today = new Date().toISOString().slice(0, 10);
+    const gremien = new Set(p.steps.filter((s) => s.typ === "beratung" || s.typ === "entscheidung").map((s) => s.label));
+    const next = zeit && p.stand !== "entschieden"
+      ? zeit.meetings.find((m) => m.date >= today && !m.cancelled && gremien.has(m.gremium)) : null;
+    const onAgenda = next && p.steps.some((s) => s.label === next.gremium && s.date === next.date);
+    const meeting = next ? `<li>Nächste Sitzung eines beteiligten Gremiums: <strong>${esc(next.gremium)}</strong>, ${fmtDay(next.date)}${next.time ? `, ${esc(next.time)} Uhr` : ""}${onAgenda ? " – die Vorlage steht dort auf der Tagesordnung <span class=\"derived\">abgeleitet, über OParl-Lite</span>" : ""}.
+      ${link(next.web, "Tagesordnung") || "Die Tagesordnung erscheint etwa zwei Wochen vorher."} Die Sitzung ist in der Regel öffentlich; Sie können zuhören.</li>` : "";
+    const done = p.stand === "entschieden" ? "<li>Das Verfahren ist entschieden. Neue Anliegen zum Thema lassen sich mit einem Bürgerantrag einbringen.</li>" : "";
+    return `<section class="participate" aria-labelledby="participate-h"><h4 id="participate-h">Selbst mitwirken</h4><ul>
+      ${meeting}${done}
+      <li>Mit einem <a href="${BUERGERANTRAG}" target="_blank" rel="noopener">Bürgerantrag nach § 24 GO NRW<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a> bringen Sie Anregungen und Beschwerden selbst ein.</li>
+      ${hasPaperFeed(p) ? "<li>Mit dem Feed „Diesen Vorgang abonnieren“ (unten) erfahren Sie von neuen Beratungen und Ergebnissen.</li>" : ""}
+    </ul></section>`;
+  }
+
   function select(p, fromMap) {
     selected = p;
     document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", String(b.dataset.ref === p.reference)));
@@ -580,10 +651,15 @@
     if (tl) tl.select(p);
     highlight();
     const resp = p.responsibility.map((r) => `${esc(r.label)}${r.derived ? ` <span class="derived">abgeleitet, über ${esc(r.evidence)}</span>` : ""}`).join("<br>");
-    const locs = p.locations.length ? p.locations.map((l) => `<li><strong>${esc(l.name || l.ortsteil || l.stadtbezirk)}</strong>
-      ${l.ortsteil && l.level === "strasse" ? `(${esc(l.ortsteil)})` : ""} – <span class="conf conf-${esc(l.confidence)}">${CONF[l.confidence] || esc(l.confidence)}</span>, Stufe ${esc(l.stage)}<br>
-      <span class="meta">${esc(METHOD[l.method] || l.method)}${l.evidence ? ` · Fundstelle: „${esc(l.evidence)}“` : ""}</span></li>`).join("")
-      : "<li>stadtweit / ohne Ortsbezug</li>";
+    const outside = (l) => (area.kind === "ortsteil" && l.ortsteil && l.ortsteil !== area.name)
+      || (area.kind === "bezirk" && l.stadtbezirk && l.stadtbezirk !== area.name);
+    const locItem = (l) => `<li><strong>${esc(l.name || l.ortsteil || l.stadtbezirk)}</strong>
+      ${l.ortsteil && l.level === "strasse" ? `(${esc(l.ortsteil)})` : ""} – <span class="conf conf-${esc(l.confidence)}">${CONF[l.confidence] || esc(l.confidence)}</span>, Stufe ${esc(l.stage)}${outside(l) ? ' <span class="hint">außerhalb des gewählten Gebiets</span>' : ""}<br>
+      <span class="meta">${esc(METHOD[l.method] || l.method)}${l.evidence ? ` · Fundstelle: „${esc(l.evidence)}“` : ""}</span></li>`;
+    // eigene Ortsbezüge zuerst; übernommene getrennt, damit klar bleibt, dass sie den Ursprungsvorgang betreffen
+    const ownLocs = p.locations.filter((l) => l.method !== "vererbt"), takenLocs = p.locations.filter((l) => l.method === "vererbt");
+    const locs = (ownLocs.length ? ownLocs.map(locItem).join("") : takenLocs.length ? "" : "<li>stadtweit / ohne Ortsbezug</li>")
+      + (takenLocs.length ? `<li class="taken-group">Diese Vorlage nennt selbst keinen Ort. Übernommen von der übergeordneten Vorlage:<ul>${takenLocs.map(locItem).join("")}</ul></li>` : "");
     const rel = (arr) => arr.map((r) => `<li>${esc(r.reference)} · ${esc(r.paper_type)} – ${esc(r.name)}</li>`).join("");
     const sources = meta.sources.map((s) => `<li>${esc(s.name)}: ${esc(s.license)}${s.retrieved_at ? ` · Abruf ${esc(String(s.retrieved_at).slice(0, 10))}` : ""}</li>`).join("");
     $("#detail-heading").textContent = "Vorgang";
@@ -602,6 +678,7 @@
       <h4>Prozesslinie</h4>
       <ol class="steps">${p.steps.map(stepHtml).join("")}</ol>
       ${legend()}${glossary(p)}
+      ${participate(p)}
       <h4>Ortsbezug</h4><ul class="locs">${locs}</ul>
       ${(p.plans || []).length ? `<h4>Bebauungspläne</h4><ul class="locs plans">${p.plans.map((x) => `<li data-plan="${esc(x.nr)}"><strong>Bebauungsplan ${esc(x.nr)}</strong>
         ${x.area ? '<span class="plan-meta">– Geltungsbereich auf der Karte</span>' : " – nicht im Datensatz der rechtskräftigen Pläne (vermutlich noch im Verfahren); keine Fläche verfügbar"}
@@ -862,6 +939,7 @@
     if (tl && range) { const s = tl.getState(); for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.set(k, s[k]); }
     else for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.delete(k);
     const state = { thema: $("#f-theme").value, partei: $("#f-party").value, suche: scope() === "bonn" ? "bonn" : "" };
+    state.farbe = colorBy === "thema" ? "thema" : "";
     for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
     history.replaceState(null, "", url);

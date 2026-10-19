@@ -4,15 +4,15 @@
 <title>RIS-Karte Bonn – stadtweit / ohne Ortsbezug 2023</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2023</subtitle>
 <updated>2025-09-04T00:00:00Z</updated>
-<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ohne-2023.xml"/>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023"/>
-<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ohne-2023.xml"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023"/>
+<author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014808#beratung-9</id>
 <title>Rat: „zurückgezogen“ – 231582-04 AA CDU-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
 <updated>2025-09-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014808"/>
 <summary>Entscheidung am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -20,7 +20,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014789#beratung-10</id>
 <title>Rat: „zurückgezogen“ – 231582-02 AA FDP-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
 <updated>2025-09-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014789"/>
 <summary>Entscheidung am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -28,7 +28,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014699#beratung-11</id>
 <title>Rat: „zur Kenntnis genommen“ – 231582-01 ST Synopse zur Neufassung der Bonner Baumschutzsatzung (BSchS)</title>
 <updated>2025-09-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014699"/>
 <summary>Kenntnisnahme am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -36,7 +36,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013544#beratung-32</id>
 <title>Rat: „geändert beschlossen“ – 231582 Neufassung der Bonner Baumschutzsatzung (BSchS)</title>
 <updated>2025-09-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013544"/>
 <summary>Entscheidung am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -44,7 +44,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015022#beratung-3</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „abgelehnt“ – 231582-05 AA Neufassung der Bonner Baumschutzsatzung (BSchS)</title>
 <updated>2025-07-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-05%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-05%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015022"/>
 <summary>Empfehlung am 2025-07-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -52,7 +52,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014808#beratung-8</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zurückgezogen“ – 231582-04 AA CDU-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
 <updated>2025-07-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014808"/>
 <summary>Empfehlung am 2025-07-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -60,7 +60,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014789#beratung-9</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „abgelehnt“ – 231582-02 AA FDP-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
 <updated>2025-07-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014789"/>
 <summary>Empfehlung am 2025-07-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -68,7 +68,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014699#beratung-10</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 231582-01 ST Synopse zur Neufassung der Bonner Baumschutzsatzung (BSchS)</title>
 <updated>2025-07-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014699"/>
 <summary>Kenntnisnahme am 2025-07-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -76,7 +76,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013544#beratung-26</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 231582 Neufassung der Bonner Baumschutzsatzung (BSchS)</title>
 <updated>2025-07-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013544"/>
 <summary>Empfehlung am 2025-07-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -84,7 +84,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014808#beratung-7</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „abgelehnt“ – 231582-04 AA CDU-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014808"/>
 <summary>Empfehlung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -92,7 +92,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014789#beratung-8</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „erledigt durch Stellungnahme der Verwaltung“ – 231582-02 AA FDP-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014789"/>
 <summary>Empfehlung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -100,7 +100,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014699#beratung-9</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „zur Kenntnis genommen“ – 231582-01 ST Synopse zur Neufassung der Bonner Baumschutzsatzung (BSchS)</title>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014699"/>
 <summary>Kenntnisnahme am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -108,7 +108,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013544#beratung-24</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 231582 Neufassung der Bonner Baumschutzsatzung (BSchS)</title>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013544"/>
 <summary>Empfehlung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -116,7 +116,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012103#beratung-14</id>
 <title>Rat: „geändert beschlossen“ – 230897 Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 610</title>
 <updated>2025-05-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230897"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230897"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012103"/>
 <summary>Entscheidung am 2025-05-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -124,7 +124,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2011776#beratung-5</id>
 <title>Unterausschuss für Digitalisierung und Organisation: „zur Kenntnis genommen“ – 230757 DLZ Controllingbericht 2022</title>
 <updated>2025-04-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230757"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230757"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011776"/>
 <summary>Kenntnisnahme am 2025-04-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -132,7 +132,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012103#beratung-13</id>
 <title>Bezirksvertretung Bad Godesberg: „vertagt“ – 230897 Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 610</title>
 <updated>2025-03-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230897"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230897"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012103"/>
 <summary>Anhörung am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -140,7 +140,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014638#beratung-6</id>
 <title>Rat: „zur Kenntnis genommen“ – 231182-04 ST BBB-Antrag: Sondersteuer auf Einwegverpackungen für Speisen und Getränke</title>
 <updated>2025-02-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231182-04%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231182-04%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014638"/>
 <summary>Kenntnisnahme am 2025-02-13; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -148,7 +148,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012768#beratung-11</id>
 <title>Rat: „geändert beschlossen“ – 231182 BBB-Antrag: Sondersteuer auf Einwegverpackungen für Speisen und Getränke</title>
 <updated>2025-02-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231182"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231182"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012768"/>
 <summary>Entscheidung am 2025-02-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -156,7 +156,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014638#beratung-5</id>
 <title>Hauptausschuss: „zur Kenntnis genommen“ – 231182-04 ST BBB-Antrag: Sondersteuer auf Einwegverpackungen für Speisen und Getränke</title>
 <updated>2025-02-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231182-04%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231182-04%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014638"/>
 <summary>Kenntnisnahme am 2025-02-06; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -164,7 +164,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012768#beratung-9</id>
 <title>Hauptausschuss: „geändert beschlossen“ – 231182 BBB-Antrag: Sondersteuer auf Einwegverpackungen für Speisen und Getränke</title>
 <updated>2025-02-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231182"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231182"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012768"/>
 <summary>Empfehlung am 2025-02-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -172,7 +172,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012768#beratung-8</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 231182 BBB-Antrag: Sondersteuer auf Einwegverpackungen für Speisen und Getränke</title>
 <updated>2025-02-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231182"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231182"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012768"/>
 <summary>Empfehlung am 2025-02-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -180,7 +180,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014638#beratung-4</id>
 <title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „zur Kenntnis genommen“ – 231182-04 ST BBB-Antrag: Sondersteuer auf Einwegverpackungen für Speisen und Getränke</title>
 <updated>2025-01-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231182-04%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231182-04%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014638"/>
 <summary>Kenntnisnahme am 2025-01-30; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -188,7 +188,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012768#beratung-6</id>
 <title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „geändert beschlossen“ – 231182 BBB-Antrag: Sondersteuer auf Einwegverpackungen für Speisen und Getränke</title>
 <updated>2025-01-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231182"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231182"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012768"/>
 <summary>Empfehlung am 2025-01-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -196,7 +196,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015235#beratung-2</id>
 <title>Integrationsrat: „geändert beschlossen“ – 232287 Priorisierte Entfernung rassistischer Parolen im öffentlichen Raum</title>
 <updated>2025-01-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232287"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232287"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015235"/>
 <summary>Anregung am 2025-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -204,7 +204,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015189#beratung-4</id>
 <title>Rat: „zur Kenntnis genommen“ – 231159-02 ST Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinie 612</title>
 <updated>2024-12-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231159-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231159-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015189"/>
 <summary>Kenntnisnahme am 2024-12-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -212,7 +212,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014914#beratung-4</id>
 <title>Rat: „nicht abgestimmt“ – 231159-01 AA FDP-Änderungsantrag: Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinie 612 Antrag zur Vorlage 231159</title>
 <updated>2024-12-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231159-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231159-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014914"/>
 <summary>Entscheidung am 2024-12-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -220,7 +220,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012718#beratung-11</id>
 <title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 231159 Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinie 612</title>
 <updated>2024-12-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231159"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231159"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012718"/>
 <summary>Entscheidung am 2024-12-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -228,7 +228,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015189#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231159-02 ST Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinie 612</title>
 <updated>2024-11-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231159-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231159-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015189"/>
 <summary>Kenntnisnahme am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -236,7 +236,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014914#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 231159-01 AA FDP-Änderungsantrag: Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinie 612 Antrag zur Vorlage 231159</title>
 <updated>2024-11-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231159-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231159-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014914"/>
 <summary>Anhörung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -244,7 +244,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013526#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 230812-02 ST SPD-Große Anfrage: Alternativen für Radschnellweg in der Rheinaue</title>
 <updated>2024-11-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230812-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230812-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013526"/>
 <summary>Kenntnisnahme am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -252,7 +252,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012718#beratung-10</id>
 <title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 231159 Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinie 612</title>
 <updated>2024-11-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231159"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231159"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012718"/>
 <summary>Anhörung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -260,7 +260,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012409#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 230812-01 ST Alternativen für Radschnellweg in der Rheinaue</title>
 <updated>2024-11-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230812-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230812-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012409"/>
 <summary>Kenntnisnahme am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -268,7 +268,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2011941#beratung-5</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 230812 SPD-Große Anfrage: Alternativen für Radschnellweg in der Rheinaue</title>
 <updated>2024-11-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230812"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230812"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011941"/>
 <summary>Kenntnisnahme am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -276,7 +276,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012071#beratung-4</id>
 <title>Bezirksvertretung Bonn: „geändert beschlossen“ – 230880 Die FRAKTION-Antrag: Umbenennung EMA</title>
 <updated>2024-11-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230880"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230880"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012071"/>
 <summary>Anhörung am 2024-11-26; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -284,7 +284,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014354#beratung-21</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 231965 Beschluss zum Bonner Freiraumplan</title>
 <updated>2024-11-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231965"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231965"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014354"/>
 <summary>Empfehlung am 2024-11-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -292,7 +292,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014943#beratung-9</id>
 <title>Rat: „zur Kenntnis genommen“ – 232211 BBB-Anfrage: Ausfälle bei Bussen und Bahnen</title>
 <updated>2024-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232211"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232211"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014943"/>
 <summary>Kenntnisnahme am 2024-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -300,7 +300,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014354#beratung-19</id>
 <title>Rat: „geändert beschlossen“ – 231965 Beschluss zum Bonner Freiraumplan</title>
 <updated>2024-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231965"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231965"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014354"/>
 <summary>Entscheidung am 2024-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -308,7 +308,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014354#beratung-18</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 231965 Beschluss zum Bonner Freiraumplan</title>
 <updated>2024-10-31T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231965"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231965"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014354"/>
 <summary>Empfehlung am 2024-10-31; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -316,7 +316,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014535#beratung-4</id>
 <title>Rat: „zur Kenntnis genommen“ – 202197-04 ST Regelungen zu Erbbaurechten und Erbbauzinsen</title>
 <updated>2024-09-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#202197-04%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#202197-04%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014535"/>
 <summary>Kenntnisnahme am 2024-09-26; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -324,7 +324,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014290#beratung-3</id>
 <title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 202197-03 BBB-Antrag Regelungen zu Erbbaurechten und Erbbauzinsen Drucksachenfolge 202197</title>
 <updated>2024-09-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#202197-03"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#202197-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014290"/>
 <summary>Entscheidung am 2024-09-26; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -332,7 +332,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014310#beratung-4</id>
 <title>Hauptausschuss: „zur Kenntnis genommen“ – 231920-01 ST FDP-Antrag Untertunnelung des Koblenzer Tors</title>
 <updated>2024-09-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231920-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231920-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014310"/>
 <summary>Kenntnisnahme am 2024-09-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -340,7 +340,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014227#beratung-4</id>
 <title>Hauptausschuss: „abgelehnt“ – 231920 FDP-Antrag Untertunnelung des Koblenzer Tors</title>
 <updated>2024-09-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231920"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231920"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014227"/>
 <summary>Entscheidung am 2024-09-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -348,7 +348,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014310#beratung-3</id>
 <title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 231920-01 ST FDP-Antrag Untertunnelung des Koblenzer Tors</title>
 <updated>2024-09-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231920-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231920-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014310"/>
 <summary>Kenntnisnahme am 2024-09-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -356,7 +356,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014227#beratung-3</id>
 <title>Ausschuss für Mobilität und Verkehr: „abgelehnt“ – 231920 FDP-Antrag Untertunnelung des Koblenzer Tors</title>
 <updated>2024-09-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231920"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231920"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014227"/>
 <summary>Empfehlung am 2024-09-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -364,7 +364,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014290#beratung-2</id>
 <title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „abgelehnt“ – 202197-03 BBB-Antrag Regelungen zu Erbbaurechten und Erbbauzinsen Drucksachenfolge 202197</title>
 <updated>2024-08-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#202197-03"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#202197-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014290"/>
 <summary>Empfehlung am 2024-08-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -372,7 +372,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015060#beratung-5</id>
 <title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „geändert beschlossen“ – 232244 Bürgerantrag: Unterstützung von Mietshäusersyndiakt-Projekten</title>
 <updated>2024-06-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232244"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232244"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015060"/>
 <summary>Entscheidung am 2024-06-26; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -380,7 +380,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014934#beratung-5</id>
 <title>Rat: „zur Kenntnis genommen“ – 232205 BBB-Anfrage: Denkmalschutz und Denkmalpflege in Bonn. Finanzmittel für Maßnahmen 2023/2024</title>
 <updated>2024-06-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232205"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232205"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014934"/>
 <summary>Kenntnisnahme am 2024-06-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -388,7 +388,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2011735#beratung-5</id>
 <title>Hauptausschuss: „zur Kenntnis genommen“ – 220509-04 ST CDU-Antrag: Tag des Blaulichts an den Schulen in der Bundesstadt Bonn</title>
 <updated>2024-06-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#220509-04%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#220509-04%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011735"/>
 <summary>Kenntnisnahme am 2024-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -396,7 +396,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2005832#beratung-7</id>
 <title>Hauptausschuss: „zur Kenntnis genommen“ – 220509-01 ST CDU-Antrag: Tag des Blaulichts an den Schulen in der Bundesstadt Bonn</title>
 <updated>2024-06-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#220509-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#220509-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005832"/>
 <summary>Kenntnisnahme am 2024-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -404,7 +404,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2011735#beratung-4</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 220509-04 ST CDU-Antrag: Tag des Blaulichts an den Schulen in der Bundesstadt Bonn</title>
 <updated>2024-06-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#220509-04%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#220509-04%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011735"/>
 <summary>Kenntnisnahme am 2024-06-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -412,7 +412,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2005832#beratung-6</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 220509-01 ST CDU-Antrag: Tag des Blaulichts an den Schulen in der Bundesstadt Bonn</title>
 <updated>2024-06-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#220509-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#220509-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005832"/>
 <summary>Kenntnisnahme am 2024-06-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -420,7 +420,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015167#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 232270 CDU-Antrag: Erfassung der Leerstandsquote</title>
 <updated>2024-06-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232270"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232270"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015167"/>
 <summary>Entscheidung am 2024-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -428,7 +428,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014367#beratung-7</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 231974 Machbarkeitsstudie Durchfahrtshöhen Brückenbauwerke - Ergebnisse und weiteres Vorgehen</title>
 <updated>2024-06-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231974"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231974"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014367"/>
 <summary>Kenntnisnahme am 2024-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -436,7 +436,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014354#beratung-17</id>
 <title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 231965 Beschluss zum Bonner Freiraumplan</title>
 <updated>2024-06-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231965"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231965"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014354"/>
 <summary>Anhörung am 2024-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -444,7 +444,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2012115#beratung-10</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 222378-01 Sachstand - Konzepterstellung "Sicherheit, Ordnung, Sauberkeit" in Bonn</title>
 <updated>2024-06-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#222378-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#222378-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012115"/>
 <summary>Kenntnisnahme am 2024-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -452,7 +452,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014354#beratung-16</id>
 <title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 231965 Beschluss zum Bonner Freiraumplan</title>
 <updated>2024-06-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231965"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231965"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014354"/>
 <summary>Anhörung am 2024-06-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -460,7 +460,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015263#beratung-2</id>
 <title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 232300 Langer-Conrads-Poppe-Antrag zur besseren Ausschilderung des Johanniterkrankenhauses</title>
 <updated>2024-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232300"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232300"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015263"/>
 <summary>Entscheidung am 2024-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -468,7 +468,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2011553#beratung-3</id>
 <title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 230652 Bürgerantrag: Klimaplan umsetzen, notwendige Gelder für die Sanierung bereitstellen</title>
 <updated>2024-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230652"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230652"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011553"/>
 <summary>Entscheidung am 2024-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -476,7 +476,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014997#beratung-3</id>
 <title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 232228 Bürgerantrag: Aufnahme des Kinkelplatzes ab 2024 in das Straßenreinigungsverzeichnis</title>
 <updated>2024-05-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232228"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232228"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014997"/>
 <summary>Entscheidung am 2024-05-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -484,7 +484,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014867#beratung-5</id>
 <title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „geändert beschlossen“ – 232180 Bürgerantrag: Aberkennung der Ehrenbürgerwürde von Paul von Hindenburg</title>
 <updated>2024-05-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232180"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232180"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014867"/>
 <summary>Entscheidung am 2024-05-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -492,7 +492,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015177#beratung-3</id>
 <title>Rat: „abgelehnt“ – 231332-02 AA CDU-Änderungsantrag: Qualitätssicherung in Bauleitplanverfahren und städtebaulichen Verträgen Antrag zur Vorlage 231332</title>
 <updated>2024-04-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231332-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231332-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015177"/>
 <summary>Entscheidung am 2024-04-18; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -500,7 +500,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013886#beratung-10</id>
 <title>Rat: „geändert beschlossen“ – 231744 19. Satzung zur Änderung der Hauptsatzung der Bundestadt Bonn</title>
 <updated>2024-04-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231744"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231744"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013886"/>
 <summary>Entscheidung am 2024-04-18; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -508,7 +508,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013841#beratung-3</id>
 <title>Rat: „abgelehnt“ – 221203-04 AA CDU-Änderungsantrag zum CDU- Antrag: Mehr Öffentlichkeitsbeteiligung in städtebaulichen Wettbewerbsverfahren Antrag zur Vorlage 221203</title>
 <updated>2024-04-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#221203-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#221203-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013841"/>
 <summary>Entscheidung am 2024-04-18; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -516,7 +516,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013066#beratung-4</id>
 <title>Rat: „zur Kenntnis genommen“ – 221203-03 ST Stellungnahme der Verwaltung zu: CDU-Antrag: Mehr Öffentlichkeitsbeteiligung in städtebaulichen Wettbewerbsverfahren</title>
 <updated>2024-04-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#221203-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#221203-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013066"/>
 <summary>Kenntnisnahme am 2024-04-18; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -524,7 +524,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013036#beratung-13</id>
 <title>Rat: „geändert beschlossen“ – 231332 Qualitätssicherung in Bauleitplanverfahren und städtebaulichen Verträgen</title>
 <updated>2024-04-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231332"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231332"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013036"/>
 <summary>Entscheidung am 2024-04-18; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -532,7 +532,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013036#beratung-12</id>
 <title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „geändert beschlossen“ – 231332 Qualitätssicherung in Bauleitplanverfahren und städtebaulichen Verträgen</title>
 <updated>2024-04-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231332"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231332"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013036"/>
 <summary>Empfehlung am 2024-04-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -540,7 +540,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014609#beratung-3</id>
 <title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 231451-03 ST CDU-Große Anfrage: Versorgung mit Elektroladestationen im Stadtbezirk</title>
 <updated>2024-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231451-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231451-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014609"/>
 <summary>Kenntnisnahme am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -548,7 +548,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014345#beratung-2</id>
 <title>Bezirksvertretung Hardtberg: „nicht abgestimmt“ – 231449-03 AA CDU-Antrag: Sicherheit abgestellter Fahrräder Antrag zur Vorlage 231449</title>
 <updated>2024-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231449-03%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231449-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014345"/>
 <summary>Entscheidung am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -556,7 +556,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013997#beratung-3</id>
 <title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 231451-02 ST CDU-Große Anfrage: Versorgung mit Elektroladestationen im Stadtbezirk</title>
 <updated>2024-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231451-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231451-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013997"/>
 <summary>Kenntnisnahme am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -564,7 +564,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013975#beratung-3</id>
 <title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 231449-02 ST CDU-Antrag: Sicherheit abgestellter Fahrräder</title>
 <updated>2024-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231449-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231449-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013975"/>
 <summary>Kenntnisnahme am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -572,7 +572,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013889#beratung-9</id>
 <title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 231639-01 ST CDU-Antrag: Park &amp; Ride</title>
 <updated>2024-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231639-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231639-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013889"/>
 <summary>Kenntnisnahme am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -580,7 +580,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013654#beratung-12</id>
 <title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 231639 CDU-Antrag: Park &amp; Ride</title>
 <updated>2024-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231639"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231639"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013654"/>
 <summary>Anhörung am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -588,7 +588,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013290#beratung-6</id>
 <title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 231451 CDU-Große Anfrage: Versorgung mit Elektroladestationen im Stadtbezirk</title>
 <updated>2024-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231451"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231451"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013290"/>
 <summary>Kenntnisnahme am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -596,7 +596,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013288#beratung-6</id>
 <title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 231449 CDU-Antrag: Sicherheit abgestellter Fahrräder</title>
 <updated>2024-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231449"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231449"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013288"/>
 <summary>Entscheidung am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -604,7 +604,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013036#beratung-11</id>
 <title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 231332 Qualitätssicherung in Bauleitplanverfahren und städtebaulichen Verträgen</title>
 <updated>2024-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231332"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231332"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013036"/>
 <summary>Anhörung am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -612,7 +612,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013886#beratung-9</id>
 <title>Hauptausschuss: „geändert beschlossen“ – 231744 19. Satzung zur Änderung der Hauptsatzung der Bundestadt Bonn</title>
 <updated>2024-04-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231744"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231744"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013886"/>
 <summary>Empfehlung am 2024-04-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -620,7 +620,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015166#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 232269 CDU-Große Anfrage: Die Rolle und Arbeit des Zentrenmanagements in der Innenstadt</title>
 <updated>2024-04-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232269"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232269"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015166"/>
 <summary>Kenntnisnahme am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -628,7 +628,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015068#beratung-3</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „abgelehnt“ – 231332-01 AA CDU-Änderungsantrag: Qualitätssicherung in Bauleitplanverfahren und städtebaulichen Verträgen Antrag zur Vorlage 231332</title>
 <updated>2024-04-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231332-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231332-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015068"/>
 <summary>Empfehlung am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -636,7 +636,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013886#beratung-8</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 231744 19. Satzung zur Änderung der Hauptsatzung der Bundestadt Bonn</title>
 <updated>2024-04-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231744"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231744"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013886"/>
 <summary>Empfehlung am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -644,7 +644,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013841#beratung-2</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „abgelehnt“ – 221203-04 AA CDU-Änderungsantrag zum CDU- Antrag: Mehr Öffentlichkeitsbeteiligung in städtebaulichen Wettbewerbsverfahren Antrag zur Vorlage 221203</title>
 <updated>2024-04-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#221203-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#221203-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013841"/>
 <summary>Empfehlung am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -652,7 +652,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013066#beratung-3</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „zur Kenntnis genommen“ – 221203-03 ST Stellungnahme der Verwaltung zu: CDU-Antrag: Mehr Öffentlichkeitsbeteiligung in städtebaulichen Wettbewerbsverfahren</title>
 <updated>2024-04-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#221203-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#221203-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013066"/>
 <summary>Kenntnisnahme am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -660,7 +660,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013036#beratung-10</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 231332 Qualitätssicherung in Bauleitplanverfahren und städtebaulichen Verträgen</title>
 <updated>2024-04-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231332"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231332"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013036"/>
 <summary>Empfehlung am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -668,7 +668,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2011749#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „zurückgezogen“ – 230741 Große Anfrage der SPD: Geplante Elemente der Schwammstadt</title>
 <updated>2024-04-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230741"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230741"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011749"/>
 <summary>Kenntnisnahme am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -676,7 +676,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2011747#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „zurückgezogen“ – 230739 Große Anfrage der SPD: Nachhaltige Wasserversorgung für die Wasserläufe und Brunnen</title>
 <updated>2024-04-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230739"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230739"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011747"/>
 <summary>Kenntnisnahme am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -684,7 +684,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014694#beratung-3</id>
 <title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 232104 Bürgerantrag: Unterschutzstellung des Urweltmammutbaumes am Lenné-Haus als Naturdenkmal</title>
 <updated>2024-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232104"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232104"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014694"/>
 <summary>Entscheidung am 2024-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -692,7 +692,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015056#beratung-3</id>
 <title>Ausschuss für Soziales, Migration und Gesundheit: „zur Kenntnis genommen“ – 232242 Bericht zum Forschungsprojekt "Zugang zu Wasser, Toiletten &amp; Hygiene für Menschen ohne Obdach"</title>
 <updated>2024-03-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232242"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232242"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015056"/>
 <summary>Kenntnisnahme am 2024-03-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -700,7 +700,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015128#beratung-5</id>
 <title>Rat: „abgelehnt“ – 232256 CDU-Antrag: Änderung der Satzung zur Erhebung einer Beherbergungssteuer im Gebiet der Stadt Bonn</title>
 <updated>2024-03-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232256"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232256"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015128"/>
 <summary>Entscheidung am 2024-03-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -708,7 +708,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014364#beratung-16</id>
 <title>Rat: „geändert beschlossen“ – 231972 Kindertagesstättenbedarfsplan 2023 - 2027</title>
 <updated>2024-03-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231972"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231972"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014364"/>
 <summary>Entscheidung am 2024-03-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -716,7 +716,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013889#beratung-8</id>
 <title>Rat: „zur Kenntnis genommen“ – 231639-01 ST CDU-Antrag: Park &amp; Ride</title>
 <updated>2024-03-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231639-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231639-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013889"/>
 <summary>Kenntnisnahme am 2024-03-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -724,7 +724,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013654#beratung-10</id>
 <title>Rat: „geändert beschlossen“ – 231639 CDU-Antrag: Park &amp; Ride</title>
 <updated>2024-03-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231639"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231639"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013654"/>
 <summary>Entscheidung am 2024-03-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -732,7 +732,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015128#beratung-4</id>
 <title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „abgelehnt“ – 232256 CDU-Antrag: Änderung der Satzung zur Erhebung einer Beherbergungssteuer im Gebiet der Stadt Bonn</title>
 <updated>2024-03-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232256"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232256"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015128"/>
 <summary>Empfehlung am 2024-03-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -740,7 +740,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015185#beratung-7</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 232273 Quartiersentwicklung: Bericht zur Arbeitsgemeinschaft der dezentralen Einrichtungen der Bildung, Begegnung und Beratung des Amtes für Soziales und Wohnen: Allgemeine Informationen und Jahreserhebung des Berichtsjahrs 2022</title>
 <updated>2024-03-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232273"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232273"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015185"/>
 <summary>Kenntnisnahme am 2024-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -748,7 +748,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015177#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „verwiesen“ – 231332-02 AA CDU-Änderungsantrag: Qualitätssicherung in Bauleitplanverfahren und städtebaulichen Verträgen Antrag zur Vorlage 231332</title>
 <updated>2024-03-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231332-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231332-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015177"/>
 <summary>Anhörung am 2024-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -756,7 +756,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014808#beratung-6</id>
 <title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 231582-04 AA CDU-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
 <updated>2024-03-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014808"/>
 <summary>Anregung am 2024-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -764,7 +764,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014789#beratung-7</id>
 <title>Bezirksvertretung Bad Godesberg: „nicht abgestimmt“ – 231582-02 AA FDP-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
 <updated>2024-03-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014789"/>
 <summary>Anregung am 2024-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -772,7 +772,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014699#beratung-8</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 231582-01 ST Synopse zur Neufassung der Bonner Baumschutzsatzung (BSchS)</title>
 <updated>2024-03-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#231582-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#231582-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014699"/>
 <summary>Kenntnisnahme am 2024-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -780,7 +780,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014633#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 202065-02 Bürgerantrag: Verzicht auf Reduzierung der Reinigungsintervalle im Stadt- bzw. Kurpark und Redoutenpark</title>
 <updated>2024-03-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#202065-02"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#202065-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014633"/>
 <summary>Kenntnisnahme am 2024-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -788,7 +788,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014591#beratung-9</id>
 <title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 230782-03 5. Satzung zur Änderung der Satzung der Bundesstadt Bonn über Erlaubnisse und Gebühren für Sondernutzungen an öffentlichen Straßen (Sondernutzungssatzung)</title>
 <updated>2024-03-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#230782-03"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#230782-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014591"/>
 <summary>Anhörung am 2024-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -796,7 +796,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014475#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 232019 Bürgerantrag: Straßenbenennung nach Gerd Höllige</title>
 <updated>2024-03-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#232019"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#232019"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014475"/>
 <summary>Entscheidung am 2024-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -804,7 +804,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014078#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 220717-02 Anbringung von Pfandringen an öffentlichen Mülleimern</title>
 <updated>2024-03-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ohne:2023#220717-02"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2023#220717-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014078"/>
 <summary>Kenntnisnahme am 2024-03-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>

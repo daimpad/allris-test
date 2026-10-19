@@ -7,7 +7,7 @@
   "xsd": "http://www.w3.org/2001/XMLSchema#",
   "locn": "http://www.w3.org/ns/locn#"
  },
- "@id": "https://daimpad.github.io/allris-test/data/export/bonn/dcat.jsonld#dataset",
+ "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/dcat.jsonld#dataset",
  "@type": "dcat:Dataset",
  "dct:title": {
   "@language": "de",
@@ -71,11 +71,11 @@
   }
  ],
  "dcat:landingPage": {
-  "@id": "https://daimpad.github.io/allris-test/"
+  "@id": "https://ris-bonn.datenatlas.de/"
  },
  "dcat:distribution": [
   {
-   "@id": "https://daimpad.github.io/allris-test/data/export/bonn/vorlagen.geojson",
+   "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/vorlagen.geojson",
    "@type": "dcat:Distribution",
    "dct:title": {
     "@language": "de",
@@ -86,10 +86,10 @@
     "@value": "Ein Punkt je Vorlage und Straße mit Stufe, Methode, Konfidenz und Fundstelle der Verortung."
    },
    "dcat:accessURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/bonn/vorlagen.geojson"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/vorlagen.geojson"
    },
    "dcat:downloadURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/bonn/vorlagen.geojson"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/vorlagen.geojson"
    },
    "dcat:mediaType": {
     "@id": "https://www.iana.org/assignments/media-types/application/geo+json"
@@ -99,11 +99,11 @@
    },
    "dct:rights": {
     "@type": "dct:RightsStatement",
-    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://daimpad.github.io/allris-test/data/LICENSE-DATA.md"
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
    }
   },
   {
-   "@id": "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip",
+   "@id": "https://ris-bonn.datenatlas.de/data/export/allris-bonn-export.zip",
    "@type": "dcat:Distribution",
    "dct:title": {
     "@language": "de",
@@ -114,10 +114,10 @@
     "@value": "Alle Exporte, Audit-Protokolle (TSV), Verifikation und Lizenzübersicht."
    },
    "dcat:accessURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/allris-bonn-export.zip"
    },
    "dcat:downloadURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/allris-bonn-export.zip"
    },
    "dcat:mediaType": {
     "@id": "https://www.iana.org/assignments/media-types/application/zip"
@@ -127,11 +127,11 @@
    },
    "dct:rights": {
     "@type": "dct:RightsStatement",
-    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://daimpad.github.io/allris-test/data/LICENSE-DATA.md"
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
    }
   },
   {
-   "@id": "https://daimpad.github.io/allris-test/data/export/bonn/zeit.json",
+   "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/zeit.json",
    "@type": "dcat:Distribution",
    "dct:title": {
     "@language": "de",
@@ -142,10 +142,10 @@
     "@value": "Vorlagen je Monat, Gebiet und Vorlagenart; Sitzungen; Wahlperioden."
    },
    "dcat:accessURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/bonn/zeit.json"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/zeit.json"
    },
    "dcat:downloadURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/bonn/zeit.json"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/zeit.json"
    },
    "dcat:mediaType": {
     "@id": "https://www.iana.org/assignments/media-types/application/json"
@@ -155,11 +155,11 @@
    },
    "dct:rights": {
     "@type": "dct:RightsStatement",
-    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://daimpad.github.io/allris-test/data/LICENSE-DATA.md"
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
    }
   },
   {
-   "@id": "https://daimpad.github.io/allris-test/data/export/bonn/prozesse.json",
+   "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/prozesse.json",
    "@type": "dcat:Distribution",
    "dct:title": {
     "@language": "de",
@@ -170,10 +170,10 @@
     "@value": "Häufigste Abfolgen von Beratungen und Ergebnissen je Vorlagenart."
    },
    "dcat:accessURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/bonn/prozesse.json"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/prozesse.json"
    },
    "dcat:downloadURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/bonn/prozesse.json"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/prozesse.json"
    },
    "dcat:mediaType": {
     "@id": "https://www.iana.org/assignments/media-types/application/json"
@@ -183,11 +183,11 @@
    },
    "dct:rights": {
     "@type": "dct:RightsStatement",
-    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://daimpad.github.io/allris-test/data/LICENSE-DATA.md"
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
    }
   },
   {
-   "@id": "https://daimpad.github.io/allris-test/data/export/bonn/termine.ics",
+   "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/termine.ics",
    "@type": "dcat:Distribution",
    "dct:title": {
     "@language": "de",
@@ -198,10 +198,10 @@
     "@value": "Sitzungen von Rat, Ausschüssen, Beiräten und Bezirksvertretungen mit Links zur Tagesordnung."
    },
    "dcat:accessURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/bonn/termine.ics"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/termine.ics"
    },
    "dcat:downloadURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/bonn/termine.ics"
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/termine.ics"
    },
    "dcat:mediaType": {
     "@id": "https://www.iana.org/assignments/media-types/text/calendar"
@@ -211,7 +211,7 @@
    },
    "dct:rights": {
     "@type": "dct:RightsStatement",
-    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://daimpad.github.io/allris-test/data/LICENSE-DATA.md"
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
    }
   }
  ]

@@ -1,0 +1,34 @@
+/* Textseiten der RIS-Karte (Datenschutz, Ortsteilseiten): gleiche Schrift und Farben wie die Karte, normal scrollbar */
+@font-face {
+  font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url("fonts/inter-latin-wght-normal.woff2") format("woff2");
+}
+:root { --text: #0f0f14; --muted: #5a5a68; --accent-ink: #6d28d9; --accent-fill: #7c3aed; --line: rgba(15, 15, 20, 0.1); }
+* { box-sizing: border-box; }
+body {
+  margin: 0; font: 400 16px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--text);
+  background: radial-gradient(at 20% 0%, #ffe0f0 0%, transparent 45%), radial-gradient(at 85% 10%, #d4e4ff 0%, transparent 45%), #fafaff;
+}
+a { color: var(--accent-ink); }
+:focus-visible { outline: 2px solid var(--accent-fill); outline-offset: 2px; }
+.page-head, .page, .page-foot { width: min(760px, calc(100% - 32px)); margin: 0 auto; }
+.page-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0 8px; }
+.page-brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: var(--accent-fill); text-decoration: none; }
+.page-brand span { color: var(--text); font-weight: 600; }
+.page-back { font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 12px; background: rgba(124, 58, 237, 0.1); }
+.page { padding: 16px 28px 28px; margin-top: 12px; border-radius: 20px; background: rgba(255, 255, 255, 0.92); box-shadow: 0 8px 32px rgba(15, 15, 20, 0.08); }
+.page h1 { font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; margin: 12px 0 6px; }
+.page h2 { font-size: 20px; letter-spacing: -0.01em; margin: 28px 0 6px; padding-top: 12px; border-top: 1px solid var(--line); }
+.page .lead { font-size: 18px; color: var(--muted); margin-top: 0; }
+.page code { font-size: 14px; background: rgba(124, 58, 237, 0.08); padding: 1px 5px; border-radius: 6px; }
+.page .meta { color: var(--muted); font-size: 14px; }
+.page table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.page th, .page td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; hyphens: auto; }
+.page table { table-layout: fixed; }
+.page th:nth-child(1) { width: 6.5em; } .page th:nth-child(2) { width: 7em; } .page th:nth-child(4) { width: 8.5em; }
+.page-foot { padding: 20px 0 32px; color: var(--muted); font-size: 14px; }
+@media (max-width: 600px) {
+  .page { padding: 8px 18px 20px; } .page h1 { font-size: 26px; }
+  .page table, .page tbody, .page tr, .page td { display: block; width: auto; } .page thead { display: none; }
+  .page tr { padding: 8px 0; border-bottom: 1px solid var(--line); } .page td { border: 0; padding: 2px 0; }
+}

@@ -4,15 +4,15 @@
 <title>RIS-Karte Bonn – Rüngsdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Rüngsdorf</subtitle>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="self" type="application/atom+xml" href="https://daimpad.github.io/allris-test/data/export/bonn/feeds/ortsteil-ruengsdorf.xml"/>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf"/>
-<author><name>RIS-Karte Bonn</name><uri>https://daimpad.github.io/allris-test/</uri></author>
+<link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-ruengsdorf.xml"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf"/>
+<author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029684#vorlage</id>
 <title>Neue Vorlage 261510-01 ST: Stellungnahme zu BBB-Antrag: Erschließung des Bahnhofes Bad Godesberg zum Von-Groote-Platz   Hier: Entfernen von an den Handlauf der Treppenanlage angeschlossenen Fahrrädern</title>
 <updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261510-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261510-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029684"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
@@ -20,7 +20,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029251#vorlage</id>
 <title>Neue Vorlage 240521-08: Grüne-Bezirksfraktion-Antrag: Sofortmaßnahmen für Raumnutzungskonflikte in der Cäsariusstraße /Heisterbachstraße</title>
 <updated>2026-09-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-08"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-08"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029251"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -28,7 +28,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028859#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261510 BBB-Antrag: Erschließung des Bahnhofes Bad Godesberg zum Von-Groote-Platz   Hier: Entfernen von an den Handlauf der Treppenanlage angeschlossenen Fahrrädern</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261510"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261510"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028859"/>
 <summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -36,7 +36,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028816#beratung-4</id>
 <title>Bezirksvertretung Bad Godesberg: „vertagt“ – 252403-06 ST Ergänzende Stellungnahme zur N-Vorlage zur Frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf, DS 252403-05</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-06%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-06%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028816"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -44,7 +44,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028598#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261110-02 ST GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261110-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261110-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028598"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -52,7 +52,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028515#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „vertagt“ – 261348 Bürgerantrag: Antrag auf Einführung von Tempo 30 auf der Konstantinstraße im Bereich Römerplatz zum Schutz eines denkmalgeschützten Gebäudes sowie zur Erhöhung der Verkehrssicherheit</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261348"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261348"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028515"/>
 <summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -60,7 +60,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028123#beratung-4</id>
 <title>Bezirksvertretung Bad Godesberg: „vertagt“ – 252403-05 N-Vorlage zur Frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-05"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-05"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028123"/>
 <summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -68,7 +68,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028114#beratung-4</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 253389-03 ST BBB-Anfrage: Obdachlosenunterkunft Karl-Finkelnburg-Straße 50 Drucksachengruppe 253389</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253389-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253389-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028114"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -76,7 +76,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028040#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261110-01 ST GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem - Vertagungsbitte</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261110-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261110-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028040"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -84,7 +84,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027894#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 253389-02 BBB-Anfrage: Obdachlosenunterkunft Karl-Finkelnburg-Straße 50 Drucksachengruppe 253389</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253389-02"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253389-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027894"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -92,7 +92,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027861#beratung-4</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261110 GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261110"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261110"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027861"/>
 <summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -100,7 +100,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026412#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 240521-07 ST Sofortmaßnahmen Gehwegparken Cäsariusstraße/Heisterbachstraße</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-07%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-07%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026412"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -108,7 +108,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025301#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 240521-06 ST Informationsbrief - Sofortmaßnahmen Gehwegparken Cäsariusstraße/Heisterbachstraße</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-06%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-06%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025301"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -116,7 +116,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024819#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 240521-05 AA GRÜNE Änderungsantrag: Schaffung von Fahrradabstellmöglichkeiten im Rahmen der Sofortmaßnahmen Gehwegparken Cäsariusstraße/Heisterbachstraße – zu DS 240521-03</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-05%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-05%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024819"/>
 <summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -124,7 +124,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024808#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 240521-04 AA SPD-Änderungsantrag: Sofortmaßnahmen Gehwegparken Cäsariusstraße/Heisterbachstraße Antrag zur Vorlage 240521-03</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024808"/>
 <summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -132,7 +132,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023869#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 240521-03 Sofortmaßnahmen Gehwegparken Cäsariusstraße / Heisterbachstraße</title>
 <updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-03"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023869"/>
 <summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -140,7 +140,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028816#vorlage</id>
 <title>Neue Vorlage 252403-06 ST: Ergänzende Stellungnahme zur N-Vorlage zur Frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf, DS 252403-05</title>
 <updated>2026-09-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-06%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-06%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028816"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
@@ -148,7 +148,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028598#vorlage</id>
 <title>Neue Vorlage 261110-02 ST: GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem</title>
 <updated>2026-08-31T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261110-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261110-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028598"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
@@ -156,7 +156,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028040#vorlage</id>
 <title>Neue Vorlage 261110-01 ST: GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem - Vertagungsbitte</title>
 <updated>2026-08-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261110-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261110-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028040"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
@@ -164,7 +164,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028859#vorlage</id>
 <title>Neue Vorlage 261510: BBB-Antrag: Erschließung des Bahnhofes Bad Godesberg zum Von-Groote-Platz   Hier: Entfernen von an den Handlauf der Treppenanlage angeschlossenen Fahrrädern</title>
 <updated>2026-08-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261510"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261510"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028859"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
@@ -172,7 +172,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028123#vorlage</id>
 <title>Neue Vorlage 252403-05: N-Vorlage zur Frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf</title>
 <updated>2026-07-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-05"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-05"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028123"/>
 <summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
@@ -180,7 +180,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028515#vorlage</id>
 <title>Neue Vorlage 261348: Bürgerantrag: Antrag auf Einführung von Tempo 30 auf der Konstantinstraße im Bereich Römerplatz zum Schutz eines denkmalgeschützten Gebäudes sowie zur Erhöhung der Verkehrssicherheit</title>
 <updated>2026-07-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261348"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261348"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028515"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
 </entry>
@@ -188,7 +188,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028114#beratung-3</id>
 <title>Rat: „zur Kenntnis genommen“ – 253389-03 ST BBB-Anfrage: Obdachlosenunterkunft Karl-Finkelnburg-Straße 50 Drucksachengruppe 253389</title>
 <updated>2026-07-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253389-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253389-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028114"/>
 <summary>Kenntnisnahme am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -196,7 +196,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027894#beratung-2</id>
 <title>Rat: „zur Kenntnis genommen - mit Protokollnotiz“ – 253389-02 BBB-Anfrage: Obdachlosenunterkunft Karl-Finkelnburg-Straße 50 Drucksachengruppe 253389</title>
 <updated>2026-07-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253389-02"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253389-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027894"/>
 <summary>Kenntnisnahme am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -204,7 +204,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028114#vorlage</id>
 <title>Neue Vorlage 253389-03 ST: BBB-Anfrage: Obdachlosenunterkunft Karl-Finkelnburg-Straße 50 Drucksachengruppe 253389</title>
 <updated>2026-06-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253389-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253389-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028114"/>
 <summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: in Beratung</summary>
 </entry>
@@ -212,7 +212,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027894#vorlage</id>
 <title>Neue Vorlage 253389-02: BBB-Anfrage: Obdachlosenunterkunft Karl-Finkelnburg-Straße 50 Drucksachengruppe 253389</title>
 <updated>2026-06-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253389-02"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253389-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027894"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
@@ -220,7 +220,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027861#vorlage</id>
 <title>Neue Vorlage 261110: GRÜNEN-Antrag: Piktogramme „Gemeinsam mit Rücksicht“ für gemeinsamen Fuß-/Radweg am Rheinufer in Rüngsdorf und Mehlem</title>
 <updated>2026-06-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#261110"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261110"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027861"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
@@ -228,7 +228,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027714#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 254045-02 AA Volt-Änderungsantrag zu Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung) Antrag zur Vorlage 254045</title>
 <updated>2026-05-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#254045-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#254045-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027714"/>
 <summary>Entscheidung am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -236,7 +236,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027552#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 254045-01 ST Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung)</title>
 <updated>2026-05-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#254045-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#254045-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027552"/>
 <summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -244,7 +244,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026459#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231309-03 ST FDP-Große Anfrage: Umsetzung des Beschlusses 231309 - Prüfauftrag: Errichtung eines Kreisverkehrs an der Kreuzung Ubierstraße/Denglerstraße</title>
 <updated>2026-05-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#231309-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#231309-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026459"/>
 <summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -252,7 +252,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026247#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231309-02 FDP-Große Anfrage: Umsetzung des Beschlusses 231309</title>
 <updated>2026-05-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#231309-02"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#231309-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026247"/>
 <summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -260,7 +260,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024867#beratung-4</id>
 <title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 254045 Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung)</title>
 <updated>2026-05-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#254045"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#254045"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024867"/>
 <summary>Entscheidung am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -268,7 +268,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027714#vorlage</id>
 <title>Neue Vorlage 254045-02 AA: Volt-Änderungsantrag zu Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung) Antrag zur Vorlage 254045</title>
 <updated>2026-05-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#254045-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#254045-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027714"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -276,7 +276,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027552#vorlage</id>
 <title>Neue Vorlage 254045-01 ST: Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung)</title>
 <updated>2026-05-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#254045-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#254045-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027552"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -284,7 +284,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026412#vorlage</id>
 <title>Neue Vorlage 240521-07 ST: Sofortmaßnahmen Gehwegparken Cäsariusstraße/Heisterbachstraße</title>
 <updated>2026-05-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-07%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-07%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026412"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
 </entry>
@@ -292,7 +292,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026459#vorlage</id>
 <title>Neue Vorlage 231309-03 ST: FDP-Große Anfrage: Umsetzung des Beschlusses 231309 - Prüfauftrag: Errichtung eines Kreisverkehrs an der Kreuzung Ubierstraße/Denglerstraße</title>
 <updated>2026-04-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#231309-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#231309-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026459"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -300,7 +300,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026498#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260471-01 ST SPD-Antrag: Herrichtung der Brachfläche an der Seufertstraße für ein Urban-Gardening-Projekt</title>
 <updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#260471-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#260471-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026498"/>
 <summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -308,7 +308,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026186#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 260471 SPD-Antrag: Herrichtung der Brachfläche an der Seufertstraße für ein Urban-Gardening-Projekt</title>
 <updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#260471"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#260471"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026186"/>
 <summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -316,7 +316,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025805#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 242218-02 ST BBB-Große Anfrage: Baumaßnahmen im öffentlichen Verkehrsbereich im Jahr 2025 (Pos. 23) - 2026 (Pos. 21) im Stadtbezirk Bad Godesberg; hier laufende Kanalbaumaßnahme Plittersdorfer Straße zwischen Körnerstraße und Ubierstraße; Drucksachen 242218 und 254091</title>
 <updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#242218-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#242218-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025805"/>
 <summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -324,7 +324,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025610#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 242218-01 BBB-Bezirksfraktion-Große Anfrage: Baumaßnahmen im öffentlichen Verkehrsbereich im Jahr 2025 (Pos. 23) - 2026 (Pos. 21) im Stadtbezirk Bad Godesberg; hier laufende Kanalbaumaßnahme Plittersdorfer Straße zwischen Körnerstraße und Ubierstraße; Drucksachen 242218 und 254091</title>
 <updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#242218-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#242218-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025610"/>
 <summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -332,7 +332,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024658#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 232335-02 ST Grundstück in Bonn-Rüngsdorf, Mirbachstraße 10, / Wielandstraße 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Errichtung von zwei Wohngebäuden mit Tiefgarge (Großgarage) Aktenzeichen 40911/2022 Hier: Stellungnahme zur Großen Anfrage DS 232335-01</title>
 <updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#232335-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#232335-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024658"/>
 <summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -340,7 +340,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023134#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 232335-01 BBB-Anfrage: vormalige Liegenschaft der Lastenausgleichsbank (LAB, später DtA, heute KfW) Mirbachstraße 10 / Wielandstraße 4 - Errichtung von zwei Wohngebäuden mit Tiefgarage; hier Abbrucharbeiten Drucksachengruppe 232335</title>
 <updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#232335-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#232335-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023134"/>
 <summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -348,7 +348,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026498#vorlage</id>
 <title>Neue Vorlage 260471-01 ST: SPD-Antrag: Herrichtung der Brachfläche an der Seufertstraße für ein Urban-Gardening-Projekt</title>
 <updated>2026-04-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#260471-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#260471-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026498"/>
 <summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -356,7 +356,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026247#vorlage</id>
 <title>Neue Vorlage 231309-02: FDP-Große Anfrage: Umsetzung des Beschlusses 231309</title>
 <updated>2026-03-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#231309-02"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#231309-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026247"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -364,7 +364,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026186#vorlage</id>
 <title>Neue Vorlage 260471: SPD-Antrag: Herrichtung der Brachfläche an der Seufertstraße für ein Urban-Gardening-Projekt</title>
 <updated>2026-03-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#260471"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#260471"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026186"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -372,7 +372,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025684#beratung-3</id>
 <title>Sportausschuss: „ungeändert beschlossen“ – 260286 Entgeltfreie Überlassung des Sprungbeckens im Freibad Rüngsdorf für den „Internationalen RheinDiving Cup im Kunst- und Turmspringen“</title>
 <updated>2026-03-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#260286"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#260286"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025684"/>
 <summary>Entscheidung am 2026-03-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -380,7 +380,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025660#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253940-01 ST SPD-Antrag: Beschilderung von Gerhard-Rohlfs-Straße sowie Professor Dennert-Straße als Anlieger-Straßen</title>
 <updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253940-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253940-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025660"/>
 <summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -388,7 +388,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024673#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 253980 GRÜNEN-Antrag: Herausnahme Durchgangsverkehr Kapellenweg prüfen</title>
 <updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253980"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253980"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024673"/>
 <summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -396,7 +396,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024593#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 253940 SPD-Antrag: Beschilderung von Gerhard-Rohlfs-Straße sowie Professor Dennert-Straße als Anlieger-Straßen</title>
 <updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253940"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253940"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024593"/>
 <summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -404,7 +404,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025805#vorlage</id>
 <title>Neue Vorlage 242218-02 ST: BBB-Große Anfrage: Baumaßnahmen im öffentlichen Verkehrsbereich im Jahr 2025 (Pos. 23) - 2026 (Pos. 21) im Stadtbezirk Bad Godesberg; hier laufende Kanalbaumaßnahme Plittersdorfer Straße zwischen Körnerstraße und Ubierstraße; Drucksachen 242218 und 254091</title>
 <updated>2026-03-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#242218-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#242218-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025805"/>
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -412,7 +412,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025684#vorlage</id>
 <title>Neue Vorlage 260286: Entgeltfreie Überlassung des Sprungbeckens im Freibad Rüngsdorf für den „Internationalen RheinDiving Cup im Kunst- und Turmspringen“</title>
 <updated>2026-03-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#260286"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#260286"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025684"/>
 <summary>Beschlussvorlage · federführend: 52 Sport- und Bäderamt · Stand: entschieden</summary>
 </entry>
@@ -420,7 +420,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025660#vorlage</id>
 <title>Neue Vorlage 253940-01 ST: SPD-Antrag: Beschilderung von Gerhard-Rohlfs-Straße sowie Professor Dennert-Straße als Anlieger-Straßen</title>
 <updated>2026-02-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253940-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253940-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025660"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -428,7 +428,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025610#vorlage</id>
 <title>Neue Vorlage 242218-01: BBB-Bezirksfraktion-Große Anfrage: Baumaßnahmen im öffentlichen Verkehrsbereich im Jahr 2025 (Pos. 23) - 2026 (Pos. 21) im Stadtbezirk Bad Godesberg; hier laufende Kanalbaumaßnahme Plittersdorfer Straße zwischen Körnerstraße und Ubierstraße; Drucksachen 242218 und 254091</title>
 <updated>2026-02-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#242218-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#242218-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025610"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -436,7 +436,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023898#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 253616 BBB-Antrag: Korrektur der angezeigten Wegeführung einer Navigations-App im Bereich Theodor-Heuss-Straße/Koblenzer Straße/Friedrichallee</title>
 <updated>2026-01-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253616"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253616"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023898"/>
 <summary>Entscheidung am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -444,7 +444,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025301#vorlage</id>
 <title>Neue Vorlage 240521-06 ST: Informationsbrief - Sofortmaßnahmen Gehwegparken Cäsariusstraße/Heisterbachstraße</title>
 <updated>2026-01-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-06%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-06%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025301"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
 </entry>
@@ -452,7 +452,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024947#vorlage</id>
 <title>Neue Vorlage 202330-04: BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
 <updated>2025-12-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#202330-04"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#202330-04"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024947"/>
 <summary>Mitteilungsvorlage · federführend: Bezirksverwaltungsstelle Bad Godesberg · Stand: offen</summary>
 </entry>
@@ -460,7 +460,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024658#vorlage</id>
 <title>Neue Vorlage 232335-02 ST: Grundstück in Bonn-Rüngsdorf, Mirbachstraße 10, / Wielandstraße 4 (Gemarkung Rüngsdorf, Flur 5, Flurstück 2399) - Errichtung von zwei Wohngebäuden mit Tiefgarge (Großgarage) Aktenzeichen 40911/2022 Hier: Stellungnahme zur Großen Anfrage DS 232335-01</title>
 <updated>2025-12-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#232335-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#232335-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024658"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -468,7 +468,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024867#vorlage</id>
 <title>Neue Vorlage 254045: Bürgerantrag: Antrag auf Verkehrssicherungsmaßnahmen in der Rheinallee (Zebrastreifen, Entfernung Container, Geschwindigkeitsüberwachung)</title>
 <updated>2025-12-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#254045"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#254045"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024867"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
@@ -476,7 +476,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024075#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 242350-01 ST BBB-Antrag: Gehwegparken in der Blumenaustraße</title>
 <updated>2025-12-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#242350-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#242350-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024075"/>
 <summary>Kenntnisnahme am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -484,7 +484,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020899#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 242350 BBB-Antrag: Gehwegparken in der Blumenaustraße</title>
 <updated>2025-12-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#242350"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#242350"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020899"/>
 <summary>Entscheidung am 2025-12-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -492,7 +492,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024819#vorlage</id>
 <title>Neue Vorlage 240521-05 AA: GRÜNE Änderungsantrag: Schaffung von Fahrradabstellmöglichkeiten im Rahmen der Sofortmaßnahmen Gehwegparken Cäsariusstraße/Heisterbachstraße – zu DS 240521-03</title>
 <updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-05%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-05%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024819"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
@@ -500,7 +500,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024808#vorlage</id>
 <title>Neue Vorlage 240521-04 AA: SPD-Änderungsantrag: Sofortmaßnahmen Gehwegparken Cäsariusstraße/Heisterbachstraße Antrag zur Vorlage 240521-03</title>
 <updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024808"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
@@ -508,7 +508,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024673#vorlage</id>
 <title>Neue Vorlage 253980: GRÜNEN-Antrag: Herausnahme Durchgangsverkehr Kapellenweg prüfen</title>
 <updated>2025-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253980"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253980"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024673"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -516,7 +516,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024593#vorlage</id>
 <title>Neue Vorlage 253940: SPD-Antrag: Beschilderung von Gerhard-Rohlfs-Straße sowie Professor Dennert-Straße als Anlieger-Straßen</title>
 <updated>2025-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253940"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253940"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024593"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -524,7 +524,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024480#vorlage</id>
 <title>Neue Vorlage 253869: Informationsbrief - Kanalbauarbeiten Wiedemannstraße</title>
 <updated>2025-10-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253869"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253869"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024480"/>
 <summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
@@ -532,7 +532,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024163#vorlage</id>
 <title>Neue Vorlage 253483-01 AA: BBB-Änderungsantrag: Einleitung des Vergabeverfahrens zur Baumersatzpflanzung in Bad Godesberg – Rüngsdorf 2025 Antrag zur Vorlage 253483</title>
 <updated>2025-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253483-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253483-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024163"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -540,7 +540,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024163#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 253483-01 AA BBB-Änderungsantrag: Einleitung des Vergabeverfahrens zur Baumersatzpflanzung in Bad Godesberg – Rüngsdorf 2025 Antrag zur Vorlage 253483</title>
 <updated>2025-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253483-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253483-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024163"/>
 <summary>Entscheidung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -548,7 +548,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023897#beratung-3</id>
 <title>Sportausschuss: „ungeändert beschlossen“ – 253615 Entgeltfreie Überlassung des Sprungbeckens im Freibad Rüngsdorf für den „Internationalen RheinDiving Cup im Kunst- und Turmspringen“</title>
 <updated>2025-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253615"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253615"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023897"/>
 <summary>Entscheidung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -556,7 +556,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023869#vorlage</id>
 <title>Neue Vorlage 240521-03: Sofortmaßnahmen Gehwegparken Cäsariusstraße / Heisterbachstraße</title>
 <updated>2025-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240521-03"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240521-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023869"/>
 <summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
 </entry>
@@ -564,7 +564,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023630#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 253483 Einleitung des Vergabeverfahrens zur Baumersatzpflanzung in Bad Godesberg – Rüngsdorf 2025</title>
 <updated>2025-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253483"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253483"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023630"/>
 <summary>Entscheidung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -572,7 +572,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024075#vorlage</id>
 <title>Neue Vorlage 242350-01 ST: BBB-Antrag: Gehwegparken in der Blumenaustraße</title>
 <updated>2025-08-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#242350-01%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#242350-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024075"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -580,7 +580,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023897#vorlage</id>
 <title>Neue Vorlage 253615: Entgeltfreie Überlassung des Sprungbeckens im Freibad Rüngsdorf für den „Internationalen RheinDiving Cup im Kunst- und Turmspringen“</title>
 <updated>2025-08-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253615"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253615"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023897"/>
 <summary>Beschlussvorlage · federführend: 52 Sport- und Bäderamt · Stand: entschieden</summary>
 </entry>
@@ -588,7 +588,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023898#vorlage</id>
 <title>Neue Vorlage 253616: BBB-Antrag: Korrektur der angezeigten Wegeführung einer Navigations-App im Bereich Theodor-Heuss-Straße/Koblenzer Straße/Friedrichallee</title>
 <updated>2025-08-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253616"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253616"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023898"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -596,7 +596,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023630#vorlage</id>
 <title>Neue Vorlage 253483: Einleitung des Vergabeverfahrens zur Baumersatzpflanzung in Bad Godesberg – Rüngsdorf 2025</title>
 <updated>2025-07-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253483"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253483"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023630"/>
 <summary>Beschlussvorlage: Einleitung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
@@ -604,7 +604,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021008#beratung-9</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 252403 Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf</title>
 <updated>2025-07-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021008"/>
 <summary>Empfehlung am 2025-07-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -612,7 +612,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023637#vorlage</id>
 <title>Neue Vorlage 252403-04 AA: Änderungsantrag der Koalition - Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf Antrag zur Vorlage 252403</title>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023637"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -620,7 +620,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023637#beratung-2</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 252403-04 AA Änderungsantrag der Koalition - Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf Antrag zur Vorlage 252403</title>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-04%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023637"/>
 <summary>Entscheidung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -628,7 +628,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022823#beratung-4</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „zur Kenntnis genommen“ – 252403-03 ST Ergänzende Stellungnahme zur Vorlage: Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf</title>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022823"/>
 <summary>Kenntnisnahme am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -636,7 +636,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021008#beratung-7</id>
 <title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 252403 Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf</title>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021008"/>
 <summary>Entscheidung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -644,7 +644,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023536#vorlage</id>
 <title>Neue Vorlage 253451: Informationsbrief - Kanalerneuerung Lindenallee, ABK-Nr. 182042, und Bismarckallee, ABK-Nr. 182036</title>
 <updated>2025-07-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253451"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253451"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023536"/>
 <summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
@@ -652,7 +652,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022957#beratung-4</id>
 <title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 253192 Fällgenehmigung für eine Himalaja-Zeder und eine Schwarz-Kiefer auf dem Baugrundstück Mirbachstr. 10/Wielandstr. 4, 53173 Bonn im Rahmen eines Baugenehmigungsverfahrens</title>
 <updated>2025-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253192"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253192"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022957"/>
 <summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -660,7 +660,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022291#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „vertagt“ – 252403-01 AA Grüne-Änderungsantrag: Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf Antrag zur Vorlage 252403</title>
 <updated>2025-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022291"/>
 <summary>Empfehlung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
@@ -668,7 +668,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021798#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 202330-03 ST BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
 <updated>2025-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#202330-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#202330-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021798"/>
 <summary>Kenntnisnahme am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
@@ -676,7 +676,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021626#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „zurückgezogen“ – 202330-02 AA FDP-Änderungsantrag: Gedenken an Niklas Pöhler an der Rheinallee (DS alt: 1711673) Antrag zur Vorlage 202330</title>
 <updated>2025-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#202330-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#202330-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021626"/>
 <summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -684,7 +684,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021612#beratung-2</id>
 <title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 202330-01 BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
 <updated>2025-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#202330-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#202330-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021612"/>
 <summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -692,7 +692,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022957#beratung-3</id>
 <title>Baumkommission: „ungeändert beschlossen“ – 253192 Fällgenehmigung für eine Himalaja-Zeder und eine Schwarz-Kiefer auf dem Baugrundstück Mirbachstr. 10/Wielandstr. 4, 53173 Bonn im Rahmen eines Baugenehmigungsverfahrens</title>
 <updated>2025-06-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253192"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253192"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022957"/>
 <summary>Empfehlung am 2025-06-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -700,7 +700,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023134#vorlage</id>
 <title>Neue Vorlage 232335-01: BBB-Anfrage: vormalige Liegenschaft der Lastenausgleichsbank (LAB, später DtA, heute KfW) Mirbachstraße 10 / Wielandstraße 4 - Errichtung von zwei Wohngebäuden mit Tiefgarage; hier Abbrucharbeiten Drucksachengruppe 232335</title>
 <updated>2025-06-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#232335-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#232335-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023134"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -708,7 +708,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022957#vorlage</id>
 <title>Neue Vorlage 253192: Fällgenehmigung für eine Himalaja-Zeder und eine Schwarz-Kiefer auf dem Baugrundstück Mirbachstr. 10/Wielandstr. 4, 53173 Bonn im Rahmen eines Baugenehmigungsverfahrens</title>
 <updated>2025-05-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#253192"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#253192"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022957"/>
 <summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
@@ -716,7 +716,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022823#vorlage</id>
 <title>Neue Vorlage 252403-03 ST: Ergänzende Stellungnahme zur Vorlage: Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf</title>
 <updated>2025-05-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022823"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
@@ -724,7 +724,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022466#vorlage</id>
 <title>Neue Vorlage 252403-02 ST: Grüne-Änderungsantrag: Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf Antrag zur Vorlage 252403</title>
 <updated>2025-05-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022466"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
@@ -732,7 +732,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021888#beratung-4</id>
 <title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 252723 Fällgenehmigung für eine Winter-Linde und einen Götterbaum auf dem Baugrundstück Wiedemannstr. 64-66, 53175 Bonn</title>
 <updated>2025-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252723"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252723"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021888"/>
 <summary>Entscheidung am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -740,7 +740,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022291#vorlage</id>
 <title>Neue Vorlage 252403-01 AA: Grüne-Änderungsantrag: Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf Antrag zur Vorlage 252403</title>
 <updated>2025-04-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403-01%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022291"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
@@ -748,7 +748,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021888#beratung-3</id>
 <title>Baumkommission: „ungeändert beschlossen“ – 252723 Fällgenehmigung für eine Winter-Linde und einen Götterbaum auf dem Baugrundstück Wiedemannstr. 64-66, 53175 Bonn</title>
 <updated>2025-04-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252723"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252723"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021888"/>
 <summary>Empfehlung am 2025-04-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
@@ -756,7 +756,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021888#vorlage</id>
 <title>Neue Vorlage 252723: Fällgenehmigung für eine Winter-Linde und einen Götterbaum auf dem Baugrundstück Wiedemannstr. 64-66, 53175 Bonn</title>
 <updated>2025-03-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252723"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252723"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021888"/>
 <summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
@@ -764,7 +764,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021798#vorlage</id>
 <title>Neue Vorlage 202330-03 ST: BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
 <updated>2025-03-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#202330-03%20ST"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#202330-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021798"/>
 <summary>Stellungnahme der Verwaltung · federführend: Bezirksverwaltungsstelle Bad Godesberg · Stand: beraten, ohne Entscheidung</summary>
 </entry>
@@ -772,7 +772,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021008#vorlage</id>
 <title>Neue Vorlage 252403: Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des Bebauungsplanes Nr. 7114-2 „Deichmanns Aue“ im Stadtbezirk Bad Godesberg, Ortsteil Rüngsdorf</title>
 <updated>2025-03-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252403"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252403"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021008"/>
 <summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
 </entry>
@@ -780,7 +780,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021831#vorlage</id>
 <title>Neue Vorlage 252698: Informationsbrief - Kanalsanierung Basteistraße</title>
 <updated>2025-03-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#252698"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#252698"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021831"/>
 <summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
@@ -788,7 +788,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021626#vorlage</id>
 <title>Neue Vorlage 202330-02 AA: FDP-Änderungsantrag: Gedenken an Niklas Pöhler an der Rheinallee (DS alt: 1711673) Antrag zur Vorlage 202330</title>
 <updated>2025-02-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#202330-02%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#202330-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021626"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -796,7 +796,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021612#vorlage</id>
 <title>Neue Vorlage 202330-01: BBB-Antrag: Aufstellung eines Gedenksteins/-tafel an Niklas Pöhler und seinen Tod als Opfer sinnloser Gewalt</title>
 <updated>2025-02-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#202330-01"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#202330-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021612"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
@@ -804,7 +804,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021282#vorlage</id>
 <title>Neue Vorlage 240986-65 AA: BBB-Änderungsantrag: Mittel für die Erneuerung des Fahrbahnbelages in der Wiedemannstraße; Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
 <updated>2025-01-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://daimpad.github.io/allris-test/?gebiet=ortsteil:ruengsdorf#240986-65%20AA"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#240986-65%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021282"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
