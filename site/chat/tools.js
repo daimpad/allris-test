@@ -253,7 +253,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
         parteien: p.parties,
         orte: p.locations.slice(0, 10).map(loc),
         orte_gesamt: p.locations.length,
-        bebauungsplaene: p.plans.map((x) => ({ nummer: x.nr, fundstelle: x.evidence, geltungsbereich_bekannt: x.area })),
+        bebauungsplaene: p.plans.map((x) => ({ nummer: x.nr, fundstelle: x.evidence, geltungsbereich_bekannt: x.area, treffer: x.match || null })),
         uebergeordnet: p.superordinated.slice(0, 5).map(rel),
         folgevorlagen: p.subordinated.slice(0, 10).map(rel),
         folgevorlagen_gesamt: p.subordinated.length,

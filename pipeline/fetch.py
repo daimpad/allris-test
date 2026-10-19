@@ -175,6 +175,7 @@ def fetch_plans():
                                 "begruendung": https(f["properties"].get("begruendung_link"))},
                  "geometry": {"type": f["geometry"]["type"], "coordinates": rnd(f["geometry"]["coordinates"])}}
                 for f in data["features"] if f.get("geometry")]
+    _plan_changes(features)
     config.BPLAN.write_text(json.dumps({
         "type": "FeatureCollection",
         "meta": {"source": config.BPLAN_URL, "license": config.SOURCES["bplan-bonn"]["license"],
@@ -183,6 +184,32 @@ def fetch_plans():
         ensure_ascii=False, separators=(",", ":")) + "\n")
     _stamp("bplan")
     print(f"{len(features)} Bebauungspläne → {config.BPLAN}")
+
+
+def _plan_changes(features):
+    """Änderungsprotokoll der Bebauungspläne (der Datensatz hat keine Historie): neue Pläne, entfallene Pläne
+    (Kandidaten für Aufhebung) und geänderte Daten des Inkrafttretens, je Abruf an PLAN_LOG angehängt."""
+    if not config.BPLAN.exists():
+        return
+    def index(feats):
+        out = {}
+        for f in feats:
+            out.setdefault(f["properties"]["name"], set()).add(f["properties"].get("inkraft_seit") or "")
+        return {k: "; ".join(sorted(v)) for k, v in out.items()}
+    old = index(json.loads(config.BPLAN.read_text())["features"])
+    new = index(features)
+    day = _now()[:10]
+    rows = ([(day, n, "neu", "", new[n]) for n in sorted(new.keys() - old.keys())]
+            + [(day, n, "entfallen", old[n], "") for n in sorted(old.keys() - new.keys())]
+            + [(day, n, "inkraft_geaendert", old[n], new[n]) for n in sorted(old.keys() & new.keys()) if old[n] != new[n]])
+    if not rows:
+        return
+    head = not config.PLAN_LOG.exists()
+    with config.PLAN_LOG.open("a", encoding="utf-8") as fh:
+        if head:
+            fh.write("datum\tplan\tereignis\tinkraft_alt\tinkraft_neu\n")
+        fh.writelines("\t".join(r) + "\n" for r in rows)
+    print(f"Bebauungspläne: {len(rows)} Änderungen → {config.PLAN_LOG}")
 
 
 def fetch_all():

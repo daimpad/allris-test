@@ -45,6 +45,7 @@ jobs:
             data/raw/verwaltungsbereiche.json
             data/raw/STAND.json
             data/geo/bebauungsplaene_bonn.geojson
+            data/geo/bebauungsplaene_protokoll.tsv
           key: raw-${{ github.run_id }}
           restore-keys: raw-
 

@@ -40,8 +40,14 @@ ORTSTEIL_ALIASES = {
 BEZIRKE = {"Bad Godesberg": ["Bad Godesberg", "Godesberg"], "Beuel": ["Beuel"], "Hardtberg": ["Hardtberg"]}
 # Namen, die im Titel oft nicht die Straße meinen (oder mehrere Lagen haben): Konfidenz niedrig
 GENERIC_NAMES = {"Rheinufer", "Markt", "Kirchberg", "Wasserland"}
-PLAN = re.compile(r"(?:Bebauungsplan(?:es|s|entwurf|entwurfs|verfahren|verfahrens|änderung)?|B-Plan(?:es|s)?)"
-                  r"\s*(?:Nr\.?\s*)?(\d{4}-\d{1,3})")
+# Bebauungsplan-Nummern (Methode B3): Stichwort (auch Tippfehler, Plural, Bauleitplan, Satzung), danach eine
+# oder mehrere Nummern NNNN-N(N) mit optionalem Zusatz (a, A, I, II, -A, „Teil A“); Präfix 6–8 wie im
+# Plandatensatz der Stadt (Phase 0, baustellen/phase0/BERICHT.md). Flurstücke (NNNN-N-NNN) zählen nicht.
+PLAN_NR = r"(?<![\d-])[6-8]\d{3}-\d{1,3}(?:\s?(?:[a-dA-D]|I{1,3}|-[A-D]|Teil [A-D])(?![\w-]))?"
+PLAN = re.compile(r"(?i)(?:beba?u\w*pl[aä]n\w*|b-pl[aä]n\w*|bauleitplan\w*|satzung|vorhaben- und erschließungsplan\w*)"
+                  r"[^;]{0,50}?(" + PLAN_NR + r"(?:\s*(?:,|und|/|sowie|bzw\.)\s*(?:Nr\.\s*)?" + PLAN_NR + r")*)")
+PLAN_ONE = re.compile(r"(" + PLAN_NR + r")")
+FLURSTUECK = re.compile(r"\d{4}-\d{1,3}-\d+")
 STRASSE = re.compile(r"[Ss]traße$")
 
 
@@ -244,7 +250,13 @@ class Gazetteer:
 
 
 def plan_numbers(title):
-    return [(m.group(1), m.group(0)) for m in PLAN.finditer(title or "")]
+    """[(Plannummer, Fundstelle)] aus dem Titel, je Nummer einmal."""
+    text = FLURSTUECK.sub(" ", title or "")
+    found = {}
+    for m in PLAN.finditer(text):
+        for n in PLAN_ONE.findall(m.group(1)):
+            found.setdefault(re.sub(r"\s+", " ", n).strip(), m.group(0).strip())
+    return list(found.items())
 
 
 def write_gazetteer():

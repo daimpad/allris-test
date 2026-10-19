@@ -5,7 +5,7 @@ import sqlite3
 from . import actors, config
 from .geo import Ortsteile
 from .geocode import Gazetteer, plan_numbers
-from .plans import plan_locations
+from .plans import Plans, plan_locations
 
 SCHEMA = """
 CREATE TABLE source (
@@ -38,8 +38,11 @@ CREATE TABLE paper_location (
   method TEXT, confidence TEXT, evidence TEXT, source_object TEXT,
   PRIMARY KEY (paper_id, location_id, method));
 CREATE TABLE paper_plan (
-  paper_id TEXT REFERENCES paper, plan_nr TEXT, evidence TEXT,
+  paper_id TEXT REFERENCES paper, plan_nr TEXT, evidence TEXT, match TEXT,
   PRIMARY KEY (paper_id, plan_nr));
+-- Ortsbezüge aus dem Titel, die einem eindeutig zugeordneten Bebauungsplan weichen (Vorrang B3, Audit)
+CREATE TABLE plan_precedence (
+  paper_id TEXT REFERENCES paper, location_id TEXT REFERENCES location, method TEXT, evidence TEXT);
 CREATE TABLE paper_originator (
   paper_id TEXT REFERENCES paper, actor TEXT, actor_type TEXT,
   organization_id TEXT REFERENCES organization, method TEXT, evidence TEXT, derived INTEGER);
@@ -158,11 +161,18 @@ def build():
                                  r["evidence"], r["derived"]))
 
     rows["ploc"] += _stage_b(papers, bv_bezirke, locations)
-    plan_locs, plan_rows = plan_locations(rows["plan"], ortsteile)
+    plans = Plans()
+    rows["plan"] = [(pid, nr, ev, plans.classify(nr)[0]) for pid, nr, ev in rows["plan"]]
+    plan_locs, plan_rows = plan_locations([r[:3] for r in rows["plan"]], ortsteile, plans)
     locations.update(plan_locs)
+    # Vorrang: Bei eindeutigem Plan gilt der Geltungsbereich; Straßen- und Ortsnamen aus dem Titel treten zurück
+    sure = {r[0] for r in plan_rows if r[4] == "hoch"}
+    precedence = [(r[0], r[1], r[3], r[5]) for r in rows["ploc"] if r[0] in sure and r[2] == "B"]
+    rows["ploc"] = [r for r in rows["ploc"] if not (r[0] in sure and r[2] == "B")]
     rows["ploc"] += plan_rows
     print(f"Bebauungspläne: {len({r[0] for r in plan_rows})} Vorlagen mit Geltungsbereich, "
-          f"{len({r[0] for r in rows['plan']})} mit Plannummer im Titel")
+          f"{len({r[0] for r in rows['plan']})} mit Plannummer im Titel, "
+          f"{len(sure)} eindeutig (Vorrang vor {len(precedence)} Ortsbezügen aus dem Titel)")
     rows["ploc"] += _inherited(papers, papers_by_id, rows["ploc"])
 
     # OR REPLACE: ändert sich die Quelle während des seitenweisen Abrufs, kann eine Vorlage doppelt kommen
@@ -172,7 +182,8 @@ def build():
     db.executemany("INSERT INTO agenda_item VALUES (?,?,?,?,?,?,'oparl-lite')", agenda.values())
     db.executemany("INSERT OR REPLACE INTO consultation VALUES (?,?,?,?,?,?,?,?,'oparl-bonn',?)", rows["cons"])
     db.executemany("INSERT INTO location VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", locations.values())
-    db.executemany("INSERT OR IGNORE INTO paper_plan VALUES (?,?,?)", rows["plan"])
+    db.executemany("INSERT OR IGNORE INTO paper_plan VALUES (?,?,?,?)", rows["plan"])
+    db.executemany("INSERT INTO plan_precedence VALUES (?,?,?,?)", precedence)
     db.executemany("INSERT OR IGNORE INTO paper_location VALUES (?,?,?,?,?,?,?)", rows["ploc"])
     db.executemany("INSERT INTO paper_originator VALUES (?,?,?,?,?,?,?)", rows["orig"])
     db.executemany("INSERT INTO paper_responsibility VALUES (?,?,?,?,?,?)", rows["resp"])
