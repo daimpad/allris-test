@@ -450,10 +450,13 @@
   function itemHtml(p) {
     const c = bestConfidence(p);
     const conf = area.kind === "ohne" ? "" : `<span class="conf conf-${c}">${CONF[c]}</span>`;
+    // Ort nur von der übergeordneten Vorlage übernommen (Folgevorlage ohne eigenen Ortsbezug)
+    const own = areaLocs(p);
+    const taken = own.length && own.every((l) => l.method === "vererbt") ? '<span class="taken">Ort übernommen</span>' : "";
     return `<li><button type="button" data-ref="${esc(p.reference)}" aria-current="${selected === p}">
       <span class="title">${esc(p.name)}</span>
       <span class="meta"><span>${esc(p.reference)}</span><span>${fmtDate(p.date)}</span><span>${esc(p.paper_type)}</span>
-      <span>${esc(p.stand)}</span>${conf}${themeTags(p.themes)}</span></button></li>`;
+      <span>${esc(p.stand)}</span>${conf}${taken}${themeTags(p.themes)}</span></button></li>`;
   }
   const themeTags = (ts) => (ts || []).slice(0, 2).map((t) => `<span class="theme">${esc(THEMES[t.theme || t])}</span>`).join("");
 
@@ -580,10 +583,15 @@
     if (tl) tl.select(p);
     highlight();
     const resp = p.responsibility.map((r) => `${esc(r.label)}${r.derived ? ` <span class="derived">abgeleitet, über ${esc(r.evidence)}</span>` : ""}`).join("<br>");
-    const locs = p.locations.length ? p.locations.map((l) => `<li><strong>${esc(l.name || l.ortsteil || l.stadtbezirk)}</strong>
-      ${l.ortsteil && l.level === "strasse" ? `(${esc(l.ortsteil)})` : ""} – <span class="conf conf-${esc(l.confidence)}">${CONF[l.confidence] || esc(l.confidence)}</span>, Stufe ${esc(l.stage)}<br>
-      <span class="meta">${esc(METHOD[l.method] || l.method)}${l.evidence ? ` · Fundstelle: „${esc(l.evidence)}“` : ""}</span></li>`).join("")
-      : "<li>stadtweit / ohne Ortsbezug</li>";
+    const outside = (l) => (area.kind === "ortsteil" && l.ortsteil && l.ortsteil !== area.name)
+      || (area.kind === "bezirk" && l.stadtbezirk && l.stadtbezirk !== area.name);
+    const locItem = (l) => `<li><strong>${esc(l.name || l.ortsteil || l.stadtbezirk)}</strong>
+      ${l.ortsteil && l.level === "strasse" ? `(${esc(l.ortsteil)})` : ""} – <span class="conf conf-${esc(l.confidence)}">${CONF[l.confidence] || esc(l.confidence)}</span>, Stufe ${esc(l.stage)}${outside(l) ? ' <span class="hint">außerhalb des gewählten Gebiets</span>' : ""}<br>
+      <span class="meta">${esc(METHOD[l.method] || l.method)}${l.evidence ? ` · Fundstelle: „${esc(l.evidence)}“` : ""}</span></li>`;
+    // eigene Ortsbezüge zuerst; übernommene getrennt, damit klar bleibt, dass sie den Ursprungsvorgang betreffen
+    const ownLocs = p.locations.filter((l) => l.method !== "vererbt"), takenLocs = p.locations.filter((l) => l.method === "vererbt");
+    const locs = (ownLocs.length ? ownLocs.map(locItem).join("") : takenLocs.length ? "" : "<li>stadtweit / ohne Ortsbezug</li>")
+      + (takenLocs.length ? `<li class="taken-group">Diese Vorlage nennt selbst keinen Ort. Übernommen von der übergeordneten Vorlage:<ul>${takenLocs.map(locItem).join("")}</ul></li>` : "");
     const rel = (arr) => arr.map((r) => `<li>${esc(r.reference)} · ${esc(r.paper_type)} – ${esc(r.name)}</li>`).join("");
     const sources = meta.sources.map((s) => `<li>${esc(s.name)}: ${esc(s.license)}${s.retrieved_at ? ` · Abruf ${esc(String(s.retrieved_at).slice(0, 10))}` : ""}</li>`).join("");
     $("#detail-heading").textContent = "Vorgang";

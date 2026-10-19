@@ -369,6 +369,9 @@ body.detail-open .leaflet-right { right: calc(var(--detail-w) + 16px); }
 .empty-list { padding: 14px 4px; color: var(--text-muted); }
 .empty-list p { margin: 0 0 8px; }
 .papers .more { padding: 10px 4px; }
+.taken { color: var(--text-muted); font-style: italic; }
+.locs .taken-group { list-style: none; margin-left: -18px; color: var(--text-muted); }
+.locs .taken-group ul { color: var(--text); margin-top: 4px; }
 .active-filters { color: var(--accent-ink); font-weight: 500; }
 .intro p { margin: 0 0 10px; }
 /* Startfenster „Los geht's“ mit pulsierender Schaltfläche zur Tour */
