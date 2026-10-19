@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css" integrity="sha512-fYyZwU1wU0QWB4Yutd/Pvhy5J1oWAwFXun1pt+Bps04WSe4Aq6tyHlT4+MHSJhD8JlLfgLuC4CbCnX5KHSjyCg==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="list-open detail-open">
+<body class="list-closed detail-open">
   <!-- Symbole (eigene Strichzeichnungen, 24er-Raster) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
@@ -60,9 +60,9 @@
       <label class="visually-hidden" for="f-area">Gebiet</label>
       <select id="f-area" class="nav-area"></select>
       <div class="nav-group seg" role="group" aria-label="Flächen ein- und ausblenden">
-        <button type="button" class="toggle" data-panel="panel-list" aria-controls="panel-list" aria-pressed="true" title="Liste der Vorlagen">
+        <button type="button" class="toggle" data-panel="panel-list" aria-controls="panel-list" aria-pressed="false" title="Liste der Vorlagen">
           <svg class="icon" aria-hidden="true"><use href="#i-list"/></svg><span>Liste</span></button>
-        <button type="button" class="toggle" data-panel="timeline-wrap" aria-controls="timeline-wrap" aria-pressed="true" title="Zeitleiste">
+        <button type="button" class="toggle" data-panel="timeline-wrap" aria-controls="timeline-wrap" aria-pressed="false" title="Zeitleiste">
           <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Zeitleiste</span></button>
         <button type="button" class="toggle" data-panel="panel-detail" aria-controls="panel-detail" aria-pressed="true" title="Gewählter Vorgang">
           <svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg><span>Vorgang</span></button>
@@ -177,7 +177,7 @@
   </header>
 
   <main>
-    <section id="panel-list" class="panel glass" aria-labelledby="list-heading">
+    <section id="panel-list" class="panel glass" aria-labelledby="list-heading" hidden>
       <div class="resizer" data-resize="list" role="separator" tabindex="0" aria-orientation="vertical" aria-controls="panel-list" aria-label="Breite der Liste ändern (Pfeiltasten)"></div>
       <div class="panel-head">
         <h2 id="list-heading" tabindex="-1">Vorlagen</h2>
@@ -241,7 +241,7 @@
       </div>
     </section>
 
-    <section id="timeline-wrap" class="glass" aria-label="Zeitleiste"></section>
+    <section id="timeline-wrap" class="glass" aria-label="Zeitleiste" hidden></section>
 
     <section id="panel-assistent" class="panel glass chat" aria-labelledby="assistent-heading" hidden>
       <div class="panel-head">
@@ -312,7 +312,7 @@
     <section id="panel-detail" class="panel glass" aria-labelledby="detail-heading">
       <div class="resizer" data-resize="detail" role="separator" tabindex="0" aria-orientation="vertical" aria-controls="panel-detail" aria-label="Breite des Vorgangs ändern (Pfeiltasten)"></div>
       <div class="panel-head">
-        <h2 id="detail-heading" tabindex="-1">Vorgang</h2>
+        <h2 id="detail-heading" tabindex="-1">Los geht's</h2>
         <button type="button" class="icon-btn" data-close="panel-detail" aria-label="Detail einklappen">›</button>
       </div>
       <div class="panel-body detail" id="detail"></div>
@@ -363,6 +363,7 @@
         <li>Mit der Zeitleiste grenzen Sie den Zeitraum ein. Alle Flächen lassen sich über die Leiste oben ein- und ausklappen; Liste und Vorgang lassen sich am Rand breiter ziehen.</li>
         <li>Über das Suchfeld oben finden Sie Vorlagen in ganz Bonn, auch nach Thema und Partei.</li>
       </ol>
+      <p><button type="button" class="btn btn-soft" data-tour>Tour durch alle Funktionen starten</button></p>
 
       <h3>Was bedeutet der Stand?</h3>
       <dl>
@@ -398,6 +399,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js" integrity="sha512-TiMWaqipFi2Vqt4ugRzsF8oRoGFlFFuqIi30FFxEPNw58Ov9mOy6LgC05ysfkxwLE0xVeZtmr92wVg9siAFRWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="timeline.js"></script>
   <script src="app.js"></script>
+  <script src="tour.js"></script>
   <script type="module" src="chat/ui.js"></script>
 </body>
 </html>
