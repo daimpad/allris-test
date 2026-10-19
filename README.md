@@ -123,7 +123,7 @@ Leaflet 1.9.4 (BSD-2-Clause) und Leaflet.markercluster 1.5.3 (MIT) liegen in `si
 
 ## Impressum und Kontakt
 
-Erstellt von Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“. Impressum: https://datenatlas.de/impressum · Datenschutz: https://datenatlas.de/datenschutz
+Erstellt von Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“. Impressum: https://nozilla.de/impressum/ · Datenschutz: `datenschutz.html` (eigene Seite)
 
 ## Aufbau des Repositorys
 

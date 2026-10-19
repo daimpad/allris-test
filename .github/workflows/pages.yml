@@ -109,7 +109,7 @@ jobs:
           cp -r _site/. _deploy/
           rm -f _deploy/data/export/allris-bonn-export.zip
           cp deploy/htaccess _deploy/.htaccess
-          sed -i 's|href="data/export/allris-bonn-export.zip"|href="https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip"|' _deploy/index.html
+          sed -i 's|href="data/export/allris-bonn-export.zip"|href="https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip"|' _deploy/index.html _deploy/datenschutz.html
           cd _deploy
           git add -A
           if git diff --cached --quiet; then echo "Seite unverändert"; exit 0; fi

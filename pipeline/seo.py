@@ -10,7 +10,8 @@ from xml.sax.saxutils import escape
 from . import config
 
 DEFAULT_URL = "https://daimpad.github.io/allris-test/"  # Platzhalter in site/, wird durch SITE_URL ersetzt
-PAGES = ("index.html", "404.html")
+PAGES = ("index.html", "404.html", "datenschutz.html")
+SITEMAP = ("", "datenschutz.html")  # Pfade relativ zu SITE_URL
 
 
 def robots(site_url):
@@ -18,10 +19,11 @@ def robots(site_url):
 
 
 def sitemap(site_url):
+    urls = "".join(f"  <url><loc>{escape(site_url + path)}</loc>{'' if path else '<changefreq>daily</changefreq>'}</url>\n"
+                   for path in SITEMAP)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            f"  <url><loc>{escape(site_url)}</loc><changefreq>daily</changefreq></url>\n"
-            "</urlset>\n")
+            f"{urls}</urlset>\n")
 
 
 def write(site=Path("_site"), site_url=None):

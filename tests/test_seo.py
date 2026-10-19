@@ -78,7 +78,7 @@ class Auffindbarkeit(unittest.TestCase):
             robots = (site / "robots.txt").read_text(encoding="utf-8")
             self.assertIn("Sitemap: https://ris-bonn.example/sitemap.xml", robots)
             urls = [e.text for e in ET.parse(site / "sitemap.xml").getroot().iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
-            self.assertEqual(urls, ["https://ris-bonn.example/"])
+            self.assertEqual(urls, ["https://ris-bonn.example/", "https://ris-bonn.example/datenschutz.html"])
             self.assertIsNone(re.search(r"lastmod", (site / "sitemap.xml").read_text(encoding="utf-8")))
 
 
