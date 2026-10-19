@@ -78,6 +78,14 @@ class Modell:
         for vid, steps in self.extra["zusaetzliche_schritte"].items():
             self.verfahren[vid]["schritte"] = self.verfahren[vid]["schritte"] + [dict(s, eigen=True) for s in steps]
         self.ohne_soll = self.extra["ohne_soll"]
+        # Einflussregeln (Mitwirkung) in der Anrede der Seite; der alte Wortlaut wird geprüft wie bei den Korrekturen
+        self.regeln = copy.deepcopy(self.quelle["einfluss_regeln"])
+        by_id = {r["id"]: r for r in self.regeln}
+        for a in self.extra["anrede"]["regeln"]:
+            r = by_id[a["id"]]
+            if r["was"] != a["alt"]:
+                raise ValueError(f"Umformulierung passt nicht zur Quelle: {a['id']}")
+            r["was"], r["umformuliert"] = a["neu"], True
 
     def _korrigiere(self, k):
         if k["datei"] == "zustaendigkeitsordnung.json":
@@ -205,6 +213,13 @@ def site_data(modell=None):
         "zustaendigkeit": [dict(z, links=rechtsgrundlagen(z.get("beleg"))) for z in m.quelle["zustaendigkeit"]],
         "zusto": zusto,
         "ohne_soll": m.ohne_soll,
+        # Mitwirkung: Regeln werden im Browser ausgewertet (site/mitwirken.js), weil Fristen vom Tag abhängen
+        "mitwirken": [{k: v for k, v in {"id": r["id"], "wenn": r["wenn"], "was": r["was"], "frist": r["frist"],
+                                         "bezug": r.get("bezug"), "tage": r.get("tage", 0), "beleg": r.get("beleg"),
+                                         "links": rechtsgrundlagen(r.get("beleg")), "note": r.get("note")}.items()
+                       if v is not None} for r in m.regeln],
+        "buergerantrag_ziel": {"bezirk": "Bezirksvertretung {bezirk}",
+                               "stadt": "Ausschuss für Beteiligung der Bürgerinnen und Bürger"},
     }
 
 

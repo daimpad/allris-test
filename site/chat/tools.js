@@ -7,6 +7,7 @@
 // keine Namen natürlicher Personen (pipeline/actors.py). In Titeln von Vorlagen aus der Einwohnerschaft
 // (Bürgeranträge, Anregungen und Beschwerden, Einwohnerfragen) werden Hausnummern ausgelassen.
 
+import { mitwirken } from "../mitwirken.js";
 export const PAGE = 10;
 export const MAX_CHARS = 12000;
 const TITLE_MAX = 180;
@@ -201,6 +202,17 @@ export function createTools({ load, today = berlinToday() } = {}) {
         return x;
       });
     } else if (!s.verfahren) o.hinweis = d?.ohne_soll[p.paper_type] ?? "Kein Soll angenommen.";
+    if (d?.mitwirken) {
+      let z = null;
+      try { z = await get("bonn/zeit.json"); } catch (e) { z = null; }
+      const m = mitwirken(p, d, z ? z.meetings : [], today);
+      if (m.regeln.length) {
+        o.mitwirken = m.regeln.map((r) => ({ hinweis: r.text, frist: r.frist, ...(r.verstrichen ? { frist_verstrichen: true } : {}),
+          rechtsgrundlage: r.beleg, ...(r.sitzung?.web ? { tagesordnung: r.sitzung.web } : {}) }));
+        o.mitwirken_einordnung = { status: m.kontext.status, abschluss: m.kontext.abschluss, ebene: m.kontext.ebene,
+          naechster_termin: m.kontext.termin, herkunft: "abgeleitet aus Stand, Beratungen und Sitzungskalender" };
+      }
+    }
     if (d) o.quelle = `${d.meta.quelle}. ${d.meta.hinweis}`;
     return { soll_nach_regelwerk: o };
   }

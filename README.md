@@ -12,7 +12,7 @@ Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – 
 - **Wer?** Das federführende Amt, die beratenden Gremien und die Einreichenden, soweit erkennbar; dazu Filter nach zehn Themen und nach Partei bzw. Fraktion.
 - **Bebauungspläne:** Die Geltungsbereiche der rechtskräftigen Pläne lassen sich einblenden. Die Planchronik zeigt je Plan die Verfahrensschritte nach dem Baugesetzbuch und die Vorlagen dazu.
 - **Baustellen:** Gemeldete Baustellen der Stadt mit unverbindlichen Terminen, auf der Karte und in der Zeitleiste.
-- **Mitmachen:** Sitzungstermine mit Tagesordnung, Kalenderdatei, Feeds je Gebiet und je Vorgang, Hinweise zum Bürgerantrag nach § 24 GO NRW. „Verortung falsch?“ meldet einen Fehler.
+- **Mitmachen:** Sitzungstermine mit Tagesordnung, Kalenderdatei, Feeds je Gebiet und je Vorgang. Unter „Selbst mitwirken“ nennt jeder Vorgang die Wege, die das Regelwerk in seinem Stand vorsieht, mit Frist und Rechtsgrundlage: Sitzung besuchen, Einwohnerfrage, Fraktionen oder Bezirksverordnete ansprechen, eigener Bürgerantrag nach § 24 GO NRW mit zuständigem Gremium und nächster erreichbarer Sitzung. „Verortung falsch?“ meldet einen Fehler.
 - **Ratsassistent:** Ein Sprachmodell beantwortet Fragen ausschließlich mit den Daten dieser Seite. Man braucht dafür einen eigenen Schlüssel eines Anbieters; der Browser spricht den Anbieter direkt an.
 - **Einstieg:** Das Fenster „Los geht's“ und eine Tour in 14 Schritten erklären alle Funktionen.
 
