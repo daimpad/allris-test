@@ -35,6 +35,17 @@ class Modell(unittest.TestCase):
         self.assertEqual(self.m.bahnen("mitteilung"), {"rat", "aus", "bv"})
         self.assertEqual(self.m.bahnen("unbekannt"), set())
 
+    def test_anrede_der_regeln(self):
+        self.assertEqual(len(self.m.regeln), 14)
+        for r in self.m.regeln:
+            self.assertNotRegex(r["was"], r"\b(du|dein|deine|dir|dich)\b", r["id"])
+        self.assertTrue(next(r for r in self.m.regeln if r["id"] == "einwohnerfrage")["umformuliert"])
+        raw = json.loads((soll.SOLL / "verfahren.json").read_text(encoding="utf-8"))
+        self.assertTrue(next(r for r in raw["einfluss_regeln"] if r["id"] == "einwohnerfrage")["was"].startswith("Stell selbst"))
+        d = soll.site_data(self.m)
+        self.assertEqual([r["id"] for r in d["mitwirken"]], [r["id"] for r in raw["einfluss_regeln"]])
+        self.assertTrue(next(r for r in d["mitwirken"] if r["id"] == "sitzung-besuchen")["links"])
+
     def test_korrektur_passt_nicht_zur_quelle(self):
         with tempfile.TemporaryDirectory() as tmp:
             base = Path(tmp)
@@ -42,6 +53,11 @@ class Modell(unittest.TestCase):
                 shutil.copy(f, base / f.name)
             extra = json.loads((base / "ergaenzungen.json").read_text(encoding="utf-8"))
             extra["korrekturen"][0]["alt"] = True
+            (base / "ergaenzungen.json").write_text(json.dumps(extra), encoding="utf-8")
+            with self.assertRaises(ValueError):
+                soll.Modell(base)
+            extra["korrekturen"][0]["alt"] = False
+            extra["anrede"]["regeln"][0]["alt"] = "anderer Wortlaut"
             (base / "ergaenzungen.json").write_text(json.dumps(extra), encoding="utf-8")
             with self.assertRaises(ValueError):
                 soll.Modell(base)

@@ -32,6 +32,33 @@
    "alt": "Finanzausschuss berät vor dem Rat", "neu": "Unterausschuss des Hauptausschusses Finanzen und Beteiligungsmanagement berät vor dem Rat",
    "beleg": "GeschO § 22 Abs. 8"}
  ],
+ "anrede": {
+  "hinweis": "Die Seite spricht mit „Sie“ an; die Einflussregeln des Modells (einfluss_regeln) duzen. Umformuliert ist nur die Anrede, der Inhalt bleibt.",
+  "regeln": [
+   {"id": "sitzung-besuchen", "alt": "Besuch die Sitzung: {gremium} am {datum}. Sie ist öffentlich, außer bei Grundstücks-, Personal-, Darlehens-, Vertrags- und Vergabesachen.",
+   "neu": "Besuchen Sie die Sitzung: {gremium} am {datum}. Sie ist öffentlich, außer bei Grundstücks-, Personal-, Darlehens-, Vertrags- und Vergabesachen."},
+   {"id": "buergerantrag-erlaeutern", "alt": "Hast du den Antrag gestellt? Im Bürgerausschuss darfst du ihn selbst erläutern; andere Gremien können dir das per Beschluss erlauben. Das Ergebnis wird dir mitgeteilt.",
+   "neu": "Haben Sie den Antrag gestellt? Im Bürgerausschuss dürfen Sie ihn selbst erläutern; andere Gremien können Ihnen das per Beschluss erlauben. Das Ergebnis wird Ihnen mitgeteilt."},
+   {"id": "einwohnerfrage", "alt": "Stell selbst eine Frage in der Einwohnerfragestunde: {gremium}. Höchstens zwei Fragen pro Person, die Antwort kommt schriftlich.",
+   "neu": "Stellen Sie selbst eine Frage in der Einwohnerfragestunde: {gremium}. Höchstens zwei Fragen pro Person, die Antwort kommt schriftlich."},
+   {"id": "ansprechen-bv", "alt": "Sprich vor der Entscheidung Bezirksverordnete an. In der Bezirksvertretung genügt ein Mitglied für einen Antrag; Änderungsanträge sind bis zum Schluss der Aussprache möglich.",
+   "neu": "Sprechen Sie vor der Entscheidung Bezirksverordnete an. In der Bezirksvertretung genügt ein Mitglied für einen Antrag; Änderungsanträge sind bis zum Schluss der Aussprache möglich."},
+   {"id": "ansprechen-rat", "alt": "Sprich vor der Entscheidung Fraktionen oder Gruppen an. Diese können per Änderungsantrag Änderungen beantragen, bis zum Schluss der Aussprache.",
+   "neu": "Sprechen Sie vor der Entscheidung Fraktionen oder Gruppen an. Diese können per Änderungsantrag Änderungen beantragen, bis zum Schluss der Aussprache."},
+   {"id": "eigener-buergerantrag", "alt": "Bring dein Anliegen selbst ein: als Bürgerantrag, schriftlich und mit Namen. Zuständig ist {ziel}; die nächste erreichbare Sitzung ist am {ziel_datum}.",
+   "neu": "Bringen Sie Ihr Anliegen selbst ein: als Bürgerantrag, schriftlich und mit Namen. Zuständig ist {ziel}; die nächste erreichbare Sitzung ist am {ziel_datum}."},
+   {"id": "offenlage", "alt": "Bei Bebauungsplänen kannst du während der Offenlage eine Stellungnahme einreichen; sie wird abgewogen. Wann die Offenlage läuft, steht im Amtsblatt.",
+   "neu": "Bei Bebauungsplänen können Sie während der Offenlage eine Stellungnahme einreichen; sie wird abgewogen. Wann die Offenlage läuft, steht im Amtsblatt."},
+   {"id": "entschieden", "alt": "Die Entscheidung ist gefallen. Die Verwaltung setzt sie um; den Stand hält die Beschlusskontrolle fest, deren Datenbank nicht öffentlich ist. Nach dem Stand fragen kann eine Fraktion per Anfrage; neue Anstöße gibst du per Bürgerantrag.",
+   "neu": "Die Entscheidung ist gefallen. Die Verwaltung setzt sie um; den Stand hält die Beschlusskontrolle fest, deren Datenbank nicht öffentlich ist. Nach dem Stand fragen kann eine Fraktion per Anfrage; neue Anstöße geben Sie per Bürgerantrag."},
+   {"id": "abgelehnt", "alt": "Der Antrag ist abgelehnt. Fraktionen können das Thema als eigenen Antrag aufgreifen; du selbst kannst einen Bürgerantrag stellen.",
+   "neu": "Der Antrag ist abgelehnt. Fraktionen können das Thema als eigenen Antrag aufgreifen; Sie selbst können einen Bürgerantrag stellen."},
+   {"id": "erledigt", "alt": "Der Vorgang ist ohne eigenen Beschluss erledigt. Eigene Fragen stellst du in der Einwohnerfragestunde einer Bezirksvertretung; eine Fraktion kann per Anfrage nachhaken.",
+   "neu": "Der Vorgang ist ohne eigenen Beschluss erledigt. Eigene Fragen stellen Sie in der Einwohnerfragestunde einer Bezirksvertretung; eine Fraktion kann per Anfrage nachhaken."},
+   {"id": "stand-erfragen", "alt": "Wie es um den Vorgang steht, zeigen die Daten nicht. Frag eine Fraktion oder Bezirksverordnete: Sie können per Anfrage bei der Verwaltung nachhaken. Eigene Fragen stellst du in der Einwohnerfragestunde einer Bezirksvertretung.",
+   "neu": "Wie es um den Vorgang steht, zeigen die Daten nicht. Fragen Sie eine Fraktion oder Bezirksverordnete: Sie können per Anfrage bei der Verwaltung nachhaken. Eigene Fragen stellen Sie in der Einwohnerfragestunde einer Bezirksvertretung."}
+  ]
+ },
  "ohne_soll": {
   "Bürgerbrief": "Geschäftsordnung, Hauptsatzung und Satzungen nennen kein Verfahren; kein Soll angenommen."
  }

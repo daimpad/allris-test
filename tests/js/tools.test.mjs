@@ -88,6 +88,9 @@ const SOLL = {
     { id: "b2", label: "Bezirksvertretung entscheidet", was: "Beratung und Beschluss", bahn: "bv", beleg: "BezS § 7" },
     { id: "b3", label: "Anhörung", was: "Anhörung", bahn: "bv", eigen: true, beleg: "BezS § 9" }] } },
   ohne_soll: { "Bürgerbrief": "kein Soll angenommen." },
+  mitwirken: [{ id: "termin-offen", wenn: { status: ["offen", "vertagt"], termin: false }, was: "Ein Sitzungstermin steht noch nicht fest.",
+    frist: "14 Tage vor der Sitzung", tage: 0, beleg: "GeschO § 2 Abs. 2", links: [] }],
+  buergerantrag_ziel: { bezirk: "Bezirksvertretung {bezirk}", stadt: "Ausschuss für Beteiligung der Bürgerinnen und Bürger" },
 };
 const FILES = {
   "glossar.json": GLOSSAR, "bonn/suche.json": SUCHE, "bonn/chat/orte.json": ORTE, "bonn/chat/vorlagen/2610.json": { papers: { 261088: VORLAGE } },
@@ -176,6 +179,8 @@ test("hole_prozesslinie: Soll nach Regelwerk mit Befund und Rechtsgrundlage", as
   assert.deepEqual(s.schritte[0].links, ["https://example.org/gescho"]);
   assert.equal(s.schritte[2].ergaenzung_ris_karte, true);
   assert.match(s.quelle, /keine Rechtsauskunft/);
+  assert.deepEqual(s.mitwirken, [{ hinweis: "Ein Sitzungstermin steht noch nicht fest.", frist: "14 Tage vor der Sitzung", rechtsgrundlage: "GeschO § 2 Abs. 2" }]);
+  assert.equal(s.mitwirken_einordnung.status, "vertagt");
 });
 
 test("suche_ort: Straße, Ortsteil, Umkreis", async () => {
