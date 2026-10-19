@@ -90,9 +90,10 @@ class Modell:
             r["was"], r["umformuliert"] = a["neu"], True
         for b in self.extra.get("regel_bedingungen", {}).get("regeln", []):
             w = by_id[b["id"]]["wenn"]
-            if set(b["wenn"]) & set(w):
-                raise ValueError(f"Bedingung besteht schon in der Quelle: {b['id']}")
-            w.update(b["wenn"])
+            for k, v in b["wenn"].items():
+                if k in w and not k.startswith("nicht_"):
+                    raise ValueError(f"Bedingung besteht schon in der Quelle: {b['id']} {k}")
+                w[k] = w.get(k, []) + [x for x in v if x not in w.get(k, [])]  # Ausschlüsse nur erweitern
             by_id[b["id"]]["bedingung_ergaenzt"] = b["grund"]
 
     def _korrigiere(self, k):

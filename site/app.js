@@ -944,7 +944,7 @@
     const done = p.stand === "entschieden" ? "<li data-generic=\"done\">Das Verfahren ist entschieden. Neue Anliegen zum Thema lassen sich mit einem Bürgerantrag einbringen.</li>" : "";
     return `<section class="participate" aria-labelledby="participate-h"><h4 id="participate-h">Selbst mitwirken</h4><ul>
       ${meeting}${done}
-      <li data-generic="buergerantrag">Mit einem <a href="${BUERGERANTRAG}" target="_blank" rel="noopener">Bürgerantrag nach § 24 GO NRW<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a> bringen Sie Anregungen und Beschwerden selbst ein.</li>
+      ${p.soll?.verfahren === "buergerantrag" ? "" : `<li data-generic="buergerantrag">Mit einem <a href="${BUERGERANTRAG}" target="_blank" rel="noopener">Bürgerantrag nach § 24 GO NRW<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a> bringen Sie Anregungen und Beschwerden selbst ein.</li>`}
       ${hasPaperFeed(p) ? "<li data-generic=\"feed\">Mit dem Feed „Diesen Vorgang abonnieren“ (unten) erfahren Sie von neuen Beratungen und Ergebnissen.</li>" : ""}
     </ul><p class="hint mitwirken-hint" hidden></p></section>`;
   }

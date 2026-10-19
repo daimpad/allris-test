@@ -48,6 +48,9 @@ class Modell(unittest.TestCase):
         # ergänzte Bedingung: Offenlage-Hinweis nur bei offenen Verfahren (Quelle ohne Status-Bedingung)
         self.assertEqual(next(r for r in d["mitwirken"] if r["id"] == "offenlage")["wenn"]["status"], ["offen", "vertagt"])
         self.assertNotIn("status", next(r for r in raw["einfluss_regeln"] if r["id"] == "offenlage")["wenn"])
+        # erweiterter Ausschluss: kein Hinweis auf einen eigenen Bürgerantrag bei Bürgeranträgen
+        w = next(r for r in d["mitwirken"] if r["id"] == "eigener-buergerantrag")["wenn"]["nicht_verfahren"]
+        self.assertEqual(w, ["nichtoeffentlich", "dringlichkeitsentscheidung", "buergerantrag"])
 
     def test_korrektur_passt_nicht_zur_quelle(self):
         with tempfile.TemporaryDirectory() as tmp:
