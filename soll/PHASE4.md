@@ -94,6 +94,7 @@ Die Prüfvermerke stehen in `data/export/soll/stichprobe_soll.tsv` (Spalten `pru
 | Vorgänge | Ergebnis | Folge |
 |---|---|---|
 | 1–6 | bestätigt; bei 200556 Mitwirkung teilweise | Der Hinweis auf die Offenlage erscheint nur noch bei offenen oder vertagten Verfahren (`regel_bedingungen` in `data/soll/ergaenzungen.json`) |
+| 7–12 | bestätigt | 221004: Befund bleibt (Verweisung an den Schulausschuss); 230577: kein Befund richtig (Stand nach Hauptweg) |
 
 ## Noch zu tun (Auftraggeber)
 
