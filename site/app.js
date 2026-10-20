@@ -423,6 +423,22 @@
       },
     });
     new BauToggle().addTo(map);
+    // mobil: die Schaltflächen unten rechts hinter „Kartenoptionen“, damit sie die Karte nicht verdecken
+    const MapMenu = L.Control.extend({
+      options: { position: "bottomright" },
+      onAdd() {
+        const b = L.DomUtil.create("button", "map-style map-menu");
+        b.type = "button";
+        b.textContent = "Kartenoptionen";
+        b.setAttribute("aria-expanded", "false");
+        const set = (open) => { map.getContainer().classList.toggle("map-menu-open", open); b.setAttribute("aria-expanded", String(open)); };
+        b.addEventListener("click", () => set(b.getAttribute("aria-expanded") !== "true"));
+        map.on("click", () => set(false));
+        L.DomEvent.disableClickPropagation(b);
+        return b;
+      },
+    });
+    new MapMenu().addTo(map);
     const Legend = L.Control.extend({
       options: { position: "bottomleft" },
       onAdd() {
@@ -1677,6 +1693,7 @@
     // für die Tour (site/tour.js): Flächen und Menüs öffnen, ein Beispiel zeigen, Lage des Gebiets auf der Karte
     ui: {
       panel(id, open) { if (!toggleFor(id) || !toggleFor(id).hidden) setPanel(id, open); },
+      mapMenu(open) { const b = document.querySelector(".map-menu"); if (b && (b.getAttribute("aria-expanded") === "true") !== open) b.click(); },
       menu(id) { if (id) openMega(id); else closeMega(); },
       // Beispielgebiet der Tour vorab laden, solange die ersten Schritte laufen
       prefetch() { if (area && area.kind === "bonn" && index) fetch(`${BONN}ortsteile/bonn-zentrum.json`).catch(() => {}); },

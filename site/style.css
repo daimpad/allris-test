@@ -430,6 +430,8 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .map-legend li { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
 .map-legend .swatch { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(15, 15, 20, 0.25); flex: none; }
 .map-legend .hint { margin: 6px 0 0; }
+.map-style.map-menu { display: none; }
+.map-style.map-menu[aria-expanded="true"] { background: var(--accent-fill); color: #fff; border-color: transparent; }
 .map-style[aria-pressed="true"] { background: var(--accent-fill); color: #fff; border-color: transparent; }
 
 /* Kartensteuerung und Namensnennung neben den Flächen, nicht darunter */
@@ -651,6 +653,8 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
   body.list-open .leaflet-left, body.chat-open .leaflet-left { left: 0; }
   .step .jump { display: none; }
   .map-style { min-height: 44px; }
+  .map-style.map-menu { display: block; }
+  .leaflet-container:not(.map-menu-open) .leaflet-right .map-style:not(.map-menu) { display: none; }
   .tl-btn, .tl-chip, .icon-btn, .chip { min-width: 44px; min-height: 44px; }
   .bar { grid-template-columns: 1fr 80px 40px; }
   .tour-card { width: calc(100vw - 20px); max-height: 46vh; }
