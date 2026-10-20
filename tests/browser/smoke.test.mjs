@@ -105,6 +105,31 @@ test("Themenebene: Flächen nach Anteil eines Themas, Zustand in der Adresse", a
   await page.close();
 });
 
+test("Suche im Text der Dokumente: erst nach Klick, ohne Textausschnitt", async () => {
+  const page = await open();
+  const suche = await (await fetch(SITE + "data/export/bonn/suche.json")).json();
+  // zwei Vorlagen, deren Titel das Suchwort nicht enthalten, als nachgebildete Treffer von OParl-Lite
+  const word = "zzqxtest", hits = suche.rows.slice(0, 2).map((r) => r[0]);
+  const asked = [];
+  await page.route("https://oparl.bonn.machdenstaat.de/graphql", async (route) => {
+    asked.push(JSON.parse(route.request().postData()));
+    await route.fulfill({ contentType: "application/json", body: JSON.stringify({ data: { fileFullTextSearch: {
+      totalCount: 2, pageInfo: { hasNextPage: false }, items: hits.map((reference) => ({ file: { papers: [{ reference }] } })) } } }) });
+  });
+  await page.locator("#q").fill(word);
+  await page.waitForTimeout(400);
+  assert.equal(asked.length, 0, "keine Anfrage vor dem Klick");
+  await page.locator("#doc-search").click();
+  await page.waitForFunction(() => /erwähnen/.test(document.querySelector("#doc-status").textContent));
+  assert.equal(asked.length, 1);
+  assert.ok(!/snippet/.test(asked[0].query), "kein Textausschnitt angefragt");
+  assert.match(await page.locator("#count").textContent(), /2 nur im Text der Dokumente/);
+  assert.equal(await page.locator("#papers .doc-tag").count(), 2);
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
 test("Prozesse: Verfahren, Gremien und Ämter", async () => {
   for (const tab of ["verfahren", "gremien", "aemter"]) {
     const page = await open(`?prozesse=${tab}&ansicht=liste`);
