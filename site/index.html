@@ -102,6 +102,8 @@
           <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Zeitleiste</span></button>
         <button type="button" class="toggle" data-panel="panel-detail" aria-controls="panel-detail" aria-pressed="true" title="Gewählter Vorgang">
           <svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg><span>Vorgang</span></button>
+        <button type="button" class="toggle" data-panel="panel-prozesse" aria-controls="panel-prozesse" aria-pressed="false" title="Verfahren und Gremien: wer entscheidet was?">
+          <svg class="icon" aria-hidden="true"><use href="#i-route"/></svg><span>Prozesse</span></button>
         <button type="button" class="toggle toggle-ai" data-panel="panel-assistent" aria-controls="panel-assistent" aria-pressed="false" title="Ratsassistent (KI)">
           <svg class="icon" aria-hidden="true"><use href="#i-assist"/></svg><span>Assistent</span></button>
       </div>
@@ -365,6 +367,24 @@
       </div>
       <div class="panel-body" id="stats" role="tabpanel" aria-labelledby="tab-stats"></div>
       <div class="panel-body" id="wege" role="tabpanel" aria-labelledby="tab-wege" hidden></div>
+    </section>
+
+    <section id="panel-prozesse" class="glass overlay overlay-wide" aria-labelledby="prozesse-heading" hidden>
+      <div class="panel-head">
+        <h2 id="prozesse-heading" tabindex="-1">Prozesse: Wer entscheidet was?</h2>
+        <button type="button" class="icon-btn" data-close="panel-prozesse" aria-label="Prozesse schließen"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="pz-bar">
+        <div class="tabs" role="tablist" aria-label="Prozesse">
+          <button type="button" role="tab" id="tab-pz-verfahren" data-tab="verfahren" aria-controls="pz-body" aria-selected="true"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>Verfahren</button>
+          <button type="button" role="tab" id="tab-pz-gremien" data-tab="gremien" aria-controls="pz-body" aria-selected="false" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg>Gremien</button>
+        </div>
+        <div class="seg pz-view" role="radiogroup" aria-label="Darstellung">
+          <button type="button" role="radio" data-view="schaubild" aria-checked="true">Schaubild</button>
+          <button type="button" role="radio" data-view="liste" aria-checked="false">Liste</button>
+        </div>
+      </div>
+      <div class="panel-body" id="pz-body" role="tabpanel" aria-labelledby="tab-pz-verfahren"><p class="hint">Lädt …</p></div>
     </section>
 
     <section id="panel-termine" class="glass overlay" aria-labelledby="termine-heading" hidden>
