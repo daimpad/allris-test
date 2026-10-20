@@ -1,4 +1,5 @@
 """Normalisierung der Rohdaten in eine SQLite-Datenbank (data/build/allris.sqlite)."""
+import csv
 import json
 import sqlite3
 
@@ -88,6 +89,8 @@ def build():
         "geo-bonn": stand.get("geo", "2026-10-17"),
         "bplan-bonn": stand.get("bplan") or (json.loads(config.BPLAN.read_text())["meta"].get("retrieved_at")
                                              if config.BPLAN.exists() else None),
+        "hnr-bonn": stand.get("hausnummern") or (json.loads(config.HAUSNUMMERN.read_text())["meta"].get("retrieved_at")
+                                                 if config.HAUSNUMMERN.exists() else None),
     }
     db.executemany("INSERT INTO source VALUES (?,?,?,?)",
                    [(k, v["url"], v["license"], retrieved[k]) for k, v in config.SOURCES.items()])
@@ -199,9 +202,12 @@ def _stage_b(papers, bv_bezirke, locations):
     gaz = Gazetteer(street_points=points)
     if not gaz.streets:
         print(f"Hinweis: {config.OSM_STREETS} fehlt oder ist leer – Stufe B ohne Straßen.")
-    out = []
+    out, hnr = [], {}
     for p in papers:
         for r in gaz.locate(p.get("name"), bv_bezirke.get(p["id"], ())):
+            if "hnr_vorher" in r:
+                hnr.setdefault((p["reference"], r["name"]), (r["hnr_vorher"], r.get("hnr_ohne_lage") or r["ortsteil"],
+                                                              "hnr_ohne_lage" not in r))
             if r["level"] == "strasse":
                 loc_id, source = f"strasse:{r['name']}|{r['ortsteil']}", r["source"]
             else:
@@ -212,7 +218,26 @@ def _stage_b(papers, bv_bezirke, locations):
                                  r["level"], source)
             out.append((p["id"], loc_id, "B", r["method"], r["confidence"], r["evidence"], p["id"]))
     print(f"Stufe B: {len({r[0] for r in out})} Vorlagen, {len(out)} Ortsbezüge")
+    _hnr_audit(hnr)
     return out
+
+
+def _hnr_audit(hnr):
+    """Wirkung der Regel „strasse+hausnummer“ je Vorlage und Straße (ohne die Hausnummer selbst)."""
+    def wirkung(before, after, used):
+        if not used:
+            return "ohne Wirkung: Abschnitt im Ortsteil fehlt im Straßenverzeichnis"
+        return "bestätigt" if before == [after] else "eindeutig" if after in before else "geändert"
+    rows = sorted((ref, street, "; ".join(before), after, wirkung(before, after, used))
+                  for (ref, street), (before, after, used) in hnr.items())
+    with open(config.EXPORT / "audit_hausnummern.tsv", "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
+        w.writerow(["drucksache", "strasse", "ortsteile_ohne_hausnummer", "ortsteil_der_hausnummer", "wirkung"])
+        w.writerows(rows)
+    counts = {}
+    for r in rows:
+        counts[r[4]] = counts.get(r[4], 0) + 1
+    print(f"Hausnummern: {len(rows)} Nennungen", counts)
 
 
 def _inherited(papers, papers_by_id, own_rows):

@@ -186,6 +186,33 @@ def fetch_plans():
     print(f"{len(features)} Bebauungspläne → {config.BPLAN}")
 
 
+def fetch_housenumbers():
+    """Hausnummern georeferenziert (Stadt Bonn, CC0), reduziert auf Straße → Ortsteil → Nummern ohne Zusatz.
+    Der Ortsteil wird per Point-in-Polygon aus den Ortsteilflächen bestimmt (die Angabe im Datensatz fehlt bei
+    einigen Adressen oder weicht ab). Koordinaten einzelner Adressen werden nicht gespeichert."""
+    from .geo import Ortsteile
+    data = get_json(config.HAUSNUMMERN_URL)
+    ots = Ortsteile()
+    out, n = {}, 0
+    for f in data["features"]:
+        p, g = f["properties"], f.get("geometry")
+        street, nr = (p.get("stassen_langname") or "").strip(), (p.get("hnr_ohne_zusatz") or "").strip()
+        ot = ots.locate(*g["coordinates"][:2]) if g and street and nr else None
+        if ot:
+            out.setdefault(street, {}).setdefault(ot["ortsteil_bez"], set()).add(nr)
+            n += 1
+    key = lambda x: (int(x) if x.isdigit() else 10**6, x)
+    config.HAUSNUMMERN.write_text(json.dumps({
+        "meta": {"source": config.HAUSNUMMERN_URL, "license": config.SOURCES["hnr-bonn"]["license"],
+                 "retrieved_at": _now(), "adressen": n,
+                 "note": "Straße → Ortsteil → Hausnummern ohne Zusatz; Ortsteil per Point-in-Polygon (Ortsteilflächen "
+                         "der Stadt Bonn); ohne Koordinaten einzelner Adressen"},
+        "strassen": {s: {o: sorted(v, key=key) for o, v in sorted(d.items())} for s, d in sorted(out.items())}},
+        ensure_ascii=False, separators=(",", ":")) + "\n")
+    _stamp("hausnummern")
+    print(f"{n} Adressen in {len(out)} Straßen → {config.HAUSNUMMERN}")
+
+
 def _plan_changes(features):
     """Änderungsprotokoll der Bebauungspläne (der Datensatz hat keine Historie): neue Pläne, entfallene Pläne
     (Kandidaten für Aufhebung) und geänderte Daten des Inkrafttretens, je Abruf an PLAN_LOG angehängt."""
@@ -218,4 +245,5 @@ def fetch_all():
     fetch_consultations_lite()
     fetch_meetings()
     fetch_plans()
+    fetch_housenumbers()
     fetch_streets()

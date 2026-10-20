@@ -20,7 +20,9 @@ class GeocodeTest(unittest.TestCase):
             way("Kapellenstraße", m.x, m.y + 0.001),
             {"name": "Querweg", "highway": "residential",
              "coords": [[e.x, e.y + 0.0005], [e.x, e.y + 0.0015]]},  # kreuzt die Kapellenstraße in Endenich
-        ], street_points=[("Am Burggraben", e.x, e.y)])
+        ], street_points=[("Am Burggraben", e.x, e.y)],
+            housenumbers={"Kapellenstraße": {"Mehlem": ["5", "9"], "Endenich": ["7", "9"], "Beuel-Mitte": ["11"]},
+                          "Endenicher Straße": {"Endenich": ["2", "2025"]}})
 
     def names(self, title, bv=()):
         return [(r["level"], r["name"], r["ortsteil"], r["method"], r["confidence"])
@@ -46,6 +48,29 @@ class GeocodeTest(unittest.TestCase):
         self.assertIn(("strasse", "Kapellenstraße", "Endenich", "strasse+kreuzung", "mittel"),
                       self.names("Ampel Kapellenstraße / Querweg"))
         self.assertNotIn("Mehlem", {r[2] for r in self.names("Ampel Kapellenstraße / Querweg")})
+
+    def test_housenumber_decides_ortsteil(self):
+        self.assertEqual(self.names("Anregung zur Kapellenstraße 5"),
+                         [("strasse", "Kapellenstraße", "Mehlem", "strasse+hausnummer", "mittel")])
+        self.assertEqual(self.names("Kapellenstraße 7a, Parkplätze")[0][2:4], ("Endenich", "strasse+hausnummer"))
+        # Vorrang vor dem genannten Ortsteil derselben Straße (meist die Gemarkung); kein zusätzlicher Ortsbezug
+        self.assertEqual([r[:3] for r in self.names("Grundstück in Bonn-Endenich, Kapellenstraße Nr. 5")],
+                         [("strasse", "Kapellenstraße", "Mehlem")])
+        # ein anderer genannter Ortsteil bleibt erhalten
+        self.assertIn(("ortsteil", "Beuel-Mitte", "Beuel-Mitte"),
+                      [r[:3] for r in self.names("Kapellenstraße 5 und Beuel-Mitte")])
+        row = self.gaz.locate("Kapellenstraße 5")[0]
+        self.assertEqual((row["hnr_vorher"], row["evidence"]), (["Endenich", "Mehlem"], "Kapellenstraße"))
+
+    def test_housenumber_without_effect(self):
+        # Nummer in zwei Ortsteilen, Jahreszahl, Aufzählung nach Punkt: bisherige Regeln
+        self.assertEqual({r[3] for r in self.names("Kapellenstraße 9")}, {"strasse_mehrdeutig"})
+        self.assertEqual(self.names("Endenicher Straße 2025 – Sanierung")[0][3], "strasse")
+        self.assertEqual(self.names("Endenicher Str. 2. Bauabschnitt")[0][3], "strasse")
+        # Ortsteil der Hausnummer ohne Abschnitt im Straßenverzeichnis: ohne Wirkung, im Audit vermerkt
+        rows = self.gaz.locate("Kapellenstraße 11")
+        self.assertEqual({r["method"] for r in rows}, {"strasse_mehrdeutig"})
+        self.assertEqual(rows[0]["hnr_ohne_lage"], "Beuel-Mitte")
 
     def test_ortsteil_with_city_prefix_and_adjective(self):
         self.assertEqual(self.names("Spielplatz in Bonn-Endenich")[0][:2], ("ortsteil", "Endenich"))

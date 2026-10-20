@@ -120,6 +120,8 @@ Inhalt
 - verifikation_oparl.tsv, verifikation_zeit.tsv: Abgleich von Stichproben mit der OParl-API
 - prozess/: Bericht zur Exploration der Prozessebene und Stichprobe Endenich
 - strassen_bonn.json: Straßenverzeichnis (OSM) mit Ortsteilen je Straße
+- geo/hausnummern_bonn.json: Hausnummern je Straße und Ortsteil (Stadt Bonn, CC0, ohne Koordinaten);
+  audit_hausnummern.tsv: Wirkung der Regel „strasse+hausnummer“ je Vorlage und Straße
 - LICENSE-DATA.md: Quellen und Lizenzen je Datei
 
 Bebauungspläne
@@ -184,7 +186,7 @@ def package(target=None, archive=None):
         for path in sorted((config.ROOT / "data" / "soll").glob("*")):
             z.write(path, "allris-bonn/soll/" + path.name)
         # Bebauungspläne und Baustellen: Flächen, Protokolle, Berichte
-        for name in ("bebauungsplaene_bonn.geojson", "bebauungsplaene_protokoll.tsv"):
+        for name in ("bebauungsplaene_bonn.geojson", "bebauungsplaene_protokoll.tsv", "hausnummern_bonn.json"):
             if (config.GEO / name).exists():
                 z.write(config.GEO / name, "allris-bonn/geo/" + name)
         for name in ("protokoll.tsv", "STAND.json"):

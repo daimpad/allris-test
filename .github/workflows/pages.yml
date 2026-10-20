@@ -73,6 +73,15 @@ jobs:
         timeout-minutes: 25
         continue-on-error: true
 
+      # Hausnummern ändern sich selten; sonst gilt der Stand im Repository
+      - name: Abruf Hausnummern (Stadt Bonn; montags und auf Knopfdruck)
+        if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%u)" = "1" ]; then
+            python -m pipeline fetch-housenumbers
+          fi
+        continue-on-error: true
+
       - name: Abruf OParl-Lite (Sitzungen, Tagesordnungspunkte)
         run: python -m pipeline fetch-lite
         continue-on-error: true
