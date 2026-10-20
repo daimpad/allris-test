@@ -1297,6 +1297,16 @@
           focusPanel("panel-list");
           return true;
         },
+        filterAmt(name) {
+          const sel = $("#f-amt");
+          if (![...sel.options].some((o) => o.value === name)) return false;
+          sel.value = name;
+          sel.dispatchEvent(new Event("input", { bubbles: true }));
+          setPanel("panel-prozesse", false);
+          setPanel("panel-list", true);
+          focusPanel("panel-list");
+          return true;
+        },
       });
       return m;
     });
@@ -1321,6 +1331,7 @@
     state.ansicht = pz && pz.view === "liste" ? "liste" : "";
     state.verfahren = pz && pz.tab === "verfahren" && pz.verfahren ? pz.verfahren : "";
     state.gremium = pz && pz.tab === "gremien" && pz.gremium ? pz.gremium : "";
+    state.amt = pz && pz.tab === "aemter" && pz.amt ? pz.amt : "";
     for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
     history.replaceState(null, "", url);
@@ -1414,10 +1425,10 @@
     else if (params.get("plan")) await showPlan(params.get("plan"));
     else if (params.get("baustelle") && bau && bau.baustellen.some((b) => b.id === params.get("baustelle"))) showSite(params.get("baustelle"));
     else showIntro();
-    if (["verfahren", "gremien"].includes(params.get("prozesse"))) {
+    if (["verfahren", "gremien", "aemter"].includes(params.get("prozesse"))) {
       setPanel("panel-prozesse", true);
       await openProzesse({ tab: params.get("prozesse"), view: params.get("ansicht") === "liste" ? "liste" : "schaubild",
-        verfahren: params.get("verfahren"), gremium: params.get("gremium") });
+        verfahren: params.get("verfahren"), gremium: params.get("gremium"), amt: params.get("amt") });
     }
     syncUrl();
   }

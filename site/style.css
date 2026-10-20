@@ -361,12 +361,14 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .pz-filterbar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: end; margin: 8px 0; }
 .pz-filterbar label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 500; }
 .pz-filterbar label.check { flex-direction: row; align-items: center; gap: 6px; font-weight: 400; }
+.pz-note { margin: 6px 0; padding: 8px 12px; border-left: 3px solid var(--accent-soft); background: rgba(124, 58, 237, 0.05); border-radius: 0 8px 8px 0; }
 .pz-detail { margin-top: 12px; border-top: 1px solid var(--border-alt); padding-top: 4px; }
 .org { display: flex; flex-direction: column; gap: 14px; margin: 8px 0; }
 .org-top { display: flex; justify-content: center; position: relative; padding-bottom: 14px; }
 .org-top::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 2px; height: 14px; background: var(--accent-soft); }
 .org-cols { display: grid; grid-template-columns: 3fr 1fr; gap: 14px; border-top: 2px solid var(--accent-soft); padding-top: 12px; }
 .org-col, .org-beirat { min-width: 0; }
+.org-beirat + .org-beirat { margin-top: 12px; }
 .org-h { font-size: 13px; font-weight: 600; color: var(--text-muted); margin: 0 0 8px; }
 .org-haupt { margin-bottom: 8px; }
 .org-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
