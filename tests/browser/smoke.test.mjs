@@ -90,6 +90,21 @@ test("Link mit Gebiet: Liste, Vorgang mit Prozesslinie, ohne Verstöße", async 
   await page.close();
 });
 
+test("Themenebene: Flächen nach Anteil eines Themas, Zustand in der Adresse", async () => {
+  const page = await open();
+  await page.locator("#nav-metric").selectOption("verkehr");
+  assert.match(page.url(), /flaechen=verkehr/);
+  assert.match(await page.locator(".nav-legend summary").textContent(), /Verkehr/);
+  // alte Beschriftungen blendet Leaflet 200 ms lang aus, bevor sie entfernt werden
+  await page.waitForFunction(() => [...document.querySelectorAll(".nav-label-bz")].every((e) => /%$/.test(e.textContent)));
+  assert.equal(await page.locator(".nav-label-bz").count(), 4);
+  assert.deepEqual(await axe(page), []);
+  await page.goto(SITE + "?flaechen=umwelt", { waitUntil: "networkidle" });
+  await page.waitForFunction(() => document.querySelector("#nav-metric")?.value === "umwelt");
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
 test("Prozesse: Verfahren, Gremien und Ämter", async () => {
   for (const tab of ["verfahren", "gremien", "aemter"]) {
     const page = await open(`?prozesse=${tab}&ansicht=liste`);
