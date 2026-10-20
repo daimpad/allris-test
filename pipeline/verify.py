@@ -147,7 +147,8 @@ Soll-Modell der Prozessebene
   Ergänzungen und Korrekturen (ergaenzungen.json) und Quelle (QUELLE.md)
 - audit_soll.tsv: Verfahren je Vorgang (Stammnummer), Sicherheit, Grund, beratende Gremien Ist und Soll, Passung
 - bonn/prozessarten.json: Reiter „Prozesse“: Zahl der Vorgänge und Beispiele je Verfahren (Zuordnung abgeleitet),
-  Gremien mit Art, Beratungen, letzter und nächster Sitzung und Abschnitt der Zuständigkeitsordnung
+  Gremien mit Art, Beratungen, letzter und nächster Sitzung und Abschnitt der Zuständigkeitsordnung; Ämter mit
+  Abteilungen, federführenden Vorlagen und beratenden Gremien (Gruppen nach Amtsnummer abgeleitet)
 - bonn/soll.json: Verfahren mit Schritten und Rechtsgrundlagen, Fristen, Zuständigkeit für die Seite; je Vorlage
   das Feld soll (Zuordnung abgeleitet; Abweichungen sind Befunde, keine Bewertung; keine Rechtsauskunft)
 - soll/stichprobe_soll.tsv: Stichprobe (30 Vorgänge) zur Prüfung von Hand (Zuordnung, Befund, Mitwirkung;

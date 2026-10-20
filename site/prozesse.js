@@ -1,7 +1,8 @@
-// Reiter „Prozesse“: Verfahrensarten (Soll-Modell, soll.json) und Gremien (prozessarten.json) als Schaubild oder Liste.
+// Reiter „Prozesse“: Verfahrensarten (Soll-Modell, soll.json), Gremien und Ämter (prozessarten.json) als Schaubild oder Liste.
 // Verfahren und Zuständigkeitsordnung stammen aus „Bonn entscheidet“ (anster2025, MIT) mit Ergänzungen der RIS-Karte;
 // Zahlen je Verfahren beruhen auf der abgeleiteten Zuordnung (pipeline/soll.py), Gremien und Sitzungen auf der
-// OParl-API der Stadt Bonn (CC0). Wird von app.js erst beim Öffnen des Reiters geladen.
+// OParl-API der Stadt Bonn (CC0); Ämter und Federführung aus `underDirectionOf`, gruppiert nach der Amtsnummer
+// (abgeleitet, die Quelle nennt keine Dezernate). Wird von app.js erst beim Öffnen des Reiters geladen.
 import { deDate } from "./mitwirken.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -18,7 +19,9 @@ const WEGE = { "sitzung-besuchen": "Sitzung besuchen", livestream: "Ratssitzung 
   "ansprechen-bv": "Bezirksverordnete ansprechen", "ansprechen-rat": "Fraktionen oder Gruppen ansprechen",
   "eigener-buergerantrag": "Eigenen Bürgerantrag einbringen", offenlage: "Stellungnahme in der Offenlage abgeben" };
 
-let ctx, soll, data, root, state = { tab: "verfahren", view: "schaubild", verfahren: null, gremium: null, frueher: false, q: "" };
+const TABS = ["verfahren", "gremien", "aemter"];
+
+let ctx, soll, data, root, state = { tab: "verfahren", view: "schaubild", verfahren: null, gremium: null, amt: null, frueher: false, q: "" };
 
 const links = (ls) => (ls || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ");
 const beleg = (x) => (x.links && x.links.length ? links(x.links) : x.beleg ? esc(x.beleg) : "");
@@ -168,6 +171,56 @@ function renderGremien() {
     <div id="pz-detail" class="pz-detail" aria-live="polite">${sel ? `<h3 class="pz-h" tabindex="-1">${esc(sel.name)}</h3>${gremiumBody(sel)}` : `<p class="hint">Wählen Sie ein Gremium, um seine Zuständigkeit und Sitzungen zu sehen.</p>`}</div>`;
 }
 
+// --- Ämter ------------------------------------------------------------------------------------------
+const gruppe = (id) => ((data.amt_gruppen || []).find((g) => g.id === id) || {}).label || id;
+const amtMeta = (a) => [`${num(a.vorlagen)} Vorlagen`, a.aufgeloest ? `aufgelöst ${deDate(a.aufgeloest)}` : ""].filter(Boolean).join(" · ");
+const amtId = (name) => ((data.aemter || []).find((a) => a.name === name) || {}).id;
+const short = (t) => (t.length > 70 ? t.slice(0, 68) + "…" : t);
+function amtBody(a) {
+  const ab = a.abteilungen || [];
+  const gremien = (a.gremien || []).filter((g) => (data.gremien || []).some((x) => x.id === g.id));
+  const fach = (a.fachlich_aemter || []).filter((f) => amtId(f.name));
+  return `<p><span class="pz-art">${esc(gruppe(a.gruppe))}</span>${a.aktuell ? "" : ' <span class="derived">nicht mehr aktiv</span>'}</p>
+    ${a.hinweis ? `<p class="pz-note">${esc(a.hinweis)}</p>` : ""}
+    <ul class="pz-facts">
+      <li>Federführend bei ${num(a.vorlagen)} Vorlagen seit Oktober 2019${a.letzte ? `, zuletzt am ${deDate(a.letzte)}` : ""}</li>
+      ${a.politik ? `<li>davon ${num(a.politik)} Anträge und Anfragen aus der Politik</li>` : ""}
+      ${a.einwohner ? `<li>davon ${num(a.einwohner)} Bürgeranträge, Anregungen und Einwohnerfragen</li>` : ""}
+      ${a.fachlich ? `<li>Fachlich zuständig bei weiteren ${num(a.fachlich)} Vorlagen, für die formal eine koordinierende Stelle wie das Ratsbüro oder das Bürgerbüro federführend ist <span class="derived">abgeleitet aus Stellungnahmen</span></li>` : ""}
+      ${a.aufgeloest ? `<li>Aufgelöst: ${deDate(a.aufgeloest)}</li>` : ""}
+    </ul>
+    ${ab.length ? `<details class="pz-more"><summary>Abteilungen und Stellen (${ab.length})</summary><ul class="pz-recht">${ab.map((x) => `<li>${esc(x.name)} <span class="hint">${num(x.vorlagen)} Vorlagen${x.aufgeloest ? ` · aufgelöst ${deDate(x.aufgeloest)}` : ""}</span></li>`).join("")}</ul></details>` : ""}
+    ${fach.length ? `<h4>Fachlich zuständig laut Stellungnahmen <span class="derived">abgeleitet</span></h4><p class="hint">Ämter, die zu den Vorlagen dieser Stelle in einer Stellungnahme der Verwaltung antworten (Zahl der Vorlagen)</p><p class="pz-examples">${fach.map((f) => `<button type="button" class="btn btn-soft pz-amt" data-amt="${esc(amtId(f.name))}">${esc(f.name)} · ${num(f.vorlagen)}</button>`).join(" ")}</p>` : ""}
+    ${gremien.length ? `<h4>Diese Gremien beraten die Vorlagen am häufigsten</h4><p class="hint">Zahl der Vorlagen, die das Gremium davon beraten hat</p><p class="pz-examples">${gremien.map((g) => `<button type="button" class="btn btn-soft pz-gremium" data-gremium="${esc(g.id)}">${esc(g.name)} · ${num(g.vorlagen)}</button>`).join(" ")}</p>` : ""}
+    ${a.beispiele.length ? `<p class="pz-examples"><span class="hint">Jüngste Vorlagen:</span> ${a.beispiele.map((b) => `<button type="button" class="btn btn-soft pz-open" data-ref="${esc(b.drucksache)}">${esc(b.drucksache)} · ${esc(short(b.titel || ""))}</button>`).join(" ")}</p>` : ""}
+    <p class="pz-actions">${a.vorlagen ? `<button type="button" class="btn btn-soft pz-filter" data-kind="amt" data-name="${esc(a.name)}">Vorlagen dieses Amts in der Liste</button>` : ""}</p>
+    <p class="pz-msg hint" aria-live="polite"></p>`;
+}
+const amtBtn = (a) => `<button type="button" class="org-node org-amt" data-amt="${esc(a.id)}" aria-pressed="${state.amt === a.id}">
+  <span class="org-name">${esc(a.name)}</span><span class="org-meta">${esc(amtMeta(a))}</span></button>`;
+function renderAemter() {
+  const all = data.aemter || [];
+  const cur = all.filter((a) => a.aktuell);
+  const sel = all.find((a) => a.id === state.amt);
+  const groups = (list) => (data.amt_gruppen || []).map((g) => [g, list.filter((a) => a.gruppe === g.id)]).filter(([, as]) => as.length);
+  const intro = `<p class="hint">Ämter und Federführung stammen aus der OParl-API der Stadt Bonn. Die Gruppen folgen der Amtsnummer
+    <span class="derived">abgeleitet</span>; eine Zuordnung zu den Dezernaten enthält die Quelle nicht.</p>`;
+  if (state.view === "liste") {
+    const q = state.q.trim().toLowerCase();
+    const shown = (state.frueher ? all : cur).filter((a) => !q || a.name.toLowerCase().includes(q) || a.abteilungen.some((x) => x.name.toLowerCase().includes(q)));
+    return `${intro}<div class="pz-filterbar"><label>Amt suchen <input type="search" id="pz-q" value="${esc(state.q)}" autocomplete="off"></label>
+      <label class="check"><input type="checkbox" id="pz-frueher"${state.frueher ? " checked" : ""}> frühere Ämter zeigen</label></div>
+      <p class="hint" aria-live="polite">${shown.length} Ämter und Stellen</p>
+      ${groups(shown).map(([g, as]) => `<h3 class="pz-h">${esc(g.label)}</h3>${as.map((a) => `<details class="pz-item" data-amt="${esc(a.id)}"${state.amt === a.id ? " open" : ""}><summary><span class="pz-title">${esc(a.name)}</span><span class="pz-meta">${esc(amtMeta(a))}</span></summary>${amtBody(a)}</details>`).join("")}`).join("")}`;
+  }
+  return `${intro}<div class="org" role="group" aria-label="Ämter und Stellen der Stadtverwaltung Bonn">
+      ${groups(cur).map(([g, as]) => `<section class="org-beirat" aria-label="${esc(g.label)}"><h3 class="org-h">${esc(g.label)}</h3>
+        <div class="org-grid">${as.map(amtBtn).join("")}</div></section>`).join("")}
+    </div>
+    <p class="hint">Gezeigt sind die aktiven Ämter und Stellen; frühere stehen in der Liste. Die Zahl nennt die Vorlagen, bei denen das Amt laut Quelle federführend ist.</p>
+    <div id="pz-detail" class="pz-detail" aria-live="polite">${sel ? `<h3 class="pz-h" tabindex="-1">${esc(sel.name)}</h3>${amtBody(sel)}` : `<p class="hint">Wählen Sie ein Amt, um seine Abteilungen, Vorlagen und die beratenden Gremien zu sehen.</p>`}</div>`;
+}
+
 // --- Steuerung ---------------------------------------------------------------------------------------
 function render(focusDetail) {
   root.querySelectorAll("[role=tab]").forEach((t) => {
@@ -182,7 +235,7 @@ function render(focusDetail) {
   const body = root.querySelector("#pz-body");
   body.setAttribute("aria-labelledby", `tab-pz-${state.tab}`);
   body.innerHTML = !soll || !data ? '<p class="hint">Die Daten zu den Prozessen sind nicht verfügbar.</p>'
-    : state.tab === "gremien" ? renderGremien() : renderVerfahren();
+    : state.tab === "gremien" ? renderGremien() : state.tab === "aemter" ? renderAemter() : renderVerfahren();
   if (focusDetail) body.querySelector("#pz-detail h3")?.focus();
   ctx.onState({ ...state });
 }
@@ -192,11 +245,12 @@ export async function init(c) {
   ctx = c;
   root = document.getElementById("panel-prozesse");
   [soll, data] = await Promise.all([ctx.loadSoll(), fetch(ctx.BONN + "prozessarten.json").then((r) => (r.ok ? r.json() : null)).catch(() => null)]);
-  root.querySelector("[role=tablist]").addEventListener("click", (e) => { const t = e.target.closest("[role=tab]"); if (t) set({ tab: t.dataset.tab }); });
+  root.querySelector("[role=tablist]").addEventListener("click", (e) => { const t = e.target.closest("[role=tab]"); if (t && t.dataset.tab !== state.tab) set({ tab: t.dataset.tab, q: "" }); });
   root.querySelector("[role=tablist]").addEventListener("keydown", (e) => {
     if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
     e.preventDefault();
-    set({ tab: state.tab === "verfahren" ? "gremien" : "verfahren" });
+    const i = TABS.indexOf(state.tab) + (e.key === "ArrowRight" ? 1 : -1);
+    set({ tab: TABS[(i + TABS.length) % TABS.length], q: "" });
     root.querySelector(`[role=tab][data-tab="${state.tab}"]`).focus();
   });
   root.querySelector(".pz-view").addEventListener("click", (e) => { const b = e.target.closest("[data-view]"); if (b) set({ view: b.dataset.view }); });
@@ -225,17 +279,24 @@ export async function init(c) {
     if (!d.matches?.("details.pz-item") || !d.open) return;
     if (d.dataset.verfahren) { state.verfahren = d.dataset.verfahren; ctx.onState({ ...state }); }
     if (d.dataset.gremium) { state.gremium = d.dataset.gremium; ctx.onState({ ...state }); }
+    if (d.dataset.amt) { state.amt = d.dataset.amt; ctx.onState({ ...state }); }
   }, true);
   body.addEventListener("click", async (e) => {
     const n = e.target.closest(".org-node");
-    if (n) return set({ gremium: n.dataset.gremium }, true);
+    if (n) return set(n.dataset.amt ? { amt: n.dataset.amt } : { gremium: n.dataset.gremium }, true);
+    const ga = e.target.closest(".pz-gremium");
+    if (ga) return set({ tab: "gremien", gremium: ga.dataset.gremium, q: "" }, true);
+    const am = e.target.closest(".pz-amt");
+    if (am) return set({ amt: am.dataset.amt, q: "" }, true);
     const o = e.target.closest(".pz-open");
     if (o) return ctx.openRef(o.dataset.ref);
     const f = e.target.closest(".pz-filter");
     if (f) {
-      const ok = ctx.filterGremium(f.dataset.name);
-      if (!ok) f.closest(".pz-item, .pz-detail").querySelector(".pz-msg").textContent =
-        "Im gewählten Gebiet hat dieses Gremium keine Vorlage beraten. Wählen Sie oben ein anderes Gebiet, etwa einen Stadtbezirk.";
+      const amt = f.dataset.kind === "amt";
+      const ok = amt ? ctx.filterAmt(f.dataset.name) : ctx.filterGremium(f.dataset.name);
+      if (!ok) f.closest(".pz-item, .pz-detail").querySelector(".pz-msg").textContent = amt
+        ? "Im gewählten Gebiet gibt es keine Vorlage dieses Amts. Wählen Sie oben ein anderes Gebiet, etwa einen Stadtbezirk."
+        : "Im gewählten Gebiet hat dieses Gremium keine Vorlage beraten. Wählen Sie oben ein anderes Gebiet, etwa einen Stadtbezirk.";
     }
   });
 }

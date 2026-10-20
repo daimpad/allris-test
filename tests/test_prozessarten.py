@@ -72,5 +72,48 @@ class Verfahren(unittest.TestCase):
         self.assertEqual([b["drucksache"] for b in v["buergerantrag"]["beispiele"]], ["2", "3", "1"])
 
 
+class Aemter(unittest.TestCase):
+    def test_gruppe(self):
+        g = prozessarten.amt_gruppe
+        self.assertEqual((g("61 Stadtplanungsamt"), g("03 Amt für Wirtschaftsförderung"), g("85 Städtisches Gebäudemanagement Bonn")),
+                         ("6", "0", "8"))
+        self.assertEqual((g("01-2 Ratsbüro"), g("Dezernat III"), g("II-2 Referat Vergabedienste")), ("koordination",) * 3)
+        self.assertEqual((g("Bezirksverwaltungsstelle Beuel"), g("Seniorenzentren der Bundesstadt Bonn")), ("bezirk", "weitere"))
+
+    def test_abteilungen_gremien_und_hinweis(self):
+        db = sqlite3.connect(":memory:")
+        db.execute("CREATE TABLE organization (id, name, short_name, org_type, classification, label, start_date, end_date, web, source)")
+        db.execute("CREATE TABLE paper (id, reference, name, paper_type, date, under_direction_of, web, main_file_url, main_file_name, source)")
+        db.execute("CREATE TABLE consultation (id, paper_id, position, organization_id, role, authoritative, meeting_id, "
+                   "agenda_item_id, source, link_source)")
+        db.execute("CREATE TABLE paper_responsibility (paper_id, organization_id, kind, method, evidence, derived)")
+        orgs = [("at/1", "61 Stadtplanungsamt", "Verwaltungsbereich", "61 Stadtplanungsamt", "61 Stadtplanungsamt", None),
+                ("at/2", "61-3 Stadtverkehr", "Verwaltungsbereich", "61 Stadtplanungsamt", "61 Stadtplanungsamt", None),
+                ("at/3", "61-1 Stadtentwicklung und Statistik", "Verwaltungsbereich", "61 Stadtplanungsamt", "61 Stadtplanungsamt", "2021-07-08"),
+                ("at/4", "68 Amt für Stadtgrün", "Verwaltungsbereich", "68 Amt für Stadtgrün", "68 Amt für Stadtgrün", "2020-10-07"),
+                ("at/5", "01-2 Ratsbüro", "Verwaltungsbereich", "Co-Dezernat", "01-2 Ratsbüro", None),
+                ("gr/7", "Bezirksvertretung Bonn", "Gremium", "Bezirksvertretungen", "Bezirksvertretung Bonn", None)]
+        for oid, name, typ, cls, label, end in orgs:
+            db.execute("INSERT INTO organization VALUES (?,?,?,?,?,?,?,?,?,?)", (oid, name, None, typ, cls, label, None, end, None, None))
+        papers = [("p1", "1", "A", "Beschlussvorlage", "2026-01-01", "at/2"), ("p2", "2", "B", "Antrag", "2026-02-01", "at/5"),
+                  ("p3", "3", "C", "Antrag", "2026-03-01", "at/5"), ("p4", "4", "D", "Beschlussvorlage", "2020-01-01", "at/4")]
+        for pid, ref, name, typ, date, org in papers:
+            db.execute("INSERT INTO paper VALUES (?,?,?,?,?,?,?,?,?,?)", (pid, ref, name, typ, date, org, None, None, None, None))
+        db.execute("INSERT INTO consultation VALUES (1,'p1',0,'gr/7',NULL,0,NULL,NULL,NULL,NULL)")
+        db.execute("INSERT INTO paper_responsibility VALUES ('p2','at/2','fachlich','stellungnahme','5',1)")
+        a = {x["name"]: x for x in prozessarten.aemter(db, "2026-10-20")}
+        spa = a["61 Stadtplanungsamt"]
+        self.assertEqual((spa["id"], spa["gruppe"], spa["vorlagen"], spa["aktuell"], spa["fachlich"]),
+                         ("61-stadtplanungsamt", "6", 1, True, 1))
+        self.assertEqual([(x["name"], x["aufgeloest"]) for x in spa["abteilungen"]],
+                         [("61-3 Stadtverkehr", None), ("61-1 Stadtentwicklung und Statistik", "2021-07-08")])
+        self.assertEqual(spa["gremien"], [{"id": "7", "name": "Bezirksvertretung Bonn", "vorlagen": 1}])
+        self.assertEqual((a["68 Amt für Stadtgrün"]["aktuell"], a["68 Amt für Stadtgrün"]["aufgeloest"]), (False, "2020-10-07"))
+        rb = a["01-2 Ratsbüro"]
+        self.assertEqual((rb["gruppe"], rb["politik"], rb["hinweis"]), ("koordination", 2, prozessarten.HINWEIS_POLITIK))
+        self.assertEqual(rb["fachlich_aemter"], [{"name": "61 Stadtplanungsamt", "vorlagen": 1}])
+        self.assertEqual([b["drucksache"] for b in rb["beispiele"]], ["3", "2"])
+
+
 if __name__ == "__main__":
     unittest.main()
