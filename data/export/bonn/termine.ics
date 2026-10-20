@@ -288,9 +288,11 @@ DTSTAMP:20261103T170000Z
 DTSTART:20261103T170000Z
 SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
 DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
- ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
- adt Bonn (CC0 1.0)
+ ürger\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILF
+ DNR=2005819\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCT
+ YP=108&DOLFDNR=3238943&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005819
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005871
@@ -298,9 +300,11 @@ DTSTAMP:20261103T170000Z
 DTSTART:20261103T170000Z
 SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
 DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
- beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
- t Bonn (CC0 1.0)
+ beit\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDN
+ R=2005871\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP
+ =108&DOLFDNR=3239012&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005871
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005611

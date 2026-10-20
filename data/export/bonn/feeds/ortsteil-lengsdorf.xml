@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-lengsdorf</id>
 <title>RIS-Karte Bonn – Lengsdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Lengsdorf</subtitle>
-<updated>2026-10-05T00:00:00Z</updated>
+<updated>2026-10-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-lengsdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030012#vorlage</id>
+<title>Neue Vorlage 261959: Grüne Große Anfrage: Spielplatz "Auf dem Kirchbüchel"</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#261959"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030012"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029610#vorlage</id>
 <title>Neue Vorlage 261819: Grundstück in Bonn, Im Ellig 71 - Nutzungsänderung der Grenzgarage (und Abstellraum) als Wohnung Az.: 10501/2026</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#231537-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021783"/>
 <summary>Kenntnisnahme am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021754#beratung-4</id>
-<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 252670 Umwandlung des Naturrasenplatzes in Lengsdorf in einen Kunstrasenplatz</title>
-<updated>2025-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#252670"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021754"/>
-<summary>Entscheidung am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>
