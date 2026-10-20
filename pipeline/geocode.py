@@ -47,6 +47,19 @@ ORTSTEIL_ALIASES = {
     "Godesberg-Villenviertel": ["Godesberg-Villenviertel", "Villenviertel"],
 }
 BEZIRKE = {"Bad Godesberg": ["Bad Godesberg", "Godesberg"], "Beuel": ["Beuel"], "Hardtberg": ["Hardtberg"]}
+# R3 (verortung/PRUEFUNG.md): Schreibvarianten aus den Vorlagentiteln, von Hand aus den Kandidaten mit
+# Editierdistanz 1–2 zu einem Ortsteilnamen ausgewählt (20.10.2026); Methode „…_variante“, Konfidenz wie der Name.
+# Nicht aufgenommen: andere Orte (Medinghoven, Godesburg, Mondorf, Roisdorf) und Straßennamen (Pützchens Chaussee).
+ORTSTEIL_VARIANTEN = {
+    "Poppelsdorf": ["Poppeldorf"],
+    "Plittersdorf": ["Plitterdorf"],
+    "Pennenfeld": ["Pennefeld"],
+    "Holtorf": ["Holtdorf"],
+    "Schwarzrheindorf / Vilich-Rheindorf": ["Schwarz-Rheindorf"],
+}
+BEZIRK_VARIANTEN = {"Bad Godesberg": ["Bad-Godesberg", "Goesberg"], "Beuel": ["Beuler"]}
+# „Pützchens“ ist in Titeln Teil von Eigennamen („Pützchens Markt“, „Pützchens Chaussee“ durch vier Ortsteile), kein Genitiv
+GENITIV_AUSNAHMEN = {"Pützchen"}
 # Namen, die im Titel oft nicht die Straße meinen (oder mehrere Lagen haben): Konfidenz niedrig
 # Hausnummer direkt nach dem Straßennamen („Kennedyallee 25“, „Nr. 12a“, „12-14“); nicht „Str. 2. Bauabschnitt“
 HAUSNUMMER = re.compile(r"\s+(?:Nr\.\s*)?(\d{1,4})(?=[a-zA-Z]?(?:\s|$|[,;)\-–/]))")
@@ -119,18 +132,25 @@ class Gazetteer:
                 for nr in numbers:
                     self.hnr[_norm_street(street)][str(nr)].add(ot)
 
-        # Ortsteilnamen, Varianten und Adjektive („Endenicher“) → Ortsteil
+        # Ortsteilnamen, Varianten, Genitiv („Rüngsdorfs“) und Adjektive („Endenicher“) → Ortsteil
         self.ot_alias = {}
         for name in self.ot_by_name:
-            for alias in ORTSTEIL_ALIASES.get(name, [name]):
-                self.ot_alias[alias] = (name, "ortsteil_name")
+            forms = [(a, "ortsteil_name") for a in ORTSTEIL_ALIASES.get(name, [name])]
+            forms += [(a, "ortsteil_variante") for a in ORTSTEIL_VARIANTEN.get(name, [])]
+            for alias, method in forms:
+                self.ot_alias[alias] = (name, method)
                 if re.fullmatch(r"[A-ZÄÖÜ][a-zäöüß]+", alias):
-                    self.ot_alias[alias + "er"] = (name, "ortsteil_adjektiv")
+                    self.ot_alias[alias + "er"] = (name, "ortsteil_adjektiv" if method == "ortsteil_name" else method)
+                    if not alias.endswith(("s", "z")) and alias not in GENITIV_AUSNAHMEN:
+                        self.ot_alias.setdefault(alias + "s", (name, method))
         self.bz_alias = {}
         for bezirk, aliases in BEZIRKE.items():
             for alias in aliases:
                 self.bz_alias[alias] = (bezirk, "stadtbezirk_name")
                 self.bz_alias[alias + "er"] = (bezirk, "stadtbezirk_adjektiv")
+                self.bz_alias.setdefault(alias + "s", (bezirk, "stadtbezirk_name"))
+            for alias in BEZIRK_VARIANTEN.get(bezirk, []):
+                self.bz_alias[alias] = (bezirk, "stadtbezirk_variante")
 
         reserved = set(self.ot_alias) | set(self.bz_alias)
         street_names = [n for n in self.streets if n not in reserved and len(n) >= 4]
@@ -278,7 +298,7 @@ class Gazetteer:
             pt = self.bezirk_point[bz]
             rows.append(dict(level="stadtbezirk", name=bz, ortsteil=None, bezirk=bz,
                              lon=round(pt.x, 6), lat=round(pt.y, 6), method=method,
-                             confidence="mittel" if method == "stadtbezirk_name" else "niedrig",
+                             confidence="mittel" if method in ("stadtbezirk_name", "stadtbezirk_variante") else "niedrig",
                              evidence=ev))
         return rows
 

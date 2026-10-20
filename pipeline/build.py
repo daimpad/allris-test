@@ -1,6 +1,7 @@
 """Normalisierung der Rohdaten in eine SQLite-Datenbank (data/build/allris.sqlite)."""
 import csv
 import json
+import random
 import sqlite3
 
 from . import actors, config
@@ -207,7 +208,7 @@ def _stage_b(papers, bv_bezirke, locations):
         for r in gaz.locate(p.get("name"), bv_bezirke.get(p["id"], ())):
             if "hnr_vorher" in r:
                 hnr.setdefault((p["reference"], r["name"]), (r["hnr_vorher"], r.get("hnr_ohne_lage") or r["ortsteil"],
-                                                              "hnr_ohne_lage" not in r))
+                                                              "hnr_ohne_lage" not in r, p))
             if r["level"] == "strasse":
                 loc_id, source = f"strasse:{r['name']}|{r['ortsteil']}", r["source"]
             else:
@@ -223,13 +224,15 @@ def _stage_b(papers, bv_bezirke, locations):
 
 
 def _hnr_audit(hnr):
-    """Wirkung der Regel „strasse+hausnummer“ je Vorlage und Straße (ohne die Hausnummer selbst)."""
+    """Wirkung der Regel „strasse+hausnummer“ je Vorlage und Straße (ohne die Hausnummer selbst); dazu einmalig
+    eine Stichprobe zur Prüfung von Hand (je Vorgang eine Zeile: alle geänderten, dazu eindeutige bis 30; wird nie
+    überschrieben)."""
     def wirkung(before, after, used):
         if not used:
             return "ohne Wirkung: Abschnitt im Ortsteil fehlt im Straßenverzeichnis"
         return "bestätigt" if before == [after] else "eindeutig" if after in before else "geändert"
     rows = sorted((ref, street, "; ".join(before), after, wirkung(before, after, used))
-                  for (ref, street), (before, after, used) in hnr.items())
+                  for (ref, street), (before, after, used, _) in hnr.items())
     with open(config.EXPORT / "audit_hausnummern.tsv", "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n")
         w.writerow(["drucksache", "strasse", "ortsteile_ohne_hausnummer", "ortsteil_der_hausnummer", "wirkung"])
@@ -238,6 +241,28 @@ def _hnr_audit(hnr):
     for r in rows:
         counts[r[4]] = counts.get(r[4], 0) + 1
     print(f"Hausnummern: {len(rows)} Nennungen", counts)
+    sample_file = config.EXPORT / "hausnummern" / "stichprobe_hausnummern.tsv"
+    if sample_file.exists():
+        return
+    papers = {(ref, street): v[3] for (ref, street), v in hnr.items()}
+    def one_per_case(rs):  # Stellungnahmen und Änderungsanträge teilen die sechsstellige Drucksachennummer
+        seen, out = set(), []
+        for r in rs:
+            if r[0][:6] not in seen:
+                seen.add(r[0][:6]); out.append(r)
+        return out
+    changed = one_per_case([r for r in rows if r[4] == "geändert"])
+    clear = [r for r in one_per_case([r for r in rows if r[4] == "eindeutig"]) if r[0][:6] not in {c[0][:6] for c in changed}]
+    pick = changed + random.Random(20261020).sample(clear, min(len(clear), 30 - len(changed)))
+    sample_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(sample_file, "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
+        w.writerow(["nr", "drucksache", "titel", "link", "strasse", "ortsteile_ohne_hausnummer", "ortsteil_der_hausnummer",
+                    "wirkung", "urteil (richtig/falsch/unklar)", "anmerkung"])
+        for i, r in enumerate(pick, 1):
+            p = papers[(r[0], r[1])]
+            w.writerow([i, r[0], p.get("name"), p.get("web") or "", *r[1:], "", ""])
+    print(f"Stichprobe Hausnummern: {len(pick)} → {sample_file}")
 
 
 def _inherited(papers, papers_by_id, own_rows):

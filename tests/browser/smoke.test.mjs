@@ -23,6 +23,8 @@ async function open(path = "", { width = 1440, height = 900 } = {}) {
   page.on("pageerror", (e) => page.errors.push(String(e)));
   page.on("console", (m) => { if (m.type() === "error" && !/404|Failed to load resource/.test(m.text())) page.errors.push(m.text()); });
   await page.goto(SITE + path, { waitUntil: "networkidle" });
+  // erst prüfen, wenn app.js gestartet ist (auf einem langsamen Server kann das nach „networkidle“ liegen)
+  await page.waitForFunction(() => document.querySelector("#f-area")?.value);
   return page;
 }
 
@@ -48,6 +50,7 @@ async function areaPoint(page) {
 
 test("Start: Übersicht über ganz Bonn, Fenster „Los geht's“, ohne Verstöße", async () => {
   const page = await open();
+  await page.waitForFunction(() => document.querySelectorAll(".nav-label-bz").length === 4);
   assert.equal(await page.locator("#detail-heading").textContent(), "Los geht's");
   assert.equal(await page.locator("#f-area").inputValue(), "bonn:alle");
   assert.equal(await page.locator(".nav-label-bz").count(), 4, "Namen der vier Stadtbezirke");

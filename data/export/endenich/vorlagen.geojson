@@ -2,8 +2,8 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 535,
-  "generated_at": "2026-10-20T15:27:16+00:00",
+  "count": 532,
+  "generated_at": "2026-10-20T17:28:49+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -10130,30 +10130,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.078022,
-     50.723774
-    ]
-   },
-   "properties": {
-    "reference": "201158-03 ST",
-    "name": "Bürgerantrag: Einrichtung einer Querungshilfe in der Sebastianstraße, Poppeldorf",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2021-09-27",
-    "amt": "33 Bürgerdienste",
-    "place": "Sebastianstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002859"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.069428,
      50.731564
     ]
@@ -12626,30 +12602,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.078022,
-     50.723774
-    ]
-   },
-   "properties": {
-    "reference": "201158-1 ST",
-    "name": "Bürgerantrag: Einrichtung einer Querungshilfe in der Sebastianstraße, Poppeldorf",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2020-07-24",
-    "amt": "33 Bürgerdienste",
-    "place": "Sebastianstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7048"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.07895,
      50.72722
     ]
@@ -12739,30 +12691,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6905"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.078022,
-     50.723774
-    ]
-   },
-   "properties": {
-    "reference": "201158",
-    "name": "Bürgerantrag: Einrichtung einer Querungshilfe in der Sebastianstraße, Poppeldorf",
-    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-    "date": "2020-06-18",
-    "amt": "01-1 Bürgerbüro",
-    "place": "Sebastianstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6758"
    }
   },
   {

@@ -121,7 +121,9 @@ Inhalt
 - prozess/: Bericht zur Exploration der Prozessebene und Stichprobe Endenich
 - strassen_bonn.json: Straßenverzeichnis (OSM) mit Ortsteilen je Straße
 - geo/hausnummern_bonn.json: Hausnummern je Straße und Ortsteil (Stadt Bonn, CC0, ohne Koordinaten);
-  audit_hausnummern.tsv: Wirkung der Regel „strasse+hausnummer“ je Vorlage und Straße
+  audit_hausnummern.tsv: Wirkung der Regel „strasse+hausnummer“ je Vorlage und Straße;
+  hausnummern/stichprobe_hausnummern.tsv (30 Vorgänge zur Prüfung von Hand), vorpruefung_hausnummern.tsv
+  (Abgleich mit der Ortsteil-Angabe der Stadt und KI-Vorprüfung, gekennzeichnet)
 - LICENSE-DATA.md: Quellen und Lizenzen je Datei
 
 Bebauungspläne
