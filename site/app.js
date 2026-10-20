@@ -1333,6 +1333,8 @@
       </dl>
       <div class="links">${link(p.web, "Original im Ratsinformationssystem", "btn btn-primary")}
         ${link(p.main_file, "Dokument (PDF)", "btn btn-secondary")}</div>
+      ${p.kurzfassung ? `<section class="kurz" aria-labelledby="kurz-h"><h4 id="kurz-h">Kurz gesagt</h4><p>${esc(p.kurzfassung.text)}</p>
+        <p class="hint"><span class="derived">KI-Kurzfassung</span> Mit einem Sprachmodell (${esc(p.kurzfassung.modell)}) aus dem Text des Dokuments formuliert, kein Zitat; sie kann Fehler enthalten. Maßgeblich ist das Original.</p></section>` : ""}
       <h4>Prozesslinie</h4>
       <ol class="steps">${p.steps.map(stepHtml).join("")}${umsetzungHtml(p)}</ol>
       ${legend()}${glossary(p)}
