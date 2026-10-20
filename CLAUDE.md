@@ -106,7 +106,7 @@ Eine öffentliche, statisch auslieferbare Webanwendung, die Ratsinformationen in
 
 ## 8. Offene Punkte
 
-- Themen und Parteien: Grundversion umgesetzt (Abschnitt 9); offen sind die Prüfung der Zuordnung an einer Stichprobe (`audit_themen.tsv`), ein Themen-Layer auf der Karte und die Suche im Volltext der Dokumente (abhängig von der PDF-Lizenz)
+- Themen und Parteien: Grundversion umgesetzt (Abschnitt 9); Stichprobe der Zuordnung von Hand geprüft am 20.10.2026 (`data/export/endenich/stichprobe_themen.tsv`: 46 von 49 passend, 2 teilweise, 1 unpassend; `themen/PRUEFUNG.md`); offen sind ein Themen-Layer auf der Karte und die Suche im Volltext der Dokumente (abhängig von der PDF-Lizenz)
 - Stufe C (Volltext, Sprachmodell) zurückgestellt, bis die Lizenz der PDFs geklärt ist
 - Stichprobe zur Prüfung von Hand: `data/export/endenich/stichprobe_pruefung.tsv` (50 Vorlagen) geprüft am 20.10.2026 (41 richtig, 4 teilweise, 5 falsch; `verortung/PRUEFUNG.md`); Regel R1 (Kreuzung bestimmt den Ortsteil) umgesetzt, auf R2 verzichtet (Ortsnamen in Bautiteln meinen oft die Gemarkung, nicht den Ortsteil), R3 nicht umgesetzt; Baustellen-Stichprobe (30) geprüft; Text im Dialog „Über“ gegenlesen
 - Eigene Domain läuft (19.10.2026), `SITE_URL` umgestellt; offen: Google Search Console (Eigentum bestätigen, Sitemap einreichen). Verbesserungsliste als GitHub-Issues #23–#35; Datenschutzerklärung (`site/datenschutz.html`) geprüft (19.10.2026)
