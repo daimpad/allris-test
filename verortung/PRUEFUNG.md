@@ -32,7 +32,7 @@ Die KI-Vorprüfung stimmte in 47 von 50 Fällen. Die drei Abweichungen sind Nr. 
 
 Außerdem vermerkt, ohne Einfluss auf das Urteil: Nr. 31 nennt den Ortsteil Endenich und eine Straße, die das Straßenverzeichnis nur in Ippendorf und Poppelsdorf kennt. Die Straßenpunkte landen deshalb außerhalb des genannten Ortsteils.
 
-## Mögliche Regeln (Entscheidung ausstehend)
+## Regeln (Entscheidung des Auftraggebers 20.10.2026: R1 und R2 umsetzen)
 
 | Regel | Wirkung in der Stichprobe | betroffene Vorlagen in Bonn |
 |---|---|---|
@@ -40,4 +40,25 @@ Außerdem vermerkt, ohne Einfluss auf das Urteil: Nr. 31 nennt den Ortsteil Ende
 | R2 Widerspruch: Nennt der Titel einen Ortsteil, in dem die Straße nicht liegt, entfällt der Straßenpunkt (der Ortsteil bleibt) | betrifft Nr. 31 | 84 |
 | R3 Schreibvarianten: bekannte Tippfehler der Ortsteilnamen als Varianten | behebt Nr. 4 | gering, je Variante |
 
-Nr. 1, 12 und 27 behebt keine dieser Regeln; dafür wäre der Ort der Einrichtung nötig (Volltext oder Stufe C). Die Regeln würden erst nach Freigabe umgesetzt und an der Stichprobe nachgeprüft.
+Nr. 1, 12 und 27 behebt keine dieser Regeln; dafür wäre der Ort der Einrichtung nötig (Volltext oder Stufe C).
+
+## Umsetzung
+
+**R1 umgesetzt** (`_crossings` und `_resolve_street` in `pipeline/geocode.py`, Kreuzungen in `data/geo/strassen_bonn.json`, Tests in `tests/test_geocode.py`):
+
+| Kennzahl | vorher | nachher |
+|---|---|---|
+| Straßenpunkte der Stufe B | 12.048 | 11.058 |
+| Vorlagen mit Straßenbezug | 6.722 | 6.722 |
+| davon Ortsteil über Kreuzung bestimmt | – | 969 |
+| Straßenpunkte im Ortsteil der Stadt (Vorlagen mit Stufe A) | 73,8 % (1.982 von 2.687) | 78,3 % (1.905 von 2.434) |
+| Vorlagen in Endenich | 574 | 556 |
+
+In der Stichprobe ist Nr. 3 behoben (jetzt nur Weststadt); bei Nr. 7, 11 und 24 sind die Punkte enger gefasst, Endenich bleibt. Keine als richtig geprüfte Vorlage verliert Endenich. Die 18 Vorlagen, die Endenich verlassen, betreffen Kreuzungen in der Weststadt, der Nordstadt und in Lengsdorf; bei fünf bestätigt der Ort der Stadt (Stufe A) den neuen Ortsteil.
+
+**R2 zurückgestellt.** Die Auswertung für ganz Bonn zeigt zwei Probleme:
+
+1. Ortsnamen in Titeln wie „Grundstück in Bonn-Kessenich, Haager Weg“ bezeichnen meist die **Gemarkung** (Katasterbezirk), nicht den statistischen Ortsteil, dessen Flächen die Karte nutzt. Die Straße liegt dann richtig, der genannte Ort folgt anderen Grenzen. R2 hätte in rund 30 solchen Bauvorlagen den genauen Straßenpunkt durch den Mittelpunkt eines falschen Ortsteils ersetzt. Das betrifft vermutlich auch Nr. 31.
+2. Ohne Einschränkung entfernte R2 auch Straßen, wenn der Titel zwei getrennte Orte nennt („in der Weststadt und am Hermann-Wandersleb-Ring“) oder ein Adjektiv einen Flurnamen meint („am Meßdorfer Feld“).
+
+Sinnvoll bliebe R2 nur für Namen, die im Titel selten die Straße meinen („Rheinufer Graurheindorf“). Entscheidung ausstehend.

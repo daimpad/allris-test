@@ -18,6 +18,8 @@ class GeocodeTest(unittest.TestCase):
             way("Marienforster Steinweg", m.x, m.y),
             way("Kapellenstraße", e.x, e.y + 0.001),
             way("Kapellenstraße", m.x, m.y + 0.001),
+            {"name": "Querweg", "highway": "residential",
+             "coords": [[e.x, e.y + 0.0005], [e.x, e.y + 0.0015]]},  # kreuzt die Kapellenstraße in Endenich
         ], street_points=[("Am Burggraben", e.x, e.y)])
 
     def names(self, title, bv=()):
@@ -38,6 +40,12 @@ class GeocodeTest(unittest.TestCase):
                          [("strasse", "Kapellenstraße", "Mehlem", "strasse+bezirk", "mittel")])
         self.assertEqual(self.names("Tempo 30 Kapellenstraße in Endenich"),
                          [("strasse", "Kapellenstraße", "Endenich", "strasse+ortsteil", "mittel")])
+
+    def test_crossing_decides_ortsteil(self):  # R1
+        self.assertEqual(self.gaz.crossings[("Kapellenstraße", "Querweg")], {"Endenich"})
+        self.assertIn(("strasse", "Kapellenstraße", "Endenich", "strasse+kreuzung", "mittel"),
+                      self.names("Ampel Kapellenstraße / Querweg"))
+        self.assertNotIn("Mehlem", {r[2] for r in self.names("Ampel Kapellenstraße / Querweg")})
 
     def test_ortsteil_with_city_prefix_and_adjective(self):
         self.assertEqual(self.names("Spielplatz in Bonn-Endenich")[0][:2], ("ortsteil", "Endenich"))

@@ -21,7 +21,7 @@ Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – 
 Die Stadt nennt nur bei etwa 8 % der Vorlagen selbst einen Ort. Für die übrigen erschließt die Karte den Ort aus dem Titel:
 
 1. **Ort der Stadt** – liegt eine Koordinate aus dem Ratsinformationssystem vor, wird sie übernommen (sicher).
-2. **Name im Titel** – Straßen-, Ortsteil- oder Bezirksnamen im Titel werden mit einem Straßenverzeichnis und den Flächen der Stadt abgeglichen (erschlossen; unsicher, wenn ein Name auf mehrere Orte passt).
+2. **Name im Titel** – Straßen-, Ortsteil- oder Bezirksnamen im Titel werden mit einem Straßenverzeichnis und den Flächen der Stadt abgeglichen (erschlossen; unsicher, wenn ein Name auf mehrere Orte passt). Nennt der Titel zwei Straßen, die sich kreuzen, gilt der Ortsteil der Kreuzung.
 3. **Bebauungsplan im Titel** – eine eindeutige Plannummer verweist auf den Geltungsbereich des Plans (sicher).
 4. **Übernommen** – eine Stellungnahme oder ein Änderungsantrag ohne eigenen Ort übernimmt den Ort der Vorlage, auf die er sich bezieht.
 
