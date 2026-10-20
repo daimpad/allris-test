@@ -61,7 +61,7 @@ Eine Stichprobe von 30 Kandidaten ist von Hand geprüft; alle Kandidaten, die di
 - Ein Straßenpunkt steht für die ganze Straße, nicht für ein Gebäude.
 - Einreichende stehen nicht strukturiert in der Quelle; sie werden aus Vorlagenart und Titel erschlossen.
 - Das Soll nach Regelwerk ist ein vereinfachtes Modell und keine Rechtsauskunft. Reihenfolge, Fristen und Rollen werden nicht abgeglichen.
-- Stichproben zur Verortung, zu den Themen, zu den Baustellen und zum Soll nach Regelwerk werden noch von Hand geprüft. Vorprüfungen durch KI sind als solche gekennzeichnet und ersetzen diese Prüfung nicht.
+- Die Stichproben zur Verortung, zu den Baustellen und zum Soll nach Regelwerk sind von Hand geprüft. In der Stichprobe Endenich (50 Vorlagen) lag der Ort in 41 Fällen richtig, in 4 teilweise und in 5 falsch, meist bei Straßen, die durch mehrere Ortsteile führen ([`verortung/PRUEFUNG.md`](verortung/PRUEFUNG.md)). Die Stichprobe zu den Themen steht noch aus. Vorprüfungen durch KI sind als solche gekennzeichnet und ersetzen die Prüfung von Hand nicht.
 
 ## Datenquellen und Lizenzen
 
