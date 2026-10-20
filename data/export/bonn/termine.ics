@@ -658,6 +658,15 @@ DESCRIPTION:Gemeinsame Sitzung des Ausschusses für Mobilität und Verkehr
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006592
+DTSTAMP:20270126T170000Z
+DTSTART:20270126T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006577
 DTSTAMP:20270127T170000Z
 DTSTART:20270127T170000Z
@@ -695,6 +704,16 @@ SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
 DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
  ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
  adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006600
+DTSTAMP:20270211T170000Z
+DTSTART:20270211T170000Z
+SUMMARY:Ausschuss für Kinder-\, Jugend und Familie
+DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
+ sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
+ 0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -775,6 +794,25 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006593
+DTSTAMP:20270316T170000Z
+DTSTART:20270316T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006601
+DTSTAMP:20270317T170000Z
+DTSTART:20270317T170000Z
+SUMMARY:Ausschuss für Kinder-\, Jugend und Familie
+DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
+ sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
+ 0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006486
 DTSTAMP:20270318T170000Z
 DTSTART:20270318T170000Z
@@ -832,6 +870,15 @@ DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006594
+DTSTAMP:20270427T160000Z
+DTSTART:20270427T160000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006179
 DTSTAMP:20270429T140000Z
 DTSTART:20270429T140000Z
@@ -858,6 +905,16 @@ DTSTART:20270504T160000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006602
+DTSTAMP:20270505T160000Z
+DTSTART:20270505T160000Z
+SUMMARY:Ausschuss für Kinder-\, Jugend und Familie
+DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
+ sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
+ 0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -895,6 +952,15 @@ SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
 DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
  on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
  Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006595
+DTSTAMP:20270601T160000Z
+DTSTART:20270601T160000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -955,6 +1021,25 @@ DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006596
+DTSTAMP:20270706T160000Z
+DTSTART:20270706T160000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006605
+DTSTAMP:20270707T163000Z
+DTSTART:20270707T163000Z
+SUMMARY:Ausschuss für Kinder-\, Jugend und Familie
+DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
+ sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
+ 0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006563
 DTSTAMP:20270713T150000Z
 DTSTART:20270713T150000Z
@@ -1008,6 +1093,25 @@ DTSTART:20270914T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006597
+DTSTAMP:20270914T160000Z
+DTSTART:20270914T160000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006606
+DTSTAMP:20270922T160000Z
+DTSTART:20270922T160000Z
+SUMMARY:Ausschuss für Kinder-\, Jugend und Familie
+DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
+ sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
+ 0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1089,6 +1193,15 @@ DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006599
+DTSTAMP:20271116T170000Z
+DTSTART:20271116T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006557
 DTSTAMP:20271124T160000Z
 DTSTART:20271124T160000Z
@@ -1114,6 +1227,16 @@ DTSTART:20271130T160000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006607
+DTSTAMP:20271201T170000Z
+DTSTART:20271201T170000Z
+SUMMARY:Ausschuss für Kinder-\, Jugend und Familie
+DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
+ sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
+ 0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

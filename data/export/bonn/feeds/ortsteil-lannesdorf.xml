@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-lannesdorf</id>
 <title>RIS-Karte Bonn – Lannesdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Lannesdorf</subtitle>
-<updated>2026-09-22T00:00:00Z</updated>
+<updated>2026-10-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-lannesdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029966#vorlage</id>
+<title>Neue Vorlage 261744-01 ST: Nachnutzung der ehemaligen König-Fahd-Akademie in Lannesdorf</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#261744-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029966"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029074#vorlage</id>
+<title>Neue Vorlage 261361-01 ST: CDU Große Anfrage: Fahrradplatz in der Max-Planck-Straße vor der Hausnummer 107</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#261361-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029074"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029063#vorlage</id>
 <title>Neue Vorlage 253551-03 ST: CDU-Antrag: Anschaffung von neuen Bänken auf dem Dorfplatz in Lannesdorf und dem Parkplatz Hoverstr./ Lannesdorfer Str.</title>
@@ -103,22 +119,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#261361"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028547"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027787#beratung-3</id>
-<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 261069 Neues Familienzentrum in der Bundestadt Bonn zum Kindergartenjahr 2026/2027 Fröbel-Kindergarten Flügelnuss, Deutschherrenstr. 89, 53177 Bonn Träger Fröbel Bildung und Erziehung gemeinnützige GmbH, Salierring 47-53, 50667 Köln</title>
-<updated>2026-07-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#261069"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027787"/>
-<summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027787#vorlage</id>
-<title>Neue Vorlage 261069: Neues Familienzentrum in der Bundestadt Bonn zum Kindergartenjahr 2026/2027 Fröbel-Kindergarten Flügelnuss, Deutschherrenstr. 89, 53177 Bonn Träger Fröbel Bildung und Erziehung gemeinnützige GmbH, Salierring 47-53, 50667 Köln</title>
-<updated>2026-06-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#261069"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027787"/>
-<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026811#beratung-3</id>
@@ -657,22 +657,6 @@
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021880#beratung-4</id>
-<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 252721 Fällgenehmigung für eine Blaue-Atlas-Zeder auf dem Grundstück An der Nesselburg 88, 53179 Bonn</title>
-<updated>2025-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#252721"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021880"/>
-<summary>Entscheidung am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021880#beratung-3</id>
-<title>Baumkommission: „ungeändert beschlossen“ – 252721 Fällgenehmigung für eine Blaue-Atlas-Zeder auf dem Grundstück An der Nesselburg 88, 53179 Bonn</title>
-<updated>2025-04-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#252721"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021880"/>
-<summary>Empfehlung am 2025-04-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022207#vorlage</id>
 <title>Neue Vorlage 221504-09 AA: FDP-Änderungsantrag: Ausschreibungsergebnis Carsharing, Änderung des Standortes in Lannesdorf Antrag zur Vorlage 221504</title>
 <updated>2025-03-31T00:00:00Z</updated>
@@ -687,14 +671,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#241869-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022198"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021880#vorlage</id>
-<title>Neue Vorlage 252721: Fällgenehmigung für eine Blaue-Atlas-Zeder auf dem Grundstück An der Nesselburg 88, 53179 Bonn</title>
-<updated>2025-03-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#252721"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021880"/>
-<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020472#vorlage</id>
@@ -807,5 +783,29 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#241222"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018285"/>
 <summary>Anhörung am 2024-10-31; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018285#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 241222 202. Änderung des Flächennutzungsplanes der Bundesstadt Bonn, im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf „Deutschherrenstraße“</title>
+<updated>2024-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#241222"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018285"/>
+<summary>Anhörung am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019959#vorlage</id>
+<title>Neue Vorlage 190477-05 AA: CDU-Änderungsantrag: Beschluss über die grundsätzlichen Entwicklungsziele für das Gebiet "In den Schleiden" im Ortsteil Lannesdorf, Stadtbezirk Bad Godesberg (Zielbeschluss) - Ergebnisse der Fachgutachten Antrag zur Vorlage 190477</title>
+<updated>2024-10-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#190477-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019959"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019122#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 241595 Grundstück in Bonn-Lannesdorf, Rhöndorfer Straße 25 - Erweiterung eines Mehrfamilienwohnhauses (5 WE) durch Anbau eines Aufzuges, Ausbau DG, Anbau EG und Nutzungsänderung im UG Az.: 40241/2022</title>
+<updated>2024-10-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#241595"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019122"/>
+<summary>Anhörung am 2024-10-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

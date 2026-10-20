@@ -9,6 +9,22 @@
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030043#vorlage</id>
+<title>Neue Vorlage 261978: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261978"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030043"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030037#vorlage</id>
+<title>Neue Vorlage 222181-03: CDU/SPD-Große Anfrage: Beschlusskontrolle: CDU-Antrag: Fahrradabstellmöglichkeiten auf waldnahen Parkplätzen</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#222181-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030037"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030033#vorlage</id>
 <title>Neue Vorlage 261972: Linke-Antrag: Regelhafte Abschlagsgewährung bei fehlenden Wärmezählern/Warmwasserzählern städtischer Wohnungen</title>
 <updated>2026-10-20T00:00:00Z</updated>
@@ -63,6 +79,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261954"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030007"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029963#vorlage</id>
+<title>Neue Vorlage 261776-01 ST: Einsatz und Kosten von Microsoft 365 an Bonner Schulen sowie Nutzungsgrad des landeseigenen, kostenfreien Angebots LOGINEO NRW</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261776-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029963"/>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028331#vorlage</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260870-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029186"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027387#beratung-4</id>
-<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „zur Kenntnis genommen“ – 252927-01 Jahresabschluss 2025 der Bonn Conference Center Management GmbH (BonnCC)</title>
-<updated>2026-10-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#252927-01"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027387"/>
-<summary>Kenntnisnahme am 2026-10-08; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029782#vorlage</id>
-<title>Neue Vorlage 261448-02 AA: FDP-Änderungsantrag: FDP-Antrag: Verbesserung der Sicherheit für Fußgänger auf der Kennedy Brücke, sichtbare Trennung von Radweg und Fußweg Antrag zur Vorlage 261448</title>
-<updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261448-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029782"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029781#vorlage</id>
-<title>Neue Vorlage 261055-03 AA: FDP-Änderungsantrag: Aufforstung im FFH- und Naturschutzgebiet Ennert Antrag zur Vorlage 261055</title>
-<updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261055-03%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029781"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 </feed>

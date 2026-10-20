@@ -3,19 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-weststadt</id>
 <title>RIS-Karte Bonn – Weststadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Weststadt</subtitle>
-<updated>2026-09-29T00:00:00Z</updated>
+<updated>2026-09-28T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-weststadt.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029456#vorlage</id>
-<title>Neue Vorlage 261749: Bürgerantrag: Modellprojekt „Schwammstadt“ - klimagerechte Umgestaltung und Förderung des Radverkehrs im Teilabschnitt Endenicher Straße 238 bis 220</title>
-<updated>2026-09-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#261749"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029456"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029415#vorlage</id>
 <title>Neue Vorlage 260942-02 ST: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplans Nr. 6422-2 „Innovationsdreieck“, Stadtbezirk Bonn, Ortsteil Weststadt</title>
@@ -425,14 +417,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026905#vorlage</id>
-<title>Neue Vorlage 253599-04 ST: Vertagungsbitte zum BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599</title>
-<updated>2026-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253599-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026905"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026880#beratung-3</id>
 <title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „zur Kenntnis genommen“ – 260529-01 ST Stellungnahme zu FDP-Gruppe-Große Anfrage: Warum lässt die Stadt die Viktoriaunterführung verwahrlosen?</title>
 <updated>2026-05-06T00:00:00Z</updated>
@@ -473,22 +457,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026632#beratung-2</id>
-<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 253599-02 AA BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328; Drucksachengruppe 253599</title>
-<updated>2026-04-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253599-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026632"/>
-<summary>Entscheidung am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024112#beratung-3</id>
-<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 253599-01 ST Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328</title>
-<updated>2026-04-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253599-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024112"/>
-<summary>Kenntnisnahme am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023856#beratung-5</id>
 <title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 253599 Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328</title>
 <updated>2026-04-29T00:00:00Z</updated>
@@ -527,22 +495,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260019-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026273"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026633#vorlage</id>
-<title>Neue Vorlage 253599-03: BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599</title>
-<updated>2026-04-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253599-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026633"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026632#vorlage</id>
-<title>Neue Vorlage 253599-02 AA: BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328; Drucksachengruppe 253599</title>
-<updated>2026-04-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253599-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026632"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025773#beratung-4</id>
@@ -807,5 +759,53 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253548-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024346"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024433#vorlage</id>
+<title>Neue Vorlage 253793-01 ST: Koalitionsantrag: Aufenthaltsqualität an der Poppelsdorfer Allee verbessern - Rückzugsraum für wohnungslose Menschen schaffen</title>
+<updated>2025-10-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253793-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024433"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024348#vorlage</id>
+<title>Neue Vorlage 253793: Koalitionsantrag: Aufenthaltsqualität an der Poppelsdorfer Allee verbessern - Rückzugsraum für wohnungslose Menschen schaffen</title>
+<updated>2025-10-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253793"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024348"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024059#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 242148-09 ST BBB-Anfrage: Substitutionspraxen in Bonn</title>
+<updated>2025-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#242148-09%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024059"/>
+<summary>Kenntnisnahme am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023785#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 242148-08 ST BBB-Anfrage: Substitutionspraxen in Bonn</title>
+<updated>2025-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#242148-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023785"/>
+<summary>Kenntnisnahme am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023541#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 253452 Substitutionspraxis Poppelsdorfer Allee Az.: 10622/2024</title>
+<updated>2025-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253452"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023541"/>
+<summary>Kenntnisnahme am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023537#beratung-2</id>
+<title>Rat: „zur Kenntnis genommen - mit Protokollnotiz“ – 242148-07 BBB-Anfrage: Substitutionspraxen in Bonn</title>
+<updated>2025-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#242148-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023537"/>
+<summary>Kenntnisnahme am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

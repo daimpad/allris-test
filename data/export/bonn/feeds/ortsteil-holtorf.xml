@@ -3,19 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-holtorf</id>
 <title>RIS-Karte Bonn – Holtorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Holtorf</subtitle>
-<updated>2026-09-18T00:00:00Z</updated>
+<updated>2026-09-09T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-holtorf.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029434#vorlage</id>
-<title>Neue Vorlage 261739: Sachstand Oberkasseler Straße 2, 53227 Bonn</title>
-<updated>2026-09-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#261739"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029434"/>
-<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027374#beratung-4</id>
 <title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 260899 Baureife Planung zur grundhaften Sanierung der Löwenburgstraße (von Haus-Nr. 152 bis Abzweig Ungarten) in Niederholtorf</title>
@@ -97,14 +89,6 @@
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028159#vorlage</id>
-<title>Neue Vorlage 261248: Beauftragung zur Prüfung gemäß § 2 Abs. 5 der Rechnungsprüfungsordnung der Stadt Bonn - hier: Mietvertrag Oberkasseler Straße 2</title>
-<updated>2026-06-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#261248"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028159"/>
-<summary>Mitteilungsvorlage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027374#vorlage</id>
 <title>Neue Vorlage 260899: Baureife Planung zur grundhaften Sanierung der Löwenburgstraße (von Haus-Nr. 152 bis Abzweig Ungarten) in Niederholtorf</title>
 <updated>2026-06-18T00:00:00Z</updated>
@@ -137,14 +121,6 @@
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026335#beratung-3</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 260562 Grundstück in Bonn-Beuel, Pützchens Chaussee 227 - Umbau eines Einfamilienhauses oder Neubau mit Erweiterung zu Ein- bis Zweifamilienwohnhaus Az.: 40725/2025</title>
-<updated>2026-05-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#260562"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026335"/>
-<summary>Anhörung am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026741#vorlage</id>
 <title>Neue Vorlage 260702-01 ST: Große Anfrage der Grünen-Fraktion: Umzug vom Stadthaus in die Oberkasseler Straße</title>
 <updated>2026-05-07T00:00:00Z</updated>
@@ -175,14 +151,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#260523-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026752"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026335#vorlage</id>
-<title>Neue Vorlage 260562: Grundstück in Bonn-Beuel, Pützchens Chaussee 227 - Umbau eines Einfamilienhauses oder Neubau mit Erweiterung zu Ein- bis Zweifamilienwohnhaus Az.: 40725/2025</title>
-<updated>2026-04-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#260562"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026335"/>
-<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026312#vorlage</id>
@@ -241,44 +209,12 @@
 <summary>Kenntnisnahme am 2026-03-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025071#beratung-3</id>
-<title>Rat: „ungeändert beschlossen“ – 260015 Einleitung des Vergabeverfahrens - öffentliche Ausschreibung (VgV) - für den Abschluss einer Rahmenvereinbarung über die Lieferung von Bürostühlen im Zeitraum 01.05.2026 - 31.04.2028 für die Interimsliegenschaft Oberkasseler Str. 2</title>
-<updated>2026-02-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#260015"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025071"/>
-<summary>Entscheidung am 2026-02-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025069#beratung-3</id>
-<title>Rat: „ungeändert beschlossen“ – 260014 Einleitung des Vergabeverfahrens - öffentliche Ausschreibung (VgV) - für den Abschluss einer Rahmenvereinbarung über die Lieferung von elektrisch höhenverstellbaren Büroschreibtischen im Zeitraum 01.05.2026 - 31.04.2028 für die Interimsliegenschaft Oberkasseler Str. 2</title>
-<updated>2026-02-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#260014"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025069"/>
-<summary>Entscheidung am 2026-02-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024769#vorlage</id>
 <title>Neue Vorlage 253309-02 ST: Stellungnahme zu Einwohnerfragen zur Radverkehrsführung auf der Pützchens Chaussee in Beuel</title>
 <updated>2026-01-23T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#253309-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024769"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025071#vorlage</id>
-<title>Neue Vorlage 260015: Einleitung des Vergabeverfahrens - öffentliche Ausschreibung (VgV) - für den Abschluss einer Rahmenvereinbarung über die Lieferung von Bürostühlen im Zeitraum 01.05.2026 - 31.04.2028 für die Interimsliegenschaft Oberkasseler Str. 2</title>
-<updated>2026-01-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#260015"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025071"/>
-<summary>Beschlussvorlage: Einleitung · federführend: 10 Personal- und Organisationsamt · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025069#vorlage</id>
-<title>Neue Vorlage 260014: Einleitung des Vergabeverfahrens - öffentliche Ausschreibung (VgV) - für den Abschluss einer Rahmenvereinbarung über die Lieferung von elektrisch höhenverstellbaren Büroschreibtischen im Zeitraum 01.05.2026 - 31.04.2028 für die Interimsliegenschaft Oberkasseler Str. 2</title>
-<updated>2026-01-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#260014"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025069"/>
-<summary>Beschlussvorlage: Einleitung · federführend: 10 Personal- und Organisationsamt · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022409#beratung-3</id>
@@ -329,14 +265,6 @@
 <summary>Entscheidung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021354#beratung-4</id>
-<title>Bezirksvertretung Beuel: „abgelehnt“ – 252499 Fällgenehmigung für eine Himalaya-Zeder auf dem Grundstück Am Rehsprung 4, 53229 Bonn</title>
-<updated>2025-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#252499"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021354"/>
-<summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023396#vorlage</id>
 <title>Neue Vorlage 253309-01 ST: Stellungnahme zu Einwohnerfragen zur Radverkehrsführung auf der Pützchens Chaussee in Beuel</title>
 <updated>2025-06-23T00:00:00Z</updated>
@@ -383,22 +311,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#240841-002%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021966"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021354#beratung-3</id>
-<title>Baumkommission: „abgelehnt“ – 252499 Fällgenehmigung für eine Himalaya-Zeder auf dem Grundstück Am Rehsprung 4, 53229 Bonn</title>
-<updated>2025-04-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#252499"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021354"/>
-<summary>Empfehlung am 2025-04-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021354#vorlage</id>
-<title>Neue Vorlage 252499: Fällgenehmigung für eine Himalaya-Zeder auf dem Grundstück Am Rehsprung 4, 53229 Bonn</title>
-<updated>2025-03-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#252499"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021354"/>
-<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021864#vorlage</id>
@@ -807,5 +719,93 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#232039"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014526"/>
 <summary>Empfehlung am 2024-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016832#vorlage</id>
+<title>Neue Vorlage 231209-03 ST: Bürgerantrag: Umwandlung der Weinheimstraße in eine Anliegerstraße</title>
+<updated>2024-04-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#231209-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016832"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016168#vorlage</id>
+<title>Neue Vorlage 240360: Bürgerantrag: Aufhebung Einfahrtverbot im Bereich Burghofstraße aus Ungarten/Oberholtorf kommend</title>
+<updated>2024-03-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#240360"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016168"/>
+<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016481#vorlage</id>
+<title>Neue Vorlage 240489: Entsperrung von Haushaltsmittel für den Ausbau der Burghofstraße und Zur Saalkirche in Niederholtorf-Süd</title>
+<updated>2024-03-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#240489"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016481"/>
+<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016416#vorlage</id>
+<title>Neue Vorlage 240360-01 ST: Bürgerantrag: Aufhebung Einfahrtverbot im Bereich Burghofstraße aus Ungarten/Oberholtorf kommend</title>
+<updated>2024-03-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#240360-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016416"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016530#vorlage</id>
+<title>Neue Vorlage 240511: Vor-Ort-Begehung zum Standort eines Lindenbaumes im Bereich Guardinistraße 27 (Bezug zu 232039 und 232039-01)</title>
+<updated>2024-03-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#240511"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016530"/>
+<summary>Anregungen und Beschwerden · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015441#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 231210-03 ST Aufheben der Einbahnstraßenregelung in der Burghofstraße</title>
+<updated>2024-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#231210-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015441"/>
+<summary>Kenntnisnahme am 2024-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015205#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 231977-02 ST Bürgerantrag: Verkehrsberuhigende Maßnahmen im Bereich Löwenburgstraße/Kreuzung Ungartenstraße/Burghofstraße</title>
+<updated>2024-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#231977-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015205"/>
+<summary>Kenntnisnahme am 2024-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015028#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 231977-01 ST Bürgerantrag: Verkehrsberuhigende Maßnahmen im Bereich Löwenburgstraße/Kreuzung Ungartenstraße/Burghofstraße</title>
+<updated>2024-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#231977-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015028"/>
+<summary>Kenntnisnahme am 2024-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014375#beratung-4</id>
+<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 231977 Bürgerantrag: Verkehrsberuhigende Maßnahmen im Bereich Löwenburgstraße/Kreuzung Ungartenstraße/Burghofstraße</title>
+<updated>2024-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#231977"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014375"/>
+<summary>Entscheidung am 2024-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014194#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 231210-02 ST Aufheben der Einbahnstraßenregelung in der Burghofstraße</title>
+<updated>2024-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#231210-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014194"/>
+<summary>Entscheidung am 2024-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012927#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 231210-01 ST Aufheben der Einbahnstraßenregelung in der Burghofstraße</title>
+<updated>2024-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holtorf#231210-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012927"/>
+<summary>Kenntnisnahme am 2024-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

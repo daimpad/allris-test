@@ -9,6 +9,14 @@
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030018#vorlage</id>
+<title>Neue Vorlage 261964: Sitzungstermine der Bezirksvertretung Hardtberg 2027</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:hardtberg#261964"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030018"/>
+<summary>Mitteilungsvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030011#vorlage</id>
 <title>Neue Vorlage 230255-05: Grüne Große Anfrage: Umsetzung des Schwammstadtkonzepts im Stadtbezirk Hardtberg</title>
 <updated>2026-10-20T00:00:00Z</updated>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:hardtberg#240581-17"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023844"/>
 <summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023947#vorlage</id>
-<title>Neue Vorlage 253642: CDU-Große Anfrage: Hochwasser- und Starkregenschutz im Stadtbezirk Hardtberg</title>
-<updated>2025-08-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:hardtberg#253642"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023947"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

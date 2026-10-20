@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-beuel-ost</id>
 <title>RIS-Karte Bonn – Beuel-Ost</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Beuel-Ost</subtitle>
-<updated>2026-10-15T00:00:00Z</updated>
+<updated>2026-10-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-beuel-ost.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029968#vorlage</id>
+<title>Neue Vorlage 210685-02 ST: Stellungnahme zur BBB-Anfrage: Erneuerung der Brückenbauwerke "Auf dem Grendt" über die DB- und die SWB-Gleise; hier Sachstand Planung Drucksachengruppe 210685</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#210685-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029968"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029890#vorlage</id>
 <title>Neue Vorlage 210685-01: BBB-Anfrage: Erneuerung der Brückenbauwerke "Auf dem Grendt" über die DB- und die SWB-Gleise; hier Sachstand Planung Drucksachengruppe 210685</title>
@@ -161,14 +169,6 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026335#beratung-3</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 260562 Grundstück in Bonn-Beuel, Pützchens Chaussee 227 - Umbau eines Einfamilienhauses oder Neubau mit Erweiterung zu Ein- bis Zweifamilienwohnhaus Az.: 40725/2025</title>
-<updated>2026-05-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#260562"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026335"/>
-<summary>Anhörung am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025379#beratung-5</id>
 <title>Rat: „ungeändert beschlossen“ – 260156 Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 6822-1 „Pützchens Chaussee“, Stadtbezirk Beuel, Ortsteil Beuel-Ost</title>
 <updated>2026-05-07T00:00:00Z</updated>
@@ -231,14 +231,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#260523-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026752"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026335#vorlage</id>
-<title>Neue Vorlage 260562: Grundstück in Bonn-Beuel, Pützchens Chaussee 227 - Umbau eines Einfamilienhauses oder Neubau mit Erweiterung zu Ein- bis Zweifamilienwohnhaus Az.: 40725/2025</title>
-<updated>2026-04-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#260562"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026335"/>
-<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026275#vorlage</id>
@@ -625,14 +617,6 @@
 <summary>Empfehlung am 2024-11-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019223#beratung-3</id>
-<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 241627 Zuschuss nach § 48 KiBiz zur Flexibilisierung der Kinderbetreuungszeiten 2024/2025 für die Elterninitiative Kita Taubenschlag, Königswinterer Str. 682</title>
-<updated>2024-11-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#241627"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019223"/>
-<summary>Entscheidung am 2024-11-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2019659#vorlage</id>
 <title>Neue Vorlage 241805: Verlängerung einer Veränderungssperre für den Bebauungsplan Nr. 8023-16, Stadtbezirk Beuel, Ortsteil Beuel-Ost</title>
 <updated>2024-11-04T00:00:00Z</updated>
@@ -663,14 +647,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#241187"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018030"/>
 <summary>Entscheidung am 2024-09-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019223#vorlage</id>
-<title>Neue Vorlage 241627: Zuschuss nach § 48 KiBiz zur Flexibilisierung der Kinderbetreuungszeiten 2024/2025 für die Elterninitiative Kita Taubenschlag, Königswinterer Str. 682</title>
-<updated>2024-09-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#241627"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019223"/>
-<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2018749#vorlage</id>
@@ -806,6 +782,30 @@
 <updated>2024-03-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#240512"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016529"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2005692#vorlage</id>
+<title>Neue Vorlage 220579: Beschluss zur frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des vorhabenbezogenen Bebauungsplans Nr. 6823-1 "Siegburger Straße" im Stadtbezirk Beuel, Ortsteil Beuel-Ost zwischen Röhfeldstraße, Am Langen Graben, Siegburger Straße und A 59</title>
+<updated>2024-03-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#220579"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005692"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015815#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 240180 Grundstück Bonn-Beuel, Maarstr. 3 (Gemarkung Beuel, Flur 60, Flurstück 311) - Bauvoranfrage zur Errichtung eines Drogeriemarktes Aktenzeichen: 40660/2023</title>
+<updated>2024-02-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#240180"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015815"/>
+<summary>Anhörung am 2024-02-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015815#vorlage</id>
+<title>Neue Vorlage 240180: Grundstück Bonn-Beuel, Maarstr. 3 (Gemarkung Beuel, Flur 60, Flurstück 311) - Bauvoranfrage zur Errichtung eines Drogeriemarktes Aktenzeichen: 40660/2023</title>
+<updated>2024-02-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-ost#240180"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015815"/>
 <summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-limperich</id>
 <title>RIS-Karte Bonn – Limperich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Limperich</subtitle>
-<updated>2026-10-15T00:00:00Z</updated>
+<updated>2026-10-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-limperich.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029968#vorlage</id>
+<title>Neue Vorlage 210685-02 ST: Stellungnahme zur BBB-Anfrage: Erneuerung der Brückenbauwerke "Auf dem Grendt" über die DB- und die SWB-Gleise; hier Sachstand Planung Drucksachengruppe 210685</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#210685-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029968"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029890#vorlage</id>
 <title>Neue Vorlage 210685-01: BBB-Anfrage: Erneuerung der Brückenbauwerke "Auf dem Grendt" über die DB- und die SWB-Gleise; hier Sachstand Planung Drucksachengruppe 210685</title>
@@ -617,14 +625,6 @@
 <summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019223#beratung-3</id>
-<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 241627 Zuschuss nach § 48 KiBiz zur Flexibilisierung der Kinderbetreuungszeiten 2024/2025 für die Elterninitiative Kita Taubenschlag, Königswinterer Str. 682</title>
-<updated>2024-11-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241627"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019223"/>
-<summary>Entscheidung am 2024-11-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2019080#beratung-3</id>
 <title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 241411-01 ST Bürgerantrag: Optimierung der Parksituation in der Rudolf-Hahn-Straße</title>
 <updated>2024-10-30T00:00:00Z</updated>
@@ -655,22 +655,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241411"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018669"/>
 <summary>Entscheidung am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018494#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 241182-01 ST FDP/BBB - Große Anfrage: Fertigstellung des Neubaus einer dreigruppigen Kindertageseinrichtung an der Limpericher Str. 122b</title>
-<updated>2024-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241182-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018494"/>
-<summary>Kenntnisnahme am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018004#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 241182 FDP/BBB - Große Anfrage: Fertigstellung des Neubaus einer dreigruppigen Kindertageseinrichtung an der Limpericher Str. 122b</title>
-<updated>2024-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241182"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018004"/>
-<summary>Kenntnisnahme am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2018749#beratung-3</id>
@@ -719,14 +703,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241198"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018235"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019223#vorlage</id>
-<title>Neue Vorlage 241627: Zuschuss nach § 48 KiBiz zur Flexibilisierung der Kinderbetreuungszeiten 2024/2025 für die Elterninitiative Kita Taubenschlag, Königswinterer Str. 682</title>
-<updated>2024-09-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241627"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019223"/>
-<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2019064#vorlage</id>
@@ -785,14 +761,6 @@
 <summary>Anregungen und Beschwerden · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018494#vorlage</id>
-<title>Neue Vorlage 241182-01 ST: FDP/BBB - Große Anfrage: Fertigstellung des Neubaus einer dreigruppigen Kindertageseinrichtung an der Limpericher Str. 122b</title>
-<updated>2024-08-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241182-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018494"/>
-<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2018393#vorlage</id>
 <title>Neue Vorlage 241268: Grundstück in Bonn-Limperich, Am Brünnchen 12 - Umbau und Teilaufstockung Änderung eines Zweifamilienhauses in ein Mehrfamilienwohnhaus mit 3 Wohneinheiten Az. 40577/2023</title>
 <updated>2024-08-01T00:00:00Z</updated>
@@ -807,5 +775,37 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241026-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017802"/>
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018030#vorlage</id>
+<title>Neue Vorlage 241187: Antrag CDU Bezirksfraktion Beuel: Wohnbebauung Königswinterer Str. 39-51</title>
+<updated>2024-07-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241187"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018030"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017645#vorlage</id>
+<title>Neue Vorlage 241026: Bürgerantrag: Verlegung der Glascontainer am Radweg Rheinaustraße/Auffahrt Kennedybrücke</title>
+<updated>2024-06-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#241026"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017645"/>
+<summary>Anregungen und Beschwerden · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016525#beratung-5</id>
+<title>Sportausschuss: „zur Kenntnis genommen“ – 240509 Grundstück in Bonn-Beuel, Elsa-Brändström-Straße - Errichtung eines Schülerbootshauses Az.: 460328 (2177/2021)</title>
+<updated>2024-05-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#240509"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016525"/>
+<summary>Kenntnisnahme am 2024-05-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016617#beratung-3</id>
+<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 240563 Aufhebung des Bahnübergangs „Küdinghovener Straße“</title>
+<updated>2024-04-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:limperich#240563"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016617"/>
+<summary>Entscheidung am 2024-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>
