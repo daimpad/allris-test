@@ -28,4 +28,4 @@ Zum Vergleich die KI-Vorprüfung vor der letzten Regeländerung (Amt 61-3 als Ve
 - **Straßenname im Titel als Verkehr:** 3.621 Vorlagen (14,5 %) haben kein Thema, meist Niederschriften, Personalien und Haushaltsangelegenheiten des Ratsbüros. Ein Straßenname begründet kein Verkehrsthema (etwa bei Bauanträgen); die Regel würde mehr Fehler erzeugen als beheben.
 - **Gremium als alleinige Quelle:** betrifft einen Fall der Stichprobe (Nr. 9); eine Änderung würde richtige Zuordnungen über Fachausschüsse mitentfernen.
 
-Empfehlung: Regeln unverändert lassen; höchstens das Stichwort „Parkanlage“ ergänzen. Entscheidung ausstehend.
+Entscheidung des Auftraggebers (20.10.2026): Regeln bleiben unverändert.
