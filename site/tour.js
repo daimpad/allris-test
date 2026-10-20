@@ -17,7 +17,7 @@
       text: "Ein Stichwort oder eine Drucksachennummer eingeben, etwa „Radweg“ oder „261856“. Darunter stehen Schnellfilter nach Thema und Partei; die Treffer lassen sich in der Liste anzeigen." },
     { target: "#f-area",
       title: "Gebiet wählen",
-      text: "Ein Ortsteil, ein ganzer Stadtbezirk oder Vorlagen ohne Ortsbezug je Jahr. Voreingestellt ist Bonn-Zentrum. Karte, Liste und Zeitleiste zeigen jeweils das gewählte Gebiet." },
+      text: "Ein Ortsteil, ein ganzer Stadtbezirk oder Vorlagen ohne Ortsbezug je Jahr. Voreingestellt ist Bonn-Zentrum. Ein Gebiet lässt sich auch auf der Karte wählen: Ortsteil anklicken; nach „Ganz Bonn ansehen“ zuerst einen Stadtbezirk. Karte, Liste und Zeitleiste zeigen jeweils das gewählte Gebiet." },
     { before: (ui) => { if (MOBILE.matches) ui.panel("panel-detail", false); }, rect: (ui) => ui.areaRect(), fallback: "#map",
       beacons: [".marker-cluster, path.leaflet-interactive", ".map-color", ".map-plans", ".map-bau", ".map-legend"],
       title: "Die Karte",

@@ -656,3 +656,17 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
   .tour-card { width: calc(100vw - 20px); max-height: 46vh; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* Gebiete auf der Karte wählen (Stadtbezirke, Ortsteile) */
+.nav-tip { font: 13px/1.35 var(--font-body); }
+.nav-popup .leaflet-popup-content { margin: 12px 14px; font: 13px/1.4 var(--font-body); }
+.nav-pop p { margin: 4px 0 8px; color: var(--text-muted); }
+.nav-list { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; max-height: 260px; overflow: auto; }
+.nav-ot { display: flex; justify-content: space-between; gap: 6px; min-height: 32px; padding: 4px 8px; text-align: left; font: 500 12.5px/1.25 var(--font-body);
+  color: var(--accent-ink); background: rgba(124, 58, 237, 0.07); border: 1px solid transparent; border-radius: 8px; cursor: pointer; }
+.nav-ot span { color: var(--text-muted); font-weight: 400; }
+.nav-ot:hover, .nav-ot:focus-visible { border-color: var(--accent-ink); }
+.nav-wide { width: 100%; margin-top: 6px; }
+@media (max-width: 900px) { .nav-ot { min-height: 40px; } }
+/* Steuerelemente unten rechts weichen, solange die Auswahl eines Stadtbezirks offen ist */
+.leaflet-container:has(.nav-popup) .leaflet-bottom.leaflet-right .map-style { visibility: hidden; }
