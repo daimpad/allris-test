@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import datetime, timezone
 
-from . import chat, config, gebietszahlen, glossar, plans, process as proc, prozessarten, publish, soll, topics
+from . import chat, config, flaechen, gebietszahlen, glossar, plans, process as proc, prozessarten, publish, soll, topics
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -238,6 +238,8 @@ def export_all():
     # Reiter „Prozesse“: Vorgänge je Verfahren mit Beispielen, Gremien mit Sitzungen und Zuständigkeit
     _dump(out / "prozessarten.json", prozessarten.site_data(db))
 
+    # Vereinfachte Flächen für die Seite (Navigation, Umrisse, Bebauungspläne), komprimierbar als .json
+    flaechen.write(out)
     # Übersichtskarte: Vorlagen der letzten zwölf Monate und auffälliges Thema je Gebiet
     gebietszahlen.annotate(index, areas, cache, stand or datetime.now(timezone.utc).isoformat())
     _dump(out / "index.json", {"meta": _meta(db), **index})

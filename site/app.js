@@ -4,8 +4,13 @@
   "use strict";
   const BONN = "data/export/bonn/";
   const PILOT = "data/export/endenich/vorlagen.json";
+  // Flächen: vereinfacht aus dem Gesamtexport (pipeline/flaechen.py, rund 2 m), sonst die vollen Flächen
   const GEO = { ortsteil: "data/geo/ortsteile_bonn.geojson", bezirk: "data/geo/stadtbezirke_bonn.geojson",
     bplan: "data/geo/bebauungsplaene_bonn.geojson" };
+  const GEO_LIGHT = { ortsteil: `${BONN}flaechen/ortsteile.json`, bezirk: `${BONN}flaechen/bezirke.json`,
+    bplan: `${BONN}flaechen/bebauungsplaene.json` };
+  const loadGeo = (k) => fetch(GEO_LIGHT[k]).then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .catch(() => fetch(GEO[k]).then((r) => r.json()));
   // Startzustand ohne Gebiet im Link: Übersicht über ganz Bonn (Stadtbezirke anklickbar, noch keine Vorlagen geladen)
   const DEFAULT_AREA = "bonn:alle";
   const OVERVIEW_HINT = "Ganz Bonn: auf der Karte einen Stadtbezirk und dann einen Ortsteil anklicken oder oben ein Gebiet wählen. Die Suche findet Vorlagen in ganz Bonn.";
@@ -864,7 +869,7 @@
   const link = (url, text, cls) => { const u = safeUrl(url); return u ? `<a ${cls ? `class="${cls}" ` : ""}href="${u}" target="_blank" rel="noopener">${text}</a>` : ""; };
   // Bebauungspläne: Geltungsbereiche der Stadt (CC0), erst bei Bedarf geladen
   let plansData = null, planLayer = null;
-  const loadPlans = () => (plansData ||= fetch(GEO.bplan).then((r) => (r.ok ? r.json() : { features: [] })).catch(() => ({ features: [] })));
+  const loadPlans = () => (plansData ||= loadGeo("bplan").catch(() => ({ features: [] })));
   async function showPlans(p, fit) {
     if (planLayer) { planLayer.remove(); planLayer = null; }
     const withArea = (p.plans || []).filter((x) => x.area);
@@ -1591,7 +1596,7 @@
     }
     const g = await glossar;
     if (g) ({ ergebnisse: GLOSSAR, hinweise: NOTES, schritte: STEP_LABEL, evidenz: STATUS_TEXT } = g);
-    [geo.ortsteil, geo.bezirk] = await Promise.all([fetch(GEO.ortsteil).then((r) => r.json()), fetch(GEO.bezirk).then((r) => r.json())]);
+    [geo.ortsteil, geo.bezirk] = await Promise.all([loadGeo("ortsteil"), loadGeo("bezirk")]);
     initMap();
     fillAreaSelect();
     initNav();
