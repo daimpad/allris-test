@@ -1,7 +1,7 @@
 # Prompt: „allris-bonn“ – Ratsinformationen der Stadt Bonn räumlich, zeitlich und nach Akteuren erschließen
 
-> Fassung v0.4 (18.10.2026) · Kontext: Hackathon „Hack den Stadtrat“ · Zur Ausführung in Claude Code
-> Änderungen gegenüber v0.3: Stand der Umsetzung (Abschnitt 9), Entscheidungen zu Name, Hosting und Gestaltung (Abschnitt 2), Bebauungspläne und Straßenverzeichnis geklärt (3.3), offene Punkte aktualisiert (8). Arbeitsweise im Repository: `.claude/skills/allris-bonn/SKILL.md`.
+> Fassung v0.5 (20.10.2026) · Kontext: Hackathon „Hack den Stadtrat“ · Zur Ausführung in Claude Code
+> Änderungen gegenüber v0.4: Startzustand „ganz Bonn“ (Abschnitt 2), Stand der Umsetzung mit Reiter „Prozesse“, Gebieten auf der Karte, Übersichtskarte und „Mitmachen in Bonn“ (Abschnitt 9), offene Punkte aktualisiert (8). Arbeitsweise im Repository: `.claude/skills/allris-bonn/SKILL.md`.
 
 ---
 
@@ -106,15 +106,16 @@ Eine öffentliche, statisch auslieferbare Webanwendung, die Ratsinformationen in
 
 ## 8. Offene Punkte
 
-- Themen und Parteien: Grundversion umgesetzt (Abschnitt 9); Stichprobe der Zuordnung von Hand geprüft am 20.10.2026 (`data/export/endenich/stichprobe_themen.tsv`: 46 von 49 passend, 2 teilweise, 1 unpassend; `themen/PRUEFUNG.md`; Regeln unverändert); offen sind ein Themen-Layer auf der Karte und die Suche im Volltext der Dokumente (abhängig von der PDF-Lizenz)
+- Themen und Parteien: Grundversion umgesetzt (Abschnitt 9); Stichprobe der Zuordnung von Hand geprüft am 20.10.2026 (`data/export/endenich/stichprobe_themen.tsv`: 46 von 49 passend, 2 teilweise, 1 unpassend; `themen/PRUEFUNG.md`; Regeln unverändert); Punkte lassen sich nach Thema färben, die Übersichtskarte nennt je Gebiet ein auffälliges Thema (20.10.2026); offen ist die Suche im Volltext der Dokumente (abhängig von der PDF-Lizenz)
 - Stufe C (Volltext, Sprachmodell) zurückgestellt, bis die Lizenz der PDFs geklärt ist
 - Stichprobe zur Prüfung von Hand: `data/export/endenich/stichprobe_pruefung.tsv` (50 Vorlagen) geprüft am 20.10.2026 (41 richtig, 4 teilweise, 5 falsch; `verortung/PRUEFUNG.md`); Regel R1 (Kreuzung bestimmt den Ortsteil) umgesetzt, auf R2 verzichtet (Ortsnamen in Bautiteln meinen oft die Gemarkung, nicht den Ortsteil), R3 nicht umgesetzt; Baustellen-Stichprobe (30) geprüft; Text im Dialog „Über“ gegengelesen und ergänzt (20.10.2026)
-- Eigene Domain läuft (19.10.2026), `SITE_URL` umgestellt; offen: Google Search Console (Eigentum bestätigen, Sitemap einreichen). Verbesserungsliste als GitHub-Issues #23–#35; Datenschutzerklärung (`site/datenschutz.html`) geprüft (19.10.2026)
+- Eigene Domain läuft (19.10.2026), `SITE_URL` umgestellt; offen: Google Search Console (Eigentum bestätigen, Sitemap einreichen). Verbesserungsliste als GitHub-Issues #23–#35 abgearbeitet (keine offenen Issues, 20.10.2026); Datenschutzerklärung (`site/datenschutz.html`) geprüft (19.10.2026)
 - Soll-Modell der Prozessebene: Übernahme aus „Bonn entscheidet“ (anster2025/bonn-entscheidet, MIT, feste Kopie) geprüft – Phase 0 `soll/phase0/BERICHT.md` (Zuordnung 99 %, Belege 18/20 bestätigt, Zuständigkeitsordnung 331/333 wortgleich); Phase 1 umgesetzt (`data/soll/`, `pipeline/soll.py`, `audit_soll.tsv`, `soll/PHASE1.md`); Phase 2 umgesetzt (Abschnitt „Nach Regelwerk (Soll)“ im Vorgang, `soll.json`, Assistent; `soll/PHASE2.md`); Phase 3 umgesetzt (Einflussregeln in „Selbst mitwirken“, `site/mitwirken.js`; `soll/PHASE3.md`); Phase 4 umgesetzt (Stichprobe `data/export/soll/stichprobe_soll.tsv` mit KI-Vorprüfung, vier Korrekturen; `soll/PHASE4.md`); Abgleich nur aus dem Hauptweg (Nachtrag Phase 4, 230577 kein Befund mehr); Belege der Ergänzungen von Hand geprüft und präzisiert (`soll/pruefung/belege_ergaenzungen.tsv`); Stichprobe von Hand geprüft (30/30 bestätigt, zwei Regeln angepasst; `soll/PHASE4.md`); Kontakt zum Autor später
 - Beitrag an OParl-Lite (Felder `location`, `underDirectionOf`) als Issue auf Codeberg – nur nach Rückfrage, da nach außen wirksam
-- Hackathon-Rahmen: Datum, Teilnehmende, erwartetes Ergebnisformat (Demo, Repository, Datensatz)
+- Hackathon-Rahmen: Datum, Teilnehmende, erwartetes Ergebnisformat (Demo, Repository, Datensatz); danach Leitfaden und „good first issues“ für Teilnehmende
+- Vom Auftraggeber zu erledigen: Google Search Console; Testläufe des Ratsassistenten mit Anthropic und Mistral; Entscheidung über das Issue an OParl-Lite. Das Baustellen-Archiv läuft (Branch `archiv` vorhanden, 20.10.2026)
 
-## 9. Stand der Umsetzung (18.10.2026)
+## 9. Stand der Umsetzung (20.10.2026)
 
 | Bereich | Umgesetzt |
 |---|---|
@@ -132,4 +133,4 @@ Eine öffentliche, statisch auslieferbare Webanwendung, die Ratsinformationen in
 | Reiter „Prozesse“ | Schritt 1 (20.10.2026): Verfahren (15 Arten aus dem Soll-Modell als Bahnendiagramm oder Liste, Schritte, Fristen, Wege zum Mitwirken, Zahl der Vorgänge und Beispiele) und Gremien (Organigramm oder Liste, Zuständigkeit laut ZustO, Sitzungen, Filter); `site/prozesse.js`, `pipeline/prozessarten.py` → `prozessarten.json`, URL-Zustand, Tour-Schritt; Schritt 2 (20.10.2026): Ämter (52 aktive Ämter und Stellen, gruppiert nach Amtsnummer, abgeleitet; Dezernate fehlen in der Quelle; Ratsbüro und Bürgerbüro mit Hinweis „formal federführend“ und fachlich zuständigen Ämtern laut Stellungnahmen; Abteilungen, beratende Gremien, Filter; URL `amt=`) |
 | Gebiete auf der Karte | Farbstärke der Flächen nach Vorlagen der letzten 12 Monate (fünf Stufen, Legende), Zahl in der Beschriftung, beim Überfahren Gesamtzahl und auffälliges Thema (`pipeline/gebietszahlen.py`, abgeleitet); Glaseffekt beim Überfahren; Stadtbezirke (herausgezoomt mit Namen; Klick zoomt hinein und zeigt die Ortsteile mit Namen) und Ortsteile (Klick lädt das Gebiet wie das Dropdown) als Flächen anklickbar, „Ganz Bonn ansehen“ (20.10.2026) |
 | Mitmachen in Bonn | Fläche je Stadtbezirk: nächste Sitzungen, berechnete Einreichungsfristen (abgeleitet), Fristen-Zeitstrahl und Wege nach dem Regelwerk mit Rechtsgrundlagen (`site/beteiligung.js`, URL `mitmachen=1`, `bezirk=`; 20.10.2026) |
-| Ideen aus Abschnitt 6 offen | Themen-Layer auf der Karte, Kurzfassungen (LLM), Rückmeldung zur Verortung ist umgesetzt |
+| Ideen aus Abschnitt 6 offen | Kurzfassungen (Sprachmodell; sinnvoll erst mit Volltexten, abhängig von der PDF-Lizenz), Themen als eigene Flächenebene, Beitrag an OParl-Lite (nur nach Rückfrage); umgesetzt sind Stadtteil-Abo, Sitzungskalender, Beteiligungshinweise („Selbst mitwirken“, „Mitmachen in Bonn“), Gremien- und Ämterkarte (Reiter „Prozesse“), Farbe nach Thema, Linked-Open-Data-Export und Rückmeldung zur Verortung |
