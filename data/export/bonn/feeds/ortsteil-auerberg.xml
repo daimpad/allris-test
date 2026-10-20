@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-auerberg</id>
 <title>RIS-Karte Bonn – Auerberg</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Auerberg</subtitle>
-<updated>2026-09-23T00:00:00Z</updated>
+<updated>2026-10-19T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-auerberg.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029743#vorlage</id>
+<title>Neue Vorlage 261862: Aufstellung des Bebauungsplan Nr. 6325-1 „Kölnstraße / Otto-Hahn-Straße“</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#261862"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029743"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029725#vorlage</id>
+<title>Neue Vorlage 261855: 211. FNP-Änderung, Kölnstraße/Otto-Hahn-Straße</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#261855"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029725"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022978#vorlage</id>
 <title>Neue Vorlage 253203: Bürgerantrag: Beantragung von Verbesserungsmaßnahmen zur Parksituation im Bereich Friedrich-Wöhler-Straße 2c</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253235"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023025"/>
 <summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023133#vorlage</id>
-<title>Neue Vorlage 253203-02 ST: Bürgerantrag: Beantragung von Verbesserungsmaßnahmen zur Parksituation im Bereich Friedrich-Wöhler-Straße 2c</title>
-<updated>2025-06-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253203-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023133"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022910#beratung-4</id>
-<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 252542-02 AA CDU-Änderungsantrag: Auerberger Mitte - Platz der Begegnung/ Aufwertung der Platzfläche - Vorentwurfsplanung Antrag zur Vorlage 252542</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#252542-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022910"/>
-<summary>Entscheidung am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

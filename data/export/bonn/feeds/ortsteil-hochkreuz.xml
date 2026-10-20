@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-hochkreuz</id>
 <title>RIS-Karte Bonn – Hochkreuz</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Hochkreuz</subtitle>
-<updated>2026-10-14T00:00:00Z</updated>
+<updated>2026-10-19T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-hochkreuz.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:hochkreuz"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029850#vorlage</id>
+<title>Neue Vorlage 261555-03 ST: Optimierung der Toilettensituation im Bereich Herbert-Wehner-Platz/Haupteingang Rheinaue - Stellungnahme der Verwaltung</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:hochkreuz#261555-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029850"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029886#vorlage</id>
 <title>Neue Vorlage 261555-04 AA: BSW/SBI- Änderungsantrag: Optimierung der Toilettensituation im Bereich Herbert-Wehner-Platz/Haupteingang Rheinaue Antrag zur Vorlage 261555</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:hochkreuz#230317"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010668"/>
 <summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2010379#vorlage</id>
-<title>Neue Vorlage 230202: Erneute Stellungnahme zum Bebauungsplan Nr. 6819-1</title>
-<updated>2023-01-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:hochkreuz#230202"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010379"/>
-<summary>Dringlichkeitsantrag · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
 </feed>
