@@ -17,7 +17,7 @@
       text: "Ein Stichwort oder eine Drucksachennummer eingeben, etwa „Radweg“ oder „261856“. Darunter stehen Schnellfilter nach Thema und Partei; die Treffer lassen sich in der Liste anzeigen." },
     { target: "#f-area",
       title: "Gebiet wählen",
-      text: "Ein Ortsteil, ein ganzer Stadtbezirk oder Vorlagen ohne Ortsbezug je Jahr. Voreingestellt ist Bonn-Zentrum. Ein Gebiet lässt sich auch auf der Karte wählen: Ortsteil anklicken; nach „Ganz Bonn ansehen“ zuerst einen Stadtbezirk. Karte, Liste und Zeitleiste zeigen jeweils das gewählte Gebiet." },
+      text: "Ein Ortsteil, ein ganzer Stadtbezirk oder Vorlagen ohne Ortsbezug je Jahr. Zu Beginn zeigt die Karte ganz Bonn: erst einen Stadtbezirk anklicken, dann einen Ortsteil. Herangezoomt lassen sich Ortsteile direkt anklicken; „Ganz Bonn ansehen“ führt zurück. Karte, Liste und Zeitleiste zeigen jeweils das gewählte Gebiet." },
     { before: (ui) => { if (MOBILE.matches) ui.panel("panel-detail", false); }, rect: (ui) => ui.areaRect(), fallback: "#map",
       beacons: [".marker-cluster, path.leaflet-interactive", ".map-color", ".map-plans", ".map-bau", ".map-legend"],
       title: "Die Karte",
@@ -30,7 +30,7 @@
       before: (ui) => ui.panel("timeline-wrap", true), target: "#timeline-wrap", beacons: [".tl-presets"],
       title: "Die Zeitleiste",
       text: "Die Balken zeigen, wie viele Vorlagen je Monat erschienen sind; dazu Sitzungen und Wahlperioden. Mit den Griffen oder einer Voreinstellung wählen Sie einen Zeitraum – Liste und Karte folgen." },
-    { before: (ui) => { ui.example(); ui.panel("panel-detail", true); }, target: "#panel-detail", requires: "#detail .steps",
+    { before: async (ui) => { await ui.example(); ui.panel("panel-detail", true); }, target: "#panel-detail", requires: "#detail .steps",
       beacons: ["#detail .links .btn-primary"],
       title: "Der Vorgang",
       text: "Ein Beispiel aus dem Gebiet: Drucksache, Art, Datum, federführendes Amt, Stand und Themen – und der Link zum Original im Ratsinformationssystem. Maßgeblich ist immer das Original." },
@@ -127,11 +127,14 @@
     if (back) back.focus();
   }
 
-  function go(n, dir) {
+  let goSeq = 0;
+  async function go(n, dir) {
     if (n >= steps.length) return end();
     if (n < 0) return;
-    const s = steps[n];
-    if (s.before) s.before(ui);
+    const s = steps[n], seq = ++goSeq;
+    if (s.before) await s.before(ui);
+    // während des Wartens (Beispiel wird geladen) weitergeblättert oder beendet
+    if (seq !== goSeq || !root) return;
     ui.menu(s.menu || null);
     if (s.scroll) { const el = $(s.target); if (el) el.scrollIntoView({ block: "start" }); }
     // fehlt das Element (etwa ohne Vorlagen im Gebiet), in Laufrichtung überspringen
