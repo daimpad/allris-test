@@ -3,7 +3,7 @@
 Stand: Entwurf vom 20.10.2026, noch nicht versandt. Versand durch den Auftraggeber.
 
 An: opendata@bonn.de
-Betreff: Ratsinformationssystem (OParl) – Nutzung der Dokumente (PDF) für Verortung und Suche
+Betreff: Ratsinformationssystem (OParl) – Nutzung der Dokumente (PDF); Einwohnerzahlen je Ortsteil
 
 Sehr geehrte Damen und Herren,
 
@@ -16,6 +16,7 @@ Laut Beschreibung umfasst der Datensatz die angehängten Dokumente nicht; welche
 3. **Abgeleitete Angaben.** Dürfen daraus gewonnene Angaben veröffentlicht werden: der erkannte Ort, ein kurzes Zitat als Fundstelle (ein Satz) und eine gekennzeichnete Kurzfassung, jeweils mit Link zum Original im Ratsinformationssystem?
 4. **Ausnahmen.** Gibt es Dokumente, die davon ausgenommen sind, etwa Anlagen Dritter (Gutachten, Pläne, Fotos)? Sind sie in den Daten erkennbar?
 5. **Abruf.** Gibt es eine empfohlene Abrufweise für viele Dokumente, etwa Textfassungen oder eine Obergrenze für Abrufe je Zeit?
+6. **Einwohnerzahlen je Ortsteil.** Gibt es die Zahl der Einwohnerinnen und Einwohner je Ortsteil (51 Ortsteile wie im Datensatz „Flächen der Ortsteile“) als offenen Datensatz? Gefunden habe ich die Zahlen je statistischem Bezirk im archivierten Covid-19-Datensatz (Stand 31.12.2020) und im Strukturdatenatlas (Stand 31.12.2024, als PDF). Die statistischen Bezirke lassen sich den Ortsteilen aber nicht eindeutig zuordnen.
 
 Zum Datenschutz: Die RIS-Karte verortet keine Wohnadressen von Privatpersonen. Bürgeranträge erscheinen höchstens auf Ebene der Straße oder des Ortsteils, Namen von Privatpersonen nie. Abgeleitete Angaben sind als solche gekennzeichnet.
 
@@ -27,4 +28,4 @@ NOZILLA · contact@nozilla.de
 
 ---
 
-**Wozu die Antwort dient** (nicht Teil der Nachricht): Stufe C der Verortung (Orte aus dem Volltext, CLAUDE.md 5.2), die Suche im Volltext der Dokumente und verständliche Kurzfassungen (CLAUDE.md Abschnitt 6) sind zurückgestellt, bis die Lizenz der PDFs geklärt ist (CLAUDE.md Abschnitt 8).
+**Wozu die Antwort dient** (nicht Teil der Nachricht): Frage 6 betrifft die Übersichtskarte („Vorlagen je 1.000 Einwohner:innen“); Prüfung am 20.10.2026: Von 62 statistischen Bezirken liegen nur 10 zu mehr als 95 % in einem Ortsteil, eine Umrechnung nach Fläche wäre eine grobe Schätzung. Stufe C der Verortung (Orte aus dem Volltext, CLAUDE.md 5.2), die Suche im Volltext der Dokumente und verständliche Kurzfassungen (CLAUDE.md Abschnitt 6) sind zurückgestellt, bis die Lizenz der PDFs geklärt ist (CLAUDE.md Abschnitt 8).
