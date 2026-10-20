@@ -353,6 +353,20 @@
       },
     });
     new MapStyle().addTo(map);
+    // Ganz Bonn ansehen: nur die Ansicht, das Gebiet bleibt; herausgezoomt sind die Stadtbezirke anklickbar
+    const Whole = L.Control.extend({
+      options: { position: "bottomright" },
+      onAdd() {
+        const b = L.DomUtil.create("button", "map-style map-whole");
+        b.type = "button";
+        b.textContent = "Ganz Bonn ansehen";
+        b.title = "Karte auf ganz Bonn zoomen; Stadtbezirke und Ortsteile lassen sich anklicken";
+        b.addEventListener("click", () => { map.closePopup(); navDeep = false; map.fitBounds(bonnBounds || L.geoJSON(geo.bezirk).getBounds(), mapPadding()); });
+        L.DomEvent.disableClickPropagation(b);
+        return b;
+      },
+    });
+    new Whole().addTo(map);
     // Farbe der Punkte: Sicherheit der Ortsangabe (Standard) oder Thema; Legende darunter
     colorBy = new URLSearchParams(location.search).get("farbe") === "thema" ? "thema" : "sicherheit";
     const ColorBy = L.Control.extend({
@@ -431,6 +445,73 @@
     if (area.kind === "bezirk") feature = geo.bezirk.features.find((f) => f.properties.bezirk_bez === area.name);
     outline = L.geoJSON(feature || geo.bezirk, { style: { color: "#7c3aed", weight: 2, fillColor: "#c4b5fd", fillOpacity: 0.12 }, interactive: false }).addTo(map);
     map.fitBounds(outline.getBounds(), mapPadding());
+  }
+  // Gebiete auf der Karte wählen: herausgezoomt die Stadtbezirke (Klick zoomt hinein und bietet die Ortsteile an),
+  // näher die Ortsteile (Klick lädt das Gebiet wie die Auswahl oben). Eigene Ebene unter Plänen und Punkten.
+  const NAV_STYLE = { color: "#6d28d9", weight: 1, opacity: 0.35, fillColor: "#7c3aed", fillOpacity: 0 };
+  const NAV_HOVER = { ...NAV_STYLE, weight: 2.5, opacity: 0.9, fillOpacity: 0.1 };
+  let navBezirke = null, navOrtsteile = null, bonnBounds = null, navDeep = false;
+  // Zoomstufe, bei der ganz Bonn ins freie Kartenfeld passt; bis dahin sind die Stadtbezirke anklickbar
+  function wholeZoom() {
+    const p = mapPadding();
+    return map.getBoundsZoom(bonnBounds, false, L.point(p.paddingTopLeft[0] + p.paddingBottomRight[0], p.paddingTopLeft[1] + p.paddingBottomRight[1]));
+  }
+  const de = (n) => Number(n || 0).toLocaleString("de-DE");
+  function chooseArea(value) {
+    map.closePopup();
+    range = null;
+    if (tl) tl.reset();
+    loadArea(value);
+  }
+  function initNav() {
+    if (!index) return;
+    map.createPane("gebiete").style.zIndex = 350;
+    const hover = (layer) => layer.on({ mouseover: () => layer.setStyle(NAV_HOVER), mouseout: () => layer.setStyle(NAV_STYLE) });
+    navOrtsteile = L.geoJSON(geo.ortsteil, {
+      pane: "gebiete", style: NAV_STYLE,
+      filter: (f) => index.ortsteile.some((o) => o.name === f.properties.ortsteil_bez),
+      onEachFeature(f, layer) {
+        const o = index.ortsteile.find((x) => x.name === f.properties.ortsteil_bez);
+        layer.bindTooltip(() => (area && area.kind === "ortsteil" && area.key === o.slug
+          ? `<strong>${esc(o.name)}</strong><br>gewählt` : `<strong>${esc(o.name)}</strong><br>${de(o.count)} Vorlagen · Klick zeigt den Ortsteil`), { sticky: true, className: "nav-tip" });
+        hover(layer);
+        layer.on("click", () => { if (!(area.kind === "ortsteil" && area.key === o.slug)) chooseArea(`ortsteil:${o.slug}`); });
+      },
+    });
+    navBezirke = L.geoJSON(geo.bezirk, {
+      pane: "gebiete", style: { ...NAV_STYLE, weight: 1.5, opacity: 0.5 },
+      onEachFeature(f, layer) {
+        const name = f.properties.bezirk_bez;
+        const ots = index.ortsteile.filter((o) => o.stadtbezirk === name).sort((a, b) => a.name.localeCompare(b.name, "de"));
+        layer.bindTooltip(`<strong>Stadtbezirk ${esc(name)}</strong><br>${ots.length} Ortsteile · Klick zoomt hinein`, { sticky: true, className: "nav-tip" });
+        layer.on({ mouseover: () => layer.setStyle({ ...NAV_HOVER, weight: 2.5 }), mouseout: () => layer.setStyle({ ...NAV_STYLE, weight: 1.5, opacity: 0.5 }) });
+        layer.on("click", (e) => {
+          const b = index.bezirke.find((x) => x.name === name);
+          const html = `<div class="nav-pop"><strong>Stadtbezirk ${esc(name)}</strong><p>Ortsteil auf der Karte anklicken oder hier wählen:</p>
+            <div class="nav-list">${ots.map((o) => `<button type="button" class="nav-ot" data-area="ortsteil:${esc(o.slug)}">${esc(o.name)} <span>${de(o.count)}</span></button>`).join("")}</div>
+            ${b && b.count ? `<button type="button" class="nav-ot nav-wide" data-area="bezirk:${esc(b.slug)}">ganzer Stadtbezirk, ohne genaueren Ort <span>${de(b.count)}</span></button>` : ""}</div>`;
+          map.once("moveend", () => L.popup({ className: "nav-popup", maxWidth: 320, autoPanPadding: [16, 90] }).setLatLng(e.latlng).setContent(html).openOn(map));
+          navDeep = true; // nach der Wahl eines Bezirks die Ortsteile anbieten, auch wenn er ganz Bonn ausfüllt
+          map.fitBounds(layer.getBounds(), mapPadding());
+          updateNav();
+        });
+      },
+    });
+    map.getContainer().addEventListener("click", (e) => {
+      const b = e.target.closest(".nav-ot");
+      if (b) chooseArea(b.dataset.area);
+    });
+    bonnBounds = navBezirke.getBounds();
+    map.on("zoomend", updateNav);
+    updateNav();
+  }
+  function updateNav() {
+    if (!navOrtsteile) return;
+    const z = map.getZoom(), whole = wholeZoom();
+    if (z < whole) navDeep = false;
+    const far = !navDeep && z <= whole;
+    (far ? navOrtsteile : navBezirke).remove();
+    (far ? navBezirke : navOrtsteile).addTo(map);
   }
   const color = (c) => getComputedStyle(document.documentElement).getPropertyValue("--" + c).trim();
   function markerColor(p, l) {
@@ -1355,6 +1436,7 @@
     [geo.ortsteil, geo.bezirk] = await Promise.all([fetch(GEO.ortsteil).then((r) => r.json()), fetch(GEO.bezirk).then((r) => r.json())]);
     initMap();
     fillAreaSelect();
+    initNav();
     if (zeit) {
       tl = Timeline.create($("#timeline-wrap"), {
         onRange(a, b) { range = [a, b]; shown = LIST_STEP; render(); syncUrl(); },
