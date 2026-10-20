@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import datetime, timezone
 
-from . import chat, config, glossar, plans, process as proc, publish, soll, topics
+from . import chat, config, glossar, plans, process as proc, prozessarten, publish, soll, topics
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -235,6 +235,8 @@ def export_all():
                                          "Lage der Bebauungspläne); Verfahrensschritte aus dem Titel abgeleitet"}, **reg})
     # Soll-Modell: Verfahren nach Regelwerk, Fristen, Zuständigkeit (Anzeige in der Prozesslinie)
     _dump(out / "soll.json", soll.site_data())
+    # Reiter „Prozesse“: Vorgänge je Verfahren mit Beispielen, Gremien mit Sitzungen und Zuständigkeit
+    _dump(out / "prozessarten.json", prozessarten.site_data(db))
 
     _dump(out / "index.json", {"meta": _meta(db), **index})
     db.close()

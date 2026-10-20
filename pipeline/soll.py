@@ -208,10 +208,16 @@ def abgleich(db, modell):
 _INDEX = {"db": None, "rows": {}}
 
 
-def lookup(db, reference):
-    """Soll-Angaben zum Vorgang einer Vorlage (für den Export); einmal je Datenbankverbindung berechnet."""
+def vorgaenge(db):
+    """Abgleich aller Vorgänge, einmal je Datenbankverbindung berechnet."""
     if _INDEX["db"] is not db:
         _INDEX.update(db=db, rows={r["stammnummer"]: r for r in abgleich(db, Modell())})
+    return list(_INDEX["rows"].values())
+
+
+def lookup(db, reference):
+    """Soll-Angaben zum Vorgang einer Vorlage (für den Export)."""
+    vorgaenge(db)
     r = _INDEX["rows"].get(stammnummer(reference))
     if not r:
         return None

@@ -5,7 +5,7 @@ Technische Beschreibung von Pipeline, Seite und Betrieb. Worum es inhaltlich geh
 ## Aufbau des Repositorys
 
 - `pipeline/` – Abruf, Aufbereitung, Geokodierung (`geocode.py`, `geo.py`, `plans.py`), Akteure (`actors.py`), Themen (`topics.py`), Prozessschritte (`process.py`), Export (`export.py`, `publish.py`, `chat.py`), Prüfung (`check.py`, `verify.py`), Auffindbarkeit (`seo.py`, `gebietsseiten.py`), Baustellen (`baustellen.py`, `kandidaten.py`)
-- `site/` – statische Seite: Leaflet mit OSM-Kacheln (`app.js`), Zeitleiste (`timeline.js`), Tour (`tour.js`), Ratsassistent (`chat/`)
+- `site/` – statische Seite: Leaflet mit OSM-Kacheln (`app.js`), Zeitleiste (`timeline.js`), Tour (`tour.js`), Reiter „Prozesse“ (`prozesse.js`), Ratsassistent (`chat/`)
 - `data/` – Gremien, Ämter, Sitzungen (`raw/`), Flächen und Straßenverzeichnis (`geo/`), Pilot Endenich und Audits (`export/`), Lizenzen je Datei (`LICENSE-DATA.md`)
 - `baustellen/` – Berichte der Phasen 0 bis 5 zu Bebauungsplänen und Baustellen, Anfrage an die Stadt
 - `prozess/`, `phase0/` – Exploration der Prozessebene und der Datenquellen
@@ -204,7 +204,9 @@ Die Zahlen gibt `python -m pipeline check` aus.
 ## Seite
 
 - Statisch, ohne Server-Logik. Strenge Content-Security-Policy; extern nur Kacheln von `tile.openstreetmap.org` und die Anbieter des Assistenten. Leaflet 1.9.4 (BSD-2-Clause), Leaflet.markercluster 1.5.3 (MIT) in `site/vendor/`, Schrift Inter (OFL 1.1) in `site/fonts/`, jeweils mit Lizenzdatei und SRI.
-- URL-Zustand: `?gebiet=ortsteil:endenich&von=2025-10-18&bis=2026-10-18&zoom=Quartal&achse=vorlage&thema=verkehr&partei=SPD&suche=bonn&farbe=thema&plaene=1&plan=6122-1&baustellen=1&baustelle=9640#191010`.
+- URL-Zustand: `?gebiet=ortsteil:endenich&von=2025-10-18&bis=2026-10-18&zoom=Quartal&achse=vorlage&thema=verkehr&partei=SPD&suche=bonn&farbe=thema&plaene=1&plan=6122-1&baustellen=1&baustelle=9640#191010`; Reiter „Prozesse“: `prozesse=verfahren|gremien`, `ansicht=liste`, `verfahren=buergerantrag`, `gremium=340`.
+- Reiter „Prozesse“ (`site/prozesse.js`, beim ersten Öffnen nachgeladen): Verfahren aus `soll.json` als Bahnendiagramm (SVG, Bahnen wie im Soll-Modell; seitlich verschiebbar) oder Liste, je Verfahren Schritte mit Rechtsgrundlage, Wege zum Mitwirken (Regeln des Soll-Modells mit Frist; Bezeichnungen der RIS-Karte), Zahl der Vorgänge und drei jüngste Beispiele aus `prozessarten.json`; Gremien der laufenden Wahlperiode als Organigramm (Rat, Ausschüsse, Bezirksvertretungen, Beiräte) oder durchsuchbare Liste mit früheren Gremien, je Gremium Beratungen, Sitzungen, Zuständigkeit (Rechte der Zuständigkeitsordnung nach Art; für Rat und Bezirksvertretungen die allgemeinen Regeln des Soll-Modells) und ein Filter für die Liste. Die Schaubilder haben eine gleichwertige Liste darunter bzw. als Ansicht.
+- `prozessarten.json` (`pipeline/prozessarten.py`, im Schritt `export`): Vorgänge je Verfahren (Stammnummern, Zuordnung aus `pipeline/soll.py`, davon mit Sicherheit „hoch“), Gremien mit Art (Rat, Haupt-, Fach-, Unter-, Wahlausschuss, Bezirksvertretung, Beirat), aktuell = nicht aufgelöst und in der laufenden Wahlperiode getagt oder Sitzung angesetzt; Abschnitt der Zuständigkeitsordnung bei gleichem Namen, eine abweichende Bezeichnung als gekennzeichnete Zuordnung (`ZUSTO_ALIAS`). Tests: `tests/test_prozessarten.py`.
 - Barrierefreiheit: WCAG 2.1 AA, geprüft mit axe-core auf Desktop und Mobil; Listen als Zugang ohne Maus zu Karte, Plänen und Baustellen.
 - Auffindbarkeit: Favicons, Web-Manifest, canonical, Open Graph, schema.org, `noscript`, `404.html`, `robots.txt`, `sitemap.xml`, statische Seiten je Gebiet (`gebiete/`).
 
