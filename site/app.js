@@ -75,9 +75,9 @@
   const THEME_METHOD = { amt: "Amt", gremium: "Gremium", stichwort: "Stichwort im Titel" };
 
   // --- Flächen ein- und ausklappen ---------------------------------------------------------------
-  const SHEETS = ["panel-list", "panel-detail", "panel-auswertung", "panel-termine", "panel-prozesse", "timeline-wrap", "panel-assistent"];
+  const SHEETS = ["panel-list", "panel-detail", "panel-auswertung", "panel-termine", "panel-prozesse", "panel-mitmachen", "timeline-wrap", "panel-assistent"];
   const LEFT = ["panel-list", "panel-assistent"];  // Liste und Assistent teilen sich die linke Seite
-  const OVERLAYS = ["panel-auswertung", "panel-termine", "panel-prozesse"];
+  const OVERLAYS = ["panel-auswertung", "panel-termine", "panel-prozesse", "panel-mitmachen"];
   const toggleFor = (id) => document.querySelector(`.toggle[data-panel="${id}"]`);
   function setPanel(id, open) {
     const el = document.getElementById(id);
@@ -87,6 +87,7 @@
     if (id === "panel-detail") { document.body.classList.toggle("detail-open", open); document.body.classList.toggle("detail-closed", !open); }
     if (id === "panel-assistent") document.body.classList.toggle("chat-open", open);
     if (id === "panel-prozesse") { if (open) openProzesse(); syncUrl(); }
+    if (id === "panel-mitmachen") { if (open) openMitmachen(); syncUrl(); }
     if (!open) return;
     closeMega();
     // schmale Bildschirme: nur eine Fläche; mittlere Breiten: Liste oder Vorgang, damit die Zeitleiste Platz hat;
@@ -1507,6 +1508,31 @@
     return pzReady.then((m) => { m.show(s); return m; });
   }
 
+  // --- Fläche „Mitmachen in Bonn“ (site/beteiligung.js, erst beim Öffnen geladen) --------------------------
+  let mmState = null, mmReady = null;
+  function openMitmachen(s) {
+    mmReady ||= import("./beteiligung.js").then(async (m) => {
+      await m.init({
+        loadSoll,
+        meetings: () => (zeit ? zeit.meetings : []),
+        onState(st) { mmState = st; syncUrl(); },
+        openTermine() { setPanel("panel-mitmachen", false); setPanel("panel-termine", true); showTermine(); focusPanel("panel-termine"); },
+        openPlaene() {
+          setPanel("panel-mitmachen", false);
+          const b = document.querySelector(".map-plans");
+          if (b && !planOn) b.click();
+        },
+        openGremium(name) {
+          setPanel("panel-mitmachen", false);
+          setPanel("panel-prozesse", true);
+          openProzesse({ tab: "gremien", gremiumName: name });
+        },
+      });
+      return m;
+    });
+    return mmReady.then((m) => { m.show(s || { bezirk: mmState ? mmState.bezirk : areaBezirk() || "Bonn" }); return m; });
+  }
+
   // --- URL-Zustand -----------------------------------------------------------------------------------
   function syncUrl() {
     if (!area) return;
@@ -1526,6 +1552,9 @@
     state.verfahren = pz && pz.tab === "verfahren" && pz.verfahren ? pz.verfahren : "";
     state.gremium = pz && pz.tab === "gremien" && pz.gremium ? pz.gremium : "";
     state.amt = pz && pz.tab === "aemter" && pz.amt ? pz.amt : "";
+    const mm = !$("#panel-mitmachen").hidden && mmState;
+    state.mitmachen = mm ? "1" : "";
+    state.bezirk = mm ? mm.bezirk : "";
     for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
     history.replaceState(null, "", url);
@@ -1588,6 +1617,7 @@
     // Menü „Mitmachen“: Termine; Menü „Auswertung“: Reiter Kennzahlen und Verfahrenswege
     if (zeit) $("#cta-termine").addEventListener("click", () => { setPanel("panel-termine", true); showTermine(); focusPanel("panel-termine"); });
     else $("#cta-termine").hidden = true;
+    $("#cta-mitmachen").addEventListener("click", () => { closeMega(); setPanel("panel-mitmachen", true); focusPanel("panel-mitmachen"); });
     document.querySelectorAll("[data-open-tab]").forEach((b) => b.addEventListener("click", () => openAuswertung(b.dataset.openTab)));
     $("#tab-stats").addEventListener("click", () => openAuswertung("stats"));
     $("#tab-wege").addEventListener("click", () => openAuswertung("wege"));
@@ -1620,6 +1650,10 @@
     else if (params.get("plan")) await showPlan(params.get("plan"));
     else if (params.get("baustelle") && bau && bau.baustellen.some((b) => b.id === params.get("baustelle"))) showSite(params.get("baustelle"));
     else showIntro();
+    if (params.get("mitmachen") === "1") {
+      setPanel("panel-mitmachen", true);
+      await openMitmachen({ bezirk: params.get("bezirk") || areaBezirk() || "Bonn" });
+    }
     if (["verfahren", "gremien", "aemter"].includes(params.get("prozesse"))) {
       setPanel("panel-prozesse", true);
       await openProzesse({ tab: params.get("prozesse"), view: params.get("ansicht") === "liste" ? "liste" : "schaubild",

@@ -176,6 +176,7 @@
           <span class="card-text">Mit einem Bürgerantrag (§ 24 GO NRW) bringen Sie Anregungen und Beschwerden selbst ein.</span>
           <span class="card-actions">
             <a class="btn btn-cta" href="https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Bürgerantrag stellen<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a>
+            <button type="button" class="btn btn-soft" id="cta-mitmachen"><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg>Alle Wege im Überblick</button>
             <button type="button" class="btn btn-soft" data-about="mitwirken"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>So geht's</button>
           </span>
         </div>
@@ -394,6 +395,14 @@
         <button type="button" class="icon-btn" data-close="panel-termine" aria-label="Termine schließen"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
       </div>
       <div class="panel-body" id="termine"></div>
+    </section>
+
+    <section id="panel-mitmachen" class="glass overlay overlay-wide" aria-labelledby="mitmachen-heading" hidden>
+      <div class="panel-head">
+        <h2 id="mitmachen-heading" tabindex="-1">Mitmachen in Bonn</h2>
+        <button type="button" class="icon-btn" data-close="panel-mitmachen" aria-label="Mitmachen in Bonn schließen"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="panel-body" id="bt-body"></div>
     </section>
 
     <div id="map" role="region" aria-label="Karte der Vorlagen im gewählten Gebiet. Alle Vorlagen stehen auch in der Liste; Gebiete lassen sich auf der Karte anklicken oder oben über die Auswahl „Gebiet“ wählen."></div>
