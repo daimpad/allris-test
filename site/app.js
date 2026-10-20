@@ -1267,7 +1267,13 @@
       || (area.kind === "bezirk" && l.stadtbezirk && l.stadtbezirk !== area.name);
     const locItem = (l) => `<li><strong>${esc(l.name || l.ortsteil || l.stadtbezirk)}</strong>
       ${l.ortsteil && l.level === "strasse" ? `(${esc(l.ortsteil)})` : ""} – <span class="conf conf-${esc(l.confidence)}">${CONF[l.confidence] || esc(l.confidence)}</span>, Stufe ${esc(l.stage)}${outside(l) ? ' <span class="hint">außerhalb des gewählten Gebiets</span>' : ""}<br>
-      <span class="meta">${esc(METHOD[l.method] || l.method)}${l.evidence ? ` · Fundstelle: „${esc(l.evidence)}“` : ""}</span></li>`;
+      <span class="meta">${methodText(l)}</span></li>`;
+    // Volltext: erkannter Ort und Teil des Dokuments, kein Zitat (Rahmen laut Antwort der Stadt Bonn)
+    function methodText(l) {
+      if (!String(l.method).startsWith("volltext_")) return `${esc(METHOD[l.method] || l.method)}${l.evidence ? ` · Fundstelle: „${esc(l.evidence)}“` : ""}`;
+      const base = METHOD[l.method.slice(9)] || "";
+      return `Aus dem Text des Dokuments erschlossen <span class="derived">abgeleitet</span>${base ? ` (Regel wie „${esc(base.replace(/ im Titel/, ""))}“)` : ""} · ${esc(l.evidence || "")}; kein Zitat`;
+    }
     // eigene Ortsbezüge zuerst; übernommene getrennt, damit klar bleibt, dass sie den Ursprungsvorgang betreffen
     const ownLocs = p.locations.filter((l) => l.method !== "vererbt"), takenLocs = p.locations.filter((l) => l.method === "vererbt");
     const locs = (ownLocs.length ? ownLocs.map(locItem).join("") : takenLocs.length ? "" : "<li>stadtweit / ohne Ortsbezug</li>")

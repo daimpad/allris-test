@@ -131,6 +131,21 @@ Die Verortung ist regelbasiert. Sie nutzt reguläre Ausdrücke und Geometrie (sh
 - **Ortsteile:** Die Planfläche wird mit den Ortsteilen verschnitten. Ein Ortsteil zählt ab 5 % der Planfläche, sonst der mit dem größten Anteil. Der Punkt ist ein innerer Punkt der Schnittfläche.
 - **Vorrang:** Bei einem eindeutigen Plan entfallen die übrigen Ortsbezüge der Stufe B derselben Vorlage, weil der Geltungsbereich genauer ist als ein Straßenname im Titel.
 
+**Volltext** (`pipeline/volltext.py`, `_fulltext` in `pipeline/build.py`, seit 20.10.2026)
+- **Texte:** `fetch-texts` holt aus OParl-Lite die Liste der Hauptdokumente mit Text („Sammeldokument öffentlich“, `textExtracted`) und dann nur neue oder geänderte Texte (`textSha256`), je Anfrage 10, höchstens 3.000 je Lauf, in `data/raw/texte.jsonl`. Die Datei liegt nur lokal und im Zwischenspeicher des Workflows (`texte-…`); sie wird nicht veröffentlicht. Rahmen laut Antwort der Stadt Bonn: Verarbeitung zulässig, keine Zitate und keine Auszüge.
+- **Bereinigung:**
+  - ausgeblendet werden der Kopf bis zum Ende der Beratungsfolge, Zeilen, die mindestens dreimal vorkommen (Kopf- und Fußzeilen), Gremiennamen („Bezirksvertretung Beuel“) und Dienstadressen (Stadthaus, Altes Rathaus);
+  - Hauptteil und Anlagen (ab „Anlage/n“) werden getrennt gewertet.
+- **Regeln:** wie Stufe B auf den Text, mit Vorfilter der Straßennamen nach ihrem ersten Wort (`Gazetteer.street_re_for`, gleiche Treffer, rund viermal schneller).
+  - Gattungsnamen wie „Markt“, „Schulstraße“ und „Forstweg“ zählen nur mit Hausnummer.
+  - Nur für Vorlagen ohne eigenen Ortsbezug (Ort der Stadt, Titel, Bebauungsplan); nicht für Eingaben von Bürger:innen (Bürgerantrag, Anregungen und Beschwerden, Einwohner…), weil sie oft deren Anschrift enthalten.
+  - Mehr als 5 Ortsteile gelten als Liste und werden nicht verortet.
+  - Nur der Hauptteil zählt; Orte, die nur in den Anlagen stehen, werden nicht verortet.
+  - „mittel“ nur bei mindestens zwei Nennungen oder passender befasster Bezirksvertretung und einer Regel, die selbst „mittel“ ergibt; sonst „niedrig“. Ein Stadtbezirk allein zählt nur unter derselben Bedingung.
+- **Methoden:** `volltext_` plus die Methode der Stufe B, etwa `volltext_strasse+hausnummer`; Stufe B. Fundstelle: „im Hauptteil des Hauptdokuments genannt: <Name>“, kein Text.
+- **Prüfung:** `data/export/audit_volltext.tsv` enthält je Vorlage mit Text den Befund (verortet, kein Ort, Liste, einzelne Erwähnung eines Stadtbezirks), je Ort Methode, Ortsteil, Konfidenz und Nennungen. Die Stichprobe `data/export/volltext/stichprobe_volltext.tsv` (30 Vorgänge) wird nie überschrieben. Tests: `tests/test_volltext.py`.
+- **Stand 20.10.2026:** 1.315 Vorlagen mit Text, davon 163 neu verortet (498 Ortsbezüge); nicht verortet: 41 mit Orten nur in den Anlagen, 19 als Liste, 21 mit einzelner Bezirksnennung; 201 Vorlagen erben einen Ortsbezug. Stichprobe und KI-Vorprüfung: `verortung/PRUEFUNG.md`.
+
 **Vererbung** (`_inherited` in `pipeline/build.py`)
 - Eine Vorlage ohne eigenen Ortsbezug, zum Beispiel eine Stellungnahme oder ein Änderungsantrag, übernimmt die Ortsbezüge ihrer übergeordneten Vorlage (`superordinatedPaper`).
 - Methode `vererbt`, Stufe B, Konfidenz höchstens „mittel“.

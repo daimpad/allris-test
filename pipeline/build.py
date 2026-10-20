@@ -3,11 +3,13 @@ import csv
 import json
 import random
 import sqlite3
+from collections import Counter
 
 from . import actors, config
 from .geo import Ortsteile
 from .geocode import Gazetteer, plan_numbers
 from .plans import Plans, plan_locations
+from . import volltext
 
 SCHEMA = """
 CREATE TABLE source (
@@ -164,7 +166,9 @@ def build():
             rows["resp"].append((p["id"], r["organization_id"], r["kind"], r["method"],
                                  r["evidence"], r["derived"]))
 
-    rows["ploc"] += _stage_b(papers, bv_bezirke, locations)
+    points = [(loc[1], loc[5], loc[6]) for loc in locations.values() if loc[-1] == "oparl-bonn"]
+    gaz = Gazetteer(street_points=points)
+    rows["ploc"] += _stage_b(papers, bv_bezirke, locations, gaz)
     plans = Plans()
     rows["plan"] = [(pid, nr, ev, plans.classify(nr)[0]) for pid, nr, ev in rows["plan"]]
     plan_locs, plan_rows = plan_locations([r[:3] for r in rows["plan"]], ortsteile, plans)
@@ -177,6 +181,7 @@ def build():
     print(f"Bebauungspläne: {len({r[0] for r in plan_rows})} Vorlagen mit Geltungsbereich, "
           f"{len({r[0] for r in rows['plan']})} mit Plannummer im Titel, "
           f"{len(sure)} eindeutig (Vorrang vor {len(precedence)} Ortsbezügen aus dem Titel)")
+    rows["ploc"] += _fulltext(papers, bv_bezirke, locations, gaz, {r[0] for r in rows["ploc"]})
     rows["ploc"] += _inherited(papers, papers_by_id, rows["ploc"])
 
     # OR REPLACE: ändert sich die Quelle während des seitenweisen Abrufs, kann eine Vorlage doppelt kommen
@@ -197,10 +202,78 @@ def build():
           f"{len(agenda)} TOPs, {len(locations)} Orte → {config.DB}")
 
 
-def _stage_b(papers, bv_bezirke, locations):
+def _add_location(r, locations, gaz):
+    """Ort einer Gazetteer-Zeile in die Ortstabelle; liefert die Orts-ID."""
+    if r["level"] == "strasse":
+        loc_id, source = f"strasse:{r['name']}|{r['ortsteil']}", r["source"]
+    else:
+        loc_id, source = f"{r['level']}:{r['name']}", "geo-bonn"
+    nr = gaz.ot_by_name[r["ortsteil"]]["ortsteil"] if r["ortsteil"] else None
+    locations[loc_id] = (loc_id, r["name"] if r["level"] == "strasse" else None, None, None,
+                         r["name"], r["lon"], r["lat"], r["ortsteil"], nr, r["bezirk"],
+                         r["level"], source)
+    return loc_id
+
+
+def _fulltext(papers, bv_bezirke, locations, gaz, placed):
+    """Ortsbezüge aus dem Volltext der Hauptdatei (volltext.py) für Vorlagen ohne eigenen Ortsbezug; Audit und
+    einmalig eine Stichprobe (ohne Textauszüge)."""
+    texts = volltext.load_texts()
+    if not texts:
+        print(f"Volltext: {config.TEXTE} fehlt – keine Verortung aus Dokumenten.")
+        return []
+    out, audit, found = [], [], {}
+    for p in papers:
+        text = texts.get((p.get("mainFile") or {}).get("id"))
+        if not text or p["id"] in placed or not volltext.allowed(p.get("paperType")):
+            continue
+        rows, info = volltext.locate(gaz, text, bv_bezirke.get(p["id"], ()))
+        if not rows:
+            audit.append((p["reference"], info["befund"], info.get("teil", ""), "", "", "", "", ""))
+        for r in rows:
+            out.append((p["id"], _add_location(r, locations, gaz), "B", r["method"], r["confidence"], r["evidence"], p["id"]))
+            audit.append((p["reference"], info["befund"], r["teil"], r["method"], r["name"], r["ortsteil"] or "",
+                          r["confidence"], r["nennungen"]))
+        if rows:
+            found[p["reference"]] = (p, rows)
+    _write(config.EXPORT / "audit_volltext.tsv",
+           ["drucksache", "befund", "teil", "methode", "ort", "ortsteil", "konfidenz", "nennungen"], sorted(audit, key=str))
+    n_text = sum(1 for p in papers if texts.get((p.get("mainFile") or {}).get("id")))
+    befunde = Counter(a[1].split(" (")[0] for a in {(a[0], a[1]) for a in audit})
+    print(f"Volltext: {n_text} Vorlagen mit Text, {len(found)} neu verortet ({len(out)} Ortsbezüge); Befunde {dict(befunde)}")
+    _fulltext_sample(found)
+    return out
+
+
+def _fulltext_sample(found):
+    """30 Vorgänge mit Verortung aus dem Volltext zur Prüfung (je Vorgang eine Zeile; wird nie überschrieben)."""
+    path = config.EXPORT / "volltext" / "stichprobe_volltext.tsv"
+    if path.exists() or not found:
+        return
+    seen, cases = set(), []
+    for ref in sorted(found):
+        if ref[:6] not in seen:
+            seen.add(ref[:6]); cases.append(ref)
+    pick = sorted(random.Random(20261020).sample(cases, min(30, len(cases))))
+    path.parent.mkdir(parents=True, exist_ok=True)
+    _write(path, ["nr", "drucksache", "titel", "link", "orte (Ortsteil)", "konfidenz", "teil", "urteil (richtig/falsch/unklar)",
+                  "anmerkung"],
+           [[i, ref, found[ref][0].get("name"), found[ref][0].get("web") or "",
+             "; ".join(f"{r['name']} ({r['ortsteil']})" if r["ortsteil"] and r["level"] == "strasse" else r["name"] for r in found[ref][1]),
+             "/".join(sorted({r["confidence"] for r in found[ref][1]})), found[ref][1][0]["teil"], "", ""]
+            for i, ref in enumerate(pick, 1)])
+    print(f"Stichprobe Volltext: {len(pick)} → {path}")
+
+
+def _write(path, header, rows):
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
+        w.writerow(header)
+        w.writerows(rows)
+
+
+def _stage_b(papers, bv_bezirke, locations, gaz):
     """Stufe B: Ortsbezüge aus dem Titel (Straße, Ortsteil, Stadtbezirk)."""
-    points = [(loc[1], loc[5], loc[6]) for loc in locations.values() if loc[-1] == "oparl-bonn"]
-    gaz = Gazetteer(street_points=points)
     if not gaz.streets:
         print(f"Hinweis: {config.OSM_STREETS} fehlt oder ist leer – Stufe B ohne Straßen.")
     out, hnr = [], {}
@@ -209,15 +282,7 @@ def _stage_b(papers, bv_bezirke, locations):
             if "hnr_vorher" in r:
                 hnr.setdefault((p["reference"], r["name"]), (r["hnr_vorher"], r.get("hnr_ohne_lage") or r["ortsteil"],
                                                               "hnr_ohne_lage" not in r, p))
-            if r["level"] == "strasse":
-                loc_id, source = f"strasse:{r['name']}|{r['ortsteil']}", r["source"]
-            else:
-                loc_id, source = f"{r['level']}:{r['name']}", "geo-bonn"
-            nr = gaz.ot_by_name[r["ortsteil"]]["ortsteil"] if r["ortsteil"] else None
-            locations[loc_id] = (loc_id, r["name"] if r["level"] == "strasse" else None, None, None,
-                                 r["name"], r["lon"], r["lat"], r["ortsteil"], nr, r["bezirk"],
-                                 r["level"], source)
-            out.append((p["id"], loc_id, "B", r["method"], r["confidence"], r["evidence"], p["id"]))
+            out.append((p["id"], _add_location(r, locations, gaz), "B", r["method"], r["confidence"], r["evidence"], p["id"]))
     print(f"Stufe B: {len({r[0] for r in out})} Vorlagen, {len(out)} Ortsbezüge")
     _hnr_audit(hnr)
     return out
