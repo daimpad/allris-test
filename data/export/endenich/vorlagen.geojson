@@ -2,8 +2,8 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 574,
-  "generated_at": "2026-10-19T15:42:18+00:00",
+  "count": 556,
+  "generated_at": "2026-10-20T07:24:18+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -1114,7 +1114,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026362"
    }
@@ -1138,7 +1138,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026362"
    }
@@ -1306,7 +1306,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026347"
    }
@@ -1330,7 +1330,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026347"
    }
@@ -2113,30 +2113,6 @@
     ]
    },
    "properties": {
-    "reference": "253196-01 ST",
-    "name": "Bürgerantrag: Einrichtung einer Tempo 30-Zone im Bereich Herwarthstraße (ab Einmündung Gluckstraße), über Endenicher Straße bis zur Kreuzung am Wittelsbacherring.",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2025-06-13",
-    "amt": "33 Bürgerdienste",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023119"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
     "reference": "252722-01 ST",
     "name": "Bürgerantrag: Einrichtung von Anwohnerparkplätzen im Bereich Endenicher Straße",
     "paper_type": "Stellungnahme der Verwaltung",
@@ -2317,30 +2293,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022996"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "253196",
-    "name": "Bürgerantrag: Einrichtung einer Tempo 30-Zone im Bereich Herwarthstraße (ab Einmündung Gluckstraße), über Endenicher Straße bis zur Kreuzung am Wittelsbacherring.",
-    "paper_type": "Anregungen und Beschwerden",
-    "date": "2025-05-26",
-    "amt": "01-1 Bürgerbüro",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022962"
    }
   },
   {
@@ -3466,7 +3418,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020852"
    }
@@ -3514,7 +3466,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020852"
    }
@@ -3682,7 +3634,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020404"
    }
@@ -3730,7 +3682,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020404"
    }
@@ -3826,7 +3778,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020186"
    }
@@ -3850,7 +3802,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020192"
    }
@@ -3922,7 +3874,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020043"
    }
@@ -3946,7 +3898,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020054"
    }
@@ -4388,30 +4340,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "232062-03 AA",
-    "name": "Änderungsantrag der Koalition - Bürgerantrag: Einrichtung von Querungshilfen im Bereich Endenicher Allee von Campusallee zum Wiesenweg/zur Schubertstraße Antrag zur Vorlage 232062",
-    "paper_type": "Änderungsantrag",
-    "date": "2024-09-12",
-    "amt": "01-2 Ratsbüro",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019184"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.078475,
      50.72715
     ]
@@ -4714,7 +4642,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017862"
    }
@@ -4762,7 +4690,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017862"
    }
@@ -4930,7 +4858,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017441"
    }
@@ -4978,7 +4906,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017441"
    }
@@ -5026,7 +4954,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017421"
    }
@@ -5074,7 +5002,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017421"
    }
@@ -5204,30 +5132,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "232062-02 ST",
-    "name": "Bürgerantrag: Einrichtung von Querungshilfen im Bereich Endenicher Allee von Campusallee zum Wiesenweg/zur Schubertstraße",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2024-04-25",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016988"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.078475,
      50.72715
     ]
@@ -5290,7 +5194,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016598"
    }
@@ -5338,7 +5242,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016598"
    }
@@ -6013,30 +5917,6 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015386"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "232062-01 ST",
-    "name": "Bürgerantrag: Einrichtung von Querungshilfen im Bereich Endenicher Allee von Campusallee zum Wiesenweg/zur Schubertstraße",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2024-01-13",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015424"
    }
   },
   {
@@ -6764,30 +6644,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.063923,
-     50.720473
-    ]
-   },
-   "properties": {
-    "reference": "231495-01 ST",
-    "name": "Beleuchtung der Reichsstraße/Provinzialstraße",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2023-08-21",
-    "amt": "66 Tiefbauamt",
-    "place": "Provinzialstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013490"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.0764434,
      50.7249815
     ]
@@ -6805,30 +6661,6 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012692"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.063923,
-     50.720473
-    ]
-   },
-   "properties": {
-    "reference": "231495",
-    "name": "Beleuchtung der Reichsstraße/Provinzialstraße",
-    "paper_type": "Antrag",
-    "date": "2023-08-15",
-    "amt": "01-2 Ratsbüro",
-    "place": "Provinzialstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013381"
    }
   },
   {
@@ -7306,7 +7138,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011995"
    }
@@ -7330,7 +7162,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011995"
    }
@@ -7354,7 +7186,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011995"
    }
@@ -7378,7 +7210,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011995"
    }
@@ -7628,30 +7460,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "230390-01 ST",
-    "name": "Ampel Endenicher Straße/ Wesendonckstraße",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2023-03-30",
-    "amt": "66 Tiefbauamt",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011453"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.073172,
      50.734047
     ]
@@ -7810,7 +7618,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011039"
    }
@@ -7837,30 +7645,6 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011086"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.063923,
-     50.720473
-    ]
-   },
-   "properties": {
-    "reference": "230471",
-    "name": "Informationsbrief - Sanierung Abwasserkanal Provinzialstraße bis In der Grächt",
-    "paper_type": "Informationsbrief",
-    "date": "2023-02-28",
-    "amt": "Stabsstellle Bürgerbeteiligung",
-    "place": "Provinzialstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010955"
    }
   },
   {
@@ -7940,30 +7724,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "230390",
-    "name": "Grüne/SPD/u.w.-Antrag: Ampel Endenicher Straße/ Wesendonckstraße",
-    "paper_type": "Antrag",
-    "date": "2023-02-15",
-    "amt": "01-2 Ratsbüro",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010798"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.0744792,
      50.7275062
     ]
@@ -8026,7 +7786,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010205"
    }
@@ -8458,7 +8218,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009163"
    }
@@ -8506,7 +8266,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009163"
    }
@@ -8626,7 +8386,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009040"
    }
@@ -8674,7 +8434,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2009040"
    }
@@ -10258,7 +10018,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004097"
    }
@@ -10282,7 +10042,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004097"
    }
@@ -10309,30 +10069,6 @@
     "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003155"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.072251,
-     50.735946
-    ]
-   },
-   "properties": {
-    "reference": "212292",
-    "name": "Abbau eines Grünpfeils Ecke Am Propsthof/Bornheimer Straße",
-    "paper_type": "Mitteilungsvorlage",
-    "date": "2021-12-08",
-    "amt": "33 Bürgerdienste",
-    "place": "Am Propsthof",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004030"
    }
   },
   {
@@ -10628,30 +10364,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "211672-01 ST",
-    "name": "Fahrbahnteiler Endenicher Straße / Verdistraße",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2021-09-30",
-    "amt": "66 Tiefbauamt",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002940"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.07005,
      50.727177
     ]
@@ -10820,30 +10532,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "211672",
-    "name": "Fahrbahnteiler Endenicher Straße / Verdistraße",
-    "paper_type": "Antrag",
-    "date": "2021-09-15",
-    "amt": "01-2 Ratsbüro",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002724"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.0693367,
      50.7229862
     ]
@@ -10981,30 +10669,6 @@
     "method": "strasse",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002324"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "211124-01 ST",
-    "name": "Bürgerantrag: Nutzungsproblematik Sportplatz Ernst-Moritz-Arndt Gymnasium Endenicher Allee/Wegelerstraße sowie Beseitigung des Beachvolleyballplatzes",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2021-08-11",
-    "amt": "33 Bürgerdienste",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002059"
    }
   },
   {
@@ -11245,30 +10909,6 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001081"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "211124",
-    "name": "Bürgerantrag: Nutzungsproblematik Sportplatz Ernst-Moritz-Arndt Gymnasium Endenicher Allee/Wegelerstraße sowie Beseitigung des Beachvolleyballplatzes",
-    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-    "date": "2021-06-28",
-    "amt": "01-1 Bürgerbüro",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001674"
    }
   },
   {
@@ -11554,7 +11194,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000910"
    }
@@ -11578,33 +11218,9 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000910"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "210742-01 ST",
-    "name": "DB-Unterführung für Fußgänger- und Fahrradfahrer*innen zwischen Ecke Endenicher Straße /Herwarthstraße und Thomasstraße",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2021-05-11",
-    "amt": "66 Tiefbauamt",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000820"
    }
   },
   {
@@ -11650,7 +11266,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000760"
    }
@@ -11698,7 +11314,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000760"
    }
@@ -11818,7 +11434,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000621"
    }
@@ -11842,7 +11458,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000621"
    }
@@ -11869,30 +11485,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000633"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "210742",
-    "name": "DB-Unterführung für Fußgänger- und Fahrradfahrer*innen zwischen Ecke Endenicher Straße /Herwarthstraße und Thomasstraße",
-    "paper_type": "Antrag",
-    "date": "2021-04-28",
-    "amt": "01-2 Ratsbüro",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000634"
    }
   },
   {
@@ -12308,30 +11900,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "202055-01 ST",
-    "name": "Straßenreinigung; hier Einordnung der Herwarthstraße zwischen Bachstraße und Endenicher Straße",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2020-12-10",
-    "amt": "66 Tiefbauamt",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9248"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.077042,
      50.725874
     ]
@@ -12346,7 +11914,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9181"
    }
@@ -12370,7 +11938,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9181"
    }
@@ -12469,30 +12037,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8493"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "202055",
-    "name": "Straßenreinigung; hier Einordnung der Herwarthstraße zwischen Bachstraße und Endenicher Straße",
-    "paper_type": "Große Anfrage",
-    "date": "2020-11-25",
-    "amt": "01-2 Ratsbüro",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8813"
    }
   },
   {
@@ -12730,7 +12274,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8513"
    }
@@ -12754,7 +12298,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8513"
    }
@@ -12850,7 +12394,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8182"
    }
@@ -12874,7 +12418,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8182"
    }
@@ -12925,30 +12469,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8091"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "201323-1 AA",
-    "name": "Änderung der Radverkehrsführung auf der Straße Endenicher Allee im Bereich zwischen Nußallee und Beethovenstraße Antrag zur Vorlage 201323",
-    "paper_type": "Änderungsantrag",
-    "date": "2020-10-01",
-    "amt": "01-2 Ratsbüro",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8197"
    }
   },
   {
@@ -13210,7 +12730,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7358"
    }
@@ -13234,7 +12754,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7358"
    }
@@ -13306,7 +12826,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7327"
    }
@@ -13330,7 +12850,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7327"
    }
@@ -13402,7 +12922,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6849"
    }
@@ -13426,7 +12946,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6849"
    }
@@ -13450,7 +12970,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6849"
    }
@@ -13477,30 +12997,6 @@
     "method": "strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7253"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "201323",
-    "name": "Änderung der Radverkehrsführung auf der Straße Endenicher Allee im Bereich zwischen Nußallee und Beethovenstraße",
-    "paper_type": "Beschlussvorlage",
-    "date": "2020-07-27",
-    "amt": "66 Tiefbauamt",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7074"
    }
   },
   {
@@ -14218,7 +13714,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3786"
    }
@@ -14242,7 +13738,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3786"
    }
@@ -14770,7 +14266,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3279"
    }
@@ -14794,7 +14290,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3279"
    }
@@ -14818,7 +14314,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3288"
    }
@@ -14842,7 +14338,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3288"
    }
@@ -15058,7 +14554,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3000"
    }
@@ -15082,7 +14578,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3000"
    }
@@ -15250,7 +14746,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2640"
    }
@@ -15274,7 +14770,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+kreuzung",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2640"
    }

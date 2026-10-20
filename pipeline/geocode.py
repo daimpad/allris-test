@@ -3,6 +3,10 @@
 Straßenverzeichnis: benannte OSM-Ways (ODbL), je Name zu Ortsteilen zugeordnet. Mehrere räumlich
 getrennte Lagen desselben Namens gelten als mehrdeutig (z. B. „Kapellenstraße“). Ergänzend dienen
 die Straßenpunkte der OParl-Locations (Stufe A, CC0) für Namen, die in OSM (noch) fehlen.
+
+Kreuzungen: Für je zwei Straßen, deren Linien sich berühren, werden die Ortsteile der Berührungspunkte
+gespeichert. Nennt ein Titel zwei solche Straßen, gilt der Ortsteil der Kreuzung (Regel R1,
+verortung/PRUEFUNG.md).
 """
 import json
 import math
@@ -91,9 +95,13 @@ class Gazetteer:
                              for f in bezirke}
         self.ot_by_name = {p["ortsteil_bez"]: p for p in self.ortsteile}
         if ways is None and config.STRASSEN.exists():
-            self.streets = json.loads(config.STRASSEN.read_text())["streets"]
+            data = json.loads(config.STRASSEN.read_text())
+            self.streets = data["streets"]
+            self.crossings = {tuple(k.split("|")): set(v) for k, v in data.get("kreuzungen", {}).items()}
         else:
-            self.streets = self._streets(ways if ways is not None else self._load_ways())
+            ways = ways if ways is not None else self._load_ways()
+            self.streets = self._streets(ways)
+            self.crossings = self._crossings(ways)
         self._add_points(street_points)
 
         # Ortsteilnamen, Varianten und Adjektive („Endenicher“) → Ortsteil
@@ -159,6 +167,33 @@ class Gazetteer:
                 streets[name] = entries
         return streets
 
+    def _crossings(self, ways):
+        """(Name A, Name B) mit A < B → Ortsteile, in denen sich die beiden Straßen berühren."""
+        lines = defaultdict(list)
+        for w in ways:
+            if w.get("highway") in SKIP_HIGHWAY or len(w["coords"]) < 2:
+                continue
+            lines[w["name"].strip()].append(LineString(w["coords"]))
+        names = sorted(n for n in lines if n in self.streets)
+        geoms = [to_m(unary_union(lines[n])) for n in names]
+        if not geoms:
+            return {}
+        tree = STRtree(geoms)
+        out = {}
+        for i, j in zip(*tree.query(geoms, predicate="intersects")):
+            if i >= j:
+                continue
+            touch = geoms[i].intersection(geoms[j])
+            points = [g if g.geom_type == "Point" else g.representative_point()
+                      for g in getattr(touch, "geoms", [touch]) if not g.is_empty]
+            ots = set()
+            for pt in points:
+                for idx in self.ot_tree.query(pt, predicate="intersects"):
+                    ots.add(self.ortsteile[int(idx)]["ortsteil_bez"])
+            if ots:
+                out[(names[i], names[j])] = ots
+        return out
+
     def _add_points(self, street_points):
         for name, lon, lat in street_points:
             name = (name or "").strip()
@@ -195,10 +230,13 @@ class Gazetteer:
 
         named_ot = {self.ot_alias[n][0] for *_, n, _ in ots}
         named_bz = {self.bz_alias[n][0] for *_, n, _ in bzs} | {self.ot_by_name[o]["bezirk_bez"] for o in named_ot}
+        found = sorted({name for _, _, name, _ in streets if name in self.streets})
         rows = []
         for _, _, name, ev in streets:
             if name in self.streets:
-                rows += self._resolve_street(name, ev, named_ot, named_bz, set(bv_bezirke))
+                cross_ot = set().union(*[self.crossings.get(tuple(sorted((name, other))), set())
+                                         for other in found if other != name])
+                rows += self._resolve_street(name, ev, named_ot, named_bz, set(bv_bezirke), cross_ot)
         covered = {r["ortsteil"] for r in rows}
         for _, _, alias, ev in ots:
             ot, method = self.ot_alias[alias]
@@ -225,11 +263,15 @@ class Gazetteer:
                              evidence=ev))
         return rows
 
-    def _resolve_street(self, name, evidence, named_ot, named_bz, bv_bezirke):
+    def _resolve_street(self, name, evidence, named_ot, named_bz, bv_bezirke, cross_ot=frozenset()):
         entries = self.streets[name]
-        n_comp = len({e["component"] for e in entries})
+        ots = {e["ortsteil"] for e in entries}
         method, conf = "strasse", "niedrig" if name in GENERIC_NAMES else "mittel"
-        if named_ot & {e["ortsteil"] for e in entries}:
+        if cross_ot & ots and not named_ot:
+            # R1: Kreuzung mit einer anderen genannten Straße bestimmt den Ortsteil
+            entries, method = [e for e in entries if e["ortsteil"] in cross_ot], "strasse+kreuzung"
+        n_comp = len({e["component"] for e in entries})
+        if named_ot & ots:
             entries = [e for e in entries if e["ortsteil"] in named_ot]
             method = "strasse+ortsteil"
         elif n_comp > 1:
@@ -263,11 +305,14 @@ def write_gazetteer():
     """Straßenverzeichnis aus den OSM-Rohdaten neu berechnen und in data/geo ablegen."""
     gaz = Gazetteer(ways=Gazetteer._load_ways())
     stand = json.loads(config.STAND.read_text()) if config.STAND.exists() else {}
+    crossings = {f"{a}|{b}": sorted(v) for (a, b), v in sorted(gaz.crossings.items())}
     config.STRASSEN.write_text(json.dumps({
         "meta": {"source": "OpenStreetMap (Overpass API), benannte Ways mit highway-Tag",
                  "license": config.SOURCES["osm"]["license"],
                  "retrieved_at": stand.get("osm_streets"),
                  "note": "Ortsteile je Straße per Verschneidung mit den Ortsteilflächen der Stadt Bonn; "
-                         "component = räumlich getrennte Lage desselben Namens"},
-        "streets": dict(sorted(gaz.streets.items()))}, ensure_ascii=False, separators=(",", ":")))
-    print(f"{len(gaz.streets)} Straßennamen → {config.STRASSEN}")
+                         "component = räumlich getrennte Lage desselben Namens; kreuzungen = Ortsteile, in denen "
+                         "sich zwei Straßen berühren (Schlüssel „Name A|Name B“)"},
+        "streets": dict(sorted(gaz.streets.items())),
+        "kreuzungen": crossings}, ensure_ascii=False, separators=(",", ":")))
+    print(f"{len(gaz.streets)} Straßennamen, {len(crossings)} Kreuzungen → {config.STRASSEN}")

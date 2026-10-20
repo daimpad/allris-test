@@ -64,6 +64,7 @@ Die Verortung ist regelbasiert. Sie nutzt reguläre Ausdrücke und Geometrie (sh
   3. Jede Lage wird mit den Ortsteilen verschnitten, in einer flächentreuen Projektion in Metern. Ein Ortsteil zählt, wenn mindestens 150 m oder 15 % der Straße darin liegen.
   4. Je Straße und Ortsteil gilt als Punkt die Mitte des längsten Abschnitts. Ein Straßenpunkt steht damit für die Straße im Ortsteil, nicht für ein Gebäude.
   5. Straßennamen, die nur in den OParl-Orten der Stadt vorkommen, werden zur Laufzeit ergänzt (`_add_points`, Quelle `oparl-bonn`).
+  6. **Kreuzungen** (`_crossings`): Für je zwei Straßen, deren Linien sich berühren, speichert das Verzeichnis die Ortsteile der Berührungspunkte (derzeit 4.532 Paare, Schlüssel `kreuzungen`).
 - **Namensvarianten der Ortsteile** (`ORTSTEIL_ALIASES`):
   - Teilnamen zusammengesetzter Ortsteile, etwa „Lessenich“ und „Meßdorf“ für „Lessenich/Meßdorf“.
   - Adjektive auf „-er“ wie „Endenicher“.
@@ -90,6 +91,7 @@ Die Verortung ist regelbasiert. Sie nutzt reguläre Ausdrücke und Geometrie (sh
    | Lage | Methode | Konfidenz |
    |---|---|---|
    | Der Titel nennt einen Ortsteil, in dem die Straße liegt | `strasse+ortsteil` | mittel |
+   | Der Titel nennt eine zweite Straße, die diese kreuzt; es gilt der Ortsteil der Kreuzung (R1, seit 20.10.2026) | `strasse+kreuzung` | mittel |
    | Mehrere getrennte Lagen; der genannte Bezirk oder der Bezirk der befassten Bezirksvertretung lässt genau eine übrig | `strasse+bezirk` | mittel |
    | Mehrere Lagen, keine Eingrenzung möglich | `strasse_mehrdeutig` | niedrig |
    | Eine Lage, die außerhalb des Bezirks der befassten Bezirksvertretung oder des genannten Bezirks liegt | `strasse` | niedrig |
