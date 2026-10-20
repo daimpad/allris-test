@@ -449,11 +449,42 @@
   // Gebiete auf der Karte wählen: herausgezoomt die Stadtbezirke als Flächen mit Namen (Klick zoomt hinein und zeigt
   // seine Ortsteile mit Namen), näher die Ortsteile (Klick lädt das Gebiet wie die Auswahl oben). Eigene Ebene unter
   // Plänen, Baustellen und Punkten; die Namen liegen in der Ebene der Tooltips und fangen keine Klicks ab.
-  const NAV_LINE = { color: "#6d28d9", weight: 1, opacity: 0.35, fillColor: "#7c3aed", fillOpacity: 0 };
-  const NAV_FOCUS = { ...NAV_LINE, opacity: 0.6, fillOpacity: 0.08 };
-  const NAV_HOVER = { ...NAV_LINE, weight: 2.5, opacity: 0.9, fillOpacity: 0.22 };
-  const BZ_STYLE = { color: "#6d28d9", weight: 2, opacity: 0.7, fillColor: "#7c3aed", fillOpacity: 0.12 };
-  const BZ_HOVER = { ...BZ_STYLE, weight: 3, opacity: 0.95, fillOpacity: 0.3 };
+  // Flächen schwach lila mit Verlauf; benachbarte Flächen erhalten verschiedene Töne (SVG-Verläufe in der Ebene „gebiete“).
+  // Beim Überfahren: heller Glaseffekt (weißer Verlauf, weißer Rand, Schein).
+  const NAV_HUES = [262, 280, 246, 296, 232, 270];
+  const tint = (k) => `url(#nav-g${k % NAV_HUES.length})`;
+  const NAV_LINE = { color: "#6d28d9", weight: 1, opacity: 0.4, fillOpacity: 1 };
+  const BZ_LINE = { color: "#6d28d9", weight: 2, opacity: 0.7, fillOpacity: 1 };
+  const GLASS = { color: "#ffffff", weight: 2.5, opacity: 1, fillColor: "url(#nav-glass)", fillOpacity: 1 };
+  const navRenderer = L.svg({ pane: "gebiete", padding: 0.3 });
+  const navTint = new Map();
+  function navDefs() {
+    const svg = navRenderer._container;
+    if (!svg || svg.querySelector("#nav-glass")) return;
+    const stops = (list) => list.map(([o, c, a]) => `<stop offset="${o}" stop-color="${c}" stop-opacity="${a}"/>`).join("");
+    const grads = NAV_HUES.map((h, k) => `<linearGradient id="nav-g${k}" x1="0" y1="0" x2="1" y2="1">${stops([[0, `hsl(${h},85%,80%)`, 0.42], [0.55, `hsl(${h + 6},70%,68%)`, 0.24], [1, `hsl(${h + 12},60%,55%)`, 0.16]])}</linearGradient>`).join("");
+    const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+    defs.innerHTML = `${grads}<linearGradient id="nav-glass" x1="0" y1="0" x2="0.6" y2="1">${stops([[0, "#ffffff", 0.62], [0.45, "#ffffff", 0.3], [1, "#ede9fe", 0.22]])}</linearGradient>
+      <filter id="nav-glow" x="-15%" y="-15%" width="130%" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="b"/>
+        <feFlood flood-color="#ffffff" flood-opacity="0.9"/><feComposite in2="b" operator="in" result="g"/>
+        <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>`;
+    svg.insertBefore(defs, svg.firstChild);
+  }
+  // Benachbarte Flächen (überlappende Umrisse) erhalten verschiedene Töne: gierige Färbung
+  function colorize(layers) {
+    const used = [];
+    layers.forEach((l, i) => {
+      const b = l.getBounds(), taken = new Set();
+      layers.slice(0, i).forEach((m, j) => { if (b.intersects(m.getBounds())) taken.add(used[j]); });
+      let k = 0;
+      while (taken.has(k) && k < NAV_HUES.length - 1) k++;
+      used.push(k);
+      navTint.set(l, k);
+    });
+  }
+  const glassOn = (layer) => { layer.setStyle(GLASS); layer.bringToFront(); layer.getElement()?.setAttribute("filter", "url(#nav-glow)"); };
+  const glassOff = (layer, style) => { layer.setStyle(style); layer.getElement()?.removeAttribute("filter"); };
+  const bzStyle = (layer) => ({ ...BZ_LINE, fillColor: tint(navTint.get(layer) || 0) });
   let navBezirke = null, navOrtsteile = null, bonnBounds = null, navDeep = false, navFocus = null, navLabels = null, navMode = null;
   const de = (n) => Number(n || 0).toLocaleString("de-DE");
   // Zoomstufe, bei der ganz Bonn ins freie Kartenfeld passt; bis dahin sind die Stadtbezirke anklickbar
@@ -469,29 +500,32 @@
     if (tl) tl.reset();
     loadArea(value);
   }
-  const otStyle = (layer) => (navFocus && layer.feature.properties.bezirk_bez === navFocus ? NAV_FOCUS : NAV_LINE);
+  const otStyle = (layer) => {
+    const inFocus = navFocus && layer.feature.properties.bezirk_bez === navFocus;
+    return { ...NAV_LINE, opacity: inFocus ? 0.7 : 0.4, fillOpacity: navFocus && !inFocus ? 0.45 : 1, fillColor: tint(navTint.get(layer) || 0) };
+  };
   function initNav() {
     if (!index) return;
     map.createPane("gebiete").style.zIndex = 350;
     navOrtsteile = L.geoJSON(geo.ortsteil, {
-      pane: "gebiete", style: NAV_LINE,
+      pane: "gebiete", renderer: navRenderer, style: NAV_LINE,
       filter: (f) => index.ortsteile.some((o) => o.name === f.properties.ortsteil_bez),
       onEachFeature(f, layer) {
         const o = index.ortsteile.find((x) => x.name === f.properties.ortsteil_bez);
         const current = () => area && area.kind === "ortsteil" && area.key === o.slug;
         layer.bindTooltip(() => (current() ? `<strong>${esc(o.name)}</strong><br>gewählt`
           : `<strong>${esc(o.name)}</strong><br>${de(o.count)} Vorlagen · Klick zeigt den Ortsteil`), { sticky: true, className: "nav-tip" });
-        layer.on({ mouseover: () => layer.setStyle(NAV_HOVER), mouseout: () => layer.setStyle(otStyle(layer)) });
+        layer.on({ mouseover: () => glassOn(layer), mouseout: () => glassOff(layer, otStyle(layer)) });
         layer.on("click", () => { if (!current()) chooseArea(`ortsteil:${o.slug}`); });
       },
     });
     navBezirke = L.geoJSON(geo.bezirk, {
-      pane: "gebiete", style: BZ_STYLE,
+      pane: "gebiete", renderer: navRenderer, style: BZ_LINE,
       onEachFeature(f, layer) {
         const name = f.properties.bezirk_bez;
         const n = index.ortsteile.filter((o) => o.stadtbezirk === name).length;
         layer.bindTooltip(`<strong>Stadtbezirk ${esc(name)}</strong><br>${n} Ortsteile · Klick zeigt die Ortsteile`, { sticky: true, className: "nav-tip" });
-        layer.on({ mouseover: () => layer.setStyle(BZ_HOVER), mouseout: () => layer.setStyle(BZ_STYLE) });
+        layer.on({ mouseover: () => glassOn(layer), mouseout: () => glassOff(layer, bzStyle(layer)) });
         layer.on("click", () => {
           navDeep = true; // die Ortsteile anbieten, auch wenn der Bezirk ganz Bonn ausfüllt
           navFocus = name;
@@ -501,6 +535,9 @@
       },
     });
     bonnBounds = navBezirke.getBounds();
+    navBezirke.getLayers().forEach((l, k) => navTint.set(l, k));
+    colorize(navOrtsteile.getLayers());
+    navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
     map.on("zoomend", () => updateNav());
     updateNav();
   }
@@ -548,6 +585,7 @@
     const far = mode === "bezirke";
     (far ? navOrtsteile : navBezirke).remove();
     (far ? navBezirke : navOrtsteile).addTo(map);
+    navDefs();
     navOrtsteile.eachLayer((l) => l.setStyle(otStyle(l)));
     if (far) labels(navBezirke.getLayers(), "nav-label-bz");
     else if (navFocus) labels(navOrtsteile.getLayers().filter((l) => l.feature.properties.bezirk_bez === navFocus), "nav-label-ot");
