@@ -1,0 +1,26 @@
+{
+ "geplant_1_jahr": {
+  "abruf": "2026-10-20T05:32:39+00:00",
+  "anzahl": 46,
+  "erfolg": true,
+  "inhalt": "0f26418124031d71",
+  "thema": 14698,
+  "versuche": 3
+ },
+ "geplant_30_tage": {
+  "abruf": "2026-10-20T05:32:39+00:00",
+  "anzahl": 46,
+  "erfolg": true,
+  "inhalt": "11c062e9ebb89b7b",
+  "thema": 14755,
+  "versuche": 3
+ },
+ "tagesaktuell": {
+  "abruf": "2026-10-20T05:32:39+00:00",
+  "anzahl": 7,
+  "erfolg": true,
+  "inhalt": "d06c071bad4a7280",
+  "thema": 14403,
+  "versuche": 6
+ }
+}

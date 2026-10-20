@@ -1,0 +1,94 @@
+{
+ "baustellen": {
+  "8921": {
+   "adresse": "Humperdinckstraße 2",
+   "bezeichnung": "Hermann-Wandersleb-Ring (B56)",
+   "bis": "30.06.2027",
+   "lat": 50.729445,
+   "lon": 7.077353,
+   "massnahme": "Brückensanierung",
+   "sperrung": "Teilsperrung von Fahrbahn und Gehweg",
+   "stadtbezirk_bez": "Bonn",
+   "traeger": "Straßen NRW",
+   "von": "08.01.2024"
+  },
+  "9288": {
+   "adresse": "Adrianstraße 137a",
+   "bezeichnung": "Adrianstraße",
+   "bis": "05.11.2027",
+   "lat": 50.713589,
+   "lon": 7.167857,
+   "massnahme": "Kanalbau",
+   "sperrung": "Vollsperrung der Fahrbahn",
+   "stadtbezirk_bez": "Beuel",
+   "traeger": "Bundesstadt Bonn - Amt 66-2",
+   "von": "18.05.2026"
+  },
+  "9615": {
+   "adresse": "Villemombler Straße 134",
+   "bezeichnung": "Villemombler Str.",
+   "bis": "31.12.2027",
+   "lat": 50.711421,
+   "lon": 7.06179,
+   "massnahme": "Brückensanierung",
+   "sperrung": "Sperrung einer Fahrtrichtung",
+   "stadtbezirk_bez": "Hardtberg",
+   "traeger": "Straßen NRW",
+   "von": "03.02.2025"
+  },
+  "9619": {
+   "adresse": "Burggrafenstraße 48",
+   "bezeichnung": "Küdinghovener Straße",
+   "bis": "31.12.2026",
+   "lat": 50.727013,
+   "lon": 7.138214,
+   "massnahme": "Umgestaltung",
+   "sperrung": "Vollsperrung der Fahrbahn",
+   "stadtbezirk_bez": "Beuel",
+   "traeger": "Deutsche Bahn AG",
+   "von": "05.05.2025"
+  },
+  "9640": {
+   "adresse": "Brüdergasse 7",
+   "bezeichnung": "Brüdergasse",
+   "bis": "18.12.2026",
+   "lat": 50.736053,
+   "lon": 7.102693,
+   "massnahme": "Straßenbau",
+   "sperrung": "Vollsperrung der Fahrbahn",
+   "stadtbezirk_bez": "Bonn",
+   "traeger": "Bundesstadt Bonn - Amt 66-5",
+   "von": "11.08.2025"
+  },
+  "9708": {
+   "adresse": "Hohenzollernstraße 21",
+   "bezeichnung": "Hohenzollernstraße",
+   "bis": "20.11.2026",
+   "lat": 50.6901,
+   "lon": 7.15788,
+   "massnahme": "Stromleitungsbau",
+   "sperrung": "keine Sperrung",
+   "stadtbezirk_bez": "Bad Godesberg",
+   "traeger": "SWB Bonn-Netz",
+   "von": "12.01.2026"
+  },
+  "9743": {
+   "adresse": "Schubertstraße 4",
+   "bezeichnung": "Schubertstraße (ehemaliger Endenicher Bachkanal)",
+   "bis": "31.12.2026",
+   "lat": 50.728999,
+   "lon": 7.083016,
+   "massnahme": "Kanalbau",
+   "sperrung": "Teilsperrung von Fahrbahn und Gehweg",
+   "stadtbezirk_bez": "Bonn",
+   "traeger": "Bundesstadt Bonn - Amt 66-2",
+   "von": "09.03.2026"
+  }
+ },
+ "meta": {
+  "feed": "tagesaktuell",
+  "lizenz": "CC0 1.0 (Stadt Bonn, Baustellen tagesaktuell und geplant; Lizenz laut Auftraggeber, die Datensätze sind nicht mehr im Katalog von opendata.bonn.de)",
+  "quelle": "https://stadtplan.bonn.de/geojson?Thema=14403",
+  "thema": 14403
+ }
+}
