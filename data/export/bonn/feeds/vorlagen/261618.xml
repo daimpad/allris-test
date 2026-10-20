@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/261618</id>
 <title>Vorlage 261618: Taskforce Nordbrücke - Maßnahmen auf der Oxfordstraße</title>
 <subtitle>Verlauf der Vorlage 261618: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-08-27T00:00:00Z</updated>
+<updated>2026-10-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/vorlagen/261618.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#261618"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029103#folge-261618-01</id>
+<title>Beschlussvorlage 261618-01: N-Vorlage - Taskforce Nordbrücke - Maßnahmen auf der Oxfordstraße</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#261618"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029103"/>
+<summary>Folgevorlage zu 261618</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029103#vorlage</id>
 <title>Neue Vorlage 261618: Taskforce Nordbrücke - Maßnahmen auf der Oxfordstraße</title>
