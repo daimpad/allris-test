@@ -16,3 +16,4 @@ dist/
 _site/
 .venv/
 _archiv/
+tests/browser/node_modules

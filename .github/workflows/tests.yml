@@ -32,3 +32,58 @@ jobs:
         run: node --check site/app.js && node --check site/timeline.js && node --check site/tour.js && node --check site/prozesse.js && node --check site/beteiligung.js && node --check site/chat/tools.js && node --check site/chat/providers.js && node --check site/chat/core.js && node --check site/chat/keys.js && node --check site/chat/prompt.js && node --check site/chat/render.js && node --check site/chat/ui.js && node --check eval/run.mjs
       - name: Ratsassistent (Werkzeuge, Adapter, Chat-Kern, Darstellung, Fragenkatalog)
         run: node --test "tests/js/**/*.test.mjs"
+
+  # Browser-Prüfung der fertigen Seite mit echten Daten. Rohdaten aus dem Zwischenspeicher des täglichen
+  # Laufs (pages.yml, nur lesen; gleiche Pfadliste), sonst neuer Abruf.
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Rohdaten des letzten Laufs
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/raw/papers.jsonl
+            data/raw/consultations_lite.jsonl
+            data/raw/organizations.json
+            data/raw/verwaltungsbereiche.json
+            data/raw/STAND.json
+            data/geo/bebauungsplaene_bonn.geojson
+            data/geo/bebauungsplaene_protokoll.tsv
+          key: raw-browser
+          restore-keys: raw-
+      - name: Abruf, falls kein Zwischenspeicher vorhanden ist
+        if: hashFiles('data/raw/papers.jsonl') == ''
+        run: |
+          python -m pipeline fetch-papers
+          python -m pipeline fetch-lite
+      - name: Aufbereiten und Export
+        run: |
+          python -m pipeline build
+          python -m pipeline export
+          python -m pipeline soll
+      - name: Seite zusammenstellen
+        run: |
+          mkdir -p _site/data/geo
+          cp -r site/. _site/
+          cp -r data/export _site/data/
+          cp data/LICENSE-DATA.md _site/data/
+          cp data/geo/*.geojson _site/data/geo/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Playwright und axe-core
+        working-directory: tests/browser
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Browser-Prüfung (Start, Karte, Vorgang, Prozesse, Mitmachen, mobil, Tour; WCAG 2.1 AA)
+        run: |
+          python -m http.server -d _site 8765 > /dev/null 2>&1 &
+          node --test "tests/browser/*.test.mjs"
