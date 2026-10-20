@@ -191,11 +191,11 @@
    "@type": "dcat:Distribution",
    "dct:title": {
     "@language": "de",
-    "@value": "Verfahren und Gremien (JSON)"
+    "@value": "Verfahren, Gremien und Ämter (JSON)"
    },
    "dct:description": {
     "@language": "de",
-    "@value": "Zahl der Vorgänge je Verfahrensart mit Beispielen; Gremien mit Beratungen, Sitzungen und Zuständigkeit."
+    "@value": "Zahl der Vorgänge je Verfahrensart mit Beispielen; Gremien mit Beratungen, Sitzungen und Zuständigkeit; Ämter mit Abteilungen und Federführung."
    },
    "dcat:accessURL": {
     "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/prozessarten.json"
