@@ -1,0 +1,31 @@
+nr	drucksache	ortsteil_der_hausnummer	ortsteil_laut_verzeichnis_der_stadt	abgleich (maschinell)	einschaetzung (KI-Vorprüfung)	begruendung (KI-Vorprüfung)
+1	190844	Mehlem	Mehlem	gleich	teilweise	Strecke zwischen zwei Adressen (Ellesdorfer Straße 12 bis An der Nesselburg 18); die Hausnummer bestimmt nur den Abschnitt An der Nesselburg
+2	200635	Godesberg-Nord	Godesberg-Nord	gleich	plausibel	Stadion an der Adresse; „Gemarkung Friesdorf“ im Titel ist der Katasterbezirk, nicht der Ortsteil
+3	210499	Heiderhof	Heiderhof	gleich	plausibel	Grundstück an der Adresse; „Bonn-Lannesdorf“ meint vermutlich die Gemarkung
+4	211148	Godesberg-Nord	Godesberg-Nord	gleich	plausibel	Grundstück an der Adresse; „Bonn-Friesdorf“ meint vermutlich die Gemarkung
+5	261707	Hochkreuz	Hochkreuz	gleich	plausibel	Busbetriebshof an der Adresse; „Bonn-Friesdorf“ meint vermutlich die Gemarkung
+6	230878	Poppelsdorf	Poppelsdorf	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+7	254081	Auerberg	Auerberg	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+8	212381	Beuel-Mitte	Beuel-Mitte	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+9	201913	Weststadt	Weststadt	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+10	231694	Alt-Godesberg	Alt-Godesberg	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+11	190720	Hoholz	Hoholz	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+12	261749	Endenich	Endenich	gleich	plausibel	Teilabschnitt zwischen zwei Hausnummern derselben Straße
+13	232004	Beuel-Ost	Beuel-Ost	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+14	190918	Venusberg	Venusberg	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+15	200837	Kessenich	Kessenich	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+16	190224	Beuel-Ost	Beuel-Ost	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+17	212390	Limperich	Limperich	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+18	232310	Endenich	Endenich	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+19	201499	Auerberg	Auerberg	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+20	190721	Südstadt	Südstadt	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+21	210804	Alt-Godesberg	Alt-Godesberg	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+22	230018	Duisdorf	Duisdorf	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+23	191015	Pennenfeld	Pennenfeld	gleich	plausibel	Sammelvorlage mehrerer Grundstücke; die Regel gilt je Straße, die Vorlage betrifft weitere Orte
+24	240990	Südstadt	Südstadt	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+25	202179	Weststadt	Weststadt	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+26	253492	Endenich	Endenich	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+27	240566	Auerberg	Auerberg	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+28	261531	Südstadt	Südstadt	gleich	plausibel	Einrichtung oder Grundstück an der genannten Adresse
+29	200910	Gronau	Gronau	gleich	plausibel	Sammelvorlage mehrerer Grundstücke; die Regel gilt je Straße, die Vorlage betrifft weitere Orte
+30	190383	Oberkassel	Oberkassel	gleich	plausibel	Sammelvorlage; zwei Hausnummern derselben Straße, beide im selben Ortsteil

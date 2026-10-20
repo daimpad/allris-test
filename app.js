@@ -27,7 +27,9 @@
     "strasse+kreuzung": "Straßennamen im Titel, Ortsteil der Kreuzung",
     "strasse+hausnummer": "Straßenname mit Hausnummer im Titel, Ortsteil laut Hausnummernverzeichnis der Stadt",
     strasse_mehrdeutig: "Straßenname im Titel, mehrere Lagen", ortsteil_name: "Ortsteilname im Titel",
-    ortsteil_adjektiv: "Ortsteil im Titel (z. B. „Endenicher …“)", stadtbezirk_name: "Stadtbezirk im Titel",
+    ortsteil_adjektiv: "Ortsteil im Titel (z. B. „Endenicher …“)",
+    ortsteil_variante: "Ortsteilname im Titel, abweichende Schreibung (z. B. „Poppeldorf“)", stadtbezirk_name: "Stadtbezirk im Titel",
+    stadtbezirk_variante: "Stadtbezirk im Titel, abweichende Schreibung",
     stadtbezirk_adjektiv: "Stadtbezirk im Titel (Adjektiv)", vererbt: "von der übergeordneten Vorlage übernommen",
     bebauungsplan: "Bebauungsplan-Nummer im Titel, Geltungsbereich laut Stadt Bonn",
   };
