@@ -17,6 +17,7 @@
   const METHOD = {
     oparl_location: "Koordinate der Stadt (OParl)", strasse: "Straßenname im Titel",
     "strasse+ortsteil": "Straßen- und Ortsteilname im Titel", "strasse+bezirk": "Straßenname im Titel, Bezirk eingegrenzt",
+    "strasse+kreuzung": "Straßennamen im Titel, Ortsteil der Kreuzung",
     strasse_mehrdeutig: "Straßenname im Titel, mehrere Lagen", ortsteil_name: "Ortsteilname im Titel",
     ortsteil_adjektiv: "Ortsteil im Titel (z. B. „Endenicher …“)", stadtbezirk_name: "Stadtbezirk im Titel",
     stadtbezirk_adjektiv: "Stadtbezirk im Titel (Adjektiv)", vererbt: "von der übergeordneten Vorlage übernommen",

@@ -3,27 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-bonn-castell</id>
 <title>RIS-Karte Bonn – Bonn-Castell</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Bonn-Castell</subtitle>
-<updated>2026-10-19T00:00:00Z</updated>
+<updated>2026-09-22T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-bonn-castell.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029743#vorlage</id>
-<title>Neue Vorlage 261862: Aufstellung des Bebauungsplan Nr. 6325-1 „Kölnstraße / Otto-Hahn-Straße“</title>
-<updated>2026-10-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#261862"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029743"/>
-<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029725#vorlage</id>
-<title>Neue Vorlage 261855: 211. FNP-Änderung, Kölnstraße/Otto-Hahn-Straße</title>
-<updated>2026-10-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#261855"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029725"/>
-<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029535#vorlage</id>
 <title>Neue Vorlage 261795: SPD-Fraktion: Baustellenverkehr im Gallierweg begrenzen – Anwohnende während der Bauarbeiten an der Arminiusstraße schützen</title>
@@ -81,14 +65,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029073#vorlage</id>
-<title>Neue Vorlage 261538-01 ST: Stellungnahme zum Bürgerantrag: Instandsetzungsmaßnahmen im Bereich der Stichstraße Kranenweg/Ecke Karl-Legien-Straße</title>
-<updated>2026-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#261538-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029073"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028995#vorlage</id>
 <title>Neue Vorlage 261577: Bürgerantrag: Antrag auf gleichwertige Ausgleichspflanzung für gerodete Bäume in Bonn-Castell</title>
 <updated>2026-08-20T00:00:00Z</updated>
@@ -111,14 +87,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#261552"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028951"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028941#vorlage</id>
-<title>Neue Vorlage 261544: Bürgerantrag: Anordnung von Tempo 30 im Bereich der Kölnstraße zwischen An der Josefshöhe und Chlodwigsplatz</title>
-<updated>2026-08-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#261544"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028941"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027939#vorlage</id>
@@ -311,14 +279,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#261177"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027995"/>
 <summary>Beschlussvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028085#vorlage</id>
-<title>Neue Vorlage 261215: Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahren Nr. 6325-1 „Kölnstraße/Otto-Hahn-Straße“ zwischen Kölnstraße, Otto-Hahn-Straße und Im großen Garten</title>
-<updated>2026-06-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#261215"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028085"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028065#vorlage</id>
@@ -585,14 +545,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021824#beratung-5</id>
-<title>Rat: „ungeändert beschlossen“ – 252696 Baureife Planung zur Umgestaltung der Kölnstraße im Abschnitt Bertha-von-Suttner-Platz bis Wilhelmsplatz</title>
-<updated>2025-11-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252696"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021824"/>
-<summary>Entscheidung am 2025-11-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024616#vorlage</id>
 <title>Neue Vorlage 253954: Bürgerantrag: Verbesserungen der Straßenquerungen des Radwegs an der Kölnstraße</title>
 <updated>2025-11-12T00:00:00Z</updated>
@@ -601,44 +553,12 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024502#vorlage</id>
-<title>Neue Vorlage 252696-01 AA: Grüne-Bezirksfraktion u.w.-AA: Baureife Planung zur Umgestaltung der Kölnstraße im Abschnitt Bertha-von-Suttner-Platz bis Wilhelmsplatz Antrag zur Vorlage 252696</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252696-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024502"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024502#beratung-2</id>
-<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 252696-01 AA Grüne-Bezirksfraktion u.w.-AA: Baureife Planung zur Umgestaltung der Kölnstraße im Abschnitt Bertha-von-Suttner-Platz bis Wilhelmsplatz Antrag zur Vorlage 252696</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252696-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024502"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021824#beratung-3</id>
-<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 252696 Baureife Planung zur Umgestaltung der Kölnstraße im Abschnitt Bertha-von-Suttner-Platz bis Wilhelmsplatz</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252696"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021824"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024425#vorlage</id>
 <title>Neue Vorlage 253301-02 ST: Bürgerantrag: Änderung von Pkw-Parkplätzen in Fahrradabstellplätze im Bereich des Kindergartens St. Joseph, Badener Straße 2</title>
 <updated>2025-10-21T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#253301-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024425"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021824#vorlage</id>
-<title>Neue Vorlage 252696: Baureife Planung zur Umgestaltung der Kölnstraße im Abschnitt Bertha-von-Suttner-Platz bis Wilhelmsplatz</title>
-<updated>2025-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252696"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021824"/>
-<summary>Beschlussvorlage: Einleitung · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024025#beratung-5</id>
@@ -801,11 +721,91 @@
 <summary>Empfehlung am 2025-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023025#beratung-3</id>
-<title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 253235 Bebauungsplan 6325-1 "Kölnstr. / Otto-Hahn-Str." - Maßgabenbeschluss über die weitere Planung</title>
-<updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#253235"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023025"/>
-<summary>Entscheidung am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023597#vorlage</id>
+<title>Neue Vorlage 241968-01 ST: Stellungnahme der Stadt Bonn im Hinblick auf die Sanierung und den Ersatzneubau der Friedrich-Ebert-Brücke / A 565 (Nordbrücke)</title>
+<updated>2025-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#241968-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023597"/>
+<summary>Stellungnahme der Verwaltung · federführend: Dezernat III · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020001#vorlage</id>
+<title>Neue Vorlage 241968: Stellungnahme der Stadt Bonn im Hinblick auf die Sanierung und den Ersatzneubau der Friedrich-Ebert-Brücke / A 565 (Nordbrücke)</title>
+<updated>2025-07-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#241968"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020001"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022360#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 252633-01 ST Bürgerantrag: Einrichtung einer Tempo 30-Zone auf dem Augustusring</title>
+<updated>2025-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252633-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022360"/>
+<summary>Kenntnisnahme am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021678#beratung-3</id>
+<title>Bezirksvertretung Bonn: „abgelehnt“ – 252633 Bürgerantrag: Einrichtung einer Tempo 30-Zone auf dem Augustusring</title>
+<updated>2025-06-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252633"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021678"/>
+<summary>Entscheidung am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022360#vorlage</id>
+<title>Neue Vorlage 252633-01 ST: Bürgerantrag: Einrichtung einer Tempo 30-Zone auf dem Augustusring</title>
+<updated>2025-06-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252633-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022360"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023162#vorlage</id>
+<title>Neue Vorlage 253301: Bürgerantrag: Änderung von Pkw-Parkplätzen in Fahrradabstellplätze im Bereich des Kindergartens St. Joseph, Badener Straße 2</title>
+<updated>2025-06-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#253301"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023162"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023000#vorlage</id>
+<title>Neue Vorlage 253216: CDU-Antrag: Nivellierung des Straßenbahnübergangs Graurheindorfer Straße/Ecke Husarenstraße</title>
+<updated>2025-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#253216"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023000"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021940#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 242265-002 Verlängerung des Geländers am Rhein in Bonn-Castell im Bereich Biergarten Schänzchen und Römerkran</title>
+<updated>2025-04-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#242265-002"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021940"/>
+<summary>Kenntnisnahme am 2025-04-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021722#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 252613-01 ST Bürgerantrag: Optimierung Ampelschaltung im Bereich Graurheindorfer Straße/Augustusring</title>
+<updated>2025-04-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252613-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021722"/>
+<summary>Kenntnisnahme am 2025-04-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021630#beratung-3</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 252613 Bürgerantrag: Optimierung Ampelschaltung im Bereich Graurheindorfer Straße/Augustusring</title>
+<updated>2025-04-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252613"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021630"/>
+<summary>Entscheidung am 2025-04-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021523#beratung-5</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 252569 Veröffentlichung der Vorhabenliste: 164685 - Bebauungsplan Nr. 6523-2 „Arminiusstraße“</title>
+<updated>2025-04-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#252569"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021523"/>
+<summary>Entscheidung am 2025-04-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

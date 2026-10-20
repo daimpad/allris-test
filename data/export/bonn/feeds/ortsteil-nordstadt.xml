@@ -3,27 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-nordstadt</id>
 <title>RIS-Karte Bonn – Nordstadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Nordstadt</subtitle>
-<updated>2026-10-19T00:00:00Z</updated>
+<updated>2026-10-18T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-nordstadt.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029743#vorlage</id>
-<title>Neue Vorlage 261862: Aufstellung des Bebauungsplan Nr. 6325-1 „Kölnstraße / Otto-Hahn-Straße“</title>
-<updated>2026-10-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#261862"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029743"/>
-<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029725#vorlage</id>
-<title>Neue Vorlage 261855: 211. FNP-Änderung, Kölnstraße/Otto-Hahn-Straße</title>
-<updated>2026-10-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#261855"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029725"/>
-<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029811#vorlage</id>
 <title>Neue Vorlage 261669-01 ST: Stellungnahme zum Bürgerantrag: Aufstellung eines Blitzers zur Überwachung von Tempo 30 im Bereich Ellerstraße und Hochstadenring</title>
@@ -63,14 +47,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#261846"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029696"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029644#vorlage</id>
-<title>Neue Vorlage 261830: Linke-Bezirksfraktion-Antrag: ÖPNV-Vorrang in der Thomas-Mann-Straße zwischen Budapester Str. und Berliner Platz</title>
-<updated>2026-09-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#261830"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029644"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029600#vorlage</id>
@@ -177,14 +153,6 @@
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028941#vorlage</id>
-<title>Neue Vorlage 261544: Bürgerantrag: Anordnung von Tempo 30 im Bereich der Kölnstraße zwischen An der Josefshöhe und Chlodwigsplatz</title>
-<updated>2026-08-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#261544"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028941"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028812#vorlage</id>
 <title>Neue Vorlage 260768-02 ST: Ergänzende Stellungnahme zur DS 260768-01 Bürgerantrag: Verkehrsanalyse in der Bornheimer Straße zur Bewertung von Geschwindigkeitsüberschreitungen und Maßnahmen zur Verkehrsberuhigung</title>
 <updated>2026-08-16T00:00:00Z</updated>
@@ -215,14 +183,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#253158-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027912"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028523#vorlage</id>
-<title>Neue Vorlage 261352: Informationsbrief - Kanalsanierung Kölnstraße und Am Johanneskreuz</title>
-<updated>2026-07-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#261352"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028523"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027892#beratung-2</id>
@@ -295,22 +255,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260202-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027734"/>
 <summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027719#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260996-01 ST Bürgerantrag: Deutliche Kennzeichnung Tempo 30-Zone im Bereich Graurheindorfer Straße zwischen Nordstraße und Kaiser-Karl-Ring und Einrichtung einer elektronischen Anzeige</title>
-<updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260996-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027719"/>
-<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027622#beratung-3</id>
-<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 260996 Bürgerantrag: Deutliche Kennzeichnung Tempo 30-Zone im Bereich Graurheindorfer Straße zwischen Nordstraße und Kaiser-Karl-Ring und Einrichtung einer elektronischen Anzeige</title>
-<updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260996"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027622"/>
-<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027540#beratung-3</id>
@@ -417,14 +361,6 @@
 <summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028085#vorlage</id>
-<title>Neue Vorlage 261215: Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahren Nr. 6325-1 „Kölnstraße/Otto-Hahn-Straße“ zwischen Kölnstraße, Otto-Hahn-Straße und Im großen Garten</title>
-<updated>2026-06-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#261215"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028085"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027734#vorlage</id>
 <title>Neue Vorlage 260202-03 ST: Stellungnahme zu Grüne-Große Anfrage: Sicherheit für den Radverkehr auf der Vorgebirgsstraße</title>
 <updated>2026-06-14T00:00:00Z</updated>
@@ -455,14 +391,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#261086"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027830"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027719#vorlage</id>
-<title>Neue Vorlage 260996-01 ST: Bürgerantrag: Deutliche Kennzeichnung Tempo 30-Zone im Bereich Graurheindorfer Straße zwischen Nordstraße und Kaiser-Karl-Ring und Einrichtung einer elektronischen Anzeige</title>
-<updated>2026-05-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260996-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027719"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026365#beratung-4</id>
@@ -511,14 +439,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260339"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025826"/>
 <summary>Entscheidung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027622#vorlage</id>
-<title>Neue Vorlage 260996: Bürgerantrag: Deutliche Kennzeichnung Tempo 30-Zone im Bereich Graurheindorfer Straße zwischen Nordstraße und Kaiser-Karl-Ring und Einrichtung einer elektronischen Anzeige</title>
-<updated>2026-05-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260996"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027622"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027441#vorlage</id>
@@ -807,5 +727,85 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260132-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026710"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026710#beratung-1</id>
+<title>Bezirksvertretung Bonn: „abgelehnt“ – 260132-03 AA BBB-Änderungsantrag: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt Antrag zur Vorlage 260132</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260132-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026710"/>
+<summary>Anhörung am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026668#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260123-02 ST Bürgerantrag: Antrag auf Tempo 30 als Höchstgeschwindigkeit auf der Bornheimer Straße zwischen Alter Friedhof und Hochstadenring Ergänzung der STN 260123-01</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260123-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026668"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026596#beratung-2</id>
+<title>Bezirksvertretung Bonn: „zurückgezogen“ – 254062-01 AA Grüne-Bezirksfraktion-Änderungsantrag: Fällgenehmigung für einen Spitz-Ahorn auf dem Baugrundstück Annagraben 70, 53111 Bonn im Rahmen eines Baugenehmigungsverfahrens Änderungsantrag zur Vorlage 254062</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#254062-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026596"/>
+<summary>Entscheidung am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026589#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260198-01 ST CDU-Bezirksfraktion-Antrag: Mülleimer in der Bornheimer Straße</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260198-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026589"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026344#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253173-04 ST Vertagungsbitte zum Bürgerantrag: Antrag auf Umsetzung des beschlossenen Änderungsantrages 253173-01 - Vorübergehende Verkehrsführung auf der Bornheimer Straße und der Guido-Westerwelle-Brücke bis zur Herstellung der Rampe Thomastraße</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#253173-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026344"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026343#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253630-01 ST Drehung Einbahnstraßenrichtung Peterstraße</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#253630-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026343"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026179#beratung-3</id>
+<title>Bezirksvertretung Bonn: „abgelehnt“ – 260132-01 AA CDU/SPD/FDP Änderungsantrag: Erlass einer Veränderungssperre für den Bebauungsplan Nr. 6423-3, Stadtbezirk Bonn, Ortsteil Nordstadt Antrag zur Vorlage 260132</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260132-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026179"/>
+<summary>Anhörung am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026088#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 254017-01 ST Stellungnahme zum Bürgerantrag: Antrag auf Einrichtung von Zebrastreifen und Geschwindigkeitsbegrenzung in der Straße „Am Propsthof“</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#254017-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026088"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025998#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260123-01 ST Stellungnahme zum Bürgerantrag: Antrag auf Tempo 30 als Höchstgeschwindigkeit auf der Bornheimer Straße zwischen Alter Friedhof und Hochstadenring</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260123-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025998"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025495#beratung-3</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 260198 CDU-Bezirksfraktion-Antrag: Mülleimer in der Bornheimer Straße</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260198"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025495"/>
+<summary>Entscheidung am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

@@ -3,27 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-weststadt</id>
 <title>RIS-Karte Bonn – Weststadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Weststadt</subtitle>
-<updated>2026-10-01T00:00:00Z</updated>
+<updated>2026-09-29T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-weststadt.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029696#vorlage</id>
-<title>Neue Vorlage 261846: Bürgerantrag: Optimierung des Rad- und Autoverkehrs im Bereich der Kreuzung Bornheimer Straße/Guido-Westerwelle-Brücke</title>
-<updated>2026-10-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#261846"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029696"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029621#vorlage</id>
-<title>Neue Vorlage 261796-01 ST: Stellungnahme zum Antrag zur Instandsetzung der Prinz-Albert Straße im Abschnitt Poppelsdorfer Allee bis Königstraße</title>
-<updated>2026-09-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#261796-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029621"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029456#vorlage</id>
 <title>Neue Vorlage 261749: Bürgerantrag: Modellprojekt „Schwammstadt“ - klimagerechte Umgestaltung und Förderung des Radverkehrs im Teilabschnitt Endenicher Straße 238 bis 220</title>
@@ -49,14 +33,6 @@
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029538#vorlage</id>
-<title>Neue Vorlage 261796: Grüne-Bezirksfraktion - Antrag zur Instandsetzung der Prinz-Albert Straße im Abschnitt Poppelsdorfer Allee bis Königstraße</title>
-<updated>2026-09-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#261796"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029538"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029482#vorlage</id>
 <title>Neue Vorlage 261768: CDU-Bezirksfraktion-Antrag: Freiräumung Bürgersteig Meckenheimer Allee 76</title>
 <updated>2026-09-21T00:00:00Z</updated>
@@ -73,28 +49,12 @@
 <summary>Empfehlung am 2026-09-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029403#vorlage</id>
-<title>Neue Vorlage 261523-02 AA: SPD-Fraktion: Öffnung der Bornheimer Straße für Kfz-Verkehr am Knoten Hochstadenring/Bornheimer Straße/ Guido-Westerwelle-Brücke Antrag zur Vorlage 261523</title>
-<updated>2026-09-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#261523-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029403"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029368#vorlage</id>
 <title>Neue Vorlage 261711: Grüner Dringlichkeitsantrag: Zukünftige Berücksichtigung der verkehrlichen Vorgaben und Maßgaben im Hinblick auf das sogenannte Innovationsdreieck im Ortsteil Weststadt</title>
 <updated>2026-09-14T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#261711"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029368"/>
 <summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028884#vorlage</id>
-<title>Neue Vorlage 261523: Öffnung der Bornheimer Straße für Kfz-Verkehr am Knoten Hochstadenring/Bornheimer Straße/ Guido-Westerwelle-Brücke</title>
-<updated>2026-09-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#261523"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028884"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028707#beratung-6</id>
@@ -273,14 +233,6 @@
 <summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025341#beratung-2</id>
-<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253173-03 Bürgerantrag: Antrag auf Umsetzung des beschlossenen Änderungsantrages 253173-01 - Vorübergehende Verkehrsführung auf der Bornheimer Straße und der Guido-Westerwelle-Brücke bis zur Herstellung der Rampe Thomastraße</title>
-<updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253173-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025341"/>
-<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028180#vorlage</id>
 <title>Neue Vorlage 242148-12: Große Anfrage- BBB: Methadon-Praxis in der Poppelsdorfer Allee 60 Drucksachengruppe 242148</title>
 <updated>2026-06-19T00:00:00Z</updated>
@@ -327,22 +279,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#230820-08"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026437"/>
 <summary>Empfehlung am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026365#beratung-4</id>
-<title>Ausschuss für Mobilität und Verkehr: „vertagt“ – 260528-01 ST Stellungnahme zur Großen Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
-<updated>2026-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260528-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026365"/>
-<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026283#beratung-4</id>
-<title>Ausschuss für Mobilität und Verkehr: „vertagt“ – 260528 FDP-Gruppe-Große Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
-<updated>2026-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260528"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026283"/>
-<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026880#beratung-5</id>
@@ -433,28 +369,12 @@
 <summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026365#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260528-01 ST Stellungnahme zur Großen Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
-<updated>2026-05-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260528-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026365"/>
-<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026284#beratung-4</id>
 <title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260529 FDP-Gruppe-Große Anfrage: Warum lässt die Stadt die Viktoriaunterführung verwahrlosen?</title>
 <updated>2026-05-19T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260529"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026284"/>
 <summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026283#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260528 FDP-Gruppe-Große Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
-<updated>2026-05-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260528"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026283"/>
-<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026272#beratung-3</id>
@@ -481,14 +401,6 @@
 <summary>Entscheidung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022551#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241761-02 ST Stellungnahme zu Bürgerantrag: Aufstellung von Fahrradständern im Bereich Meckenheimer Allee zwischen Nußallee und Katzenburgweg</title>
-<updated>2026-05-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#241761-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022551"/>
-<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2019561#beratung-4</id>
 <title>Bezirksvertretung Bonn: „geändert beschlossen“ – 241761 Bürgerantrag: Aufstellung von Fahrradständern im Bereich Meckenheimer Allee zwischen Nußallee und Katzenburgweg</title>
 <updated>2026-05-19T00:00:00Z</updated>
@@ -503,22 +415,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260745-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027341"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022551#vorlage</id>
-<title>Neue Vorlage 241761-02 ST: Stellungnahme zu Bürgerantrag: Aufstellung von Fahrradständern im Bereich Meckenheimer Allee zwischen Nußallee und Katzenburgweg</title>
-<updated>2026-05-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#241761-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022551"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026365#vorlage</id>
-<title>Neue Vorlage 260528-01 ST: Stellungnahme zur Großen Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
-<updated>2026-05-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260528-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026365"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026813#vorlage</id>
@@ -609,14 +505,6 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026344#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253173-04 ST Vertagungsbitte zum Bürgerantrag: Antrag auf Umsetzung des beschlossenen Änderungsantrages 253173-01 - Vorübergehende Verkehrsführung auf der Bornheimer Straße und der Guido-Westerwelle-Brücke bis zur Herstellung der Rampe Thomastraße</title>
-<updated>2026-04-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253173-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026344"/>
-<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026273#beratung-3</id>
 <title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260019-02 ST Stellungnahme zu Bürgerantrag: Überprüfung und Verlegung Ersatzhaltestelle im Bereich Quantiusstraße 14/15</title>
 <updated>2026-04-21T00:00:00Z</updated>
@@ -673,14 +561,6 @@
 <summary>Empfehlung am 2026-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026344#vorlage</id>
-<title>Neue Vorlage 253173-04 ST: Vertagungsbitte zum Bürgerantrag: Antrag auf Umsetzung des beschlossenen Änderungsantrages 253173-01 - Vorübergehende Verkehrsführung auf der Bornheimer Straße und der Guido-Westerwelle-Brücke bis zur Herstellung der Rampe Thomastraße</title>
-<updated>2026-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253173-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026344"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026437#vorlage</id>
 <title>Neue Vorlage 230820-08: GRÜNE/Volt-Antrag - Konsequente Umsetzung des Radverkehrsnetzes: Colmantstraße</title>
 <updated>2026-04-08T00:00:00Z</updated>
@@ -695,14 +575,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260529"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026284"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026283#vorlage</id>
-<title>Neue Vorlage 260528: FDP-Gruppe-Große Anfrage: Warum wurde an der Kreuzung Bornheimer Straße / Guido-Westerwelle-Brücke eine zusätzliche Rechtsabbiegerampel eingerichtet?</title>
-<updated>2026-03-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260528"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026283"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026272#vorlage</id>
@@ -807,5 +679,133 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#254029"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024817"/>
 <summary>Kenntnisnahme am 2026-02-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025110#vorlage</id>
+<title>Neue Vorlage 260019-01 ST: Bürgerantrag: Überprüfung und Verlegung Ersatzhaltestelle im Bereich Quantiusstraße 14/15</title>
+<updated>2026-01-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260019-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025110"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024817#vorlage</id>
+<title>Neue Vorlage 254029: Neubau des Parkhaus Bonn Hbf, Quantiusstraße; Plangenehmigung gemäß § 18 Abs. 1 Allgemeines Eisenbahngesetz (AEG) in Verbindung mit § 74 Abs. 6 Verwaltungsverfahrensgesetz (VwVfG)</title>
+<updated>2026-01-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#254029"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024817"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025075#vorlage</id>
+<title>Neue Vorlage 260019: Bürgerantrag: Überprüfung und Verlegung Ersatzhaltestelle im Bereich Quantiusstraße 14/15</title>
+<updated>2026-01-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260019"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025075"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024468#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253545-01 ST Grüne-Antrag: Übergang Zülpicher Straße/Wesselbahnweg</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253545-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024468"/>
+<summary>Kenntnisnahme am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024433#beratung-3</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „zur Kenntnis genommen“ – 253793-01 ST Koalitionsantrag: Aufenthaltsqualität an der Poppelsdorfer Allee verbessern - Rückzugsraum für wohnungslose Menschen schaffen</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253793-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024433"/>
+<summary>Kenntnisnahme am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024416#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253232-01 ST Bürgerantrag: Belastbare Zeitschiene für die Realisierung der Rampe an der Guido-Westerwelle-Brücke</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253232-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024416"/>
+<summary>Kenntnisnahme am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024348#beratung-3</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „geändert beschlossen“ – 253793 Koalitionsantrag: Aufenthaltsqualität an der Poppelsdorfer Allee verbessern - Rückzugsraum für wohnungslose Menschen schaffen</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253793"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024348"/>
+<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024346#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253548-01 ST Bürgerantrag: Einrichtung von Parkverboten im Wendehammer der Zülpicher Straße und Befestigung des Übergangs zum Wesselbahnweg</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253548-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024346"/>
+<summary>Kenntnisnahme am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023759#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 253548 Bürgerantrag: Einrichtung von Parkverboten im Wendehammer der Zülpicher Straße und Befestigung des Übergangs zum Wesselbahnweg</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253548"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023759"/>
+<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023756#beratung-3</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 253545 Grüne-Antrag: Übergang Zülpicher Straße/Wesselbahnweg</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253545"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023756"/>
+<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023708#beratung-2</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 253519 Bürgerantrag: Aufstellen einer Sitzbank im Bereich Agrippinenstraße/Beethovenstraße</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253519"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023708"/>
+<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023019#beratung-3</id>
+<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 253232 Bürgerantrag: Belastbare Zeitschiene für die Realisierung der Rampe an der Guido-Westerwelle-Brücke</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253232"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023019"/>
+<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021394#beratung-4</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 231606-02 Bürgerantrag: Tempo 30 in der Endenicher Straße</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#231606-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021394"/>
+<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024468#vorlage</id>
+<title>Neue Vorlage 253545-01 ST: Grüne-Antrag: Übergang Zülpicher Straße/Wesselbahnweg</title>
+<updated>2025-10-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253545-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024468"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024416#vorlage</id>
+<title>Neue Vorlage 253232-01 ST: Bürgerantrag: Belastbare Zeitschiene für die Realisierung der Rampe an der Guido-Westerwelle-Brücke</title>
+<updated>2025-10-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253232-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024416"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024346#vorlage</id>
+<title>Neue Vorlage 253548-01 ST: Bürgerantrag: Einrichtung von Parkverboten im Wendehammer der Zülpicher Straße und Befestigung des Übergangs zum Wesselbahnweg</title>
+<updated>2025-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253548-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024346"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

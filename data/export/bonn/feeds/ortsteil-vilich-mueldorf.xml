@@ -3,27 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-vilich-mueldorf</id>
 <title>RIS-Karte Bonn – Vilich- Müldorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Vilich- Müldorf</subtitle>
-<updated>2026-10-19T00:00:00Z</updated>
+<updated>2026-10-14T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-vilich-mueldorf.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029743#vorlage</id>
-<title>Neue Vorlage 261862: Aufstellung des Bebauungsplan Nr. 6325-1 „Kölnstraße / Otto-Hahn-Straße“</title>
-<updated>2026-10-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261862"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029743"/>
-<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029725#vorlage</id>
-<title>Neue Vorlage 261855: 211. FNP-Änderung, Kölnstraße/Otto-Hahn-Straße</title>
-<updated>2026-10-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261855"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029725"/>
-<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029900#vorlage</id>
 <title>Neue Vorlage 261588-02 AA: Grüne-ÄA: Keine Wahlwerbung in unmittelbarer Nähe von Kindergarten (Wahlbüro) und Mühlenbachhalle, Vilich-Müldorf Antrag zur Vorlage 261588</title>
@@ -47,14 +31,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261785"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029517"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029371#vorlage</id>
-<title>Neue Vorlage 261712: Maßnahme der Taskforce Nordbrücke Änderung der Verkehrsführung auf der B56/Sankt Augustiner Straße stadteinwärts am Knotenpunkt Königswinterer Straße/Niederkasseler Straße</title>
-<updated>2026-09-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261712"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029371"/>
-<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029318#vorlage</id>
@@ -121,14 +97,6 @@
 <summary>Kenntnisnahme am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028205#beratung-3</id>
-<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 261193-01 ST Vertagungsbitte zum Bürgerantrag: Antrag auf Optimierung der Verkehrssicherheit im Bereich der Sankt Augustiner Straße/Combahnstraße</title>
-<updated>2026-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261193-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028205"/>
-<summary>Kenntnisnahme am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028162#beratung-3</id>
 <title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 261249 Bürgerantrag: Antrag zur Lärm- und Emissionsmessung und Einrichtung eines Tempolimits von 30 km/h auf der Sankt Augustiner Straße Beuel</title>
 <updated>2026-07-08T00:00:00Z</updated>
@@ -142,14 +110,6 @@
 <updated>2026-07-08T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261236"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028128"/>
-<summary>Entscheidung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028044#beratung-3</id>
-<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 261193 Bürgerantrag: Antrag auf Optimierung der Verkehrssicherheit im Bereich der Sankt Augustiner Straße/Combahnstraße</title>
-<updated>2026-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261193"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028044"/>
 <summary>Entscheidung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
@@ -185,14 +145,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028205#vorlage</id>
-<title>Neue Vorlage 261193-01 ST: Vertagungsbitte zum Bürgerantrag: Antrag auf Optimierung der Verkehrssicherheit im Bereich der Sankt Augustiner Straße/Combahnstraße</title>
-<updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261193-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028205"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028162#vorlage</id>
 <title>Neue Vorlage 261249: Bürgerantrag: Antrag zur Lärm- und Emissionsmessung und Einrichtung eines Tempolimits von 30 km/h auf der Sankt Augustiner Straße Beuel</title>
 <updated>2026-06-18T00:00:00Z</updated>
@@ -201,36 +153,12 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028044#vorlage</id>
-<title>Neue Vorlage 261193: Bürgerantrag: Antrag auf Optimierung der Verkehrssicherheit im Bereich der Sankt Augustiner Straße/Combahnstraße</title>
-<updated>2026-06-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261193"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028044"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027867#beratung-3</id>
-<title>Rat: „zur Kenntnis genommen“ – 190194-06 ST Konrad-Adenauer-Platz - Endgültige Abschaltung der Fußgänger-Lichtsignalanlage Gottfried-Claren-Straße - Von Sandt-Straße sowie Abbau der Signalgeber hier: Prüfauftrag Verlängerung der Grünphase für Fußgänger über die Sankt Augustiner Straße</title>
-<updated>2026-06-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#190194-06%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027867"/>
-<summary>Kenntnisnahme am 2026-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027679#vorlage</id>
 <title>Neue Vorlage 260028-02 ST: Umgestaltung des Dorfplatzes in Vilich-Müldorf</title>
 <updated>2026-06-10T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#260028-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027679"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027867#vorlage</id>
-<title>Neue Vorlage 190194-06 ST: Konrad-Adenauer-Platz - Endgültige Abschaltung der Fußgänger-Lichtsignalanlage Gottfried-Claren-Straße - Von Sandt-Straße sowie Abbau der Signalgeber hier: Prüfauftrag Verlängerung der Grünphase für Fußgänger über die Sankt Augustiner Straße</title>
-<updated>2026-06-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#190194-06%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027867"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026191#beratung-3</id>
@@ -649,14 +577,6 @@
 <summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018006#vorlage</id>
-<title>Neue Vorlage 241183: Informationsbrief - Kanalerneuerung Combahnstraße und Sankt Augustiner Straße</title>
-<updated>2024-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#241183"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018006"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2017596#beratung-3</id>
 <title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 240961-01 ST Bürgerantrag: Änderung Bebauungsplan 8025-12</title>
 <updated>2024-06-26T00:00:00Z</updated>
@@ -807,5 +727,85 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231224-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014915"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014328#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 231811-01 ST Bürgerantrag: Aufnahme einer Jugendfreizeitstätte für Vilich-Müldorf in den Freizeitstättenbedarfsplan der Stadt Bonn</title>
+<updated>2023-11-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231811-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014328"/>
+<summary>Kenntnisnahme am 2023-11-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014008#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „erledigt durch Stellungnahme der Verwaltung“ – 231811 Bürgerantrag: Aufnahme einer Jugendfreizeitstätte für Vilich-Müldorf in den Freizeitstättenbedarfsplan der Stadt Bonn</title>
+<updated>2023-11-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231811"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014008"/>
+<summary>Entscheidung am 2023-11-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014208#beratung-2</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 231908 Einwohnerfragen zur Umsetzung des Wohnparks II in Vilich-Müldorf</title>
+<updated>2023-10-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231908"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014208"/>
+<summary>Kenntnisnahme am 2023-10-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013901#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 231747 Grundstück in Bonn, Kölnstraße 129 - Nutzungsänderung einer Gaststätte in eine Spielhalle Az.: 10209/2022</title>
+<updated>2023-10-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231747"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013901"/>
+<summary>Anhörung am 2023-10-24; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014328#vorlage</id>
+<title>Neue Vorlage 231811-01 ST: Bürgerantrag: Aufnahme einer Jugendfreizeitstätte für Vilich-Müldorf in den Freizeitstättenbedarfsplan der Stadt Bonn</title>
+<updated>2023-10-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231811-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014328"/>
+<summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014208#vorlage</id>
+<title>Neue Vorlage 231908: Einwohnerfragen zur Umsetzung des Wohnparks II in Vilich-Müldorf</title>
+<updated>2023-10-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231908"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014208"/>
+<summary>Einwohnerfrage · federführend: Bezirksverwaltungsstelle Beuel · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013901#vorlage</id>
+<title>Neue Vorlage 231747: Grundstück in Bonn, Kölnstraße 129 - Nutzungsänderung einer Gaststätte in eine Spielhalle Az.: 10209/2022</title>
+<updated>2023-10-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231747"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013901"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2014008#vorlage</id>
+<title>Neue Vorlage 231811: Bürgerantrag: Aufnahme einer Jugendfreizeitstätte für Vilich-Müldorf in den Freizeitstättenbedarfsplan der Stadt Bonn</title>
+<updated>2023-09-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231811"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014008"/>
+<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012433#beratung-3</id>
+<title>Bezirksvertretung Bonn: „abgelehnt“ – 231038 Bürgerantrag: Antrag auf  Einrichtung eines Durchfahrtverbots für LKW im Bereich Friedrich-Wöhler-Straße/Kölnstraße/Bonner Nordfriedhof</title>
+<updated>2023-09-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231038"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012433"/>
+<summary>Entscheidung am 2023-09-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012538#beratung-4</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 231081 Lückenschluss Radweg B56 Sankt Augustiner Straße zwischen Am Herrengarten und Reinold-Hagen-Straße</title>
+<updated>2023-08-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#231081"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012538"/>
+<summary>Kenntnisnahme am 2023-08-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
