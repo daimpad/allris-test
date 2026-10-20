@@ -6,7 +6,9 @@
   const PILOT = "data/export/endenich/vorlagen.json";
   const GEO = { ortsteil: "data/geo/ortsteile_bonn.geojson", bezirk: "data/geo/stadtbezirke_bonn.geojson",
     bplan: "data/geo/bebauungsplaene_bonn.geojson" };
-  const DEFAULT_AREA = "ortsteil:bonn-zentrum";
+  // Startzustand ohne Gebiet im Link: Übersicht über ganz Bonn (Stadtbezirke anklickbar, noch keine Vorlagen geladen)
+  const DEFAULT_AREA = "bonn:alle";
+  const OVERVIEW_HINT = "Ganz Bonn: auf der Karte einen Stadtbezirk und dann einen Ortsteil anklicken oder oben ein Gebiet wählen. Die Suche findet Vorlagen in ganz Bonn.";
   const REPO = "https://github.com/daimpad/allris-test";
   const RANK = { hoch: 3, mittel: 2, niedrig: 1 };
   const LIST_STEP = 200;
@@ -40,7 +42,7 @@
   const INTRO = `<div class="intro">
     <p class="intro-lead">Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – wo, wann und wer ist beteiligt?</p>
     <button type="button" class="btn btn-cta tour-cta" data-tour><span class="tour-cta-dot" aria-hidden="true"></span>Tour durch alle Funktionen</button>
-    <p><strong>So geht's:</strong> Oben ein Gebiet wählen, dann auf der Karte oder in der Liste eine Vorlage anklicken. Hier erscheint der Vorgang: wer ihn eingebracht hat, welches Amt zuständig ist und welche Gremien wann beraten haben.</p>
+    <p><strong>So geht's:</strong> Auf der Karte einen Stadtbezirk und einen Ortsteil anklicken oder oben ein Gebiet wählen, dann auf der Karte oder in der Liste eine Vorlage anklicken. Hier erscheint der Vorgang: wer ihn eingebracht hat, welches Amt zuständig ist und welche Gremien wann beraten haben.</p>
     <p class="intro-actions">
       <button type="button" class="btn btn-soft" data-show="panel-list"><svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>Liste öffnen</button>
       <button type="button" class="btn btn-soft" data-show="timeline-wrap"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Zeitleiste öffnen</button></p>
@@ -238,19 +240,18 @@
       const b = index.bezirke.find((x) => x.slug === key);
       if (b) return { kind, key, name: b.name, file: `${BONN}bezirke/${key}.json` };
     }
+    if (kind === "bonn") return { kind, key: "alle", name: "ganz Bonn", file: null };
     if (kind === "ohne" && index.ohne_ortsbezug.some((x) => x.jahr === key)) {
       return { kind, key, name: `ohne Ortsbezug ${key}`, file: `${BONN}ohne-ortsbezug/${key}.json` };
     }
-    if (value !== DEFAULT_AREA) return parseArea(DEFAULT_AREA);
-    const first = index.ortsteile[0];
-    return { kind: "ortsteil", key: first.slug, name: first.name, file: `${BONN}ortsteile/${first.slug}.json` };
+    return parseArea(DEFAULT_AREA);
   }
   function fillAreaSelect() {
     const sel = $("#f-area");
     if (!index) { sel.innerHTML = '<option value="ortsteil:endenich">Endenich (Pilot)</option>'; return; }
     const groups = {};
     index.ortsteile.forEach((o) => (groups[o.stadtbezirk] ||= []).push(o));
-    let html = "";
+    let html = '<option value="bonn:alle">Ganz Bonn – Gebiet wählen</option>';
     for (const bz of Object.keys(groups).sort()) {
       html += `<optgroup label="Stadtbezirk ${esc(bz)}">` + groups[bz].sort((a, b) => a.name.localeCompare(b.name, "de"))
         .map((o) => `<option value="ortsteil:${o.slug}">${esc(o.name)} (${o.count})</option>`).join("");
@@ -281,9 +282,11 @@
     setLoading(true);
     let data;
     try {
-      const r = await fetch(next.file);
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      data = await r.json();
+      if (next.file) {
+        const r = await fetch(next.file);
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        data = await r.json();
+      } else data = { meta: { sources: [] }, papers: [] };
     } catch (err) {
       if (seq !== loadSeq) return;
       setLoading(false);
@@ -300,8 +303,9 @@
     const oparl = meta.sources.find((s) => s.name === "oparl-bonn") || {};
     dataStand = (oparl.retrieved_at || meta.generated_at || new Date().toISOString()).slice(0, 10);
     papers = data.papers;
-    document.title = `RIS-Karte Bonn – Ratsvorlagen ${area.kind === "ohne" ? "ohne Ortsbezug " + area.key : "in " + area.name}`;
-    $("#f-conf").hidden = area.kind === "ohne";
+    document.title = area.kind === "bonn" ? "RIS-Karte Bonn – Ratsvorlagen räumlich, zeitlich und nach Akteuren"
+      : `RIS-Karte Bonn – Ratsvorlagen ${area.kind === "ohne" ? "ohne Ortsbezug " + area.key : "in " + area.name}`;
+    $("#f-conf").hidden = area.kind === "ohne" || area.kind === "bonn";
     fillFilters();
     drawOutline();
     selected = null;
@@ -440,6 +444,14 @@
   }
   function drawOutline() {
     if (outline) outline.remove();
+    outline = null;
+    if (area.kind === "bonn") {
+      navDeep = false;
+      navFocus = null;
+      map.fitBounds(L.geoJSON(geo.bezirk).getBounds(), mapPadding());
+      if (navOrtsteile) updateNav(true);
+      return;
+    }
     let feature = null;
     if (area.kind === "ortsteil") feature = geo.ortsteil.features.find((f) => f.properties.ortsteil_bez === area.name);
     if (area.kind === "bezirk") feature = geo.bezirk.features.find((f) => f.properties.bezirk_bez === area.name);
@@ -758,13 +770,14 @@
     lastList = list;
     const where = area.kind === "ohne" ? `ohne Ortsbezug, ${area.key}` : area.name;
     const span = range ? ` · ${fmtDate(range[0])}–${fmtDate(range[1])}` : "";
-    $("#count").textContent = `${list.length} von ${papers.length} Vorlagen · ${where}${span}`;
+    $("#count").textContent = area.kind === "bonn" ? OVERVIEW_HINT : `${list.length} von ${papers.length} Vorlagen · ${where}${span}`;
     const active = [$("#f-amt").value, $("#f-gremium").value].filter(Boolean).length +
       (area.kind === "ohne" ? 0 : document.querySelectorAll("#f-conf input:not(:checked)").length);
     $("#active-filters").textContent = active ? ` (${active} aktiv)` : "";
     let html = list.slice(0, shown).map(itemHtml).join("");
     if (list.length > shown) html += `<li class="more"><button type="button" class="btn btn-secondary" id="more">Weitere ${Math.min(LIST_STEP, list.length - shown)} von ${list.length - shown} anzeigen</button></li>`;
-    if (!list.length) html = `<li class="empty-list"><p>Keine Vorlage passt zu Gebiet, Filtern und Zeitraum.</p><button type="button" class="btn btn-secondary" id="reset-filters">Filter und Zeitraum zurücksetzen</button></li>`;
+    if (!list.length && area.kind === "bonn") html = `<li class="empty-list"><p>Noch kein Gebiet gewählt. Wählen Sie auf der Karte einen Stadtbezirk und einen Ortsteil oder oben ein Gebiet; „in ganz Bonn“ sucht über alle Vorlagen.</p></li>`;
+    else if (!list.length) html = `<li class="empty-list"><p>Keine Vorlage passt zu Gebiet, Filtern und Zeitraum.</p><button type="button" class="btn btn-secondary" id="reset-filters">Filter und Zeitraum zurücksetzen</button></li>`;
     $("#papers").innerHTML = html;
     drawMarkers(list);
     if (tl) tl.setPapers(base);
@@ -1255,7 +1268,7 @@
   function subscribeArea() {
     const box = $("#subscribe");
     document.querySelectorAll('link[rel="alternate"][type="application/atom+xml"]').forEach((l) => l.remove());
-    if (!index) { box.hidden = true; return; }
+    if (!index || area.kind === "bonn") { box.hidden = true; fillMitmachen(); return; }
     const href = `${BONN}feeds/${area.kind}-${area.key}.xml`;
     const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
     box.innerHTML = `<a class="btn btn-soft" href="${href}" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ${esc(where)} abonnieren</a>`;
@@ -1318,7 +1331,7 @@
     if (!area) return;
     const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
     const acts = [];
-    if (index) acts.push(`<a class="btn btn-cta" href="${BONN}feeds/${area.kind}-${area.key}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ${esc(where)}</a>`);
+    if (index && area.kind !== "bonn") acts.push(`<a class="btn btn-cta" href="${BONN}feeds/${area.kind}-${area.key}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ${esc(where)}</a>`);
     if (selected && hasPaperFeed(selected)) acts.push(`<a class="btn btn-soft" href="${BONN}feeds/vorlagen/${slug(selected.reference)}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Vorgang ${esc(selected.reference)}</a>`);
     $("#cta-feed").innerHTML = acts.join("") || '<span class="hint">Feeds gibt es für die Gebiete in ganz Bonn.</span>';
     $("#cta-feed-text").textContent = `Neue Vorlagen und Beratungsergebnisse aus ${where} im Feed-Reader erhalten${selected ? ", oder nur den gewählten Vorgang" : ""}.`;
@@ -1402,6 +1415,7 @@
   }
   function showStats() {
     const list = papers, where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
+    if (area.kind === "bonn") { $("#stats").innerHTML = `<p class="hint">Die Kennzahlen beziehen sich auf ein Gebiet. Wählen Sie auf der Karte oder oben ein Gebiet; die Verfahrenswege im Reiter daneben gelten für ganz Bonn.</p>`; return; }
     const count = (f) => { const c = new Map(); for (const p of list) for (const k of f(p)) c.set(k, (c.get(k) || 0) + 1); return c; };
     const th = count((p) => (p.themes || []).map((t) => t.theme));
     const pa = count((p) => p.parties || []);
@@ -1476,7 +1490,7 @@
   function syncUrl() {
     if (!area) return;
     const url = new URL(location.href);
-    url.searchParams.set("gebiet", `${area.kind}:${area.key}`);
+    if (area.kind === "bonn") url.searchParams.delete("gebiet"); else url.searchParams.set("gebiet", `${area.kind}:${area.key}`);
     if (tl && range) { const s = tl.getState(); for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.set(k, s[k]); }
     else for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.delete(k);
     const state = { thema: $("#f-theme").value, partei: $("#f-party").value, suche: scope() === "bonn" ? "bonn" : "" };
@@ -1609,8 +1623,10 @@
     ui: {
       panel(id, open) { if (!toggleFor(id) || !toggleFor(id).hidden) setPanel(id, open); },
       menu(id) { if (id) openMega(id); else closeMega(); },
-      example() {
+      async example() {
         if (selected) return true;
+        // in der Übersicht ein Beispielgebiet laden
+        if (area.kind === "bonn") await loadArea("ortsteil:bonn-zentrum", true);
         const list = filtered();
         // jüngste entschiedene Vorlage mit Ort auf der Karte, Entscheidung und Folgevorlage (selbst keine Folgevorlage)
         const has = (x, typ) => x.steps.some((s) => s.typ === typ);
