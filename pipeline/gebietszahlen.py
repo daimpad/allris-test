@@ -10,6 +10,7 @@ from . import topics
 MIN_VORLAGEN = 5      # mindestens so viele Vorlagen des Themas im Gebiet
 MIN_ANTEIL = 0.10     # mindestens dieser Anteil an den Vorlagen des Gebiets
 MIN_FAKTOR = 1.25     # mindestens so viel häufiger als in ganz Bonn
+MIN_THEMEN = 20       # Themenebene: Anteile erst ab so vielen Vorlagen im Gebiet (alle seit 2019)
 
 
 def window_start(stand):
@@ -49,6 +50,14 @@ def auffaellig(ids, papers, base):
     return {"thema": t, "label": label.get(t, t), "anteil": round(share * 100), "anteil_bonn": round(city * 100)}
 
 
+def theme_shares(ids, papers):
+    """Themenebene der Karte: je Thema [Zahl, Anteil in %] aller Vorlagen des Gebiets seit Beginn der Daten;
+    None unter MIN_THEMEN Vorlagen (Anteile zu unsicher)."""
+    if len(ids) < MIN_THEMEN:
+        return None
+    return {t: [c, round(share * 100, 1)] for t, (c, share) in sorted(shares(ids, papers).items())}
+
+
 def annotate(index, areas, papers, stand):
     """Ergänzt index.json: je Ortsteil `jahr` und `auffaellig`; je Stadtbezirk `alle` (ohne Doppelte aus
     Ortsteilen und Bezirksebene), `jahr` und `auffaellig`; dazu `meta_zahlen` mit Zeitraum und Regeln."""
@@ -59,6 +68,7 @@ def annotate(index, areas, papers, stand):
         ids = areas[f"ortsteil:{o['slug']}"]
         o["jahr"] = recent(ids, papers, since)
         o["auffaellig"] = auffaellig(ids, papers, base)
+        o["themen"] = theme_shares(ids, papers)
     for b in index["bezirke"]:
         ids = set(areas.get(f"bezirk:{b['slug']}", []))
         for o in index["ortsteile"]:
@@ -67,7 +77,10 @@ def annotate(index, areas, papers, stand):
         b["alle"] = len(ids)
         b["jahr"] = recent(ids, papers, since)
         b["auffaellig"] = auffaellig(ids, papers, base)
+        b["themen"] = theme_shares(ids, papers)
     index["zahlen"] = {"seit": since, "bis": stand[:10],
+                       "themen_bonn": {t: round(share * 100, 1) for t, (_, share) in sorted(base.items())},
+                       "themen_min": MIN_THEMEN,
                        "hinweis": "Vorlagen mit Ortsbezug im Gebiet (Verortung teils abgeleitet); Themen abgeleitet. "
                                   f"Auffällig: mindestens {MIN_VORLAGEN} Vorlagen und {round(MIN_ANTEIL * 100)} % im Gebiet, "
                                   f"mindestens {MIN_FAKTOR:g}-mal so häufig wie in ganz Bonn."}

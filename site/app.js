@@ -521,12 +521,49 @@
     return [...new Set([0.2, 0.4, 0.6, 0.8].map((q) => v[Math.floor(q * (v.length - 1))] + 1))];
   }
   const ranges = (br) => [0, ...br].map((lo, k) => (k === br.length ? `ab ${de(lo)}` : `${de(lo)}–${de(br[k] - 1)}`));
+  // Anteile in Prozent: Grenzen auf ganze Prozent gerundet
+  function shareBreaks(values, quant) {
+    const v = values.filter((x) => x != null).sort((a, b) => a - b);
+    if (!v.length) return [];
+    const br = quant ? [0.2, 0.4, 0.6, 0.8].map((q) => Math.ceil(v[Math.floor(q * (v.length - 1))]))
+      : [0.2, 0.4, 0.6, 0.8].map((q) => Math.ceil(q * v[v.length - 1]));
+    return [...new Set(br.filter((b) => b > 0))];
+  }
+  const shareRanges = (br) => [0, ...br].map((lo, k) => (k === br.length ? `ab ${pct(lo)}` : `${pct(lo)} bis unter ${pct(br[k])}`));
+  function navBreaks() {
+    if (!navMetric) {
+      otBreaks = quintiles(index.ortsteile.map((o) => o.jahr || 0));
+      const maxBz = Math.max(1, ...index.bezirke.map((b) => b.jahr || 0));
+      bzBreaks = [0.2, 0.4, 0.6, 0.8].map((q) => Math.round(q * maxBz) + 1);
+    } else {
+      otBreaks = shareBreaks(index.ortsteile.map(metricValue), true);
+      bzBreaks = shareBreaks(index.bezirke.map(metricValue), false);
+    }
+  }
+  // Zahl im Hinweis beim Überfahren und in der Beschriftung
+  function navTip(info, scope) {
+    if (!navMetric) return `<span class="nav-big">${de(info.jahr)}</span> Vorlagen in den letzten 12 Monaten
+      <br><span class="nav-dim">${de(scope === "bz" ? info.alle : info.count)} seit Oktober 2019</span>${fact(info.auffaellig)}`;
+    const label = esc(THEMES[navMetric]), bonn = (index.zahlen?.themen_bonn || {})[navMetric] || 0;
+    if (!info.themen) return `${label}: <span class="nav-dim">zu wenige Vorlagen für einen Anteil (unter ${de(index.zahlen?.themen_min || 20)})</span>`;
+    const [n, share] = info.themen[navMetric] || [0, 0];
+    return `<span class="nav-big">${pct(share)}</span> der Vorlagen: ${label}
+      <br><span class="nav-dim">${de(n)} von ${de(scope === "bz" ? info.alle : info.count)} seit Oktober 2019 · ganz Bonn ${pct(bonn)} · Themen abgeleitet</span>`;
+  }
+  const navNumber = (info) => (!navMetric ? de(info.jahr) : info.themen ? pct((info.themen[navMetric] || [0, 0])[1]) : "–");
   const otInfo = (l) => index.ortsteile.find((o) => o.name === l.feature.properties.ortsteil_bez) || {};
   const bzInfo = (l) => index.bezirke.find((b) => b.name === l.feature.properties.bezirk_bez) || {};
+  // Themenebene: statt der Zahl der Vorlagen der Anteil eines Themas an allen Vorlagen des Gebiets seit 2019
+  // (index.json, gebietszahlen.theme_shares; Themen abgeleitet); unter der Mindestzahl grau
+  let navMetric = "";
+  const NAV_NONE = "hsl(240, 6%, 82%)";
+  const metricValue = (info) => (!navMetric ? info.jahr || 0 : info.themen ? (info.themen[navMetric] || [0, 0])[1] : null);
+  const pct = (v) => `${Number(v).toLocaleString("de-DE", { maximumFractionDigits: 0 })} %`;
+  const navFill = (info, br) => { const v = metricValue(info); return v == null ? NAV_NONE : step(klass(v, br)); };
   const fact = (a) => (a ? `<br><span class="nav-dim">Auffällig häufig: ${esc(a.label)} (${a.anteil} % hier, ${a.anteil_bonn} % in ganz Bonn)</span>` : "");
   const glassOn = (layer) => { layer.setStyle(GLASS); layer.bringToFront(); layer.getElement()?.setAttribute("filter", "url(#nav-glow)"); };
   const glassOff = (layer, style) => { layer.setStyle(style); layer.getElement()?.removeAttribute("filter"); };
-  const bzStyle = (layer) => ({ ...BZ_LINE, fillColor: step(klass(bzInfo(layer).jahr || 0, bzBreaks)) });
+  const bzStyle = (layer) => ({ ...BZ_LINE, fillColor: navFill(bzInfo(layer), bzBreaks) });
   let navBezirke = null, navOrtsteile = null, bonnBounds = null, navDeep = false, navFocus = null, navLabels = null, navMode = null, navLegend = null;
   const de = (n) => Number(n || 0).toLocaleString("de-DE");
   // Zoomstufe, bei der ganz Bonn ins freie Kartenfeld passt; bis dahin sind die Stadtbezirke anklickbar
@@ -544,7 +581,7 @@
   }
   const otStyle = (layer) => {
     const inFocus = navFocus && layer.feature.properties.bezirk_bez === navFocus;
-    return { ...NAV_LINE, opacity: inFocus ? 0.7 : 0.4, fillOpacity: navFocus && !inFocus ? 0.35 : 1, fillColor: step(klass(otInfo(layer).jahr || 0, otBreaks)) };
+    return { ...NAV_LINE, opacity: inFocus ? 0.7 : 0.4, fillOpacity: navFocus && !inFocus ? 0.35 : 1, fillColor: navFill(otInfo(layer), otBreaks) };
   };
   function initNav() {
     if (!index) return;
@@ -555,8 +592,7 @@
       onEachFeature(f, layer) {
         const o = index.ortsteile.find((x) => x.name === f.properties.ortsteil_bez);
         const current = () => area && area.kind === "ortsteil" && area.key === o.slug;
-        layer.bindTooltip(() => `<strong>${esc(o.name)}</strong><br><span class="nav-big">${de(o.jahr)}</span> Vorlagen in den letzten 12 Monaten
-          <br><span class="nav-dim">${de(o.count)} seit Oktober 2019</span>${fact(o.auffaellig)}
+        layer.bindTooltip(() => `<strong>${esc(o.name)}</strong><br>${navTip(o, "ot")}
           <br><span class="nav-dim">${current() ? "gewählt" : "Klick zeigt den Ortsteil"}</span>`, { sticky: true, className: "nav-tip" });
         layer.on({ mouseover: () => glassOn(layer), mouseout: () => glassOff(layer, otStyle(layer)) });
         layer.on("click", () => { if (!current()) chooseArea(`ortsteil:${o.slug}`); });
@@ -568,8 +604,7 @@
         const name = f.properties.bezirk_bez;
         const n = index.ortsteile.filter((o) => o.stadtbezirk === name).length;
         const b = bzInfo(layer);
-        layer.bindTooltip(`<strong>Stadtbezirk ${esc(name)}</strong><br><span class="nav-big">${de(b.jahr)}</span> Vorlagen in den letzten 12 Monaten
-          <br><span class="nav-dim">${de(b.alle)} seit Oktober 2019 · ${n} Ortsteile</span>${fact(b.auffaellig)}
+        layer.bindTooltip(() => `<strong>Stadtbezirk ${esc(name)}</strong> <span class="nav-dim">· ${n} Ortsteile</span><br>${navTip(b, "bz")}
           <br><span class="nav-dim">Klick zeigt die Ortsteile</span>`, { sticky: true, className: "nav-tip" });
         layer.on({ mouseover: () => glassOn(layer), mouseout: () => glassOff(layer, bzStyle(layer)) });
         layer.on("click", () => {
@@ -581,9 +616,9 @@
       },
     });
     bonnBounds = navBezirke.getBounds();
-    otBreaks = quintiles(index.ortsteile.map((o) => o.jahr || 0));
-    const maxBz = Math.max(1, ...index.bezirke.map((b) => b.jahr || 0));
-    bzBreaks = [0.2, 0.4, 0.6, 0.8].map((q) => Math.round(q * maxBz) + 1);
+    const f = new URLSearchParams(location.search).get("flaechen");
+    if (THEMES[f] && index.zahlen?.themen_bonn) navMetric = f;
+    navBreaks();
     navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
     // Legende der Flächen: Stufen der jeweils sichtbaren Ebene
     const Legend = L.Control.extend({
@@ -591,7 +626,20 @@
       onAdd() {
         navLegend = L.DomUtil.create("details", "nav-legend");
         navLegend.open = !MOBILE.matches;
+        const themes = index.zahlen?.themen_bonn ? Object.entries(THEMES) : [];
+        navLegend.innerHTML = `<summary></summary>${themes.length ? `<label class="nav-metric">Flächen färben nach
+          <select id="nav-metric"><option value="">Zahl der Vorlagen (12 Monate)</option><optgroup label="Anteil eines Themas (seit 2019)">
+          ${themes.map(([k, v]) => `<option value="${k}"${k === navMetric ? " selected" : ""}>${esc(v)}</option>`).join("")}</optgroup></select></label>` : ""}
+          <div class="nav-legend-body"></div>`;
+        navLegend.querySelector("#nav-metric")?.addEventListener("change", (e) => {
+          navMetric = e.target.value;
+          navBreaks();
+          navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
+          updateNav(true);
+          syncUrl();
+        });
         L.DomEvent.disableClickPropagation(navLegend);
+        L.DomEvent.disableScrollPropagation(navLegend);
         return navLegend;
       },
     });
@@ -632,7 +680,7 @@
     if (navLabels) navLabels.remove();
     navLabels = L.layerGroup(layers.map((l) => L.tooltip({ permanent: true, direction: "center", className: `nav-label ${cls}`, interactive: false })
       .setLatLng(l.feature.properties.ortsteil_bez ? labelPoint(l) : bezirkPoint(l))
-      .setContent(`${esc(l.feature.properties.ortsteil_bez || l.feature.properties.bezirk_bez)}<span class="nav-n">${de((l.feature.properties.ortsteil_bez ? otInfo(l) : bzInfo(l)).jahr)}</span>`))).addTo(map);
+      .setContent(`${esc(l.feature.properties.ortsteil_bez || l.feature.properties.bezirk_bez)}<span class="nav-n">${navNumber(l.feature.properties.ortsteil_bez ? otInfo(l) : bzInfo(l))}</span>`))).addTo(map);
   }
   function updateNav(force) {
     if (!navOrtsteile) return;
@@ -647,10 +695,14 @@
     navDefs();
     navOrtsteile.eachLayer((l) => l.setStyle(otStyle(l)));
     if (navLegend) {
-      const z = index.zahlen || {};
-      navLegend.innerHTML = `<summary>Vorlagen der letzten 12 Monate</summary>
-        <ol class="nav-ramp">${ranges(far ? bzBreaks : otBreaks).map((r, k) => `<li><span class="nav-sw nav-sw${k}" aria-hidden="true"></span>${r}</li>`).join("")}</ol>
-        <p>Je ${far ? "Stadtbezirk" : "Ortsteil"}${z.seit ? `, ${fmtDate(z.seit)} bis ${fmtDate(z.bis)}` : ""}. Gezählt werden Vorlagen mit Ortsbezug im Gebiet (Verortung teils abgeleitet); mehr als die Hälfte aller Vorlagen hat keinen. „Auffällig häufig“ beim Überfahren: Thema, das im Gebiet deutlich häufiger vorkommt als in ganz Bonn (abgeleitet).</p>`;
+      const z = index.zahlen || {}, br = far ? bzBreaks : otBreaks;
+      navLegend.querySelector("summary").textContent = navMetric ? `Anteil: ${THEMES[navMetric]}` : "Vorlagen der letzten 12 Monate";
+      navLegend.querySelector(".nav-legend-body").innerHTML = navMetric
+        ? `<ol class="nav-ramp">${shareRanges(br).map((r, k) => `<li><span class="nav-sw nav-sw${k}" aria-hidden="true"></span>${r}</li>`).join("")}
+            <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>zu wenige Vorlagen (unter ${de(z.themen_min || 20)})</li></ol>
+          <p>Anteil der Vorlagen mit diesem Thema an allen Vorlagen mit Ortsbezug je ${far ? "Stadtbezirk" : "Ortsteil"} seit Oktober 2019; in ganz Bonn ${pct((z.themen_bonn || {})[navMetric] || 0)}. <span class="derived">abgeleitet</span> Themen aus Amt, Ausschuss und Stichwort; eine Vorlage kann mehrere Themen haben.</p>`
+        : `<ol class="nav-ramp">${ranges(br).map((r, k) => `<li><span class="nav-sw nav-sw${k}" aria-hidden="true"></span>${r}</li>`).join("")}</ol>
+          <p>Je ${far ? "Stadtbezirk" : "Ortsteil"}${z.seit ? `, ${fmtDate(z.seit)} bis ${fmtDate(z.bis)}` : ""}. Gezählt werden Vorlagen mit Ortsbezug im Gebiet (Verortung teils abgeleitet); mehr als die Hälfte aller Vorlagen hat keinen. „Auffällig häufig“ beim Überfahren: Thema, das im Gebiet deutlich häufiger vorkommt als in ganz Bonn (abgeleitet).</p>`;
     }
     if (far) labels(navBezirke.getLayers(), "nav-label-bz");
     else if (navFocus) labels(navOrtsteile.getLayers().filter((l) => l.feature.properties.bezirk_bez === navFocus), "nav-label-ot");
@@ -1573,6 +1625,7 @@
     else for (const k of ["von", "bis", "zoom", "achse"]) url.searchParams.delete(k);
     const state = { thema: $("#f-theme").value, partei: $("#f-party").value, suche: scope() === "bonn" ? "bonn" : "" };
     state.farbe = colorBy === "thema" ? "thema" : "";
+    state.flaechen = navMetric;
     state.plaene = planOn ? "1" : "";
     state.plan = !selected && shownPlan ? shownPlan : "";
     state.baustellen = bauOn ? "1" : "";

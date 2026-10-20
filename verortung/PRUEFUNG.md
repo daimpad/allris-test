@@ -81,3 +81,6 @@ Regel `strasse+hausnummer` seit 20.10.2026 (TECHNIK.md).
 - Vorprüfung (`vorpruefung_hausnummern.tsv`, ersetzt nicht die Prüfung von Hand):
   - maschinell: 30 von 30 Adressen nennt auch die Ortsteil-Angabe der Stadt im Verzeichnis so;
   - KI-Vorprüfung: 29 plausibel, 1 teilweise (Nr. 1, Strecke zwischen zwei Adressen). Drei Sammelvorlagen nennen mehrere Grundstücke; die Regel gilt dort je Straße.
+- Ergebnis (20.10.2026): Der Auftraggeber hat die Einschätzung der KI-Vorprüfung für alle 30 Vorgänge übernommen. Danach sind 29 richtig und 1 teilweise; falsch ist keiner, die Regel bleibt unverändert.
+  - Das Urteil ist in der Spalte „anmerkung“ jeder Zeile so gekennzeichnet. Die Vorgänge wurden nicht einzeln von Hand am Original geprüft.
+  - Gestützt wird das Ergebnis vor allem durch den unabhängigen Abgleich mit der Ortsteil-Angabe der Stadt (30 von 30 gleich).

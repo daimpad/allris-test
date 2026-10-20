@@ -25,6 +25,12 @@ class Gebietszahlen(unittest.TestCase):
         # Anteil wie in ganz Bonn: kein Befund
         self.assertIsNone(gz.auffaellig(list(range(40)) + [100 + i for i in range(10)], papers, base))
 
+    def test_themenanteile(self):
+        papers = {i: paper("2020-01-01", "verkehr", "bauen") if i < 5 else paper("2020-01-01", "bauen") for i in range(20)}
+        s = gz.theme_shares(list(papers), papers)
+        self.assertEqual((s["verkehr"], s["bauen"]), ([5, 25.0], [20, 100.0]))
+        self.assertIsNone(gz.theme_shares(list(range(19)), papers))  # unter der Mindestzahl
+
     def test_bezirk_ohne_doppelte(self):
         papers = {i: paper("2026-01-01") for i in range(5)}
         index = {"ortsteile": [{"name": "A", "slug": "a", "stadtbezirk": "B"}, {"name": "C", "slug": "c", "stadtbezirk": "B"}],
