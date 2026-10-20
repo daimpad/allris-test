@@ -1,0 +1,149 @@
+// Browser-Prüfung der fertigen Seite (Playwright, Chromium): Start mit der Übersicht über ganz Bonn, Navigation
+// über die Flächen, Link mit Gebiet und Vorgang, Flächen „Prozesse“ und „Mitmachen in Bonn“, Kartenmenü mobil, Tour.
+// Barrierefreiheit mit axe-core (WCAG 2.1 A und AA). Erwartet die zusammengestellte Seite unter SITE
+// (Standard http://localhost:8765/), siehe Workflow tests.yml.
+import { test, before, after } from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { createRequire } from "node:module";
+import { chromium } from "playwright";
+
+const SITE = process.env.SITE || "http://localhost:8765/";
+const AXE = readFileSync(createRequire(import.meta.url).resolve("axe-core/axe.min.js"), "utf8");
+let browser;
+
+before(async () => { browser = await chromium.launch(); });
+after(async () => { await browser?.close(); });
+
+// neue Seite; Fehler im Skript und in der Konsole werden gesammelt (fehlende Dateien, 404, zählen nicht)
+async function open(path = "", { width = 1440, height = 900 } = {}) {
+  const page = await browser.newPage({ viewport: { width, height }, bypassCSP: true });
+  page.errors = [];
+  page.on("pageerror", (e) => page.errors.push(String(e)));
+  page.on("console", (m) => { if (m.type() === "error" && !/404|Failed to load resource/.test(m.text())) page.errors.push(m.text()); });
+  await page.goto(SITE + path, { waitUntil: "networkidle" });
+  return page;
+}
+
+async function axe(page) {
+  if (!(await page.evaluate(() => "axe" in window))) await page.addScriptTag({ content: AXE });
+  return page.evaluate(async () => (await window.axe.run(document, { runOnly: ["wcag2a", "wcag2aa"] }))
+    .violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.html.slice(0, 100)).join(" | ")}`));
+}
+
+// Punkt auf der Karte, an dem eine Fläche der Navigation obenauf liegt (wie ein Klick mit der Maus)
+async function areaPoint(page) {
+  const pts = await page.evaluate(() => {
+    const o = [];
+    for (let y = 100; y < innerHeight - 40; y += 15) for (let x = 20; x < innerWidth - 20; x += 15) {
+      const el = document.elementFromPoint(x, y);
+      if (el && el.closest(".leaflet-gebiete-pane path")) o.push({ x, y });
+    }
+    return o;
+  });
+  assert.ok(pts.length, "keine anklickbare Fläche auf der Karte");
+  return pts[Math.floor(pts.length / 2)];
+}
+
+test("Start: Übersicht über ganz Bonn, Fenster „Los geht's“, ohne Verstöße", async () => {
+  const page = await open();
+  assert.equal(await page.locator("#detail-heading").textContent(), "Los geht's");
+  assert.equal(await page.locator("#f-area").inputValue(), "bonn:alle");
+  assert.equal(await page.locator(".nav-label-bz").count(), 4, "Namen der vier Stadtbezirke");
+  assert.ok(!/gebiet=/.test(page.url()), "die Übersicht schreibt kein Gebiet in die Adresse");
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
+test("Karte: Stadtbezirk anklicken, dann Ortsteil laden", async () => {
+  const page = await open();
+  let pt = await areaPoint(page);
+  await page.mouse.click(pt.x, pt.y);
+  await page.waitForFunction(() => document.querySelectorAll(".nav-label-ot").length > 0);
+  pt = await areaPoint(page);
+  await page.mouse.click(pt.x, pt.y);
+  await page.waitForFunction(() => document.querySelector("#f-area").value.startsWith("ortsteil:"));
+  await page.waitForFunction(() => document.querySelectorAll("#papers button[data-ref]").length > 0);
+  assert.match(page.url(), /gebiet=ortsteil/);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
+test("Link mit Gebiet: Liste, Vorgang mit Prozesslinie, ohne Verstöße", async () => {
+  const page = await open("?gebiet=ortsteil:endenich");
+  assert.equal(await page.locator("#f-area").inputValue(), "ortsteil:endenich");
+  await page.waitForFunction(() => document.querySelectorAll("#papers button[data-ref]").length > 0);
+  await page.locator('.toggle[data-panel="panel-list"]').click();
+  const first = page.locator("#papers button[data-ref]").first();
+  const ref = await first.getAttribute("data-ref");
+  await first.click();
+  await page.waitForFunction(() => document.querySelector("#detail-heading").textContent === "Vorgang");
+  assert.ok(await page.locator("#detail .steps li").count() > 0, "Prozesslinie mit Stationen");
+  assert.ok(page.url().endsWith(`#${ref}`), "Drucksache in der Adresse");
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
+test("Prozesse: Verfahren, Gremien und Ämter", async () => {
+  for (const tab of ["verfahren", "gremien", "aemter"]) {
+    const page = await open(`?prozesse=${tab}&ansicht=liste`);
+    const panel = page.locator("#panel-prozesse");
+    assert.ok(await panel.isVisible(), `Fläche Prozesse (${tab})`);
+    assert.ok((await panel.textContent()).length > 500, `Inhalt im Reiter ${tab}`);
+    assert.deepEqual(await axe(page), [], `Reiter ${tab}`);
+    assert.deepEqual(page.errors, []);
+    await page.close();
+  }
+});
+
+test("Mitmachen in Bonn: Stadtbezirk wechseln", async () => {
+  const page = await open("?mitmachen=1&bezirk=Beuel");
+  await page.waitForFunction(() => /Wege, sich einzubringen/.test(document.querySelector("#bt-body").textContent));
+  assert.match(await page.locator("#bt-next-h").textContent(), /Beuel/);
+  await page.locator("#bt-bezirk").selectOption("Hardtberg");
+  assert.match(await page.locator("#bt-next-h").textContent(), /Hardtberg/);
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
+test("Mobil: Kartenoptionen in einem Menü, ohne Verstöße", async () => {
+  const page = await open("", { width: 390, height: 844 });
+  // auf dem Telefon liegt das Fenster „Los geht's“ über der Karte; erst schließen
+  await page.locator('.toggle[data-panel="panel-detail"]').click();
+  const menu = page.locator(".map-menu");
+  assert.equal(await menu.getAttribute("aria-expanded"), "false");
+  assert.equal(await page.locator(".map-whole").isVisible(), false, "„Ganz Bonn ansehen“ steckt im Menü");
+  await menu.click();
+  assert.equal(await menu.getAttribute("aria-expanded"), "true");
+  assert.ok(await page.locator(".map-whole").isVisible());
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
+test("Tour: alle Schritte bis zum Ende", async () => {
+  const page = await open();
+  await page.locator("[data-tour]").first().click();
+  const titles = [];
+  for (let i = 0; i < 30; i++) {
+    // Schritte mit Ladevorgang zeigen „Einen Moment …“, bis Gebiet oder Vorgang geladen sind
+    await page.waitForFunction(() => !document.querySelector("#tour-text")?.textContent.startsWith("Einen Moment"));
+    // nach dem letzten Schritt ist die Karte der Tour entfernt oder ausgeblendet
+    if (!(await page.locator("#tour-title").isVisible())) break;
+    const title = await page.locator("#tour-title").textContent();
+    titles.push(title);
+    await page.locator('[data-tour-act="next"]').click();
+    await page.waitForFunction((t) => {
+      const el = document.querySelector("#tour-title");
+      return !el || !el.offsetParent || el.textContent !== t || document.querySelector("#tour-text").textContent.startsWith("Einen Moment");
+    }, title);
+  }
+  assert.ok(titles.length >= 15, `nur ${titles.length} Schritte: ${titles.join(" | ")}`);
+  assert.ok(titles.includes("Der Vorgang"), "Schritt mit dem Beispielvorgang");
+  assert.equal(await page.locator(".tour-card").isVisible(), false, "Tour ist beendet");
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});

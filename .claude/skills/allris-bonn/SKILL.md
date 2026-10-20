@@ -59,7 +59,8 @@ mkdir -p _site/data/geo && cp -r site/. _site/ && cp -r data/export _site/data/ 
 python3 -m http.server -d _site 8765
 ```
 
-   Mit Playwright (Chromium vorinstalliert) Desktop 1440 px, mittlere Breite 1024 px und Mobil 390 px prüfen; axe-core (`wcag2a`, `wcag2aa`) darf keine Verstöße melden. Typische Fälle: Gebietswechsel (auch schnell hintereinander), URL-Zustand (`?gebiet=…&von=…&bis=…&thema=…&partei=…&suche=bonn#Drucksache`), Esc und Fokus, Zeitleiste per Tastatur, Suche in der Leiste mit Chips, Mega-Menüs (öffnen, Esc, Klick außerhalb), Ziehgriffe (Maus, Pfeiltasten, gespeicherte Breite), Assistent mit nachgebildetem Anbieter (`page.route` auf den Anbieter-Endpunkt; kein echter Schlüssel nötig).
+   Feste Browser-Prüfung: `node --test "tests/browser/*.test.mjs"` (Seite unter `SITE`, Standard Port 8765; läuft auch im Workflow `tests.yml`). Neue Abläufe der Oberfläche dort ergänzen.
+   Darüber hinaus mit Playwright (Chromium vorinstalliert) Desktop 1440 px, mittlere Breite 1024 px und Mobil 390 px prüfen; axe-core (`wcag2a`, `wcag2aa`) darf keine Verstöße melden. Typische Fälle: Gebietswechsel (auch schnell hintereinander), URL-Zustand (`?gebiet=…&von=…&bis=…&thema=…&partei=…&suche=bonn#Drucksache`), Esc und Fokus, Zeitleiste per Tastatur, Suche in der Leiste mit Chips, Mega-Menüs (öffnen, Esc, Klick außerhalb), Ziehgriffe (Maus, Pfeiltasten, gespeicherte Breite), Assistent mit nachgebildetem Anbieter (`page.route` auf den Anbieter-Endpunkt; kein echter Schlüssel nötig).
 
 ## Veröffentlichung
 

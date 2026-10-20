@@ -42,6 +42,14 @@ python3 -m http.server -d _site 8000
 
 Tests: `.venv/bin/python -m unittest discover tests` und `node --test "tests/js/**/*.test.mjs"`.
 
+Browser-Prüfung der zusammengestellten Seite (Playwright mit Chromium, axe-core für WCAG 2.1 A und AA): Start mit der Übersicht, Klick auf Stadtbezirk und Ortsteil, Link mit Gebiet und Vorgang, Prozesse, Mitmachen in Bonn, Kartenmenü bei 390 px, Tour bis zum Ende. Der Workflow `tests.yml` führt sie bei jedem Pull Request aus; die Rohdaten kommen aus dem Zwischenspeicher des täglichen Laufs.
+
+```bash
+npm install --prefix tests/browser && (cd tests/browser && npx playwright install chromium)
+python3 -m http.server -d _site 8765 &
+node --test "tests/browser/*.test.mjs"     # andere Adresse: SITE=http://localhost:8000/
+```
+
 ## Geokodierung
 
 Die Verortung ist regelbasiert. Sie nutzt reguläre Ausdrücke und Geometrie (shapely), kein Sprachmodell, und arbeitet nur mit Titel und Metadaten der Vorlagen. Sie läuft im Schritt `build` (`pipeline/build.py`) und schreibt die Tabellen `location` (Orte) und `paper_location` (Ortsbezug je Vorlage) in die SQLite-Datenbank. `export` gibt die Ergebnisse an Seite, GeoJSON und Audits weiter.
