@@ -15,7 +15,7 @@ danke für OParl-Lite Bonn. Für die RIS-Karte Bonn (https://ris-bonn.datenatlas
 2. **`location` (Ort der Vorlage)** am Objekt `Paper`: bei 1.816 Vorlagen gesetzt (7,3 %), überwiegend bei Bürgeranträgen, Anregungen und Beschwerden und den Stellungnahmen dazu. Das Objekt `Location` enthält `streetAddress`, `postalCode`, teils `subLocality` und `geojson` (Punkt, WGS84). Im Spiegel ist die Liste der Locations derzeit leer.
 
 **Vorschlag:**
-- `Paper.underDirectionOf` als Verweis auf `Organization` aufnehmen; die Verwaltungsbereiche sind über `/organizations` bereits vorhanden.
+- `Paper.underDirectionOf` als Verweis auf `Organization` aufnehmen, dazu die Verwaltungsbereiche als `Organization`, falls sie im Spiegel noch fehlen.
 - `Location` als eigenes Objekt und `Paper.location` als Verweis aufnehmen.
 
 **Hinweis zum Datenschutz:** Bei Bürgeranträgen kann `streetAddress` eine Hausnummer enthalten. Die RIS-Karte zeigt solche Orte nur auf Ebene der Straße oder des Ortsteils. Für den Spiegel wäre zu überlegen, ob er die Adresse unverändert durchreicht.
