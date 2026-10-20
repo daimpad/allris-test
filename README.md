@@ -24,7 +24,7 @@ Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – 
 Die Stadt nennt nur bei etwa 8 % der Vorlagen selbst einen Ort. Für die übrigen erschließt die Karte den Ort aus dem Titel:
 
 1. **Ort der Stadt** – liegt eine Koordinate aus dem Ratsinformationssystem vor, wird sie übernommen (sicher).
-2. **Name im Titel** – Straßen-, Ortsteil- oder Bezirksnamen im Titel werden mit einem Straßenverzeichnis und den Flächen der Stadt abgeglichen (erschlossen; unsicher, wenn ein Name auf mehrere Orte passt). Nennt der Titel zwei Straßen, die sich kreuzen, gilt der Ortsteil der Kreuzung.
+2. **Name im Titel** – Straßen-, Ortsteil- oder Bezirksnamen im Titel werden mit einem Straßenverzeichnis und den Flächen der Stadt abgeglichen (erschlossen; unsicher, wenn ein Name auf mehrere Orte passt). Nennt der Titel zwei Straßen, die sich kreuzen, gilt der Ortsteil der Kreuzung. Folgt auf die Straße eine Hausnummer, bestimmt das Hausnummernverzeichnis der Stadt den Ortsteil; angezeigt wird weiter nur die Straße.
 3. **Bebauungsplan im Titel** – eine eindeutige Plannummer verweist auf den Geltungsbereich des Plans (sicher).
 4. **Übernommen** – eine Stellungnahme oder ein Änderungsantrag ohne eigenen Ort übernimmt den Ort der Vorlage, auf die er sich bezieht.
 
@@ -76,6 +76,7 @@ Eine Stichprobe von 30 Kandidaten ist von Hand geprüft; alle Kandidaten, die di
 | [OParl-Lite Bonn](https://oparl.bonn.machdenstaat.de/) (machdenstaat) | Sitzung, Tagesordnungspunkt und Ergebnis je Beratung | CC BY 4.0 |
 | Stadt Bonn, [Ortsteile und Stadtbezirke](https://opendata.bonn.de/dataset/flächen-der-ortsteile) | Flächen | CC0 1.0 |
 | Stadt Bonn, [Lage der Bebauungspläne](https://opendata.bonn.de/dataset/lage-der-bebauungspläne) | 1.128 rechtskräftige Pläne mit Plan und Begründung | CC0 1.0 |
+| Stadt Bonn, [Hausnummern georeferenziert](https://opendata.bonn.de/dataset/strassenliste-straßennamen-straßenverzeichnis-hausnummern-georeferenziert) | Ortsteil je Hausnummer (nur zur Verortung, ohne Anzeige der Nummer) | CC0 1.0 |
 | Stadt Bonn, Baustellen (Stadtplan) | laufende und geplante Baustellen | CC0 1.0 (laut Auftraggeber) |
 | OpenStreetMap | Straßenverzeichnis, Kartenhintergrund | ODbL 1.0, © OpenStreetMap-Mitwirkende |
 

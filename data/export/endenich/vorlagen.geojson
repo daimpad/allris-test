@@ -2,8 +2,8 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 556,
-  "generated_at": "2026-10-20T07:24:18+00:00",
+  "count": 535,
+  "generated_at": "2026-10-20T15:27:16+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -34,6 +34,12 @@
     "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
     "retrieved_at": "2026-10-18T18:31:59+00:00"
+   },
+   {
+    "name": "hnr-bonn",
+    "url": "https://opendata.bonn.de/dataset/strassenliste-straßennamen-straßenverzeichnis-hausnummern-georeferenziert",
+    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Hausnummern georeferenziert“)",
+    "retrieved_at": "2026-10-20T15:20:47+00:00"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
@@ -226,7 +232,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029456"
    }
@@ -490,7 +496,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse+ortsteil",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028987"
    }
@@ -970,7 +976,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026905"
    }
@@ -1042,7 +1048,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026632"
    }
@@ -1066,7 +1072,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026633"
    }
@@ -1738,7 +1744,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024112"
    }
@@ -1834,7 +1840,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023861"
    }
@@ -2002,7 +2008,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023856"
    }
@@ -2132,30 +2138,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06871,
-     50.737339
-    ]
-   },
-   "properties": {
-    "reference": "253221-01 ST",
-    "name": "Grüne-Antrag: Sicherung Fußgängerquerung Siemensstraße 184",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2025-06-12",
-    "amt": "33 Bürgerdienste",
-    "place": "Siemensstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023177"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.0744792,
      50.7275062
     ]
@@ -2245,30 +2227,6 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021981"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.06871,
-     50.737339
-    ]
-   },
-   "properties": {
-    "reference": "253221",
-    "name": "Grüne-Antrag: Sicherung Fußgängerquerung Siemensstraße 184",
-    "paper_type": "Antrag",
-    "date": "2025-05-28",
-    "amt": "01-2 Ratsbüro",
-    "place": "Siemensstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023005"
    }
   },
   {
@@ -2746,7 +2704,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021960"
    }
@@ -3082,7 +3040,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021739"
    }
@@ -5434,7 +5392,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse+ortsteil",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016394"
    }
@@ -5962,7 +5920,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015455"
    }
@@ -6202,7 +6160,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015284"
    }
@@ -7220,54 +7178,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "230878",
-    "name": "Grundstück in Bonn, Endenicher Allee 17 - Errichtung eines Studentenwohnheims (Ersatzneubau) Az.: 10682/2022",
-    "paper_type": "Beschlussvorlage",
-    "date": "2023-05-04",
-    "amt": "63 Bauordnungsamt",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012067"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "230578",
-    "name": "Ersatzneubau inkl. Abbruch Aula, Seminargebäude und Bestandsmensa mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn -Entwurfsplanung-",
-    "paper_type": "Beschlussvorlage",
-    "date": "2023-05-02",
-    "amt": "85 Städtisches Gebäudemanagement Bonn",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011358"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -7474,7 +7384,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse+ortsteil",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011425"
    }
@@ -8554,7 +8464,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse+ortsteil",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2008645"
    }
@@ -8804,30 +8714,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.063923,
-     50.720473
-    ]
-   },
-   "properties": {
-    "reference": "221526-01 ST",
-    "name": "Nutzung und Ankauf Bundesimmobilie Provinzialstraße 21",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2022-08-15",
-    "amt": "03 Amt für Wirtschaftsförderung",
-    "place": "Provinzialstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007656"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.07005,
      50.727177
     ]
@@ -8869,30 +8755,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007611"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.063923,
-     50.720473
-    ]
-   },
-   "properties": {
-    "reference": "221526",
-    "name": "CDU-Antrag: Nutzung und Ankauf Bundesimmobilie Provinzialstraße 21",
-    "paper_type": "Antrag",
-    "date": "2022-08-09",
-    "amt": "01-2 Ratsbüro",
-    "place": "Provinzialstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007600"
    }
   },
   {
@@ -8962,7 +8824,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse+ortsteil",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007391"
    }
@@ -9418,7 +9280,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse+ortsteil",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005529"
    }
@@ -9466,7 +9328,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005407"
    }
@@ -9733,30 +9595,6 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004975"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.06871,
-     50.737339
-    ]
-   },
-   "properties": {
-    "reference": "220258",
-    "name": "Grundstück in Bonn, Siemensstraße 126 - Errichtung eines Mehrfamilienwohnhauses Az. 10397/2021",
-    "paper_type": "Beschlussvorlage",
-    "date": "2022-02-08",
-    "amt": "63 Bauordnungsamt",
-    "place": "Siemensstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004981"
    }
   },
   {
@@ -10220,102 +10058,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "211994",
-    "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-    "paper_type": "Mitteilungsvorlage",
-    "date": "2021-10-29",
-    "amt": "85 Städtisches Gebäudemanagement Bonn",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003442"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "211637-03 AA",
-    "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637",
-    "paper_type": "Änderungsantrag",
-    "date": "2021-10-28",
-    "amt": "01-2 Ratsbüro",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003461"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "211637-02 AA",
-    "name": "BBB-Änderungsantrag: Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637",
-    "paper_type": "Änderungsantrag",
-    "date": "2021-10-27",
-    "amt": "01-2 Ratsbüro",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003428"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "211637-01 ST",
-    "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2021-10-26",
-    "amt": "85 Städtisches Gebäudemanagement Bonn",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003387"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.07005,
      50.727177
     ]
@@ -10388,30 +10130,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "211637",
-    "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-    "paper_type": "Beschlussvorlage",
-    "date": "2021-09-29",
-    "amt": "85 Städtisches Gebäudemanagement Bonn",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002654"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.078022,
      50.723774
     ]
@@ -10474,7 +10192,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse+ortsteil",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002713"
    }
@@ -10642,7 +10360,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002362"
    }
@@ -10882,7 +10600,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001664"
    }
@@ -11617,30 +11335,6 @@
     ]
    },
    "properties": {
-    "reference": "210217",
-    "name": "Ernst-Moritz-Arndt-Gymnasium, Fällung Baum Nr. 37, Abriss der Aula und angrenzender Gebäudetrakte, Neubauplanung",
-    "paper_type": "Mitteilungsvorlage",
-    "date": "2021-03-15",
-    "amt": "85 Städtisches Gebäudemanagement Bonn",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "vererbt",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10223"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
     "reference": "210191",
     "name": "Bürgerantrag: Bewohnerparken in der Endenicher Allee",
     "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
@@ -11794,57 +11488,9 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9253"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "201913-02",
-    "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37",
-    "paper_type": "Dringlichkeitsentscheidung BV",
-    "date": "2021-01-18",
-    "amt": "85 Städtisches Gebäudemanagement Bonn",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9512"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "201913-01",
-    "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37",
-    "paper_type": "Beschlussvorlage",
-    "date": "2021-01-11",
-    "amt": "85 Städtisches Gebäudemanagement Bonn",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9376"
    }
   },
   {
@@ -12085,30 +11731,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8922"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.080328,
-     50.72662
-    ]
-   },
-   "properties": {
-    "reference": "201913",
-    "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung von 5 städtischen Bäumen",
-    "paper_type": "Beschlussvorlage",
-    "date": "2020-11-20",
-    "amt": "67 Amt für Umwelt und Stadtgrün",
-    "place": "Endenicher Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8526"
    }
   },
   {
@@ -13066,7 +12688,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6927"
    }
@@ -13189,30 +12811,6 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6336"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.063923,
-     50.720473
-    ]
-   },
-   "properties": {
-    "reference": "200913",
-    "name": "Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Provinzialstr. 27, Ludwig-Richter-Str. 3 c) im Stadtbezirk Hardtberg",
-    "paper_type": "Mitteilungsvorlage",
-    "date": "2020-05-19",
-    "amt": "56 Amt für Umwelt-, Verbraucherschutz und Lokale Agenda",
-    "place": "Provinzialstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6166"
    }
   },
   {
@@ -13426,7 +13024,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4679"
    }
@@ -13453,30 +13051,6 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4940"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.063923,
-     50.720473
-    ]
-   },
-   "properties": {
-    "reference": "200190-1 ST",
-    "name": "Ankauf und Vermarktung BMVg bzw. Bundesimmobilie Provinzialstraße 21",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2020-02-25",
-    "amt": "03 Amt für Wirtschaftsförderung",
-    "place": "Provinzialstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4955"
    }
   },
   {
@@ -13618,7 +13192,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4662"
    }
@@ -13666,7 +13240,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4662"
    }
@@ -13810,33 +13384,9 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4518"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.063923,
-     50.720473
-    ]
-   },
-   "properties": {
-    "reference": "200190",
-    "name": "Ankauf und Vermarktung BMVg bzw. Bundesimmobilie Provinzialstraße 21",
-    "paper_type": "Antrag",
-    "date": "2020-02-04",
-    "amt": "01-2 Ratsbüro",
-    "place": "Provinzialstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4567"
    }
   },
   {
@@ -13930,7 +13480,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4090"
    }
@@ -14348,30 +13898,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "190880-1 ST",
-    "name": "Bürgerantrag: Veränderung Ampelschaltung Endenicher Straße 165/Knauber",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2019-11-29",
-    "amt": "66 Tiefbauamt",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3213"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.068235,
      50.724591
     ]
@@ -14386,7 +13912,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3235"
    }
@@ -14485,30 +14011,6 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3145"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "190880",
-    "name": "Bürgerantrag: Veränderung Ampelschaltung Endenicher Straße 165/Knauber",
-    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-    "date": "2019-11-22",
-    "amt": "01-1 Bürgerbüro",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3153"
    }
   },
   {
@@ -14842,7 +14344,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=399"
    }
@@ -14866,7 +14368,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "strasse",
+    "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=403"
    }

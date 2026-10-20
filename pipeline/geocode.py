@@ -7,6 +7,11 @@ die Straßenpunkte der OParl-Locations (Stufe A, CC0) für Namen, die in OSM (no
 Kreuzungen: Für je zwei Straßen, deren Linien sich berühren, werden die Ortsteile der Berührungspunkte
 gespeichert. Nennt ein Titel zwei solche Straßen, gilt der Ortsteil der Kreuzung (Regel R1,
 verortung/PRUEFUNG.md).
+
+Hausnummern: Folgt einer Straße im Titel eine Hausnummer, die das Verzeichnis der Stadt genau einem
+Ortsteil zuordnet, gilt dieser Ortsteil (Vorrang vor Ortsteilname, Kreuzung und Bezirk; ein genannter
+Ortsteil derselben Straße wird dann nicht zusätzlich verortet, er meint meist die Gemarkung). Die Nummer
+bestimmt nur den Ortsteil; angezeigt wird weiter der Straßenabschnitt, Fundstelle ohne Nummer.
 """
 import json
 import math
@@ -43,6 +48,8 @@ ORTSTEIL_ALIASES = {
 }
 BEZIRKE = {"Bad Godesberg": ["Bad Godesberg", "Godesberg"], "Beuel": ["Beuel"], "Hardtberg": ["Hardtberg"]}
 # Namen, die im Titel oft nicht die Straße meinen (oder mehrere Lagen haben): Konfidenz niedrig
+# Hausnummer direkt nach dem Straßennamen („Kennedyallee 25“, „Nr. 12a“, „12-14“); nicht „Str. 2. Bauabschnitt“
+HAUSNUMMER = re.compile(r"\s+(?:Nr\.\s*)?(\d{1,4})(?=[a-zA-Z]?(?:\s|$|[,;)\-–/]))")
 GENERIC_NAMES = {"Rheinufer", "Markt", "Kirchberg", "Wasserland"}
 # Bebauungsplan-Nummern (Methode B3): Stichwort (auch Tippfehler, Plural, Bauleitplan, Satzung), danach eine
 # oder mehrere Nummern NNNN-N(N) mit optionalem Zusatz (a, A, I, II, -A, „Teil A“); Präfix 6–8 wie im
@@ -82,8 +89,9 @@ def _alternation(names, pattern=re.escape, hyphen_before=False):
 
 
 class Gazetteer:
-    def __init__(self, ways=None, street_points=()):
-        """`street_points`: (Name, lon, lat) aus den OParl-Locations der Stadt."""
+    def __init__(self, ways=None, street_points=(), housenumbers=None):
+        """`street_points`: (Name, lon, lat) aus den OParl-Locations der Stadt; `housenumbers`: Straße →
+        Ortsteil → Nummern (Standard: Verzeichnis in data/geo, sofern vorhanden)."""
         ortsteile = json.loads(config.ORTSTEILE.read_text())["features"]
         bezirke = json.loads(config.STADTBEZIRKE.read_text())["features"]
         self.ortsteile = [f["properties"] for f in ortsteile]
@@ -103,6 +111,13 @@ class Gazetteer:
             self.streets = self._streets(ways)
             self.crossings = self._crossings(ways)
         self._add_points(street_points)
+        if housenumbers is None and config.HAUSNUMMERN.exists():
+            housenumbers = json.loads(config.HAUSNUMMERN.read_text())["strassen"]
+        self.hnr = defaultdict(lambda: defaultdict(set))  # Straße → Nummer → Ortsteile
+        for street, by_ot in (housenumbers or {}).items():
+            for ot, numbers in by_ot.items():
+                for nr in numbers:
+                    self.hnr[_norm_street(street)][str(nr)].add(ot)
 
         # Ortsteilnamen, Varianten und Adjektive („Endenicher“) → Ortsteil
         self.ot_alias = {}
@@ -232,12 +247,16 @@ class Gazetteer:
         named_bz = {self.bz_alias[n][0] for *_, n, _ in bzs} | {self.ot_by_name[o]["bezirk_bez"] for o in named_ot}
         found = sorted({name for _, _, name, _ in streets if name in self.streets})
         rows = []
-        for _, _, name, ev in streets:
+        for _, end, name, ev in streets:
             if name in self.streets:
                 cross_ot = set().union(*[self.crossings.get(tuple(sorted((name, other))), set())
                                          for other in found if other != name])
-                rows += self._resolve_street(name, ev, named_ot, named_bz, set(bv_bezirke), cross_ot)
+                rows += self._resolve_street(name, ev, named_ot, named_bz, set(bv_bezirke), cross_ot,
+                                             self._hnr_ortsteil(name, title, end))
         covered = {r["ortsteil"] for r in rows}
+        # Hat die Hausnummer entschieden, gilt ein genannter Ortsteil derselben Straße als Gemarkung oder
+        # Lagebezeichnung („Grundstück in Bonn-Friesdorf, Friesdorfer Straße 197“ liegt in Godesberg-Nord)
+        covered |= {o for r in rows if r["method"] == "strasse+hausnummer" for o in r["hnr_vorher"]}
         for _, _, alias, ev in ots:
             ot, method = self.ot_alias[alias]
             if ot in covered:
@@ -263,7 +282,28 @@ class Gazetteer:
                              evidence=ev))
         return rows
 
-    def _resolve_street(self, name, evidence, named_ot, named_bz, bv_bezirke, cross_ot=frozenset()):
+    def _hnr_ortsteil(self, name, title, end):
+        """Ortsteil der Hausnummer direkt hinter der Straße, wenn das Verzeichnis ihn eindeutig nennt."""
+        m = HAUSNUMMER.match(title, end)
+        if not m or 1900 <= int(m.group(1)) <= 2100:  # Jahreszahl („Kölnstraße 2025“)
+            return None
+        ots = self.hnr.get(name, {}).get(str(int(m.group(1))), set())
+        return next(iter(ots)) if len(ots) == 1 else None
+
+    def _resolve_street(self, name, evidence, named_ot, named_bz, bv_bezirke, cross_ot=frozenset(), hnr_ot=None):
+        if hnr_ot:
+            before = sorted({r["ortsteil"] for r in self._resolve_street(name, evidence, named_ot, named_bz,
+                                                                         bv_bezirke, cross_ot)})
+            hit = [e for e in self.streets[name] if e["ortsteil"] == hnr_ot]
+            if hit:
+                conf = "niedrig" if bv_bezirke and not ({e["bezirk"] for e in hit} & bv_bezirke) else "mittel"
+                return [dict(level="strasse", name=name, ortsteil=e["ortsteil"], bezirk=e["bezirk"],
+                             lon=e["lon"], lat=e["lat"], method="strasse+hausnummer", confidence=conf,
+                             evidence=evidence, source=e["source"], hnr_vorher=before)
+                        for e in hit]
+            # Abschnitt im Ortsteil der Hausnummer fehlt im Straßenverzeichnis: Regel ohne Wirkung (Audit)
+            return [dict(r, hnr_vorher=before, hnr_ohne_lage=hnr_ot)
+                    for r in self._resolve_street(name, evidence, named_ot, named_bz, bv_bezirke, cross_ot)]
         entries = self.streets[name]
         ots = {e["ortsteil"] for e in entries}
         method, conf = "strasse", "niedrig" if name in GENERIC_NAMES else "mittel"

@@ -22,7 +22,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 | Schritt | Ergebnis |
 |---|---|
-| `fetch` (`fetch-papers`, `fetch-organizations`, `fetch-meetings`, `fetch-plans`, `fetch-lite`, `fetch-streets`) | Rohdaten in `data/raw/`, Geltungsbereiche in `data/geo/bebauungsplaene_bonn.geojson`, Änderungsprotokoll der Pläne; Abrufzeitpunkte in `STAND.json` |
+| `fetch` (`fetch-papers`, `fetch-organizations`, `fetch-meetings`, `fetch-plans`, `fetch-housenumbers`, `fetch-lite`, `fetch-streets`) | Rohdaten in `data/raw/`, Geltungsbereiche in `data/geo/bebauungsplaene_bonn.geojson`, Hausnummernverzeichnis in `data/geo/hausnummern_bonn.json`, Änderungsprotokoll der Pläne; Abrufzeitpunkte in `STAND.json` |
 | `gazetteer` | `data/geo/strassen_bonn.json`: Straßenverzeichnis aus OSM mit Ortsteilen je Straße |
 | `build` | `data/build/allris.sqlite`: Vorlage, Beratung, Sitzung, Tagesordnungspunkt, Organisation, Vorlagenbeziehung, Ort, Ortsbezug, Einreichende, Zuständigkeit, Plannummer |
 | `export` | `data/export/endenich/` (Pilot, im Repository) und `data/export/bonn/` (je Ortsteil, Bezirk und Jahr, `zeit.json`, `prozesse.json`, `suche.json`, `plaene.json`, Feeds, Kalender, GeoJSON, DCAT, Daten des Assistenten); Audits als TSV |
@@ -98,12 +98,15 @@ Die Verortung ist regelbasiert. Sie nutzt reguläre Ausdrücke und Geometrie (sh
 
    | Lage | Methode | Konfidenz |
    |---|---|---|
+   | Auf die Straße folgt eine Hausnummer, die das Verzeichnis der Stadt genau einem Ortsteil zuordnet, und das Straßenverzeichnis hat dort einen Abschnitt (seit 20.10.2026). Ein genannter Ortsteil derselben Straße wird dann nicht zusätzlich verortet; er meint meist die Gemarkung | `strasse+hausnummer` | mittel |
    | Der Titel nennt einen Ortsteil, in dem die Straße liegt | `strasse+ortsteil` | mittel |
    | Der Titel nennt eine zweite Straße, die diese kreuzt; es gilt der Ortsteil der Kreuzung (R1, seit 20.10.2026) | `strasse+kreuzung` | mittel |
    | Mehrere getrennte Lagen; der genannte Bezirk oder der Bezirk der befassten Bezirksvertretung lässt genau eine übrig | `strasse+bezirk` | mittel |
    | Mehrere Lagen, keine Eingrenzung möglich | `strasse_mehrdeutig` | niedrig |
    | Eine Lage, die außerhalb des Bezirks der befassten Bezirksvertretung oder des genannten Bezirks liegt | `strasse` | niedrig |
    | Eine Lage ohne Widerspruch | `strasse` | mittel |
+
+   Hausnummer: Ziffern direkt nach dem Straßennamen, auch „Nr. 12“, „12a“, „12-14“; nicht „Str. 2. Bauabschnitt“ und keine Jahreszahlen (1900–2100). Die Nummer bestimmt nur den Ortsteil: Punkt bleibt der Straßenabschnitt, die Fundstelle enthält keine Nummer. Verzeichnis: `data/geo/hausnummern_bonn.json` (`fetch-housenumbers`; Straße → Ortsteil → Nummern, Ortsteil per Point-in-Polygon, ohne Koordinaten einzelner Adressen). Wirkung je Vorlage und Straße in `data/export/audit_hausnummern.tsv` (bestätigt, eindeutig, geändert, ohne Wirkung).
 
    Namen, die im Titel oft keine Straße meinen („Rheinufer“, „Markt“, „Kirchberg“, „Wasserland“), erhalten stets „niedrig“.
 5. **Ortsteile ohne Straßentreffer:** Ein genannter Ortsteil, für den keine Straße gefunden wurde, wird als Fläche mit innerem Punkt eingetragen.
@@ -162,18 +165,20 @@ Die Zahlen gibt `python -m pipeline check` aus.
 - **Gegenprobe:**
   - `check` vergleicht Stufe B mit Stufe A bei den 1.816 Vorlagen mit Ort der Stadt.
   - Für 87,1 % findet Stufe B ebenfalls einen Ortsteil.
-  - Bei Straßen aus OSM stimmt der Ortsteil in 96,0 % der Fälle.
+  - Bei Straßen aus OSM stimmt der Ortsteil in 93,7 % der Fälle (1.407 von 1.501; ohne die Hausnummernregel 95,3 %).
+  - Die Stufe A ist keine Prüfung auf Ebene der Hausnummer: Die Stadt gibt je Straße einen Punkt an (927 Orte für 923 Straßen; etwa für 18 Vorlagen zur Adenauerallee derselbe Punkt in Gronau, auch für Nr. 7 und Nr. 60). Die 24 Vorlagen, die mit der Hausnummernregel nicht mehr übereinstimmen, haben alle eine Hausnummer, die in einem anderen Ortsteil liegt als der Straßenpunkt der Stadt.
   - Das Audit vermerkt je Treffer „bestätigt durch Stufe A“ oder „abweichend von Stufe A“.
 - **Prüfprotokolle:**
   - `data/export/audit_geokodierung_bonn.tsv` enthält eine Zeile je Ortsbezug mit Drucksache, Stufe, Methode, Treffer, Ortsteil, Konfidenz, Fundstelle, Quellobjekt und Prüfstatus.
   - `data/export/audit_bebauungsplaene.tsv` enthält eine Zeile je Plannummer mit der Trefferklasse.
+  - `data/export/audit_hausnummern.tsv` enthält eine Zeile je Vorlage und Straße mit Hausnummer: Ortsteile ohne die Nummer, Ortsteil der Nummer, Wirkung (ohne die Hausnummer selbst).
 - **Stichprobe:** `data/export/endenich/stichprobe_pruefung.tsv` umfasst 50 Vorlagen und wird nie überschrieben. Die KI-Vorprüfung `vorpruefung_verortung.tsv` ist gekennzeichnet und ersetzt die Prüfung von Hand nicht. Prüfung von Hand am 20.10.2026: 41 richtig, 4 teilweise, 5 falsch; Fehlerarten und mögliche Regeln in `verortung/PRUEFUNG.md`.
 - **Datenschutz:**
   - Es gibt keine Hausnummern und keine Wohnadressen.
   - Bürgeranträge erscheinen nur auf Straßen- oder Ortsteilebene.
   - `check` bricht die Pipeline ab, wenn eine Ortsangabe der Stadt eine Hausnummer enthält.
 - **Tests:**
-  - `tests/test_geocode.py`: Abkürzungen, längster Name, Eingrenzung mehrdeutiger Straßen, Ortsteilvarianten, Konfidenz bei abweichendem Bezirk, Plannummern.
+  - `tests/test_geocode.py`: Abkürzungen, längster Name, Eingrenzung mehrdeutiger Straßen, Hausnummer (Vorrang, Jahreszahl, mehrdeutige Nummer, fehlender Abschnitt), Ortsteilvarianten, Konfidenz bei abweichendem Bezirk, Plannummern.
   - `tests/test_plans.py`: Einstufung, Teilpläne, Flächenanteile je Ortsteil.
 
 ### Ausgabe

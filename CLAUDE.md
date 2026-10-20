@@ -45,6 +45,7 @@ Du arbeitest als Webentwickler:in mit Erfahrung in Open-Data-Pipelines und Geoda
 - **Ortsteile** (51 Polygone, WGS84, Felder `ortsteil`, `ortsteil_bez`, `bezirk`, `bezirk_bez`): `https://stadtplan.bonn.de/geojson?Thema=21247` – Datensatz `https://opendata.bonn.de/dataset/flächen-der-ortsteile`
 - **Stadtbezirke** (4 Polygone): `https://stadtplan.bonn.de/geojson?Thema=14574` – Datensatz `https://opendata.bonn.de/dataset/flächen-der-stadtbezirke`
 - Straßenverzeichnis: umgesetzt mit OpenStreetMap (Overpass, ODbL) → `data/geo/strassen_bonn.json` mit Ortsteilen je Straße; das städtische Straßenverzeichnis liefert keine Geometrien
+- **Hausnummern georeferenziert** (rund 64.000 Adressen, CC0 laut opendata.bonn.de; open.nrw nennt abweichend „Andere geschlossene Lizenz“): `https://stadtplan.bonn.de/geojson?OD=171` → `data/geo/hausnummern_bonn.json` (Straße → Ortsteil → Nummern, ohne Koordinaten); nur zur Bestimmung des Ortsteils
 - **Bebauungspläne** (Geltungsbereiche, 1.128 rechtskräftige Pläne, CC0): `https://stadtplan.bonn.de/geojson?Thema=20074` – Datensatz `https://opendata.bonn.de/dataset/lage-der-bebauungspläne`; Felder Plannummer, in Kraft seit, Plan- und Begründungs-PDF. Pläne im Verfahren sind nicht enthalten.
 - Sitzungen, Wahlperioden: OParl-API (`meetings`, `legislativeTerms`); Tagesordnung (`web`), Einladung und TOPs erscheinen etwa zwei Wochen vor der Sitzung; TOPs der Stadt verweisen nicht auf Vorlagen (Verknüpfung nur über OParl-Lite)
 
@@ -120,7 +121,7 @@ Eine öffentliche, statisch auslieferbare Webanwendung, die Ratsinformationen in
 | Bereich | Umgesetzt |
 |---|---|
 | Phasen 0–5 (Abschnitt 7) | Exploration, Pipeline (`python -m pipeline all`), Geokodierung A/B mit Audit, Frontend, Repository mit README/LICENSE/CONTRIBUTING/Issue-Vorlagen, tägliche Aktualisierung, Verifikation und Zip-Paket |
-| Geokodierung | Stufe A (OParl `location`), Stufe B (Straßen, Ortsteile, Stadtbezirke im Titel; Bebauungsplan-Nummern mit Geltungsbereich), Vererbung von übergeordneten Vorlagen (Stufe B, höchstens „mittel“); Stufe C offen |
+| Geokodierung | Stufe A (OParl `location`), Stufe B (Straßen, Ortsteile, Stadtbezirke im Titel; Hausnummer bestimmt den Ortsteil einer Straße, Anzeige weiter nur auf Straßenebene, Audit `audit_hausnummern.tsv`, 20.10.2026; Bebauungsplan-Nummern mit Geltungsbereich), Vererbung von übergeordneten Vorlagen (Stufe B, höchstens „mittel“); Stufe C offen |
 | Prozessebene | Schritte mit Evidenzstatus (belegt, abgeleitet, nicht öffentlich, unklar), Stand (entschieden; beraten, ohne Entscheidung; in Beratung; offen; ohne Beratungsfolge), typische Wege je Vorlagenart, Audit |
 | Zeitleiste | Dichte je Monat, Sitzungen, Wahlperioden, Auswahlspur, Zeitraumfilter mit URL-Zustand, Datumsaudit, Verifikation gegen die OParl-API |
 | Themen und Parteien | zehn Themen (Amt, Fachausschuss, Stichwort; abgeleitet mit Fundstelle), Parteien aus Einreichenden (Bezirksfraktionen → Partei, Koalition eigene Kategorie), Filter im Gebiet und Suche über ganz Bonn (`suche.json`), URL-Zustand |

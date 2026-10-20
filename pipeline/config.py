@@ -25,6 +25,10 @@ STRASSEN = GEO / "strassen_bonn.json"
 BPLAN = GEO / "bebauungsplaene_bonn.geojson"
 PLAN_LOG = GEO / "bebauungsplaene_protokoll.tsv"  # Änderungen zwischen Abrufen (neu, entfallen, Inkrafttreten)
 BPLAN_URL = "https://stadtplan.bonn.de/geojson?Thema=20074"
+# Hausnummern (Straße → Ortsteil → Nummern), reduziert aus dem georeferenzierten Verzeichnis der Stadt; dient nur
+# dazu, bei Titeln mit Hausnummer den Ortsteil einer Straße zu bestimmen, die durch mehrere Ortsteile läuft.
+HAUSNUMMERN = GEO / "hausnummern_bonn.json"
+HAUSNUMMERN_URL = "https://stadtplan.bonn.de/geojson?OD=171"
 DB = BUILD / "allris.sqlite"
 
 OPARL_BODY = "https://www.bonn.sitzung-online.de/oparl/bodies/1"
@@ -58,6 +62,10 @@ SOURCES = {
     "bplan-bonn": {
         "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
         "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
+    },
+    "hnr-bonn": {
+        "url": "https://opendata.bonn.de/dataset/strassenliste-straßennamen-straßenverzeichnis-hausnummern-georeferenziert",
+        "license": "CC0 1.0 (Stadt Bonn, Datensatz „Hausnummern georeferenziert“)",
     },
 }
 

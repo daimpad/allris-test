@@ -1,8 +1,8 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 556,
-  "generated_at": "2026-10-20T07:24:18+00:00",
+  "count": 535,
+  "generated_at": "2026-10-20T15:27:16+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -33,6 +33,12 @@
     "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
     "retrieved_at": "2026-10-18T18:31:59+00:00"
+   },
+   {
+    "name": "hnr-bonn",
+    "url": "https://opendata.bonn.de/dataset/strassenliste-straßennamen-straßenverzeichnis-hausnummern-georeferenziert",
+    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Hausnummern georeferenziert“)",
+    "retrieved_at": "2026-10-20T15:20:47+00:00"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
@@ -903,21 +909,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029456",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.081334,
-     "lat": 50.731767,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029456",
@@ -2245,7 +2237,7 @@
      "lon": 7.072678,
      "lat": 50.724117,
      "stage": "B",
-     "method": "strasse+ortsteil",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Am Burggraben",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028987",
@@ -5173,21 +5165,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026905",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.081334,
-     "lat": 50.731767,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026905",
@@ -5661,21 +5639,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026632",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.081334,
-     "lat": 50.731767,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026632",
@@ -5812,21 +5776,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026633",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.081334,
-     "lat": 50.731767,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026633",
@@ -7654,21 +7604,7 @@
      "lon": 7.081617,
      "lat": 50.711659,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Stationsweg",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2025784",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Stationsweg",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083359,
-     "lat": 50.717281,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Stationsweg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2025784",
@@ -9357,21 +9293,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024112",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.081334,
-     "lat": 50.731767,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2024112",
@@ -9898,7 +9820,7 @@
      "lon": 7.070126,
      "lat": 50.723124,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Am Eichkamp",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023861",
@@ -11044,7 +10966,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023856",
@@ -11215,20 +11137,6 @@
      "evidence": "Gerhard-Domagk-Straße , 53121 Bonn",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/21621",
      "source": "oparl-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Gerhard-Domagk-Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.075212,
-     "lat": 50.732902,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Gerhard-Domagk-Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023655",
-     "source": "osm"
     }
    ],
    "plans": [],
@@ -11762,149 +11670,6 @@
     "verfahren": "buergerantrag",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Anregungen und Beschwerden“ (§ 24 GO NRW)",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "253221-01 ST",
-   "name": "Grüne-Antrag: Sicherung Fußgängerquerung Siemensstraße 184",
-   "paper_type": "Stellungnahme der Verwaltung",
-   "date": "2025-06-12",
-   "amt": "33 Bürgerdienste",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023177",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2983966&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "33 Bürgerdienste",
-     "name": "33-1 Ordnungs- und Straßenverkehrsbehörde"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/187",
-     "method": "paper_type",
-     "evidence": "Stellungnahme der Verwaltung",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2004236",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2025-09-02T15:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.65.1",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "253221",
-     "paper_type": "Antrag",
-     "name": "Grüne-Antrag: Sicherung Fußgängerquerung Siemensstraße 184",
-     "date": "2025-05-28"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Siemensstraße",
-     "ortsteil": "Dransdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.061226,
-     "lat": 50.735787,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Siemensstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023177",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Siemensstraße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.06871,
-     "lat": 50.737339,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Siemensstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023177",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023177",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023177",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2025-06-12",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023177",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2025-09-02",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.65.1",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "antrag-bv",
-    "sicherheit": "hoch",
-    "grund": "Antrag, beraten nur in Bezirksvertretungen",
     "passung": "passt",
     "ist": [
      "bv"
@@ -12474,166 +12239,6 @@
     "verfahren": "mitteilung",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Mitteilungsvorlage“",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "253221",
-   "name": "Grüne-Antrag: Sicherung Fußgängerquerung Siemensstraße 184",
-   "paper_type": "Antrag",
-   "date": "2025-05-28",
-   "amt": "01-2 Ratsbüro",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023005",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2977863&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "01-2 Ratsbüro",
-     "name": "01-2 Ratsbüro"
-    },
-    {
-     "kind": "fachlich",
-     "method": "stellungnahme",
-     "evidence": "253221-01 ST",
-     "derived": 1,
-     "label": "33 Bürgerdienste",
-     "name": "33-1 Ordnungs- und Straßenverkehrsbehörde"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Grüne",
-     "actor_type": "Fraktion/Gruppe",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/47",
-     "method": "title",
-     "evidence": "Grüne-Antrag",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2004236",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2025-09-02T15:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.65",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [
-    {
-     "reference": "253221-01 ST",
-     "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Grüne-Antrag: Sicherung Fußgängerquerung Siemensstraße 184",
-     "date": "2025-06-12"
-    }
-   ],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Siemensstraße",
-     "ortsteil": "Dransdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.061226,
-     "lat": 50.735787,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Siemensstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023005",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Siemensstraße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.06871,
-     "lat": 50.737339,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Siemensstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023005",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023005",
-   "stand": "entschieden",
-   "themes": [],
-   "parties": [
-    "Grüne"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Antrag",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023005",
-     "actors": [
-      "Grüne"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2025-05-28",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2023005",
-     "note": "datum"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "date": "2025-06-12",
-     "source": "oparl-bonn",
-     "reference": "253221-01 ST",
-     "title": "Grüne-Antrag: Sicherung Fußgängerquerung Siemensstraße 184"
-    },
-    {
-     "typ": "entscheidung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2025-09-02",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.65",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "vollzug",
-     "label": "Vollzug durch die Verwaltung",
-     "status": "unklar",
-     "note": "vollzug"
-    }
-   ],
-   "soll": {
-    "verfahren": "antrag-bv",
-    "sicherheit": "hoch",
-    "grund": "Antrag, beraten nur in Bezirksvertretungen",
     "passung": "passt",
     "ist": [
      "bv"
@@ -15182,21 +14787,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021960",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.081334,
-     "lat": 50.731767,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021960",
@@ -17198,7 +16789,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021739",
@@ -31633,7 +31224,7 @@
      "lon": 7.066191,
      "lat": 50.724665,
      "stage": "B",
-     "method": "strasse+ortsteil",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Theodor-Litt-Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2016394",
@@ -35120,7 +34711,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Str.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015455",
@@ -36368,21 +35959,7 @@
      "lon": 7.074839,
      "lat": 50.728058,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Str.",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015284",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.081334,
-     "lat": 50.731767,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Str.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015284",
@@ -42781,446 +42358,6 @@
    }
   },
   {
-   "reference": "230878",
-   "name": "Grundstück in Bonn, Endenicher Allee 17 - Errichtung eines Studentenwohnheims (Ersatzneubau) Az.: 10682/2022",
-   "paper_type": "Beschlussvorlage",
-   "date": "2023-05-04",
-   "amt": "63 Bauordnungsamt",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012067",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2504927&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "63 Bauordnungsamt",
-     "name": "63-1 Allgemeine Verwaltungs- und Beitragsabteilung"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/232",
-     "method": "paper_type",
-     "evidence": "Beschlussvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Anhörung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2002011",
-     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
-     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
-     "start_date": "2023-05-25T16:09:00.000Z",
-     "cancelled": 0,
-     "number": "7.4",
-     "result": "geändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012067",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012067",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012067",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012067",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "63 Bauordnungsamt",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Beschlussvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012067",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2023-05-04",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012067",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Ausschuss für Wohnen, Planung und Bauen",
-     "role": "Anhörung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2023-05-25",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "7.4",
-     "result": "geändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "mittel",
-    "grund": "entscheidendes Gremium noch nicht bekannt",
-    "passung": "passt",
-    "ist": [
-     "aus"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "230578",
-   "name": "Ersatzneubau inkl. Abbruch Aula, Seminargebäude und Bestandsmensa mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn -Entwurfsplanung-",
-   "paper_type": "Beschlussvorlage",
-   "date": "2023-05-02",
-   "amt": "85 Städtisches Gebäudemanagement Bonn",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011358",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2472397&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "85 Städtisches Gebäudemanagement Bonn",
-     "name": "85-PT2 Projektgruppe G8-G9"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/276",
-     "method": "paper_type",
-     "evidence": "Beschlussvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001930",
-     "gremium": "Schulausschuss",
-     "meeting": "Sitzung des Schulausschusses",
-     "start_date": "2023-05-25T16:03:00.000Z",
-     "cancelled": 0,
-     "number": "16.3",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2002019",
-     "gremium": "Unterausschuss Denkmalschutz",
-     "meeting": "Sitzung des Unterausschusses Denkmalschutz",
-     "start_date": "2023-06-01T15:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.1",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 2,
-     "role": "Anhörung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001884",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2023-05-23T15:00:00.000Z",
-     "cancelled": 0,
-     "number": "8.3",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 3,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2002000",
-     "gremium": "Betriebsausschuss SGB",
-     "meeting": "Sitzung des Betriebsausschusses SGB",
-     "start_date": "2023-05-03T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.4",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 4,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001687",
-     "gremium": "Rat",
-     "meeting": "Sitzung des Rates",
-     "start_date": "2023-06-13T15:00:00.000Z",
-     "cancelled": 0,
-     "number": "5.18",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011358",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011358",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011358",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011358",
-   "stand": "entschieden",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "85 Städtisches Gebäudemanagement Bonn",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bildung",
-     "method": "gremium",
-     "evidence": "Schulausschuss",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Beschlussvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011358",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2023-05-02",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011358",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Betriebsausschuss SGB",
-     "role": "Empfehlung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2023-05-03",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.4",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Anhörung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2023-05-23",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "8.3",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "beratung",
-     "label": "Schulausschuss",
-     "role": "Empfehlung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2023-05-25",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "16.3",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "beratung",
-     "label": "Unterausschuss Denkmalschutz",
-     "role": "Empfehlung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2023-06-01",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.1",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "entscheidung",
-     "label": "Rat",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2023-06-13",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "5.18",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "vollzug",
-     "label": "Vollzug durch die Verwaltung",
-     "status": "unklar",
-     "note": "vollzug"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "hoch",
-    "grund": "verbindlich entscheidet der Rat",
-    "passung": "passt",
-    "ist": [
-     "aus",
-     "bv",
-     "rat"
-    ],
-    "abweichung": []
-   }
-  },
-  {
    "reference": "230862",
    "name": "Bürgerantrag: Neue Freebox für Endenich und die Weststadt",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
@@ -44497,7 +43634,7 @@
      "lon": 7.073172,
      "lat": 50.734047,
      "stage": "B",
-     "method": "strasse+ortsteil",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Gerhard-Domagk-Str.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011425",
@@ -51182,7 +50319,7 @@
      "lon": 7.072251,
      "lat": 50.735946,
      "stage": "B",
-     "method": "strasse+ortsteil",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Am Propsthof",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008645",
@@ -52921,156 +52058,6 @@
    }
   },
   {
-   "reference": "221526-01 ST",
-   "name": "Nutzung und Ankauf Bundesimmobilie Provinzialstraße 21",
-   "paper_type": "Stellungnahme der Verwaltung",
-   "date": "2022-08-15",
-   "amt": "03 Amt für Wirtschaftsförderung",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007656",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2317304&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "03 Amt für Wirtschaftsförderung",
-     "name": "03-4 Liegenschaften"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/176",
-     "method": "paper_type",
-     "evidence": "Stellungnahme der Verwaltung",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000522",
-     "gremium": "Bezirksvertretung Hardtberg",
-     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
-     "start_date": "2022-08-30T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "10.4.1",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "221526",
-     "paper_type": "Antrag",
-     "name": "CDU-Antrag: Nutzung und Ankauf Bundesimmobilie Provinzialstraße 21",
-     "date": "2022-08-09"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.063923,
-     "lat": 50.720473,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007656",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Lengsdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.067044,
-     "lat": 50.712315,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007656",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007656",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "wirtschaft",
-     "method": "amt",
-     "evidence": "03 Amt für Wirtschaftsförderung",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007656",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2022-08-15",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007656",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Hardtberg",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2022-08-30",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "10.4.1",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "antrag-bv",
-    "sicherheit": "hoch",
-    "grund": "Antrag, beraten nur in Bezirksvertretungen",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
    "reference": "210302-05",
    "name": "Überarbeitung der Anschlusssituation bzgl. Verkehrsversuch: \"Umweltspur\" auf dem Hermann-Wandersleb-Ring Antrag zur Vorlage 220663",
    "paper_type": "Mitteilungsvorlage",
@@ -53443,167 +52430,6 @@
    }
   },
   {
-   "reference": "221526",
-   "name": "CDU-Antrag: Nutzung und Ankauf Bundesimmobilie Provinzialstraße 21",
-   "paper_type": "Antrag",
-   "date": "2022-08-09",
-   "amt": "01-2 Ratsbüro",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007600",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2316175&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "01-2 Ratsbüro",
-     "name": "01-2 Ratsbüro"
-    },
-    {
-     "kind": "fachlich",
-     "method": "stellungnahme",
-     "evidence": "221526-01 ST",
-     "derived": 1,
-     "label": "03 Amt für Wirtschaftsförderung",
-     "name": "03-4 Liegenschaften"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "CDU",
-     "actor_type": "Fraktion/Gruppe",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/45",
-     "method": "title",
-     "evidence": "CDU-Antrag",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Anregung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000522",
-     "gremium": "Bezirksvertretung Hardtberg",
-     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
-     "start_date": "2022-08-30T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "10.4",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [
-    {
-     "reference": "221526-01 ST",
-     "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Nutzung und Ankauf Bundesimmobilie Provinzialstraße 21",
-     "date": "2022-08-15"
-    }
-   ],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.063923,
-     "lat": 50.720473,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007600",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Lengsdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.067044,
-     "lat": 50.712315,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007600",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007600",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "wirtschaft",
-     "method": "amt",
-     "evidence": "03 Amt für Wirtschaftsförderung",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "CDU"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Antrag",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007600",
-     "actors": [
-      "CDU"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2022-08-09",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007600",
-     "note": "datum"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "date": "2022-08-15",
-     "source": "oparl-bonn",
-     "reference": "221526-01 ST",
-     "title": "Nutzung und Ankauf Bundesimmobilie Provinzialstraße 21"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Hardtberg",
-     "role": "Anregung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2022-08-30",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "10.4",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "antrag-bv",
-    "sicherheit": "hoch",
-    "grund": "Antrag, beraten nur in Bezirksvertretungen",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
    "reference": "221536",
    "name": "Grüne/SPD/u.w.-Antrag: Parkverbot \"Am Bendenberg\"/ Ecke \"Zur Marterkapelle\"",
    "paper_type": "Antrag",
@@ -53948,7 +52774,7 @@
      "lon": 7.073676,
      "lat": 50.727971,
      "stage": "B",
-     "method": "strasse+ortsteil",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Frongasse",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007391",
@@ -54588,7 +53414,7 @@
      "lon": 7.076889,
      "lat": 50.731025,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Verdistraße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2007099",
@@ -57254,7 +56080,7 @@
      "lon": 7.074105,
      "lat": 50.719306,
      "stage": "B",
-     "method": "strasse+ortsteil",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Am Klostergarten",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005529",
@@ -57761,21 +56587,7 @@
      "lon": 7.080328,
      "lat": 50.72662,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005407",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Allee",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005407",
@@ -59202,149 +58014,6 @@
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
      "number": "7.8",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "mittel",
-    "grund": "entscheidendes Gremium noch nicht bekannt",
-    "passung": "passt",
-    "ist": [
-     "aus"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "220258",
-   "name": "Grundstück in Bonn, Siemensstraße 126 - Errichtung eines Mehrfamilienwohnhauses Az. 10397/2021",
-   "paper_type": "Beschlussvorlage",
-   "date": "2022-02-08",
-   "amt": "63 Bauordnungsamt",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004981",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2213268&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "63 Bauordnungsamt",
-     "name": "63-1 Allgemeine Verwaltungs- und Beitragsabteilung"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/232",
-     "method": "paper_type",
-     "evidence": "Beschlussvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Anhörung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000613",
-     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
-     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
-     "start_date": "2022-02-23T17:00:00.000Z",
-     "cancelled": 0,
-     "number": "7.9",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Siemensstraße",
-     "ortsteil": "Dransdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.061226,
-     "lat": 50.735787,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Siemensstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004981",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Siemensstraße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.06871,
-     "lat": 50.737339,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Siemensstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004981",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004981",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "63 Bauordnungsamt",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Beschlussvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004981",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2022-02-08",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004981",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Ausschuss für Wohnen, Planung und Bauen",
-     "role": "Anhörung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2022-02-23",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "7.9",
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite"
@@ -62394,745 +61063,6 @@
    }
   },
   {
-   "reference": "211994",
-   "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-   "paper_type": "Mitteilungsvorlage",
-   "date": "2021-10-29",
-   "amt": "85 Städtisches Gebäudemanagement Bonn",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003442",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2152054&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "85 Städtisches Gebäudemanagement Bonn",
-     "name": "85-ST Stabsstelle Steuerungsunterstützung"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/197",
-     "method": "paper_type",
-     "evidence": "Mitteilungsvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/440",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2021-12-07T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "12.2",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003442",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003442",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003442",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003442",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "85 Städtisches Gebäudemanagement Bonn",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bildung",
-     "method": "stichwort",
-     "evidence": "gymnasium",
-     "confidence": "niedrig"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Mitteilungsvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003442",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-10-29",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003442",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-12-07",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "12.2",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "mitteilung",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Mitteilungsvorlage“",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "211637-03 AA",
-   "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637",
-   "paper_type": "Änderungsantrag",
-   "date": "2021-10-28",
-   "amt": "01-2 Ratsbüro",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003461",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2152562&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "01-2 Ratsbüro",
-     "name": "01-2 Ratsbüro"
-    }
-   ],
-   "originators": [],
-   "process": [
-    {
-     "position": 0,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/400",
-     "gremium": "Rat",
-     "meeting": "Sitzung des Rates",
-     "start_date": "2021-10-28T16:02:00.000Z",
-     "cancelled": 0,
-     "number": "5.15.2",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "211637",
-     "paper_type": "Beschlussvorlage",
-     "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-     "date": "2021-09-29"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003461",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003461",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003461",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003461",
-   "stand": "entschieden",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "stichwort",
-     "evidence": "neubau",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bildung",
-     "method": "stichwort",
-     "evidence": "gymnasium",
-     "confidence": "niedrig"
-    }
-   ],
-   "parties": [],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Änderungsantrag",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003461"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-10-28",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003461",
-     "note": "datum"
-    },
-    {
-     "typ": "entscheidung",
-     "label": "Rat",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-28",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "5.15.2",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "vollzug",
-     "label": "Vollzug durch die Verwaltung",
-     "status": "unklar",
-     "note": "vollzug"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "hoch",
-    "grund": "verbindlich entscheidet der Rat",
-    "passung": "passt",
-    "ist": [
-     "aus",
-     "rat"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "211637-02 AA",
-   "name": "BBB-Änderungsantrag: Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637",
-   "paper_type": "Änderungsantrag",
-   "date": "2021-10-27",
-   "amt": "01-2 Ratsbüro",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003428",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2151966&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "01-2 Ratsbüro",
-     "name": "01-2 Ratsbüro"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "BBB",
-     "actor_type": "Fraktion/Gruppe",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/143",
-     "method": "title",
-     "evidence": "BBB-Änderungsantrag",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000803",
-     "gremium": "Schulausschuss",
-     "meeting": "Sondersitzung des Schulausschusses",
-     "start_date": "2021-10-27T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.1.2",
-     "result": "erledigt durch Stellungnahme der Verwaltung",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/686",
-     "gremium": "Betriebsausschuss SGB",
-     "meeting": "Sitzung des Betriebsausschusses SGB",
-     "start_date": "2021-10-27T16:03:00.000Z",
-     "cancelled": 0,
-     "number": "6.1.2",
-     "result": "erledigt durch Stellungnahme der Verwaltung",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "211637",
-     "paper_type": "Beschlussvorlage",
-     "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-     "date": "2021-09-29"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003428",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003428",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003428",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003428",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "gremium",
-     "evidence": "Betriebsausschuss SGB",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bildung",
-     "method": "gremium",
-     "evidence": "Schulausschuss",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "BBB"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Änderungsantrag",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003428",
-     "actors": [
-      "BBB"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-10-27",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003428",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Schulausschuss",
-     "role": "Empfehlung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-27",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.1.2",
-     "result": "erledigt durch Stellungnahme der Verwaltung",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "beratung",
-     "label": "Betriebsausschuss SGB",
-     "role": "Empfehlung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-27",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.1.2",
-     "result": "erledigt durch Stellungnahme der Verwaltung",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "hoch",
-    "grund": "verbindlich entscheidet der Rat",
-    "passung": "passt",
-    "ist": [
-     "aus",
-     "rat"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "211637-01 ST",
-   "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-   "paper_type": "Stellungnahme der Verwaltung",
-   "date": "2021-10-26",
-   "amt": "85 Städtisches Gebäudemanagement Bonn",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003387",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2150953&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "85 Städtisches Gebäudemanagement Bonn",
-     "name": "85-ST Stabsstelle Steuerungsunterstützung"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/197",
-     "method": "paper_type",
-     "evidence": "Stellungnahme der Verwaltung",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/686",
-     "gremium": "Betriebsausschuss SGB",
-     "meeting": "Sitzung des Betriebsausschusses SGB",
-     "start_date": "2021-10-27T16:03:00.000Z",
-     "cancelled": 0,
-     "number": "6.1.1",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/400",
-     "gremium": "Rat",
-     "meeting": "Sitzung des Rates",
-     "start_date": "2021-10-28T16:02:00.000Z",
-     "cancelled": 0,
-     "number": "5.15.1",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 2,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000803",
-     "gremium": "Schulausschuss",
-     "meeting": "Sondersitzung des Schulausschusses",
-     "start_date": "2021-10-27T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.1.1",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "211637",
-     "paper_type": "Beschlussvorlage",
-     "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-     "date": "2021-09-29"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003387",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003387",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003387",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003387",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "85 Städtisches Gebäudemanagement Bonn",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bildung",
-     "method": "gremium",
-     "evidence": "Schulausschuss",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003387",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-10-26",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003387",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Betriebsausschuss SGB",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-27",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.1.1",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "beratung",
-     "label": "Schulausschuss",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-27",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.1.1",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "beratung",
-     "label": "Rat",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-28",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "5.15.1",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "hoch",
-    "grund": "verbindlich entscheidet der Rat",
-    "passung": "passt",
-    "ist": [
-     "aus",
-     "rat"
-    ],
-    "abweichung": []
-   }
-  },
-  {
    "reference": "210302",
    "name": "Verkehrsversuch: “Umweltspur“ auf dem Hermann-Wandersleb-Ring",
    "paper_type": "Beschlussvorlage",
@@ -63924,278 +61854,6 @@
    }
   },
   {
-   "reference": "211637",
-   "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-   "paper_type": "Beschlussvorlage",
-   "date": "2021-09-29",
-   "amt": "85 Städtisches Gebäudemanagement Bonn",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002654",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2120805&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "85 Städtisches Gebäudemanagement Bonn",
-     "name": "85-PT2 Projektgruppe G8-G9"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/276",
-     "method": "paper_type",
-     "evidence": "Beschlussvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/400",
-     "gremium": "Rat",
-     "meeting": "Sitzung des Rates",
-     "start_date": "2021-10-28T16:02:00.000Z",
-     "cancelled": 0,
-     "number": "5.15",
-     "result": "geändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/686",
-     "gremium": "Betriebsausschuss SGB",
-     "meeting": "Sitzung des Betriebsausschusses SGB",
-     "start_date": "2021-10-27T16:03:00.000Z",
-     "cancelled": 0,
-     "number": "6.1",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 2,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000803",
-     "gremium": "Schulausschuss",
-     "meeting": "Sondersitzung des Schulausschusses",
-     "start_date": "2021-10-27T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.1",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [
-    {
-     "reference": "211637-01 ST",
-     "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn",
-     "date": "2021-10-26"
-    },
-    {
-     "reference": "211637-02 AA",
-     "paper_type": "Änderungsantrag",
-     "name": "BBB-Änderungsantrag: Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637",
-     "date": "2021-10-27"
-    },
-    {
-     "reference": "211637-03 AA",
-     "paper_type": "Änderungsantrag",
-     "name": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637",
-     "date": "2021-10-28"
-    }
-   ],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002654",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002654",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002654",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002654",
-   "stand": "entschieden",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "85 Städtisches Gebäudemanagement Bonn",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bildung",
-     "method": "gremium",
-     "evidence": "Schulausschuss",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Beschlussvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002654",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-09-29",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002654",
-     "note": "datum"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "date": "2021-10-26",
-     "source": "oparl-bonn",
-     "reference": "211637-01 ST",
-     "title": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn"
-    },
-    {
-     "typ": "beratung",
-     "label": "Betriebsausschuss SGB",
-     "role": "Empfehlung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-27",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.1",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "beratung",
-     "label": "Schulausschuss",
-     "role": "Empfehlung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-27",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.1",
-     "result": "ungeändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Änderungsantrag",
-     "status": "belegt",
-     "date": "2021-10-27",
-     "source": "oparl-bonn",
-     "reference": "211637-02 AA",
-     "title": "BBB-Änderungsantrag: Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637"
-    },
-    {
-     "typ": "entscheidung",
-     "label": "Rat",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-10-28",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "5.15",
-     "result": "geändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Änderungsantrag",
-     "status": "belegt",
-     "date": "2021-10-28",
-     "source": "oparl-bonn",
-     "reference": "211637-03 AA",
-     "title": "Ersatzneubau inkl. Abbruch Aula und Seminargebäude mit Erweiterung infolge der Umstellung von G8 auf G9 des Ernst-Moritz-Arndt-Gymnasiums, Endenicher Allee 1, 53115 Bonn Antrag zur Vorlage 211637"
-    },
-    {
-     "typ": "vollzug",
-     "label": "Vollzug durch die Verwaltung",
-     "status": "unklar",
-     "note": "vollzug"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "hoch",
-    "grund": "verbindlich entscheidet der Rat",
-    "passung": "passt",
-    "ist": [
-     "aus",
-     "rat"
-    ],
-    "abweichung": []
-   }
-  },
-  {
    "reference": "201158-03 ST",
    "name": "Bürgerantrag: Einrichtung einer Querungshilfe in der Sebastianstraße, Poppeldorf",
    "paper_type": "Stellungnahme der Verwaltung",
@@ -64557,7 +62215,7 @@
      "lon": 7.069318,
      "lat": 50.722897,
      "stage": "B",
-     "method": "strasse+ortsteil",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Hainstraße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002713",
@@ -65718,35 +63376,7 @@
      "lon": 7.080328,
      "lat": 50.72662,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002362",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002362",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Allee",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002362",
@@ -67444,21 +65074,7 @@
      "lon": 7.080328,
      "lat": 50.72662,
      "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001664",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Endenicher Allee",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001664",
@@ -71414,213 +69030,6 @@
    }
   },
   {
-   "reference": "210217",
-   "name": "Ernst-Moritz-Arndt-Gymnasium, Fällung Baum Nr. 37, Abriss der Aula und angrenzender Gebäudetrakte, Neubauplanung",
-   "paper_type": "Mitteilungsvorlage",
-   "date": "2021-03-15",
-   "amt": "85 Städtisches Gebäudemanagement Bonn",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10223",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=268729&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "85 Städtisches Gebäudemanagement Bonn",
-     "name": "85-PT3 Projektgruppe Theater"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/275",
-     "method": "paper_type",
-     "evidence": "Mitteilungsvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/435",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2021-05-18T15:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.71",
-     "result": "geändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "201913",
-     "paper_type": "Beschlussvorlage",
-     "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung von 5 städtischen Bäumen",
-     "date": "2020-11-20"
-    }
-   ],
-   "subordinated": [
-    {
-     "reference": "210217-01 ST",
-     "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Ernst-Moritz-Arndt-Gymnasium, Fällung Baum Nr. 37, Abriss der Aula und angrenzender Gebäudetrakte, Neubauplanung",
-     "date": "2021-03-30"
-    },
-    {
-     "reference": "210217-02 AA",
-     "paper_type": "Änderungsantrag",
-     "name": "Ernst-Moritz-Arndt-Gymnasium, Fällung Baum Nr. 37, Abriss der Aula und angrenzender Gebäudetrakte, Neubauplanung Antrag zur Vorlage 210217",
-     "date": "2021-04-06"
-    }
-   ],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "vererbt",
-     "confidence": "mittel",
-     "evidence": "übergeordnete Vorlage 201913",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "vererbt",
-     "confidence": "mittel",
-     "evidence": "übergeordnete Vorlage 201913",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "vererbt",
-     "confidence": "mittel",
-     "evidence": "übergeordnete Vorlage 201913",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10223",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "85 Städtisches Gebäudemanagement Bonn",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "baum",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bildung",
-     "method": "stichwort",
-     "evidence": "gymnasium",
-     "confidence": "niedrig"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Mitteilungsvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10223",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-03-15",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10223",
-     "note": "datum"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "date": "2021-03-30",
-     "source": "oparl-bonn",
-     "reference": "210217-01 ST",
-     "title": "Ernst-Moritz-Arndt-Gymnasium, Fällung Baum Nr. 37, Abriss der Aula und angrenzender Gebäudetrakte, Neubauplanung"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Änderungsantrag",
-     "status": "belegt",
-     "date": "2021-04-06",
-     "source": "oparl-bonn",
-     "reference": "210217-02 AA",
-     "title": "Ernst-Moritz-Arndt-Gymnasium, Fällung Baum Nr. 37, Abriss der Aula und angrenzender Gebäudetrakte, Neubauplanung Antrag zur Vorlage 210217"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2021-05-18",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.71",
-     "result": "geändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "mitteilung",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Mitteilungsvorlage“",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
    "reference": "210191",
    "name": "Bürgerantrag: Bewohnerparken in der Endenicher Allee",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
@@ -72917,7 +70326,7 @@
      "lon": 7.077042,
      "lat": 50.725874,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Alfred-Bucherer-Straße",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9253",
@@ -72984,336 +70393,6 @@
     "verfahren": "buergerantrag",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "201913-02",
-   "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37",
-   "paper_type": "Dringlichkeitsentscheidung BV",
-   "date": "2021-01-18",
-   "amt": "85 Städtisches Gebäudemanagement Bonn",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9512",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=247748&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "85 Städtisches Gebäudemanagement Bonn",
-     "name": "85-ST Stabsstelle Steuerungsunterstützung"
-    }
-   ],
-   "originators": [],
-   "process": [
-    {
-     "position": 0,
-     "role": "Genehmigung",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "201913",
-     "paper_type": "Beschlussvorlage",
-     "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung von 5 städtischen Bäumen",
-     "date": "2020-11-20"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9512",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9512",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9512",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9512",
-   "stand": "offen",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "85 Städtisches Gebäudemanagement Bonn",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "baum",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bildung",
-     "method": "stichwort",
-     "evidence": "gymnasium",
-     "confidence": "niedrig"
-    }
-   ],
-   "parties": [],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Dringlichkeitsentscheidung BV",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9512",
-     "note": "sonderweg"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-01-18",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9512",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Genehmigung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "mittel",
-    "grund": "die Bezirksvertretung entscheidet selbst",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "201913-01",
-   "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37",
-   "paper_type": "Beschlussvorlage",
-   "date": "2021-01-11",
-   "amt": "85 Städtisches Gebäudemanagement Bonn",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9376",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=242539&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "85 Städtisches Gebäudemanagement Bonn",
-     "name": "85 Städtisches Gebäudemanagement Bonn"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/80",
-     "method": "paper_type",
-     "evidence": "Beschlussvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": null,
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "201913",
-     "paper_type": "Beschlussvorlage",
-     "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung von 5 städtischen Bäumen",
-     "date": "2020-11-20"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9376",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9376",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9376",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9376",
-   "stand": "offen",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "85 Städtisches Gebäudemanagement Bonn",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "umwelt",
-     "method": "stichwort",
-     "evidence": "baum",
-     "confidence": "niedrig"
-    },
-    {
-     "theme": "bildung",
-     "method": "stichwort",
-     "evidence": "gymnasium",
-     "confidence": "niedrig"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Beschlussvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9376",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2021-01-11",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/9376",
-     "note": "datum"
-    },
-    {
-     "typ": "entscheidung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "mittel",
-    "grund": "die Bezirksvertretung entscheidet selbst",
     "passung": "passt",
     "ist": [
      "bv"
@@ -74675,221 +71754,6 @@
     "verfahren": "dringlichkeitsantrag",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Dringlichkeitsantrag“",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "201913",
-   "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung von 5 städtischen Bäumen",
-   "paper_type": "Beschlussvorlage",
-   "date": "2020-11-20",
-   "amt": "67 Amt für Umwelt und Stadtgrün",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8526",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=224701&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "67 Amt für Umwelt und Stadtgrün",
-     "name": "67-0 Verwaltung"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/296",
-     "method": "paper_type",
-     "evidence": "Beschlussvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/378",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2020-11-24T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.40",
-     "result": "geändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [
-    {
-     "reference": "201913-01",
-     "paper_type": "Beschlussvorlage",
-     "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37",
-     "date": "2021-01-11"
-    },
-    {
-     "reference": "201913-02",
-     "paper_type": "Dringlichkeitsentscheidung BV",
-     "name": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37",
-     "date": "2021-01-18"
-    },
-    {
-     "reference": "210217",
-     "paper_type": "Mitteilungsvorlage",
-     "name": "Ernst-Moritz-Arndt-Gymnasium, Fällung Baum Nr. 37, Abriss der Aula und angrenzender Gebäudetrakte, Neubauplanung",
-     "date": "2021-03-15"
-    }
-   ],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.080328,
-     "lat": 50.72662,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Poppelsdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.085949,
-     "lat": 50.728888,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Allee",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.083926,
-     "lat": 50.72804,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Allee",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
-   "stand": "entschieden",
-   "themes": [
-    {
-     "theme": "umwelt",
-     "method": "amt",
-     "evidence": "67 Amt für Umwelt und Stadtgrün",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "bildung",
-     "method": "stichwort",
-     "evidence": "gymnasium",
-     "confidence": "niedrig"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Beschlussvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2020-11-20",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8526",
-     "note": "datum"
-    },
-    {
-     "typ": "entscheidung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2020-11-24",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.40",
-     "result": "geändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Beschlussvorlage",
-     "status": "belegt",
-     "date": "2021-01-11",
-     "source": "oparl-bonn",
-     "reference": "201913-01",
-     "title": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Dringlichkeitsentscheidung BV",
-     "status": "belegt",
-     "date": "2021-01-18",
-     "source": "oparl-bonn",
-     "reference": "201913-02",
-     "title": "Ernst Moritz Arndt Gymnasium, Endenicher Allee 1,  Abriss der Aula und angrenzender Gebäudetrakte, Fällung Baum Nr. 37"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Mitteilungsvorlage",
-     "status": "belegt",
-     "date": "2021-03-15",
-     "source": "oparl-bonn",
-     "reference": "210217",
-     "title": "Ernst-Moritz-Arndt-Gymnasium, Fällung Baum Nr. 37, Abriss der Aula und angrenzender Gebäudetrakte, Neubauplanung"
-    },
-    {
-     "typ": "vollzug",
-     "label": "Vollzug durch die Verwaltung",
-     "status": "unklar",
-     "note": "vollzug"
-    }
-   ],
-   "soll": {
-    "verfahren": "beschlussvorlage",
-    "sicherheit": "mittel",
-    "grund": "die Bezirksvertretung entscheidet selbst",
     "passung": "passt",
     "ist": [
      "bv"
@@ -80592,7 +77456,7 @@
      "lon": 7.077042,
      "lat": 50.725874,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Alfred-Bucherer-Str.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
@@ -80606,23 +77470,9 @@
      "lon": 7.104743,
      "lat": 50.708369,
      "stage": "B",
-     "method": "strasse+kreuzung",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Bergstr.",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Haager Weg",
-     "ortsteil": "Ippendorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.08653,
-     "lat": 50.692158,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Haager Weg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
      "source": "osm"
     },
@@ -80634,7 +77484,7 @@
      "lon": 7.091703,
      "lat": 50.69703,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Haager Weg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
@@ -80648,7 +77498,7 @@
      "lon": 7.113241,
      "lat": 50.712022,
      "stage": "B",
-     "method": "strasse+kreuzung",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Karl-Barth-Str.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
@@ -80662,7 +77512,7 @@
      "lon": 7.113653,
      "lat": 50.716467,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Lahnweg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
@@ -80676,7 +77526,7 @@
      "lon": 7.067605,
      "lat": 50.670039,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Merler Allee",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
@@ -80690,7 +77540,7 @@
      "lon": 7.085041,
      "lat": 50.74279,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Nonnstr.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
@@ -80704,7 +77554,7 @@
      "lon": 7.114195,
      "lat": 50.713879,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Saarweg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
@@ -80718,7 +77568,7 @@
      "lon": 7.070794,
      "lat": 50.681188,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Venantiusstr.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6927",
@@ -81635,191 +78485,6 @@
     "passung": "passt",
     "ist": [
      "aus",
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "200913",
-   "name": "Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Provinzialstr. 27, Ludwig-Richter-Str. 3 c) im Stadtbezirk Hardtberg",
-   "paper_type": "Mitteilungsvorlage",
-   "date": "2020-05-19",
-   "amt": "56 Amt für Umwelt-, Verbraucherschutz und Lokale Agenda",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6166",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=147910&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "56 Amt für Umwelt-, Verbraucherschutz und Lokale Agenda",
-     "name": "56-3 Untere Naturschutzbehörde"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/222",
-     "method": "paper_type",
-     "evidence": "Mitteilungsvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/76",
-     "gremium": "Baumkommission",
-     "meeting": "Sitzung der Baumkommission",
-     "start_date": "2020-06-08T12:00:00.000Z",
-     "cancelled": 0,
-     "number": "5.4",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/116",
-     "gremium": "Bezirksvertretung Hardtberg",
-     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
-     "start_date": "2020-06-16T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "12.6",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Ludwig-Richter-Straße",
-     "ortsteil": "Duisdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.059193,
-     "lat": 50.717318,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Ludwig-Richter-Str.",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6166",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.063923,
-     "lat": 50.720473,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstr.",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6166",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Lengsdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.067044,
-     "lat": 50.712315,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstr.",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6166",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6166",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "umwelt",
-     "method": "amt",
-     "evidence": "56 Amt für Umwelt-, Verbraucherschutz und Lokale Agenda",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Mitteilungsvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6166",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2020-05-19",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6166",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Baumkommission",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2020-06-08",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "5.4",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Hardtberg",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2020-06-16",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "12.6",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "mitteilung",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Mitteilungsvorlage“",
-    "passung": "passt",
-    "ist": [
      "bv"
     ],
     "abweichung": []
@@ -83310,7 +79975,7 @@
      "lon": 7.073676,
      "lat": 50.727971,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Frongasse",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4679",
@@ -83530,156 +80195,6 @@
     "passung": "passt",
     "ist": [
      "aus"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "200190-1 ST",
-   "name": "Ankauf und Vermarktung BMVg bzw. Bundesimmobilie Provinzialstraße 21",
-   "paper_type": "Stellungnahme der Verwaltung",
-   "date": "2020-02-25",
-   "amt": "03 Amt für Wirtschaftsförderung",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4955",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=99257&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "03 Amt für Wirtschaftsförderung",
-     "name": "03 Amt für Wirtschaftsförderung"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/4",
-     "method": "paper_type",
-     "evidence": "Stellungnahme der Verwaltung",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/104",
-     "gremium": "Bezirksvertretung Hardtberg",
-     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
-     "start_date": "2020-03-03T17:00:00.000Z",
-     "cancelled": 0,
-     "number": "7.1.1",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "200190",
-     "paper_type": "Antrag",
-     "name": "Ankauf und Vermarktung BMVg bzw. Bundesimmobilie Provinzialstraße 21",
-     "date": "2020-02-04"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.063923,
-     "lat": 50.720473,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4955",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Lengsdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.067044,
-     "lat": 50.712315,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4955",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4955",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "wirtschaft",
-     "method": "amt",
-     "evidence": "03 Amt für Wirtschaftsförderung",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4955",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2020-02-25",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4955",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Hardtberg",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2020-03-03",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "7.1.1",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "antrag-bv",
-    "sicherheit": "hoch",
-    "grund": "Antrag, beraten nur in Bezirksvertretungen",
-    "passung": "passt",
-    "ist": [
-     "bv"
     ],
     "abweichung": []
    }
@@ -84510,26 +81025,12 @@
     {
      "level": "strasse",
      "name": "Auf dem Hügel",
-     "ortsteil": "Dransdorf",
-     "stadtbezirk": "Bonn",
-     "lon": 7.060141,
-     "lat": 50.735464,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Auf dem Hügel",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4662",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Auf dem Hügel",
      "ortsteil": "Endenich",
      "stadtbezirk": "Bonn",
      "lon": 7.069428,
      "lat": 50.731564,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Auf dem Hügel",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4662",
@@ -84543,7 +81044,7 @@
      "lon": 7.091825,
      "lat": 50.729901,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Beethovenstr.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4662",
@@ -84557,7 +81058,7 @@
      "lon": 7.070441,
      "lat": 50.739051,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Lambareneweg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4662",
@@ -84571,7 +81072,7 @@
      "lon": 7.050971,
      "lat": 50.740499,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Römerweg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4662",
@@ -84613,7 +81114,7 @@
      "lon": 7.079794,
      "lat": 50.725463,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Theodor-Brinkmann-Str.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4662",
@@ -84627,8 +81128,8 @@
      "lon": 7.101852,
      "lat": 50.703248,
      "stage": "B",
-     "method": "strasse_mehrdeutig",
-     "confidence": "niedrig",
+     "method": "strasse+hausnummer",
+     "confidence": "mittel",
      "evidence": "Venusberg-Campus",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4662",
      "source": "osm"
@@ -84804,7 +81305,7 @@
      "lon": 7.073822,
      "lat": 50.713572,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Kreuzbergstr.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4664",
@@ -85446,7 +81947,7 @@
      "lon": 7.079347,
      "lat": 50.72232,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Albert-Schweitzer-Str.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4518",
@@ -85533,152 +82034,6 @@
     "verfahren": "beschlussvorlage",
     "sicherheit": "mittel",
     "grund": "die Bezirksvertretung entscheidet selbst",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "200190",
-   "name": "Ankauf und Vermarktung BMVg bzw. Bundesimmobilie Provinzialstraße 21",
-   "paper_type": "Antrag",
-   "date": "2020-02-04",
-   "amt": "01-2 Ratsbüro",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4567",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=87800&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "01-2 Ratsbüro",
-     "name": "01-2 Ratsbüro"
-    },
-    {
-     "kind": "fachlich",
-     "method": "stellungnahme",
-     "evidence": "200190-1 ST",
-     "derived": 1,
-     "label": "03 Amt für Wirtschaftsförderung",
-     "name": "03 Amt für Wirtschaftsförderung"
-    }
-   ],
-   "originators": [],
-   "process": [
-    {
-     "position": 0,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/104",
-     "gremium": "Bezirksvertretung Hardtberg",
-     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
-     "start_date": "2020-03-03T17:00:00.000Z",
-     "cancelled": 0,
-     "number": "7.1",
-     "result": "erledigt durch Stellungnahme der Verwaltung",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [
-    {
-     "reference": "200190-1 ST",
-     "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Ankauf und Vermarktung BMVg bzw. Bundesimmobilie Provinzialstraße 21",
-     "date": "2020-02-25"
-    }
-   ],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.063923,
-     "lat": 50.720473,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4567",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Provinzialstraße",
-     "ortsteil": "Lengsdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.067044,
-     "lat": 50.712315,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Provinzialstraße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4567",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4567",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "wirtschaft",
-     "method": "amt",
-     "evidence": "03 Amt für Wirtschaftsförderung",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Antrag",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4567"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2020-02-04",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4567",
-     "note": "datum"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "date": "2020-02-25",
-     "source": "oparl-bonn",
-     "reference": "200190-1 ST",
-     "title": "Ankauf und Vermarktung BMVg bzw. Bundesimmobilie Provinzialstraße 21"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Hardtberg",
-     "role": "Empfehlung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2020-03-03",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "7.1",
-     "result": "erledigt durch Stellungnahme der Verwaltung",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "antrag-bv",
-    "sicherheit": "hoch",
-    "grund": "Antrag, beraten nur in Bezirksvertretungen",
     "passung": "passt",
     "ist": [
      "bv"
@@ -86194,7 +82549,7 @@
      "lon": 7.073676,
      "lat": 50.727971,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Frongasse",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/4090",
@@ -88279,156 +84634,6 @@
    }
   },
   {
-   "reference": "190880-1 ST",
-   "name": "Bürgerantrag: Veränderung Ampelschaltung Endenicher Straße 165/Knauber",
-   "paper_type": "Stellungnahme der Verwaltung",
-   "date": "2019-11-29",
-   "amt": "66 Tiefbauamt",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3213",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=45824&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "66 Tiefbauamt",
-     "name": "66 Tiefbauamt"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/35",
-     "method": "paper_type",
-     "evidence": "Stellungnahme der Verwaltung",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/211",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sondersitzung der Bezirksvertretung Bonn",
-     "start_date": "2020-01-16T16:05:00.000Z",
-     "cancelled": 0,
-     "number": "5.18.1",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "190880",
-     "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-     "name": "Bürgerantrag: Veränderung Ampelschaltung Endenicher Straße 165/Knauber",
-     "date": "2019-11-22"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.074839,
-     "lat": 50.728058,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3213",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.081334,
-     "lat": 50.731767,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3213",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3213",
-   "stand": "entschieden",
-   "themes": [
-    {
-     "theme": "verkehr",
-     "method": "amt",
-     "evidence": "66 Tiefbauamt",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3213",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2019-11-29",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3213",
-     "note": "datum"
-    },
-    {
-     "typ": "entscheidung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2020-01-16",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "5.18.1",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "buergerantrag",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
    "reference": "190912",
    "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. 80 - 100",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
@@ -88498,7 +84703,7 @@
      "lon": 7.068235,
      "lat": 50.724591,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Euskirchener Str.",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3235",
@@ -89114,173 +85319,6 @@
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
      "number": "6.5",
-     "result": "geändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
-     "typ": "vollzug",
-     "label": "Vollzug durch die Verwaltung",
-     "status": "unklar",
-     "note": "vollzug"
-    }
-   ],
-   "soll": {
-    "verfahren": "buergerantrag",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "190880",
-   "name": "Bürgerantrag: Veränderung Ampelschaltung Endenicher Straße 165/Knauber",
-   "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-   "date": "2019-11-22",
-   "amt": "01-1 Bürgerbüro",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3153",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=43002&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
-    },
-    {
-     "kind": "fachlich",
-     "method": "stellungnahme",
-     "evidence": "190880-1 ST",
-     "derived": 1,
-     "label": "66 Tiefbauamt",
-     "name": "66 Tiefbauamt"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Einwohner:innen",
-     "actor_type": "Einwohner:in",
-     "organization_id": null,
-     "method": "paper_type",
-     "evidence": "Bürgerantrag § 24 GO - Öffentlich",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/211",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sondersitzung der Bezirksvertretung Bonn",
-     "start_date": "2020-01-16T16:05:00.000Z",
-     "cancelled": 0,
-     "number": "5.18",
-     "result": "geändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [
-    {
-     "reference": "190880-1 ST",
-     "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Veränderung Ampelschaltung Endenicher Straße 165/Knauber",
-     "date": "2019-11-29"
-    }
-   ],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Weststadt",
-     "stadtbezirk": "Bonn",
-     "lon": 7.08563,
-     "lat": 50.73358,
-     "stage": "A",
-     "method": "oparl_location",
-     "confidence": "hoch",
-     "evidence": "Endenicher Straße , 53229 Bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/23075",
-     "source": "oparl-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Endenicher Straße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.074839,
-     "lat": 50.728058,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Endenicher Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3153",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3153",
-   "stand": "entschieden",
-   "themes": [
-    {
-     "theme": "verkehr",
-     "method": "amt",
-     "evidence": "66 Tiefbauamt",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Einwohner:innen"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Bürgerantrag § 24 GO - Öffentlich",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3153",
-     "actors": [
-      "Einwohner:innen"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2019-11-22",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/3153",
-     "note": "datum"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "date": "2019-11-29",
-     "source": "oparl-bonn",
-     "reference": "190880-1 ST",
-     "title": "Bürgerantrag: Veränderung Ampelschaltung Endenicher Straße 165/Knauber"
-    },
-    {
-     "typ": "entscheidung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2020-01-16",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "5.18",
      "result": "geändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite"
@@ -89930,20 +85968,6 @@
      "evidence": "Bonner Weg , 53229 Bonn",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/23064",
      "source": "oparl-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Steinweg",
-     "ortsteil": "Duisdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.055914,
-     "lat": 50.725127,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Steinweg",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/609",
-     "source": "osm"
     }
    ],
    "plans": [],
@@ -90135,20 +86159,6 @@
      "evidence": "Bonner Weg , 53229 Bonn",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/23064",
      "source": "oparl-bonn"
-    },
-    {
-     "level": "strasse",
-     "name": "Steinweg",
-     "ortsteil": "Duisdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.055914,
-     "lat": 50.725127,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Steinweg",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/610",
-     "source": "osm"
     }
    ],
    "plans": [],
@@ -91418,26 +87428,12 @@
     {
      "level": "strasse",
      "name": "Steinweg",
-     "ortsteil": "Duisdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.055914,
-     "lat": 50.725127,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Steinweg",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/399",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Steinweg",
      "ortsteil": "Endenich",
      "stadtbezirk": "Bonn",
      "lon": 7.064353,
      "lat": 50.727459,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Steinweg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/399",
@@ -91561,26 +87557,12 @@
     {
      "level": "strasse",
      "name": "Steinweg",
-     "ortsteil": "Duisdorf",
-     "stadtbezirk": "Hardtberg",
-     "lon": 7.055914,
-     "lat": 50.725127,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Steinweg",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/403",
-     "source": "osm"
-    },
-    {
-     "level": "strasse",
-     "name": "Steinweg",
      "ortsteil": "Endenich",
      "stadtbezirk": "Bonn",
      "lon": 7.064353,
      "lat": 50.727459,
      "stage": "B",
-     "method": "strasse",
+     "method": "strasse+hausnummer",
      "confidence": "mittel",
      "evidence": "Steinweg",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/403",
