@@ -6,7 +6,7 @@ Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – 
 
 ## Was die Seite zeigt
 
-- **Wo?** Eine Karte und eine gleichwertige Liste der Vorlagen je Ortsteil oder Stadtbezirk. Vorlagen ohne erkennbaren Ort stehen unter „stadtweit / ohne Ortsbezug“. Jeder Ort sagt, woher er stammt und wie sicher er ist.
+- **Wo?** Eine Karte und eine gleichwertige Liste der Vorlagen je Ortsteil oder Stadtbezirk. Gebiete lassen sich oben auswählen oder auf der Karte anklicken: herausgezoomt die Stadtbezirke, näher die Ortsteile. Vorlagen ohne erkennbaren Ort stehen unter „stadtweit / ohne Ortsbezug“. Jeder Ort sagt, woher er stammt und wie sicher er ist.
 - **Wann?** Eine Zeitleiste zeigt, wie viele Vorlagen je Monat entstanden, wann Gremien tagen und welche Wahlperiode gilt. Ein gewählter Zeitraum filtert Karte und Liste.
 - **Wie läuft ein Verfahren?** Die Prozesslinie einer Vorlage zeigt ihre Stationen: Einreichung, Beratungen mit Gremium, Datum und wörtlichem Ergebnis, Folgevorlagen. Unter „Auswertung“ stehen die häufigsten Wege je Vorlagenart.
 - **Prozesse: Wer entscheidet was?** Der Reiter „Prozesse“ zeigt alle Verfahrensarten – vom Bürgerantrag bis zum Bebauungsplan – mit Schritten, Fristen, Rechtsgrundlagen, Wegen zum Mitwirken und der Zahl der Vorgänge in Bonn, dazu die Gremien (Rat, Ausschüsse, Bezirksvertretungen, Beiräte) mit Zuständigkeit laut Zuständigkeitsordnung und nächster Sitzung, sowie die Ämter der Verwaltung mit Abteilungen, federführenden Vorlagen und den Gremien, die diese beraten. Alles lässt sich als Schaubild oder als Liste ansehen.
