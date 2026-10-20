@@ -1623,6 +1623,8 @@
     ui: {
       panel(id, open) { if (!toggleFor(id) || !toggleFor(id).hidden) setPanel(id, open); },
       menu(id) { if (id) openMega(id); else closeMega(); },
+      // Beispielgebiet der Tour vorab laden, solange die ersten Schritte laufen
+      prefetch() { if (area && area.kind === "bonn" && index) fetch(`${BONN}ortsteile/bonn-zentrum.json`).catch(() => {}); },
       async example() {
         if (selected) return true;
         // in der Übersicht ein Beispielgebiet laden

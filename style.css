@@ -664,3 +664,4 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .leaflet-tooltip.nav-label::before { display: none; }
 .leaflet-tooltip.nav-label-bz { font-size: 15px; }
 .leaflet-tooltip.nav-label-ot { font-size: 12px; font-weight: 500; }
+.tour-card .btn[aria-disabled="true"] { opacity: 0.6; cursor: progress; }
