@@ -85,13 +85,20 @@
   const LEFT = ["panel-list", "panel-assistent"];  // Liste und Assistent teilen sich die linke Seite
   const OVERLAYS = ["panel-auswertung", "panel-termine", "panel-prozesse", "panel-mitmachen"];
   const toggleFor = (id) => document.querySelector(`.toggle[data-panel="${id}"]`);
+  // Ratsassistent (site/chat/ui.js und sechs weitere Module) erst laden, wenn die Fläche zum ersten Mal aufgeht
+  // oder die Schaltfläche den Fokus bekommt; der Seitenstart braucht ihn nicht
+  let chatReady = null;
+  function loadChat() {
+    chatReady ||= import("./chat/ui.js").catch((e) => { chatReady = null; console.error("Ratsassistent nicht geladen", e); });
+    return chatReady;
+  }
   function setPanel(id, open) {
     const el = document.getElementById(id);
     el.hidden = !open;
     document.querySelectorAll(`.toggle[data-panel="${id}"]`).forEach((b) => b.setAttribute("aria-pressed", String(open)));
     if (id === "panel-list") { document.body.classList.toggle("list-open", open); document.body.classList.toggle("list-closed", !open); }
     if (id === "panel-detail") { document.body.classList.toggle("detail-open", open); document.body.classList.toggle("detail-closed", !open); }
-    if (id === "panel-assistent") document.body.classList.toggle("chat-open", open);
+    if (id === "panel-assistent") { document.body.classList.toggle("chat-open", open); if (open) loadChat(); }
     if (id === "panel-prozesse") { if (open) openProzesse(); syncUrl(); }
     if (id === "panel-mitmachen") { if (open) openMitmachen(); syncUrl(); }
     if (!open) return;
@@ -1584,20 +1591,22 @@
 
   // --- Start -----------------------------------------------------------------------------------------
   async function start() {
-    // Glossar parallel zu den Daten laden; ohne Glossar erscheinen Schlüssel statt Erläuterungen
-    const glossar = fetch(GLOSSAR_URL).then((r) => (r.ok ? r.json() : null)).catch(() => null);
-    try { index = await fetch(BONN + "index.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { index = null; }
-    if (index) { try { zeit = await fetch(BONN + "zeit.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { zeit = null; } }
+    // Alle Startdaten gleichzeitig anfordern (index.html lädt sie zusätzlich vorab); ohne Glossar erscheinen
+    // Schlüssel statt Erläuterungen; ohne index.json (Pilot) entfallen Zeitleiste und Baustellen
+    const json = (url) => fetch(url).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+    const shapes = Promise.all([loadGeo("ortsteil"), loadGeo("bezirk")]);
     // Baustellen mit möglichen Umsetzungen (nur Konfidenz hoch); ohne Datei bleibt die Funktion ausgeblendet
-    if (index) { try { bau = await fetch(BONN + "baustellen.json").then((r) => (r.ok ? r.json() : null)); } catch (e) { bau = null; } }
-    if (bau && !bau.baustellen.length) bau = null;
+    const [g, idx, z, bs] = await Promise.all([json(GLOSSAR_URL), json(BONN + "index.json"), json(BONN + "zeit.json"),
+      json(BONN + "baustellen.json")]);
+    index = idx;
+    zeit = index ? z : null;
+    bau = index && bs && bs.baustellen.length ? bs : null;
     for (const b of bau ? bau.baustellen : []) for (const c of b.kandidaten) {
       if (!bauByRef.has(c.drucksache)) bauByRef.set(c.drucksache, []);
       bauByRef.get(c.drucksache).push({ b, c });
     }
-    const g = await glossar;
     if (g) ({ ergebnisse: GLOSSAR, hinweise: NOTES, schritte: STEP_LABEL, evidenz: STATUS_TEXT } = g);
-    [geo.ortsteil, geo.bezirk] = await Promise.all([loadGeo("ortsteil"), loadGeo("bezirk")]);
+    [geo.ortsteil, geo.bezirk] = await shapes;
     initMap();
     fillAreaSelect();
     initNav();
@@ -1647,6 +1656,10 @@
       if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); openAuswertung($("#tab-stats").getAttribute("aria-selected") === "true" ? "wege" : "stats", true); }
     });
     initSearchBar();
+    document.querySelectorAll('.toggle[data-panel="panel-assistent"]').forEach((b) => {
+      b.addEventListener("pointerenter", loadChat, { once: true });
+      b.addEventListener("focus", loadChat, { once: true });
+    });
     $("#f-theme").innerHTML = '<option value="">alle</option>' + Object.entries(THEMES).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join("");
     if (index) $("#scope").hidden = false;
     const params = new URLSearchParams(location.search);

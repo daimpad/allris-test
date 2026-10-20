@@ -1,5 +1,6 @@
 // Browser-Prüfung der fertigen Seite (Playwright, Chromium): Start mit der Übersicht über ganz Bonn, Navigation
-// über die Flächen, Link mit Gebiet und Vorgang, Flächen „Prozesse“ und „Mitmachen in Bonn“, Kartenmenü mobil, Tour.
+// über die Flächen, Link mit Gebiet und Vorgang, Flächen „Prozesse“ und „Mitmachen in Bonn“, Kartenmenü mobil,
+// Ratsassistent (erst beim Öffnen geladen), Tour.
 // Barrierefreiheit mit axe-core (WCAG 2.1 A und AA). Erwartet die zusammengestellte Seite unter SITE
 // (Standard http://localhost:8765/), siehe Workflow tests.yml.
 import { test, before, after } from "node:test";
@@ -119,6 +120,20 @@ test("Mobil: Kartenoptionen in einem Menü, ohne Verstöße", async () => {
   await menu.click();
   assert.equal(await menu.getAttribute("aria-expanded"), "true");
   assert.ok(await page.locator(".map-whole").isVisible());
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
+test("Ratsassistent: erst beim Öffnen geladen, ohne Verstöße", async () => {
+  const page = await open();
+  const chatFiles = () => page.evaluate(() => performance.getEntriesByType("resource").filter((e) => e.name.includes("/chat/")).length);
+  assert.equal(await chatFiles(), 0, "beim Start keine Module des Assistenten");
+  await page.locator('.toggle[data-panel="panel-assistent"]').click();
+  await page.waitForFunction(() => document.querySelectorAll("#chat-provider option").length > 0);
+  assert.ok(await chatFiles() >= 7, "Module beim Öffnen geladen");
+  await page.locator("#chat-consent").click();
+  assert.ok(await page.locator("#chat-settings").isVisible(), "Einstellungen nach dem KI-Hinweis");
   assert.deepEqual(await axe(page), []);
   assert.deepEqual(page.errors, []);
   await page.close();
