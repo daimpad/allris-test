@@ -32,7 +32,7 @@ Die KI-Vorprüfung stimmte in 47 von 50 Fällen. Die drei Abweichungen sind Nr. 
 
 Außerdem vermerkt, ohne Einfluss auf das Urteil: Nr. 31 nennt den Ortsteil Endenich und eine Straße, die das Straßenverzeichnis nur in Ippendorf und Poppelsdorf kennt. Die Straßenpunkte landen deshalb außerhalb des genannten Ortsteils.
 
-## Regeln (Entscheidung des Auftraggebers 20.10.2026: R1 und R2 umsetzen)
+## Regeln (Entscheidung des Auftraggebers 20.10.2026: R1 umsetzen, auf R2 verzichten)
 
 | Regel | Wirkung in der Stichprobe | betroffene Vorlagen in Bonn |
 |---|---|---|
@@ -56,9 +56,9 @@ Nr. 1, 12 und 27 behebt keine dieser Regeln; dafür wäre der Ort der Einrichtun
 
 In der Stichprobe ist Nr. 3 behoben (jetzt nur Weststadt); bei Nr. 7, 11 und 24 sind die Punkte enger gefasst, Endenich bleibt. Keine als richtig geprüfte Vorlage verliert Endenich. Die 18 Vorlagen, die Endenich verlassen, betreffen Kreuzungen in der Weststadt, der Nordstadt und in Lengsdorf; bei fünf bestätigt der Ort der Stadt (Stufe A) den neuen Ortsteil.
 
-**R2 zurückgestellt.** Die Auswertung für ganz Bonn zeigt zwei Probleme:
+**Auf R2 verzichtet** (Entscheidung des Auftraggebers 20.10.2026, nach Auswertung für ganz Bonn). Gründe:
 
 1. Ortsnamen in Titeln wie „Grundstück in Bonn-Kessenich, Haager Weg“ bezeichnen meist die **Gemarkung** (Katasterbezirk), nicht den statistischen Ortsteil, dessen Flächen die Karte nutzt. Die Straße liegt dann richtig, der genannte Ort folgt anderen Grenzen. R2 hätte in rund 30 solchen Bauvorlagen den genauen Straßenpunkt durch den Mittelpunkt eines falschen Ortsteils ersetzt. Das betrifft vermutlich auch Nr. 31.
 2. Ohne Einschränkung entfernte R2 auch Straßen, wenn der Titel zwei getrennte Orte nennt („in der Weststadt und am Hermann-Wandersleb-Ring“) oder ein Adjektiv einen Flurnamen meint („am Meßdorfer Feld“).
 
-Sinnvoll bliebe R2 nur für Namen, die im Titel selten die Straße meinen („Rheinufer Graurheindorf“). Entscheidung ausstehend.
+Eine auf Namen wie „Rheinufer“ beschränkte Fassung wurde erwogen und ebenfalls nicht umgesetzt; solche Namen tragen ohnehin die Konfidenz „niedrig“.
