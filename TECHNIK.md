@@ -92,7 +92,7 @@ Die Verortung ist regelbasiert. Sie nutzt reguläre Ausdrücke und Geometrie (sh
    - Ein regulärer Ausdruck enthält alle Straßennamen ab vier Zeichen, die längsten zuerst. So gewinnt „Marienforster Steinweg“ vor „Steinweg“.
    - Es gelten Wortgrenzen, und „Straße“ wird auch als „Strasse“ oder „Str.“ erkannt.
    - Gefundene Stellen werden im Titel ausgeblendet, damit ein Ortsteilname in einem Straßennamen nicht doppelt zählt.
-2. **Ortsteile:** im verbleibenden Text, mit den Varianten oben. Auch nach einem Bindestrich wird gesucht, etwa „Bonn-Endenich“.
+2. **Ortsteile:** im verbleibenden Text, mit den Varianten oben. Auch nach einem Bindestrich wird gesucht, etwa „Bonn-Endenich“. Dazu Genitivformen („Rüngsdorfs“, „Bad Godesbergs“; nicht „Pützchens“, das in Eigennamen wie „Pützchens Markt“ steht) und Schreibvarianten aus den Titeln (R3, `ORTSTEIL_VARIANTEN` und `BEZIRK_VARIANTEN`, etwa „Poppeldorf“, „Bad-Godesberg“; Methode `ortsteil_variante` bzw. `stadtbezirk_variante`, Konfidenz wie der Name).
 3. **Stadtbezirke:** ebenso im verbleibenden Text.
 4. **Eingrenzung einer Straße** (`_resolve_street`), in dieser Reihenfolge:
 

@@ -62,3 +62,22 @@ In der Stichprobe ist Nr. 3 behoben (jetzt nur Weststadt); bei Nr. 7, 11 und 24 
 2. Ohne Einschränkung entfernte R2 auch Straßen, wenn der Titel zwei getrennte Orte nennt („in der Weststadt und am Hermann-Wandersleb-Ring“) oder ein Adjektiv einen Flurnamen meint („am Meßdorfer Feld“).
 
 Eine auf Namen wie „Rheinufer“ beschränkte Fassung wurde erwogen und ebenfalls nicht umgesetzt; solche Namen tragen ohnehin die Konfidenz „niedrig“.
+
+**R3 umgesetzt** (Freigabe des Auftraggebers 20.10.2026; `ORTSTEIL_VARIANTEN`, `BEZIRK_VARIANTEN` in `pipeline/geocode.py`):
+- Kandidaten: Wörter in allen Titeln mit Editierdistanz 1 (bei Namen ab 8 Zeichen: 2) zu einem Ortsteil- oder Bezirksnamen, von Hand gesichtet.
+- Aufgenommen als Variante: Poppeldorf, Plitterdorf(er), Pennefeld, Holtdorf, Schwarz-Rheindorf, Bad-Godesberg, Goesberg, Beuler.
+- Aufgenommen als Genitiv: zum Beispiel „Rüngsdorfs“, „Villenviertels“, „Bad Godesbergs“ (Wortformen, keine Fehler).
+- Nicht aufgenommen:
+  - andere Orte: Medinghoven, Godesburg, Bendenfeld, Mondorf, Roisdorf, Meindorf, Buschhof, Dollendorf;
+  - Straßennamen: Pützchens Chaussee, Venusbergweg, Auerbergweg;
+  - „Pützchens“ als Genitiv, weil es in Eigennamen steht. Die Kreuzung Siegburger Straße/Pützchens Chaussee liegt in Vilich und wäre sonst auf Pützchen eingegrenzt worden.
+- Wirkung in ganz Bonn: 23 Vorlagen geändert, davon 12 neu verortet und 11 enger eingegrenzt. Nr. 4 der Stichprobe ist behoben (Sebastianstraße nur noch Poppelsdorf, nicht mehr Endenich). Keine weitere Vorlage verliert oder gewinnt Endenich.
+
+## Stichprobe zur Hausnummernregel
+
+Regel `strasse+hausnummer` seit 20.10.2026 (TECHNIK.md).
+- Stichprobe: `data/export/hausnummern/stichprobe_hausnummern.tsv`, 30 Vorgänge, wird nie überschrieben. Darin alle 5 Vorgänge mit geändertem Ortsteil und 25 zufällig gezogene mit „eindeutig statt mehrerer Ortsteile“, je Vorgang eine Zeile.
+- Prüffrage: Liegt der Ort, um den es in der Vorlage geht, im Ortsteil der Hausnummer?
+- Vorprüfung (`vorpruefung_hausnummern.tsv`, ersetzt nicht die Prüfung von Hand):
+  - maschinell: 30 von 30 Adressen nennt auch die Ortsteil-Angabe der Stadt im Verzeichnis so;
+  - KI-Vorprüfung: 29 plausibel, 1 teilweise (Nr. 1, Strecke zwischen zwei Adressen). Drei Sammelvorlagen nennen mehrere Grundstücke; die Regel gilt dort je Straße.

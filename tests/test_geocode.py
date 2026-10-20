@@ -79,6 +79,17 @@ class GeocodeTest(unittest.TestCase):
     def test_ortsteil_not_repeated_when_street_covers_it(self):
         self.assertEqual([r[0] for r in self.names("Am Burggraben in Bonn-Endenich")], ["strasse"])
 
+    def test_spelling_variants_and_genitive(self):  # R3
+        self.assertEqual(self.names("Spielplatz in Poppeldorf")[0][1:4], ("Poppelsdorf", "Poppelsdorf", "ortsteil_variante"))
+        self.assertEqual(self.names("Ampel Plitterdorfer Straße")[0][1:4], ("Plittersdorf", "Plittersdorf", "ortsteil_variante"))
+        self.assertEqual(self.names("Parken in Straßen Rüngsdorfs")[0][1:4], ("Rüngsdorf", "Rüngsdorf", "ortsteil_name"))
+        self.assertEqual(self.names("Bahnhofsvorplatz Bad-Godesberg"),
+                         [("stadtbezirk", "Bad Godesberg", None, "stadtbezirk_variante", "mittel")])
+        self.assertEqual(self.names("Dorfkerne Bad Godesbergs")[0][1:4], ("Bad Godesberg", None, "stadtbezirk_name"))
+        self.assertEqual(self.names("Vorbereitung des Pützchens Marktes"), [])  # Eigenname, kein Genitiv
+        # Variante grenzt eine Straße ein wie der Name selbst
+        self.assertEqual(self.names("Tempo 30 Kapellenstraße in Endenich")[0][3], "strasse+ortsteil")
+
     def test_bezirk_level(self):
         self.assertEqual(self.names("Schwimmbad Beuel"),
                          [("stadtbezirk", "Beuel", None, "stadtbezirk_name", "mittel")])
