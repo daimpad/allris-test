@@ -665,3 +665,43 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .leaflet-tooltip.nav-label-bz { font-size: 15px; }
 .leaflet-tooltip.nav-label-ot { font-size: 12px; font-weight: 500; }
 .tour-card .btn[aria-disabled="true"] { opacity: 0.6; cursor: progress; }
+.nav-big { font-size: 17px; font-weight: 700; color: var(--accent-ink); }
+.nav-dim { color: var(--text-muted); font-size: 12px; }
+.leaflet-tooltip.nav-label .nav-n { display: block; text-align: center; font-size: 11px; font-weight: 700; opacity: 0.85; }
+.leaflet-tooltip.nav-label-bz .nav-n { font-size: 13px; }
+.nav-legend { margin-top: 96px !important; padding: 8px 12px; border-radius: 14px; width: 232px; font: 12px/1.35 var(--font-body); color: var(--text);
+  background: var(--surface-strong); border: 1px solid var(--border-alt); box-shadow: var(--shadow); }
+.nav-legend summary { cursor: pointer; font-weight: 600; }
+.nav-legend p { margin: 6px 0 2px; color: var(--text-muted); font-size: 11px; }
+.nav-ramp { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 2px; }
+.nav-ramp li { display: flex; align-items: center; gap: 8px; }
+.nav-sw { width: 28px; height: 12px; border-radius: 4px; border: 1px solid rgba(109, 40, 217, 0.35); }
+.nav-sw0 { background: hsla(262, 80%, 92%, 0.9); } .nav-sw1 { background: hsla(262, 80%, 84%, 0.9); } .nav-sw2 { background: hsla(264, 75%, 74%, 0.9); }
+.nav-sw3 { background: hsla(266, 70%, 62%, 0.9); } .nav-sw4 { background: hsla(268, 65%, 48%, 0.9); }
+@media (max-width: 900px) { .nav-legend { margin-top: 70px !important; width: auto; max-width: 232px; } }
+
+/* Mitmachen in Bonn (site/beteiligung.js) */
+#bt-body h3 { font-size: 15px; margin: 16px 0 8px; }
+.bt-pick { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.bt-pick select { min-height: 40px; }
+.bt-next { margin-top: 12px; padding: 4px 14px 10px; border-radius: 14px; background: rgba(124, 58, 237, 0.06); border: 1px solid var(--border-alt); }
+.bt-dates { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.bt-dates li { display: grid; grid-template-columns: minmax(130px, auto) 1fr; gap: 10px; align-items: baseline; }
+.bt-when { font-weight: 700; color: var(--accent-ink); white-space: nowrap; }
+.bt-actions { margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.bt-line { list-style: none; margin: 0; padding: 8px 0 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; position: relative; }
+.bt-line::before { content: ""; position: absolute; left: 6px; right: 6px; top: 14px; height: 2px; background: var(--accent-soft); }
+.bt-line li { position: relative; display: flex; flex-direction: column; gap: 2px; padding-top: 18px; font-size: 12.5px; min-width: 0; overflow-wrap: anywhere; }
+.bt-dot { position: absolute; top: 1px; left: 0; width: 14px; height: 14px; border-radius: 50%; background: var(--surface-strong); border: 2px solid var(--accent-ink); }
+.bt-line li.bt-day .bt-dot { background: var(--accent-ink); }
+.bt-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.bt-card { padding: 10px 14px; border-radius: 14px; background: var(--surface-strong); border: 1px solid var(--border-alt); }
+.bt-card h4 { margin: 2px 0 6px; font-size: 14px; }
+.bt-card p { margin: 4px 0; }
+@media (max-width: 760px) {
+  .bt-line { grid-template-columns: 1fr; padding-left: 22px; }
+  .bt-line::before { left: 6px; right: auto; top: 4px; bottom: 4px; width: 2px; height: auto; }
+  .bt-line li { padding-top: 0; }
+  .bt-dot { left: -22px; top: 2px; }
+  .bt-dates li { grid-template-columns: 1fr; gap: 0; }
+}
