@@ -73,9 +73,9 @@
   const THEME_METHOD = { amt: "Amt", gremium: "Gremium", stichwort: "Stichwort im Titel" };
 
   // --- Flächen ein- und ausklappen ---------------------------------------------------------------
-  const SHEETS = ["panel-list", "panel-detail", "panel-auswertung", "panel-termine", "timeline-wrap", "panel-assistent"];
+  const SHEETS = ["panel-list", "panel-detail", "panel-auswertung", "panel-termine", "panel-prozesse", "timeline-wrap", "panel-assistent"];
   const LEFT = ["panel-list", "panel-assistent"];  // Liste und Assistent teilen sich die linke Seite
-  const OVERLAYS = ["panel-auswertung", "panel-termine"];
+  const OVERLAYS = ["panel-auswertung", "panel-termine", "panel-prozesse"];
   const toggleFor = (id) => document.querySelector(`.toggle[data-panel="${id}"]`);
   function setPanel(id, open) {
     const el = document.getElementById(id);
@@ -84,6 +84,7 @@
     if (id === "panel-list") { document.body.classList.toggle("list-open", open); document.body.classList.toggle("list-closed", !open); }
     if (id === "panel-detail") { document.body.classList.toggle("detail-open", open); document.body.classList.toggle("detail-closed", !open); }
     if (id === "panel-assistent") document.body.classList.toggle("chat-open", open);
+    if (id === "panel-prozesse") { if (open) openProzesse(); syncUrl(); }
     if (!open) return;
     closeMega();
     // schmale Bildschirme: nur eine Fläche; mittlere Breiten: Liste oder Vorgang, damit die Zeitleiste Platz hat;
@@ -1274,6 +1275,34 @@
     focusPanel("panel-list");
   });
 
+  // --- Reiter „Prozesse“ (site/prozesse.js, erst beim Öffnen geladen) ---------------------------------------
+  let pzState = null, pzReady = null;
+  function openProzesse(s) {
+    pzReady ||= import("./prozesse.js").then(async (m) => {
+      await m.init({
+        BONN, loadSoll,
+        onState(st) { pzState = st; syncUrl(); },
+        async openRef(ref) {
+          setPanel("panel-prozesse", false);
+          const p = papers.find((x) => x.reference === ref);
+          if (p) select(p); else await window.risKarte.open(ref);
+        },
+        filterGremium(name) {
+          const sel = $("#f-gremium");
+          if (![...sel.options].some((o) => o.value === name)) return false;
+          sel.value = name;
+          sel.dispatchEvent(new Event("input", { bubbles: true }));
+          setPanel("panel-prozesse", false);
+          setPanel("panel-list", true);
+          focusPanel("panel-list");
+          return true;
+        },
+      });
+      return m;
+    });
+    return pzReady.then((m) => { m.show(s); return m; });
+  }
+
   // --- URL-Zustand -----------------------------------------------------------------------------------
   function syncUrl() {
     if (!area) return;
@@ -1287,6 +1316,11 @@
     state.plan = !selected && shownPlan ? shownPlan : "";
     state.baustellen = bauOn ? "1" : "";
     state.baustelle = !selected && shownSite ? shownSite : "";
+    const pz = !$("#panel-prozesse").hidden && pzState;
+    state.prozesse = pz ? pz.tab : "";
+    state.ansicht = pz && pz.view === "liste" ? "liste" : "";
+    state.verfahren = pz && pz.tab === "verfahren" && pz.verfahren ? pz.verfahren : "";
+    state.gremium = pz && pz.tab === "gremien" && pz.gremium ? pz.gremium : "";
     for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
     history.replaceState(null, "", url);
@@ -1380,6 +1414,11 @@
     else if (params.get("plan")) await showPlan(params.get("plan"));
     else if (params.get("baustelle") && bau && bau.baustellen.some((b) => b.id === params.get("baustelle"))) showSite(params.get("baustelle"));
     else showIntro();
+    if (["verfahren", "gremien"].includes(params.get("prozesse"))) {
+      setPanel("panel-prozesse", true);
+      await openProzesse({ tab: params.get("prozesse"), view: params.get("ansicht") === "liste" ? "liste" : "schaubild",
+        verfahren: params.get("verfahren"), gremium: params.get("gremium") });
+    }
     syncUrl();
   }
   // Schnittstelle für den Ratsassistenten (site/chat/ui.js): Vorlage öffnen, Kontext der Karte
