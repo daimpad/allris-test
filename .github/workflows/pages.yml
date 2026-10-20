@@ -82,6 +82,19 @@ jobs:
           fi
         continue-on-error: true
 
+      # Texte der Hauptdokumente (OParl-Lite) nur zur Verarbeitung (Verortung): eigener Zwischenspeicher, nie veröffentlicht
+      - name: Volltexte des letzten Laufs
+        uses: actions/cache@v4
+        with:
+          path: data/raw/texte.jsonl
+          key: texte-${{ github.run_id }}
+          restore-keys: texte-
+
+      - name: Abruf Volltexte (OParl-Lite; neue und geänderte, höchstens 3.000 je Lauf)
+        run: python -m pipeline fetch-texts
+        timeout-minutes: 25
+        continue-on-error: true
+
       - name: Abruf OParl-Lite (Sitzungen, Tagesordnungspunkte)
         run: python -m pipeline fetch-lite
         continue-on-error: true

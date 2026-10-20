@@ -2,8 +2,8 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 532,
-  "generated_at": "2026-10-20T17:28:49+00:00",
+  "count": 550,
+  "generated_at": "2026-10-20T18:53:38+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
@@ -91,6 +91,78 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029806"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.065876,
+     50.735155
+    ]
+   },
+   "properties": {
+    "reference": "261529-05 ST",
+    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-10-09",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Frieda-Mager-Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029700"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
+    ]
+   },
+   "properties": {
+    "reference": "261529-05 ST",
+    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-10-09",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Kolpingstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029700"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "261529-05 ST",
+    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-10-09",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029700"
    }
   },
   {
@@ -187,6 +259,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029726"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.066322,
+     50.736421
+    ]
+   },
+   "properties": {
+    "reference": "261100-01",
+    "name": "Große Anfrage der Grünen-Fraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-10-04",
+    "amt": "63 Bauordnungsamt",
+    "place": "Simone-Veil-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029607"
    }
   },
   {
@@ -1418,6 +1514,54 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07005,
+     50.727177
+    ]
+   },
+   "properties": {
+    "reference": "260076-03 AA",
+    "name": "CDU/SPD/FDP Änderungsantrag: Taxis auf Umweltspuren Antrag zur Vorlage 260076",
+    "paper_type": "Änderungsantrag",
+    "date": "2026-03-11",
+    "amt": "01-2 Ratsbüro",
+    "place": "Hermann-Wandersleb-Ring",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026009"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
+    ]
+   },
+   "properties": {
+    "reference": "260076-01 ST",
+    "name": "Volt-Antrag: Taxis auf Umweltspuren",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-03-09",
+    "amt": "33 Bürgerdienste",
+    "place": "Hermann-Wandersleb-Ring",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025391"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.079794,
      50.725463
     ]
@@ -1466,6 +1610,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07005,
+     50.727177
+    ]
+   },
+   "properties": {
+    "reference": "260076",
+    "name": "Volt-Antrag: Taxis auf Umweltspuren",
+    "paper_type": "Antrag",
+    "date": "2026-03-02",
+    "amt": "01-2 Ratsbüro",
+    "place": "Hermann-Wandersleb-Ring",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025195"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0776268,
      50.7281331
     ]
@@ -1490,6 +1658,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07005,
+     50.727177
+    ]
+   },
+   "properties": {
+    "reference": "260076-02 AA",
+    "name": "Volt-Änderungsantrag zum Volt-Antrag: Taxis auf Umweltspuren Antrag zur Vorlage 260076",
+    "paper_type": "Änderungsantrag",
+    "date": "2026-02-05",
+    "amt": "01-2 Ratsbüro",
+    "place": "Hermann-Wandersleb-Ring",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025432"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0709,
      50.726788
     ]
@@ -1507,6 +1699,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025224"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "210807-04 AA",
+    "name": "Grüne-Fraktion - Änderungsantrag : Erhöhung der Zügigkeit des Helmholtz-Gymnasiums auf 5 Züge und entsprechender Ausbau Antrag zur Vorlage 210807",
+    "paper_type": "Änderungsantrag",
+    "date": "2025-12-10",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024909"
    }
   },
   {
@@ -1555,6 +1771,54 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024776"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080755,
+     50.715622
+    ]
+   },
+   "properties": {
+    "reference": "240693-03",
+    "name": "Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2025-11-19",
+    "amt": "41 Kulturamt",
+    "place": "Kapellenstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024520"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07675,
+     50.717578
+    ]
+   },
+   "properties": {
+    "reference": "240693-03",
+    "name": "Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2025-11-19",
+    "amt": "41 Kulturamt",
+    "place": "Zur Marterkapelle",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024520"
    }
   },
   {
@@ -2858,6 +3122,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "241664-01",
+    "name": "Soziale Erhaltungssatzungen in Bonn. Hier: Gesamtstädtische Voruntersuchung und Vorstellung der Prozessschritte",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2025-03-10",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021817"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0708877,
      50.7295937
     ]
@@ -3578,6 +3866,54 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.080755,
+     50.715622
+    ]
+   },
+   "properties": {
+    "reference": "240693-02",
+    "name": "Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2024-11-30",
+    "amt": "41 Kulturamt",
+    "place": "Kapellenstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019918"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07675,
+     50.717578
+    ]
+   },
+   "properties": {
+    "reference": "240693-02",
+    "name": "Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2024-11-30",
+    "amt": "41 Kulturamt",
+    "place": "Zur Marterkapelle",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019918"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -3919,6 +4255,30 @@
     ]
    },
    "properties": {
+    "reference": "241664",
+    "name": "Soziale Erhaltungssatzungen in Bonn. Hier: Gesamtstädtische Voruntersuchung und Vorstellung der Prozessschritte",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2024-11-04",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019330"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
     "reference": "241810-01 ST",
     "name": "FDP Antrag: Verbesserte Verkehrsführung Endenicher Ei B56, Bauphase 2025/2026",
     "paper_type": "Stellungnahme der Verwaltung",
@@ -4147,6 +4507,30 @@
     "method": "ortsteil_adjektiv",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019670"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "241338-01 ST",
+    "name": "CDU-Antrag: Temporäres Aufheben des Parkverbots entlang des Flodelingsweges",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-10-07",
+    "amt": "33 Bürgerdienste",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019196"
    }
   },
   {
@@ -4706,6 +5090,54 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.080755,
+     50.715622
+    ]
+   },
+   "properties": {
+    "reference": "240693-01 AA",
+    "name": "BBB-Änderungsantrag: Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-06-20",
+    "amt": "01-2 Ratsbüro",
+    "place": "Kapellenstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017853"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07675,
+     50.717578
+    ]
+   },
+   "properties": {
+    "reference": "240693-01 AA",
+    "name": "BBB-Änderungsantrag: Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-06-20",
+    "amt": "01-2 Ratsbüro",
+    "place": "Zur Marterkapelle",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017853"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.07005,
      50.727177
     ]
@@ -4795,6 +5227,54 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080755,
+     50.715622
+    ]
+   },
+   "properties": {
+    "reference": "240693",
+    "name": "Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2024-05-27",
+    "amt": "41 Kulturamt",
+    "place": "Kapellenstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016956"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07675,
+     50.717578
+    ]
+   },
+   "properties": {
+    "reference": "240693",
+    "name": "Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2024-05-27",
+    "amt": "41 Kulturamt",
+    "place": "Zur Marterkapelle",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016956"
    }
   },
   {
@@ -5234,6 +5714,102 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.061371,
+     50.72951
+    ]
+   },
+   "properties": {
+    "reference": "240020-01 AA",
+    "name": "RheinGrün-Änderungsantrag: Neuaufstellung eines Gesamtlandschaftsplan für die Stadt Bonn Antrag zur Vorlage 240020",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-04-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016920"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064353,
+     50.727459
+    ]
+   },
+   "properties": {
+    "reference": "240020-01 AA",
+    "name": "RheinGrün-Änderungsantrag: Neuaufstellung eines Gesamtlandschaftsplan für die Stadt Bonn Antrag zur Vorlage 240020",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-04-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Steinweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016920"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.061371,
+     50.72951
+    ]
+   },
+   "properties": {
+    "reference": "240020-02 AA",
+    "name": "Rhein.Grün - Änderungsantrag: Neuaufstellung eines Gesamtlandschaftsplan für die Stadt Bonn Antrag zur Vorlage 240020",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-04-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016921"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064353,
+     50.727459
+    ]
+   },
+   "properties": {
+    "reference": "240020-02 AA",
+    "name": "Rhein.Grün - Änderungsantrag: Neuaufstellung eines Gesamtlandschaftsplan für die Stadt Bonn Antrag zur Vorlage 240020",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-04-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Steinweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016921"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -5323,6 +5899,54 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016667"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "240617",
+    "name": "Antrag der Koalition - Herstellung des Wetterschutzes an den SPNV-Haltepunkten im Zuge der S 23",
+    "paper_type": "Antrag",
+    "date": "2024-04-03",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016717"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "240632",
+    "name": "Eingabe aus der Bürgerschaft zur derzeitigen Verkehrspolitik der Ratsmehrheit",
+    "paper_type": "Antrag",
+    "date": "2024-04-02",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016750"
    }
   },
   {

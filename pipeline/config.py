@@ -15,6 +15,9 @@ CONSULTATIONS_LITE = RAW / "consultations_lite.jsonl"
 MEETINGS = RAW / "meetings.json"
 LEGISLATIVE_TERMS = RAW / "legislative_terms.json"
 OSM_STREETS = RAW / "osm_streets.json"
+# Volltexte der Hauptdokumente (aus OParl-Lite, dort aus den PDFs der Stadt extrahiert): nur zur Verarbeitung,
+# lokal und im Zwischenspeicher des Workflows; nie im Repository, auf der Seite oder im Datenpaket
+TEXTE = RAW / "texte.jsonl"
 OSM_TILES = RAW / "osm_tiles"
 STAND = RAW / "STAND.json"
 ORTSTEILE = GEO / "ortsteile_bonn.geojson"

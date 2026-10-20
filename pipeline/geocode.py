@@ -94,6 +94,11 @@ def _norm_street(text):
     return re.sub(r"([Ss])(?:trasse|tr\.)$", r"\1traße", text)
 
 
+def _word_key(name):
+    """Anfang des ersten Worts (höchstens vier Buchstaben): „Im Bachele“ → „Im“, „Kaiserstraße“ → „Kais“."""
+    return re.match(r"\w*", name).group(0)[:4]
+
+
 def _alternation(names, pattern=re.escape, hyphen_before=False):
     """Eine Regex für alle Namen, längste zuerst (so gewinnt „Marienforster Steinweg“ vor
     „Steinweg“)."""
@@ -155,6 +160,10 @@ class Gazetteer:
         reserved = set(self.ot_alias) | set(self.bz_alias)
         street_names = [n for n in self.streets if n not in reserved and len(n) >= 4]
         self.street_re = _alternation(street_names, _street_pattern)
+        # Vorfilter für lange Texte (Volltexte): Straßennamen nach dem Anfang ihres ersten Worts
+        self.street_prefix = defaultdict(list)
+        for n in street_names:
+            self.street_prefix[_word_key(n)].append(n)
         self.ot_re = _alternation(self.ot_alias, hyphen_before=True)
         self.bz_re = _alternation(self.bz_alias, hyphen_before=True)
 
@@ -253,11 +262,19 @@ class Gazetteer:
             text = text[:s] + " " * (e - s) + text[e:]
         return text
 
-    def locate(self, title, bv_bezirke=()):
+    def street_re_for(self, text):
+        """Regex nur über die Straßennamen, deren erstes Wort (bis vier Buchstaben) im Text als Wortanfang vorkommt;
+        gleiche Treffer wie street_re, bei langen Texten um ein Vielfaches schneller."""
+        starts = {w[:4] for w in re.findall(r"\w{2,}", text)}
+        names = [n for k in starts for n in self.street_prefix.get(k, ())]
+        return _alternation(names, _street_pattern) if names else None
+
+    def locate(self, title, bv_bezirke=(), street_re=None):
         """Ortsbezüge eines Titels als Zeilen mit level, name, ortsteil, bezirk, lon, lat,
-        method, confidence, evidence. `bv_bezirke`: Stadtbezirke befasster Bezirksvertretungen."""
+        method, confidence, evidence. `bv_bezirke`: Stadtbezirke befasster Bezirksvertretungen;
+        `street_re`: Straßen-Regex für diesen Text (street_re_for), sonst alle Straßennamen."""
         title = title or ""
-        streets = self._find(self.street_re, title, _norm_street)
+        streets = self._find(street_re or self.street_re, title, _norm_street) if street_re is not False else []
         rest = self._mask(title, streets)
         ots = self._find(self.ot_re, rest)
         rest = self._mask(rest, ots)

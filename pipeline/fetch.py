@@ -213,6 +213,47 @@ def fetch_housenumbers():
     print(f"{n} Adressen in {len(out)} Straßen → {config.HAUSNUMMERN}")
 
 
+TEXT_LIST_QUERY = """query($o:Int){ files(limit:100, offset:$o, where:{name:{equals:"Sammeldokument öffentlich"},
+  textExtracted:true}, orderBy:{field:URI, direction:ASC}){ totalCount pageInfo{hasNextPage} items{ uri textSha256 papers{ uri } } } }"""
+
+
+def fetch_texts(max_files=3000, batch=10, pause=1.0):
+    """Texte der Hauptdokumente aus OParl-Lite (Feld `text`; extrahiert aus den PDFs der Stadt): erst die Liste der
+    Dateien mit Text, dann nur neue oder geänderte (`textSha256`), höchstens `max_files` je Lauf. Die Texte dienen
+    nur der Verarbeitung (Verortung) und werden nicht veröffentlicht; Rahmen: Antwort der Stadt Bonn, keine Zitate."""
+    import time
+    have = {}
+    if config.TEXTE.exists():
+        for line in open(config.TEXTE, encoding="utf-8"):
+            r = json.loads(line)
+            have[r["uri"]] = r
+    listing, off = [], 0
+    while True:
+        page = post_graphql(config.LITE_GRAPHQL, TEXT_LIST_QUERY, {"o": off})["files"]
+        listing += page["items"]
+        if not page["pageInfo"]["hasNextPage"]:
+            break
+        off += 100
+        time.sleep(pause)
+    todo = [f for f in listing if (have.get(f["uri"]) or {}).get("sha") != f["textSha256"]][:max_files]
+    for i in range(0, len(todo), batch):
+        chunk = todo[i:i + batch]
+        body = " ".join(f'f{j}: fileByUri(uri:"{f["uri"]}"){{ uri textSha256 text }}' for j, f in enumerate(chunk))
+        data = post_graphql(config.LITE_GRAPHQL, "{ " + body + " }")
+        for j, f in enumerate(chunk):
+            d = data.get(f"f{j}") or {}
+            if d.get("text"):
+                have[f["uri"]] = {"uri": f["uri"], "sha": d.get("textSha256"), "papers": [p["uri"] for p in f["papers"]],
+                                  "text": d["text"]}
+        time.sleep(pause)
+    with open(config.TEXTE, "w", encoding="utf-8") as fh:
+        for uri in sorted(have):
+            fh.write(json.dumps(have[uri], ensure_ascii=False) + "\n")
+    _stamp("texte")
+    print(f"Volltexte: {len(listing)} Hauptdokumente mit Text in OParl-Lite, {len(todo)} neu oder geändert abgerufen, "
+          f"{len(have)} lokal → {config.TEXTE}")
+
+
 def _plan_changes(features):
     """Änderungsprotokoll der Bebauungspläne (der Datensatz hat keine Historie): neue Pläne, entfallene Pläne
     (Kandidaten für Aufhebung) und geänderte Daten des Inkrafttretens, je Abruf an PLAN_LOG angehängt."""
@@ -246,4 +287,5 @@ def fetch_all():
     fetch_meetings()
     fetch_plans()
     fetch_housenumbers()
+    fetch_texts()
     fetch_streets()

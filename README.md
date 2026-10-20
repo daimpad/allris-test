@@ -26,7 +26,8 @@ Die Stadt nennt nur bei etwa 8 % der Vorlagen selbst einen Ort. Für die übrige
 1. **Ort der Stadt** – liegt eine Koordinate aus dem Ratsinformationssystem vor, wird sie übernommen (sicher).
 2. **Name im Titel** – Straßen-, Ortsteil- oder Bezirksnamen im Titel werden mit einem Straßenverzeichnis und den Flächen der Stadt abgeglichen (erschlossen; unsicher, wenn ein Name auf mehrere Orte passt). Nennt der Titel zwei Straßen, die sich kreuzen, gilt der Ortsteil der Kreuzung. Folgt auf die Straße eine Hausnummer, bestimmt das Hausnummernverzeichnis der Stadt den Ortsteil; angezeigt wird weiter nur die Straße.
 3. **Bebauungsplan im Titel** – eine eindeutige Plannummer verweist auf den Geltungsbereich des Plans (sicher).
-4. **Übernommen** – eine Stellungnahme oder ein Änderungsantrag ohne eigenen Ort übernimmt den Ort der Vorlage, auf die er sich bezieht.
+4. **Text des Dokuments** – hat eine Vorlage keinen Ort aus 1 bis 3, werden dieselben Regeln auf den Text des Hauptdokuments angewandt (erschlossen oder unsicher). Angezeigt wird nur der erkannte Ort, kein Textauszug. Listen mit vielen Ortsteilen und Eingaben von Bürger:innen werden so nicht verortet.
+5. **Übernommen** – eine Stellungnahme oder ein Änderungsantrag ohne eigenen Ort übernimmt den Ort der Vorlage, auf die er sich bezieht.
 
 Etwa 57 % der Vorlagen haben keinen erkennbaren Ortsbezug. Orte erscheinen nur auf Ebene der Straße oder des Ortsteils, nie mit Hausnummer; Wohnadressen von Privatpersonen werden nicht verortet.
 
@@ -59,7 +60,7 @@ Eine Stichprobe von 30 Kandidaten ist von Hand geprüft; alle Kandidaten, die di
 
 ## Grenzen
 
-- Ausgewertet werden nur Titel und Metadaten, nicht die Texte der Dokumente. Orte, die nur im Dokument stehen, fehlen.
+- Texte der Dokumente gibt es bisher nur für etwa 5 % der Vorlagen (Textauszug durch OParl-Lite, wächst täglich); bei den übrigen fehlen Orte, die nur im Dokument stehen. Aus dem Text werden keine Auszüge gezeigt.
 - Vorlagen vor Oktober 2019 und nichtöffentliche Beratungen sind nicht enthalten.
 - Ein Straßenpunkt steht für die ganze Straße, nicht für ein Gebäude.
 - Die Übersichtskarte zählt nur Vorlagen mit Ortsbezug. Große Ortsteile haben schon wegen ihrer Größe mehr Vorlagen; eine Zahl je Einwohner:in wird nicht berechnet.

@@ -73,6 +73,21 @@ Eine auf Namen wie „Rheinufer“ beschränkte Fassung wurde erwogen und ebenfa
   - „Pützchens“ als Genitiv, weil es in Eigennamen steht. Die Kreuzung Siegburger Straße/Pützchens Chaussee liegt in Vilich und wäre sonst auf Pützchen eingegrenzt worden.
 - Wirkung in ganz Bonn: 23 Vorlagen geändert, davon 12 neu verortet und 11 enger eingegrenzt. Nr. 4 der Stichprobe ist behoben (Sebastianstraße nur noch Poppelsdorf, nicht mehr Endenich). Keine weitere Vorlage verliert oder gewinnt Endenich.
 
+## Stichprobe zur Verortung aus dem Volltext
+
+Regeln seit 20.10.2026 (TECHNIK.md, „Volltext“).
+- Stichprobe: `data/export/volltext/stichprobe_volltext.tsv`, 30 Vorgänge, je Vorgang eine Zeile, gezogen vor den Anpassungen unten. Wird nie überschrieben.
+- Prüffrage: Betrifft die Vorlage inhaltlich einen Ort in den angegebenen Orten?
+- KI-Vorprüfung (`vorpruefung_volltext.tsv`, gekennzeichnet, ohne Textauszüge; ersetzt nicht die Prüfung von Hand): 20 plausibel, 5 teilweise, 5 unpassend.
+  - Nach Teil des Dokuments: Hauptteil 18 plausibel, 5 teilweise, 2 unpassend; nur Anlagen 2 plausibel, 3 unpassend.
+  - Unpassend waren Adressen anderer Stellen und Namen von Einrichtungen in Anlagen, „Schulstraße“ als Fachbegriff und ein Ortsteil, der nur Ort einer Veranstaltung war.
+  - „Teilweise“ waren stadtweite Aufstellungen, in denen der Ort ein Posten unter vielen ist.
+- Anpassungen (20.10.2026):
+  - Orte, die nur in den Anlagen stehen, werden nicht mehr verortet.
+  - „Schulstraße“ und „Forstweg“ zählen wie „Markt“ nur mit Hausnummer.
+  - Damit entfallen 4 der 5 unpassenden Fälle der Stichprobe; offen bleibt der Veranstaltungsort.
+- Weitere Beobachtung: Lange Straßen ohne Hausnummer werden allen Ortsteilen zugeordnet, durch die sie laufen (wie bei Titeln).
+
 ## Stichprobe zur Hausnummernregel
 
 Regel `strasse+hausnummer` seit 20.10.2026 (TECHNIK.md).

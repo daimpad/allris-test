@@ -124,6 +124,9 @@ Inhalt
   audit_hausnummern.tsv: Wirkung der Regel „strasse+hausnummer“ je Vorlage und Straße;
   hausnummern/stichprobe_hausnummern.tsv (30 Vorgänge zur Prüfung von Hand), vorpruefung_hausnummern.tsv
   (Abgleich mit der Ortsteil-Angabe der Stadt und KI-Vorprüfung, gekennzeichnet)
+- audit_volltext.tsv: Orte aus dem Text der Hauptdokumente je Vorlage (Befund, Methode, Ort, Ortsteil,
+  Konfidenz, Nennungen; keine Textauszüge); volltext/stichprobe_volltext.tsv (30 Vorgänge zur Prüfung).
+  Die Texte selbst sind nicht im Paket.
 - LICENSE-DATA.md: Quellen und Lizenzen je Datei
 
 Bebauungspläne
