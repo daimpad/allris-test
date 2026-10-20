@@ -90,6 +90,7 @@
       e.stopPropagation();
       const b = e.target.closest("[data-tour-act]");
       if (!b) return;
+      if (busy && b.dataset.tourAct !== "end") return;
       if (b.dataset.tourAct === "next") go(i + 1, 1);
       else if (b.dataset.tourAct === "prev") go(i - 1, -1);
       else end();
@@ -110,6 +111,7 @@
     document.body.classList.add("touring");
     addEventListener("keydown", onKey, true);
     addEventListener("resize", layout);
+    if (ui.prefetch) ui.prefetch();
     go(0, 1);
   }
 
@@ -127,12 +129,20 @@
     if (back) back.focus();
   }
 
-  let goSeq = 0;
+  let goSeq = 0, busy = false;
   async function go(n, dir) {
     if (n >= steps.length) return end();
     if (n < 0) return;
     const s = steps[n], seq = ++goSeq;
-    if (s.before) await s.before(ui);
+    const pending = s.before && s.before(ui);
+    if (pending && typeof pending.then === "function") {
+      // Vorbereitung dauert (Beispiel wird geladen): Hinweis zeigen, Blättern sperren
+      const next = root.querySelector('[data-tour-act="next"]');
+      root.querySelector("#tour-text").textContent = "Einen Moment, das Beispiel wird geladen …";
+      busy = true;
+      next.setAttribute("aria-disabled", "true");
+      try { await pending; } finally { busy = false; next.removeAttribute("aria-disabled"); }
+    }
     // während des Wartens (Beispiel wird geladen) weitergeblättert oder beendet
     if (seq !== goSeq || !root) return;
     ui.menu(s.menu || null);
@@ -223,7 +233,7 @@
   function onKey(e) {
     if (!root) return;
     const keys = { Escape: end, ArrowRight: () => go(i + 1, 1), ArrowLeft: () => go(i - 1, -1) };
-    if (keys[e.key]) { e.preventDefault(); e.stopPropagation(); keys[e.key](); return; }
+    if (keys[e.key]) { e.preventDefault(); e.stopPropagation(); if (!busy || e.key === "Escape") keys[e.key](); return; }
     if (e.key === "Tab") {  // Fokus bleibt in der Karte
       const f = [...card.querySelectorAll("button")].filter(shown);
       const k = f.indexOf(document.activeElement);
