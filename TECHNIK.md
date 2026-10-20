@@ -157,7 +157,7 @@ Die Zahlen gibt `python -m pipeline check` aus.
 - **Prüfprotokolle:**
   - `data/export/audit_geokodierung_bonn.tsv` enthält eine Zeile je Ortsbezug mit Drucksache, Stufe, Methode, Treffer, Ortsteil, Konfidenz, Fundstelle, Quellobjekt und Prüfstatus.
   - `data/export/audit_bebauungsplaene.tsv` enthält eine Zeile je Plannummer mit der Trefferklasse.
-- **Stichprobe:** `data/export/endenich/stichprobe_pruefung.tsv` umfasst 50 Vorlagen und wird nie überschrieben. Die KI-Vorprüfung `vorpruefung_verortung.tsv` ist gekennzeichnet und ersetzt die Prüfung von Hand nicht.
+- **Stichprobe:** `data/export/endenich/stichprobe_pruefung.tsv` umfasst 50 Vorlagen und wird nie überschrieben. Die KI-Vorprüfung `vorpruefung_verortung.tsv` ist gekennzeichnet und ersetzt die Prüfung von Hand nicht. Prüfung von Hand am 20.10.2026: 41 richtig, 4 teilweise, 5 falsch; Fehlerarten und mögliche Regeln in `verortung/PRUEFUNG.md`.
 - **Datenschutz:**
   - Es gibt keine Hausnummern und keine Wohnadressen.
   - Bürgeranträge erscheinen nur auf Straßen- oder Ortsteilebene.
