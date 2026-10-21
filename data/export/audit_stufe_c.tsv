@@ -16,7 +16,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 210314-01 ST	keine Änderung						mistral-large-latest
 210478-01 ST	keine Änderung						mistral-large-latest
 210807-04 AA	keine Änderung						mistral-large-latest
-212329-03	Antwort ohne lesbares JSON						mistral-large-latest
+212329-03	keine Änderung						mistral-large-latest
 220117-03	keine Änderung						mistral-large-latest
 220509-05 ST	keine Änderung						mistral-large-latest
 220650-02 ST	keine Änderung						mistral-large-latest
@@ -49,9 +49,75 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 230897-05 AA	geändert	bestätigt	volltext_strasse+kreuzung	Mainzer Straße	Mehlem	mittel	mistral-large-latest
 231037-02	keine Änderung						mistral-large-latest
 231098-01	keine Änderung						mistral-large-latest
-231159	Antwort ohne lesbares JSON						mistral-large-latest
+231159	Liste (9 Ortsteile), nicht verortet						mistral-large-latest
 231182-09	keine Änderung						mistral-large-latest
 231332-04 AA	keine Änderung						mistral-large-latest
 231400-06 ST	keine Änderung						mistral-large-latest
 231463-09 ST	geändert	bestätigt	volltext_strasse	Koblenzer Straße	Pennenfeld	mittel	mistral-large-latest
 231463-09 ST	geändert	bestätigt	volltext_strasse	Koblenzer Straße	Alt-Godesberg	mittel	mistral-large-latest
+231627-08 ST	keine Änderung						mistral-large-latest
+231681-12 ST	geändert	bestätigt	volltext_strasse	Friesdorfer Straße	Alt-Godesberg	mittel	mistral-large-latest
+231681-12 ST	geändert	bestätigt	volltext_strasse	Friesdorfer Straße	Godesberg-Nord	mittel	mistral-large-latest
+231681-12 ST	geändert	bestätigt	volltext_strasse	Friesdorfer Straße	Friesdorf	mittel	mistral-large-latest
+231742-02	geändert	bestätigt	volltext_strasse+ortsteil	Auf der Rötschen	Geislar	mittel	mistral-large-latest
+231742-03 ST	keine Änderung						mistral-large-latest
+231744-02 AA	keine Änderung						mistral-large-latest
+231744-03	keine Änderung						mistral-large-latest
+231780-03 AA	keine Änderung						mistral-large-latest
+231785-01 AA	keine Änderung						mistral-large-latest
+231965-08 ST	Liste (10 Ortsteile), nicht verortet						mistral-large-latest
+231965-09 AA	keine Änderung						mistral-large-latest
+232003-01 AA	Liste (6 Ortsteile), nicht verortet						mistral-large-latest
+232003-02 AA	geändert	bestätigt	volltext_strasse	Thomas-Mann-Straße	Bonn-Zentrum	mittel	mistral-large-latest
+232003-02 AA	geändert	bestätigt	volltext_strasse	Wilhelmstraße	Bonn-Zentrum	mittel	mistral-large-latest
+232003-02 AA	geändert	bestätigt	volltext_strasse	Florentiusgraben	Bonn-Zentrum	mittel	mistral-large-latest
+232003-02 AA	geändert	bestätigt	volltext_strasse	Sterntorbrücke	Bonn-Zentrum	mittel	mistral-large-latest
+232019-02	keine Änderung						mistral-large-latest
+232044-04	keine Änderung						mistral-large-latest
+232177-01	keine Änderung						mistral-large-latest
+232205-02	keine Änderung						mistral-large-latest
+232205-03 ST	geändert	bestätigt	volltext_ortsteil_name	Oberkassel	Oberkassel	mittel	mistral-large-latest
+232211-07 ST	keine Änderung						mistral-large-latest
+232211-09 ST	keine Änderung						mistral-large-latest
+232263-01 AA	keine Änderung						mistral-large-latest
+232288-03	keine Änderung						mistral-large-latest
+232288-05	keine Änderung						mistral-large-latest
+240020-01 AA	geändert	bestätigt	volltext_strasse	Am Bleichgraben	Endenich	mittel	mistral-large-latest
+240020-01 AA	geändert	bestätigt	volltext_strasse	Steinweg	Duisdorf	mittel	mistral-large-latest
+240020-01 AA	geändert	bestätigt	volltext_strasse	Steinweg	Endenich	mittel	mistral-large-latest
+240020-01 AA	geändert	bestätigt	volltext_strasse	Am Bruch	Duisdorf	mittel	mistral-large-latest
+240020-02 AA	geändert	bestätigt	volltext_strasse	Am Bleichgraben	Endenich	mittel	mistral-large-latest
+240020-02 AA	geändert	bestätigt	volltext_strasse	Steinweg	Duisdorf	mittel	mistral-large-latest
+240020-02 AA	geändert	bestätigt	volltext_strasse	Steinweg	Endenich	mittel	mistral-large-latest
+240020-03 ST	keine Änderung						mistral-large-latest
+240173-01 ST	keine Änderung						mistral-large-latest
+240188-01	keine Änderung						mistral-large-latest
+240199-01 ST	keine Änderung						mistral-large-latest
+240200-02 AA	geändert	bestätigt	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	mistral-large-latest
+240204-01 ST	keine Änderung						mistral-large-latest
+240204-02 ST	keine Änderung						mistral-large-latest
+240204-03 AA	keine Änderung						mistral-large-latest
+240204-04 AA	keine Änderung						mistral-large-latest
+240255-04 ST	keine Änderung						mistral-large-latest
+240255-20 ST	keine Änderung						mistral-large-latest
+240255-21 ST	keine Änderung						mistral-large-latest
+240260-01	geändert	bestätigt	volltext_strasse	Schießbergweg	Limperich	mittel	mistral-large-latest
+240260-01	geändert	bestätigt	volltext_strasse	Schießbergweg	Ramersdorf	mittel	mistral-large-latest
+240260-01	geändert	bestätigt	volltext_strasse	Schießbergweg	Küdinghoven	mittel	mistral-large-latest
+240260-01	geändert	bestätigt	volltext_ortsteil_name	Venusberg	Venusberg	mittel	mistral-large-latest
+240268-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Stiftsplatz	Bonn-Zentrum	mittel	mistral-large-latest
+240268-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Kölnstraße	Bonn-Zentrum	mittel	mistral-large-latest
+240268-01 ST	geändert	herabgestuft	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	mistral-large-latest
+240268-01 ST	geändert	bestätigt	volltext_strasse	Brüdergasse	Bonn-Zentrum	mittel	mistral-large-latest
+240309-01 ST	keine Änderung						mistral-large-latest
+240324-03 ST	geändert	bestätigt	volltext_strasse	Adenauerallee	Gronau	mittel	mistral-large-latest
+240324-03 ST	geändert	bestätigt	volltext_strasse	Adenauerallee	Südstadt	mittel	mistral-large-latest
+240324-03 ST	geändert	bestätigt	volltext_strasse	Oxfordstraße	Bonn-Zentrum	mittel	mistral-large-latest
+240351-02 DA	keine Änderung						mistral-large-latest
+240351-04 DA	keine Änderung						mistral-large-latest
+240370-01 ST	keine Änderung						mistral-large-latest
+240385	keine Änderung						mistral-large-latest
+240387	keine Änderung						mistral-large-latest
+240390-02	keine Änderung						mistral-large-latest
+240393-01 ST	keine Änderung						mistral-large-latest
+240406-02 AA	keine Änderung						mistral-large-latest
