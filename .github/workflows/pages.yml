@@ -101,13 +101,16 @@ jobs:
         continue-on-error: true
 
       # Sprachmodell (Mistral, gekennzeichnet): Bestand im Branch kurzfassungen; neue Kurzfassungen und Orte der
-      # Stufe C nur mit dem Secret MISTRAL_API_KEY, je höchstens 50 je Lauf. Auf der Seite erst nach Freigabe
+      # Stufe C nur mit dem Secret MISTRAL_API_KEY (Kurzfassungen bis 500, Stufe C 50 je Lauf). Auf der Seite erst nach Freigabe
       # (kurzfassung.FREIGEGEBEN, stufe_c.FREIGEGEBEN). Gesichert wird der Branch nach der Aufbereitung.
-      - name: Kurzfassungen (Mistral; neue Texte, höchstens 50 je Lauf)
+      # 500 je täglichem Lauf (Auftraggeber, 21.10.2026); nach einem Merge nur 50, damit mehrere Merges am Tag
+      # die Anfragen nicht vervielfachen
+      - name: Kurzfassungen (Mistral; täglich höchstens 500, nach einem Merge 50)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           KURZFASSUNGEN: _kurzfassungen
+          KURZFASSUNG_MAX: ${{ github.event_name == 'push' && '50' || '500' }}
         run: |
           url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
           if git ls-remote --exit-code --heads "$url" kurzfassungen > /dev/null; then
@@ -116,7 +119,7 @@ jobs:
             git init -q -b kurzfassungen _kurzfassungen
           fi
           python -m pipeline kurzfassungen
-        timeout-minutes: 30
+        timeout-minutes: 90
         continue-on-error: true
 
       - name: Aufbereiten, Geokodierung, Export
