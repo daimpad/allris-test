@@ -29,6 +29,18 @@ def _status(row):
     return "terminiert" if row["meeting_id"] else "offen"
 
 
+_KURZ = None
+
+
+def _kurzfassungen():
+    """Freigegebene Kurzfassungen (kurzfassung.py); leer, solange die Stichprobe nicht geprüft ist."""
+    global _KURZ
+    if _KURZ is None:
+        from . import kurzfassung
+        _KURZ = kurzfassung.fuer_seite()
+    return _KURZ
+
+
 def _paper_detail(db, pid):
     p = db.execute(
         "SELECT p.*, o.label AS amt, o.name AS vb_name FROM paper p "
@@ -75,6 +87,8 @@ def _paper_detail(db, pid):
     d["parties"] = topics.parties(d)
     d["steps"] = [{k: v for k, v in s.items() if v not in (None, [], False)} for s in proc.steps(d)]
     d["soll"] = soll.lookup(db, p["reference"])
+    if p["reference"] in _kurzfassungen():
+        d["kurzfassung"] = _kurzfassungen()[p["reference"]]
     return d
 
 

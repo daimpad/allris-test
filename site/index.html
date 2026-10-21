@@ -7,7 +7,7 @@
        Bibliotheken mit Integritätsprüfung), keine Inline-Skripte;
        Verbindungen nur zu den Daten der Seite, den unterstützten Anbietern des Ratsassistenten und lokalen Modellen.
        Inline-Stile bleiben erlaubt (Leaflet, Balken der Auswertung). -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://api.anthropic.com https://api.mistral.ai https://openrouter.ai http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://oparl.bonn.machdenstaat.de https://api.anthropic.com https://api.mistral.ai https://openrouter.ai http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'">
   <title>RIS-Karte Bonn – Ratsinformationen der Stadt Bonn auf Karte und Zeitleiste</title>
   <meta name="description" content="Was berät der Bonner Stadtrat? Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste – mit Verfahrensstand, Gremien, Ämtern und Quellen.">
   <meta name="author" content="Damian Paderta">
@@ -139,6 +139,11 @@
       <div class="chips" id="chips-theme" role="group" aria-label="Thema wählen"></div>
       <h3 class="mega-label"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg>Partei / Fraktion</h3>
       <div class="chips" id="chips-party" role="group" aria-label="Partei oder Fraktion wählen"></div>
+      <div class="doc-search">
+        <button type="button" class="btn btn-soft" id="doc-search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>Auch im Text der Dokumente suchen</button>
+        <p class="hint" id="doc-status" aria-live="polite"></p>
+        <p class="hint">Fragt die Volltextsuche von OParl-Lite (machdenstaat) ab, erst nach dem Klick. Gezeigt werden die Vorlagen, kein Textausschnitt; bisher hat nur ein Teil der Dokumente einen Text.</p>
+      </div>
       <div class="mega-foot">
         <button type="button" class="btn btn-ghost" id="mega-reset">Filter zurücksetzen</button>
         <button type="button" class="btn btn-cta" id="mega-show"><svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>Treffer in der Liste zeigen</button>
@@ -448,7 +453,7 @@
       </dl>
 
       <h3>Wie sicher sind die Angaben?</h3>
-      <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Einige sind erschlossen, etwa der Ort aus dem Titel einer Vorlage oder das Datum einer Sitzung. Hat eine Vorlage keinen Ort im Titel, wird auch der Text ihres Dokuments ausgewertet; gezeigt wird dann nur der erkannte Ort, kein Textauszug. Sie sind als „abgeleitet“ gekennzeichnet. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt oder eindeutig erkannter Bebauungsplan mit Geltungsbereich), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt. Stichproben haben wir von Hand geprüft: In Endenich lag der Ort bei 41 von 50 Vorlagen richtig, die Themen passten bei 46 von 49.</p>
+      <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Einige sind erschlossen, etwa der Ort aus dem Titel einer Vorlage oder das Datum einer Sitzung. Hat eine Vorlage keinen Ort im Titel, wird auch der Text ihres Dokuments ausgewertet; gezeigt wird dann nur der erkannte Ort, kein Textauszug. Die Suche kann auf Wunsch auch im Text der Dokumente suchen (über OParl-Lite, erst nach einem Klick). Sie sind als „abgeleitet“ gekennzeichnet. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt oder eindeutig erkannter Bebauungsplan mit Geltungsbereich), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt. Stichproben haben wir von Hand geprüft: In Endenich lag der Ort bei 41 von 50 Vorlagen richtig, die Themen passten bei 46 von 49.</p>
 
       <h3>Nach Themen und Parteien suchen</h3>
       <p>In der Liste lassen sich Vorlagen nach Thema (zum Beispiel Verkehr, Bauen, Umwelt) und nach Partei oder Fraktion filtern – im gewählten Gebiet oder in ganz Bonn. Die Themen sind aus dem zuständigen Amt, dem beratenden Ausschuss und Stichworten im Titel abgeleitet; bei jeder Vorlage steht, worauf die Zuordnung beruht. Parteien stammen aus den Einreichenden eines Antrags; auf Wunsch erscheinen auch die Antworten der Verwaltung darauf.</p>
@@ -469,7 +474,7 @@
       <p>Die RIS-Karte hat Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“ erstellt. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Das Modell der Verfahren nach Regelwerk (Abschnitt „Nach Regelwerk (Soll)“ und Hinweise unter „Selbst mitwirken“) stammt aus dem Projekt <a href="https://github.com/anster2025/bonn-entscheidet" target="_blank" rel="noopener">„Bonn entscheidet“<span class="visually-hidden"> (GitHub, neuer Tab)</span></a> von <a href="https://github.com/anster2025" target="_blank" rel="noopener">Thomas (anster2025)<span class="visually-hidden"> (GitHub, neuer Tab)</span></a>, MIT-Lizenz; die RIS-Karte hat es um eigene, belegte Schritte ergänzt. Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
 
       <h3 id="about-impressum" tabindex="-1">Kontakt, Impressum und Datenschutz</h3>
-      <p>Schrift und Programmbibliotheken kommen vom Server dieser Seite. Nur die Kartenkacheln lädt Ihr Browser von OpenStreetMap (tile.openstreetmap.org). Der Ratsassistent sendet Fragen erst, wenn Sie ihn einrichten, und nur an den gewählten Anbieter.</p>
+      <p>Schrift und Programmbibliotheken kommen vom Server dieser Seite. Nur die Kartenkacheln lädt Ihr Browser von OpenStreetMap (tile.openstreetmap.org); die Suche im Text der Dokumente fragt erst nach einem Klick OParl-Lite (oparl.bonn.machdenstaat.de) ab. Der Ratsassistent sendet Fragen erst, wenn Sie ihn einrichten, und nur an den gewählten Anbieter.</p>
       <p>Kontakt: <a href="mailto:contact@nozilla.de">contact@nozilla.de</a><br>
         <a href="https://nozilla.de/impressum/" target="_blank" rel="noopener">Impressum<span class="visually-hidden"> (nozilla.de, neuer Tab)</span></a> · <a href="datenschutz.html">Datenschutz</a></p>
     </div>
