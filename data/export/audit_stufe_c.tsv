@@ -442,3 +442,80 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 253990-03 AA	geändert	bestätigt	volltext_stadtbezirk_adjektiv	Beuel		mittel	mistral-large-latest
 253990-04 AA	geändert	herabgestuft	volltext_strasse	Holzlarer Weg	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
 253990-04 AA	geändert	herabgestuft	volltext_ortsteil_name	Schwarzrheindorf / Vilich-Rheindorf	Schwarzrheindorf / Vilich-Rheindorf	niedrig	mistral-large-latest
+253997-01 ST	keine Änderung						mistral-large-latest
+253997-02 AA	keine Änderung						mistral-large-latest
+253997-03 AA	keine Änderung						mistral-large-latest
+254013-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Eltviller Straße	Friesdorf	mittel	mistral-large-latest
+254013-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Rüdesheimer Straße	Friesdorf	mittel	mistral-large-latest
+254022-01 ST	keine Änderung						mistral-large-latest
+254028	geändert	bestätigt	volltext_ortsteil_adjektiv	Kessenich	Kessenich	mittel	mistral-large-latest
+254031	keine Änderung						mistral-large-latest
+254038	Liste (11 Ortsteile), nicht verortet						mistral-large-latest
+254038-01 AA	keine Änderung						mistral-large-latest
+254043	geändert	herabgestuft	volltext_stadtbezirk_name	Hardtberg		niedrig	mistral-large-latest
+254048	geändert	bestätigt	volltext_strasse+ortsteil	Philosophenring	Heiderhof	mittel	mistral-large-latest
+254048	geändert	bestätigt	volltext_strasse+ortsteil	Heiderhofring	Heiderhof	mittel	mistral-large-latest
+254048	geändert	herabgestuft	volltext_strasse+ortsteil	Tulpenbaumweg	Heiderhof	niedrig	mistral-large-latest
+254048	geändert	herabgestuft	volltext_strasse+ortsteil	Akazienweg	Heiderhof	niedrig	mistral-large-latest
+254050	keine Änderung						mistral-large-latest
+254053	keine Änderung						mistral-large-latest
+254054	keine Änderung						mistral-large-latest
+254057	keine Änderung						mistral-large-latest
+254057-01 AA	keine Änderung						mistral-large-latest
+254057-02 AA	keine Änderung						mistral-large-latest
+254057-03 AA	keine Änderung						mistral-large-latest
+254057-04 AA	keine Änderung						mistral-large-latest
+254057-05 AA	keine Änderung						mistral-large-latest
+254061	keine Änderung						mistral-large-latest
+254068	geändert	bestätigt	volltext_strasse+hausnummer	Kurt-Schumacher-Straße	Gronau	mittel	mistral-large-latest
+254068	geändert	bestätigt	volltext_strasse+hausnummer	Ringstraße	Beuel-Mitte	mittel	mistral-large-latest
+254068	geändert	bestätigt	volltext_strasse	Lievelingsweg	Nordstadt	mittel	mistral-large-latest
+254068	geändert	bestätigt	volltext_strasse	Lievelingsweg	Tannenbusch	mittel	mistral-large-latest
+254070	keine Änderung						mistral-large-latest
+254072	geändert	bestätigt	volltext_strasse+ortsteil	Henri-Spaak-Straße	Duisdorf	mittel	mistral-large-latest
+254072	geändert	herabgestuft	volltext_strasse	Ahrweg	Kessenich	niedrig	mistral-large-latest
+254072	geändert	bestätigt	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	mistral-large-latest
+254072	geändert	bestätigt	volltext_strasse+ortsteil	Bahnhofstraße	Duisdorf	mittel	mistral-large-latest
+254072	geändert	bestätigt	volltext_strasse+ortsteil	Bahnhofstraße	Lessenich/Meßdorf	mittel	mistral-large-latest
+254072	geändert	bestätigt	volltext_strasse+ortsteil	Brigitte-Schröder-Straße	Lessenich/Meßdorf	mittel	mistral-large-latest
+254073	keine Änderung						mistral-large-latest
+254075	keine Änderung						mistral-large-latest
+254076	keine Änderung						mistral-large-latest
+254078	keine Änderung						mistral-large-latest
+254083	geändert	herabgestuft	volltext_strasse	Rosental	Bonn-Castell	niedrig	mistral-large-latest
+254084	keine Änderung						mistral-large-latest
+254086	geändert	bestätigt	volltext_strasse+kreuzung	Münsterplatz	Bonn-Zentrum	mittel	mistral-large-latest
+254086	geändert	bestätigt	volltext_strasse+kreuzung	Bottlerplatz	Bonn-Zentrum	mittel	mistral-large-latest
+254086	geändert	neu	llm_objekt	Friedensplatz	Bonn-Zentrum	niedrig	mistral-large-latest
+254086	geändert	bestätigt	volltext_strasse+kreuzung	Vivatsgasse	Bonn-Zentrum	mittel	mistral-large-latest
+254086	geändert	bestätigt	volltext_strasse+kreuzung	Windeckstraße	Bonn-Zentrum	mittel	mistral-large-latest
+254086	geändert	bestätigt	volltext_strasse+kreuzung	Poststraße	Bonn-Zentrum	mittel	mistral-large-latest
+254086	geändert	bestätigt	volltext_strasse	Remigiusplatz	Bonn-Zentrum	mittel	mistral-large-latest
+254088	geändert	bestätigt	volltext_strasse	Brassertufer	Südstadt	mittel	mistral-large-latest
+254088	geändert	bestätigt	volltext_strasse	Brassertufer	Bonn-Zentrum	mittel	mistral-large-latest
+254088	geändert	bestätigt	volltext_strasse	Stiftsplatz	Bonn-Zentrum	mittel	mistral-large-latest
+254088	geändert	bestätigt	volltext_strasse	Schultheißstraße	Vilich	mittel	mistral-large-latest
+254088	geändert	bestätigt	volltext_strasse	Küdinghovener Straße	Limperich	mittel	mistral-large-latest
+254089	geändert	bestätigt	volltext_strasse	Brassertufer	Südstadt	mittel	mistral-large-latest
+254089	geändert	bestätigt	volltext_strasse	Brassertufer	Bonn-Zentrum	mittel	mistral-large-latest
+254089	geändert	bestätigt	volltext_strasse	Stiftsplatz	Bonn-Zentrum	mittel	mistral-large-latest
+254094	geändert	bestätigt	volltext_strasse	Leinpfad	Graurheindorf	mittel	mistral-large-latest
+254094	geändert	bestätigt	volltext_strasse	Leinpfad	Bonn-Castell	mittel	mistral-large-latest
+254095	keine Änderung						mistral-large-latest
+260000	keine Änderung						mistral-large-latest
+260000-01 AA	keine Änderung						mistral-large-latest
+260000-10	geändert	neu	llm_objekt	Stadthalle Bad Godesberg	Alt-Godesberg	niedrig	mistral-large-latest
+260000-11	keine Änderung						mistral-large-latest
+260001	keine Änderung						mistral-large-latest
+260001-02	keine Änderung						mistral-large-latest
+260002	keine Änderung						mistral-large-latest
+260002-01 ST	geändert	bestätigt	volltext_strasse+hausnummer	Landgrabenweg	Ramersdorf	niedrig	mistral-large-latest
+260002-01 ST	geändert	bestätigt	volltext_strasse	Charles-de-Gaulle-Straße	Gronau	mittel	mistral-large-latest
+260002-01 ST	geändert	bestätigt	volltext_strasse+hausnummer	Weierbornstraße	Duisdorf	mittel	mistral-large-latest
+260003	keine Änderung						mistral-large-latest
+260003-01 ST	keine Änderung						mistral-large-latest
+260004	keine Änderung						mistral-large-latest
+260004-01 ST	keine Änderung						mistral-large-latest
+260005	keine Änderung						mistral-large-latest
+260005-01 ST	keine Änderung						mistral-large-latest
+260011	keine Änderung						mistral-large-latest
