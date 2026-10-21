@@ -77,11 +77,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 232177-01	keine Änderung						mistral-large-latest
 232205-02	keine Änderung						mistral-large-latest
 232205-03 ST	geändert	bestätigt	volltext_ortsteil_name	Oberkassel	Oberkassel	mittel	mistral-large-latest
-232205-03 ST	geändert	neu	llm_objekt	Nordfriedhof	Auerberg	niedrig	mistral-large-latest
-232205-03 ST	geändert	neu	llm_objekt	Stimson Memorial Chapel	Plittersdorf	niedrig	mistral-large-latest
-232205-03 ST	geändert	neu	llm_objekt	Godesburg	Alt-Godesberg	niedrig	mistral-large-latest
-232205-03 ST	geändert	neu	llm_objekt	Sterntor	Bonn-Zentrum	niedrig	mistral-large-latest
-232205-03 ST	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
 232211-07 ST	keine Änderung						mistral-large-latest
 232211-09 ST	keine Änderung						mistral-large-latest
 232263-01 AA	geändert	neu	llm_objekt	Festplatz Pützchens Markt	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
@@ -94,7 +89,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240020-02 AA	geändert	bestätigt	volltext_strasse	Am Bleichgraben	Endenich	mittel	mistral-large-latest
 240020-02 AA	geändert	bestätigt	volltext_strasse	Steinweg	Duisdorf	mittel	mistral-large-latest
 240020-02 AA	geändert	bestätigt	volltext_strasse	Steinweg	Endenich	mittel	mistral-large-latest
-240020-02 AA	geändert	neu	llm_objekt	Universität Bonn	Gronau	niedrig	mistral-large-latest
 240020-03 ST	keine Änderung						mistral-large-latest
 240188-01	keine Änderung						mistral-large-latest
 240199-01 ST	geändert	neu	llm_objekt	Frankenbad	Nordstadt	niedrig	mistral-large-latest
@@ -128,7 +122,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240406-02 AA	keine Änderung						mistral-large-latest
 240412-02 AA	geändert	herabgestuft	volltext_stadtbezirk_name	Beuel		niedrig	mistral-large-latest
 240435-01 AA	geändert	bestätigt	volltext_strasse+kreuzung	Koblenzer Straße	Alt-Godesberg	mittel	mistral-large-latest
-240435-01 AA	geändert	neu	llm_objekt	1967 1. Bonner Fußgängerzone Wenzelgasse	Bonn-Zentrum	niedrig	mistral-large-latest
 240435-01 AA	geändert	herabgestuft	volltext_strasse+kreuzung	Aennchenplatz	Alt-Godesberg	niedrig	mistral-large-latest
 240435-01 AA	geändert	herabgestuft	volltext_strasse+kreuzung	Am Kurpark	Alt-Godesberg	niedrig	mistral-large-latest
 240435-02 AA	keine Änderung						mistral-large-latest
@@ -178,11 +171,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240604-01	keine Änderung						mistral-large-latest
 240608	keine Änderung						mistral-large-latest
 240608-01 ST	keine Änderung						mistral-large-latest
-240610	geändert	neu	llm_objekt	Bertolt-Brecht-Gesamtschule	Tannenbusch	niedrig	mistral-large-latest
-240610	geändert	neu	llm_objekt	Turnhalle Bonns Fünfte	Kessenich	niedrig	mistral-large-latest
-240610	geändert	neu	llm_objekt	Elisabeth-Selbert-Gesamtschule	Plittersdorf	niedrig	mistral-large-latest
-240610	geändert	neu	llm_objekt	Marie-Kahle-Gesamtschule	Bonn-Castell	niedrig	mistral-large-latest
-240610	geändert	neu	llm_objekt	Clara-Schumann-Gymnasium	Südstadt	niedrig	mistral-large-latest
+240610	Aufzählung von Gebäuden (5), nicht verortet						mistral-large-latest
 240611	keine Änderung						mistral-large-latest
 240613	keine Änderung						mistral-large-latest
 240616	keine Änderung						mistral-large-latest
@@ -263,3 +252,64 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240696	keine Änderung						mistral-large-latest
 240700	keine Änderung						mistral-large-latest
 240703	keine Änderung						mistral-large-latest
+240704	keine Änderung						mistral-large-latest
+240704-02 AA	keine Änderung						mistral-large-latest
+240705	keine Änderung						mistral-large-latest
+240706	geändert	bestätigt	volltext_strasse+hausnummer	Lievelingsweg	Tannenbusch	mittel	mistral-large-latest
+240707	geändert	bestätigt	volltext_stadtbezirk_name	Beuel		mittel	mistral-large-latest
+240707	geändert	bestätigt	volltext_stadtbezirk_name	Bad Godesberg		mittel	mistral-large-latest
+240707	geändert	bestätigt	volltext_stadtbezirk_name	Hardtberg		mittel	mistral-large-latest
+240709	keine Änderung						mistral-large-latest
+240711	keine Änderung						mistral-large-latest
+240713	keine Änderung						mistral-large-latest
+240714-02	keine Änderung						mistral-large-latest
+240718	keine Änderung						mistral-large-latest
+240719	geändert	herabgestuft	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	mistral-large-latest
+240719	geändert	neu	llm_objekt	Schwimmhalle Hardtbergbad	Duisdorf	niedrig	mistral-large-latest
+240719	geändert	neu	llm_objekt	Römerbad	Bonn-Castell	niedrig	mistral-large-latest
+240719	geändert	neu	llm_objekt	Ennertbad	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
+240719	geändert	bestätigt	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	mistral-large-latest
+240724	keine Änderung						mistral-large-latest
+240782-01 AA	keine Änderung						mistral-large-latest
+240782-07	Liste (8 Ortsteile), nicht verortet						mistral-large-latest
+240785-01 AA	keine Änderung						mistral-large-latest
+240785-02 ST	keine Änderung						mistral-large-latest
+240812-04 ST	geändert	bestätigt	volltext_strasse+kreuzung	Heussallee	Gronau	mittel	mistral-large-latest
+240812-04 ST	geändert	herabgestuft	volltext_strasse+kreuzung	Schlegelstraße	Gronau	niedrig	mistral-large-latest
+240812-04 ST	geändert	bestätigt	volltext_strasse+kreuzung	Willy-Brandt-Allee	Gronau	mittel	mistral-large-latest
+240812-04 ST	geändert	herabgestuft	volltext_strasse+kreuzung	Genscherallee	Gronau	niedrig	mistral-large-latest
+240812-04 ST	geändert	bestätigt	volltext_strasse+kreuzung	Helmut-Kohl-Allee	Gronau	mittel	mistral-large-latest
+240852-03 AA	geändert	herabgestuft	volltext_strasse+ortsteil	Schießbergweg	Ramersdorf	niedrig	mistral-large-latest
+240941-02 ST	keine Änderung						mistral-large-latest
+240982-02 ST	keine Änderung						mistral-large-latest
+240986-18 ST	keine Änderung						mistral-large-latest
+240986-19 ST	keine Änderung						mistral-large-latest
+240986-20 ST	keine Änderung						mistral-large-latest
+241129-04	keine Änderung						mistral-large-latest
+241214-02 AA	keine Änderung						mistral-large-latest
+241272-01 ST	keine Änderung						mistral-large-latest
+241330-01 IB	Liste (8 Ortsteile), nicht verortet						mistral-large-latest
+241338-01 ST	geändert	neu	llm_strasse	Flodelingsweg	Endenich	niedrig	mistral-large-latest
+241338-01 ST	geändert	herabgestuft	volltext_ortsteil_name	Endenich	Endenich	niedrig	mistral-large-latest
+241385-01 ST	keine Änderung						mistral-large-latest
+241445-01 ST	keine Änderung						mistral-large-latest
+241446-01 ST	keine Änderung						mistral-large-latest
+241455-02 ST	keine Änderung						mistral-large-latest
+241457-01 AA	keine Änderung						mistral-large-latest
+241466-02 ST	keine Änderung						mistral-large-latest
+241492-01 ST	geändert	bestätigt	volltext_strasse+ortsteil	Auf den Steinen	Ückesdorf	mittel	mistral-large-latest
+241511-01 ST	keine Änderung						mistral-large-latest
+241519-01	keine Änderung						mistral-large-latest
+241541-01 ST	keine Änderung						mistral-large-latest
+241550-01 ST	keine Änderung						mistral-large-latest
+241552-01 ST	keine Änderung						mistral-large-latest
+241562-01 ST	geändert	neu	llm_objekt	Freie Waldorfschule Bonn	Tannenbusch	niedrig	mistral-large-latest
+241571-01 ST	keine Änderung						mistral-large-latest
+241573-01 ST	keine Änderung						mistral-large-latest
+241577-01 ST	keine Änderung						mistral-large-latest
+241578-01 ST	keine Änderung						mistral-large-latest
+241578-02 ST	keine Änderung						mistral-large-latest
+241579-01 ST	keine Änderung						mistral-large-latest
+241580-01 ST	keine Änderung						mistral-large-latest
+241592	geändert	neu	llm_objekt	Frankenbad	Nordstadt	niedrig	mistral-large-latest
+241592	geändert	neu	llm_objekt	Stadthalle Bad Godesberg	Alt-Godesberg	niedrig	mistral-large-latest
