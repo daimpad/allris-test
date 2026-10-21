@@ -23,7 +23,11 @@ from pathlib import Path
 from . import config, sprachmodell, volltext
 
 API = "https://api.mistral.ai/v1/chat/completions"
-MODELL = os.environ.get("KURZFASSUNG_MODELL", "mistral-small-latest")
+# Fassung 2 (21.10.2026): großes Modell und genauere Anweisung nach der KI-Vorprüfung der ersten Stichprobe
+# (18 plausibel, 8 teilweise, 2 falsch, 2 unklar; Fehler: falscher Akteur, Vermutungen, falsche Orte, vertauschter
+# Kostenträger; data/export/kurzfassungen/vorpruefung_kurzfassungen_v1.tsv)
+MODELL = os.environ.get("KURZFASSUNG_MODELL", "mistral-large-latest")
+FASSUNG = 2
 MAX_JE_LAUF = int(os.environ.get("KURZFASSUNG_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
 MAX_ZEICHEN = 12000
 UEBERNAHME_WOERTER = 6
@@ -33,9 +37,17 @@ HAUSNUMMER = re.compile(r"(?:straße|str\.|weg|platz|allee|gasse|ring|ufer)\s+\d
 
 ANWEISUNG = """Du schreibst Kurzfassungen von Vorlagen des Rates der Stadt Bonn für Bürgerinnen und Bürger ohne
 Verwaltungswissen. Schreibe zwei bis drei kurze Sätze in einfacher Sprache, höchstens 60 Wörter: worum es geht, was
-entschieden, beantragt oder mitgeteilt wird und, wenn genannt, welcher Ort betroffen ist. Formuliere vollständig mit
-eigenen Worten; übernimm keine Sätze und keine längeren Wortfolgen aus dem Text. Nenne keine Namen von Privatpersonen
-und keine Hausnummern. Erfinde nichts; was im Text nicht steht, lässt du weg. Antworte nur mit der Kurzfassung."""
+beantragt, vorgeschlagen, beschlossen oder mitgeteilt wird und, wenn genannt, welcher Ort betroffen ist.
+- Nenne den richtigen Absender und die Art der Vorlage: Ein Antrag einer Fraktion ist ein Vorschlag, kein Beschluss;
+  eine Beschlussvorlage ist ein Vorschlag der Verwaltung; eine Stellungnahme gibt die Sicht der Verwaltung oder einer
+  anderen Stelle wieder; eine Mitteilung informiert nur. Schreibe nicht „die Stadt plant“ oder „der Rat will“, wenn
+  das nicht im Text steht.
+- Gib Bedingungen wieder („nur wenn der Antrag angenommen wird“) und sage, wer Kosten trägt, nur so, wie es im Text steht.
+- Nenne nur Orte, Zahlen und Daten, die im Text stehen; nenne keine Stadtbezirke oder Ortsteile, die der Text nicht nennt.
+- Vermute nichts und ergänze nichts („vermutlich“, „oder“-Aufzählungen möglicher Inhalte). Steht wenig im Text, schreibe
+  kurz, was dort steht.
+Formuliere vollständig mit eigenen Worten; übernimm keine Sätze und keine längeren Wortfolgen aus dem Text. Nenne keine
+Namen von Privatpersonen und keine Hausnummern. Antworte nur mit der Kurzfassung."""
 
 
 def _woerter(text):
@@ -111,29 +123,34 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         uri = (p.get("mainFile") or {}).get("id")
         if uri in texts and volltext.allowed(p.get("paperType")):
             papers.setdefault(uri, p)
-    todo = [(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] not in have][:MAX_JE_LAUF]
+    # ältere Fassungen zuerst (so entsteht die neue Stichprobe aus denselben Vorlagen), danach neue Texte
+    alt = lambda uri: have[texts[uri]["sha"]].get("fassung", 1) < FASSUNG
+    todo = ([(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] in have and alt(uri)]
+            + [(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] not in have])[:MAX_JE_LAUF]
     tokens = [0, 0]
     for uri, p in todo:
         main, _ = volltext.clean(texts[uri]["text"])
         main = re.sub(r"\s+", " ", main).strip()[:MAX_ZEICHEN]
-        kurz, usage = anfrage(p.get("name") or "", main, schluessel)
+        titel = f"{p.get('name') or ''} (Art der Vorlage: {p.get('paperType') or 'unbekannt'})"
+        kurz, usage = anfrage(titel, main, schluessel)
         kurz = glaetten(kurz)
         tokens[0] += usage.get("prompt_tokens", 0)
         tokens[1] += usage.get("completion_tokens", 0)
         grund = pruefe(kurz, main)
         have[texts[uri]["sha"]] = {"sha": texts[uri]["sha"], "datei": uri, "drucksache": p["reference"],
                                    "kurzfassung": None if grund else kurz, "verworfen": grund, "modell": MODELL,
+                                   "fassung": FASSUNG,
                                    "erzeugt": datetime.now(timezone.utc).date().isoformat()}
         time.sleep(0.5)
     with open(base / "kurzfassungen.jsonl", "w", encoding="utf-8") as f:
         for sha in sorted(have):
             f.write(json.dumps(have[sha], ensure_ascii=False) + "\n")
-    ok = [r for r in have.values() if r["kurzfassung"]]
+    ok = [r for r in have.values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG]
     sprachmodell.protokoll(base, "kurzfassungen", MODELL, len(todo), {"ein": tokens[0], "aus": tokens[1]},
                            sum(1 for uri, p in todo if have[texts[uri]["sha"]]["verworfen"]))
     print(f"Kurzfassungen: {len(todo)} neu ({tokens[0]} Eingabe-, {tokens[1]} Ausgabe-Tokens), "
           f"{len(ok)} vorhanden, {sum(1 for r in have.values() if r['verworfen'])} verworfen → {base}")
-    sample = base / "stichprobe_kurzfassungen.tsv"
+    sample = base / f"stichprobe_kurzfassungen_v{FASSUNG}.tsv"   # Fassung 1: stichprobe_kurzfassungen.tsv
     if not sample.exists() and len(ok) >= 30:
         titel = {p["reference"]: (p.get("name"), p.get("web")) for p in papers.values()}
         pick = sorted(random.Random(20261020).sample(ok, 30), key=lambda r: r["drucksache"])
@@ -152,4 +169,4 @@ def fuer_seite(verzeichnis=None):
     if not FREIGEGEBEN:
         return {}
     return {r["drucksache"]: {"text": glaetten(r["kurzfassung"]), "modell": r["modell"], "erzeugt": r["erzeugt"]}
-            for r in laden(verzeichnis).values() if r["kurzfassung"]}
+            for r in laden(verzeichnis).values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG}

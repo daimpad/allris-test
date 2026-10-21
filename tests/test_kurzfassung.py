@@ -59,6 +59,17 @@ class KurzfassungTest(unittest.TestCase):
                              ["ok", f"wörtliche Übernahme von mehr als {kurzfassung.UEBERNAHME_WOERTER} Wörtern"])
             self.assertEqual(kurzfassung.fuer_seite(out), {})  # vor der Freigabe nichts auf der Seite
             self.assertEqual(len((out / "laeufe.tsv").read_text().splitlines()), 2)  # Kopf und ein Lauf mit Anfragen
+            # ältere Fassung wird neu erzeugt
+            rows = kurzfassung.laden(out)
+            for r in rows.values():
+                r.pop("fassung")
+            (out / "kurzfassungen.jsonl").write_text("\n".join(json.dumps(r) for r in rows.values()) + "\n")
+            antworten = iter(["Die Verwaltung schlägt vor, den Spielplatz mit neuen Geräten und Wegen auszustatten."] * 2)
+            with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), \
+                    mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers):
+                kurzfassung.erzeugen(out, anfrage=anfrage)
+            self.assertEqual(len(calls), 4)
+            self.assertTrue(all(r["fassung"] == kurzfassung.FASSUNG for r in kurzfassung.laden(out).values()))
 
 
 if __name__ == "__main__":

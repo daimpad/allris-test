@@ -128,7 +128,8 @@ Inhalt
   Konfidenz, Nennungen; keine Textauszüge); volltext/stichprobe_volltext.tsv (30 Vorgänge zur Prüfung).
   Die Texte selbst sind nicht im Paket.
 - geo/objekte_bonn.json: benannte Gebäude und Anlagen in Bonn aus OpenStreetMap (ODbL; Name, Art, Ortsteil,
-  Mittelpunkt) für Stufe C; audit_stufe_c_objekte.tsv: Abgleich der Namen, die das Sprachmodell nennt
+  Mittelpunkt) für Stufe B (Namen im Titel, audit_objekte_titel.tsv, objekte/stichprobe_objekte.tsv und
+  vorpruefung_objekte.tsv) und Stufe C (audit_stufe_c_objekte.tsv: Abgleich der Namen, die das Sprachmodell nennt)
 - audit_stufe_c.tsv: Gegenprüfung der Orte, die ein Sprachmodell im Text der Hauptdokumente erkannt hat (Stufe C;
   Aktion bestätigt/herabgestuft/neu, Methode, Ort, Ortsteil, Konfidenz, Modell; keine Textauszüge). Übernommen
   werden die Orte erst nach Prüfung einer Stichprobe von Hand.
