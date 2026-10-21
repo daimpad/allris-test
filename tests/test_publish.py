@@ -72,5 +72,20 @@ class Kalender(unittest.TestCase):
         raw.decode("utf-8")  # Faltung trennt keine Umlaute
 
 
+
+class Dcat(unittest.TestCase):
+    def test_kurzfassungen_nur_nach_freigabe(self):
+        import json
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "dcat.jsonld"
+            publish.write_dcat(path, "2019-10-01", "2026-10-21")
+            files = [x["@id"] for x in json.loads(path.read_text())["dcat:distribution"]]
+            self.assertFalse(any(f.endswith("kurzfassungen.tsv") for f in files))
+            publish.write_dcat(path, "2019-10-01", "2026-10-21", kurzfassungen=True)
+            dist = json.loads(path.read_text())["dcat:distribution"][-1]
+            self.assertTrue(dist["@id"].endswith("bonn/kurzfassungen.tsv"))
+            self.assertIn("Sprachmodell", dist["dct:description"]["@value"])
+
+
 if __name__ == "__main__":
     unittest.main()
