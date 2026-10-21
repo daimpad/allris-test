@@ -30,6 +30,13 @@ class KurzfassungTest(unittest.TestCase):
                          "Baum in der Straße Am Herrengarten, gefällt.")
         self.assertEqual(kurzfassung.glaetten("3 * 4 Bäume"), "3 * 4 Bäume")
 
+    def test_ueberschrift_wird_entfernt(self):
+        for kopf in ("Stellungnahme der Verwaltung", "Stadt Bonn – Mitteilung", "Beschlussvorlage der Verwaltung:",
+                     "Absender: Mehrere Fraktionen (interfraktioneller Antrag)\nArt der Vorlage: Vorschlag"):
+            self.assertEqual(kurzfassung.glaetten(f"{kopf}\n\nDie Verwaltung schlägt vor, den Baum zu fällen. Ersatz folgt."),
+                             "Die Verwaltung schlägt vor, den Baum zu fällen. Ersatz folgt.")
+        self.assertEqual(kurzfassung.glaetten("Kurz und ohne Punkt"), "Kurz und ohne Punkt")   # nur eine Zeile: bleibt
+
     def test_ohne_schluessel_nichts(self):
         with mock.patch.dict(os.environ, {}, clear=True), tempfile.TemporaryDirectory() as d:
             kurzfassung.erzeugen(d, anfrage=lambda *a: self.fail("keine Anfrage ohne Schlüssel"))
