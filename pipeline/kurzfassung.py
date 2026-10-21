@@ -27,7 +27,7 @@ API = "https://api.mistral.ai/v1/chat/completions"
 # (18 plausibel, 8 teilweise, 2 falsch, 2 unklar; Fehler: falscher Akteur, Vermutungen, falsche Orte, vertauschter
 # Kostenträger; data/export/kurzfassungen/vorpruefung_kurzfassungen_v1.tsv)
 MODELL = os.environ.get("KURZFASSUNG_MODELL", "mistral-large-latest")
-FASSUNG = 2
+FASSUNG = 3   # Fassung 3: ohne Überschrift, Absender im ersten Satz, Kosten nur laut Text (Vorprüfung v2)
 MAX_JE_LAUF = int(os.environ.get("KURZFASSUNG_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
 MAX_ZEICHEN = 12000
 UEBERNAHME_WOERTER = 6
@@ -46,6 +46,9 @@ beantragt, vorgeschlagen, beschlossen oder mitgeteilt wird und, wenn genannt, we
 - Nenne nur Orte, Zahlen und Daten, die im Text stehen; nenne keine Stadtbezirke oder Ortsteile, die der Text nicht nennt.
 - Vermute nichts und ergänze nichts („vermutlich“, „oder“-Aufzählungen möglicher Inhalte). Steht wenig im Text, schreibe
   kurz, was dort steht.
+- Wer Kosten trägt, schreibst du nur, wenn es im Text ausdrücklich steht.
+Beginne direkt mit dem ersten Satz und nenne den Absender darin („Die Verwaltung schlägt vor …“, „Die CDU-Fraktion
+beantragt …“); schreibe keine Überschrift und keine Angaben wie „Absender:“ oder „Art der Vorlage:“.
 Formuliere vollständig mit eigenen Worten; übernimm keine Sätze und keine längeren Wortfolgen aus dem Text. Nenne keine
 Namen von Privatpersonen und keine Hausnummern. Antworte nur mit der Kurzfassung."""
 
@@ -65,9 +68,16 @@ def uebernahme(kurz, text, n=UEBERNAHME_WOERTER + 1):
     return None
 
 
+KOPFZEILE = re.compile(r"^(Absender|Art der Vorlage)\s*:|:\s*$|^[^.!?]{0,80}$")
+
+
 def glaetten(kurz):
-    """Markdown-Auszeichnungen (*kursiv*, **fett**, `Code`) entfernen: die Seite zeigt reinen Text."""
-    return re.sub(r"(\*{1,2}|_{2}|`)(.+?)\1", r"\2", kurz or "").strip()
+    """Markdown-Auszeichnungen (*kursiv*, **fett**, `Code`) und vorangestellte Überschriften („Stellungnahme der
+    Verwaltung“, „Absender: …“) entfernen; Zeilen werden zu einem Absatz: die Seite zeigt reinen Text."""
+    zeilen = [z.strip() for z in re.sub(r"(\*{1,2}|_{2}|`)(.+?)\1", r"\2", kurz or "").split("\n")]
+    while len(zeilen) > 1 and (not zeilen[0] or KOPFZEILE.search(zeilen[0])):
+        zeilen = zeilen[1:]
+    return " ".join(z for z in zeilen if z).strip()
 
 
 def pruefe(kurz, text):
