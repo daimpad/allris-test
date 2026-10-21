@@ -4,8 +4,10 @@ Abgleich über den angeglichenen Namen: Groß- und Kleinschreibung, Satzzeichen,
 („GGS“, „Kita“, „Städt.“, „ehem.“) zählen nicht. Ein Name zählt nur, wenn er in genau einem Ortsteil vorkommt; liegt
 er in mehreren Ortsteilen („Alter Friedhof“), entscheidet der Ortsteil, den der Text nennt, sonst wird nicht
 verortet. Ein kürzerer Name passt auf einen längeren, wenn er darin als ganze Wortfolge steht („Rheinaue“ →
-„Freizeitpark Rheinaue“), mindestens acht Zeichen hat und dabei nur ein Ortsteil herauskommt. Gattungsnamen
-(„Spielplatz“, „Friedhof“) zählen nie.
+„Freizeitpark Rheinaue“), mindestens acht Zeichen hat und dabei nur ein Ortsteil herauskommt. Nennt der Name mit
+seinem Vorsatz eine Art („GGS“, „Kita“), muss ein solcher Teiltreffer von dieser Art sein („GGS Medinghoven“ ist nicht
+„Burg Medinghoven“; KI-Vorprüfung der zweiten Stichprobe, 21.10.2026). Gattungsnamen („Spielplatz“, „Friedhof“)
+zählen nie.
 """
 import json
 import re
@@ -21,6 +23,8 @@ GATTUNG = {"spielplatz", "friedhof", "sportplatz", "turnhalle", "sporthalle", "s
            "bürgerhaus", "stadtteilbibliothek", "waldfriedhof", "parkfriedhof", "gesamtschule", "gymnasium",
            "realschule", "hauptschule", "förderschule", "mehrzweckhalle", "stadthalle", "altenheim"}
 MIN_TEIL = 8
+VORSATZ_ART = {"ggs": "Schule", "kgs": "Schule", "ogs": "Schule", "ggs/ogs": "Schule", "kita": "Kita",
+               "kindertagesstätte": "Kita"}
 # Titel (Stufe B, Methode „objekt_name“): strenger, weil kein Sprachmodell die Rolle prüft. Der Name muss mit
 # Vorsatz im Titel stehen („Kita Rheinpiraten“, nicht „Rheinpiraten“), mindestens acht Zeichen lang und in Bonn
 # eindeutig sein. Ausgenommen sind Schutzgebiete (große Flächen, oft über Bonn hinaus) und Namen, die im Titel meist
@@ -98,6 +102,12 @@ class Objekte:
                 for ot, o in self.by_norm[key].items():
                     cands[ot] = o
             art = "Teil des Namens"
+            vorsatz = {VORSATZ_ART[w.strip(".")] for w in re.sub(r"[^\w/]+", " ", name.lower()).split()
+                       if w.strip(".") in VORSATZ_ART}
+            if vorsatz:
+                cands = {ot: o for ot, o in cands.items() if o["art"] in vorsatz}
+                if not cands:
+                    return None, "Teil des Namens, aber andere Art als laut Vorsatz"
         if not cands:
             return None, "nicht im Verzeichnis"
         if len(cands) == 1:
