@@ -49,6 +49,7 @@ class ObjekteTest(unittest.TestCase):
     def test_gattungsname_und_unbekanntes(self):
         self.assertEqual(self.obj.finden("Spielplatz"), (None, "Gattungsname"))
         self.assertEqual(self.obj.finden("Gottfried-Kinkel-Schule"), (None, "nicht im Verzeichnis"))
+        self.assertIsNone(self.obj.finden("Volkshochschule Bonn")[0])   # Einrichtung ohne festen Ort
 
     def test_titel_streng(self):
         titel = lambda t: [o["name"] for o in self.obj.im_titel(t)]

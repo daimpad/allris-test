@@ -73,6 +73,19 @@ class StufeCTest(unittest.TestCase):
         orte[0]["rolle"] = "erwähnt"
         self.assertEqual(stufe_c.pruefen(self.gaz, text, orte[:1], [], objekte=obj)[0], [])
 
+    def test_aufzaehlung_von_gebaeuden_wird_nicht_verortet(self):
+        from pipeline.objekte import Objekte
+        ots = ["Vilich", "Beuel-Mitte", "Duisdorf", "Endenich", "Kessenich"]
+        obj = Objekte({f"way/{i}": {"name": f"Schule Nummer{chr(65 + i)}", "art": "Schule", "ortsteil": ot,
+                                    "bezirk": "Bonn", "lon": 7.1, "lat": 50.7} for i, ot in enumerate(ots)})
+        names = [f"Schule Nummer{chr(65 + i)}" for i in range(5)]
+        text = KOPF + "Anmeldezahlen: " + ", ".join(names) + "."
+        orte = [{"name": n, "art": "objekt", "rolle": "gegenstand", "ortsteil": ""} for n in names]
+        rows, befund = stufe_c.pruefen(self.gaz, text, orte, [], objekte=obj)
+        self.assertEqual((rows, befund), ([], "Aufzählung von Gebäuden (5), nicht verortet"))
+        rows, _ = stufe_c.pruefen(self.gaz, text, orte[:4], [], objekte=obj)
+        self.assertEqual(len(rows), 4)
+
     def test_gattungsname_und_bezirk_allein_zaehlen_nicht(self):
         text = KOPF + "Wochenmarkt auf dem Markt im Stadtbezirk Bad Godesberg."
         orte = [{"name": "Markt", "art": "objekt", "rolle": "gegenstand", "ortsteil": ""},
