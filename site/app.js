@@ -866,7 +866,7 @@
       shown = LIST_STEP;
       render();
       const n = search.rows.filter((r) => docHits.refs.has(r[0])).length;
-      status.textContent = `${n} Vorlagen erwähnen „${q}“ in einem Dokument${docHits.more ? ` (die ersten ${DOC_PAGES * 100} von ${docHits.total} Dokumenttreffern)` : ""}.`;
+      status.textContent = `${n === 0 ? "Keine Vorlage erwähnt" : n === 1 ? "1 Vorlage erwähnt" : `${n} Vorlagen erwähnen`} „${q}“ in einem Dokument${docHits.more ? ` (die ersten ${DOC_PAGES * 100} von ${docHits.total} Dokumenttreffern)` : ""}.`;
     } catch (e) {
       docHits = null;
       status.textContent = "Die Suche im Text der Dokumente ist gerade nicht erreichbar.";

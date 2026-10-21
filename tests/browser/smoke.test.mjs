@@ -120,7 +120,7 @@ test("Suche im Text der Dokumente: erst nach Klick, ohne Textausschnitt", async 
   await page.waitForTimeout(400);
   assert.equal(asked.length, 0, "keine Anfrage vor dem Klick");
   await page.locator("#doc-search").click();
-  await page.waitForFunction(() => /erwähnen/.test(document.querySelector("#doc-status").textContent));
+  await page.waitForFunction(() => /erwähn/.test(document.querySelector("#doc-status").textContent));
   assert.equal(asked.length, 1);
   assert.ok(!/snippet/.test(asked[0].query), "kein Textausschnitt angefragt");
   assert.match(await page.locator("#count").textContent(), /2 nur im Text der Dokumente/);
