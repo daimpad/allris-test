@@ -1310,6 +1310,7 @@
       <span class="meta">${methodText(l)}</span></li>`;
     // Volltext: erkannter Ort und Teil des Dokuments, kein Zitat (Rahmen laut Antwort der Stadt Bonn)
     function methodText(l) {
+      if (String(l.method).startsWith("llm_")) return `Mit einem Sprachmodell aus dem Text des Dokuments erkannt und mit dem Straßen- und Ortsverzeichnis abgeglichen <span class="derived">abgeleitet</span> · ${esc(l.evidence || "")}; kein Zitat`;
       if (!String(l.method).startsWith("volltext_")) return `${esc(METHOD[l.method] || l.method)}${l.evidence ? ` · Fundstelle: „${esc(l.evidence)}“` : ""}`;
       const base = METHOD[l.method.slice(9)] || "";
       return `Aus dem Text des Dokuments erschlossen <span class="derived">abgeleitet</span>${base ? ` (Regel wie „${esc(base.replace(/ im Titel/, ""))}“)` : ""} · ${esc(l.evidence || "")}; kein Zitat`;

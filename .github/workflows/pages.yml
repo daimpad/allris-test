@@ -99,8 +99,9 @@ jobs:
         run: python -m pipeline fetch-lite
         continue-on-error: true
 
-      # Kurzfassungen (Mistral, gekennzeichnet): Bestand im Branch kurzfassungen; neue nur mit dem Secret MISTRAL_API_KEY,
-      # höchstens KURZFASSUNG_MAX je Lauf. Auf der Seite erst nach Freigabe (kurzfassung.FREIGEGEBEN).
+      # Sprachmodell (Mistral, gekennzeichnet): Bestand im Branch kurzfassungen; neue Kurzfassungen und Orte der
+      # Stufe C nur mit dem Secret MISTRAL_API_KEY, je höchstens 50 je Lauf. Auf der Seite erst nach Freigabe
+      # (kurzfassung.FREIGEGEBEN, stufe_c.FREIGEGEBEN). Gesichert wird der Branch nach der Aufbereitung.
       - name: Kurzfassungen (Mistral; neue Texte, höchstens 50 je Lauf)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -114,24 +115,34 @@ jobs:
             git init -q -b kurzfassungen _kurzfassungen
           fi
           python -m pipeline kurzfassungen
-          cd _kurzfassungen
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then echo "Kurzfassungen unverändert"; exit 0; fi
-          git commit -q -m "Kurzfassungen $(date -u +%F)"
-          git push -q "$url" HEAD:kurzfassungen
         timeout-minutes: 30
         continue-on-error: true
 
       - name: Aufbereiten, Geokodierung, Export
         env:
           KURZFASSUNGEN: _kurzfassungen
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         run: |
           python -m pipeline build
+          python -m pipeline stufe-c
           python -m pipeline export
           python -m pipeline check
           python -m pipeline soll
+
+      - name: Ergebnisse des Sprachmodells sichern (Branch kurzfassungen)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          [ -d _kurzfassungen/.git ] || { echo "kein Bestand"; exit 0; }
+          url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          cd _kurzfassungen
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "unverändert"; exit 0; fi
+          git commit -q -m "Kurzfassungen und Orte der Stufe C $(date -u +%F)"
+          git push -q "$url" HEAD:kurzfassungen
+        continue-on-error: true
 
       # Baustellen für die Seite: aus dem Archiv (Branch archiv, täglich 05:23 UTC), sonst direkt aus den Feeds;
       # mögliche Umsetzungen nur mit Konfidenz hoch (vorläufig). Scheitert beides, bleibt die Ebene ausgeblendet.
