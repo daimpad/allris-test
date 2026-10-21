@@ -413,6 +413,9 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .scope label:has(input:checked) { background: var(--surface-strong); box-shadow: var(--shadow); font-weight: 500; }
 .papers .theme, .papers .area-tag { font-size: 11px; padding: 1px 7px; border-radius: 999px; background: rgba(124, 58, 237, .09); color: var(--accent-ink); }
 .papers .area-tag { background: rgba(15, 15, 20, .06); color: var(--text); }
+.papers .doc-tag { font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px dashed var(--border-alt); color: var(--text); }
+.doc-search { margin: 12px 0 4px; display: grid; gap: 4px; justify-items: start; }
+.doc-search .hint { margin: 0; }
 .path { display: grid; gap: 4px; padding: 10px 0; border-bottom: 1px solid var(--border-alt); }
 .path-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-size: 13px; }
 .station { background: var(--surface); border: 1px solid var(--border-alt); border-radius: 999px; padding: 2px 9px; }

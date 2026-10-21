@@ -835,19 +835,59 @@
   const themeTags = (ts) => (ts || []).slice(0, 2).map((t) => `<span class="theme">${esc(THEMES[t.theme || t])}</span>`).join("");
 
   // Suche über ganz Bonn: Treffer aus dem Index, Öffnen lädt das Gebiet der Vorlage
+  // Suche im Text der Dokumente: erst auf Klick, über die Volltextsuche von OParl-Lite (machdenstaat). Abgefragt werden
+  // nur die Drucksachen der Treffer, kein Textausschnitt (Rahmen laut Antwort der Stadt Bonn: keine Zitate, keine Auszüge)
+  const LITE = "https://oparl.bonn.machdenstaat.de/graphql";
+  const DOC_QUERY = "query($q:String!,$o:Int){ fileFullTextSearch(query:$q, limit:100, offset:$o){ totalCount pageInfo { hasNextPage } items { file { papers { reference } } } } }";
+  const DOC_PAGES = 3;
+  let docHits = null;
+  async function docSearch(q) {
+    const refs = new Set();
+    let total = 0;
+    for (let page = 0; page < DOC_PAGES; page++) {
+      const r = await fetch(LITE, { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: DOC_QUERY, variables: { q, o: page * 100 } }) });
+      const d = (await r.json()).data.fileFullTextSearch;
+      total = d.totalCount;
+      d.items.forEach((i) => i.file.papers.forEach((p) => refs.add(p.reference)));
+      if (!d.pageInfo.hasNextPage) break;
+    }
+    return { q: q.toLowerCase(), refs, total, more: total > DOC_PAGES * 100 };
+  }
+  async function runDocSearch() {
+    const q = $("#q").value.trim() || $("#f-text").value.trim();
+    const status = $("#doc-status");
+    if (q.length < 3) { status.textContent = "Bitte mindestens drei Zeichen eingeben."; return; }
+    status.textContent = "Suche im Text der Dokumente …";
+    try {
+      docHits = await docSearch(q);
+      if (index && scope() !== "bonn") setScope("bonn");
+      if (!search) await loadSearch();
+      shown = LIST_STEP;
+      render();
+      const n = search.rows.filter((r) => docHits.refs.has(r[0])).length;
+      status.textContent = `${n} Vorlagen erwähnen „${q}“ in einem Dokument${docHits.more ? ` (die ersten ${DOC_PAGES * 100} von ${docHits.total} Dokumenttreffern)` : ""}.`;
+    } catch (e) {
+      docHits = null;
+      status.textContent = "Die Suche im Text der Dokumente ist gerade nicht erreichbar.";
+    }
+  }
   function renderGlobal() {
     const text = $("#f-text").value.trim().toLowerCase(), type = $("#f-type").value, standF = $("#f-stand").value;
+    const doc = docHits && docHits.q === text ? docHits.refs : null;
+    const inTitle = (r) => (r[1] + " " + r[0]).toLowerCase().includes(text);
     const theme = search.themes.findIndex((t) => t.id === $("#f-theme").value), party = search.parties.indexOf($("#f-party").value);
     const rel = $("#f-related").checked, ti = search.types.indexOf(type), si = search.stands.indexOf(standF);
     const rows = search.rows.filter((r) => (!type || r[3] === ti) && (!standF || r[4] === si) && (theme < 0 || r[6].includes(theme)) &&
       (party < 0 || r[7].includes(party) || (rel && r[8].includes(party))) && (!range || (r[2] && r[2] >= range[0] && r[2] <= range[1])) &&
-      (!text || (r[1] + " " + r[0]).toLowerCase().includes(text)));
+      (!text || inTitle(r) || (doc && doc.has(r[0]))));
     const span = range ? ` · ${fmtDate(range[0])}–${fmtDate(range[1])}` : "";
-    $("#count").textContent = `${rows.length} Treffer in ganz Bonn${span}`;
+    const onlyDoc = doc ? rows.filter((r) => !inTitle(r)).length : 0;
+    $("#count").textContent = `${rows.length} Treffer in ganz Bonn${doc ? `, davon ${onlyDoc} nur im Text der Dokumente` : ""}${span}`;
     let html = rows.slice(0, shown).map((r) => `<li><button type="button" data-gref="${esc(r[0])}" data-area="${esc(search.areas[r[5]].key)}" aria-current="${selected && selected.reference === r[0]}">
       <span class="title">${esc(r[1])}</span>
       <span class="meta"><span>${esc(r[0])}</span><span>${fmtDate(r[2])}</span><span>${esc(search.types[r[3]] || "")}</span>
-      <span>${esc(search.stands[r[4]])}</span><span class="area-tag">${esc(search.areas[r[5]].name)}</span>${themeTags(r[6].slice(0, 2).map((i) => search.themes[i].id))}</span></button></li>`).join("");
+      <span>${esc(search.stands[r[4]])}</span><span class="area-tag">${esc(search.areas[r[5]].name)}</span>${themeTags(r[6].slice(0, 2).map((i) => search.themes[i].id))}${doc && text && !inTitle(r) ? '<span class="doc-tag">im Dokument erwähnt</span>' : ""}</span></button></li>`).join("");
     if (rows.length > shown) html += `<li class="more"><button type="button" class="btn btn-secondary" id="more">Weitere ${Math.min(LIST_STEP, rows.length - shown)} von ${rows.length - shown} anzeigen</button></li>`;
     if (!rows.length) html = `<li class="empty-list"><p>Keine Vorlage in ganz Bonn passt zu Filtern und Zeitraum.</p><button type="button" class="btn btn-secondary" id="reset-filters">Filter und Zeitraum zurücksetzen</button></li>`;
     $("#papers").innerHTML = html;
@@ -1293,6 +1333,8 @@
       </dl>
       <div class="links">${link(p.web, "Original im Ratsinformationssystem", "btn btn-primary")}
         ${link(p.main_file, "Dokument (PDF)", "btn btn-secondary")}</div>
+      ${p.kurzfassung ? `<section class="kurz" aria-labelledby="kurz-h"><h4 id="kurz-h">Kurz gesagt</h4><p>${esc(p.kurzfassung.text)}</p>
+        <p class="hint"><span class="derived">KI-Kurzfassung</span> Mit einem Sprachmodell (${esc(p.kurzfassung.modell)}) aus dem Text des Dokuments formuliert, kein Zitat; sie kann Fehler enthalten. Maßgeblich ist das Original.</p></section>` : ""}
       <h4>Prozesslinie</h4>
       <ol class="steps">${p.steps.map(stepHtml).join("")}${umsetzungHtml(p)}</ol>
       ${legend()}${glossary(p)}
@@ -1484,6 +1526,7 @@
     q.addEventListener("focus", () => openMega("mega-suche"));
     q.addEventListener("input", debounce(() => {
       $("#f-text").value = q.value;
+      $("#doc-status").textContent = "";
       if (q.value && index && scope() !== "bonn") setScope("bonn");
       openMega("mega-suche");
       applyFromBar();
@@ -1504,6 +1547,7 @@
       if (pa) { $("#f-party").value = $("#f-party").value === pa.dataset.party ? "" : pa.dataset.party; return applyFromBar(); }
     });
     $("#mega-show").addEventListener("click", () => { setPanel("panel-list", true); closeMega(); focusPanel("panel-list"); });
+    $("#doc-search").addEventListener("click", runDocSearch);
     $("#mega-reset").addEventListener("click", () => { q.value = ""; resetFilters(); fillChips(); });
     if (!index) document.querySelector(".scope-switch").hidden = true;
   }
