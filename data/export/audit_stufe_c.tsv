@@ -16,7 +16,8 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 210314-01 ST	keine Änderung						mistral-large-latest
 210478-01 ST	keine Änderung						mistral-large-latest
 210807-04 AA	keine Änderung						mistral-large-latest
-212329-03	keine Änderung						mistral-large-latest
+212329-03	geändert	neu	llm_objekt	Heinrich-Hertz-Europakolleg	Graurheindorf	niedrig	mistral-large-latest
+212329-03	geändert	neu	llm_objekt	Kettelerschule	Dransdorf	niedrig	mistral-large-latest
 220117-03	keine Änderung						mistral-large-latest
 220509-05 ST	keine Änderung						mistral-large-latest
 220650-02 ST	keine Änderung						mistral-large-latest
@@ -26,12 +27,17 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 220806-08	keine Änderung						mistral-large-latest
 220806-09 ST	keine Änderung						mistral-large-latest
 221550-16	keine Änderung						mistral-large-latest
-221797-02	keine Änderung						mistral-large-latest
+221797-02	geändert	neu	llm_objekt	Universitätshauptgebäude	Südstadt	niedrig	mistral-large-latest
 221797-03 ST	keine Änderung						mistral-large-latest
 222109-05 AA	keine Änderung						mistral-large-latest
 222181-03	geändert	bestätigt	volltext_stadtbezirk_name	Hardtberg		mittel	mistral-large-latest
-222504-03	geändert	bestätigt	volltext_strasse	An der Umkehr	Ramersdorf	mittel	mistral-large-latest
-222504-04	geändert	bestätigt	volltext_strasse	An der Umkehr	Ramersdorf	mittel	mistral-large-latest
+222504-03	geändert	neu	llm_objekt	Jupp-Gassen-Halle	Oberkassel	niedrig	mistral-large-latest
+222504-03	geändert	neu	llm_objekt	Marktschule	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
+222504-03	geändert	neu	llm_objekt	Adelheidisschule	Vilich	niedrig	mistral-large-latest
+222504-03	geändert	neu	llm_objekt	Städtischer Kindergarten An der Umkehr	Ramersdorf	niedrig	mistral-large-latest
+222504-04	geändert	neu	llm_objekt	Städtischer Kindergarten An der Umkehr	Ramersdorf	niedrig	mistral-large-latest
+222504-04	geändert	neu	llm_objekt	Adelheidisschule	Vilich	niedrig	mistral-large-latest
+222504-04	geändert	neu	llm_objekt	Marktschule	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
 222504-04	geändert	bestätigt	volltext_strasse	Rilkestraße	Beuel-Mitte	mittel	mistral-large-latest
 222504-05	keine Änderung						mistral-large-latest
 230201-06	keine Änderung						mistral-large-latest
@@ -48,11 +54,11 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 230880-03	keine Änderung						mistral-large-latest
 230897-05 AA	geändert	bestätigt	volltext_strasse+kreuzung	Mainzer Straße	Mehlem	mittel	mistral-large-latest
 231037-02	keine Änderung						mistral-large-latest
-231098-01	keine Änderung						mistral-large-latest
+231098-01	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
 231159	Liste (9 Ortsteile), nicht verortet						mistral-large-latest
 231182-09	keine Änderung						mistral-large-latest
 231332-04 AA	keine Änderung						mistral-large-latest
-231400-06 ST	keine Änderung						mistral-large-latest
+231400-06 ST	geändert	neu	llm_objekt	Freizeitpark Rheinaue	Hochkreuz	niedrig	mistral-large-latest
 231463-09 ST	geändert	bestätigt	volltext_strasse	Koblenzer Straße	Pennenfeld	mittel	mistral-large-latest
 231463-09 ST	geändert	bestätigt	volltext_strasse	Koblenzer Straße	Alt-Godesberg	mittel	mistral-large-latest
 231627-08 ST	keine Änderung						mistral-large-latest
@@ -68,6 +74,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 231965-08 ST	Liste (10 Ortsteile), nicht verortet						mistral-large-latest
 231965-09 AA	keine Änderung						mistral-large-latest
 232003-01 AA	Liste (6 Ortsteile), nicht verortet						mistral-large-latest
+232003-02 AA	geändert	neu	llm_objekt	Landgericht Bonn	Bonn-Zentrum	niedrig	mistral-large-latest
 232003-02 AA	geändert	bestätigt	volltext_strasse	Thomas-Mann-Straße	Bonn-Zentrum	mittel	mistral-large-latest
 232003-02 AA	geändert	bestätigt	volltext_strasse	Wilhelmstraße	Bonn-Zentrum	mittel	mistral-large-latest
 232003-02 AA	geändert	bestätigt	volltext_strasse	Florentiusgraben	Bonn-Zentrum	mittel	mistral-large-latest
@@ -77,9 +84,14 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 232177-01	keine Änderung						mistral-large-latest
 232205-02	keine Änderung						mistral-large-latest
 232205-03 ST	geändert	bestätigt	volltext_ortsteil_name	Oberkassel	Oberkassel	mittel	mistral-large-latest
+232205-03 ST	geändert	neu	llm_objekt	Nordfriedhof	Auerberg	niedrig	mistral-large-latest
+232205-03 ST	geändert	neu	llm_objekt	Stimson Memorial Chapel	Plittersdorf	niedrig	mistral-large-latest
+232205-03 ST	geändert	neu	llm_objekt	Godesburg	Alt-Godesberg	niedrig	mistral-large-latest
+232205-03 ST	geändert	neu	llm_objekt	Sterntor	Bonn-Zentrum	niedrig	mistral-large-latest
+232205-03 ST	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
 232211-07 ST	keine Änderung						mistral-large-latest
 232211-09 ST	keine Änderung						mistral-large-latest
-232263-01 AA	keine Änderung						mistral-large-latest
+232263-01 AA	geändert	neu	llm_objekt	Festplatz Pützchens Markt	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
 232288-03	keine Änderung						mistral-large-latest
 232288-05	keine Änderung						mistral-large-latest
 240020-01 AA	geändert	bestätigt	volltext_strasse	Am Bleichgraben	Endenich	mittel	mistral-large-latest
@@ -89,10 +101,11 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240020-02 AA	geändert	bestätigt	volltext_strasse	Am Bleichgraben	Endenich	mittel	mistral-large-latest
 240020-02 AA	geändert	bestätigt	volltext_strasse	Steinweg	Duisdorf	mittel	mistral-large-latest
 240020-02 AA	geändert	bestätigt	volltext_strasse	Steinweg	Endenich	mittel	mistral-large-latest
+240020-02 AA	geändert	neu	llm_objekt	Universität Bonn	Gronau	niedrig	mistral-large-latest
 240020-03 ST	keine Änderung						mistral-large-latest
-240173-01 ST	keine Änderung						mistral-large-latest
+240173-01 ST	geändert	neu	llm_objekt	Godesburg	Alt-Godesberg	niedrig	mistral-large-latest
 240188-01	keine Änderung						mistral-large-latest
-240199-01 ST	keine Änderung						mistral-large-latest
+240199-01 ST	geändert	neu	llm_objekt	Frankenbad	Nordstadt	niedrig	mistral-large-latest
 240200-02 AA	geändert	bestätigt	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	mistral-large-latest
 240204-01 ST	keine Änderung						mistral-large-latest
 240204-02 ST	keine Änderung						mistral-large-latest
@@ -105,6 +118,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240260-01	geändert	bestätigt	volltext_strasse	Schießbergweg	Ramersdorf	mittel	mistral-large-latest
 240260-01	geändert	bestätigt	volltext_strasse	Schießbergweg	Küdinghoven	mittel	mistral-large-latest
 240260-01	geändert	bestätigt	volltext_ortsteil_name	Venusberg	Venusberg	mittel	mistral-large-latest
+240260-01	geändert	neu	llm_objekt	Post Tower	Gronau	niedrig	mistral-large-latest
 240268-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Stiftsplatz	Bonn-Zentrum	mittel	mistral-large-latest
 240268-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Kölnstraße	Bonn-Zentrum	mittel	mistral-large-latest
 240268-01 ST	geändert	herabgestuft	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	mistral-large-latest
@@ -117,7 +131,72 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240351-04 DA	keine Änderung						mistral-large-latest
 240370-01 ST	keine Änderung						mistral-large-latest
 240385	keine Änderung						mistral-large-latest
-240387	keine Änderung						mistral-large-latest
-240390-02	keine Änderung						mistral-large-latest
+240387	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
+240390-02	geändert	neu	llm_objekt	Marienschule	Nordstadt	niedrig	mistral-large-latest
 240393-01 ST	keine Änderung						mistral-large-latest
 240406-02 AA	keine Änderung						mistral-large-latest
+240411-01 ST	geändert	neu	llm_objekt	Schlossbachschule	Röttgen	niedrig	mistral-large-latest
+240412-02 AA	geändert	herabgestuft	volltext_stadtbezirk_name	Beuel		niedrig	mistral-large-latest
+240435-01 AA	geändert	bestätigt	volltext_strasse+kreuzung	Koblenzer Straße	Alt-Godesberg	mittel	mistral-large-latest
+240435-01 AA	geändert	neu	llm_objekt	1967 1. Bonner Fußgängerzone Wenzelgasse	Bonn-Zentrum	niedrig	mistral-large-latest
+240435-01 AA	geändert	herabgestuft	volltext_strasse+kreuzung	Aennchenplatz	Alt-Godesberg	niedrig	mistral-large-latest
+240435-01 AA	geändert	herabgestuft	volltext_strasse+kreuzung	Am Kurpark	Alt-Godesberg	niedrig	mistral-large-latest
+240435-02 AA	keine Änderung						mistral-large-latest
+240443-01 ST	geändert	bestätigt	volltext_strasse	Rosental	Bonn-Castell	mittel	mistral-large-latest
+240443-01 ST	geändert	neu	llm_strasse	Poppelsdorfer Allee	Südstadt	niedrig	mistral-large-latest
+240443-01 ST	geändert	neu	llm_strasse	Poppelsdorfer Allee	Weststadt	niedrig	mistral-large-latest
+240443-01 ST	geändert	bestätigt	volltext_strasse	Prinz-Albert-Straße	Südstadt	mittel	mistral-large-latest
+240443-01 ST	geändert	neu	llm_objekt	Chlodwigplatz	Nordstadt	niedrig	mistral-large-latest
+240453-01 ST	geändert	bestätigt	volltext_strasse+ortsteil	Schießbergweg	Ramersdorf	mittel	mistral-large-latest
+240466-01 ST	geändert	neu	llm_objekt	Hofgarten	Südstadt	niedrig	mistral-large-latest
+240535-01 ST	keine Änderung						mistral-large-latest
+240542-01 ST	keine Änderung						mistral-large-latest
+240546-01 ST	keine Änderung						mistral-large-latest
+240546-02 ST	keine Änderung						mistral-large-latest
+240551	keine Änderung						mistral-large-latest
+240554	keine Änderung						mistral-large-latest
+240555	keine Änderung						mistral-large-latest
+240555-01 ST	keine Änderung						mistral-large-latest
+240557	geändert	bestätigt	volltext_ortsteil_name	Beuel-Ost	Beuel-Ost	mittel	mistral-large-latest
+240557	geändert	bestätigt	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	mittel	mistral-large-latest
+240557	geändert	bestätigt	volltext_ortsteil_name	Holzlar	Holzlar	mittel	mistral-large-latest
+240557	geändert	bestätigt	volltext_ortsteil_name	Geislar	Geislar	mittel	mistral-large-latest
+240559	keine Änderung						mistral-large-latest
+240560	keine Änderung						mistral-large-latest
+240562	keine Änderung						mistral-large-latest
+240564	keine Änderung						mistral-large-latest
+240565	keine Änderung						mistral-large-latest
+240570	keine Änderung						mistral-large-latest
+240571	keine Änderung						mistral-large-latest
+240572	keine Änderung						mistral-large-latest
+240573	keine Änderung						mistral-large-latest
+240573-01 ST	keine Änderung						mistral-large-latest
+240573-02 ST	keine Änderung						mistral-large-latest
+240574	keine Änderung						mistral-large-latest
+240578	Liste (15 Ortsteile), nicht verortet						mistral-large-latest
+240580	keine Änderung						mistral-large-latest
+240581	Liste (8 Ortsteile), nicht verortet						mistral-large-latest
+240581-06	Liste (10 Ortsteile), nicht verortet						mistral-large-latest
+240582	keine Änderung						mistral-large-latest
+240589	keine Änderung						mistral-large-latest
+240589-01 ST	keine Änderung						mistral-large-latest
+240590	keine Änderung						mistral-large-latest
+240591	keine Änderung						mistral-large-latest
+240592	geändert	herabgestuft	volltext_ortsteil_name	Brüser Berg	Brüser Berg	niedrig	mistral-large-latest
+240593	keine Änderung						mistral-large-latest
+240598	keine Änderung						mistral-large-latest
+240602	keine Änderung						mistral-large-latest
+240604	geändert	neu	llm_strasse	Europaring	Duisdorf	niedrig	mistral-large-latest
+240604-01	keine Änderung						mistral-large-latest
+240608	keine Änderung						mistral-large-latest
+240608-01 ST	keine Änderung						mistral-large-latest
+240610	geändert	neu	llm_objekt	Bertolt-Brecht-Gesamtschule	Tannenbusch	niedrig	mistral-large-latest
+240610	geändert	neu	llm_objekt	Turnhalle Bonns Fünfte	Kessenich	niedrig	mistral-large-latest
+240610	geändert	neu	llm_objekt	Elisabeth-Selbert-Gesamtschule	Plittersdorf	niedrig	mistral-large-latest
+240610	geändert	neu	llm_objekt	Marie-Kahle-Gesamtschule	Bonn-Castell	niedrig	mistral-large-latest
+240610	geändert	neu	llm_objekt	Clara-Schumann-Gymnasium	Südstadt	niedrig	mistral-large-latest
+240611	keine Änderung						mistral-large-latest
+240613	keine Änderung						mistral-large-latest
+240616	keine Änderung						mistral-large-latest
+240617	geändert	bestätigt	volltext_strasse+ortsteil	Helmholtzstraße	Duisdorf	mittel	mistral-large-latest
+240617	geändert	bestätigt	volltext_ortsteil_name	Endenich	Endenich	mittel	mistral-large-latest
