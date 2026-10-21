@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 558,
-  "generated_at": "2026-10-21T21:07:42+00:00",
+  "generated_at": "2026-10-21T22:17:17+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-21T20:57:08+00:00"
+    "retrieved_at": "2026-10-21T22:02:47+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-21T21:00:39+00:00"
+    "retrieved_at": "2026-10-21T22:06:11+00:00"
    },
    {
     "name": "osm",

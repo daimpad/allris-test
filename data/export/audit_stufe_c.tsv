@@ -68,13 +68,18 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 231744-03	keine Änderung						mistral-large-latest
 231780-03 AA	keine Änderung						mistral-large-latest
 231785-01 AA	keine Änderung						mistral-large-latest
-231965-08 ST	Liste (10 Ortsteile), nicht verortet						mistral-large-latest
+231965-08 ST	geändert	neu	llm_ortsteil	Lessenich/Meßdorf	Lessenich/Meßdorf	niedrig	mistral-large-latest
+231965-08 ST	geändert	neu	llm_strasse	Am Bleichgraben	Endenich	niedrig	mistral-large-latest
+231965-08 ST	geändert	neu	llm_strasse	Steinweg	Duisdorf	niedrig	mistral-large-latest
+231965-08 ST	geändert	neu	llm_strasse	Steinweg	Endenich	niedrig	mistral-large-latest
+231965-08 ST	geändert	neu	llm_strasse	Babette-Koch-Weg	Endenich	niedrig	mistral-large-latest
+231965-08 ST	geändert	neu	llm_objekt	Sportplatz Finkenberg	Limperich	niedrig	mistral-large-latest
 231965-09 AA	keine Änderung						mistral-large-latest
 232019-02	keine Änderung						mistral-large-latest
 232044-04	keine Änderung						mistral-large-latest
 232177-01	keine Änderung						mistral-large-latest
 232205-02	keine Änderung						mistral-large-latest
-232205-03 ST	geändert	bestätigt	volltext_ortsteil_name	Oberkassel	Oberkassel	mittel	mistral-large-latest
+232205-03 ST	Aufzählung von Gebäuden (5), nicht verortet						mistral-large-latest
 232211-07 ST	keine Änderung						mistral-large-latest
 232211-09 ST	keine Änderung						mistral-large-latest
 232263-01 AA	geändert	neu	llm_objekt	Festplatz Pützchens Markt	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
@@ -90,7 +95,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240020-03 ST	keine Änderung						mistral-large-latest
 240188-01	keine Änderung						mistral-large-latest
 240199-01 ST	geändert	neu	llm_objekt	Frankenbad	Nordstadt	niedrig	mistral-large-latest
-240200-02 AA	geändert	bestätigt	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	mistral-large-latest
+240200-02 AA	keine Änderung						mistral-large-latest
 240204-01 ST	keine Änderung						mistral-large-latest
 240204-02 ST	keine Änderung						mistral-large-latest
 240204-03 AA	keine Änderung						mistral-large-latest
@@ -102,14 +107,11 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240260-01	geändert	bestätigt	volltext_strasse	Schießbergweg	Ramersdorf	mittel	mistral-large-latest
 240260-01	geändert	bestätigt	volltext_strasse	Schießbergweg	Küdinghoven	mittel	mistral-large-latest
 240260-01	geändert	bestätigt	volltext_ortsteil_name	Venusberg	Venusberg	mittel	mistral-large-latest
-240260-01	geändert	neu	llm_objekt	Post Tower	Gronau	niedrig	mistral-large-latest
 240268-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Stiftsplatz	Bonn-Zentrum	mittel	mistral-large-latest
 240268-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Kölnstraße	Bonn-Zentrum	mittel	mistral-large-latest
 240268-01 ST	geändert	herabgestuft	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	mistral-large-latest
 240268-01 ST	geändert	bestätigt	volltext_strasse	Brüdergasse	Bonn-Zentrum	mittel	mistral-large-latest
 240309-01 ST	keine Änderung						mistral-large-latest
-240324-03 ST	geändert	bestätigt	volltext_strasse	Adenauerallee	Gronau	mittel	mistral-large-latest
-240324-03 ST	geändert	bestätigt	volltext_strasse	Adenauerallee	Südstadt	mittel	mistral-large-latest
 240324-03 ST	geändert	bestätigt	volltext_strasse	Oxfordstraße	Bonn-Zentrum	mittel	mistral-large-latest
 240351-02 DA	keine Änderung						mistral-large-latest
 240351-04 DA	keine Änderung						mistral-large-latest
@@ -126,7 +128,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240443-01 ST	geändert	neu	llm_strasse	Poppelsdorfer Allee	Südstadt	niedrig	mistral-large-latest
 240443-01 ST	geändert	neu	llm_strasse	Poppelsdorfer Allee	Weststadt	niedrig	mistral-large-latest
 240443-01 ST	geändert	bestätigt	volltext_strasse	Prinz-Albert-Straße	Südstadt	mittel	mistral-large-latest
-240443-01 ST	geändert	neu	llm_objekt	Chlodwigplatz	Nordstadt	niedrig	mistral-large-latest
+240443-01 ST	geändert	bestätigt	volltext_strasse	Chlodwigplatz	Nordstadt	mittel	mistral-large-latest
 240453-01 ST	geändert	bestätigt	volltext_strasse+ortsteil	Schießbergweg	Ramersdorf	mittel	mistral-large-latest
 240535-01 ST	keine Änderung						mistral-large-latest
 240542-01 ST	keine Änderung						mistral-large-latest
