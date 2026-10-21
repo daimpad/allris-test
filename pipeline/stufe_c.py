@@ -35,6 +35,9 @@ MAX_ZEICHEN = 16000
 MAX_TOKENS = 1200     # erster Lauf (21.10.2026, 600): zwei Antworten ohne lesbares JSON, vermutlich abgeschnitten
 MAX_NEUE_OBJEKTE = 4   # mehr neue Gebäude und Anlagen in einer Vorlage gelten als Aufzählung
 MAX_VERSUCHE = 3      # gescheiterte Anfragen werden in späteren Läufen wiederholt
+FASSUNG = 2           # Fassung der Anweisung; ältere Antworten werden neu angefragt (2: KI-Vorprüfung 21.10.2026)
+# Sammellisten mit Punkten verschiedener Art (oft Personalfragen) haben keinen gemeinsamen Ort
+SAMMELLISTE = re.compile(r"^Tagesordnungspunkte in nichtöffentlicher Sitzung", re.I)
 FREIGEGEBEN = False   # erst nach Prüfung der Stichprobe von Hand auf True setzen
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
 DATEI = "orte_stufe_c.jsonl"
@@ -48,6 +51,9 @@ Antworte nur mit JSON der Form {"orte": [{"name": "...", "art": "...", "rolle": 
 - art: "strasse", "ortsteil", "stadtbezirk", "objekt" (Gebäude, Schule, Park, Anlage) oder "kreuzung".
 - rolle: "gegenstand", wenn die Vorlage diesen Ort betrifft (dort wird gebaut, geplant, geändert, gefragt);
   "erwähnt", wenn er nur nebenbei vorkommt (Anschrift einer Stelle, Vergleich, Aufzählung, Sitzungsort).
+  Betrifft die Vorlage die ganze Stadt (Konzept, Satzung, Haushalt, Personal), sind Orte, die nur als Beispiel oder
+  in einer Teilfrage vorkommen, "erwähnt". Eine Einrichtung, die nur als Träger, Absender oder Antragsteller
+  vorkommt (ein Museum, ein Verein), ist kein Ort der Vorlage; nenne sie nur, wenn an ihrem Gebäude etwas geschieht.
 - ortsteil: Ortsteil, wenn der Text ihn für diesen Ort nennt, sonst "".
 Nenne nicht die Stadt Bonn als Ganzes („Bonn“, „Bundesstadt Bonn“, „Stadtgebiet“) und keine Orte außerhalb
 Bonns. Nenne keine Personen und keine Hausnummern. Nenne nur Orte, die wörtlich im Text stehen. Gibt es keinen Ort,
@@ -92,7 +98,7 @@ def kandidaten(db):
         papers = [json.loads(line) for line in f]
     for p in papers:
         main = (p.get("mainFile") or {}).get("id")
-        if p["id"] not in own and main and volltext.allowed(p.get("paperType")):
+        if p["id"] not in own and main and volltext.allowed(p.get("paperType")) and not SAMMELLISTE.match(p.get("name") or ""):
             out.setdefault(p["reference"], {"id": p["id"], "reference": p["reference"], "name": p.get("name"),
                                             "paperType": p.get("paperType"), "main_file": main, "web": p.get("web")})
     return out
@@ -116,7 +122,9 @@ def erzeugen(db, verzeichnis=None, anfrage=_anfrage):
     have, texte = laden(base), _texte()
     def offen(sha):
         r = have.get(sha)
-        return r is None or (r.get("fehler") and r.get("versuche", 1) < MAX_VERSUCHE)
+        if r is None or r.get("fassung", 1) < FASSUNG:
+            return True
+        return bool(r.get("fehler")) and r.get("versuche", 1) < MAX_VERSUCHE
     todo = [(ref, p) for ref, p in sorted(kandidaten(db).items())
             if p["main_file"] in texte and offen(texte[p["main_file"]]["sha"])][:MAX_JE_LAUF]
     tokens = {"ein": 0, "aus": 0}
@@ -133,9 +141,10 @@ def erzeugen(db, verzeichnis=None, anfrage=_anfrage):
             usage, orte, fehler = {}, [], f"Anfrage gescheitert: {type(e).__name__}"
         for k in tokens:
             tokens[k] += usage.get(k, 0)
-        versuche = (have.get(t["sha"]) or {}).get("versuche", 0) + 1
+        alt = have.get(t["sha"]) or {}
+        versuche = alt.get("versuche", 0) + 1 if alt.get("fassung", 1) == FASSUNG else 1
         have[t["sha"]] = {"sha": t["sha"], "datei": p["main_file"], "drucksache": ref, "orte": orte, "fehler": fehler,
-                          "versuche": versuche, "anbieter": sprachmodell.ANBIETER, "modell": MODELL,
+                          "versuche": versuche, "fassung": FASSUNG, "anbieter": sprachmodell.ANBIETER, "modell": MODELL,
                           "erzeugt": datetime.now(timezone.utc).date().isoformat()}
     with open(base / DATEI, "w", encoding="utf-8") as f:
         for sha in sorted(have):

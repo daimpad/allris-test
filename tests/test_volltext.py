@@ -52,6 +52,13 @@ class VolltextTest(unittest.TestCase):
         rows, _ = volltext.locate(self.gaz, KOPF + "Ein Angebot in Beuel.", bv_bezirke={"Beuel"})
         self.assertEqual([r["level"] for r in rows], ["stadtbezirk"])
 
+    def test_drei_stadtbezirke_sind_stadtweit(self):
+        bv = {"Beuel", "Bad Godesberg", "Hardtberg"}   # in den Bezirksvertretungen beraten
+        rows, info = volltext.locate(self.gaz, KOPF + "Zentren in Beuel, Bad Godesberg und Hardtberg.", bv)
+        self.assertEqual((rows, info["befund"]), ([], "3 Stadtbezirke, stadtweit, nicht verortet"))
+        rows, _ = volltext.locate(self.gaz, KOPF + "Zentren in Beuel und Hardtberg.", bv)
+        self.assertEqual(sorted(r["name"] for r in rows), ["Beuel", "Hardtberg"])
+
     def test_eingaben_von_buergerinnen_nicht_aus_dem_volltext(self):
         self.assertFalse(volltext.allowed("Bürgerantrag § 24 GO - Öffentlich"))
         self.assertFalse(volltext.allowed("Anregungen und Beschwerden"))

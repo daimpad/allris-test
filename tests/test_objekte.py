@@ -18,6 +18,8 @@ DATA = {
                "lat": 50.7},
     "way/11": {"name": "Volkshochschule Bonn", "art": "Hochschule", "ortsteil": "Bonn-Zentrum", "bezirk": "Bonn",
                "lon": 7.1, "lat": 50.73},
+    "way/12": {"name": "Burg Medinghoven", "art": "Bauwerk", "ortsteil": "Duisdorf", "bezirk": "Hardtberg", "lon": 7.05,
+               "lat": 50.71},
     "way/8": {"name": "Spielplatz", "art": "Spielplatz", "ortsteil": "Endenich", "bezirk": "Bonn", "lon": 7.07, "lat": 50.72},
 }
 
@@ -41,6 +43,11 @@ class ObjekteTest(unittest.TestCase):
         self.assertEqual((o["name"], befund), ("LVR-Landesmuseum Bonn", "Name"))
         o, befund = self.obj.finden("Rheinaue")
         self.assertEqual((o["name"], befund), ("Freizeitpark Rheinaue", "Teil des Namens"))
+
+    def test_teil_des_namens_nur_von_der_art_des_vorsatzes(self):
+        self.assertEqual(self.obj.finden("Medinghoven")[0]["name"], "Burg Medinghoven")
+        self.assertEqual(self.obj.finden("GGS Medinghoven"), (None, "Teil des Namens, aber andere Art als laut Vorsatz"))
+        self.assertEqual(self.obj.finden("Kita Rheinpiraten")[0]["name"], "Kita Rheinpiraten")
 
     def test_mehrdeutig_nur_mit_ortsteil_aus_dem_text(self):
         self.assertEqual(self.obj.finden("Alter Friedhof"), (None, "mehrdeutig (2 Ortsteile)"))

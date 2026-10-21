@@ -24,6 +24,7 @@ from . import config
 from .geocode import GENERIC_NAMES
 
 MAX_ORTSTEILE = 5
+MIN_BEZIRKE_STADTWEIT = 3   # so viele Stadtbezirke im Text: stadtweit, kein Bezirk als Ort
 # Im Text oft Fachbegriffe statt Straßen („Schulstraße“ als Verkehrsberuhigung vor Schulen); wie die Gattungsnamen
 # des Titels nur mit Hausnummer (KI-Vorprüfung der Stichprobe, 20.10.2026)
 GATTUNG = set(GENERIC_NAMES) | {"Schulstraße", "Forstweg"}
@@ -111,6 +112,13 @@ def locate(gaz, text, bv_bezirke=()):
         out.append(dict(r, method=f"volltext_{r['method']}", confidence=conf, nennungen=n, teil=part,
                         evidence=f"{'im Hauptteil' if part == 'Hauptteil' else 'in den Anlagen'} des Hauptdokuments "
                                  f"genannt: {r['name']}"))
+    # drei und mehr Stadtbezirke: die Vorlage betrifft die Stadt, nicht einzelne Bezirke (KI-Vorprüfung der Stufe C,
+    # 21.10.2026: Einzelhandelskonzept auf drei von vier Bezirke verortet)
+    bezirke = {r["name"] for r in out if r["level"] == "stadtbezirk"}
+    if len(bezirke) >= MIN_BEZIRKE_STADTWEIT:
+        out = [r for r in out if r["level"] != "stadtbezirk"]
+        if not out:
+            return [], {"befund": f"{len(bezirke)} Stadtbezirke, stadtweit, nicht verortet", "teil": part}
     if not out:
         return [], {"befund": "nur einzelne Erwähnung eines Stadtbezirks", "teil": part}
     return out, {"befund": "verortet", "teil": part, "ortsteile": len(ortsteile)}
