@@ -30,6 +30,15 @@ class KurzfassungTest(unittest.TestCase):
                          "Baum in der Straße Am Herrengarten, gefällt.")
         self.assertEqual(kurzfassung.glaetten("3 * 4 Bäume"), "3 * 4 Bäume")
 
+    def test_kostensatz_und_fremde_zahlen(self):
+        text = "Die Verwaltung gewährt einen Zuschuss von 20.000 EUR für 2023 und 1.661.000 EUR für 2024."
+        kurz = "Die Verwaltung schlägt einen Zuschuss von 20.000 Euro vor. Die Kosten trägt die Stadt."
+        self.assertEqual(kurzfassung.ohne_kostensatz(kurz, text), "Die Verwaltung schlägt einen Zuschuss von 20.000 Euro vor.")
+        self.assertEqual(kurzfassung.ohne_kostensatz(kurz, text + " Die Kosten trägt der Antragsteller."), kurz)
+        self.assertIsNone(kurzfassung.fremde_zahl("Zuschuss von 1.661.000 Euro für 2024, Teil 2.", text))
+        self.assertEqual(kurzfassung.fremde_zahl("insgesamt rund 4,1 Millionen Euro", text), "4,1")
+        self.assertIsNone(kurzfassung.fremde_zahl("Der Vertrag endet 2024.", "Er läuft zum 31.12.2024 aus."))
+
     def test_ueberschrift_wird_entfernt(self):
         for kopf in ("Stellungnahme der Verwaltung", "Stadt Bonn – Mitteilung", "Beschlussvorlage der Verwaltung:",
                      "Absender: Mehrere Fraktionen (interfraktioneller Antrag)\nArt der Vorlage: Vorschlag"):
