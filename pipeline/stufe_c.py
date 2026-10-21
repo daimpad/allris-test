@@ -33,6 +33,7 @@ MODELL = os.environ.get("STUFE_C_MODELL",
 MAX_JE_LAUF = int(os.environ.get("STUFE_C_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
 MAX_ZEICHEN = 16000
 MAX_TOKENS = 1200     # erster Lauf (21.10.2026, 600): zwei Antworten ohne lesbares JSON, vermutlich abgeschnitten
+MAX_NEUE_OBJEKTE = 4   # mehr neue Gebäude und Anlagen in einer Vorlage gelten als Aufzählung
 MAX_VERSUCHE = 3      # gescheiterte Anfragen werden in späteren Läufen wiederholt
 FREIGEGEBEN = False   # erst nach Prüfung der Stichprobe von Hand auf True setzen
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
@@ -200,6 +201,13 @@ def pruefen(gaz, text, orte, b_rows, bv_bezirke=(), objekte=None, objekt_befunde
             lage = f"; Lage laut OpenStreetMap ({r['objektart']}, {r['osm']})" if r["level"] == "objekt" else ""
             out.append(dict(r, aktion="neu", method=f"llm_{r['level']}", confidence="niedrig", art=o["art"],
                             evidence=f"mit Sprachmodell im Hauptteil des Hauptdokuments erkannt: {r['name']}{lage}"))
+    # Aufzählungen von Gebäuden in vielen Ortsteilen (alle Gesamtschulen, Denkmäler der Stadt) sind kein Ort der
+    # Vorlage (KI-Vorprüfung der ersten Stichprobe, 21.10.2026)
+    neu_obj = [r for r in out if r["aktion"] == "neu" and r["level"] == "objekt"]
+    if len(neu_obj) > MAX_NEUE_OBJEKTE:
+        out = [r for r in out if r not in neu_obj]
+        if not out:
+            return [], f"Aufzählung von Gebäuden ({len(neu_obj)}), nicht verortet"
     return out, "geändert" if out else "keine Änderung"
 
 

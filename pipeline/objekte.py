@@ -52,7 +52,8 @@ class Objekte:
         self.ohne_leer = {}                 # Name ohne Leerzeichen → angeglichener Name („Posttower“ → „post tower“)
         for osm, o in sorted(data.items()):
             n = norm(o["name"])
-            if len(n) >= 4 and n not in GATTUNG:
+            # Namen mit Ziffer am Anfang sind meist Tafeln oder Vereine („1967 1. Bonner Fußgängerzone …“)
+            if len(n) >= 4 and n not in GATTUNG and not o["name"][:1].isdigit():
                 self.by_norm[n].setdefault(o["ortsteil"], dict(o, osm=osm))
                 self.ohne_leer.setdefault(n.replace(" ", ""), n)
 
@@ -85,6 +86,8 @@ class Objekte:
         n = norm(name)
         if len(n) < 4 or n in GATTUNG:
             return None, "Gattungsname"
+        if n in TITEL_OHNE_NAME:   # Einrichtungen ohne festen Ort und allgemeine Wörter gelten auch hier nicht
+            return None, "Einrichtung ohne festen Ort oder allgemeines Wort"
         cands = self.by_norm.get(n) or self.by_norm.get(self.ohne_leer.get(n.replace(" ", ""), ""))
         art = "Name"
         if not cands and len(n) >= MIN_TEIL:
