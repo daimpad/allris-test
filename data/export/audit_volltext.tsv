@@ -300,9 +300,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240704-02 AA	kein Ort						
 240705	kein Ort						
 240706	verortet	Hauptteil	volltext_strasse+hausnummer	Lievelingsweg	Tannenbusch	niedrig	1
-240707	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
-240707	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
-240707	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+240707	3 Stadtbezirke, stadtweit, nicht verortet	Hauptteil					
 240709	kein Ort						
 240711	verortet	Hauptteil	volltext_ortsteil_name	Bonn-Zentrum	Bonn-Zentrum	niedrig	1
 240713	kein Ort						
@@ -405,9 +403,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241666	kein Ort						
 241667	kein Ort						
 241668	kein Ort						
-241671	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
-241671	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
-241671	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+241671	3 Stadtbezirke, stadtweit, nicht verortet	Hauptteil					
 241672	kein Ort						
 241673	kein Ort						
 241677	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
