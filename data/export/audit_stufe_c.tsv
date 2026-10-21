@@ -377,3 +377,68 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 241686	Liste (6 Ortsteile), nicht verortet						mistral-large-latest
 241688	keine Änderung						mistral-large-latest
 241689	keine Änderung						mistral-large-latest
+241693	keine Änderung						mistral-large-latest
+241700	geändert	bestätigt	volltext_strasse	Münsterplatz	Bonn-Zentrum	mittel	mistral-large-latest
+241712	keine Änderung						mistral-large-latest
+241713	keine Änderung						mistral-large-latest
+241714	geändert	bestätigt	volltext_strasse	Salierweg	Graurheindorf	mittel	mistral-large-latest
+241714	geändert	bestätigt	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	mistral-large-latest
+241714	geändert	bestätigt	volltext_strasse+ortsteil	Im Brandengarten	Lengsdorf	mittel	mistral-large-latest
+241714	geändert	bestätigt	volltext_strasse+ortsteil	An der Knappenmühle	Lessenich/Meßdorf	mittel	mistral-large-latest
+241715	geändert	herabgestuft	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	mistral-large-latest
+241715	geändert	herabgestuft	volltext_strasse	Rheinallee	Rüngsdorf	niedrig	mistral-large-latest
+241715	geändert	herabgestuft	volltext_strasse	Rheinallee	Godesberg-Villenviertel	niedrig	mistral-large-latest
+241715	geändert	herabgestuft	volltext_strasse	Rheinallee	Plittersdorf	niedrig	mistral-large-latest
+241718	geändert	neu	llm_objekt	Kottenforst	Röttgen	niedrig	mistral-large-latest
+241718	geändert	bestätigt	volltext_strasse	Schmales Alleechen	Röttgen	mittel	mistral-large-latest
+241718	geändert	bestätigt	volltext_strasse	Schmales Alleechen	Schweinheim	mittel	mistral-large-latest
+241720	keine Änderung						mistral-large-latest
+241723	keine Änderung						mistral-large-latest
+252572-01	keine Änderung						mistral-large-latest
+252883-01	geändert	bestätigt	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	mistral-large-latest
+252903-02 ST	keine Änderung						mistral-large-latest
+252903-03 ST	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
+252927-01	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
+253147-04	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
+253147-04	geändert	neu	llm_strasse	Am Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
+253169-02	keine Änderung						mistral-large-latest
+253210-04	geändert	bestätigt	volltext_strasse+ortsteil	Schickgasse	Buschdorf	mittel	mistral-large-latest
+253210-05 AA	keine Änderung						mistral-large-latest
+253346	keine Änderung						mistral-large-latest
+253419-02 AA	keine Änderung						mistral-large-latest
+253419-03 AA	geändert	bestätigt	volltext_ortsteil_name	Nordstadt	Nordstadt	mittel	mistral-large-latest
+253574-01 AA	keine Änderung						mistral-large-latest
+253668-03 ST	geändert	bestätigt	volltext_strasse+ortsteil	Vorgebirgsstraße	Nordstadt	mittel	mistral-large-latest
+253668-03 ST	geändert	bestätigt	volltext_strasse+ortsteil	Heerstraße	Nordstadt	mittel	mistral-large-latest
+253707-01	keine Änderung						mistral-large-latest
+253753-01 ST	keine Änderung						mistral-large-latest
+253799-01	keine Änderung						mistral-large-latest
+253817-02	keine Änderung						mistral-large-latest
+253828-01 ST	keine Änderung						mistral-large-latest
+253828-02	keine Änderung						mistral-large-latest
+253837-01 AA	keine Änderung						mistral-large-latest
+253837-02 ST	keine Änderung						mistral-large-latest
+253843-01 AA	keine Änderung						mistral-large-latest
+253847-01 AA	geändert	neu	llm_objekt	Waldfriedhof Heiderhof	Heiderhof	niedrig	mistral-large-latest
+253847-01 AA	geändert	neu	llm_objekt	Friedhof Dransdorf	Dransdorf	niedrig	mistral-large-latest
+253847-01 AA	geändert	neu	llm_objekt	Nordfriedhof	Auerberg	niedrig	mistral-large-latest
+253847-02 AA	keine Änderung						mistral-large-latest
+253847-03 ST	geändert	neu	llm_objekt	Nordfriedhof	Auerberg	niedrig	mistral-large-latest
+253847-03 ST	geändert	neu	llm_objekt	Waldfriedhof Heiderhof	Heiderhof	niedrig	mistral-large-latest
+253847-03 ST	geändert	neu	llm_objekt	Friedhof Dransdorf	Dransdorf	niedrig	mistral-large-latest
+253865-01 AA	keine Änderung						mistral-large-latest
+253866-01 ST	keine Änderung						mistral-large-latest
+253883-01 ST	keine Änderung						mistral-large-latest
+253885-01 AA	keine Änderung						mistral-large-latest
+253888-01 ST	keine Änderung						mistral-large-latest
+253901-01 AA	keine Änderung						mistral-large-latest
+253911-01 ST	keine Änderung						mistral-large-latest
+253915-01 AA	keine Änderung						mistral-large-latest
+253943-01 AA	keine Änderung						mistral-large-latest
+253978-01	keine Änderung						mistral-large-latest
+253978-02 ST	geändert	bestätigt	volltext_ortsteil_name	Auerberg	Auerberg	mittel	mistral-large-latest
+253988-02 AA	keine Änderung						mistral-large-latest
+253990-02 AA	geändert	herabgestuft	volltext_stadtbezirk_name	Beuel		niedrig	mistral-large-latest
+253990-03 AA	geändert	bestätigt	volltext_stadtbezirk_adjektiv	Beuel		mittel	mistral-large-latest
+253990-04 AA	geändert	herabgestuft	volltext_strasse	Holzlarer Weg	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
+253990-04 AA	geändert	herabgestuft	volltext_ortsteil_name	Schwarzrheindorf / Vilich-Rheindorf	Schwarzrheindorf / Vilich-Rheindorf	niedrig	mistral-large-latest
