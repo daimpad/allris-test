@@ -2,20 +2,20 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 550,
-  "generated_at": "2026-10-21T19:09:31+00:00",
+  "count": 558,
+  "generated_at": "2026-10-21T19:31:42+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-21T19:00:18+00:00"
+    "retrieved_at": "2026-10-21T19:19:49+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-21T19:02:52+00:00"
+    "retrieved_at": "2026-10-21T19:22:53+00:00"
    },
    {
     "name": "osm",
@@ -5978,6 +5978,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.073031,
+     50.726257
+    ]
+   },
+   "properties": {
+    "reference": "232308-02",
+    "name": "Schul- und OGS-Neubau an der Matthias-Claudius-Schule",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2024-03-20",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Matthias-Claudius-Schule",
+    "level": "objekt",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "objekt_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016346"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.077042,
      50.725874
     ]
@@ -6458,6 +6482,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.073031,
+     50.726257
+    ]
+   },
+   "properties": {
+    "reference": "232308-01 ST",
+    "name": "Bürgerantrag: Schul- und OGS-Neubau an der Matthias-Claudius-Schule",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-01-17",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Matthias-Claudius-Schule",
+    "level": "objekt",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "objekt_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015370"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -6787,6 +6835,30 @@
     "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015284"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073031,
+     50.726257
+    ]
+   },
+   "properties": {
+    "reference": "232308",
+    "name": "Bürgerantrag: Schul- und OGS-Neubau an der Matthias-Claudius-Schule",
+    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+    "date": "2023-12-14",
+    "amt": "Stabsstellle Bürgerbeteiligung",
+    "place": "Matthias-Claudius-Schule",
+    "level": "objekt",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "objekt_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015277"
    }
   },
   {
@@ -13274,6 +13346,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.06874,
+     50.725257
+    ]
+   },
+   "properties": {
+    "reference": "201169",
+    "name": "Kindergarten Erich Hoffmann-Straße; Passivhausstandard",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2020-07-06",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Städt. Kindergarten Erich-Hoffmann-Straße",
+    "level": "objekt",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "objekt_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6787"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.07885,
      50.72444
     ]
@@ -13514,6 +13610,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.073031,
+     50.726257
+    ]
+   },
+   "properties": {
+    "reference": "200471-1 ST",
+    "name": "Raumbedarf Matthias-Claudius-Schule",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-03-13",
+    "amt": "40 Schulamt",
+    "place": "Matthias-Claudius-Schule",
+    "level": "objekt",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "objekt_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5282"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.064791,
      50.734904
     ]
@@ -13555,6 +13675,78 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4542"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073031,
+     50.726257
+    ]
+   },
+   "properties": {
+    "reference": "200473-1",
+    "name": "Matthias-Claudius-Schule",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-03-10",
+    "amt": "40 Schulamt",
+    "place": "Matthias-Claudius-Schule",
+    "level": "objekt",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "objekt_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5191"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073031,
+     50.726257
+    ]
+   },
+   "properties": {
+    "reference": "200471",
+    "name": "Raumbedarf Matthias-Claudius-Schule",
+    "paper_type": "Große Anfrage",
+    "date": "2020-03-04",
+    "amt": "01-2 Ratsbüro",
+    "place": "Matthias-Claudius-Schule",
+    "level": "objekt",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "objekt_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5141"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073031,
+     50.726257
+    ]
+   },
+   "properties": {
+    "reference": "200473",
+    "name": "Matthias-Claudius-Schule",
+    "paper_type": "Große Anfrage",
+    "date": "2020-03-04",
+    "amt": "01-2 Ratsbüro",
+    "place": "Matthias-Claudius-Schule",
+    "level": "objekt",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "objekt_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5149"
    }
   },
   {

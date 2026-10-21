@@ -3,27 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ohne-2020</id>
 <title>RIS-Karte Bonn – stadtweit / ohne Ortsbezug 2020</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2020</subtitle>
-<updated>2024-09-26T00:00:00Z</updated>
+<updated>2022-01-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ohne-2020.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/233#beratung-4</id>
-<title>Rat: „zur Kenntnis genommen“ – 190057-1 ST Bonn CC; Anspassung der Pacht für den Gastronomiebereich der Beethovenhalle (alt: 1611089ST5 FF Amt 20)</title>
-<updated>2024-09-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#190057-1%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=233"/>
-<summary>Kenntnisnahme am 2024-09-26; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/233#beratung-3</id>
-<title>Projektbeirat Sanierung Beethovenhalle Bonn: „zur Kenntnis genommen“ – 190057-1 ST Bonn CC; Anspassung der Pacht für den Gastronomiebereich der Beethovenhalle (alt: 1611089ST5 FF Amt 20)</title>
-<updated>2024-09-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#190057-1%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=233"/>
-<summary>Kenntnisnahme am 2024-09-18; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/8144#beratung-6</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 201722 Bürgerantrag: Umsetzung von Maßnahmen gegen unnötigen Einwegmüll in Bonn</title>
@@ -393,38 +377,6 @@
 <summary>Entscheidung am 2021-06-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/8923#beratung-3</id>
-<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 200274-01 Rückblick und Ausblick zum Haus der Natur (HdN)</title>
-<updated>2021-06-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#200274-01"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8923"/>
-<summary>Kenntnisnahme am 2021-06-01; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/6787#beratung-4</id>
-<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 201169 Kindergarten Erich Hoffmann-Straße; Passivhausstandard</title>
-<updated>2021-06-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201169"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6787"/>
-<summary>Kenntnisnahme am 2021-06-01; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/9153#beratung-5</id>
-<title>Rat: „zur Kenntnis genommen“ – 201936-02 ST Stadtmuseum Bonn</title>
-<updated>2021-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201936-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9153"/>
-<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/9151#beratung-5</id>
-<title>Rat: „zur Kenntnis genommen“ – 201982-02 ST Neuanfang für das Stadtmuseum Bonn</title>
-<updated>2021-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201982-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9151"/>
-<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/9150#beratung-5</id>
 <title>Rat: „zur Kenntnis genommen“ – 202002-02 ST Erhalt und Neukonzeption des Stadtmuseums</title>
 <updated>2021-05-06T00:00:00Z</updated>
@@ -441,43 +393,11 @@
 <summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/8740#beratung-5</id>
-<title>Rat: „zur Kenntnis genommen“ – 201982-1 ST Neuanfang für das Stadtmuseum Bonn</title>
-<updated>2021-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201982-1%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8740"/>
-<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/8719#beratung-6</id>
 <title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 202002 Erhalt und Neukonzeption des Stadtmuseums</title>
 <updated>2021-05-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#202002"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8719"/>
-<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/8691#beratung-6</id>
-<title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 201982 Neuanfang für das Stadtmuseum Bonn</title>
-<updated>2021-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201982"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8691"/>
-<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/8654#beratung-5</id>
-<title>Rat: „zur Kenntnis genommen“ – 201936-1 ST Stadtmuseum Bonn</title>
-<updated>2021-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201936-1%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8654"/>
-<summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/8579#beratung-6</id>
-<title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 201936 Stadtmuseum Bonn</title>
-<updated>2021-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201936"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8579"/>
 <summary>Entscheidung am 2021-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
@@ -633,22 +553,6 @@
 <summary>Kenntnisnahme am 2021-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/9153#beratung-4</id>
-<title>Kulturausschuss: „zur Kenntnis genommen“ – 201936-02 ST Stadtmuseum Bonn</title>
-<updated>2021-04-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201936-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9153"/>
-<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/9151#beratung-4</id>
-<title>Kulturausschuss: „zur Kenntnis genommen“ – 201982-02 ST Neuanfang für das Stadtmuseum Bonn</title>
-<updated>2021-04-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201982-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9151"/>
-<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/9150#beratung-4</id>
 <title>Kulturausschuss: „zur Kenntnis genommen“ – 202002-02 ST Erhalt und Neukonzeption des Stadtmuseums</title>
 <updated>2021-04-15T00:00:00Z</updated>
@@ -665,43 +569,11 @@
 <summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/8740#beratung-4</id>
-<title>Kulturausschuss: „zur Kenntnis genommen“ – 201982-1 ST Neuanfang für das Stadtmuseum Bonn</title>
-<updated>2021-04-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201982-1%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8740"/>
-<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/8719#beratung-5</id>
 <title>Kulturausschuss: „abgelehnt“ – 202002 Erhalt und Neukonzeption des Stadtmuseums</title>
 <updated>2021-04-15T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#202002"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8719"/>
-<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/8691#beratung-5</id>
-<title>Kulturausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 201982 Neuanfang für das Stadtmuseum Bonn</title>
-<updated>2021-04-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201982"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8691"/>
-<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/8654#beratung-4</id>
-<title>Kulturausschuss: „zur Kenntnis genommen“ – 201936-1 ST Stadtmuseum Bonn</title>
-<updated>2021-04-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201936-1%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8654"/>
-<summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/8579#beratung-5</id>
-<title>Kulturausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 201936 Stadtmuseum Bonn</title>
-<updated>2021-04-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201936"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8579"/>
 <summary>Empfehlung am 2021-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
@@ -807,5 +679,133 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201406-1%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7628"/>
 <summary>Kenntnisnahme am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7496#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 201535 Bürgerantrag: Einforderung präventiver Brandschutzmaßnahmen auf privaten unbebauten Grundstücken</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201535"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7496"/>
+<summary>Entscheidung am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7206#beratung-4</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „verwiesen“ – 201406 Bürgerantrag: Umwandlung von städtischen Rasenflächen in bestäuberfreundliche Blühwiesen</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201406"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7206"/>
+<summary>Entscheidung am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6833#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „erledigt durch Stellungnahme der Verwaltung“ – 201188 Bürgerantrag: Alternativen zu einer Sanierung oder einem Neubau des Stadthauses</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201188"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6833"/>
+<summary>Entscheidung am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/5389#beratung-4</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 200564 Evaluation der Leitlinien Bürgerbeteiligung</title>
+<updated>2021-04-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#200564"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5389"/>
+<summary>Kenntnisnahme am 2021-04-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9101#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 200257-03 ST Umsetzung von Beschlüssen durch die Verwaltung; Beschlusskontrolle</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#200257-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9101"/>
+<summary>Kenntnisnahme am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8593#beratung-4</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 201841-1 ST Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201841-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8593"/>
+<summary>Kenntnisnahme am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8548#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 201719-1 ST Bürgerantrag: Lärmbeeinträchtigungen von den Schulhofspielplätzen der Marie-Kahle-Schule und der Nordschule</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201719-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8548"/>
+<summary>Kenntnisnahme am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8547#beratung-5</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 190150-02 Bürgerantrag: Grüne Inseln für Beethoven 2020 (alt: 1912513)</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#190150-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8547"/>
+<summary>Kenntnisnahme am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8524#beratung-6</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 201911 Mitteilung Antragstellung „Sofortprogramm zur Stärkung unserer Innenstädte und Zentren NRW“</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201911"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8524"/>
+<summary>Kenntnisnahme am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8377#beratung-4</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 201841 Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201841"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8377"/>
+<summary>Anregung am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8139#beratung-3</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 201719 Bürgerantrag: Lärmbeeinträchtigungen von den Schulhofspielplätzen der Marie-Kahle-Schule und der Nordschule</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201719"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8139"/>
+<summary>Entscheidung am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6685#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 200257-2 ST Umsetzung von Beschlüssen durch die Verwaltung; Beschlusskontrolle</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#200257-2%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6685"/>
+<summary>Kenntnisnahme am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/5048#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 200257-1 ST Umsetzung von Beschlüssen durch die Verwaltung; Beschlusskontrolle</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#200257-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5048"/>
+<summary>Kenntnisnahme am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/4708#beratung-7</id>
+<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 200257 Umsetzung von Beschlüssen durch die Verwaltung; Beschlusskontrolle</title>
+<updated>2021-04-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#200257"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4708"/>
+<summary>Entscheidung am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/8618#beratung-5</id>
+<title>Beirat Bürgerbeteiligung: „zur Kenntnis genommen“ – 201908-1 Masterplan Bonn Innere Stadt 2.0 – Durchführung der Öffentlichkeitsbeteiligung für den landschaftsplanerischen Wettbewerb zur Gestaltung des Bonner Rheinufers</title>
+<updated>2021-03-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201908-1"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8618"/>
+<summary>Kenntnisnahme am 2021-03-26; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/7726#beratung-5</id>
+<title>Unterausschuss für Digitalisierung und Organisation: „zur Kenntnis genommen“ – 201568-1 ST Digitale Dienstleistungen der Stadt Bonn</title>
+<updated>2021-03-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2020#201568-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7726"/>
+<summary>Kenntnisnahme am 2021-03-25; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

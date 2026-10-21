@@ -3,27 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ohne-2019</id>
 <title>RIS-Karte Bonn – stadtweit / ohne Ortsbezug 2019</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2019</subtitle>
-<updated>2024-09-26T00:00:00Z</updated>
+<updated>2022-03-31T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ohne-2019.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/146#beratung-7</id>
-<title>Rat: „geändert beschlossen“ – 190057 Bonn CC; Anpassung der Pacht für den Gastronomiebereich der Beethovenhalle (alt: 1611089NV4)</title>
-<updated>2024-09-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190057"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=146"/>
-<summary>Entscheidung am 2024-09-26; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/146#beratung-4</id>
-<title>Projektbeirat Sanierung Beethovenhalle Bonn: „geändert beschlossen“ – 190057 Bonn CC; Anpassung der Pacht für den Gastronomiebereich der Beethovenhalle (alt: 1611089NV4)</title>
-<updated>2024-09-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190057"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=146"/>
-<summary>Anhörung am 2024-09-18; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2926#beratung-4</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 190776-1 ST Bürgerantrag : Thematisierung der Nachhaltigkeitsstrategie in Bezug auf Maßnahmen des Amtes 68 auf Friedhöfen(Alt: 1910582ST4, FF Amt 68)</title>
@@ -47,22 +31,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190939"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3348"/>
 <summary>Kenntnisnahme am 2021-08-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/179#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 190070-1 Steigerung der Attraktivität der Godesburg (alt: 1711072ST2, FF: Amt 03)</title>
-<updated>2021-04-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190070-1"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=179"/>
-<summary>Kenntnisnahme am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/177#beratung-4</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 190070 Steigerung der Attraktivität der Godesburg (alt: 1711072, FF: FDP-Fraktion)</title>
-<updated>2021-04-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190070"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=177"/>
-<summary>Kenntnisnahme am 2021-04-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/3348#beratung-6</id>
@@ -295,30 +263,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190851"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3099"/>
 <summary>Kenntnisnahme am 2020-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/271#beratung-2</id>
-<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 190094-2 AA Draitsch- und Kurfürstenquelle:  Beantragung von Zulassung und Herstellungserlaubnis (alt: 1911432AA3, FF: CDU-Fraktion)</title>
-<updated>2020-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190094-2%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=271"/>
-<summary>Entscheidung am 2020-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/270#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 190094-1 ST Draitsch- und Kurfürstenquelle:  Beantragung von Zulassung und Herstellungserlaubnis (alt: 1911432ST2)</title>
-<updated>2020-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190094-1%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=270"/>
-<summary>Kenntnisnahme am 2020-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/257#beratung-5</id>
-<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 190094 Draitsch- und Kurfürstenquelle:  Beantragung von Zulassung und Herstellungserlaubnis (alt: 1911432)</title>
-<updated>2020-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190094"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=257"/>
-<summary>Entscheidung am 2020-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/3218#beratung-4</id>
@@ -729,22 +673,6 @@
 <summary>Entscheidung am 2020-02-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/3601#beratung-4</id>
-<title>Rat: „ungeändert beschlossen“ – 191069 Einrichtung der neuen Beschulungsform „Ganztagsberufsschule in der gesunden Schule (GigS)“ für die Fachklasse im dualen Ausbildungsberuf Anlagenmechaniker/Anlagenmechanikerin für Sanitär-, Heizungs- und Klimatechnik am Heinrich-Hertz-Europakolleg zum Schuljahr 2020/2021</title>
-<updated>2020-02-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#191069"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3601"/>
-<summary>Entscheidung am 2020-02-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/3598#beratung-4</id>
-<title>Rat: „ungeändert beschlossen“ – 191066 Einrichtung des neuen Bildungsgangs „Fachoberschule (FOS) Klasse11/12S für Informatik“ als Schulversuch am Heinrich-Hertz-Europakolleg zum Schuljahr 2020/2021</title>
-<updated>2020-02-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#191066"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3598"/>
-<summary>Entscheidung am 2020-02-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/3356#beratung-4</id>
 <title>Rat: „abgelehnt“ – 190942 Appell an Bonnerinnen und Bonner (alter Vorgang (Antrag: 1912596)</title>
 <updated>2020-02-06T00:00:00Z</updated>
@@ -785,14 +713,6 @@
 <summary>Entscheidung am 2020-02-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/3353#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 190809-1 ST Werke von Paul Magar in der Beethovenschule</title>
-<updated>2020-02-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190809-1%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3353"/>
-<summary>Kenntnisnahme am 2020-02-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/3307#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 190909-1 ST Bergseitiger Bürgersteig des Von-Groote-Platzes zwischen Haus Nr.24 und der Zufahrt zum DB-Parkplatz (DS 1812677EB3)</title>
 <updated>2020-02-05T00:00:00Z</updated>
@@ -807,5 +727,85 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190909"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3225"/>
 <summary>Entscheidung am 2020-02-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/828#beratung-6</id>
+<title>Ausschuss für Finanzen und Beteiligungen: „ungeändert beschlossen“ – 190416 Förderantrag Stadtgrün naturnah konkret</title>
+<updated>2020-02-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190416"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=828"/>
+<summary>Empfehlung am 2020-02-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/3479#beratung-3</id>
+<title>Schulausschuss: „zur Kenntnis genommen“ – 190994 Ergebnis des Sprachstandsfeststellungsverfahrens Delfin 4 im Jahr 2019</title>
+<updated>2020-02-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190994"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3479"/>
+<summary>Kenntnisnahme am 2020-02-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/3415#beratung-6</id>
+<title>Schulausschuss: „zur Kenntnis genommen“ – 190967 Dicker Pulli-Tag 2020: Sachstand</title>
+<updated>2020-02-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190967"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3415"/>
+<summary>Kenntnisnahme am 2020-02-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/3303#beratung-3</id>
+<title>Ausschuss für Finanzen und Beteiligungen: „zur Kenntnis genommen“ – 190344-1 ST Fortschreibung Nahverkehrsplan - Weiterentwicklung des Stadtbahnangebots ab 2023; DS 1912476NV9</title>
+<updated>2020-02-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190344-1%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3303"/>
+<summary>Kenntnisnahme am 2020-02-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2996#beratung-9</id>
+<title>Schulausschuss: „abgelehnt“ – 190476-1 AA Gutachten zur Sportentwicklung in der Bundesstadt Bonn Antrag zur Vorlage 190476</title>
+<updated>2020-02-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190476-1%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2996"/>
+<summary>Anhörung am 2020-02-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2770#beratung-6</id>
+<title>Schulausschuss: „geändert beschlossen“ – 190714 Geschwindigkeitsanzeigen vor Kitas und Schulen</title>
+<updated>2020-02-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190714"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2770"/>
+<summary>Empfehlung am 2020-02-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/1132#beratung-4</id>
+<title>Schulausschuss: „ungeändert beschlossen“ – 190524 Schulbauleitlinie für die städtischen Grundschulen</title>
+<updated>2020-02-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190524"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=1132"/>
+<summary>Empfehlung am 2020-02-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/3275#beratung-3</id>
+<title>Lenkungsausschuss Umsetzung der Ergebnisse der Organisationsuntersuchung im SGB: „zur Kenntnis genommen - mit Maßgabe“ – 190927 Sachstand und weiteres Vorgehen zur Umsetzung der Ergebnisse der Organisationsuntersuchung im SGB: hier Aufbauorganisation und Aufgabenzentralisierung; Neubau, Bauunterhaltung und Werkstätten</title>
+<updated>2020-01-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190927"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3275"/>
+<summary>Kenntnisnahme am 2020-01-31; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/828#beratung-5</id>
+<title>Hauptausschuss: „ungeändert beschlossen“ – 190416 Förderantrag Stadtgrün naturnah konkret</title>
+<updated>2020-01-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190416"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=828"/>
+<summary>Empfehlung am 2020-01-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/393#beratung-5</id>
+<title>Hauptausschuss: „geändert beschlossen“ – 190168 Sitzgelegenheiten in den Innenstädten (alt: 1911955NV4, FF: Amt 61)</title>
+<updated>2020-01-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2019#190168"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=393"/>
+<summary>Entscheidung am 2020-01-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

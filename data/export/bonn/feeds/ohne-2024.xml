@@ -3,19 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ohne-2024</id>
 <title>RIS-Karte Bonn – stadtweit / ohne Ortsbezug 2024</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2024</subtitle>
-<updated>2026-07-01T00:00:00Z</updated>
+<updated>2026-05-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ohne-2024.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020765#beratung-7</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 242274 FDP und BBB Antrag: Ausweisung von zusätzlichen Parkplätze an der Ennerthalle</title>
-<updated>2026-07-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242274"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020765"/>
-<summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2018829#beratung-7</id>
 <title>Ausschuss für Planen, Bauen und Denkmalschutz: „vertagt“ – 241355-01 ST Große Anfrage der Grünen-Bezirksfraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege</title>
@@ -87,22 +79,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241355"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018546"/>
 <summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020357#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 242016-01 ST CDU Große Anfrage: Erreichbarkeit der Turnhalle an der Burgschule</title>
-<updated>2025-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242016-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020357"/>
-<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020078#beratung-4</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 242016 CDU Große Anfrage: Erreichbarkeit der Turnhalle an der Burgschule</title>
-<updated>2025-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242016"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020078"/>
-<summary>Kenntnisnahme am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2018280#beratung-5</id>
@@ -513,52 +489,12 @@
 <summary>Anregung am 2025-04-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020463#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241918-01 ST Bau- und Schulsanierungsmaßnahmen an der Gertrud-Bäumer-Realschule</title>
-<updated>2025-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241918-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020463"/>
-<summary>Kenntnisnahme am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020356#beratung-7</id>
 <title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „geändert beschlossen“ – 242135 Beitritt zum Berlin Urban Nature Pact</title>
 <updated>2025-04-09T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242135"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020356"/>
 <summary>Empfehlung am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019902#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Maßgabe“ – 241918 CDU-Große Anfrage: Bau- und Schulsanie-rungsmaßnahmen an der Gertrud-Bäumer-Realschule</title>
-<updated>2025-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241918"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019902"/>
-<summary>Kenntnisnahme am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019882#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241725-01 ST Maßnahmen im direkten Umfeld der GGS Andreasschule</title>
-<updated>2025-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241725-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019882"/>
-<summary>Kenntnisnahme am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019482#beratung-4</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Maßgabe“ – 241725 CDU-Große Anfrage zu Maßnahmen im direkten Umfeld der GGS Andreasschule</title>
-<updated>2025-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241725"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019482"/>
-<summary>Kenntnisnahme am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018921#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Maßgabe“ – 241514 Große Anfrage FDP und BBB zu Planungsstand und Budgetierung der Generalsanierung der Godesburg</title>
-<updated>2025-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241514"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018921"/>
-<summary>Kenntnisnahme am 2025-04-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020790#beratung-3</id>
@@ -807,5 +743,69 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242244"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020701"/>
 <summary>Entscheidung am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020698#beratung-4</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 242243 Zeitplan Baumaßnahmen Verkehrsbereich</title>
+<updated>2025-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242243"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020698"/>
+<summary>Entscheidung am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020252#beratung-3</id>
+<title>Bezirksvertretung Bonn: „nicht abgestimmt“ – 240986-29 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-29%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020252"/>
+<summary>Anhörung am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020134#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241845-01 ST Entwicklung der ehemaligen Stadtgärtnerei</title>
+<updated>2025-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241845-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020134"/>
+<summary>Kenntnisnahme am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020048#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen - mit Protokollnotiz“ – 241997 CDU Große Anfrage: Städtische Bewerbung von Fahrradstraßen</title>
+<updated>2025-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241997"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020048"/>
+<summary>Kenntnisnahme am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019743#beratung-4</id>
+<title>Unterausschuss Denkmalschutz: „zur Kenntnis genommen“ – 241853 BBB-Anfrage: Aufnahme des Alten Friedhofs Bonn in die europäische Friedhofsroute</title>
+<updated>2025-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241853"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019743"/>
+<summary>Kenntnisnahme am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019730#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241845 Entwicklung der ehemaligen Stadtgärtnerei</title>
+<updated>2025-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241845"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019730"/>
+<summary>Kenntnisnahme am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018221#beratung-3</id>
+<title>Bezirksvertretung Bonn: „nicht abgestimmt“ – 240986-03 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018221"/>
+<summary>Anhörung am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020701#beratung-2</id>
+<title>Ausschuss für Mobilität und Verkehr: „ungeändert beschlossen“ – 242244 Barrierefreiheit Straßenbahn</title>
+<updated>2025-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242244"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020701"/>
+<summary>Empfehlung am 2025-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>
