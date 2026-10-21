@@ -80,6 +80,35 @@ def glaetten(kurz):
     return " ".join(z for z in zeilen if z).strip()
 
 
+# Prüfungen nach der KI-Vorprüfung von Fassung 3 (21.10.2026): Sätze zum Kostenträger, die der Text nicht stützt,
+# werden entfernt; Zahlen, die nicht im Text stehen (falsch errechnete Summen), führen zum Verwerfen
+KOSTEN_SATZ = re.compile(r"\bKosten\b.*\b(trägt|tragen|übernimmt|übernehmen|zahlt|zahlen)\b|"
+                         r"\b(trägt|tragen|übernimmt|übernehmen|zahlt|zahlen)\b.*\bKosten\b")
+KOSTEN_IM_TEXT = re.compile(r"Kostenträger|Kostenübernahme|Übernahme der[^.]{0,60}Kosten|"
+                            r"(trägt|tragen|übernimmt|übernehmen)[^.]{0,40}Kosten|Kosten[^.]{0,40}(trägt|tragen|übernimmt|übernehmen)")
+ZAHL = re.compile(r"\d+(?:[.,]\d+)*")
+
+
+def ohne_kostensatz(kurz, text):
+    """Sätze zum Kostenträger entfernen, wenn der Text keinen Kostenträger nennt."""
+    if KOSTEN_IM_TEXT.search(text or ""):
+        return kurz
+    saetze = re.split(r"(?<=[.!?])\s+", kurz or "")
+    return " ".join(s for s in saetze if not KOSTEN_SATZ.search(s)).strip()
+
+
+def fremde_zahl(kurz, text):
+    """Erste Zahl (ab zwei Ziffern) der Kurzfassung, die so nicht im Text steht, sonst None."""
+    tausender = lambda t: re.sub(r"(?<=\d)\.(?=\d{3}\b)", "", t)
+    quelle = set()
+    for z in ZAHL.findall(text or ""):   # auch Teile von Datumsangaben („31.12.2024“ → „2024“)
+        quelle |= {tausender(z), *re.split(r"[.,]", z)}
+    for z in ZAHL.findall(kurz or ""):
+        if len(re.sub(r"\D", "", z)) >= 2 and tausender(z) not in quelle:
+            return z
+    return None
+
+
 def pruefe(kurz, text):
     """Grund, aus dem eine Kurzfassung verworfen wird, oder None."""
     if not kurz or len(_woerter(kurz)) < 8:
@@ -88,6 +117,9 @@ def pruefe(kurz, text):
         return f"wörtliche Übernahme von mehr als {UEBERNAHME_WOERTER} Wörtern"
     if HAUSNUMMER.search(kurz):
         return "Hausnummer genannt"
+    z = fremde_zahl(kurz, text)
+    if z:
+        return f"Zahl nicht im Text: {z}"
     return None
 
 
@@ -141,6 +173,13 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         uri = (p.get("mainFile") or {}).get("id")
         if uri in texts and volltext.allowed(p.get("paperType")):
             papers.setdefault(uri, p)
+    # vorhandene Kurzfassungen der aktuellen Fassung nach den jeweils geltenden Prüfungen neu bewerten
+    for r in have.values():
+        if r.get("fassung", 1) == FASSUNG and r["kurzfassung"] and r.get("datei") in texts:
+            main = re.sub(r"\s+", " ", volltext.clean(texts[r["datei"]]["text"])[0]).strip()[:MAX_ZEICHEN]
+            kurz = ohne_kostensatz(glaetten(r["kurzfassung"]), main)
+            grund = pruefe(kurz, main)
+            r["kurzfassung"], r["verworfen"] = (None, grund) if grund else (kurz, None)
     # ältere Fassungen zuerst (so entsteht die neue Stichprobe aus denselben Vorlagen), danach neue Texte
     alt = lambda uri: have[texts[uri]["sha"]].get("fassung", 1) < FASSUNG
     todo = ([(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] in have and alt(uri)]
@@ -151,7 +190,7 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         main = re.sub(r"\s+", " ", main).strip()[:MAX_ZEICHEN]
         titel = f"{p.get('name') or ''} (Art der Vorlage: {p.get('paperType') or 'unbekannt'})"
         kurz, usage = anfrage(titel, main, schluessel)
-        kurz = glaetten(kurz)
+        kurz = ohne_kostensatz(glaetten(kurz), main)
         tokens[0] += usage.get("prompt_tokens", 0)
         tokens[1] += usage.get("completion_tokens", 0)
         grund = pruefe(kurz, main)
