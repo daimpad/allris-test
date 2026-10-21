@@ -35,6 +35,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 221797-02	kein Ort						
 221797-03 ST	kein Ort						
 222109-05 AA	kein Ort						
+222181-03	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 222504-03	verortet	Hauptteil	volltext_strasse	An der Umkehr	Ramersdorf	mittel	3
 222504-04	verortet	Hauptteil	volltext_strasse	An der Umkehr	Ramersdorf	mittel	2
 222504-04	verortet	Hauptteil	volltext_strasse	Rilkestraße	Beuel-Mitte	niedrig	1
@@ -518,7 +519,10 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252572-01	nur in Anlagen genannt, nicht verortet						
 252883-01	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	1
 252903-02 ST	kein Ort						
+252903-03 ST	kein Ort						
 252927-01	kein Ort						
+253147-04	kein Ort						
+253164-03	kein Ort						
 253169-02	kein Ort						
 253210-04	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 253210-04	verortet	Hauptteil	volltext_strasse	Mittelstraße	Plittersdorf	niedrig	2
@@ -736,6 +740,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260184	kein Ort						
 260185	Liste (8 Ortsteile), nicht verortet	Hauptteil					
 260362-03	verortet	Hauptteil	volltext_strasse	Zitelmannstraße	Gronau	mittel	2
+260410-02	verortet	Hauptteil	volltext_strasse	Europaring	Duisdorf	mittel	1
+260411-02 ST	kein Ort						
 260504	kein Ort						
 260504-01 ST	kein Ort						
 260504-02	kein Ort						
@@ -750,11 +756,13 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260772-01 AA	kein Ort						
 260772-02 ST	kein Ort						
 260772-03 AA	kein Ort						
+260789-02 ST	Liste (8 Ortsteile), nicht verortet	Hauptteil					
 260790-01 ST	kein Ort						
 260809-03 ST	kein Ort						
 260815-02 ST	kein Ort						
 260845-02 ST	Liste (51 Ortsteile), nicht verortet	Hauptteil					
 260895-02 ST	kein Ort						
+260915-01 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Kurfürstenallee	Alt-Godesberg	mittel	2
 260932-06	verortet	Hauptteil	volltext_strasse+kreuzung	Agnesstraße	Beuel-Mitte	mittel	1
 260932-06	verortet	Hauptteil	volltext_strasse+kreuzung	Combahnstraße	Beuel-Mitte	mittel	1
 260932-06	verortet	Hauptteil	volltext_strasse+kreuzung	Friedrich-Breuer-Straße	Beuel-Mitte	mittel	3
@@ -847,6 +855,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261425-01 ST	verortet	Hauptteil	volltext_strasse	Von-Sandt-Ufer	Plittersdorf	mittel	1
 261425-01 ST	verortet	Hauptteil	volltext_strasse	Von-Sandt-Ufer	Rüngsdorf	mittel	1
 261440-01 ST	kein Ort						
+261444	nur in Anlagen genannt, nicht verortet						
 261448-02 AA	kein Ort						
 261464-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Friedrich-Breuer-Straße	Beuel-Mitte	mittel	1
 261464-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Hermannstraße	Beuel-Mitte	mittel	1
@@ -867,13 +876,17 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261519-01 ST	kein Ort						
 261524	nur in Anlagen genannt, nicht verortet						
 261525-02 ST	kein Ort						
+261528-03 ST	kein Ort						
 261529-05 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Frieda-Mager-Allee	Endenich	mittel	1
 261529-05 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Kolpingstraße	Endenich	mittel	2
 261529-05 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Siemensstraße	Endenich	mittel	2
 261551-01 ST	kein Ort						
+261559-02 ST	verortet	Hauptteil	volltext_strasse	Bertha-von-Suttner-Platz	Bonn-Zentrum	niedrig	1
+261559-02 ST	verortet	Hauptteil	volltext_strasse	Cassius-Bastei	Bonn-Zentrum	niedrig	1
 261562-01 ST	kein Ort						
 261562-02 ST	kein Ort						
 261563-01 ST	kein Ort						
+261568	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 261569	nur in Anlagen genannt, nicht verortet						
 261569-01 AA	kein Ort						
 261570-01 ST	kein Ort						
@@ -886,6 +899,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261588-01 AA	Liste (9 Ortsteile), nicht verortet	Hauptteil					
 261592	nur in Anlagen genannt, nicht verortet						
 261594-01	kein Ort						
+261599-01 ST	nur in Anlagen genannt, nicht verortet						
 261602	kein Ort						
 261604-01 ST	verortet	Hauptteil	volltext_strasse	Poststraße	Bonn-Zentrum	niedrig	1
 261604-01 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Oberkasseler Straße	Ramersdorf	niedrig	1
@@ -997,7 +1011,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261775-01 ST	verortet	Hauptteil	volltext_strasse	Martin-Luther-King-Straße	Hochkreuz	mittel	1
 261775-01 ST	verortet	Hauptteil	volltext_strasse	Martin-Luther-King-Straße	Plittersdorf	mittel	1
 261776	kein Ort						
+261776-01 ST	kein Ort						
 261777	kein Ort						
+261777-01 ST	verortet	Hauptteil	volltext_strasse	Schulplatz	Friesdorf	mittel	2
 261779	kein Ort						
 261779-01 ST	kein Ort						
 261789	kein Ort						
@@ -1006,6 +1022,10 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261791-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Bonn-Castell	mittel	1
 261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Graurheindorf	mittel	1
+261792-01 ST	verortet	Hauptteil	volltext_strasse	Niederkasseler Straße	Geislar	mittel	1
+261792-01 ST	verortet	Hauptteil	volltext_strasse	Niederkasseler Straße	Schwarzrheindorf / Vilich-Rheindorf	mittel	1
+261792-01 ST	verortet	Hauptteil	volltext_strasse	Römerstraße	Bonn-Castell	mittel	1
+261792-01 ST	verortet	Hauptteil	volltext_strasse	Römerstraße	Graurheindorf	mittel	1
 261794	kein Ort						
 261800	kein Ort						
 261802	kein Ort						
@@ -1033,6 +1053,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261824	kein Ort						
 261826	kein Ort						
 261827	kein Ort						
+261831-01 ST	kein Ort						
 261832	kein Ort						
 261833	kein Ort						
 261835	kein Ort						
@@ -1047,6 +1068,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261840	kein Ort						
 261842	kein Ort						
 261845	kein Ort						
+261845-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	1
+261845-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
+261848	verortet	Hauptteil	volltext_strasse+hausnummer	Windeckstraße	Bonn-Zentrum	niedrig	1
 261849	kein Ort						
 261851	nur in Anlagen genannt, nicht verortet						
 261853	kein Ort						
@@ -1061,6 +1085,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261882	kein Ort						
 261883	kein Ort						
 261885	kein Ort						
+261886	kein Ort						
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Weststadt	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse+kreuzung	Gangolfstraße	Bonn-Zentrum	niedrig	1
@@ -1074,11 +1099,21 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261898	nur in Anlagen genannt, nicht verortet						
 261900	kein Ort						
 261901	kein Ort						
+261902	kein Ort						
+261921	kein Ort						
 261923	kein Ort						
 261931	kein Ort						
+261932	nur in Anlagen genannt, nicht verortet						
 261933	verortet	Hauptteil	volltext_strasse	Klara-M.-Faßbinder-Straße	Dransdorf	niedrig	1
 261933	verortet	Hauptteil	volltext_strasse+hausnummer	Adenauerallee	Gronau	niedrig	1
 261933	verortet	Hauptteil	volltext_strasse+hausnummer	Christian-Kölbach-Straße	Beuel-Ost	niedrig	1
 261934	kein Ort						
 261937	kein Ort						
 261941	kein Ort						
+261954	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
+261965	kein Ort						
+261969	kein Ort						
+261970	kein Ort						
+261971	kein Ort						
+261972	kein Ort						
+261978	kein Ort						
