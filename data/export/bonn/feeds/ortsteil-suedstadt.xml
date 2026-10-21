@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-suedstadt</id>
 <title>RIS-Karte Bonn – Südstadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Südstadt</subtitle>
-<updated>2026-10-16T00:00:00Z</updated>
+<updated>2026-10-21T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-suedstadt.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:suedstadt"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026294#vorlage</id>
+<title>Neue Vorlage 260218-02 ST: Stellungnahme zu Grüne-Bezirksfraktion-Große Anfrage zum Kaiserplatz</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:suedstadt#260218-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026294"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029577#beratung-5</id>
 <title>Beirat Bürgerbeteiligung: „geändert beschlossen“ – 261812 Veröffentlichung der Vorhabenliste: 164703 - "Neugestaltung Kaiserplatz/Am Neutor"</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:suedstadt#254088"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024984"/>
 <summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025160#vorlage</id>
-<title>Neue Vorlage 220806-09 ST: BBB-Anfrage: Kosten Unterbringung Flüchtlinge</title>
-<updated>2026-01-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:suedstadt#220806-09%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025160"/>
-<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

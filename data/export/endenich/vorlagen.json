@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 550,
-  "generated_at": "2026-10-21T09:46:08+00:00",
+  "generated_at": "2026-10-21T10:20:18+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-21T09:38:23+00:00"
+    "retrieved_at": "2026-10-21T10:11:19+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-21T09:40:52+00:00"
+    "retrieved_at": "2026-10-21T10:15:03+00:00"
    },
    {
     "name": "osm",
@@ -407,6 +407,20 @@
      "result": "zur Kenntnis genommen - mit Maßgabe",
      "public": 1,
      "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
     }
    ],
    "superordinated": [
@@ -450,7 +464,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029611",
-   "stand": "beraten, ohne Entscheidung",
+   "stand": "in Beratung",
    "themes": [
     {
      "theme": "verkehr",
@@ -502,6 +516,16 @@
      "result": "zur Kenntnis genommen - mit Maßgabe",
      "stand": "beraten",
      "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
     }
    ],
    "soll": {
@@ -510,6 +534,7 @@
     "grund": "Vorlagenart „Große Anfrage“",
     "passung": "passt",
     "ist": [
+     "aus",
      "bv"
     ],
     "abweichung": []
@@ -2830,6 +2855,20 @@
      "result": "zur Kenntnis genommen - mit Maßgabe",
      "public": 1,
      "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
     }
    ],
    "superordinated": [],
@@ -2873,7 +2912,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028952",
-   "stand": "beraten, ohne Entscheidung",
+   "stand": "in Beratung",
    "themes": [
     {
      "theme": "verkehr",
@@ -2919,6 +2958,16 @@
      "result_source": "oparl-lite"
     },
     {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    },
+    {
      "typ": "folgevorlage",
      "label": "Stellungnahme der Verwaltung",
      "status": "belegt",
@@ -2934,6 +2983,7 @@
     "grund": "Vorlagenart „Große Anfrage“",
     "passung": "passt",
     "ist": [
+     "aus",
      "bv"
     ],
     "abweichung": []

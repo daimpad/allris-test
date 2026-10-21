@@ -11,6 +11,7 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 261553-01 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 261553-01 ST	veroeffentlichung	Datum der Vorlage	belegt	2026-10-09		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2029611	ungeprüft
 261553-01 ST	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt	2026-10-13	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2029611	ungeprüft
+261553-01 ST	beratung	Ausschuss für Mobilität und Verkehr (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2029611	ungeprüft
 261529-06	initiierung	Anregungen und Beschwerden	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2029745	ungeprüft
 261529-06	veroeffentlichung	Datum der Vorlage	belegt	2026-10-06		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2029745	ungeprüft
 261529-06	entscheidung	Bezirksvertretung Bonn (Entscheidung)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2029745	ungeprüft
@@ -75,6 +76,7 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 261553	initiierung	Große Anfrage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028952	ungeprüft
 261553	veroeffentlichung	Datum der Vorlage	belegt	2026-08-18		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028952	ungeprüft
 261553	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028952	ungeprüft
+261553	beratung	Ausschuss für Mobilität und Verkehr (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028952	ungeprüft
 261553	folgevorlage	Stellungnahme der Verwaltung	belegt	2026-10-09		oparl-bonn	261553-01 ST	ungeprüft
 253158-02 ST	initiierung	Stellungnahme der Verwaltung	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027912	ungeprüft
 253158-02 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
