@@ -10,6 +10,7 @@ from .geo import Ortsteile
 from .geocode import Gazetteer, plan_numbers
 from .plans import Plans, plan_locations
 from . import volltext
+from .objekte import Objekte
 
 SCHEMA = """
 CREATE TABLE source (
@@ -181,6 +182,7 @@ def build():
     print(f"Bebauungspläne: {len({r[0] for r in plan_rows})} Vorlagen mit Geltungsbereich, "
           f"{len({r[0] for r in rows['plan']})} mit Plannummer im Titel, "
           f"{len(sure)} eindeutig (Vorrang vor {len(precedence)} Ortsbezügen aus dem Titel)")
+    rows["ploc"] += _objects_in_titles(papers, locations, gaz, {r[0] for r in rows["ploc"]})
     rows["ploc"] += _fulltext(papers, bv_bezirke, locations, gaz, {r[0] for r in rows["ploc"]})
     rows["ploc"] += _inherited(papers, papers_by_id, rows["ploc"])
 
@@ -215,6 +217,38 @@ def _add_location(r, locations, gaz):
                          r["name"], r["lon"], r["lat"], r["ortsteil"], nr, r["bezirk"],
                          r["level"], source)
     return loc_id
+
+
+def _objects_in_titles(papers, locations, gaz, placed):
+    """Gebäude und Anlagen aus dem Verzeichnis (OSM) im Titel von Vorlagen ohne eigenen Ortsbezug (Stufe B, Methode
+    „objekt_name“, Konfidenz „niedrig“); Audit und einmalig eine Stichprobe."""
+    obj = Objekte()
+    if not len(obj):
+        return []
+    out, audit, found = [], [], {}
+    for p in papers:
+        if p["id"] in placed:
+            continue
+        for o in obj.im_titel(p.get("name")):
+            r = dict(level="objekt", name=o["name"], ortsteil=o["ortsteil"], bezirk=o["bezirk"], lon=o["lon"], lat=o["lat"])
+            ev = f"Name im Titel: {o['name']}; Lage laut OpenStreetMap ({o['art']}, {o['osm']})"
+            out.append((p["id"], _add_location(r, locations, gaz), "B", "objekt_name", "niedrig", ev, p["id"]))
+            audit.append((p["reference"], o["name"], o["art"], o["ortsteil"], o["osm"]))
+            found.setdefault(p["reference"], (p, []))[1].append(o)
+    _write(config.EXPORT / "audit_objekte_titel.tsv", ["drucksache", "gebäude oder anlage", "art", "ortsteil", "osm"],
+           sorted(audit))
+    print(f"Gebäude und Anlagen im Titel: {len(found)} Vorlagen ohne eigenen Ortsbezug, {len(out)} Ortsbezüge")
+    path = config.EXPORT / "objekte" / "stichprobe_objekte.tsv"
+    if found and not path.exists():
+        pick = sorted(random.Random(20261021).sample(sorted(found), min(30, len(found))))
+        path.parent.mkdir(parents=True, exist_ok=True)
+        _write(path, ["nr", "drucksache", "titel", "link", "gebäude oder anlage (Ortsteil)", "urteil (richtig/teilweise/falsch)",
+                      "anmerkung"],
+               [[i, ref, found[ref][0].get("name"), found[ref][0].get("web") or "",
+                 "; ".join(f"{o['name']} ({o['ortsteil']})" for o in found[ref][1]), "", ""]
+                for i, ref in enumerate(pick, 1)])
+        print(f"Stichprobe Gebäude und Anlagen: {len(pick)} → {path}")
+    return out
 
 
 def _fulltext(papers, bv_bezirke, locations, gaz, placed):

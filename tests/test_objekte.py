@@ -13,6 +13,11 @@ DATA = {
               "lat": 50.73},
     "way/7": {"name": "LVR-LandesMuseum Bonn, Bibliothek", "art": "Bibliothek", "ortsteil": "Weststadt", "bezirk": "Bonn",
               "lon": 7.09, "lat": 50.73},
+    "way/9": {"name": "Kita Rheinpiraten", "art": "Kita", "ortsteil": "Limperich", "bezirk": "Beuel", "lon": 7.13, "lat": 50.72},
+    "way/10": {"name": "Siebengebirge", "art": "Schutzgebiet", "ortsteil": "Oberkassel", "bezirk": "Beuel", "lon": 7.2,
+               "lat": 50.7},
+    "way/11": {"name": "Volkshochschule Bonn", "art": "Hochschule", "ortsteil": "Bonn-Zentrum", "bezirk": "Bonn",
+               "lon": 7.1, "lat": 50.73},
     "way/8": {"name": "Spielplatz", "art": "Spielplatz", "ortsteil": "Endenich", "bezirk": "Bonn", "lon": 7.07, "lat": 50.72},
 }
 
@@ -44,6 +49,15 @@ class ObjekteTest(unittest.TestCase):
     def test_gattungsname_und_unbekanntes(self):
         self.assertEqual(self.obj.finden("Spielplatz"), (None, "Gattungsname"))
         self.assertEqual(self.obj.finden("Gottfried-Kinkel-Schule"), (None, "nicht im Verzeichnis"))
+
+    def test_titel_streng(self):
+        titel = lambda t: [o["name"] for o in self.obj.im_titel(t)]
+        self.assertEqual(titel("Sanierung der GGS Adelheidisschule und Pflege am Alter Friedhof"), ["Adelheidisschule"])
+        self.assertEqual(titel("Erweiterung der Kita Rheinpiraten"), ["Kita Rheinpiraten"])
+        self.assertEqual(titel("Parkplatz Rheinaue „Die Rheinpiraten“"), [])        # ohne Vorsatz „Kita“
+        self.assertEqual(titel("Naturpark Siebengebirge: Benennung"), [])         # Schutzgebiet
+        self.assertEqual(titel("Entgelttarif der Volkshochschule Bonn"), [])     # Einrichtung ohne festen Ort
+        self.assertEqual(titel("Ein neuer Spielplatz"), [])
 
 
 if __name__ == "__main__":

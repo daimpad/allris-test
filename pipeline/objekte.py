@@ -21,12 +21,25 @@ GATTUNG = {"spielplatz", "friedhof", "sportplatz", "turnhalle", "sporthalle", "s
            "bürgerhaus", "stadtteilbibliothek", "waldfriedhof", "parkfriedhof", "gesamtschule", "gymnasium",
            "realschule", "hauptschule", "förderschule", "mehrzweckhalle", "stadthalle", "altenheim"}
 MIN_TEIL = 8
+# Titel (Stufe B, Methode „objekt_name“): strenger, weil kein Sprachmodell die Rolle prüft. Der Name muss mit
+# Vorsatz im Titel stehen („Kita Rheinpiraten“, nicht „Rheinpiraten“), mindestens acht Zeichen lang und in Bonn
+# eindeutig sein. Ausgenommen sind Schutzgebiete (große Flächen, oft über Bonn hinaus) und Namen, die im Titel meist
+# eine Einrichtung meinen, nicht einen Ort.
+TITEL_VORSAETZE = VORSAETZE - {"kita", "kindertagesstätte"}
+TITEL_OHNE_ART = {"Schutzgebiet"}
+TITEL_OHNE_NAME = {
+    # Einrichtungen mit mehreren Standorten oder ohne festen Ort im Titel (Entgelte, Satzungen)
+    "universität", "sparkasse kölnbonn", "volkshochschule", "ludwig van beethoven musikschule", "bundespolizei",
+    "bahnhofsmission",
+    # allgemeine Wörter und Personen (Prüfung der Treffer am 21.10.2026)
+    "städtebau", "pavillon", "sporthallen", "spielhaus", "kreuzgang", "ludwig van beethoven",
+}
 
 
-def norm(name):
+def norm(name, vorsaetze=VORSAETZE):
     """Angeglichener Name; „Bonn“ und „Bonner“ zählen nirgends („Freizeitpark Bonner Rheinaue“)."""
     words = re.sub(r"[^\w/]+", " ", (name or "").lower().replace("-", " ")).split()
-    while words and words[0].strip(".") in VORSAETZE:
+    while words and words[0].strip(".") in vorsaetze:
         words = words[1:]
     return " ".join(w for w in words if w not in ("bonn", "bonner"))
 
@@ -42,6 +55,27 @@ class Objekte:
             if len(n) >= 4 and n not in GATTUNG:
                 self.by_norm[n].setdefault(o["ortsteil"], dict(o, osm=osm))
                 self.ohne_leer.setdefault(n.replace(" ", ""), n)
+
+    def im_titel(self, titel):
+        """Gebäude und Anlagen, deren Name im Titel steht (Regeln für Titel siehe oben)."""
+        if not hasattr(self, "_titel_re"):
+            self.titel_by = {}
+            for n, by_ot in self.by_norm.items():
+                if len(by_ot) != 1 or n in TITEL_OHNE_NAME:
+                    continue
+                o = next(iter(by_ot.values()))
+                key = norm(o["name"], TITEL_VORSAETZE)
+                if len(key) >= MIN_TEIL and o["art"] not in TITEL_OHNE_ART and key not in GATTUNG:
+                    self.titel_by.setdefault(key, o)
+            keys = sorted(self.titel_by, key=len, reverse=True)
+            self._titel_re = re.compile(r"(?:^| )(" + "|".join(map(re.escape, keys)) + r")(?= |$)") if keys else None
+        if not self._titel_re:
+            return []
+        t, out = norm(titel, TITEL_VORSAETZE), []
+        for m in self._titel_re.finditer(t):
+            if self.titel_by[m.group(1)] not in out:
+                out.append(self.titel_by[m.group(1)])
+        return out
 
     def __len__(self):
         return len(self.by_norm)
