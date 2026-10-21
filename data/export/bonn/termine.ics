@@ -311,18 +311,24 @@ UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005611
 DTSTAMP:20261104T160000Z
 DTSTART:20261104T160000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
-DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
- nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung: http
+ s://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005611\nEinladung: ht
+ tps://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3241720&OTY
+ P=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005611
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005751
 DTSTAMP:20261104T170000Z
 DTSTART:20261104T170000Z
 SUMMARY:Schulausschuss
-DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
- tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung: https://www.bonn.si
+ tzung-online.de/public/TO010?SILFDNR=2005751\nEinladung: https://www.bonn.
+ sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3241732&OTYP=41\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005751
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005848
@@ -330,8 +336,11 @@ DTSTAMP:20261104T170000Z
 DTSTART:20261104T170000Z
 SUMMARY:Ausschuss für Mobilität und Verkehr
 DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
- ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+ ng: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005848\nEinla
+ dung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=324
+ 1746&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005848
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005586

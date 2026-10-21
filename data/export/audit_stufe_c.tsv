@@ -1,0 +1,57 @@
+drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
+190057-04 AA	keine Änderung						mistral-large-latest
+200645-07	keine Änderung						mistral-large-latest
+200645-09 ST	keine Änderung						mistral-large-latest
+200749-03 ST	keine Änderung						mistral-large-latest
+201740-02 ST	keine Änderung						mistral-large-latest
+201884-01	keine Änderung						mistral-large-latest
+202083-01	keine Änderung						mistral-large-latest
+202220-13	keine Änderung						mistral-large-latest
+202220-16	keine Änderung						mistral-large-latest
+202221-03	keine Änderung						mistral-large-latest
+202221-04 ST	keine Änderung						mistral-large-latest
+202330-04	geändert	bestätigt	volltext_strasse	Rheinallee	Rüngsdorf	mittel	mistral-large-latest
+202330-04	geändert	bestätigt	volltext_strasse	Rheinallee	Godesberg-Villenviertel	mittel	mistral-large-latest
+202330-04	geändert	bestätigt	volltext_strasse	Rheinallee	Plittersdorf	mittel	mistral-large-latest
+210314-01 ST	keine Änderung						mistral-large-latest
+210478-01 ST	keine Änderung						mistral-large-latest
+210807-04 AA	keine Änderung						mistral-large-latest
+212329-03	Antwort ohne lesbares JSON						mistral-large-latest
+220117-03	keine Änderung						mistral-large-latest
+220509-05 ST	keine Änderung						mistral-large-latest
+220650-02 ST	keine Änderung						mistral-large-latest
+220802-01	keine Änderung						mistral-large-latest
+220802-02 ST	keine Änderung						mistral-large-latest
+220802-05	keine Änderung						mistral-large-latest
+220806-08	keine Änderung						mistral-large-latest
+220806-09 ST	keine Änderung						mistral-large-latest
+221550-16	keine Änderung						mistral-large-latest
+221797-02	keine Änderung						mistral-large-latest
+221797-03 ST	keine Änderung						mistral-large-latest
+222109-05 AA	keine Änderung						mistral-large-latest
+222181-03	geändert	bestätigt	volltext_stadtbezirk_name	Hardtberg		mittel	mistral-large-latest
+222504-03	geändert	bestätigt	volltext_strasse	An der Umkehr	Ramersdorf	mittel	mistral-large-latest
+222504-04	geändert	bestätigt	volltext_strasse	An der Umkehr	Ramersdorf	mittel	mistral-large-latest
+222504-04	geändert	bestätigt	volltext_strasse	Rilkestraße	Beuel-Mitte	mittel	mistral-large-latest
+222504-05	keine Änderung						mistral-large-latest
+230201-06	keine Änderung						mistral-large-latest
+230255-03 AA	keine Änderung						mistral-large-latest
+230255-04	geändert	bestätigt	volltext_strasse+ortsteil	Am Sonnenberg	Küdinghoven	mittel	mistral-large-latest
+230255-04	geändert	bestätigt	volltext_strasse	Grootestraße	Dransdorf	mittel	mistral-large-latest
+230468-02	keine Änderung						mistral-large-latest
+230468-03 ST	keine Änderung						mistral-large-latest
+230613-02	keine Änderung						mistral-large-latest
+230782-04	keine Änderung						mistral-large-latest
+230812-04 ST	geändert	herabgestuft	volltext_strasse	Kennedyallee	Plittersdorf	niedrig	mistral-large-latest
+230812-04 ST	geändert	herabgestuft	volltext_strasse	Kennedyallee	Hochkreuz	niedrig	mistral-large-latest
+230820-10 AA	geändert	bestätigt	volltext_strasse	Colmantstraße	Weststadt	mittel	mistral-large-latest
+230880-03	keine Änderung						mistral-large-latest
+230897-05 AA	geändert	bestätigt	volltext_strasse+kreuzung	Mainzer Straße	Mehlem	mittel	mistral-large-latest
+231037-02	keine Änderung						mistral-large-latest
+231098-01	keine Änderung						mistral-large-latest
+231159	Antwort ohne lesbares JSON						mistral-large-latest
+231182-09	keine Änderung						mistral-large-latest
+231332-04 AA	keine Änderung						mistral-large-latest
+231400-06 ST	keine Änderung						mistral-large-latest
+231463-09 ST	geändert	bestätigt	volltext_strasse	Koblenzer Straße	Pennenfeld	mittel	mistral-large-latest
+231463-09 ST	geändert	bestätigt	volltext_strasse	Koblenzer Straße	Alt-Godesberg	mittel	mistral-large-latest
