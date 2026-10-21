@@ -115,6 +115,14 @@ def laden(verzeichnis=None):
     return {r["sha"]: r for r in map(json.loads, open(path, encoding="utf-8"))}
 
 
+def _schreiben(base, have):
+    tmp = base / "kurzfassungen.jsonl.tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        for sha in sorted(have):
+            f.write(json.dumps(have[sha], ensure_ascii=False) + "\n")
+    tmp.replace(base / "kurzfassungen.jsonl")
+
+
 def erzeugen(verzeichnis=None, anfrage=_anfrage):
     """Neue Kurzfassungen für Hauptdokumente mit Text (höchstens MAX_JE_LAUF je Lauf); Stichprobe einmalig."""
     schluessel = os.environ.get("MISTRAL_API_KEY")
@@ -138,7 +146,7 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
     todo = ([(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] in have and alt(uri)]
             + [(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] not in have])[:MAX_JE_LAUF]
     tokens = [0, 0]
-    for uri, p in todo:
+    for i, (uri, p) in enumerate(todo, 1):
         main, _ = volltext.clean(texts[uri]["text"])
         main = re.sub(r"\s+", " ", main).strip()[:MAX_ZEICHEN]
         titel = f"{p.get('name') or ''} (Art der Vorlage: {p.get('paperType') or 'unbekannt'})"
@@ -152,9 +160,9 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
                                    "fassung": FASSUNG,
                                    "erzeugt": datetime.now(timezone.utc).date().isoformat()}
         time.sleep(0.5)
-    with open(base / "kurzfassungen.jsonl", "w", encoding="utf-8") as f:
-        for sha in sorted(have):
-            f.write(json.dumps(have[sha], ensure_ascii=False) + "\n")
+        if i % 25 == 0:   # Zwischenstand sichern: bricht der Lauf ab, bleibt das Erzeugte erhalten
+            _schreiben(base, have)
+    _schreiben(base, have)
     ok = [r for r in have.values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG]
     sprachmodell.protokoll(base, "kurzfassungen", MODELL, len(todo), {"ein": tokens[0], "aus": tokens[1]},
                            sum(1 for uri, p in todo if have[texts[uri]["sha"]]["verworfen"]))
