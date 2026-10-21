@@ -91,6 +91,28 @@ class StufeCTest(unittest.TestCase):
             rows = list(stufe_c.laden(d / "out").values())
             self.assertEqual([(r["drucksache"], r["orte"][0]["name"]) for r in rows], [("260000", "Endenich")])
 
+    def test_gescheiterte_anfrage_wird_wiederholt(self):
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            db = sqlite3.connect(":memory:")
+            db.executescript(SCHEMA)
+            papers, texte = d / "papers.jsonl", d / "texte.jsonl"
+            papers.write_text(json.dumps({"id": "p0", "reference": "260000", "name": "Spielplatz",
+                                          "paperType": "Beschlussvorlage", "mainFile": {"id": "f0"}}))
+            texte.write_text(json.dumps({"uri": "f0", "sha": "s0", "text": KOPF + "Endenich"}))
+            calls = []
+            def anfrage(titel, text, key):
+                calls.append(titel)
+                return '{"orte": [', {"ein": 10, "aus": 5}   # unvollständiges JSON
+            with mock.patch.object(config, "PAPERS", papers), mock.patch.object(config, "TEXTE", texte), \
+                    mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}):
+                for _ in range(4):
+                    stufe_c.erzeugen(db, d / "out", anfrage=anfrage)
+            self.assertEqual(len(calls), stufe_c.MAX_VERSUCHE)
+            r = stufe_c.laden(d / "out")["s0"]
+            self.assertEqual((r["fehler"], r["versuche"]), ("Antwort ohne lesbares JSON", stufe_c.MAX_VERSUCHE))
+            self.assertEqual(len((d / "out" / "laeufe.tsv").read_text().splitlines()), 1 + stufe_c.MAX_VERSUCHE)
+
 
 if __name__ == "__main__":
     unittest.main()

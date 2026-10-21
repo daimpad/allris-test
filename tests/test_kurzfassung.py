@@ -25,6 +25,11 @@ class KurzfassungTest(unittest.TestCase):
         self.assertTrue(kurzfassung.pruefe("Die Verwaltung schlägt vor, den Spielplatz an der Endenicher Straße neu zu gestalten.", TEXT)
                         .startswith("wörtliche Übernahme"))
 
+    def test_markdown_wird_entfernt(self):
+        self.assertEqual(kurzfassung.glaetten("Baum in der Straße *Am Herrengarten*, **gefällt**."),
+                         "Baum in der Straße Am Herrengarten, gefällt.")
+        self.assertEqual(kurzfassung.glaetten("3 * 4 Bäume"), "3 * 4 Bäume")
+
     def test_ohne_schluessel_nichts(self):
         with mock.patch.dict(os.environ, {}, clear=True), tempfile.TemporaryDirectory() as d:
             kurzfassung.erzeugen(d, anfrage=lambda *a: self.fail("keine Anfrage ohne Schlüssel"))
@@ -53,6 +58,7 @@ class KurzfassungTest(unittest.TestCase):
             self.assertEqual(sorted(r["verworfen"] or "ok" for r in rows.values()),
                              ["ok", f"wörtliche Übernahme von mehr als {kurzfassung.UEBERNAHME_WOERTER} Wörtern"])
             self.assertEqual(kurzfassung.fuer_seite(out), {})  # vor der Freigabe nichts auf der Seite
+            self.assertEqual(len((out / "laeufe.tsv").read_text().splitlines()), 2)  # Kopf und ein Lauf mit Anfragen
 
 
 if __name__ == "__main__":

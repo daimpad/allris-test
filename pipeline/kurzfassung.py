@@ -20,7 +20,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import config, volltext
+from . import config, sprachmodell, volltext
 
 API = "https://api.mistral.ai/v1/chat/completions"
 MODELL = os.environ.get("KURZFASSUNG_MODELL", "mistral-small-latest")
@@ -51,6 +51,11 @@ def uebernahme(kurz, text, n=UEBERNAHME_WOERTER + 1):
         if tuple(k[i:i + n]) in folgen:
             return " ".join(k[i:i + n])
     return None
+
+
+def glaetten(kurz):
+    """Markdown-Auszeichnungen (*kursiv*, **fett**, `Code`) entfernen: die Seite zeigt reinen Text."""
+    return re.sub(r"(\*{1,2}|_{2}|`)(.+?)\1", r"\2", kurz or "").strip()
 
 
 def pruefe(kurz, text):
@@ -112,6 +117,7 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         main, _ = volltext.clean(texts[uri]["text"])
         main = re.sub(r"\s+", " ", main).strip()[:MAX_ZEICHEN]
         kurz, usage = anfrage(p.get("name") or "", main, schluessel)
+        kurz = glaetten(kurz)
         tokens[0] += usage.get("prompt_tokens", 0)
         tokens[1] += usage.get("completion_tokens", 0)
         grund = pruefe(kurz, main)
@@ -123,6 +129,8 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         for sha in sorted(have):
             f.write(json.dumps(have[sha], ensure_ascii=False) + "\n")
     ok = [r for r in have.values() if r["kurzfassung"]]
+    sprachmodell.protokoll(base, "kurzfassungen", MODELL, len(todo), {"ein": tokens[0], "aus": tokens[1]},
+                           sum(1 for uri, p in todo if have[texts[uri]["sha"]]["verworfen"]))
     print(f"Kurzfassungen: {len(todo)} neu ({tokens[0]} Eingabe-, {tokens[1]} Ausgabe-Tokens), "
           f"{len(ok)} vorhanden, {sum(1 for r in have.values() if r['verworfen'])} verworfen → {base}")
     sample = base / "stichprobe_kurzfassungen.tsv"
@@ -143,5 +151,5 @@ def fuer_seite(verzeichnis=None):
     """Drucksache → Kurzfassung für den Export, nur wenn freigegeben."""
     if not FREIGEGEBEN:
         return {}
-    return {r["drucksache"]: {"text": r["kurzfassung"], "modell": r["modell"], "erzeugt": r["erzeugt"]}
+    return {r["drucksache"]: {"text": glaetten(r["kurzfassung"]), "modell": r["modell"], "erzeugt": r["erzeugt"]}
             for r in laden(verzeichnis).values() if r["kurzfassung"]}
