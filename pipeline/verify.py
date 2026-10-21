@@ -133,6 +133,8 @@ Inhalt
 - audit_stufe_c.tsv: Gegenprüfung der Orte, die ein Sprachmodell im Text der Hauptdokumente erkannt hat (Stufe C;
   Aktion bestätigt/herabgestuft/neu, Methode, Ort, Ortsteil, Konfidenz, Modell; keine Textauszüge). Übernommen
   werden die Orte erst nach Prüfung einer Stichprobe von Hand.
+- bonn/kurzfassungen.tsv (erst nach Freigabe): KI-Kurzfassungen je Drucksache mit Modell, Datum und Kennzeichnung;
+  abgeleitet, kein Zitat. Prüfungen: kurzfassungen/vorpruefung_kurzfassungen_v*.tsv (KI-Vorprüfung, gekennzeichnet)
 - LICENSE-DATA.md: Quellen und Lizenzen je Datei
 
 Bebauungspläne

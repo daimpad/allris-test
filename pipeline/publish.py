@@ -190,7 +190,7 @@ def write_geojson(path, cache, sources):
     return len(features)
 
 
-def write_dcat(path, data_start, modified):
+def write_dcat(path, data_start, modified, kurzfassungen=False):
     site, base = config.SITE_URL, f"{config.SITE_URL}data/export/"
     mt = "https://www.iana.org/assignments/media-types/"
     rights = ("Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, "
@@ -247,6 +247,9 @@ def write_dcat(path, data_start, modified):
             dist("Baustellen und mögliche Umsetzungen (JSON)", "bonn/baustellen.json", "application/json", "cc0",
                  "Gemeldete Baustellen der Stadt Bonn (Termine unverbindlich, Archiv ab 19.10.2026) mit möglichen "
                  "Umsetzungen von Beschlüssen der Konfidenz hoch – ein Indiz, kein Beleg."),
-        ],
+        ] + ([dist("KI-Kurzfassungen (TSV)", "bonn/kurzfassungen.tsv", "text/tab-separated-values", "cc-by",
+                   "Mit einem Sprachmodell aus dem Text der Hauptdokumente formulierte Kurzfassungen, abgeleitet und "
+                   "gekennzeichnet; kein Zitat, sie können Fehler enthalten. Maßgeblich ist das Original.")]
+             if kurzfassungen else []),
     }
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")

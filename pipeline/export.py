@@ -30,6 +30,9 @@ def _status(row):
 
 
 _KURZ = None
+KURZ_COLUMNS = ["drucksache", "kurzfassung", "modell", "erzeugt", "kennzeichnung"]
+KURZ_HINWEIS = ("KI-Kurzfassung (abgeleitet): mit einem Sprachmodell aus dem Text des Dokuments formuliert, kein Zitat; "
+                "kann Fehler enthalten, maßgeblich ist das Original")
 
 
 def _kurzfassungen():
@@ -240,8 +243,13 @@ def export_all():
     publish.write_calendar(out / "termine.ics", meetings)
     n_points = publish.write_geojson(out / "vorlagen.geojson", cache,
                                      [{k: v for k, v in s.items() if k != "retrieved_at"} for s in sources])
+    # Kurzfassungen (nur freigegebene): eigene Datei für das Datenpaket, ohne Text der Quelle
+    kurz = _kurzfassungen()
+    if kurz:
+        _write_tsv(out / "kurzfassungen.tsv", KURZ_COLUMNS,
+                   [(ref, k["text"], k["modell"], k["erzeugt"], KURZ_HINWEIS) for ref, k in sorted(kurz.items())])
     publish.write_dcat(out / "dcat.jsonld", min(p["date"] for p in cache.values() if p["date"]),
-                       stand[:10] or datetime.now(timezone.utc).date().isoformat())
+                       stand[:10] or datetime.now(timezone.utc).date().isoformat(), kurzfassungen=bool(kurz))
     n_shards = chat.write_chat(out / "chat", db, cache, meetings, sources, _meta(db, True))
     # Bebauungspläne: Register je Plannummer (Grundlage der Planchronik)
     reg = plans.register(cache.values(), _plans())
