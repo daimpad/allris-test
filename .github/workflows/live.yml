@@ -18,18 +18,20 @@ jobs:
   live:
     runs-on: ubuntu-latest
     steps:
+      # abgebrochen heißt: ein neuerer Lauf hat ihn ersetzt; dessen Prüfung folgt (keine Fehlermeldung)
       - name: Veröffentlichung abgeschlossen?
-        if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion != 'success'
+        if: github.event_name == 'workflow_run' && !contains(fromJSON('["success", "cancelled"]'), github.event.workflow_run.conclusion)
         run: |
           echo "::error::Der Lauf „Daten aktualisieren und Seite veröffentlichen“ endete mit ${{ github.event.workflow_run.conclusion }}"
           exit 1
 
       # Der eigene Server holt den Branch deploy per Webhook; etwas Zeit lassen
       - name: Warten auf die Bereitstellung
-        if: github.event_name == 'workflow_run'
+        if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
         run: sleep 180
 
       - name: Hauptadresse und Spiegel prüfen
+        if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
         run: |
           set -u
           fail=0
@@ -51,5 +53,15 @@ jobs:
             echo "::error::Datenstand auf ris-bonn.datenatlas.de ist älter als zwei Tage (${stand:-unbekannt})"; fail=1
           else
             echo "ok  Datenstand $stand"
+          fi
+          # Holt der eigene Server den Branch deploy ab? Gleicher Stand wie im Branch (21.10.2026: Server blieb
+          # elf Stunden auf einem älteren Stand, die Prüfung auf zwei Tage bemerkte es nicht)
+          gen() { curl -fsSL "$1?pruefung=$(date +%s)" | python3 -c 'import json,sys;print(json.load(sys.stdin)["meta"]["generated_at"])'; }
+          soll=$(gen https://raw.githubusercontent.com/${{ github.repository }}/deploy/data/export/bonn/index.json) || soll=""
+          ist=$(gen https://ris-bonn.datenatlas.de/data/export/bonn/index.json) || ist=""
+          if [ -n "$soll" ] && [ "$soll" != "$ist" ]; then
+            echo "::error::ris-bonn.datenatlas.de zeigt den Stand ${ist:-unbekannt}, der Branch deploy $soll – der Server holt den Branch nicht ab (Plesk: Git → Webhook bzw. „Abrufen“)"; fail=1
+          else
+            echo "ok  Hauptadresse auf dem Stand des Branch deploy ($soll)"
           fi
           exit $fail
