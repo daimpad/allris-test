@@ -45,6 +45,8 @@ def compact(p):
                          "evidence": o["evidence"]} for o in p["originators"]]
     d["themes"] = p["themes"]
     d["soll"] = p.get("soll")  # Soll nach Regelwerk (pipeline/soll.py), fehlt in älteren Exporten
+    if p.get("kurzfassung"):   # nur freigegebene Kurzfassungen (kurzfassung.py), abgeleitet
+        d["kurzfassung"] = {"text": p["kurzfassung"]["text"], "modell": p["kurzfassung"]["modell"]}
     d["locations"] = [{k: loc[k] for k in LOC_FIELDS} for loc in p["locations"]]
     d["superordinated"] = [{k: r[k] for k in REL_FIELDS} for r in p["superordinated"]]
     d["subordinated"] = [{k: r[k] for k in REL_FIELDS} for r in p["subordinated"]]

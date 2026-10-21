@@ -33,7 +33,9 @@ def events(p, with_followups=False):
     if p["date"]:
         out.append({"date": p["date"], "id": f"{p['source_object']}#vorlage",
                     "title": f"Neue Vorlage {p['reference']}: {p['name']}",
-                    "summary": f"{p['paper_type']} · federführend: {p['amt'] or 'unbekannt'} · Stand: {p['stand']}"})
+                    "summary": f"{p['paper_type']} · federführend: {p['amt'] or 'unbekannt'} · Stand: {p['stand']}"
+                               + (f" · KI-Kurzfassung (abgeleitet, kann Fehler enthalten): {p['kurzfassung']['text']}"
+                                  if p.get("kurzfassung") else "")})
     for i, s in enumerate(p["steps"]):
         if s["typ"] in ("beratung", "entscheidung") and s.get("result") and s.get("date"):
             out.append({"date": s["date"], "id": f"{p['source_object']}#beratung-{i}",

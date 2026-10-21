@@ -145,6 +145,15 @@ test("Datenschutz: Hausnummern nur in Titeln aus der Einwohnerschaft ausgelassen
   assert.equal(titel["261088"], "CDU-Antrag: Bäume an der Frongasse 12");
 });
 
+test("hole_vorlage: KI-Kurzfassung als abgeleitet gekennzeichnet", async () => {
+  const kurz = { ...VORLAGE, kurzfassung: { text: "Es geht um Bäume.", modell: "m" } };
+  const t = createTools({ today: "2026-10-18", load: async (p) => structuredClone(p === "bonn/chat/vorlagen/2610.json" ? { papers: { 261088: kurz } } : FILES[p]) });
+  const v = await t.run("hole_vorlage", { drucksache: "261088" });
+  assert.equal(v.kurzfassung.text, "Es geht um Bäume.");
+  assert.equal(v.kurzfassung.status, "abgeleitet");
+  assert.match(v.kurzfassung.hinweis, /kein Zitat/);
+});
+
 test("hole_vorlage: Felder, Status und Quellen-ID", async () => {
   const t = tools();
   const v = await t.run("hole_vorlage", { drucksache: " 261088 " });
@@ -154,6 +163,7 @@ test("hole_vorlage: Felder, Status und Quellen-ID", async () => {
   assert.equal(v.themen[0].thema, "Umwelt, Grün und Klima");
   assert.equal(v.folgevorlagen[0].drucksache, "261088-01 ST");
   assert.equal(v.abgerufen, "2026-10-18T12:00:00+00:00");
+  assert.equal(v.kurzfassung, null);
   assert.match((await t.run("hole_vorlage", { drucksache: "261099" })).fehler, /nicht enthalten/);
   assert.match((await t.run("hole_vorlage", { drucksache: "abc" })).fehler, /keine Drucksachennummer/);
   assert.match((await t.run("hole_vorlage", { drucksache: "999999" })).fehler, /nicht enthalten/);

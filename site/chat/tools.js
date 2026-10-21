@@ -45,7 +45,7 @@ export const TOOLS = [
   },
   {
     name: "hole_vorlage",
-    description: "Details einer Vorlage: Titel, Art, Datum, Stand, federführendes Amt, Einreichende, Themen, Ortsbezüge, verbundene Vorlagen, Links zum Ratsinformationssystem und Quellen-ID.",
+    description: "Details einer Vorlage: Titel, Art, Datum, Stand, federführendes Amt, Einreichende, Themen, Ortsbezüge, verbundene Vorlagen, Links zum Ratsinformationssystem und Quellen-ID; soweit vorhanden eine KI-Kurzfassung (abgeleitet).",
     parameters: { type: "object", additionalProperties: false, required: ["drucksache"], properties: { drucksache: DRUCKSACHE } },
   },
   {
@@ -323,6 +323,8 @@ export function createTools({ load, today = berlinToday() } = {}) {
         einreichende: p.originators.map((o) => ({ name: o.actor, typ: o.actor_type, status: o.derived ? "abgeleitet" : "belegt", fundstelle: o.evidence })),
         themen: p.themes.map((t) => ({ thema: label[t.theme] ?? t.theme, status: "abgeleitet", methode: t.method, fundstelle: t.evidence, konfidenz: t.confidence })),
         parteien: p.parties,
+        kurzfassung: p.kurzfassung ? { text: p.kurzfassung.text, status: "abgeleitet", modell: p.kurzfassung.modell,
+          hinweis: "Mit einem Sprachmodell aus dem Text des Dokuments formuliert, kein Zitat; kann Fehler enthalten. Maßgeblich ist das Original." } : null,
         orte: p.locations.slice(0, 10).map(loc),
         orte_gesamt: p.locations.length,
         bebauungsplaene: p.plans.map((x) => ({ nummer: x.nr, fundstelle: x.evidence, geltungsbereich_bekannt: x.area, treffer: x.match || null })),
