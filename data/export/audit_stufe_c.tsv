@@ -313,3 +313,67 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 241580-01 ST	keine Änderung						mistral-large-latest
 241592	geändert	neu	llm_objekt	Frankenbad	Nordstadt	niedrig	mistral-large-latest
 241592	geändert	neu	llm_objekt	Stadthalle Bad Godesberg	Alt-Godesberg	niedrig	mistral-large-latest
+241596	geändert	bestätigt	volltext_strasse	Scheidfeldstraße	Holtorf	mittel	mistral-large-latest
+241597	keine Änderung						mistral-large-latest
+241598	keine Änderung						mistral-large-latest
+241599	geändert	bestätigt	volltext_strasse+hausnummer	Adenauerallee	Gronau	mittel	mistral-large-latest
+241599	geändert	bestätigt	volltext_ortsteil_name	Muffendorf	Muffendorf	mittel	mistral-large-latest
+241601	keine Änderung						mistral-large-latest
+241603-01 ST	keine Änderung						mistral-large-latest
+241606	geändert	neu	llm_objekt	Kunstmuseum Bonn	Gronau	niedrig	mistral-large-latest
+241606	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
+241607	geändert	bestätigt	volltext_strasse+kreuzung	Münsterplatz	Bonn-Zentrum	mittel	mistral-large-latest
+241607	geändert	bestätigt	volltext_strasse+kreuzung	Bottlerplatz	Bonn-Zentrum	mittel	mistral-large-latest
+241607	geändert	neu	llm_objekt	Friedensplatz	Bonn-Zentrum	niedrig	mistral-large-latest
+241607	geändert	bestätigt	volltext_strasse+kreuzung	Windeckstraße	Bonn-Zentrum	mittel	mistral-large-latest
+241607	geändert	bestätigt	volltext_strasse+kreuzung	Vivatsgasse	Bonn-Zentrum	mittel	mistral-large-latest
+241607	geändert	bestätigt	volltext_strasse+kreuzung	Poststraße	Bonn-Zentrum	mittel	mistral-large-latest
+241610	keine Änderung						mistral-large-latest
+241611	keine Änderung						mistral-large-latest
+241616	geändert	neu	llm_objekt	StadtMuseum Bonn	Bonn-Zentrum	niedrig	mistral-large-latest
+241618	keine Änderung						mistral-large-latest
+241620	keine Änderung						mistral-large-latest
+241621	keine Änderung						mistral-large-latest
+241624	keine Änderung						mistral-large-latest
+241633	geändert	neu	llm_objekt	Burg Medinghoven	Duisdorf	niedrig	mistral-large-latest
+241633-01 ST	geändert	neu	llm_objekt	Burg Medinghoven	Duisdorf	niedrig	mistral-large-latest
+241635	keine Änderung						mistral-large-latest
+241636	geändert	bestätigt	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	mistral-large-latest
+241636	geändert	bestätigt	volltext_strasse	Lambareneweg	Nordstadt	mittel	mistral-large-latest
+241642	keine Änderung						mistral-large-latest
+241643	keine Änderung						mistral-large-latest
+241644	keine Änderung						mistral-large-latest
+241648	keine Änderung						mistral-large-latest
+241650	keine Änderung						mistral-large-latest
+241651	keine Änderung						mistral-large-latest
+241652	keine Änderung						mistral-large-latest
+241653	keine Änderung						mistral-large-latest
+241655	keine Änderung						mistral-large-latest
+241655-01	keine Änderung						mistral-large-latest
+241656	keine Änderung						mistral-large-latest
+241657	keine Änderung						mistral-large-latest
+241660	keine Änderung						mistral-large-latest
+241663	geändert	bestätigt	volltext_strasse+kreuzung	Friedrich-Ebert-Allee	Gronau	mittel	mistral-large-latest
+241663	geändert	bestätigt	volltext_strasse+kreuzung	Olof-Palme-Allee	Gronau	mittel	mistral-large-latest
+241663	geändert	bestätigt	volltext_strasse+kreuzung	Nahum-Goldmann-Allee	Gronau	mittel	mistral-large-latest
+241664	geändert	bestätigt	volltext_ortsteil_name	Nordstadt	Nordstadt	mittel	mistral-large-latest
+241664	geändert	bestätigt	volltext_ortsteil_name	Kessenich	Kessenich	mittel	mistral-large-latest
+241664	geändert	bestätigt	volltext_ortsteil_name	Endenich	Endenich	mittel	mistral-large-latest
+241665	keine Änderung						mistral-large-latest
+241666	keine Änderung						mistral-large-latest
+241667	keine Änderung						mistral-large-latest
+241668	keine Änderung						mistral-large-latest
+241671	geändert	neu	llm_objekt	Frankenbad	Nordstadt	niedrig	mistral-large-latest
+241671	geändert	neu	llm_objekt	Sportpark Nord	Nordstadt	niedrig	mistral-large-latest
+241671	geändert	bestätigt	volltext_stadtbezirk_name	Beuel		mittel	mistral-large-latest
+241671	geändert	neu	llm_objekt	Schwimmhalle Hardtbergbad	Duisdorf	niedrig	mistral-large-latest
+241672	keine Änderung						mistral-large-latest
+241673	geändert	neu	llm_objekt	Königin-Juliana-Schule	Duisdorf	niedrig	mistral-large-latest
+241677	keine Änderung						mistral-large-latest
+241680	keine Änderung						mistral-large-latest
+241683	keine Änderung						mistral-large-latest
+241684	Liste (8 Ortsteile), nicht verortet						mistral-large-latest
+241685	Liste (6 Ortsteile), nicht verortet						mistral-large-latest
+241686	Liste (6 Ortsteile), nicht verortet						mistral-large-latest
+241688	keine Änderung						mistral-large-latest
+241689	keine Änderung						mistral-large-latest
