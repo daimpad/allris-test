@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 550,
-  "generated_at": "2026-10-21T07:29:41+00:00",
+  "generated_at": "2026-10-21T09:46:08+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-21T07:24:12+00:00"
+    "retrieved_at": "2026-10-21T09:38:23+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-21T07:27:14+00:00"
+    "retrieved_at": "2026-10-21T09:40:52+00:00"
    },
    {
     "name": "osm",
@@ -48,7 +48,7 @@
    "reference": "261798-01",
    "name": "Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“ hier: Dringlichkeitsentscheidung aufgrund der Ablehnung der Befreiung im Naturschutzbeirat",
    "paper_type": "Dringlichkeitsentscheidung OB",
-   "date": "2026-10-13",
+   "date": "2026-10-21",
    "amt": "67 Amt für Umwelt und Stadtgrün",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029806",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3233090&OTYP=41",
@@ -178,7 +178,7 @@
      "typ": "veroeffentlichung",
      "label": "Datum der Vorlage",
      "status": "belegt",
-     "date": "2026-10-13",
+     "date": "2026-10-21",
      "source": "oparl-bonn",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029806",
      "note": "datum"
@@ -1525,7 +1525,7 @@
      "reference": "261798-01",
      "paper_type": "Dringlichkeitsentscheidung OB",
      "name": "Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“ hier: Dringlichkeitsentscheidung aufgrund der Ablehnung der Befreiung im Naturschutzbeirat",
-     "date": "2026-10-13"
+     "date": "2026-10-21"
     }
    ],
    "locations": [
@@ -1629,7 +1629,7 @@
      "typ": "folgevorlage",
      "label": "Dringlichkeitsentscheidung OB",
      "status": "belegt",
-     "date": "2026-10-13",
+     "date": "2026-10-21",
      "source": "oparl-bonn",
      "reference": "261798-01",
      "title": "Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“ hier: Dringlichkeitsentscheidung aufgrund der Ablehnung der Befreiung im Naturschutzbeirat"

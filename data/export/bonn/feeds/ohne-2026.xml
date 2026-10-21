@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ohne-2026</id>
 <title>RIS-Karte Bonn – stadtweit / ohne Ortsbezug 2026</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2026</subtitle>
-<updated>2026-10-20T00:00:00Z</updated>
+<updated>2026-10-21T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ohne-2026.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030047#vorlage</id>
+<title>Neue Vorlage 261982: BBB-Anfrage: Einsparmöglichkeiten im Betrieb der Oper und des Theaters; hier Beratung durch Dritte</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261982"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030047"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030043#vorlage</id>
 <title>Neue Vorlage 261978: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261810-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029729"/>
 <summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029723#vorlage</id>
-<title>Neue Vorlage 261514-01 AA: Änderungsantrag zu Drs. 261514 - Änderung der „Richtlinien zur Förderung der Jugendarbeit – Maßnahmen, Beschaffungen und Investitionen“ – Anpassung nach Stellungnahme AG 78 Jugendförderung</title>
-<updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261514-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029723"/>
-<summary>Änderungsantrag · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
 </entry>
 </feed>
