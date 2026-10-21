@@ -206,10 +206,12 @@ def _add_location(r, locations, gaz):
     """Ort einer Gazetteer-Zeile in die Ortstabelle; liefert die Orts-ID."""
     if r["level"] == "strasse":
         loc_id, source = f"strasse:{r['name']}|{r['ortsteil']}", r["source"]
+    elif r["level"] == "objekt":   # Gebäude oder Anlage aus OSM (Stufe C)
+        loc_id, source = f"objekt:{r['name']}|{r['ortsteil']}", "osm"
     else:
         loc_id, source = f"{r['level']}:{r['name']}", "geo-bonn"
     nr = gaz.ot_by_name[r["ortsteil"]]["ortsteil"] if r["ortsteil"] else None
-    locations[loc_id] = (loc_id, r["name"] if r["level"] == "strasse" else None, None, None,
+    locations[loc_id] = (loc_id, r["name"] if r["level"] in ("strasse", "objekt") else None, None, None,
                          r["name"], r["lon"], r["lat"], r["ortsteil"], nr, r["bezirk"],
                          r["level"], source)
     return loc_id

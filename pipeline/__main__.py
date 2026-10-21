@@ -1,4 +1,4 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|all}"""
 import sys
 
 from . import baustellen, build, check, export, fetch, geocode, kandidaten, kurzfassung, seo, soll, stufe_c, verify
@@ -11,6 +11,7 @@ STEPS = {
     "fetch-meetings": fetch.fetch_meetings,
     "fetch-plans": fetch.fetch_plans,
     "fetch-housenumbers": fetch.fetch_housenumbers,
+    "fetch-objects": fetch.fetch_objects,
     "fetch-texts": fetch.fetch_texts,
     "fetch-streets": fetch.fetch_streets,
     "gazetteer": geocode.write_gazetteer,

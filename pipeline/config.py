@@ -32,6 +32,7 @@ BPLAN_URL = "https://stadtplan.bonn.de/geojson?Thema=20074"
 # dazu, bei Titeln mit Hausnummer den Ortsteil einer Straße zu bestimmen, die durch mehrere Ortsteile läuft.
 HAUSNUMMERN = GEO / "hausnummern_bonn.json"
 HAUSNUMMERN_URL = "https://stadtplan.bonn.de/geojson?OD=171"
+OBJEKTE = GEO / "objekte_bonn.json"
 DB = BUILD / "allris.sqlite"
 
 OPARL_BODY = "https://www.bonn.sitzung-online.de/oparl/bodies/1"
