@@ -27,12 +27,19 @@ API = "https://api.mistral.ai/v1/chat/completions"
 # (18 plausibel, 8 teilweise, 2 falsch, 2 unklar; Fehler: falscher Akteur, Vermutungen, falsche Orte, vertauschter
 # Kostenträger; data/export/kurzfassungen/vorpruefung_kurzfassungen_v1.tsv)
 MODELL = os.environ.get("KURZFASSUNG_MODELL", "mistral-large-latest")
-FASSUNG = 3   # Fassung 3: ohne Überschrift, Absender im ersten Satz, Kosten nur laut Text (Vorprüfung v2)
+FASSUNG = 4   # 3: ohne Überschrift, Absender im ersten Satz, Kosten nur laut Text (Vorprüfung v2); 4: Fragen von
+#               Anfragen nur wie gestellt, Gremium und Fraktion nur laut Text (Vorprüfung v4: 20/10/0)
 MAX_JE_LAUF = int(os.environ.get("KURZFASSUNG_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
 MAX_ZEICHEN = 12000
 UEBERNAHME_WOERTER = 6
 FREIGEGEBEN = False   # erst nach Prüfung der Stichprobe von Hand auf True setzen
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
+# Absender und Gremien, die in einer Kurzfassung nur stehen dürfen, wenn Titel oder Text sie nennen (KI-Vorprüfung v4:
+# „Die Grünen beantragen“ und „dem Rat vorgelegt“ ohne Beleg)
+PARTEIEN = {"CDU": r"\bCDU\b", "SPD": r"\bSPD\b", "Grüne": r"\bGrüne|\bGRÜNE|Bündnis 90", "FDP": r"\bFDP\b",
+            "Linke": r"\bLinke|\bLINKE", "Volt": r"\bVolt\b", "BBB": r"\bBBB\b|Bürger Bund", "AfD": r"\bAfD\b"}
+GREMIEN = {"Rat": r"\b(Rat|Rates|Rats\w*|Stadtrat\w*)\b", "Bezirksvertretung": r"Bezirksvertretung",
+           "Ausschuss": r"[Aa]usschuss"}
 HAUSNUMMER = re.compile(r"(?:straße|str\.|weg|platz|allee|gasse|ring|ufer)\s+\d{1,4}\b", re.I)
 
 ANWEISUNG = """Du schreibst Kurzfassungen von Vorlagen des Rates der Stadt Bonn für Bürgerinnen und Bürger ohne
@@ -47,6 +54,8 @@ beantragt, vorgeschlagen, beschlossen oder mitgeteilt wird und, wenn genannt, we
 - Vermute nichts und ergänze nichts („vermutlich“, „oder“-Aufzählungen möglicher Inhalte). Steht wenig im Text, schreibe
   kurz, was dort steht.
 - Wer Kosten trägt, schreibst du nur, wenn es im Text ausdrücklich steht.
+- Bei einer Anfrage gibst du nur die Fragen wieder, die gestellt werden; füge keine eigenen Fragen hinzu.
+- Nenne eine Fraktion oder ein Gremium (Rat, Ausschuss, Bezirksvertretung) nur, wenn Titel oder Text sie nennen.
 Beginne direkt mit dem ersten Satz und nenne den Absender darin („Die Verwaltung schlägt vor …“, „Die CDU-Fraktion
 beantragt …“); schreibe keine Überschrift und keine Angaben wie „Absender:“ oder „Art der Vorlage:“.
 Formuliere vollständig mit eigenen Worten; übernimm keine Sätze und keine längeren Wortfolgen aus dem Text. Nenne keine
@@ -109,7 +118,15 @@ def fremde_zahl(kurz, text):
     return None
 
 
-def pruefe(kurz, text):
+def fremder_akteur(kurz, quelle):
+    """Fraktion oder Gremium, das die Kurzfassung nennt, Titel und Text aber nicht (sonst None)."""
+    for name, rx in {**PARTEIEN, **GREMIEN}.items():
+        if re.search(rx, kurz or "") and not re.search(rx, quelle or ""):
+            return name
+    return None
+
+
+def pruefe(kurz, text, titel=""):
     """Grund, aus dem eine Kurzfassung verworfen wird, oder None."""
     if not kurz or len(_woerter(kurz)) < 8:
         return "zu kurz"
@@ -120,6 +137,9 @@ def pruefe(kurz, text):
     z = fremde_zahl(kurz, text)
     if z:
         return f"Zahl nicht im Text: {z}"
+    a = fremder_akteur(kurz, f"{titel} {text}")
+    if a:
+        return f"nicht in Titel oder Text: {a}"
     return None
 
 
@@ -178,7 +198,7 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         if r.get("fassung", 1) == FASSUNG and r["kurzfassung"] and r.get("datei") in texts:
             main = re.sub(r"\s+", " ", volltext.clean(texts[r["datei"]]["text"])[0]).strip()[:MAX_ZEICHEN]
             kurz = ohne_kostensatz(glaetten(r["kurzfassung"]), main)
-            grund = pruefe(kurz, main)
+            grund = pruefe(kurz, main, (papers.get(r["datei"]) or {}).get("name") or "")
             r["kurzfassung"], r["verworfen"] = (None, grund) if grund else (kurz, None)
     # ältere Fassungen zuerst (so entsteht die neue Stichprobe aus denselben Vorlagen), danach neue Texte
     alt = lambda uri: have[texts[uri]["sha"]].get("fassung", 1) < FASSUNG
@@ -193,7 +213,7 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         kurz = ohne_kostensatz(glaetten(kurz), main)
         tokens[0] += usage.get("prompt_tokens", 0)
         tokens[1] += usage.get("completion_tokens", 0)
-        grund = pruefe(kurz, main)
+        grund = pruefe(kurz, main, p.get("name") or "")
         have[texts[uri]["sha"]] = {"sha": texts[uri]["sha"], "datei": uri, "drucksache": p["reference"],
                                    "kurzfassung": None if grund else kurz, "verworfen": grund, "modell": MODELL,
                                    "fassung": FASSUNG,

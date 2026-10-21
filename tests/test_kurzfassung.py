@@ -16,6 +16,15 @@ class KurzfassungTest(unittest.TestCase):
         self.assertIsNotNone(kurzfassung.uebernahme("Dazu sollen neue Geräte aufgestellt und die Wege erneuert werden.", TEXT))
         self.assertIsNone(kurzfassung.uebernahme("Der Spielplatz bekommt neue Geräte und bessere Wege.", TEXT))
 
+    def test_fraktion_und_gremium_nur_mit_beleg(self):
+        text = "Die Verwaltung wird gebeten, den Spielplatz an der Endenicher Straße zu erneuern."
+        kurz = "Die Grünen möchten einen neuen Spielplatz in Endenich. Darüber entscheidet bald der Rat."
+        self.assertEqual(kurzfassung.fremder_akteur(kurz, text), "Grüne")
+        self.assertEqual(kurzfassung.fremder_akteur(kurz, "Antrag der Fraktion BÜNDNIS 90/DIE GRÜNEN " + text), "Rat")
+        self.assertIsNone(kurzfassung.fremder_akteur(kurz, "Antrag von Bündnis 90/Die Grünen an den Rat " + text))
+        self.assertIsNone(kurzfassung.fremder_akteur("Der Beirat empfiehlt den Spielplatz.", text))
+        self.assertEqual(kurzfassung.pruefe(kurz, text, "Antrag der Grünen"), "nicht in Titel oder Text: Rat")
+
     def test_pruefe(self):
         gut = "Der Spielplatz in Endenich soll neue Geräte und bessere Wege bekommen. Bezahlt wird das aus dem Haushalt der Stadt."
         self.assertIsNone(kurzfassung.pruefe(gut, TEXT))
