@@ -26,6 +26,7 @@ from pathlib import Path
 
 from . import config, sprachmodell, volltext
 from .geocode import Gazetteer
+from .objekte import Objekte
 
 MODELL = os.environ.get("STUFE_C_MODELL",
                         {"anthropic": "claude-sonnet-5-5"}.get(sprachmodell.ANBIETER, "mistral-large-latest"))
@@ -144,9 +145,10 @@ def erzeugen(db, verzeichnis=None, anfrage=_anfrage):
           f"{len(have)} vorhanden → {base / DATEI}")
 
 
-def pruefen(gaz, text, orte, b_rows, bv_bezirke=()):
-    """Gegenprüfung eines Ergebnisses. b_rows: Ortsbezüge aus volltext.locate. Liefert (Änderungen, Befund):
-    Änderungen als Zeilen mit aktion („bestätigt“, „herabgestuft“, „neu“) und den Feldern von Gazetteer.locate."""
+def pruefen(gaz, text, orte, b_rows, bv_bezirke=(), objekte=None, objekt_befunde=None):
+    """Gegenprüfung eines Ergebnisses. b_rows: Ortsbezüge aus volltext.locate; objekte: Verzeichnis der Gebäude und
+    Anlagen (objekte.Objekte). Liefert (Änderungen, Befund): Änderungen als Zeilen mit aktion („bestätigt“,
+    „herabgestuft“, „neu“) und den Feldern von Gazetteer.locate. objekt_befunde sammelt (Name, Befund) je Objekt."""
     main = volltext.clean(text)[0]
     low = re.sub(r"\s+", " ", main).lower()
     found = []
@@ -154,6 +156,16 @@ def pruefen(gaz, text, orte, b_rows, bv_bezirke=()):
         if o["name"].lower() not in low:
             continue   # nicht wörtlich im Hauptteil: nicht übernommen
         hint = o["ortsteil"] if o["ortsteil"] in gaz.ot_by_name else ""
+        if o["art"] == "objekt" and objekte is not None:
+            # Ortsteil des Modells nur, wenn er im Text steht
+            obj, befund = objekte.finden(o["name"], hint if hint.lower() in low else "")
+            if objekt_befunde is not None:
+                objekt_befunde.append((o["name"], befund if obj is None else f"{obj['name']} ({obj['ortsteil']}), {befund}"))
+            if obj:
+                found.append((o, dict(level="objekt", name=obj["name"], ortsteil=obj["ortsteil"], bezirk=obj["bezirk"],
+                                      lon=obj["lon"], lat=obj["lat"], confidence="niedrig", method="objekt",
+                                      objektart=obj["art"], osm=obj["osm"])))
+                continue
         rows = gaz.locate(f"{o['name']}, {hint}" if hint else o["name"], bv_bezirke)
         rows = [r for r in rows if r["name"] not in volltext.GATTUNG and (not hint or r["level"] != "ortsteil"
                                                                           or r["name"] == hint)]
@@ -185,8 +197,9 @@ def pruefen(gaz, text, orte, b_rows, bv_bezirke=()):
         # ein Ortsteil, in dem schon ein Ort aus Stufe B liegt, kommt nicht als eigene Fläche hinzu
         if o["rolle"] == "gegenstand" and r["level"] != "stadtbezirk" and not (
                 r["level"] == "ortsteil" and r["ortsteil"] in {b["ortsteil"] for b in b_rows}):
+            lage = f"; Lage laut OpenStreetMap ({r['objektart']}, {r['osm']})" if r["level"] == "objekt" else ""
             out.append(dict(r, aktion="neu", method=f"llm_{r['level']}", confidence="niedrig", art=o["art"],
-                            evidence=f"mit Sprachmodell im Hauptteil des Hauptdokuments erkannt: {r['name']}"))
+                            evidence=f"mit Sprachmodell im Hauptteil des Hauptdokuments erkannt: {r['name']}{lage}"))
     return out, "geändert" if out else "keine Änderung"
 
 
@@ -207,16 +220,18 @@ def anwenden(verzeichnis=None, db_path=None):
         print("Stufe C: keine Ergebnisse des Sprachmodells – nichts zu prüfen.")
         db.close()
         return
-    gaz = Gazetteer()
+    gaz, objekte = Gazetteer(), Objekte()
     bv = {}
     for pid, bez in db.execute("SELECT c.paper_id, o.name FROM consultation c JOIN organization o "
                                "ON o.id = c.organization_id WHERE o.name LIKE 'Bezirksvertretung %'"):
         bv.setdefault(pid, set()).add(bez.replace("Bezirksvertretung ", ""))
-    audit, changes = [], {}
+    audit, changes, objekt_audit = [], {}, []
     for ref, res in sorted(by_ref.items()):
         p, text = kand[ref], texte[kand[ref]["main_file"]]["text"]
         b_rows, _ = volltext.locate(gaz, text, bv.get(p["id"], ()))
-        rows, befund = pruefen(gaz, text, res["orte"], b_rows, bv.get(p["id"], ()))
+        obj_befunde = []
+        rows, befund = pruefen(gaz, text, res["orte"], b_rows, bv.get(p["id"], ()), objekte, obj_befunde)
+        objekt_audit += [(ref, name, b) for name, b in obj_befunde]
         if res.get("fehler"):
             befund = res["fehler"]
         changes[ref] = rows
@@ -229,6 +244,10 @@ def anwenden(verzeichnis=None, db_path=None):
         w = csv.writer(f, delimiter="\t", lineterminator="\n")
         w.writerow(["drucksache", "befund", "aktion", "methode", "ort", "ortsteil", "konfidenz", "modell"])
         w.writerows(audit)
+    with open(config.EXPORT / "audit_stufe_c_objekte.tsv", "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
+        w.writerow(["drucksache", "name (Sprachmodell)", "befund (Verzeichnis der Gebäude und Anlagen)"])
+        w.writerows(objekt_audit)
     n = {a: sum(1 for rs in changes.values() for r in rs if r["aktion"] == a) for a in ("neu", "bestätigt", "herabgestuft")}
     print(f"Stufe C: {len(by_ref)} Vorlagen geprüft; {n} → audit_stufe_c.tsv"
           f"{'' if FREIGEGEBEN else ' (nicht übernommen: noch nicht freigegeben)'}")

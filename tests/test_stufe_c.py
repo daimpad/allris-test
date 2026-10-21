@@ -57,6 +57,22 @@ class StufeCTest(unittest.TestCase):
                          [("Endenich", "neu", "llm_ortsteil", "niedrig")])
         self.assertNotIn("Bänke", rows[0]["evidence"])  # Fundstelle ohne Textauszug
 
+    def test_gebaeude_aus_dem_verzeichnis(self):
+        from pipeline.objekte import Objekte
+        obj = Objekte({"way/1": {"name": "Adelheidisschule", "art": "Schule", "ortsteil": "Vilich", "bezirk": "Beuel",
+                                 "lon": 7.1, "lat": 50.75}})
+        text = KOPF + "Die GGS Adelheidisschule wird erweitert. Vergleichbar ist die Marktschule."
+        orte = [{"name": "GGS Adelheidisschule", "art": "objekt", "rolle": "gegenstand", "ortsteil": ""},
+                {"name": "Marktschule", "art": "objekt", "rolle": "gegenstand", "ortsteil": ""}]
+        befunde = []
+        rows, _ = stufe_c.pruefen(self.gaz, text, orte, [], objekte=obj, objekt_befunde=befunde)
+        self.assertEqual([(r["name"], r["level"], r["method"], r["ortsteil"], r["confidence"]) for r in rows],
+                         [("Adelheidisschule", "objekt", "llm_objekt", "Vilich", "niedrig")])
+        self.assertIn("OpenStreetMap", rows[0]["evidence"])
+        self.assertEqual(befunde[1], ("Marktschule", "nicht im Verzeichnis"))
+        orte[0]["rolle"] = "erwähnt"
+        self.assertEqual(stufe_c.pruefen(self.gaz, text, orte[:1], [], objekte=obj)[0], [])
+
     def test_gattungsname_und_bezirk_allein_zaehlen_nicht(self):
         text = KOPF + "Wochenmarkt auf dem Markt im Stadtbezirk Bad Godesberg."
         orte = [{"name": "Markt", "art": "objekt", "rolle": "gegenstand", "ortsteil": ""},

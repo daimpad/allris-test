@@ -127,6 +127,8 @@ Inhalt
 - audit_volltext.tsv: Orte aus dem Text der Hauptdokumente je Vorlage (Befund, Methode, Ort, Ortsteil,
   Konfidenz, Nennungen; keine Textauszüge); volltext/stichprobe_volltext.tsv (30 Vorgänge zur Prüfung).
   Die Texte selbst sind nicht im Paket.
+- geo/objekte_bonn.json: benannte Gebäude und Anlagen in Bonn aus OpenStreetMap (ODbL; Name, Art, Ortsteil,
+  Mittelpunkt) für Stufe C; audit_stufe_c_objekte.tsv: Abgleich der Namen, die das Sprachmodell nennt
 - audit_stufe_c.tsv: Gegenprüfung der Orte, die ein Sprachmodell im Text der Hauptdokumente erkannt hat (Stufe C;
   Aktion bestätigt/herabgestuft/neu, Methode, Ort, Ortsteil, Konfidenz, Modell; keine Textauszüge). Übernommen
   werden die Orte erst nach Prüfung einer Stichprobe von Hand.
@@ -194,7 +196,7 @@ def package(target=None, archive=None):
         for path in sorted((config.ROOT / "data" / "soll").glob("*")):
             z.write(path, "allris-bonn/soll/" + path.name)
         # Bebauungspläne und Baustellen: Flächen, Protokolle, Berichte
-        for name in ("bebauungsplaene_bonn.geojson", "bebauungsplaene_protokoll.tsv", "hausnummern_bonn.json"):
+        for name in ("bebauungsplaene_bonn.geojson", "bebauungsplaene_protokoll.tsv", "hausnummern_bonn.json", "objekte_bonn.json"):
             if (config.GEO / name).exists():
                 z.write(config.GEO / name, "allris-bonn/geo/" + name)
         for name in ("protokoll.tsv", "STAND.json"):

@@ -213,6 +213,63 @@ def fetch_housenumbers():
     print(f"{n} Adressen in {len(out)} Straßen → {config.HAUSNUMMERN}")
 
 
+# Gebäude und Anlagen (OSM) für Stufe C: öffentliche Einrichtungen, Grün- und Sportanlagen, Friedhöfe, Bauwerke;
+# ohne Kunstwerke, Gedenktafeln, Wegkreuze und soziale Einrichtungen (Wohnheime: Schutz der Bewohner:innen)
+OBJEKT_ARTEN = {
+    "amenity": {"school": "Schule", "kindergarten": "Kita", "college": "Hochschule", "university": "Hochschule",
+                "library": "Bibliothek", "theatre": "Theater", "events_venue": "Veranstaltungsort",
+                "conference_centre": "Veranstaltungsort", "arts_centre": "Kulturzentrum",
+                "community_centre": "Bürgerhaus", "townhall": "Rathaus", "courthouse": "Gericht",
+                "fire_station": "Feuerwache", "police": "Polizei", "hospital": "Krankenhaus",
+                "swimming_pool": "Bad", "place_of_worship": "Kirche oder Gebetshaus", "grave_yard": "Friedhof",
+                "marketplace": "Marktplatz", "bus_station": "Busbahnhof"},
+    "leisure": {"park": "Park", "playground": "Spielplatz", "sports_centre": "Sportanlage", "sports_hall": "Sporthalle",
+                "stadium": "Stadion", "swimming_pool": "Bad", "pitch": "Sportplatz", "garden": "Garten",
+                "nature_reserve": "Schutzgebiet"},
+    "landuse": {"cemetery": "Friedhof"},
+    "tourism": {"museum": "Museum", "attraction": "Sehenswürdigkeit"},
+    "historic": {"castle": "Bauwerk", "palace": "Bauwerk", "manor": "Bauwerk", "monument": "Bauwerk",
+                 "building": "Bauwerk", "city_gate": "Bauwerk", "ruins": "Bauwerk", "church": "Kirche oder Gebetshaus"},
+    "building": {"civic": "Öffentliches Gebäude", "public": "Öffentliches Gebäude", "government": "Öffentliches Gebäude",
+                 "university": "Hochschule", "school": "Schule", "kindergarten": "Kita", "palace": "Bauwerk",
+                 "castle": "Bauwerk", "sports_hall": "Sporthalle", "stadium": "Stadion", "train_station": "Bahnhof",
+                 "church": "Kirche oder Gebetshaus", "hospital": "Krankenhaus"},
+    "railway": {"station": "Bahnhof"},
+}
+
+
+def fetch_objects():
+    """Benannte Gebäude und Anlagen in Bonn aus OSM (ODbL): Name, Art, Ortsteil (Point-in-Polygon), Mittelpunkt."""
+    from .geo import Ortsteile
+    s, w, n, e = config.BONN_BBOX
+    b = f"({s},{w},{n},{e})"
+    parts = "".join(f'nwr["{k}"~"^({"|".join(v)})$"]["name"]{b};' for k, v in OBJEKT_ARTEN.items())
+    # bekannte Bauwerke sind oft nur als Gebäude erfasst (Beethovenhalle, Post Tower): Gebäude mit Wikidata-Eintrag
+    parts += f'nwr["building"]["name"]["wikidata"]{b};'
+    elements = _overpass(f"[out:json][timeout:180];({parts});out tags center;")["elements"]
+    ots, out = Ortsteile(), {}
+    for x in elements:
+        t = x["tags"]
+        c = x.get("center") or {"lat": x.get("lat"), "lon": x.get("lon")}
+        art = next((v[t[k]] for k, v in OBJEKT_ARTEN.items() if t.get(k) in v), None)
+        if not art and "building" in t and "wikidata" in t and t.get("amenity") != "social_facility":
+            art = "Bauwerk"
+        ot = ots.locate(c["lon"], c["lat"]) if c.get("lat") is not None and art else None
+        if ot:
+            out[f"{x['type']}/{x['id']}"] = {"name": t["name"].strip(), "art": art, "ortsteil": ot["ortsteil_bez"],
+                                            "bezirk": ot["bezirk_bez"], "lon": round(c["lon"], 6),
+                                            "lat": round(c["lat"], 6)}
+    config.OBJEKTE.write_text(json.dumps({
+        "meta": {"source": config.SOURCES["osm"]["url"], "license": config.SOURCES["osm"]["license"],
+                 "retrieved_at": _now(), "objekte": len(out),
+                 "note": "benannte Gebäude und Anlagen (öffentliche Einrichtungen, Grün- und Sportanlagen, Friedhöfe, "
+                         "Bauwerke); Ortsteil per Point-in-Polygon; ohne Kunstwerke, Gedenktafeln, Wegkreuze und "
+                         "soziale Einrichtungen"},
+        "objekte": dict(sorted(out.items()))}, ensure_ascii=False, separators=(",", ":")) + "\n")
+    _stamp("objekte")
+    print(f"{len(out)} Gebäude und Anlagen → {config.OBJEKTE}")
+
+
 TEXT_LIST_QUERY = """query($o:Int){ files(limit:100, offset:$o, where:{name:{equals:"Sammeldokument öffentlich"},
   textExtracted:true}, orderBy:{field:URI, direction:ASC}){ totalCount pageInfo{hasNextPage} items{ uri textSha256 papers{ uri } } } }"""
 
