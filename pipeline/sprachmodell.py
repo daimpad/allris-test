@@ -3,11 +3,13 @@
 Anbieter: Umgebungsvariable SPRACHMODELL („mistral“, Standard, oder „anthropic“); Schlüssel MISTRAL_API_KEY bzw.
 ANTHROPIC_API_KEY (Secrets im Workflow). Ohne Schlüssel liefert `schluessel()` None und es wird nichts angefragt.
 """
+import csv
 import json
 import os
 import re
 import time
 import urllib.request
+from datetime import datetime, timezone
 
 ANBIETER = os.environ.get("SPRACHMODELL", "mistral")
 API = {"mistral": "https://api.mistral.ai/v1/chat/completions", "anthropic": "https://api.anthropic.com/v1/messages"}
@@ -60,3 +62,18 @@ def json_aus(text):
         return json.loads(m.group(0))
     except ValueError:
         return None
+
+
+def protokoll(verzeichnis, schritt, modell, anfragen, tokens, fehler=0):
+    """Eine Zeile je Lauf mit Anfragen in laeufe.tsv (Branch kurzfassungen): Zeitpunkt, Schritt, Modell, Anfragen,
+    Tokens, Fehler – zur Abschätzung der Kosten."""
+    if not anfragen:
+        return
+    path = os.path.join(verzeichnis, "laeufe.tsv")
+    neu = not os.path.exists(path)
+    with open(path, "a", encoding="utf-8", newline="") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
+        if neu:
+            w.writerow(["zeitpunkt", "schritt", "modell", "anfragen", "eingabe_tokens", "ausgabe_tokens", "fehler"])
+        w.writerow([datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), schritt, modell, anfragen,
+                    tokens.get("ein", 0), tokens.get("aus", 0), fehler])

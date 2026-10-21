@@ -31,6 +31,8 @@ MODELL = os.environ.get("STUFE_C_MODELL",
                         {"anthropic": "claude-sonnet-5-5"}.get(sprachmodell.ANBIETER, "mistral-large-latest"))
 MAX_JE_LAUF = int(os.environ.get("STUFE_C_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
 MAX_ZEICHEN = 16000
+MAX_TOKENS = 1200     # erster Lauf (21.10.2026, 600): zwei Antworten ohne lesbares JSON, vermutlich abgeschnitten
+MAX_VERSUCHE = 3      # gescheiterte Anfragen werden in späteren Läufen wiederholt
 FREIGEGEBEN = False   # erst nach Prüfung der Stichprobe von Hand auf True setzen
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
 DATEI = "orte_stufe_c.jsonl"
@@ -45,13 +47,14 @@ Antworte nur mit JSON der Form {"orte": [{"name": "...", "art": "...", "rolle": 
 - rolle: "gegenstand", wenn die Vorlage diesen Ort betrifft (dort wird gebaut, geplant, geändert, gefragt);
   "erwähnt", wenn er nur nebenbei vorkommt (Anschrift einer Stelle, Vergleich, Aufzählung, Sitzungsort).
 - ortsteil: Ortsteil, wenn der Text ihn für diesen Ort nennt, sonst "".
-Nenne keine Personen und keine Hausnummern. Nenne nur Orte, die wörtlich im Text stehen. Gibt es keinen Ort,
+Nenne nicht die Stadt Bonn als Ganzes („Bonn“, „Bundesstadt Bonn“, „Stadtgebiet“) und keine Orte außerhalb
+Bonns. Nenne keine Personen und keine Hausnummern. Nenne nur Orte, die wörtlich im Text stehen. Gibt es keinen Ort,
 antworte {"orte": []}."""
 
 
 def _anfrage(titel, text, schluessel):
     return sprachmodell.frage(ANWEISUNG, f"Titel: {titel}\n\nText der Vorlage:\n{text}", MODELL, schluessel,
-                              max_tokens=600, json_antwort=True)
+                              max_tokens=MAX_TOKENS, json_antwort=True)
 
 
 def bereinigen(antwort):
@@ -109,8 +112,11 @@ def erzeugen(db, verzeichnis=None, anfrage=_anfrage):
     base = Path(verzeichnis or VERZEICHNIS)
     base.mkdir(parents=True, exist_ok=True)
     have, texte = laden(base), _texte()
+    def offen(sha):
+        r = have.get(sha)
+        return r is None or (r.get("fehler") and r.get("versuche", 1) < MAX_VERSUCHE)
     todo = [(ref, p) for ref, p in sorted(kandidaten(db).items())
-            if p["main_file"] in texte and texte[p["main_file"]]["sha"] not in have][:MAX_JE_LAUF]
+            if p["main_file"] in texte and offen(texte[p["main_file"]]["sha"])][:MAX_JE_LAUF]
     tokens = {"ein": 0, "aus": 0}
     for ref, p in todo:
         t = texte[p["main_file"]]
@@ -119,17 +125,21 @@ def erzeugen(db, verzeichnis=None, anfrage=_anfrage):
             antwort, usage = anfrage(p["name"] or "", main, schluessel)
             orte, fehler = bereinigen(antwort), None
             if sprachmodell.json_aus(antwort) is None:
-                fehler = "Antwort ohne lesbares JSON"
+                fehler = ("Antwort abgeschnitten" if usage.get("aus", 0) >= MAX_TOKENS
+                          else "Antwort ohne lesbares JSON")
         except Exception as e:  # ein Fehler beim Anbieter hält den Lauf nicht auf
             usage, orte, fehler = {}, [], f"Anfrage gescheitert: {type(e).__name__}"
         for k in tokens:
             tokens[k] += usage.get(k, 0)
+        versuche = (have.get(t["sha"]) or {}).get("versuche", 0) + 1
         have[t["sha"]] = {"sha": t["sha"], "datei": p["main_file"], "drucksache": ref, "orte": orte, "fehler": fehler,
-                          "anbieter": sprachmodell.ANBIETER, "modell": MODELL,
+                          "versuche": versuche, "anbieter": sprachmodell.ANBIETER, "modell": MODELL,
                           "erzeugt": datetime.now(timezone.utc).date().isoformat()}
     with open(base / DATEI, "w", encoding="utf-8") as f:
         for sha in sorted(have):
             f.write(json.dumps(have[sha], ensure_ascii=False) + "\n")
+    sprachmodell.protokoll(base, "stufe-c", MODELL, len(todo), tokens,
+                           sum(1 for ref, p in todo if have[texte[p["main_file"]]["sha"]]["fehler"]))
     print(f"Stufe C: {len(todo)} neu ({tokens['ein']} Eingabe-, {tokens['aus']} Ausgabe-Tokens, {MODELL}), "
           f"{len(have)} vorhanden → {base / DATEI}")
 
