@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 558,
-  "generated_at": "2026-10-22T10:21:33+00:00",
+  "generated_at": "2026-10-22T11:35:20+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-22T10:09:58+00:00"
+    "retrieved_at": "2026-10-22T11:24:35+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-22T10:12:23+00:00"
+    "retrieved_at": "2026-10-22T11:27:38+00:00"
    },
    {
     "name": "osm",
@@ -24463,20 +24463,6 @@
      "position": 1,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2004362",
-     "gremium": "Ausschuss für Soziales, Migration und Gesundheit",
-     "meeting": "Sitzung des Ausschusses für Soziales, Migration und Gesundheit",
-     "start_date": "2025-01-23T17:02:00.000Z",
-     "cancelled": 0,
-     "number": "9.1",
-     "result": "zur Kenntnis genommen - mit Protokollnotiz",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 2,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2004738",
      "gremium": "Rat",
      "meeting": "Sitzung des Rates",
@@ -24484,6 +24470,20 @@
      "cancelled": 0,
      "number": "7.7",
      "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 2,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2004362",
+     "gremium": "Ausschuss für Soziales, Migration und Gesundheit",
+     "meeting": "Sitzung des Ausschusses für Soziales, Migration und Gesundheit",
+     "start_date": "2025-01-23T17:02:00.000Z",
+     "cancelled": 0,
+     "number": "9.1",
+     "result": "zur Kenntnis genommen - mit Protokollnotiz",
      "public": 1,
      "status": "beraten"
     }
@@ -34103,6 +34103,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion im Stadtbezirk beantragt, den Gehweg in der Alfred-Bucherer-Straße zu prüfen. Die Verwaltung soll untersuchen, ob dort eine Bushaltestelle (Linie 631) eingerichtet und Poller aufgestellt werden können. Das Ergebnis wird später mitgeteilt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {
@@ -34287,6 +34292,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion fragt nach dem Stand der Fußgängerunterführung Thomasstraße/Endenicher Straße und nach Plänen für ein friedliches Miteinander nach der Fertigstellung, besonders am Alten Friedhof. Die Verwaltung teilt mit: Die Planung ist fast abgeschlossen, aber die Bauzeit hängt noch von der Deutschen Bahn ab. Für mehr Sicherheit soll die Unterführung heller und offener gestaltet werden. Bisher gibt es kein konkretes Konzept für den Umgang der Nutzer:innen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {
@@ -34454,6 +34464,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Koalition beantragt, an den S-Bahn-Haltepunkten Duisdorf und Helmholtzstraße endlich die geplanten Überdachungen zu bauen. Am Haltepunkt Endenich Nord sollen stattdessen zusätzliche Wetterschutzhäuschen und Sitzbänke aufgestellt werden. Die Arbeiten sollen mit der bis 2025/26 geplanten Elektrifizierung der Strecke kombiniert werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {
@@ -34702,6 +34717,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Ein Bürger kritisiert die Bonner Verkehrspolitik als unausgewogen und ideologisch geprägt, da sie Autofahrer, Radfahrer und Fußgänger gleichermaßen einschränke. Der Stadtrat soll die Eingabe zur Kenntnis nehmen. Die Verwaltung weist darauf hin, dass der Beitrag wegen der Zeichenbegrenzung im Online-Portal nicht dort eingereicht werden konnte.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {
@@ -63318,20 +63338,6 @@
      "position": 0,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000519",
-     "gremium": "Bezirksvertretung Hardtberg",
-     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
-     "start_date": "2022-03-15T17:10:00.000Z",
-     "cancelled": 0,
-     "number": "12.4",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000853",
      "gremium": "Ausschuss für Mobilität und Verkehr",
      "meeting": "Sitzung des Ausschusses für Mobilität und Verkehr",
@@ -63339,6 +63345,20 @@
      "cancelled": 0,
      "number": "9.4",
      "result": "zur Kenntnis genommen - mit Maßgabe",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000519",
+     "gremium": "Bezirksvertretung Hardtberg",
+     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
+     "start_date": "2022-03-15T17:10:00.000Z",
+     "cancelled": 0,
+     "number": "12.4",
+     "result": "zur Kenntnis genommen",
      "public": 1,
      "status": "beraten"
     },
@@ -74030,20 +74050,6 @@
    "process": [
     {
      "position": 0,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/493",
-     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
-     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
-     "start_date": "2021-03-03T17:00:00.000Z",
-     "cancelled": 0,
-     "number": "8.4.2",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
      "role": "Anhörung",
      "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/345",
@@ -74052,6 +74058,20 @@
      "start_date": "2020-10-06T15:00:00.000Z",
      "cancelled": 0,
      "number": "8.1.2",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Empfehlung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/493",
+     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
+     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
+     "start_date": "2021-03-03T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "8.4.2",
      "result": "ungeändert beschlossen",
      "public": 1,
      "status": "beraten"
@@ -80387,20 +80407,6 @@
     },
     {
      "position": 3,
-     "role": "Anhörung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/436",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2021-06-15T15:00:00.000Z",
-     "cancelled": 0,
-     "number": "8.1",
-     "result": "geändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 4,
      "role": "Kenntnisnahme",
      "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/494",
@@ -80410,6 +80416,20 @@
      "cancelled": 0,
      "number": "6.2",
      "result": "verwiesen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 4,
+     "role": "Anhörung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/436",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2021-06-15T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "8.1",
+     "result": "geändert beschlossen",
      "public": 1,
      "status": "beraten"
     }
@@ -92837,20 +92857,6 @@
     },
     {
      "position": 1,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/38",
-     "gremium": "Ausschuss für Planung, Verkehr und Denkmalschutz",
-     "meeting": "Sitzung des Ausschusses für Planung, Verkehr und Denkmalschutz",
-     "start_date": "2019-11-27T17:00:00.000Z",
-     "cancelled": 0,
-     "number": "5.4.1",
-     "result": "geändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 2,
      "role": "Entscheidung",
      "authoritative": 1,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/54",
@@ -92860,6 +92866,20 @@
      "cancelled": 0,
      "number": "5.2.1",
      "result": "nicht abgestimmt",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 2,
+     "role": "Empfehlung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/38",
+     "gremium": "Ausschuss für Planung, Verkehr und Denkmalschutz",
+     "meeting": "Sitzung des Ausschusses für Planung, Verkehr und Denkmalschutz",
+     "start_date": "2019-11-27T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.4.1",
+     "result": "geändert beschlossen",
      "public": 1,
      "status": "beraten"
     }
@@ -93025,20 +93045,6 @@
    "process": [
     {
      "position": 0,
-     "role": "Empfehlung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/38",
-     "gremium": "Ausschuss für Planung, Verkehr und Denkmalschutz",
-     "meeting": "Sitzung des Ausschusses für Planung, Verkehr und Denkmalschutz",
-     "start_date": "2019-11-27T17:00:00.000Z",
-     "cancelled": 0,
-     "number": "5.4",
-     "result": "geändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
      "role": "Anregung",
      "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/99",
@@ -93047,6 +93053,20 @@
      "start_date": "2020-01-28T16:05:00.000Z",
      "cancelled": 0,
      "number": "8.1",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Empfehlung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/38",
+     "gremium": "Ausschuss für Planung, Verkehr und Denkmalschutz",
+     "meeting": "Sitzung des Ausschusses für Planung, Verkehr und Denkmalschutz",
+     "start_date": "2019-11-27T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.4",
      "result": "geändert beschlossen",
      "public": 1,
      "status": "beraten"

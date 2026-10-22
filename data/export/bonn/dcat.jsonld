@@ -297,6 +297,34 @@
     "@type": "dct:RightsStatement",
     "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
    }
+  },
+  {
+   "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/kurzfassungen.tsv",
+   "@type": "dcat:Distribution",
+   "dct:title": {
+    "@language": "de",
+    "@value": "KI-Kurzfassungen (TSV)"
+   },
+   "dct:description": {
+    "@language": "de",
+    "@value": "Mit einem Sprachmodell aus dem Text der Hauptdokumente formulierte Kurzfassungen, abgeleitet und gekennzeichnet; kein Zitat, Einzelheiten können ungenau sein. Maßgeblich ist das Original."
+   },
+   "dcat:accessURL": {
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/kurzfassungen.tsv"
+   },
+   "dcat:downloadURL": {
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/kurzfassungen.tsv"
+   },
+   "dcat:mediaType": {
+    "@id": "https://www.iana.org/assignments/media-types/text/tab-separated-values"
+   },
+   "dct:license": {
+    "@id": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"
+   },
+   "dct:rights": {
+    "@type": "dct:RightsStatement",
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
+   }
   }
  ]
 }
