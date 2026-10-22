@@ -771,3 +771,67 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 261700-01 AA	keine Änderung						mistral-large-latest
 261701	geändert	neu	llm_objekt	Friedhof Geislar	Geislar	niedrig	mistral-large-latest
 261701	geändert	neu	llm_objekt	Zentralfriedhof	Plittersdorf	niedrig	mistral-large-latest
+261703	geändert	neu	llm_objekt	Beethoven-Gymnasium	Südstadt	niedrig	mistral-large-latest
+261703-01 ST	keine Änderung						mistral-large-latest
+261704	keine Änderung						mistral-large-latest
+261704-01 ST	keine Änderung						mistral-large-latest
+261705	keine Änderung						mistral-large-latest
+261724	keine Änderung						mistral-large-latest
+261724-01 AA	keine Änderung						mistral-large-latest
+261725	keine Änderung						mistral-large-latest
+261727	Antwort abgeschnitten						mistral-large-latest
+261727-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Römerstraße	Bonn-Castell	mittel	mistral-large-latest
+261727-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Husarenstraße	Bonn-Castell	mittel	mistral-large-latest
+261727-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Graurheindorfer Straße	Bonn-Castell	mittel	mistral-large-latest
+261729	keine Änderung						mistral-large-latest
+261733-01	keine Änderung						mistral-large-latest
+261734	keine Änderung						mistral-large-latest
+261738	keine Änderung						mistral-large-latest
+261740	geändert	bestätigt	volltext_strasse+kreuzung	Kölnstraße	Bonn-Zentrum	mittel	mistral-large-latest
+261740	geändert	bestätigt	volltext_strasse+kreuzung	Wilhelmstraße	Bonn-Zentrum	mittel	mistral-large-latest
+261740	geändert	bestätigt	volltext_strasse+kreuzung	Oxfordstraße	Bonn-Zentrum	mittel	mistral-large-latest
+261740-01 ST	keine Änderung						mistral-large-latest
+261741	geändert	bestätigt	volltext_strasse	Adenauerallee	Gronau	mittel	mistral-large-latest
+261741	geändert	bestätigt	volltext_strasse	Adenauerallee	Südstadt	mittel	mistral-large-latest
+261741	geändert	bestätigt	volltext_strasse+kreuzung	Oxfordstraße	Bonn-Zentrum	mittel	mistral-large-latest
+261743	keine Änderung						mistral-large-latest
+261748	keine Änderung						mistral-large-latest
+261748-01 ST	keine Änderung						mistral-large-latest
+261751	keine Änderung						mistral-large-latest
+261751-01	keine Änderung						mistral-large-latest
+261752	keine Änderung						mistral-large-latest
+261753	geändert	bestätigt	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	mistral-large-latest
+261753	geändert	herabgestuft	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	mistral-large-latest
+261764	geändert	neu	llm_objekt	Robert Schuman-Institut (Institut Français)	Südstadt	niedrig	mistral-large-latest
+261769	keine Änderung						mistral-large-latest
+261769-02 ST	keine Änderung						mistral-large-latest
+261770	keine Änderung						mistral-large-latest
+261771	keine Änderung						mistral-large-latest
+261772	geändert	bestätigt	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	mistral-large-latest
+261775	geändert	neu	llm_objekt	Park Carstanjen	Plittersdorf	niedrig	mistral-large-latest
+261775-01 ST	geändert	herabgestuft	volltext_strasse	Martin-Luther-King-Straße	Plittersdorf	niedrig	mistral-large-latest
+261775-01 ST	geändert	herabgestuft	volltext_strasse	Martin-Luther-King-Straße	Hochkreuz	niedrig	mistral-large-latest
+261775-01 ST	geändert	neu	llm_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	mistral-large-latest
+261776	keine Änderung						mistral-large-latest
+261776-01 ST	keine Änderung						mistral-large-latest
+261777	keine Änderung						mistral-large-latest
+261777-01 ST	keine Änderung						mistral-large-latest
+261779	keine Änderung						mistral-large-latest
+261779-01 ST	keine Änderung						mistral-large-latest
+261783	keine Änderung						mistral-large-latest
+261789	keine Änderung						mistral-large-latest
+261790	keine Änderung						mistral-large-latest
+261791	keine Änderung						mistral-large-latest
+261791-01 ST	geändert	neu	llm_objekt	Stadthalle Bad Godesberg	Alt-Godesberg	niedrig	mistral-large-latest
+261792	geändert	herabgestuft	volltext_strasse	Römerstraße	Graurheindorf	niedrig	mistral-large-latest
+261792	geändert	herabgestuft	volltext_strasse	Römerstraße	Bonn-Castell	niedrig	mistral-large-latest
+261792-01 ST	geändert	bestätigt	volltext_strasse	Niederkasseler Straße	Schwarzrheindorf / Vilich-Rheindorf	mittel	mistral-large-latest
+261792-01 ST	geändert	bestätigt	volltext_strasse	Niederkasseler Straße	Geislar	mittel	mistral-large-latest
+261792-01 ST	geändert	neu	llm_objekt	Römerbad	Bonn-Castell	niedrig	mistral-large-latest
+261792-01 ST	geändert	herabgestuft	volltext_strasse	Römerstraße	Graurheindorf	niedrig	mistral-large-latest
+261792-01 ST	geändert	herabgestuft	volltext_strasse	Römerstraße	Bonn-Castell	niedrig	mistral-large-latest
+261804	keine Änderung						mistral-large-latest
+261806	keine Änderung						mistral-large-latest
+261806-01 ST	keine Änderung						mistral-large-latest
+261807	keine Änderung						mistral-large-latest
+261807-01 ST	keine Änderung						mistral-large-latest

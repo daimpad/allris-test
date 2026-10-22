@@ -153,12 +153,22 @@ function page(items, seite, size = PAGE) {
   return { treffer_gesamt: items.length, seite: n, seiten: pages, items: items.slice((n - 1) * size, n * size) };
 }
 
-// Teilwortsuche in einer Liste von Namen: exakter Treffer vor Teilwort; mehrere Teilwort-Treffer sind erlaubt
+// Füllwörter und der Zusatz „der Stadt Bonn“ tragen nichts zur Unterscheidung bei; sonst trifft „Rat der Stadt Bonn“
+// als Teilwort „Projektbeirat Behindertenpolitischer … Bundesstadt Bonn“ (Auswertung mit Mistral, 22.10.2026)
+const FUELLWOERTER = new Set(["der", "die", "das", "des", "den", "dem", "fuer", "und", "von", "im", "in"]);
+const ohneZusatz = (s) => norm(s).replace(/^stadtrat$/, "rat").replace(/ (der )?(bundes)?stadt bonn$/, "").trim();
+const anfang = (name, w) => (" " + norm(name)).includes(" " + w);
+
+// Suche in einer Liste von Namen: exakter Treffer vor Wortanfang vor Teilwort; mehrere Treffer je Stufe sind erlaubt
 function resolve(list, query, what) {
-  const q = norm(query);
-  const exact = list.filter((x) => norm(x) === q);
+  const q = norm(query), kurz = ohneZusatz(query);
+  const exact = list.filter((x) => norm(x) === q || norm(x) === kurz);
   if (exact.length) return exact;
-  const part = list.filter((x) => words(query).every((w) => norm(x).includes(w)));
+  const ws = words(kurz).filter((w) => !FUELLWOERTER.has(w));
+  const ww = ws.length ? ws : words(query);
+  const start = list.filter((x) => ww.every((w) => anfang(x, w)));
+  if (start.length) return start;
+  const part = list.filter((x) => ww.every((w) => norm(x).includes(w)));
   if (part.length) return part;
   throw new ToolError(`Kein(e) ${what} „${query}“ gefunden.`, { moegliche_werte: list.slice(0, 40) });
 }
