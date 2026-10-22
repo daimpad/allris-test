@@ -59,6 +59,15 @@ Ob ein Beschluss umgesetzt ist, steht in keiner öffentlichen Schnittstelle. Ein
 
 Eine Stichprobe von 30 Kandidaten ist von Hand geprüft; alle Kandidaten, die diese Kriterien erfüllen, waren plausibel. Der Vollzug bleibt daneben „unklar“. Baustellen von Versorgern, Straßen NRW oder der Bahn setzen in der Regel keinen Ratsbeschluss um und werden getrennt gezeigt. Die Historie der Baustellen beginnt mit dem Archiv am 19.10.2026.
 
+## Sprachmodelle: was erprobt wird
+
+Zwei Auswertungen mit einem Sprachmodell (Mistral) laufen täglich im Hintergrund. Auf der Seite erscheinen sie erst, wenn eine Stichprobe die vereinbarte Güte erreicht; bis dahin werden sie nur geprüft.
+
+- **Kurzfassungen** in einfacher Sprache, je Vorlage zwei bis drei Sätze. Jede wird automatisch geprüft: keine längeren Wortfolgen aus dem Dokument, keine Hausnummer, keine Zahl, Fraktion oder Gremium, die weder Titel noch Text nennen. In sechs Stichproben zu je 30 Kurzfassungen fand die KI-Vorprüfung in den letzten drei keine falsche; 20 bis 23 waren plausibel, die übrigen im Kern richtig, aber in einer Einzelheit ungenau. Freigegeben wird ab 27 plausiblen ohne falsche. Seit dem 22.10.2026 liest das Modell jede Kurzfassung in einem zweiten Schritt gegen den Text gegen.
+- **Orte aus dem Text (Stufe C):** Das Modell unterscheidet Orte, die Gegenstand einer Vorlage sind, von solchen, die nur erwähnt werden. Beispielorte in stadtweiten Konzepten erkennt es nicht verlässlich (zuletzt 9 von 20 plausibel). Auch das bloße Herabstufen nur erwähnter Orte war in einer KI-Vorprüfung nur in 19 von 31 Fällen richtig; freigegeben ist nichts. Ein Prüfbogen für die Prüfung von Hand liegt bei ([`data/export/stufe_c/pruefung_herabstufungen.tsv`](data/export/stufe_c/pruefung_herabstufungen.tsv)).
+
+Gespeichert werden nur die Ergebnisse des Modells, nie Text der Dokumente (Branch `kurzfassungen`). Stichproben und Vorprüfungen liegen unter `data/export/kurzfassungen/` und `data/export/stufe_c/`; Einzelheiten in [`TECHNIK.md`](TECHNIK.md).
+
 ## Grenzen
 
 - Texte der Dokumente gibt es bisher nur für etwa 5 % der Vorlagen (Textauszug durch OParl-Lite, wächst täglich); bei den übrigen fehlen Orte, die nur im Dokument stehen. Aus dem Text werden keine Auszüge gezeigt.
