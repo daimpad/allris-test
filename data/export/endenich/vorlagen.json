@@ -1,20 +1,20 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 557,
-  "generated_at": "2026-10-22T07:46:48+00:00",
+  "count": 558,
+  "generated_at": "2026-10-22T08:35:04+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-22T07:38:12+00:00"
+    "retrieved_at": "2026-10-22T08:24:16+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-22T07:41:09+00:00"
+    "retrieved_at": "2026-10-22T08:26:49+00:00"
    },
    {
     "name": "osm",
@@ -24463,20 +24463,6 @@
      "position": 1,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2004738",
-     "gremium": "Rat",
-     "meeting": "Sitzung des Rates",
-     "start_date": "2024-12-16T18:00:00.000Z",
-     "cancelled": 0,
-     "number": "7.7",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 2,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2004362",
      "gremium": "Ausschuss für Soziales, Migration und Gesundheit",
      "meeting": "Sitzung des Ausschusses für Soziales, Migration und Gesundheit",
@@ -24484,6 +24470,20 @@
      "cancelled": 0,
      "number": "9.1",
      "result": "zur Kenntnis genommen - mit Protokollnotiz",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 2,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2004738",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2024-12-16T18:00:00.000Z",
+     "cancelled": 0,
+     "number": "7.7",
+     "result": "zur Kenntnis genommen",
      "public": 1,
      "status": "beraten"
     }
@@ -28419,6 +28419,132 @@
    }
   },
   {
+   "reference": "241361-01 ST",
+   "name": "Ortstermin Brahmsstraße",
+   "paper_type": "Stellungnahme der Verwaltung",
+   "date": "2024-08-07",
+   "amt": "Bezirksverwaltungsstelle Bonn",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018567",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2783921&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "Bezirksverwaltungsstelle Bonn",
+     "name": "Bezirksverwaltungsstelle Bonn"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/143",
+     "method": "paper_type",
+     "evidence": "Stellungnahme der Verwaltung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2002951",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2024-08-27T15:05:00.000Z",
+     "cancelled": 0,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "terminiert"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "241361",
+     "paper_type": "Antrag",
+     "name": "Ortstermin Brahmsstraße",
+     "date": "2024-08-06"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Brahmsstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07942,
+     "lat": 50.727678,
+     "stage": "B",
+     "method": "strasse",
+     "confidence": "mittel",
+     "evidence": "Brahmsstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018567",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018567",
+   "stand": "offen",
+   "themes": [],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018567",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2024-08-07",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018567",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2024-08-27",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "stand": "terminiert"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-bv",
+    "sicherheit": "hoch",
+    "grund": "Antrag, beraten nur in Bezirksvertretungen",
+    "passung": "passt",
+    "ist": [
+     "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "241343",
    "name": "CDU-Antrag: Verlegung des Zebrastreifens in der Pastoratsgasse",
    "paper_type": "Antrag",
@@ -28773,6 +28899,14 @@
     {
      "kind": "fachlich",
      "method": "stellungnahme",
+     "evidence": "241361-01 ST",
+     "derived": 1,
+     "label": "Bezirksverwaltungsstelle Bonn",
+     "name": "Bezirksverwaltungsstelle Bonn"
+    },
+    {
+     "kind": "fachlich",
+     "method": "stellungnahme",
      "evidence": "241361-02",
      "derived": 1,
      "label": "33 Bürgerdienste",
@@ -28798,6 +28932,12 @@
    ],
    "superordinated": [],
    "subordinated": [
+    {
+     "reference": "241361-01 ST",
+     "paper_type": "Stellungnahme der Verwaltung",
+     "name": "Ortstermin Brahmsstraße",
+     "date": "2024-08-07"
+    },
     {
      "reference": "241361-02",
      "paper_type": "Beschlussvorlage",
@@ -28842,6 +28982,15 @@
      "source": "oparl-bonn",
      "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2018555",
      "note": "datum"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "date": "2024-08-07",
+     "source": "oparl-bonn",
+     "reference": "241361-01 ST",
+     "title": "Ortstermin Brahmsstraße"
     },
     {
      "typ": "entscheidung",
@@ -63169,20 +63318,6 @@
      "position": 0,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000853",
-     "gremium": "Ausschuss für Mobilität und Verkehr",
-     "meeting": "Sitzung des Ausschusses für Mobilität und Verkehr",
-     "start_date": "2022-01-19T17:00:00.000Z",
-     "cancelled": 0,
-     "number": "9.4",
-     "result": "zur Kenntnis genommen - mit Maßgabe",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000519",
      "gremium": "Bezirksvertretung Hardtberg",
      "meeting": "Sitzung der Bezirksvertretung Hardtberg",
@@ -63190,6 +63325,20 @@
      "cancelled": 0,
      "number": "12.4",
      "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000853",
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": "Sitzung des Ausschusses für Mobilität und Verkehr",
+     "start_date": "2022-01-19T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "9.4",
+     "result": "zur Kenntnis genommen - mit Maßgabe",
      "public": 1,
      "status": "beraten"
     },
@@ -73881,20 +74030,6 @@
    "process": [
     {
      "position": 0,
-     "role": "Anhörung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/345",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sondersitzung der Bezirksvertretung Bonn",
-     "start_date": "2020-10-06T15:00:00.000Z",
-     "cancelled": 0,
-     "number": "8.1.2",
-     "result": "ungeändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
      "role": "Empfehlung",
      "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/493",
@@ -73903,6 +74038,20 @@
      "start_date": "2021-03-03T17:00:00.000Z",
      "cancelled": 0,
      "number": "8.4.2",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Anhörung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/345",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sondersitzung der Bezirksvertretung Bonn",
+     "start_date": "2020-10-06T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "8.1.2",
      "result": "ungeändert beschlossen",
      "public": 1,
      "status": "beraten"
@@ -80238,20 +80387,6 @@
     },
     {
      "position": 3,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/494",
-     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
-     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
-     "start_date": "2021-04-27T16:03:00.000Z",
-     "cancelled": 0,
-     "number": "6.2",
-     "result": "verwiesen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 4,
      "role": "Anhörung",
      "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/436",
@@ -80261,6 +80396,20 @@
      "cancelled": 0,
      "number": "8.1",
      "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 4,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/494",
+     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
+     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
+     "start_date": "2021-04-27T16:03:00.000Z",
+     "cancelled": 0,
+     "number": "6.2",
+     "result": "verwiesen",
      "public": 1,
      "status": "beraten"
     }
@@ -92688,20 +92837,6 @@
     },
     {
      "position": 1,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/54",
-     "gremium": "Rat",
-     "meeting": "Sitzung des Rates",
-     "start_date": "2020-02-06T17:00:00.000Z",
-     "cancelled": 0,
-     "number": "5.2.1",
-     "result": "nicht abgestimmt",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 2,
      "role": "Empfehlung",
      "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/38",
@@ -92711,6 +92846,20 @@
      "cancelled": 0,
      "number": "5.4.1",
      "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 2,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/54",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2020-02-06T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.2.1",
+     "result": "nicht abgestimmt",
      "public": 1,
      "status": "beraten"
     }
@@ -92876,20 +93025,6 @@
    "process": [
     {
      "position": 0,
-     "role": "Anregung",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/99",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2020-01-28T16:05:00.000Z",
-     "cancelled": 0,
-     "number": "8.1",
-     "result": "geändert beschlossen",
-     "public": 1,
-     "status": "beraten"
-    },
-    {
-     "position": 1,
      "role": "Empfehlung",
      "authoritative": 0,
      "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/38",
@@ -92898,6 +93033,20 @@
      "start_date": "2019-11-27T17:00:00.000Z",
      "cancelled": 0,
      "number": "5.4",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Anregung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/99",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2020-01-28T16:05:00.000Z",
+     "cancelled": 0,
+     "number": "8.1",
      "result": "geändert beschlossen",
      "public": 1,
      "status": "beraten"

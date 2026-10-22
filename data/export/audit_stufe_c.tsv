@@ -133,7 +133,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240542-01 ST	keine Änderung						mistral-large-latest
 240546-01 ST	keine Änderung						mistral-large-latest
 240546-02 ST	keine Änderung						mistral-large-latest
-240551	keine Änderung						mistral-large-latest
 240554	keine Änderung						mistral-large-latest
 240555	keine Änderung						mistral-large-latest
 240555-01 ST	keine Änderung						mistral-large-latest
@@ -143,7 +142,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240557	geändert	bestätigt	volltext_ortsteil_name	Geislar	Geislar	mittel	mistral-large-latest
 240560	keine Änderung						mistral-large-latest
 240562	keine Änderung						mistral-large-latest
-240564	keine Änderung						mistral-large-latest
 240565	keine Änderung						mistral-large-latest
 240570	keine Änderung						mistral-large-latest
 240573	keine Änderung						mistral-large-latest
@@ -198,7 +196,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240632	geändert	bestätigt	volltext_strasse	Adenauerallee	Südstadt	mittel	mistral-large-latest
 240636	keine Änderung						mistral-large-latest
 240638	keine Änderung						mistral-large-latest
-240641	keine Änderung						mistral-large-latest
 240642	geändert	bestätigt	volltext_strasse+ortsteil	Köslinstraße	Duisdorf	mittel	mistral-large-latest
 240642	geändert	bestätigt	volltext_strasse+ortsteil	Ludwig-Richter-Straße	Duisdorf	mittel	mistral-large-latest
 240642	geändert	bestätigt	volltext_strasse+ortsteil	Gottfried-Kinkel-Straße	Duisdorf	mittel	mistral-large-latest
@@ -223,7 +220,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240679	Antwort abgeschnitten						mistral-large-latest
 240681	keine Änderung						mistral-large-latest
 240682	keine Änderung						mistral-large-latest
-240686	keine Änderung						mistral-large-latest
 240690	keine Änderung						mistral-large-latest
 240691	geändert	neu	llm_objekt	Beethoven-Gymnasium	Südstadt	niedrig	mistral-large-latest
 240691	geändert	herabgestuft	volltext_strasse	Rathenauufer	Südstadt	niedrig	mistral-large-latest
@@ -428,7 +424,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 254048	geändert	bestätigt	volltext_strasse+ortsteil	Heiderhofring	Heiderhof	mittel	mistral-large-latest
 254048	geändert	herabgestuft	volltext_strasse+ortsteil	Tulpenbaumweg	Heiderhof	niedrig	mistral-large-latest
 254048	geändert	herabgestuft	volltext_strasse+ortsteil	Akazienweg	Heiderhof	niedrig	mistral-large-latest
-254050	keine Änderung						mistral-large-latest
 254053	keine Änderung						mistral-large-latest
 254054	keine Änderung						mistral-large-latest
 254057	keine Änderung						mistral-large-latest
@@ -504,7 +499,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 260031-01 ST	geändert	herabgestuft	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	mistral-large-latest
 260031-01 ST	geändert	herabgestuft	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	mistral-large-latest
 260031-01 ST	geändert	herabgestuft	volltext_ortsteil_name	Brüser Berg	Brüser Berg	niedrig	mistral-large-latest
-260033	keine Änderung						mistral-large-latest
 260038	geändert	bestätigt	volltext_stadtbezirk_name	Hardtberg		mittel	mistral-large-latest
 260039	keine Änderung						mistral-large-latest
 260046	geändert	neu	llm_objekt	Kunstmuseum Bonn	Gronau	niedrig	mistral-large-latest
@@ -515,6 +509,69 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 260051	keine Änderung						mistral-large-latest
 260056	geändert	neu	llm_objekt	Gotenschule	Plittersdorf	niedrig	mistral-large-latest
 260057	keine Änderung						mistral-large-latest
-260059	geändert	bestätigt	volltext_stadtbezirk_name	Bad Godesberg		mittel	mistral-large-latest
 260066	geändert	bestätigt	volltext_stadtbezirk_name	Beuel		mittel	mistral-large-latest
 260066	geändert	neu	llm_objekt	Ennertbad	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
+260067	keine Änderung						mistral-large-latest
+260067-01 ST	keine Änderung						mistral-large-latest
+260068	keine Änderung						mistral-large-latest
+260068-01 ST	keine Änderung						mistral-large-latest
+260068-03 ST	keine Änderung						mistral-large-latest
+260069	keine Änderung						mistral-large-latest
+260070	keine Änderung						mistral-large-latest
+260072	keine Änderung						mistral-large-latest
+260073	keine Änderung						mistral-large-latest
+260076	geändert	bestätigt	volltext_strasse	Oxfordstraße	Bonn-Zentrum	mittel	mistral-large-latest
+260076	geändert	bestätigt	volltext_strasse	Bornheimer Straße	Nordstadt	mittel	mistral-large-latest
+260076	geändert	bestätigt	volltext_strasse	Hermann-Wandersleb-Ring	Endenich	mittel	mistral-large-latest
+260076	geändert	bestätigt	volltext_strasse	Kaiserplatz	Südstadt	mittel	mistral-large-latest
+260076	geändert	bestätigt	volltext_strasse	Kaiserplatz	Bonn-Zentrum	mittel	mistral-large-latest
+260076	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
+260077	keine Änderung						mistral-large-latest
+260078	Liste (9 Ortsteile), nicht verortet						mistral-large-latest
+260079	Antwort abgeschnitten						mistral-large-latest
+260080	keine Änderung						mistral-large-latest
+260082	geändert	neu	llm_objekt	Bürgeramt Hardtberg	Duisdorf	niedrig	mistral-large-latest
+260083	keine Änderung						mistral-large-latest
+260084	keine Änderung						mistral-large-latest
+260084-01 AA	keine Änderung						mistral-large-latest
+260085	keine Änderung						mistral-large-latest
+260086	keine Änderung						mistral-large-latest
+260087	keine Änderung						mistral-large-latest
+260088	keine Änderung						mistral-large-latest
+260089	keine Änderung						mistral-large-latest
+260089-02 AA	keine Änderung						mistral-large-latest
+260090	keine Änderung						mistral-large-latest
+260092	keine Änderung						mistral-large-latest
+260092-01 ST	keine Änderung						mistral-large-latest
+260093	keine Änderung						mistral-large-latest
+260100	keine Änderung						mistral-large-latest
+260106	geändert	bestätigt	volltext_strasse+kreuzung	Vivatsgasse	Bonn-Zentrum	mittel	mistral-large-latest
+260106	geändert	bestätigt	volltext_strasse+kreuzung	Windeckstraße	Bonn-Zentrum	mittel	mistral-large-latest
+260106	geändert	bestätigt	volltext_strasse+kreuzung	Poststraße	Bonn-Zentrum	mittel	mistral-large-latest
+260111	keine Änderung						mistral-large-latest
+260115	Liste (6 Ortsteile), nicht verortet						mistral-large-latest
+260116	keine Änderung						mistral-large-latest
+260117	keine Änderung						mistral-large-latest
+260118	keine Änderung						mistral-large-latest
+260127-28 ST	geändert	bestätigt	volltext_ortsteil_name	Beuel-Ost	Beuel-Ost	mittel	mistral-large-latest
+260127-29 ST	geändert	neu	llm_objekt	Schauspielhaus	Alt-Godesberg	niedrig	mistral-large-latest
+260127-30 AA	geändert	neu	llm_objekt	Schauspielhaus	Alt-Godesberg	niedrig	mistral-large-latest
+260127-31 AA	keine Änderung						mistral-large-latest
+260184	keine Änderung						mistral-large-latest
+260185	geändert	neu	llm_strasse	Niederkasseler Straße	Schwarzrheindorf / Vilich-Rheindorf	niedrig	mistral-large-latest
+260185	geändert	neu	llm_strasse	Niederkasseler Straße	Geislar	niedrig	mistral-large-latest
+260185	geändert	neu	llm_ortsteil	Nordstadt	Nordstadt	niedrig	mistral-large-latest
+260185	geändert	neu	llm_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	mistral-large-latest
+260185	geändert	neu	llm_strasse	Wilhelmsplatz	Nordstadt	niedrig	mistral-large-latest
+260185	geändert	neu	llm_strasse	Wilhelmsplatz	Bonn-Zentrum	niedrig	mistral-large-latest
+260185	geändert	neu	llm_strasse	Wilhelmsplatz	Bonn-Castell	niedrig	mistral-large-latest
+260185	geändert	neu	llm_strasse	Thomas-Mann-Straße	Bonn-Zentrum	niedrig	mistral-large-latest
+260362-03	geändert	bestätigt	volltext_strasse	Zitelmannstraße	Gronau	mittel	mistral-large-latest
+260410-02	geändert	bestätigt	volltext_strasse	Europaring	Duisdorf	mittel	mistral-large-latest
+260411-02 ST	keine Änderung						mistral-large-latest
+260504	keine Änderung						mistral-large-latest
+260504-01 ST	keine Änderung						mistral-large-latest
+260504-02	keine Änderung						mistral-large-latest
+260504-03	keine Änderung						mistral-large-latest
+260504-08 AA	keine Änderung						mistral-large-latest
+260504-09 ST	keine Änderung						mistral-large-latest

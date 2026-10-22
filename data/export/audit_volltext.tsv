@@ -145,7 +145,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240546-01 ST	kein Ort						
 240546-02 ST	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Alt-Godesberg	mittel	1
 240546-02 ST	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Pennenfeld	mittel	1
-240551	kein Ort						
+240551	Titel ohne gemeinsamen Ort, nicht verortet						
 240554	nur in Anlagen genannt, nicht verortet						
 240555	kein Ort						
 240555-01 ST	nur in Anlagen genannt, nicht verortet						
@@ -155,7 +155,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240557	verortet	Hauptteil	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	niedrig	1
 240560	nur in Anlagen genannt, nicht verortet						
 240562	nur in Anlagen genannt, nicht verortet						
-240564	kein Ort						
+240564	Titel ohne gemeinsamen Ort, nicht verortet						
 240565	kein Ort						
 240570	kein Ort						
 240571	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -215,7 +215,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240637	Titel ohne gemeinsamen Ort, nicht verortet						
 240638	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240639	Titel ohne gemeinsamen Ort, nicht verortet						
-240641	kein Ort						
+240641	Titel ohne gemeinsamen Ort, nicht verortet						
 240642	verortet	Hauptteil	volltext_strasse+ortsteil	Gellertstraße	Duisdorf	mittel	1
 240642	verortet	Hauptteil	volltext_strasse+ortsteil	Gottfried-Kinkel-Straße	Duisdorf	mittel	1
 240642	verortet	Hauptteil	volltext_strasse+ortsteil	Köslinstraße	Duisdorf	mittel	1
@@ -274,7 +274,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240681	kein Ort						
 240682	kein Ort						
 240684	Titel ohne gemeinsamen Ort, nicht verortet						
-240686	kein Ort						
+240686	Titel ohne gemeinsamen Ort, nicht verortet						
 240687	Titel ohne gemeinsamen Ort, nicht verortet						
 240690	kein Ort						
 240691	verortet	Hauptteil	volltext_strasse	Adenauerallee	Gronau	mittel	1
@@ -523,7 +523,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 254048	verortet	Hauptteil	volltext_strasse+ortsteil	Heiderhofring	Heiderhof	mittel	2
 254048	verortet	Hauptteil	volltext_strasse+ortsteil	Philosophenring	Heiderhof	mittel	2
 254048	verortet	Hauptteil	volltext_strasse+ortsteil	Tulpenbaumweg	Heiderhof	mittel	1
-254050	kein Ort						
+254050	Titel ohne gemeinsamen Ort, nicht verortet						
 254053	kein Ort						
 254054	nur in Anlagen genannt, nicht verortet						
 254057	kein Ort						
@@ -609,7 +609,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260031-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
 260031-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
 260031-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	mittel	1
-260033	kein Ort						
+260033	Titel ohne gemeinsamen Ort, nicht verortet						
 260036	Titel ohne gemeinsamen Ort, nicht verortet						
 260038	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 260039	nur in Anlagen genannt, nicht verortet						
@@ -621,7 +621,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260051	kein Ort						
 260056	nur in Anlagen genannt, nicht verortet						
 260057	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
-260059	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+260059	Titel ohne gemeinsamen Ort, nicht verortet						
 260065	Titel ohne gemeinsamen Ort, nicht verortet						
 260066	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
 260067	kein Ort						
@@ -848,7 +848,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261616-01 ST	kein Ort						
 261616-02 AA	kein Ort						
 261619-01 AA	kein Ort						
-261621	kein Ort						
+261621	Titel ohne gemeinsamen Ort, nicht verortet						
 261624-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
 261626-02 AA	kein Ort						
 261626-03 AA	kein Ort						
@@ -992,7 +992,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261815-01 ST	kein Ort						
 261816	kein Ort						
 261821	Titel ohne gemeinsamen Ort, nicht verortet						
-261822	kein Ort						
+261822	Titel ohne gemeinsamen Ort, nicht verortet						
 261824	Titel ohne gemeinsamen Ort, nicht verortet						
 261826	Titel ohne gemeinsamen Ort, nicht verortet						
 261827	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -1047,11 +1047,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261923	kein Ort						
 261931	kein Ort						
 261932	nur in Anlagen genannt, nicht verortet						
-261933	verortet	Hauptteil	volltext_strasse	Klara-M.-Faßbinder-Straße	Dransdorf	niedrig	1
-261933	verortet	Hauptteil	volltext_strasse+hausnummer	Adenauerallee	Gronau	niedrig	1
-261933	verortet	Hauptteil	volltext_strasse+hausnummer	Christian-Kölbach-Straße	Beuel-Ost	niedrig	1
+261933	Titel ohne gemeinsamen Ort, nicht verortet						
 261934	kein Ort						
-261937	kein Ort						
+261937	Titel ohne gemeinsamen Ort, nicht verortet						
 261941	kein Ort						
 261954	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
 261965	Titel ohne gemeinsamen Ort, nicht verortet						

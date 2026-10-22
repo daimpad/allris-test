@@ -805,6 +805,10 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 240236-01 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 240236-01 ST	veroeffentlichung	Datum der Vorlage	belegt	2024-08-07		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018303	ungeprüft
 240236-01 ST	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt	2024-08-27	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018303	ungeprüft
+241361-01 ST	initiierung	Stellungnahme der Verwaltung	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018567	ungeprüft
+241361-01 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
+241361-01 ST	veroeffentlichung	Datum der Vorlage	belegt	2024-08-07		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018567	ungeprüft
+241361-01 ST	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt	2024-08-27	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018567	ungeprüft
 241343	initiierung	Antrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018525	ungeprüft
 241343	veroeffentlichung	Datum der Vorlage	belegt	2024-08-06		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018525	ungeprüft
 241343	folgevorlage	Stellungnahme der Verwaltung	belegt	2024-10-15		oparl-bonn	241343-01 ST	ungeprüft
@@ -818,6 +822,7 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 241357	vollzug	Vollzug durch die Verwaltung	unklar				Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt es keine öffentliche Schnittstelle.	ungeprüft
 241361	initiierung	Antrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018555	ungeprüft
 241361	veroeffentlichung	Datum der Vorlage	belegt	2024-08-06		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018555	ungeprüft
+241361	folgevorlage	Stellungnahme der Verwaltung	belegt	2024-08-07		oparl-bonn	241361-01 ST	ungeprüft
 241361	entscheidung	Bezirksvertretung Bonn (Entscheidung)	belegt	2024-08-27	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018555	ungeprüft
 241361	folgevorlage	Beschlussvorlage	belegt	2026-02-18		oparl-bonn	241361-02	ungeprüft
 241344	initiierung	Antrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018526	ungeprüft
