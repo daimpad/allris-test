@@ -575,3 +575,83 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 260504-03	keine Änderung						mistral-large-latest
 260504-08 AA	keine Änderung						mistral-large-latest
 260504-09 ST	keine Änderung						mistral-large-latest
+260613-01 ST	geändert	bestätigt	volltext_strasse	Reuterstraße	Poppelsdorf	mittel	mistral-large-latest
+260613-01 ST	geändert	bestätigt	volltext_strasse	Reuterstraße	Kessenich	mittel	mistral-large-latest
+260613-01 ST	geändert	bestätigt	volltext_strasse	Reuterstraße	Gronau	mittel	mistral-large-latest
+260613-01 ST	geändert	bestätigt	volltext_strasse	Reuterstraße	Südstadt	mittel	mistral-large-latest
+260613-01 ST	geändert	bestätigt	volltext_strasse	Bornheimer Straße	Nordstadt	mittel	mistral-large-latest
+260772-01 AA	keine Änderung						mistral-large-latest
+260772-02 ST	keine Änderung						mistral-large-latest
+260772-03 AA	keine Änderung						mistral-large-latest
+260789-02 ST	Liste (11 Ortsteile), nicht verortet						mistral-large-latest
+260790-01 ST	keine Änderung						mistral-large-latest
+260809-03 ST	keine Änderung						mistral-large-latest
+260815-02 ST	keine Änderung						mistral-large-latest
+260845-02 ST	Antwort abgeschnitten						mistral-large-latest
+260870-01 ST	keine Änderung						mistral-large-latest
+260895-02 ST	keine Änderung						mistral-large-latest
+260915-01 ST	geändert	bestätigt	volltext_strasse+hausnummer	Kurfürstenallee	Alt-Godesberg	mittel	mistral-large-latest
+260932-06	Liste (7 Ortsteile), nicht verortet						mistral-large-latest
+260945-03	keine Änderung						mistral-large-latest
+261037-02 AA	keine Änderung						mistral-large-latest
+261043-04 ST	keine Änderung						mistral-large-latest
+261055-03 AA	keine Änderung						mistral-large-latest
+261074	keine Änderung						mistral-large-latest
+261082-05 ST	keine Änderung						mistral-large-latest
+261092-02 AA	keine Änderung						mistral-large-latest
+261092-03 AA	keine Änderung						mistral-large-latest
+261092-04 AA	keine Änderung						mistral-large-latest
+261100-01	geändert	neu	llm_strasse	Václav-Havel-Platz	Endenich	niedrig	mistral-large-latest
+261100-01	geändert	bestätigt	volltext_strasse	Simone-Veil-Straße	Endenich	mittel	mistral-large-latest
+261121-01 ST	keine Änderung						mistral-large-latest
+261142	keine Änderung						mistral-large-latest
+261142-02 AA	keine Änderung						mistral-large-latest
+261142-03 AA	keine Änderung						mistral-large-latest
+261154-03	Antwort abgeschnitten						mistral-large-latest
+261174-04 ST	keine Änderung						mistral-large-latest
+261174-05 AA	keine Änderung						mistral-large-latest
+261183	keine Änderung						mistral-large-latest
+261210-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Brüser Damm	Brüser Berg	mittel	mistral-large-latest
+261210-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Celsiusstraße	Brüser Berg	mittel	mistral-large-latest
+261210-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Am Burgweiher	Duisdorf	mittel	mistral-large-latest
+261210-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Derlestraße	Duisdorf	mittel	mistral-large-latest
+261210-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Rochusstraße	Duisdorf	mittel	mistral-large-latest
+261210-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Helmholtzstraße	Duisdorf	mittel	mistral-large-latest
+261210-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Villemombler Straße	Duisdorf	mittel	mistral-large-latest
+261210-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Schieffelingsweg	Duisdorf	mittel	mistral-large-latest
+261210-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Fontainengraben	Duisdorf	mittel	mistral-large-latest
+261216-02 ST	geändert	bestätigt	volltext_strasse+ortsteil	Lessenicher Straße	Duisdorf	mittel	mistral-large-latest
+261216-02 ST	geändert	bestätigt	volltext_strasse+ortsteil	Bahnhofstraße	Duisdorf	mittel	mistral-large-latest
+261216-02 ST	geändert	bestätigt	volltext_strasse+ortsteil	Bahnhofstraße	Lessenich/Meßdorf	mittel	mistral-large-latest
+261216-02 ST	geändert	bestätigt	volltext_strasse+ortsteil	Ladestraße	Duisdorf	mittel	mistral-large-latest
+261216-02 ST	geändert	bestätigt	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	mistral-large-latest
+261216-02 ST	geändert	bestätigt	volltext_strasse+ortsteil	Alter Heerweg	Duisdorf	mittel	mistral-large-latest
+261216-02 ST	geändert	bestätigt	volltext_strasse+ortsteil	Alter Heerweg	Lessenich/Meßdorf	mittel	mistral-large-latest
+261218	keine Änderung						mistral-large-latest
+261218-01	keine Änderung						mistral-large-latest
+261220-04 ST	geändert	bestätigt	volltext_strasse	Prinz-Albert-Straße	Südstadt	mittel	mistral-large-latest
+261220-04 ST	geändert	bestätigt	volltext_strasse	Kaiserplatz	Südstadt	mittel	mistral-large-latest
+261220-04 ST	geändert	bestätigt	volltext_strasse	Kaiserplatz	Bonn-Zentrum	mittel	mistral-large-latest
+261220-04 ST	geändert	bestätigt	volltext_strasse	Poppelsdorfer Allee	Südstadt	mittel	mistral-large-latest
+261220-04 ST	geändert	bestätigt	volltext_strasse	Poppelsdorfer Allee	Weststadt	mittel	mistral-large-latest
+261220-04 ST	geändert	herabgestuft	volltext_strasse	Königstraße	Südstadt	niedrig	mistral-large-latest
+261230-01 ST	geändert	bestätigt	volltext_stadtbezirk_name	Hardtberg		mittel	mistral-large-latest
+261241-02 ST	keine Änderung						mistral-large-latest
+261253-01 AA	geändert	bestätigt	volltext_strasse+hausnummer	Engeltalstraße	Bonn-Zentrum	niedrig	mistral-large-latest
+261253-01 AA	geändert	bestätigt	volltext_strasse	Gotenstraße	Plittersdorf	mittel	mistral-large-latest
+261253-01 AA	geändert	bestätigt	volltext_strasse+hausnummer	Kurfürstenallee	Alt-Godesberg	mittel	mistral-large-latest
+261256-01 ST	geändert	neu	llm_objekt	Freibad Friesdorf	Friesdorf	niedrig	mistral-large-latest
+261256-01 ST	geändert	neu	llm_objekt	Ennertbad	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
+261256-01 ST	geändert	neu	llm_objekt	Römerbad	Bonn-Castell	niedrig	mistral-large-latest
+261281-08 AA	keine Änderung						mistral-large-latest
+261281-09 AA	geändert	bestätigt	volltext_stadtbezirk_name	Hardtberg		mittel	mistral-large-latest
+261281-09 AA	geändert	neu	llm_objekt	OGS der Ludwig-Richter-Schule	Duisdorf	niedrig	mistral-large-latest
+261281-09 AA	geändert	neu	llm_objekt	Schwimmhalle Hardtbergbad	Duisdorf	niedrig	mistral-large-latest
+261281-10 AA	geändert	herabgestuft	volltext_stadtbezirk_name	Hardtberg		niedrig	mistral-large-latest
+261281-11 AA	geändert	bestätigt	volltext_stadtbezirk_name	Hardtberg		mittel	mistral-large-latest
+261281-11 AA	geändert	neu	llm_objekt	OGS der Ludwig-Richter-Schule	Duisdorf	niedrig	mistral-large-latest
+261290-01 ST	keine Änderung						mistral-large-latest
+261292-01 ST	keine Änderung						mistral-large-latest
+261301-01 ST	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
+261307	geändert	bestätigt	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	mistral-large-latest
+261307-01 AA	keine Änderung						mistral-large-latest
