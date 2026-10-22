@@ -25,6 +25,15 @@ class KurzfassungTest(unittest.TestCase):
         self.assertIsNone(kurzfassung.fremder_akteur("Der Beirat empfiehlt den Spielplatz.", text))
         self.assertEqual(kurzfassung.pruefe(kurz, text, "Antrag der Grünen"), "nicht in Titel oder Text: Rat")
 
+    def test_titel_und_gremien_sind_keine_uebernahme(self):
+        text = "Der Ausschuss für Planung, Verkehr und Denkmalschutz berät die Sanierung der Brücke an der Kölnstraße."
+        kurz = "Der Ausschuss für Planung, Verkehr und Denkmalschutz soll über eine neue Brücke beraten."
+        self.assertIsNotNone(kurzfassung.uebernahme(kurz, text))
+        self.assertIsNone(kurzfassung.uebernahme(kurz, text, erlaubt=["Ausschuss für Planung, Verkehr und Denkmalschutz"]))
+        titel = "Sanierung der Brücke an der Kölnstraße in der Nordstadt"
+        kurz = "Die Verwaltung plant die Sanierung der Brücke an der Kölnstraße in der Nordstadt bis 2027."
+        self.assertIsNone(kurzfassung.uebernahme(kurz, text + " " + titel, erlaubt=[titel]))
+
     def test_entwurf_nur_ohne_text_der_quelle(self):
         self.assertEqual(kurzfassung._ergebnis("Gut.", None), {"kurzfassung": "Gut.", "verworfen": None, "entwurf": None})
         self.assertEqual(kurzfassung._ergebnis("Mit 99 Bäumen.", "Zahl nicht im Text: 99")["entwurf"], "Mit 99 Bäumen.")

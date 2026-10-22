@@ -73,14 +73,37 @@ def _woerter(text):
     return re.findall(r"\w+", (text or "").lower())
 
 
-def uebernahme(kurz, text, n=UEBERNAHME_WOERTER + 1):
-    """Erste Wortfolge aus n Wörtern, die wörtlich auch im Text steht (sonst None)."""
-    quelle = _woerter(text)
-    folgen = {tuple(quelle[i:i + n]) for i in range(len(quelle) - n + 1)}
+def _folgen(woerter, n):
+    return {tuple(woerter[i:i + n]) for i in range(len(woerter) - n + 1)}
+
+
+_NAMEN = None
+
+
+def namen():
+    """Namen von Gremien und Ämtern (OParl, CC0): lange Eigennamen, kein Text der Dokumente."""
+    global _NAMEN
+    if _NAMEN is None:
+        orgs = json.loads(config.ORGANIZATIONS.read_text()) if config.ORGANIZATIONS.exists() else []
+        _NAMEN = [o.get("name") or "" for o in orgs]
+    return _NAMEN
+
+
+def uebernahme(kurz, text, n=UEBERNAHME_WOERTER + 1, erlaubt=()):
+    """Erste Wortfolge aus n Wörtern, die wörtlich auch im Text steht (sonst None). Stellen, an denen die Kurzfassung
+    eine Angabe aus `erlaubt` wiederholt (Titel der Vorlage, Namen von Gremien; ab drei Wörtern), zählen nicht: Sie
+    sind öffentliche Angaben aus der OParl-API, kein Auszug aus dem Dokument."""
+    folgen = _folgen(_woerter(text), n)
     k = _woerter(kurz)
+    frei = set()
+    for e in erlaubt:
+        w = _woerter(e)
+        if len(w) >= 3:
+            frei |= {j for i in range(len(k) - len(w) + 1) if k[i:i + len(w)] == w for j in range(i, i + len(w))}
     for i in range(len(k) - n + 1):
-        if tuple(k[i:i + n]) in folgen:
-            return " ".join(k[i:i + n])
+        f = tuple(k[i:i + n])
+        if f in folgen and not frei & set(range(i, i + n)):
+            return " ".join(f)
     return None
 
 
@@ -137,7 +160,7 @@ def pruefe(kurz, text, titel=""):
     """Grund, aus dem eine Kurzfassung verworfen wird, oder None."""
     if not kurz or len(_woerter(kurz)) < 8:
         return "zu kurz"
-    if uebernahme(kurz, text):
+    if uebernahme(kurz, text, erlaubt=[titel, *namen()]):
         return f"wörtliche Übernahme von mehr als {UEBERNAHME_WOERTER} Wörtern"
     if HAUSNUMMER.search(kurz):
         return "Hausnummer genannt"
