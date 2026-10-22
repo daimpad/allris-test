@@ -92,6 +92,13 @@ class StufeCTest(unittest.TestCase):
                 {"name": "Bad Godesberg", "art": "stadtbezirk", "rolle": "gegenstand", "ortsteil": ""}]
         self.assertEqual(stufe_c.pruefen(self.gaz, text, orte, [])[0], [])
 
+    def test_freigabe_nur_herabstufen(self):
+        changes = {"1": [{"aktion": "neu"}, {"aktion": "herabgestuft"}], "2": [{"aktion": "bestätigt"}]}
+        self.assertEqual(stufe_c.freigegeben(changes, "herabstufen"), {"1": [{"aktion": "herabgestuft"}], "2": []})
+        self.assertEqual(stufe_c.freigegeben(changes, False), {"1": [], "2": []})
+        self.assertEqual(stufe_c.freigegeben(changes, True), changes)
+        self.assertIs(stufe_c.FREIGEGEBEN, False)
+
     def test_ohne_schluessel_nichts_und_nur_neue(self):
         with tempfile.TemporaryDirectory() as d:
             d = Path(d)
