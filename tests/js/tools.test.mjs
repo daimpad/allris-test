@@ -178,6 +178,10 @@ test("hole_prozesslinie: Schritte mit Evidenzstatus und Erläuterung", async () 
   assert.equal(rat.hinweis, GLOSSAR.hinweise.ohne_sitzung);
   assert.equal(p.schritte[2].ergebnis, "vertagt");
   assert.deepEqual(Object.keys(p.evidenzstatus), ["belegt", "soll"]);
+  // Zeitbezug zum Bezugstag (heute 2026-10-18): Beratung im Juni vergangen, Rat ohne Datum ohne Zeitbezug
+  assert.equal(p.heute, "2026-10-18");
+  assert.equal(p.schritte[2].zeitbezug, "vergangen");
+  assert.equal(rat.zeitbezug, undefined);
 });
 
 test("hole_prozesslinie: Soll nach Regelwerk mit Befund und Rechtsgrundlage", async () => {
