@@ -12,7 +12,7 @@ Zur Kennzeichnung: Eine **KI-Vorprüfung** stammt von einem Sprachmodell und ers
 | 2 | Orte aus dem Text durch das Sprachmodell (Stufe C) | **erledigt 22.10.2026:** nicht freigegeben, keine neuen Anfragen | – | – |
 | 3 | Ratsassistent | Bewertung von Hand **erledigt 22.10.2026** (16/17/3), daraus v0.4; offen: Lauf mit Anthropic | Systemprompt v0.4 | Lauf mit Anthropic |
 | 4 | Verortung aus dem Volltext | **erledigt 22.10.2026:** 14 richtig, 7 teilweise, 1 falsch, 8 entfallen | Regeln behalten | – |
-| 5 | Gebäude und Anlagen im Titel | Prüfung von Hand | Regeln vorerst behalten | 30 Fälle, etwa 30 Minuten |
+| 5 | Gebäude und Anlagen im Titel | **erledigt 22.10.2026:** 24 richtig, 6 teilweise, keine falsch | Regeln behalten | – |
 | 6 | Konten und Server | eigene Konten | – | je 10–20 Minuten |
 | 7 | Außenwirkung | Entscheidung | siehe 7 | – |
 
@@ -100,6 +100,12 @@ Läuft auf der Seite seit dem 20.10.2026, Konfidenz höchstens „mittel“. Die
 Läuft auf der Seite seit dem 21.10.2026 (Konfidenz „niedrig“, 837 Vorlagen). Die KI-Vorprüfung ergab 26 plausibel, 4 teilweise.
 
 **Prüfbogen:** `data/export/objekte/stichprobe_objekte.tsv` (30 Fälle). Spalte `urteil`: richtig, teilweise oder falsch.
+
+**Ergebnis (22.10.2026, im Gespräch; Vorschläge vom Auftraggeber nicht widersprochen):**
+- 24 richtig, 6 teilweise, keine falsch. Die KI-Vorprüfung (26/4/0) weicht in zwei Fällen ab (8, 18).
+- „Teilweise“ heißt hier: Der Ortsteil stimmt, aber das Gebäude ist nur Bezugspunkt (8, 18), Gegenstand ist kein Vorhaben am Ort (5), der Name ist nicht eindeutig (9), die Anlage liegt auf beiden Rheinseiten (4) oder ein künftiger Standort ist gemeint (22).
+- Acht der 30 Fälle sind der Beethovenhalle zugeordnet; die Stichprobe ist dadurch weniger vielfältig.
+- Regeln bleiben unverändert, Konfidenz weiter „niedrig“. Die Urteile stehen im Prüfbogen.
 
 ## 6. Konten und Server (nur der Auftraggeber)
 
