@@ -27,8 +27,9 @@ API = "https://api.mistral.ai/v1/chat/completions"
 # (18 plausibel, 8 teilweise, 2 falsch, 2 unklar; Fehler: falscher Akteur, Vermutungen, falsche Orte, vertauschter
 # Kostenträger; data/export/kurzfassungen/vorpruefung_kurzfassungen_v1.tsv)
 MODELL = os.environ.get("KURZFASSUNG_MODELL", "mistral-large-latest")
-FASSUNG = 4   # 3: ohne Überschrift, Absender im ersten Satz, Kosten nur laut Text (Vorprüfung v2); 4: Fragen von
-#               Anfragen nur wie gestellt, Gremium und Fraktion nur laut Text (Vorprüfung v4: 20/10/0)
+FASSUNG = 5   # 3: ohne Überschrift, Absender im ersten Satz, Kosten nur laut Text (Vorprüfung v2); 4: Fragen von
+#               Anfragen nur wie gestellt, Gremium und Fraktion nur laut Text (Vorprüfung v4: 20/10/0); 5: Rolle im
+#               Verfahren (Kenntnisnahme), keine erschlossenen Fragen oder Ursachen, Ebene einer Zahl (Vorprüfung v5: 23/7/0)
 MAX_JE_LAUF = int(os.environ.get("KURZFASSUNG_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
 MAX_ZEICHEN = 12000
 UEBERNAHME_WOERTER = 6
@@ -56,6 +57,12 @@ beantragt, vorgeschlagen, beschlossen oder mitgeteilt wird und, wenn genannt, we
 - Wer Kosten trägt, schreibst du nur, wenn es im Text ausdrücklich steht.
 - Bei einer Anfrage gibst du nur die Fragen wieder, die gestellt werden; füge keine eigenen Fragen hinzu.
 - Nenne eine Fraktion oder ein Gremium (Rat, Ausschuss, Bezirksvertretung) nur, wenn Titel oder Text sie nennen.
+  Steht dort „Koalition“, schreibe „die Koalition“ und zähle keine Parteien auf.
+- Gib die Rolle im Verfahren genau wieder: Soll ein Gremium etwas nur zur Kenntnis nehmen, schreibe das; schreibe dann
+  nicht, dass es etwas beschließen oder ablehnen soll. Was ein Antrag fordert, ist eine Forderung, keine Tatsache.
+- Gib Fragen so wieder, wie sie gestellt sind; erschließe sie nicht aus der Antwort. Nenne keine Gründe oder
+  Ursachen, die der Text nicht nennt.
+- Gilt eine Zahl für eine bestimmte Ebene (ganze Stadt, Stadtbezirk, Verwaltung, Beschäftigte), nenne diese Ebene.
 Beginne direkt mit dem ersten Satz und nenne den Absender darin („Die Verwaltung schlägt vor …“, „Die CDU-Fraktion
 beantragt …“); schreibe keine Überschrift und keine Angaben wie „Absender:“ oder „Art der Vorlage:“.
 Formuliere vollständig mit eigenen Worten; übernimm keine Sätze und keine längeren Wortfolgen aus dem Text. Nenne keine
@@ -160,6 +167,15 @@ def _anfrage(titel, text, schluessel, tries=4):
             time.sleep(2 ** (i + 2))
 
 
+def _ergebnis(kurz, grund):
+    """Felder eines Ergebnisses. Ein verworfener Entwurf wird aufbewahrt, außer er enthält Text der Quelle oder eine
+    Hausnummer (dann wird nichts gespeichert); er erscheint nirgends und dient nur der erneuten Prüfung."""
+    if not grund:
+        return {"kurzfassung": kurz, "verworfen": None, "entwurf": None}
+    aufbewahren = not (grund.startswith("wörtliche Übernahme") or grund.startswith("Hausnummer"))
+    return {"kurzfassung": None, "verworfen": grund, "entwurf": kurz if aufbewahren else None}
+
+
 def laden(verzeichnis=None):
     path = Path(verzeichnis or VERZEICHNIS) / "kurzfassungen.jsonl"
     if not path.exists():
@@ -193,13 +209,15 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         uri = (p.get("mainFile") or {}).get("id")
         if uri in texts and volltext.allowed(p.get("paperType")):
             papers.setdefault(uri, p)
-    # vorhandene Kurzfassungen der aktuellen Fassung nach den jeweils geltenden Prüfungen neu bewerten
+    # vorhandene Kurzfassungen der aktuellen Fassung nach den jeweils geltenden Prüfungen neu bewerten, auch
+    # aufbewahrte Entwürfe (verworfen ohne Text der Quelle), damit geänderte Regeln sie wieder zulassen können
     for r in have.values():
-        if r.get("fassung", 1) == FASSUNG and r["kurzfassung"] and r.get("datei") in texts:
+        kurz = r["kurzfassung"] or r.get("entwurf")
+        if r.get("fassung", 1) == FASSUNG and kurz and r.get("datei") in texts:
             main = re.sub(r"\s+", " ", volltext.clean(texts[r["datei"]]["text"])[0]).strip()[:MAX_ZEICHEN]
-            kurz = ohne_kostensatz(glaetten(r["kurzfassung"]), main)
+            kurz = ohne_kostensatz(glaetten(kurz), main)
             grund = pruefe(kurz, main, (papers.get(r["datei"]) or {}).get("name") or "")
-            r["kurzfassung"], r["verworfen"] = (None, grund) if grund else (kurz, None)
+            r.update(_ergebnis(kurz, grund))
     # ältere Fassungen zuerst (so entsteht die neue Stichprobe aus denselben Vorlagen), danach neue Texte
     alt = lambda uri: have[texts[uri]["sha"]].get("fassung", 1) < FASSUNG
     todo = ([(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] in have and alt(uri)]
@@ -215,8 +233,7 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         tokens[1] += usage.get("completion_tokens", 0)
         grund = pruefe(kurz, main, p.get("name") or "")
         have[texts[uri]["sha"]] = {"sha": texts[uri]["sha"], "datei": uri, "drucksache": p["reference"],
-                                   "kurzfassung": None if grund else kurz, "verworfen": grund, "modell": MODELL,
-                                   "fassung": FASSUNG,
+                                   **_ergebnis(kurz, grund), "modell": MODELL, "fassung": FASSUNG,
                                    "erzeugt": datetime.now(timezone.utc).date().isoformat()}
         time.sleep(0.5)
         if i % 25 == 0:   # Zwischenstand sichern: bricht der Lauf ab, bleibt das Erzeugte erhalten

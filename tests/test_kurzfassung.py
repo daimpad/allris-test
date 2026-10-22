@@ -25,6 +25,12 @@ class KurzfassungTest(unittest.TestCase):
         self.assertIsNone(kurzfassung.fremder_akteur("Der Beirat empfiehlt den Spielplatz.", text))
         self.assertEqual(kurzfassung.pruefe(kurz, text, "Antrag der Grünen"), "nicht in Titel oder Text: Rat")
 
+    def test_entwurf_nur_ohne_text_der_quelle(self):
+        self.assertEqual(kurzfassung._ergebnis("Gut.", None), {"kurzfassung": "Gut.", "verworfen": None, "entwurf": None})
+        self.assertEqual(kurzfassung._ergebnis("Mit 99 Bäumen.", "Zahl nicht im Text: 99")["entwurf"], "Mit 99 Bäumen.")
+        self.assertIsNone(kurzfassung._ergebnis("Kopie.", "wörtliche Übernahme von mehr als 6 Wörtern")["entwurf"])
+        self.assertIsNone(kurzfassung._ergebnis("Weg 3.", "Hausnummer genannt")["entwurf"])
+
     def test_pruefe(self):
         gut = "Der Spielplatz in Endenich soll neue Geräte und bessere Wege bekommen. Bezahlt wird das aus dem Haushalt der Stadt."
         self.assertIsNone(kurzfassung.pruefe(gut, TEXT))
