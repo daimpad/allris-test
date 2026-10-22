@@ -29,6 +29,10 @@ Optionen:
 
 Ein Lauf stellt 36 Fragen nacheinander; jede Frage braucht meist zwei bis vier Anfragen. Die Kosten trägt der Schlüssel. Zur Orientierung: Je Frage fallen grob 10.000 bis 30.000 Eingabe-Tokens an; die Summe zeigt das Skript am Ende an.
 
+### Auf GitHub
+
+Ohne eigenen Schlüssel auf dem Rechner: Actions → „Auswertung Ratsassistent“ → „Run workflow“, Anbieter und Modell wählen. Der Lauf nutzt das Secret des Anbieters (`MISTRAL_API_KEY` oder `ANTHROPIC_API_KEY`) und die Daten der veröffentlichten Seite; die Ergebnisdateien landen im Branch `auswertung`.
+
 ## Ergebnis
 
 Je Lauf entstehen zwei Dateien in `eval/ergebnisse/`:
