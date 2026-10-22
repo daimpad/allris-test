@@ -17,3 +17,5 @@ zeitpunkt	schritt	modell	anfragen	eingabe_tokens	ausgabe_tokens	fehler
 2026-10-21T21:06Z	stufe-c	mistral-large-latest	50	55083	5123	0
 2026-10-21T22:08Z	kurzfassungen	mistral-large-latest	50	47108	3579	9
 2026-10-21T22:15Z	stufe-c	mistral-large-latest	50	54139	5937	0
+2026-10-22T05:00Z	kurzfassungen	mistral-large-latest	500	584067	37616	112
+2026-10-22T05:09Z	stufe-c	mistral-large-latest	200	243332	21969	1
