@@ -38,7 +38,7 @@ MAX_VERSUCHE = 3      # gescheiterte Anfragen werden in späteren Läufen wieder
 FASSUNG = 2           # Fassung der Anweisung; ältere Antworten werden neu angefragt (2: KI-Vorprüfung 21.10.2026)
 # Freigabe nach Prüfung der Stichprobe von Hand: False (nur Audit), "herabstufen" (nur Orte, die das Modell als
 # „erwähnt“ einstuft, werden auf „niedrig“ gesetzt; nichts wird bestätigt oder neu verortet) oder True (alles).
-# Empfehlung nach drei KI-Vorprüfungen (21./22.10.2026): höchstens "herabstufen"
+# Empfehlung (22.10.2026): keine Freigabe; auch Herabstufungen waren in der KI-Vorprüfung nur 19 von 31 richtig
 FREIGEGEBEN = False
 AKTIONEN = {False: set(), "herabstufen": {"herabgestuft"}, True: {"neu", "bestätigt", "herabgestuft"}}
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
