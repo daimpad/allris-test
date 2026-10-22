@@ -8,7 +8,7 @@ Zur Kennzeichnung: Eine **KI-Vorprüfung** stammt von einem Sprachmodell und ers
 
 | Nr. | Gegenstand | Art | Empfehlung | Aufwand |
 |---|---|---|---|---|
-| 1 | Kurzfassungen auf der Seite | Entscheidung, danach Prüfung von Hand | siehe 1 | 30 Fälle, etwa 1 Stunde |
+| 1 | Kurzfassungen auf der Seite | **erledigt 22.10.2026:** von Hand geprüft (18/12/0), freigegeben mit geschärftem Hinweis | – | – |
 | 2 | Orte aus dem Text durch das Sprachmodell (Stufe C) | Entscheidung | nicht freigeben | keiner |
 | 3 | Ratsassistent | Prüfung von Hand, Lauf mit Anthropic | Systemprompt v0.3 behalten | 36 Antworten, etwa 1 Stunde |
 | 4 | Verortung aus dem Volltext | Prüfung von Hand | Regeln vorerst behalten | 30 Fälle, etwa 45 Minuten |
@@ -20,7 +20,7 @@ Die Prüfbögen sind TSV-Dateien. Sie lassen sich in einer Tabellenkalkulation �
 
 ## 1. Kurzfassungen
 
-Seit dem 21.10.2026 erzeugt Mistral Large Kurzfassungen der Hauptdokumente. Sie stehen im Branch `kurzfassungen`, auf der Seite erscheinen sie noch nicht (`FREIGEGEBEN = False` in `pipeline/kurzfassung.py`).
+Seit dem 21.10.2026 erzeugt Mistral Large Kurzfassungen der Hauptdokumente. Sie stehen im Branch `kurzfassungen` und erscheinen seit dem 22.10.2026 auf der Seite (`FREIGEGEBEN = True` in `pipeline/kurzfassung.py`).
 
 KI-Vorprüfungen von je 30 Kurzfassungen (`data/export/kurzfassungen/vorpruefung_kurzfassungen_v*.tsv`):
 
@@ -41,6 +41,8 @@ KI-Vorprüfungen von je 30 Kurzfassungen (`data/export/kurzfassungen/vorpruefung
 - **C, erst nach der Prüfung von Hand:** Die Prüfung von Hand entscheidet zwischen A und B.
 
 **Empfehlung: C.** Die KI-Vorprüfung ist streng. In den letzten fünf Stichproben (150 Kurzfassungen, seit den automatischen Prüfungen auf fremde Zahlen und Kostensätze) war keine im Kern falsch. Bestätigt die Prüfung von Hand das, spricht das für B. Findet sie im Kern falsche Kurzfassungen, bleibt es bei A.
+
+**Ergebnis (22.10.2026):** Prüfung von Hand im Gespräch: 18 zutreffend, 12 teilweise, keine falsch (`data/export/kurzfassungen/pruefung_kurzfassungen_v7.tsv`). Die Urteile stimmen in allen 30 Fällen mit der KI-Vorprüfung überein; diese war bei der Prüfung sichtbar, die Prüfung ist daher nicht unabhängig von ihr. Entscheidung des Auftraggebers: **B, freigeben**, Hinweis geschärft („Einzelheiten können ungenau sein, etwa ob etwas beschlossen oder nur vorgeschlagen ist. Maßgeblich ist das Original.“). Es erscheinen nur Kurzfassungen der Fassung 7; ältere werden im täglichen Lauf neu erzeugt (bis 500 je Tag).
 
 **Prüfbogen:** [`stichprobe_kurzfassungen_v7.tsv`](https://github.com/daimpad/allris-test/blob/kurzfassungen/stichprobe_kurzfassungen_v7.tsv) im Branch `kurzfassungen`.
 - 30 Kurzfassungen der Fassung 7, je mit Link zum Original im Ratsinformationssystem.

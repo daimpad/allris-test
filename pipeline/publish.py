@@ -34,7 +34,7 @@ def events(p, with_followups=False):
         out.append({"date": p["date"], "id": f"{p['source_object']}#vorlage",
                     "title": f"Neue Vorlage {p['reference']}: {p['name']}",
                     "summary": f"{p['paper_type']} · federführend: {p['amt'] or 'unbekannt'} · Stand: {p['stand']}"
-                               + (f" · KI-Kurzfassung (abgeleitet, kann Fehler enthalten): {p['kurzfassung']['text']}"
+                               + (f" · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): {p['kurzfassung']['text']}"
                                   if p.get("kurzfassung") else "")})
     for i, s in enumerate(p["steps"]):
         if s["typ"] in ("beratung", "entscheidung") and s.get("result") and s.get("date"):
@@ -249,7 +249,7 @@ def write_dcat(path, data_start, modified, kurzfassungen=False):
                  "Umsetzungen von Beschlüssen der Konfidenz hoch – ein Indiz, kein Beleg."),
         ] + ([dist("KI-Kurzfassungen (TSV)", "bonn/kurzfassungen.tsv", "text/tab-separated-values", "cc-by",
                    "Mit einem Sprachmodell aus dem Text der Hauptdokumente formulierte Kurzfassungen, abgeleitet und "
-                   "gekennzeichnet; kein Zitat, sie können Fehler enthalten. Maßgeblich ist das Original.")]
+                   "gekennzeichnet; kein Zitat, Einzelheiten können ungenau sein. Maßgeblich ist das Original.")]
              if kurzfassungen else []),
     }
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")

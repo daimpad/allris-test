@@ -29,7 +29,7 @@ class Feeds(unittest.TestCase):
         self.assertNotIn("KI-Kurzfassung", ev[0]["summary"])
         kurz = {**PAPER, "kurzfassung": {"text": "Es geht um Bäume.", "modell": "m", "erzeugt": "2026-10-21"}}
         self.assertTrue(publish.events(kurz)[0]["summary"].endswith(
-            "KI-Kurzfassung (abgeleitet, kann Fehler enthalten): Es geht um Bäume."))
+            "KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Es geht um Bäume."))
 
     def test_atom_ist_wohlgeformt_und_stabil(self):
         entries = [{**e, "link": "https://site/?gebiet=ortsteil:endenich#261856", "original": PAPER["web"]}

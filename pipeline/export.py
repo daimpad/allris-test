@@ -32,7 +32,7 @@ def _status(row):
 _KURZ = None
 KURZ_COLUMNS = ["drucksache", "kurzfassung", "modell", "erzeugt", "kennzeichnung"]
 KURZ_HINWEIS = ("KI-Kurzfassung (abgeleitet): mit einem Sprachmodell aus dem Text des Dokuments formuliert, kein Zitat; "
-                "kann Fehler enthalten, maßgeblich ist das Original")
+                "Einzelheiten können ungenau sein, maßgeblich ist das Original")
 
 
 def _kurzfassungen():

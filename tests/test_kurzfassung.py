@@ -123,7 +123,10 @@ class KurzfassungTest(unittest.TestCase):
             self.assertEqual(len(calls), 2)  # Bürgerantrag ausgenommen, zweiter Lauf ohne Anfragen
             self.assertEqual(sorted(r["verworfen"] or "ok" for r in rows.values()),
                              ["ok", f"wörtliche Übernahme von mehr als {kurzfassung.UEBERNAHME_WOERTER} Wörtern"])
-            self.assertEqual(kurzfassung.fuer_seite(out), {})  # vor der Freigabe nichts auf der Seite
+            with mock.patch.object(kurzfassung, "FREIGEGEBEN", False):
+                self.assertEqual(kurzfassung.fuer_seite(out), {})  # ohne Freigabe nichts auf der Seite
+            with mock.patch.object(kurzfassung, "FREIGEGEBEN", True):
+                self.assertEqual(len(kurzfassung.fuer_seite(out)), 1)  # nur die gültige der aktuellen Fassung
             self.assertEqual(len((out / "laeufe.tsv").read_text().splitlines()), 2)  # Kopf und ein Lauf mit Anfragen
             # ältere Fassung wird neu erzeugt
             rows = kurzfassung.laden(out)

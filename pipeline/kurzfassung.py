@@ -36,7 +36,8 @@ GEGENLESEN_AKTIV = False   # Fassung 6: kein messbarer Gewinn, daher abgeschalte
 MAX_JE_LAUF = int(os.environ.get("KURZFASSUNG_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
 MAX_ZEICHEN = 12000
 UEBERNAHME_WOERTER = 6
-FREIGEGEBEN = False   # erst nach Prüfung der Stichprobe von Hand auf True setzen
+FREIGEGEBEN = True   # Prüfung von Hand der Stichprobe v7 (22.10.2026): 18 zutreffend, 12 teilweise, keine falsch;
+#                       Freigabe durch den Auftraggeber mit geschärftem Hinweis
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
 # Absender und Gremien, die in einer Kurzfassung nur stehen dürfen, wenn Titel oder Text sie nennen (KI-Vorprüfung v4:
 # „Die Grünen beantragen“ und „dem Rat vorgelegt“ ohne Beleg)
