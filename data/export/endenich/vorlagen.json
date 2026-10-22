@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 558,
-  "generated_at": "2026-10-22T11:35:20+00:00",
+  "generated_at": "2026-10-22T11:53:29+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-22T11:24:35+00:00"
+    "retrieved_at": "2026-10-22T11:42:41+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-22T11:27:38+00:00"
+    "retrieved_at": "2026-10-22T11:46:15+00:00"
    },
    {
     "name": "osm",
@@ -32559,6 +32559,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass es kurzfristig keine Möglichkeit gibt, die Fahrradquerung der Endenicher Allee zwischen Campusallee und Wiesenweg/Schubertstraße zu verbessern. Größere Umbauten wären nötig, für die weder Planung noch Geld vorhanden sind. Andere Verkehrsprojekte haben Vorrang. Langfristig könnte sich die Situation durch den Neubau der Hosenbrücke ändern.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {
@@ -33608,6 +33613,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Fraktion Rhein.Grün beantragt, zu prüfen, ob das Gelände der Universität Bonn zwischen drei Straßen als Landschaftsschutzgebiet ausgewiesen werden kann. Es geht um ein Sonderbaugebiet mit dem Max-Planck-Institut.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {
