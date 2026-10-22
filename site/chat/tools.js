@@ -334,7 +334,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
         themen: p.themes.map((t) => ({ thema: label[t.theme] ?? t.theme, status: "abgeleitet", methode: t.method, fundstelle: t.evidence, konfidenz: t.confidence })),
         parteien: p.parties,
         kurzfassung: p.kurzfassung ? { text: p.kurzfassung.text, status: "abgeleitet", modell: p.kurzfassung.modell,
-          hinweis: "Mit einem Sprachmodell aus dem Text des Dokuments formuliert, kein Zitat; kann Fehler enthalten. Maßgeblich ist das Original." } : null,
+          hinweis: "Mit einem Sprachmodell aus dem Text des Dokuments formuliert, kein Zitat. Einzelheiten können ungenau sein, etwa ob etwas beschlossen oder nur vorgeschlagen ist. Maßgeblich ist das Original." } : null,
         orte: p.locations.slice(0, 10).map(loc),
         orte_gesamt: p.locations.length,
         bebauungsplaene: p.plans.map((x) => ({ nummer: x.nr, fundstelle: x.evidence, geltungsbereich_bekannt: x.area, treffer: x.match || null })),
