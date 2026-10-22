@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 558,
-  "generated_at": "2026-10-22T12:21:54+00:00",
+  "generated_at": "2026-10-22T13:15:12+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-22T12:12:37+00:00"
+    "retrieved_at": "2026-10-22T13:05:32+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-22T12:16:16+00:00"
+    "retrieved_at": "2026-10-22T13:08:02+00:00"
    },
    {
     "name": "osm",
@@ -26557,6 +26557,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion beantragt, das Parkverbot am Flodelingsweg während der Heimspiele des FV Bonn-Endenich 08 vorübergehend aufzuheben. Die Verwaltung lehnt dies ab: Die Straße ist zu schmal, Gehwege dürfen nicht zugeparkt werden, und eine Sonderregelung für den Verein wäre ungerecht. Sie rät, den Antrag abzulehnen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {
@@ -26998,6 +27003,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion hatte vorgeschlagen, Richtungspfeile auf der Straße Auf dem Hügel anzubringen. Die Verwaltung teilt mit, dass dies nach Einschätzung der Stadtwerke Bonn (SWB) zu Verzögerungen für geradeausfahrende Busse führen würde, da abbiegende Fahrzeuge den Gegenverkehr beachten müssten.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {
@@ -27134,6 +27144,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, wie ein Hinweisschild am Hermann-Wandersleb-Ring angebracht werden kann. Die Bezirksvertretung soll die Vorgehensweise zur Kenntnis nehmen und befürworten.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {
