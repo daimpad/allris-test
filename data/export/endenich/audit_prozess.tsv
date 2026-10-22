@@ -325,6 +325,7 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 253158	entscheidung	Rat (Entscheidung)	belegt	2026-07-09	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2022885	ungeprüft
 253158	folgevorlage	Stellungnahme der Verwaltung	belegt	2026-07-29		oparl-bonn	253158-02 ST	ungeprüft
 253158	folgevorlage	Änderungsantrag	belegt	2026-09-24		oparl-bonn	253158-03 AA	ungeprüft
+253158	vollzug	Vollzug durch die Verwaltung	unklar				Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt es keine öffentliche Schnittstelle.	ungeprüft
 253612	initiierung	Antrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2023892	ungeprüft
 253612	veroeffentlichung	Datum der Vorlage	belegt	2025-08-07		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2023892	ungeprüft
 253612	folgevorlage	Stellungnahme der Verwaltung	belegt	2026-01-27		oparl-bonn	253612-01 ST	ungeprüft

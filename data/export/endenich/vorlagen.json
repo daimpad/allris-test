@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 558,
-  "generated_at": "2026-10-22T15:13:20+00:00",
+  "generated_at": "2026-10-22T18:42:19+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-22T15:02:55+00:00"
+    "retrieved_at": "2026-10-22T18:32:42+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-22T15:05:26+00:00"
+    "retrieved_at": "2026-10-22T18:35:23+00:00"
    },
    {
     "name": "osm",
@@ -1374,9 +1374,9 @@
      "start_date": "2026-09-24T15:00:00.000Z",
      "cancelled": 0,
      "number": "5.14.3",
-     "result": null,
+     "result": "abgelehnt",
      "public": 1,
-     "status": "terminiert"
+     "status": "beraten"
     }
    ],
    "superordinated": [
@@ -1434,7 +1434,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029600",
-   "stand": "offen",
+   "stand": "entschieden",
    "themes": [
     {
      "theme": "umwelt",
@@ -1483,7 +1483,8 @@
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
      "number": "5.14.3",
-     "stand": "terminiert",
+     "result": "abgelehnt",
+     "stand": "beraten",
      "result_source": "oparl-lite"
     }
    ],
@@ -3041,10 +3042,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "5.14.2",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
     }
    ],
    "superordinated": [
@@ -3102,7 +3103,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027912",
-   "stand": "in Beratung",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "bauen",
@@ -3172,8 +3173,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "5.14.2",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     }
    ],
    "soll": {
@@ -4174,8 +4177,8 @@
      "meeting": "Sitzung des Rates",
      "start_date": "2026-07-09T15:00:00.000Z",
      "cancelled": 0,
-     "number": "5.27.1",
-     "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
+     "number": "5.14.1",
+     "result": "zurückgezogen",
      "public": 1,
      "status": "beraten"
     }
@@ -4235,7 +4238,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027892",
-   "stand": "in Beratung",
+   "stand": "entschieden",
    "themes": [
     {
      "theme": "umwelt",
@@ -4283,11 +4286,10 @@
      "date": "2026-07-09",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
-     "number": "5.27.1",
-     "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
+     "number": "5.14.1",
+     "result": "zurückgezogen",
      "stand": "beraten",
-     "result_source": "oparl-lite",
-     "schleife": true
+     "result_source": "oparl-lite"
     },
     {
      "typ": "beratung",
@@ -11816,8 +11818,8 @@
      "meeting": "Sitzung des Rates",
      "start_date": "2026-07-09T15:00:00.000Z",
      "cancelled": 0,
-     "number": "5.27",
-     "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
+     "number": "5.14",
+     "result": "ungeändert beschlossen",
      "public": 1,
      "status": "beraten"
     }
@@ -11889,7 +11891,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022885",
-   "stand": "in Beratung",
+   "stand": "entschieden",
    "themes": [
     {
      "theme": "bauen",
@@ -11983,11 +11985,10 @@
      "date": "2026-07-09",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
-     "number": "5.27",
-     "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
+     "number": "5.14",
+     "result": "ungeändert beschlossen",
      "stand": "beraten",
-     "result_source": "oparl-lite",
-     "schleife": true
+     "result_source": "oparl-lite"
     },
     {
      "typ": "folgevorlage",
@@ -12006,6 +12007,12 @@
      "source": "oparl-bonn",
      "reference": "253158-03 AA",
      "title": "Volt-Änderungsantrag zur N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte \"Ausbau der A565\" und \"Universitäts-Campus-Endenich\" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a. Antrag zur Vorlage 253158"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
     }
    ],
    "soll": {
