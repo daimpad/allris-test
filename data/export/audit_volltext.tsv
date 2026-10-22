@@ -476,6 +476,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253210-05 AA	kein Ort						
 253346	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 253346	verortet	Hauptteil	volltext_strasse+ortsteil	Röttgener Straße	Röttgen	niedrig	1
+253376-04	kein Ort						
 253419-02 AA	kein Ort						
 253419-03 AA	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	niedrig	1
 253574-01 AA	kein Ort						
@@ -701,6 +702,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260809-03 ST	kein Ort						
 260815-02 ST	kein Ort						
 260845-02 ST	Liste (51 Ortsteile), nicht verortet	Hauptteil					
+260870-01 ST	kein Ort						
 260895-02 ST	kein Ort						
 260915-01 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Kurfürstenallee	Alt-Godesberg	mittel	2
 260932-06	verortet	Hauptteil	volltext_strasse+kreuzung	Agnesstraße	Beuel-Mitte	mittel	1
@@ -726,6 +728,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261037-02 AA	kein Ort						
 261043-04 ST	kein Ort						
 261055-03 AA	kein Ort						
+261073-01 ST	kein Ort						
 261074	kein Ort						
 261082-05 ST	kein Ort						
 261092-02 AA	kein Ort						
@@ -833,6 +836,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261572-03 AA	kein Ort						
 261578-01 ST	kein Ort						
 261578-02 AA	kein Ort						
+261586-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	mittel	1
 261588	kein Ort						
 261588-01 AA	Liste (9 Ortsteile), nicht verortet	Hauptteil					
 261592	nur in Anlagen genannt, nicht verortet						
@@ -862,6 +866,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261646	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
 261646	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
 261646	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	mittel	1
+261646-01 AA	kein Ort						
 261647	Liste (6 Ortsteile), nicht verortet	Hauptteil					
 261647-01 AA	kein Ort						
 261647-02 ST	kein Ort						
@@ -872,6 +877,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261657	kein Ort						
 261658	kein Ort						
 261674	kein Ort						
+261674-01 ST	kein Ort						
 261675	kein Ort						
 261677	kein Ort						
 261677-01 ST	kein Ort						
@@ -915,6 +921,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261724-01 AA	kein Ort						
 261725	kein Ort						
 261727	Liste (24 Ortsteile), nicht verortet	Hauptteil					
+261727-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Graurheindorfer Straße	Bonn-Castell	niedrig	1
+261727-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Husarenstraße	Bonn-Castell	niedrig	1
+261727-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Römerstraße	Bonn-Castell	mittel	2
 261729	kein Ort						
 261730	kein Ort						
 261733-01	kein Ort						
@@ -953,7 +962,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261777-01 ST	verortet	Hauptteil	volltext_strasse	Schulplatz	Friesdorf	mittel	2
 261779	kein Ort						
 261779-01 ST	kein Ort						
-261789	kein Ort						
 261790	kein Ort						
 261791	kein Ort						
 261791-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
@@ -1019,6 +1027,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261876-01 AA	kein Ort						
 261876-02 ST	kein Ort						
 261879	kein Ort						
+261879-01 ST	kein Ort						
 261882	kein Ort						
 261883	kein Ort						
 261885	kein Ort						
@@ -1054,3 +1063,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261971	kein Ort						
 261972	kein Ort						
 261978	kein Ort						
+261982	kein Ort						
+261984	kein Ort						
+261988	kein Ort						

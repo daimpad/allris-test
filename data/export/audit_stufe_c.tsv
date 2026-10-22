@@ -153,7 +153,10 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240574	keine Änderung						mistral-large-latest
 240578	Liste (15 Ortsteile), nicht verortet						mistral-large-latest
 240580	keine Änderung						mistral-large-latest
-240581	Liste (8 Ortsteile), nicht verortet						mistral-large-latest
+240581	geändert	neu	llm_ortsteil	Nordstadt	Nordstadt	niedrig	mistral-large-latest
+240581	geändert	neu	llm_ortsteil	Südstadt	Südstadt	niedrig	mistral-large-latest
+240581	geändert	neu	llm_ortsteil	Poppelsdorf	Poppelsdorf	niedrig	mistral-large-latest
+240581	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
 240581-06	Liste (10 Ortsteile), nicht verortet						mistral-large-latest
 240582	keine Änderung						mistral-large-latest
 240589	keine Änderung						mistral-large-latest
@@ -167,7 +170,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240604-01	keine Änderung						mistral-large-latest
 240608	keine Änderung						mistral-large-latest
 240608-01 ST	keine Änderung						mistral-large-latest
-240610	Aufzählung von Gebäuden (5), nicht verortet						mistral-large-latest
+240610	Aufzählung von Gebäuden (6), nicht verortet						mistral-large-latest
 240611	keine Änderung						mistral-large-latest
 240613	keine Änderung						mistral-large-latest
 240616	keine Änderung						mistral-large-latest
@@ -255,13 +258,12 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 240713	keine Änderung						mistral-large-latest
 240714-02	keine Änderung						mistral-large-latest
 240718	keine Änderung						mistral-large-latest
-240719	geändert	herabgestuft	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	mistral-large-latest
 240719	geändert	neu	llm_objekt	Schwimmhalle Hardtbergbad	Duisdorf	niedrig	mistral-large-latest
 240719	geändert	neu	llm_objekt	Römerbad	Bonn-Castell	niedrig	mistral-large-latest
 240719	geändert	neu	llm_objekt	Ennertbad	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
 240719	geändert	bestätigt	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	mistral-large-latest
 240782-01 AA	keine Änderung						mistral-large-latest
-240782-07	Liste (8 Ortsteile), nicht verortet						mistral-large-latest
+240782-07	Liste (9 Ortsteile), nicht verortet						mistral-large-latest
 240785-01 AA	keine Änderung						mistral-large-latest
 240785-02 ST	keine Änderung						mistral-large-latest
 240812-04 ST	geändert	bestätigt	volltext_strasse+kreuzung	Heussallee	Gronau	mittel	mistral-large-latest
@@ -316,7 +318,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 241607	geändert	bestätigt	volltext_strasse+kreuzung	Poststraße	Bonn-Zentrum	mittel	mistral-large-latest
 241610	keine Änderung						mistral-large-latest
 241611	keine Änderung						mistral-large-latest
-241616	geändert	neu	llm_objekt	StadtMuseum Bonn	Bonn-Zentrum	niedrig	mistral-large-latest
+241616	keine Änderung						mistral-large-latest
 241618	keine Änderung						mistral-large-latest
 241620	keine Änderung						mistral-large-latest
 241621	keine Änderung						mistral-large-latest
@@ -337,7 +339,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 241655	keine Änderung						mistral-large-latest
 241655-01	keine Änderung						mistral-large-latest
 241656	keine Änderung						mistral-large-latest
-241657	keine Änderung						mistral-large-latest
+241657	geändert	bestätigt	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	mistral-large-latest
 241660	keine Änderung						mistral-large-latest
 241663	geändert	bestätigt	volltext_strasse+kreuzung	Friedrich-Ebert-Allee	Gronau	mittel	mistral-large-latest
 241663	geändert	bestätigt	volltext_strasse+kreuzung	Olof-Palme-Allee	Gronau	mittel	mistral-large-latest
@@ -355,7 +357,15 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 241683	keine Änderung						mistral-large-latest
 241684	Liste (8 Ortsteile), nicht verortet						mistral-large-latest
 241685	Liste (6 Ortsteile), nicht verortet						mistral-large-latest
-241686	Liste (6 Ortsteile), nicht verortet						mistral-large-latest
+241686	geändert	bestätigt	volltext_strasse+kreuzung	Rathausgasse	Bonn-Zentrum	mittel	mistral-large-latest
+241686	geändert	bestätigt	volltext_strasse+kreuzung	Am Hof	Bonn-Zentrum	mittel	mistral-large-latest
+241686	geändert	bestätigt	volltext_strasse	Wesselstraße	Bonn-Zentrum	mittel	mistral-large-latest
+241686	geändert	bestätigt	volltext_strasse+kreuzung	Oxfordstraße	Bonn-Zentrum	mittel	mistral-large-latest
+241686	geändert	bestätigt	volltext_strasse+kreuzung	Rabinstraße	Bonn-Zentrum	mittel	mistral-large-latest
+241686	geändert	bestätigt	volltext_strasse+kreuzung	Adenauerallee	Südstadt	mittel	mistral-large-latest
+241686	geändert	bestätigt	volltext_strasse+kreuzung	Am Hofgarten	Südstadt	mittel	mistral-large-latest
+241686	geändert	herabgestuft	volltext_strasse+hausnummer	Thomas-Mann-Straße	Bonn-Zentrum	niedrig	mistral-large-latest
+241686	geändert	bestätigt	volltext_strasse+kreuzung	Am Neutor	Bonn-Zentrum	mittel	mistral-large-latest
 241688	keine Änderung						mistral-large-latest
 241689	keine Änderung						mistral-large-latest
 241693	keine Änderung						mistral-large-latest
@@ -378,7 +388,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 252572-01	keine Änderung						mistral-large-latest
 252883-01	geändert	bestätigt	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	mistral-large-latest
 252903-02 ST	keine Änderung						mistral-large-latest
-252903-03 ST	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
+252903-03 ST	keine Änderung						mistral-large-latest
 252927-01	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
 253147-04	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
 253147-04	geändert	neu	llm_strasse	Am Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
@@ -386,6 +396,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 253210-04	geändert	bestätigt	volltext_strasse+ortsteil	Schickgasse	Buschdorf	mittel	mistral-large-latest
 253210-05 AA	keine Änderung						mistral-large-latest
 253346	keine Änderung						mistral-large-latest
+253376-04	keine Änderung						mistral-large-latest
 253419-02 AA	keine Änderung						mistral-large-latest
 253419-03 AA	geändert	bestätigt	volltext_ortsteil_name	Nordstadt	Nordstadt	mittel	mistral-large-latest
 253574-01 AA	keine Änderung						mistral-large-latest
