@@ -65,6 +65,8 @@ class VolltextTest(unittest.TestCase):
                   "Jahresabschluss 2023 der Beethovenhalle GmbH"]:
             self.assertTrue(volltext.titel_ohne_ort(t), t)
         self.assertFalse(volltext.titel_ohne_ort("Spielplatz an der Endenicher Straße"))
+        self.assertTrue(volltext.sammelliste("Punkte der nichtöffentlichen Sitzung"))
+        self.assertFalse(volltext.sammelliste("Wirtschaftsplan 2027 der bonnorange AöR"))
 
     def test_eingaben_von_buergerinnen_nicht_aus_dem_volltext(self):
         self.assertFalse(volltext.allowed("Bürgerantrag § 24 GO - Öffentlich"))

@@ -34,6 +34,12 @@ class KurzfassungTest(unittest.TestCase):
         kurz = "Die Verwaltung plant die Sanierung der Brücke an der Kölnstraße in der Nordstadt bis 2027."
         self.assertIsNone(kurzfassung.uebernahme(kurz, text + " " + titel, erlaubt=[titel]))
 
+    def test_zahl_aus_dem_titel(self):
+        text = "Der Bericht für alle vier Quartale liegt bei. Die Auslastung ist gestiegen."
+        kurz = "Die Stabsstelle legt den Controllingbericht für das Jahr 2023 mit allen vier Quartalen vor."
+        self.assertEqual(kurzfassung.pruefe(kurz, text), "Zahl nicht im Text: 2023")
+        self.assertIsNone(kurzfassung.pruefe(kurz, text, "Controllingbericht 2023 der Beethovenhalle"))
+
     def test_entwurf_nur_ohne_text_der_quelle(self):
         self.assertEqual(kurzfassung._ergebnis("Gut.", None), {"kurzfassung": "Gut.", "verworfen": None, "entwurf": None})
         self.assertEqual(kurzfassung._ergebnis("Mit 99 Bäumen.", "Zahl nicht im Text: 99")["entwurf"], "Mit 99 Bäumen.")

@@ -164,7 +164,7 @@ def pruefe(kurz, text, titel=""):
         return f"wörtliche Übernahme von mehr als {UEBERNAHME_WOERTER} Wörtern"
     if HAUSNUMMER.search(kurz):
         return "Hausnummer genannt"
-    z = fremde_zahl(kurz, text)
+    z = fremde_zahl(kurz, f"{titel} {text}")   # Zahlen im Titel („Controllingbericht 2023“) zählen mit
     if z:
         return f"Zahl nicht im Text: {z}"
     a = fremder_akteur(kurz, f"{titel} {text}")
@@ -230,7 +230,8 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
     for line in open(config.PAPERS, encoding="utf-8"):
         p = json.loads(line)
         uri = (p.get("mainFile") or {}).get("id")
-        if uri in texts and volltext.allowed(p.get("paperType")):
+        # Sammellisten nichtöffentlicher Punkte teilen meist nur mit, dass es keine gibt: keine Kurzfassung
+        if uri in texts and volltext.allowed(p.get("paperType")) and not volltext.sammelliste(p.get("name")):
             papers.setdefault(uri, p)
     # vorhandene Kurzfassungen der aktuellen Fassung nach den jeweils geltenden Prüfungen neu bewerten, auch
     # aufbewahrte Entwürfe (verworfen ohne Text der Quelle), damit geänderte Regeln sie wieder zulassen können
