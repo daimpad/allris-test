@@ -36,7 +36,11 @@ MAX_TOKENS = 1200     # erster Lauf (21.10.2026, 600): zwei Antworten ohne lesba
 MAX_NEUE_OBJEKTE = 4   # mehr neue Gebäude und Anlagen in einer Vorlage gelten als Aufzählung
 MAX_VERSUCHE = 3      # gescheiterte Anfragen werden in späteren Läufen wiederholt
 FASSUNG = 2           # Fassung der Anweisung; ältere Antworten werden neu angefragt (2: KI-Vorprüfung 21.10.2026)
-FREIGEGEBEN = False   # erst nach Prüfung der Stichprobe von Hand auf True setzen
+# Freigabe nach Prüfung der Stichprobe von Hand: False (nur Audit), "herabstufen" (nur Orte, die das Modell als
+# „erwähnt“ einstuft, werden auf „niedrig“ gesetzt; nichts wird bestätigt oder neu verortet) oder True (alles).
+# Empfehlung nach drei KI-Vorprüfungen (21./22.10.2026): höchstens "herabstufen"
+FREIGEGEBEN = False
+AKTIONEN = {False: set(), "herabstufen": {"herabgestuft"}, True: {"neu", "bestätigt", "herabgestuft"}}
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
 DATEI = "orte_stufe_c.jsonl"
 ARTEN = {"strasse", "ortsteil", "stadtbezirk", "objekt", "kreuzung"}
@@ -265,11 +269,17 @@ def anwenden(verzeichnis=None, db_path=None):
         w.writerows(objekt_audit)
     n = {a: sum(1 for rs in changes.values() for r in rs if r["aktion"] == a) for a in ("neu", "bestätigt", "herabgestuft")}
     print(f"Stufe C: {len(by_ref)} Vorlagen geprüft; {n} → audit_stufe_c.tsv"
-          f"{'' if FREIGEGEBEN else ' (nicht übernommen: noch nicht freigegeben)'}")
+          f"{ {True: '', 'herabstufen': ' (nur Herabstufungen übernommen)'}.get(FREIGEGEBEN, ' (nicht übernommen)')}")
     _stichprobe(base, kand, changes)
-    if FREIGEGEBEN:
-        _uebernehmen(db, kand, changes, gaz)
+    if AKTIONEN[FREIGEGEBEN]:
+        _uebernehmen(db, kand, freigegeben(changes), gaz)
     db.close()
+
+
+def freigegeben(changes, modus=None):
+    """Änderungen, die nach der Freigabe (FREIGEGEBEN) übernommen werden."""
+    erlaubt = AKTIONEN[FREIGEGEBEN if modus is None else modus]
+    return {ref: [r for r in rows if r["aktion"] in erlaubt] for ref, rows in changes.items()}
 
 
 def _uebernehmen(db, kand, changes, gaz):
