@@ -1,0 +1,64 @@
+# Auswertung des Ratsassistenten mit einem echten Anbieter (eval/run.mjs, 36 Fragen), nur auf Knopfdruck.
+# Nutzt die Daten der veröffentlichten Seite und das Secret des Anbieters (MISTRAL_API_KEY bzw. ANTHROPIC_API_KEY).
+# Ergebnisse (TSV mit Spalten für die Bewertung von Hand, JSONL mit Antworten und Protokollen) im Branch `auswertung`.
+name: Auswertung Ratsassistent
+
+on:
+  workflow_dispatch:
+    inputs:
+      anbieter:
+        description: "Anbieter (mistral oder anthropic)"
+        default: mistral
+      modell:
+        description: "Modell"
+        default: mistral-large-latest
+      fragen:
+        description: "Nur diese Fragen (z. B. F01,P01); leer für alle"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auswertung
+  cancel-in-progress: false
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fragen stellen
+        env:
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANBIETER: ${{ inputs.anbieter }}
+          MODELL: ${{ inputs.modell }}
+          FRAGEN: ${{ inputs.fragen }}
+        run: |
+          set -- --anbieter "$ANBIETER" --modell "$MODELL" --daten https://daimpad.github.io/allris-test/data/export/ --aus _auswertung
+          [ -n "$FRAGEN" ] && set -- "$@" --fragen "$FRAGEN"
+          node eval/run.mjs "$@" | tee _zusammenfassung.txt
+      - name: Ergebnisse sichern (Branch auswertung)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ls _auswertung/*.tsv > /dev/null 2>&1 || { echo "keine Ergebnisse"; exit 0; }
+          url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          if git ls-remote --exit-code --heads "$url" auswertung > /dev/null; then
+            git clone -q --depth 1 --branch auswertung "$url" _branch
+          else
+            git init -q -b auswertung _branch
+          fi
+          cp _auswertung/* _branch/
+          cd _branch
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Auswertung Ratsassistent $(date -u +%F) (${{ inputs.anbieter }}, ${{ inputs.modell }})"
+          git push -q "$url" HEAD:auswertung
