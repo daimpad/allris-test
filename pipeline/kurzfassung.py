@@ -27,10 +27,12 @@ API = "https://api.mistral.ai/v1/chat/completions"
 # (18 plausibel, 8 teilweise, 2 falsch, 2 unklar; Fehler: falscher Akteur, Vermutungen, falsche Orte, vertauschter
 # Kostenträger; data/export/kurzfassungen/vorpruefung_kurzfassungen_v1.tsv)
 MODELL = os.environ.get("KURZFASSUNG_MODELL", "mistral-large-latest")
-FASSUNG = 6   # 6: zweiter Aufruf liest die Kurzfassung gegen den Text gegen und berichtigt sie (Vorprüfung v6: 22/8/0);
+FASSUNG = 7   # 7: Anweisung der Fassung 5 ohne Gegenlesen (Vorprüfung v7 der Fassung 6: 22/8/0, keine Verbesserung,
+#               doppelte Kosten, mehr wörtliche Übernahmen); 6: zweiter Aufruf liest gegen (GEGENLESEN_AKTIV);
 # 3: ohne Überschrift, Absender im ersten Satz, Kosten nur laut Text (Vorprüfung v2); 4: Fragen von
 #               Anfragen nur wie gestellt, Gremium und Fraktion nur laut Text (Vorprüfung v4: 20/10/0); 5: Rolle im
 #               Verfahren (Kenntnisnahme), keine erschlossenen Fragen oder Ursachen, Ebene einer Zahl (Vorprüfung v5: 23/7/0)
+GEGENLESEN_AKTIV = False   # Fassung 6: kein messbarer Gewinn, daher abgeschaltet; die Funktion bleibt für Versuche
 MAX_JE_LAUF = int(os.environ.get("KURZFASSUNG_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
 MAX_ZEICHEN = 12000
 UEBERNAHME_WOERTER = 6
@@ -234,7 +236,7 @@ def _schreiben(base, have):
 
 def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
     """Neue Kurzfassungen für Hauptdokumente mit Text (höchstens MAX_JE_LAUF je Lauf); Stichprobe einmalig."""
-    if gegenlesen is None and anfrage is _anfrage:
+    if gegenlesen is None and anfrage is _anfrage and GEGENLESEN_AKTIV:
         gegenlesen = _gegenlesen
     schluessel = os.environ.get("MISTRAL_API_KEY")
     if not schluessel:
