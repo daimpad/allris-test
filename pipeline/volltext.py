@@ -35,6 +35,17 @@ OHNE_VOLLTEXT = ("Bürgerantrag", "Anregungen und Beschwerden", "Einwohner")
 
 def allowed(paper_type):
     return not (paper_type or "").startswith(OHNE_VOLLTEXT)
+
+
+# Titel ohne gemeinsamen Ort: Sammellisten nichtöffentlicher Punkte (oft Personalfragen) und Vorlagen zu Gesellschaften,
+# deren Sitz nur als Absender im Text steht (KI-Vorprüfungen der Stufe C, 21. und 22.10.2026)
+TITEL_OHNE_ORT = re.compile(r"Tagesordnungspunkt\w*\b.*nicht ?öffentlich|nicht ?öffentlich\w* Tagesordnungspunkt|"
+                            r"Jahresabschluss|Wirtschaftsplan|Aufsichtsrat|Gesellschafterversammlung|"
+                            r"Beteiligungsbericht|Lagebericht", re.I)
+
+
+def titel_ohne_ort(name):
+    return bool(TITEL_OHNE_ORT.search(name or ""))
 REPEAT_MIN = 3   # Zeilen, die so oft vorkommen, gelten als Kopf- oder Fußzeile
 
 HEAD = re.compile(r"^(Beschlussvorschlag|Mitteilung:?|Inhalt de[sr] .*|Fragestellung|Begründung.*|Sachverhalt|"

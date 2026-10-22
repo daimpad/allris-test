@@ -59,6 +59,13 @@ class VolltextTest(unittest.TestCase):
         rows, _ = volltext.locate(self.gaz, KOPF + "Zentren in Beuel und Hardtberg.", bv)
         self.assertEqual(sorted(r["name"] for r in rows), ["Beuel", "Hardtberg"])
 
+    def test_titel_ohne_gemeinsamen_ort(self):
+        for t in ["Tagesordnungspunkte in nichtöffentlicher Sitzung", "Tagesordnungspunkte der nicht öffentlichen Sitzung",
+                  "Übersicht über die Beratung nichtöffentlicher Tagesordnungspunkte", "Wirtschaftsplan 2027 der bonnorange AöR",
+                  "Jahresabschluss 2023 der Beethovenhalle GmbH"]:
+            self.assertTrue(volltext.titel_ohne_ort(t), t)
+        self.assertFalse(volltext.titel_ohne_ort("Spielplatz an der Endenicher Straße"))
+
     def test_eingaben_von_buergerinnen_nicht_aus_dem_volltext(self):
         self.assertFalse(volltext.allowed("Bürgerantrag § 24 GO - Öffentlich"))
         self.assertFalse(volltext.allowed("Anregungen und Beschwerden"))

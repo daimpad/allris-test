@@ -55,7 +55,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 230897-05 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Meckenheimer Straße	Mehlem	mittel	1
 230897-05 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Siegfriedstraße	Mehlem	mittel	1
 231037-02	kein Ort						
-231098-01	kein Ort						
+231098-01	Titel ohne gemeinsamen Ort, nicht verortet						
 231159	Liste (8 Ortsteile), nicht verortet	Hauptteil					
 231182-09	kein Ort						
 231332-04 AA	kein Ort						
@@ -124,7 +124,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240351-04 DA	kein Ort						
 240370-01 ST	kein Ort						
 240385	kein Ort						
-240387	kein Ort						
+240387	Titel ohne gemeinsamen Ort, nicht verortet						
 240393-01 ST	kein Ort						
 240406-02 AA	kein Ort						
 240412-02 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
@@ -157,14 +157,14 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240564	kein Ort						
 240565	kein Ort						
 240570	kein Ort						
-240571	kein Ort						
-240572	kein Ort						
+240571	Titel ohne gemeinsamen Ort, nicht verortet						
+240572	Titel ohne gemeinsamen Ort, nicht verortet						
 240573	kein Ort						
 240573-01 ST	kein Ort						
 240573-02 ST	kein Ort						
 240574	kein Ort						
 240578	Liste (10 Ortsteile), nicht verortet	Hauptteil					
-240580	kein Ort						
+240580	Titel ohne gemeinsamen Ort, nicht verortet						
 240581	Liste (7 Ortsteile), nicht verortet	Hauptteil					
 240581-06	Liste (10 Ortsteile), nicht verortet	Hauptteil					
 240582	kein Ort						
@@ -174,14 +174,14 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240591	nur in Anlagen genannt, nicht verortet						
 240592	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
 240593	kein Ort						
-240598	kein Ort						
-240602	kein Ort						
+240598	Titel ohne gemeinsamen Ort, nicht verortet						
+240602	Titel ohne gemeinsamen Ort, nicht verortet						
 240604	kein Ort						
 240604-01	kein Ort						
 240608	kein Ort						
 240608-01 ST	kein Ort						
 240610	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
-240611	kein Ort						
+240611	Titel ohne gemeinsamen Ort, nicht verortet						
 240613	kein Ort						
 240616	kein Ort						
 240617	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
@@ -196,9 +196,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240620	kein Ort						
 240626	kein Ort						
 240626-01 ST	kein Ort						
-240630	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	niedrig	1
-240630	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
-240630	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
+240630	Titel ohne gemeinsamen Ort, nicht verortet						
 240632	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 240632	verortet	Hauptteil	volltext_strasse	Adenauerallee	Gronau	mittel	2
 240632	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	mittel	2
@@ -210,14 +208,12 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240632	verortet	Hauptteil	volltext_strasse	Rathausgasse	Bonn-Zentrum	niedrig	1
 240632	verortet	Hauptteil	volltext_strasse	Stockenstraße	Bonn-Zentrum	niedrig	1
 240632	verortet	Hauptteil	volltext_strasse	Stockenstraße	Südstadt	niedrig	1
-240633	kein Ort						
-240635	kein Ort						
+240633	Titel ohne gemeinsamen Ort, nicht verortet						
+240635	Titel ohne gemeinsamen Ort, nicht verortet						
 240636	kein Ort						
-240637	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	niedrig	1
-240637	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
-240637	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
+240637	Titel ohne gemeinsamen Ort, nicht verortet						
 240638	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
-240639	kein Ort						
+240639	Titel ohne gemeinsamen Ort, nicht verortet						
 240641	kein Ort						
 240642	verortet	Hauptteil	volltext_strasse+ortsteil	Gellertstraße	Duisdorf	mittel	1
 240642	verortet	Hauptteil	volltext_strasse+ortsteil	Gottfried-Kinkel-Straße	Duisdorf	mittel	1
@@ -276,9 +272,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240679	Liste (25 Ortsteile), nicht verortet	Hauptteil					
 240681	kein Ort						
 240682	kein Ort						
-240684	kein Ort						
+240684	Titel ohne gemeinsamen Ort, nicht verortet						
 240686	kein Ort						
-240687	kein Ort						
+240687	Titel ohne gemeinsamen Ort, nicht verortet						
 240690	kein Ort						
 240691	verortet	Hauptteil	volltext_strasse	Adenauerallee	Gronau	mittel	1
 240691	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	mittel	1
@@ -292,7 +288,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240693	verortet	Hauptteil	volltext_strasse+ortsteil	Zur Marterkapelle	Endenich	mittel	3
 240695	kein Ort						
 240695-05 ST	kein Ort						
-240696	verortet	Hauptteil	volltext_strasse+hausnummer	Richard-Wagner-Straße	Weststadt	mittel	2
+240696	Titel ohne gemeinsamen Ort, nicht verortet						
 240700	kein Ort						
 240703	kein Ort						
 240704	kein Ort						
@@ -304,11 +300,11 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240711	verortet	Hauptteil	volltext_ortsteil_name	Bonn-Zentrum	Bonn-Zentrum	niedrig	1
 240713	kein Ort						
 240714-02	kein Ort						
-240718	kein Ort						
+240718	Titel ohne gemeinsamen Ort, nicht verortet						
 240719	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	mittel	1
 240719	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	1
 240719	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Beuel		niedrig	1
-240724	kein Ort						
+240724	Titel ohne gemeinsamen Ort, nicht verortet						
 240782-01 AA	kein Ort						
 240782-07	Liste (9 Ortsteile), nicht verortet	Hauptteil					
 240785-01 AA	kein Ort						
@@ -352,15 +348,15 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241579-01 ST	kein Ort						
 241580-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 241592	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
-241596	verortet	Hauptteil	volltext_strasse	Scheidfeldstraße	Holtorf	mittel	1
-241597	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
-241598	verortet	Hauptteil	volltext_strasse+hausnummer	Friesdorfer Straße	Alt-Godesberg	niedrig	1
+241596	Titel ohne gemeinsamen Ort, nicht verortet						
+241597	Titel ohne gemeinsamen Ort, nicht verortet						
+241598	Titel ohne gemeinsamen Ort, nicht verortet						
 241599	verortet	Hauptteil	volltext_ortsteil_name	Muffendorf	Muffendorf	niedrig	1
 241599	verortet	Hauptteil	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	niedrig	1
 241599	verortet	Hauptteil	volltext_strasse+hausnummer	Adenauerallee	Gronau	niedrig	1
 241601	nur in Anlagen genannt, nicht verortet						
 241603-01 ST	kein Ort						
-241606	kein Ort						
+241606	Titel ohne gemeinsamen Ort, nicht verortet						
 241607	verortet	Hauptteil	volltext_strasse+kreuzung	Bottlerplatz	Bonn-Zentrum	mittel	2
 241607	verortet	Hauptteil	volltext_strasse+kreuzung	Friedensplatz	Bonn-Zentrum	mittel	2
 241607	verortet	Hauptteil	volltext_strasse+kreuzung	Münsterplatz	Bonn-Zentrum	mittel	2
@@ -398,13 +394,13 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241664	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 241664	verortet	Hauptteil	volltext_ortsteil_name	Kessenich	Kessenich	niedrig	1
 241664	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	niedrig	1
-241665	kein Ort						
+241665	Titel ohne gemeinsamen Ort, nicht verortet						
 241666	kein Ort						
 241667	kein Ort						
-241668	kein Ort						
+241668	Titel ohne gemeinsamen Ort, nicht verortet						
 241671	3 Stadtbezirke, stadtweit, nicht verortet	Hauptteil					
-241672	kein Ort						
-241673	kein Ort						
+241672	Titel ohne gemeinsamen Ort, nicht verortet						
+241673	Titel ohne gemeinsamen Ort, nicht verortet						
 241677	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
 241680	kein Ort						
 241683	kein Ort						
@@ -464,7 +460,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252572-01	nur in Anlagen genannt, nicht verortet						
 252883-01	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	1
 252903-02 ST	kein Ort						
-252927-01	kein Ort						
+252927-01	Titel ohne gemeinsamen Ort, nicht verortet						
 253169-02	kein Ort						
 253210-04	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 253210-04	verortet	Hauptteil	volltext_strasse	Mittelstraße	Plittersdorf	niedrig	2
@@ -480,9 +476,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253668-03 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Vorgebirgsstraße	Nordstadt	mittel	1
 253707-01	kein Ort						
 253753-01 ST	kein Ort						
-253799-01	kein Ort						
+253799-01	Titel ohne gemeinsamen Ort, nicht verortet						
 253817-02	kein Ort						
-253828-01 ST	kein Ort						
+253828-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
 253828-02	kein Ort						
 253837-01 AA	kein Ort						
 253837-02 ST	nur in Anlagen genannt, nicht verortet						
@@ -515,7 +511,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 254013-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Rüdesheimer Straße	Friesdorf	mittel	3
 254022-01 ST	kein Ort						
 254028	verortet	Hauptteil	volltext_ortsteil_adjektiv	Kessenich	Kessenich	mittel	1
-254031	nur in Anlagen genannt, nicht verortet						
+254031	Titel ohne gemeinsamen Ort, nicht verortet						
 254038	Liste (10 Ortsteile), nicht verortet	Hauptteil					
 254038-01 AA	kein Ort						
 254043	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
@@ -546,7 +542,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 254072	verortet	Hauptteil	volltext_strasse+ortsteil	Bonner Logsweg	Lessenich/Meßdorf	mittel	1
 254072	verortet	Hauptteil	volltext_strasse+ortsteil	Brigitte-Schröder-Straße	Lessenich/Meßdorf	mittel	1
 254072	verortet	Hauptteil	volltext_strasse+ortsteil	Henri-Spaak-Straße	Duisdorf	mittel	2
-254073	kein Ort						
+254073	Titel ohne gemeinsamen Ort, nicht verortet						
 254075	kein Ort						
 254076	kein Ort						
 254078	kein Ort						
@@ -569,7 +565,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 254089	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	mittel	1
 254094	verortet	Hauptteil	volltext_strasse	Leinpfad	Bonn-Castell	mittel	1
 254094	verortet	Hauptteil	volltext_strasse	Leinpfad	Graurheindorf	mittel	1
-254095	kein Ort						
+254095	Titel ohne gemeinsamen Ort, nicht verortet						
 260000	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 260000-01 AA	kein Ort						
 260000-10	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
@@ -596,7 +592,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260013-01 ST	kein Ort						
 260017	verortet	Hauptteil	volltext_strasse+hausnummer	Oberkasseler Straße	Ramersdorf	mittel	3
 260018	kein Ort						
-260025	kein Ort						
+260025	Titel ohne gemeinsamen Ort, nicht verortet						
 260027	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
 260027	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
 260027	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	mittel	1
@@ -610,7 +606,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260031-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
 260031-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	mittel	1
 260033	kein Ort						
-260036	kein Ort						
+260036	Titel ohne gemeinsamen Ort, nicht verortet						
 260038	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 260039	nur in Anlagen genannt, nicht verortet						
 260046	kein Ort						
@@ -622,7 +618,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260056	nur in Anlagen genannt, nicht verortet						
 260057	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 260059	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
-260065	verortet	Hauptteil	volltext_strasse+hausnummer	Gudenauer Weg	Ippendorf	niedrig	1
+260065	Titel ohne gemeinsamen Ort, nicht verortet						
 260066	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
 260067	kein Ort						
 260067-01 ST	kein Ort						
@@ -665,7 +661,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260106	verortet	Hauptteil	volltext_strasse+kreuzung	Vivatsgasse	Bonn-Zentrum	niedrig	1
 260106	verortet	Hauptteil	volltext_strasse+kreuzung	Windeckstraße	Bonn-Zentrum	niedrig	1
 260111	kein Ort						
-260114	kein Ort						
+260114	Titel ohne gemeinsamen Ort, nicht verortet						
 260115	Liste (6 Ortsteile), nicht verortet	Hauptteil					
 260116	kein Ort						
 260117	kein Ort						
@@ -691,10 +687,12 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260772-01 AA	kein Ort						
 260772-02 ST	kein Ort						
 260772-03 AA	kein Ort						
+260789-02 ST	Liste (8 Ortsteile), nicht verortet	Hauptteil					
 260790-01 ST	kein Ort						
 260809-03 ST	kein Ort						
 260815-02 ST	kein Ort						
 260845-02 ST	Liste (51 Ortsteile), nicht verortet	Hauptteil					
+260870-01 ST	kein Ort						
 260895-02 ST	kein Ort						
 260932-06	verortet	Hauptteil	volltext_strasse+kreuzung	Agnesstraße	Beuel-Mitte	mittel	1
 260932-06	verortet	Hauptteil	volltext_strasse+kreuzung	Combahnstraße	Beuel-Mitte	mittel	1
@@ -719,6 +717,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261037-02 AA	kein Ort						
 261043-04 ST	kein Ort						
 261055-03 AA	kein Ort						
+261073-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
 261074	kein Ort						
 261082-05 ST	kein Ort						
 261092-02 AA	kein Ort						
@@ -786,6 +785,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261425-01 ST	verortet	Hauptteil	volltext_strasse	Von-Sandt-Ufer	Plittersdorf	mittel	1
 261425-01 ST	verortet	Hauptteil	volltext_strasse	Von-Sandt-Ufer	Rüngsdorf	mittel	1
 261440-01 ST	kein Ort						
+261444	nur in Anlagen genannt, nicht verortet						
 261448-02 AA	kein Ort						
 261464-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Friedrich-Breuer-Straße	Beuel-Mitte	mittel	1
 261464-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Hermannstraße	Beuel-Mitte	mittel	1
@@ -804,7 +804,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261516-02 ST	verortet	Hauptteil	volltext_strasse	Friedrichstraße	Bonn-Zentrum	niedrig	1
 261516-02 ST	verortet	Hauptteil	volltext_strasse	Thomas-Mann-Straße	Bonn-Zentrum	niedrig	1
 261519-01 ST	kein Ort						
-261524	nur in Anlagen genannt, nicht verortet						
+261524	Titel ohne gemeinsamen Ort, nicht verortet						
 261525-02 ST	kein Ort						
 261529-05 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Frieda-Mager-Allee	Endenich	mittel	1
 261529-05 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Kolpingstraße	Endenich	mittel	2
@@ -819,8 +819,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261572-01 AA	kein Ort						
 261572-02 ST	kein Ort						
 261572-03 AA	kein Ort						
-261578-01 ST	kein Ort						
-261578-02 AA	kein Ort						
+261578-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
+261578-02 AA	Titel ohne gemeinsamen Ort, nicht verortet						
 261588	kein Ort						
 261588-01 AA	Liste (9 Ortsteile), nicht verortet	Hauptteil					
 261592	nur in Anlagen genannt, nicht verortet						
@@ -860,10 +860,10 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261658	kein Ort						
 261666-01 ST	kein Ort						
 261674	kein Ort						
-261675	kein Ort						
+261675	Titel ohne gemeinsamen Ort, nicht verortet						
 261677	kein Ort						
 261677-01 ST	kein Ort						
-261679	kein Ort						
+261679	Titel ohne gemeinsamen Ort, nicht verortet						
 261681	kein Ort						
 261681-01 ST	kein Ort						
 261682	kein Ort						
@@ -896,15 +896,15 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261704	kein Ort						
 261704-01 ST	kein Ort						
 261705	kein Ort						
-261708	kein Ort						
-261713	kein Ort						
-261722	kein Ort						
+261708	Titel ohne gemeinsamen Ort, nicht verortet						
+261713	Titel ohne gemeinsamen Ort, nicht verortet						
+261722	Titel ohne gemeinsamen Ort, nicht verortet						
 261724	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 261724-01 AA	kein Ort						
 261725	kein Ort						
 261727	Liste (24 Ortsteile), nicht verortet	Hauptteil					
 261729	kein Ort						
-261730	kein Ort						
+261730	Titel ohne gemeinsamen Ort, nicht verortet						
 261733-01	kein Ort						
 261734	kein Ort						
 261738	kein Ort						
@@ -916,7 +916,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261741	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	mittel	3
 261741	verortet	Hauptteil	volltext_strasse+kreuzung	Oxfordstraße	Bonn-Zentrum	mittel	2
 261741	verortet	Hauptteil	volltext_strasse+kreuzung	Wilhelmstraße	Bonn-Zentrum	niedrig	1
-261742	kein Ort						
+261742	Titel ohne gemeinsamen Ort, nicht verortet						
 261743	kein Ort						
 261748	kein Ort						
 261748-01 ST	kein Ort						
@@ -931,7 +931,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261770	nur in Anlagen genannt, nicht verortet						
 261771	kein Ort						
 261772	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
-261773	kein Ort						
+261773	Titel ohne gemeinsamen Ort, nicht verortet						
 261775	kein Ort						
 261775-01 ST	verortet	Hauptteil	volltext_strasse	Martin-Luther-King-Straße	Hochkreuz	mittel	1
 261775-01 ST	verortet	Hauptteil	volltext_strasse	Martin-Luther-King-Straße	Plittersdorf	mittel	1
@@ -945,9 +945,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261791-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Bonn-Castell	mittel	1
 261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Graurheindorf	mittel	1
-261794	kein Ort						
-261800	kein Ort						
-261802	kein Ort						
+261794	Titel ohne gemeinsamen Ort, nicht verortet						
+261800	Titel ohne gemeinsamen Ort, nicht verortet						
+261802	Titel ohne gemeinsamen Ort, nicht verortet						
 261804	kein Ort						
 261806	kein Ort						
 261806-01 ST	kein Ort						
@@ -966,13 +966,13 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261815	kein Ort						
 261815-01 ST	kein Ort						
 261816	kein Ort						
-261821	kein Ort						
+261821	Titel ohne gemeinsamen Ort, nicht verortet						
 261822	kein Ort						
-261824	kein Ort						
-261826	kein Ort						
-261827	kein Ort						
+261824	Titel ohne gemeinsamen Ort, nicht verortet						
+261826	Titel ohne gemeinsamen Ort, nicht verortet						
+261827	Titel ohne gemeinsamen Ort, nicht verortet						
 261832	kein Ort						
-261833	kein Ort						
+261833	Titel ohne gemeinsamen Ort, nicht verortet						
 261835	kein Ort						
 261836	kein Ort						
 261836-01 ST	kein Ort						
@@ -980,15 +980,14 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261837	verortet	Hauptteil	volltext_strasse	Kaiser-Karl-Ring	Nordstadt	niedrig	1
 261837	verortet	Hauptteil	volltext_strasse+hausnummer	Graurheindorfer Straße	Bonn-Castell	mittel	2
 261837	verortet	Hauptteil	volltext_strasse+hausnummer	Kaiser-Karl-Ring	Bonn-Castell	mittel	2
-261838	verortet	Hauptteil	volltext_strasse	Lievelingsweg	Nordstadt	niedrig	1
-261838	verortet	Hauptteil	volltext_strasse	Lievelingsweg	Tannenbusch	niedrig	1
+261838	Titel ohne gemeinsamen Ort, nicht verortet						
 261840	kein Ort						
 261842	kein Ort						
 261845	kein Ort						
 261851	nur in Anlagen genannt, nicht verortet						
 261853	kein Ort						
 261861	kein Ort						
-261863	kein Ort						
+261863	Titel ohne gemeinsamen Ort, nicht verortet						
 261865	kein Ort						
 261871	kein Ort						
 261876	kein Ort						
