@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 558,
-  "generated_at": "2026-10-22T11:53:29+00:00",
+  "generated_at": "2026-10-22T12:21:54+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-22T11:42:41+00:00"
+    "retrieved_at": "2026-10-22T12:12:37+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-22T11:46:15+00:00"
+    "retrieved_at": "2026-10-22T12:16:16+00:00"
    },
    {
     "name": "osm",
@@ -27636,6 +27636,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Koalition schlägt vor, die Sicherheit an der Endenicher Allee nahe der Campusallee zu verbessern. Geplant sind ein Parkplatz für E-Scooter auf Gehweg und Straße, eine abgesenkte Bordsteinkante für Radfahrer und eine mögliche Tempo-30-Zone. Der Vorschlag ändert einen früheren Antrag.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-22"
    }
   },
   {

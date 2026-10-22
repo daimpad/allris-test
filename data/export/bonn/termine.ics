@@ -657,6 +657,15 @@ DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006629
+DTSTAMP:20270113T170000Z
+DTSTART:20270113T170000Z
+SUMMARY:Schulausschuss
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006583
 DTSTAMP:20270120T160000Z
 DTSTART:20270120T160000Z
@@ -760,6 +769,15 @@ DTEND:20270223T180000Z
 SUMMARY:Kreiswahlausschuss
 DESCRIPTION:Sitzung des Kreiswahlausschusses\nTagesordnung noch nicht verö
  ffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006630
+DTSTAMP:20270225T170000Z
+DTSTART:20270225T170000Z
+SUMMARY:Schulausschuss
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -908,6 +926,15 @@ DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006632
+DTSTAMP:20270429T160000Z
+DTSTART:20270429T160000Z
+SUMMARY:Schulausschuss
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006487
 DTSTAMP:20270504T160000Z
 DTSTART:20270504T160000Z
@@ -983,6 +1010,15 @@ DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006633
+DTSTAMP:20270603T160000Z
+DTSTART:20270603T160000Z
+SUMMARY:Schulausschuss
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006488
 DTSTAMP:20270608T160000Z
 DTSTART:20270608T160000Z
@@ -1007,6 +1043,15 @@ DTSTART:20270617T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006634
+DTSTAMP:20270629T160000Z
+DTSTART:20270629T160000Z
+SUMMARY:Schulausschuss
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1093,6 +1138,15 @@ DTSTART:20270907T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006635
+DTSTAMP:20270909T160000Z
+DTSTART:20270909T160000Z
+SUMMARY:Schulausschuss
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1188,6 +1242,15 @@ DTSTART:20271019T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006636
+DTSTAMP:20271110T170000Z
+DTSTART:20271110T170000Z
+SUMMARY:Schulausschuss
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
