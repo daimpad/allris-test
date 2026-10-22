@@ -655,3 +655,63 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 261301-01 ST	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
 261307	geändert	bestätigt	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	mistral-large-latest
 261307-01 AA	keine Änderung						mistral-large-latest
+261340-01	geändert	neu	llm_objekt	Burgschule	Schweinheim	niedrig	mistral-large-latest
+261340-01	geändert	bestätigt	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	mistral-large-latest
+261397-01 ST	keine Änderung						mistral-large-latest
+261403-01 ST	keine Änderung						mistral-large-latest
+261412-01 AA	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
+261415-01 ST	keine Änderung						mistral-large-latest
+261416-01 ST	keine Änderung						mistral-large-latest
+261425-01 ST	geändert	bestätigt	volltext_strasse	Von-Sandt-Ufer	Rüngsdorf	mittel	mistral-large-latest
+261425-01 ST	geändert	bestätigt	volltext_strasse	Von-Sandt-Ufer	Plittersdorf	mittel	mistral-large-latest
+261425-01 ST	geändert	bestätigt	volltext_strasse	Von-Sandt-Ufer	Hochkreuz	mittel	mistral-large-latest
+261440-01 ST	keine Änderung						mistral-large-latest
+261444	keine Änderung						mistral-large-latest
+261448-02 AA	keine Änderung						mistral-large-latest
+261464-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Rheinaustraße	Beuel-Mitte	mittel	mistral-large-latest
+261464-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Hermannstraße	Beuel-Mitte	mittel	mistral-large-latest
+261464-01 ST	geändert	bestätigt	volltext_strasse+kreuzung	Friedrich-Breuer-Straße	Beuel-Mitte	mittel	mistral-large-latest
+261474	geändert	herabgestuft	volltext_strasse+ortsteil	Trierer Straße	Poppelsdorf	niedrig	mistral-large-latest
+261489	keine Änderung						mistral-large-latest
+261489-01	keine Änderung						mistral-large-latest
+261491	keine Änderung						mistral-large-latest
+261491-01 AA	keine Änderung						mistral-large-latest
+261491-02 ST	keine Änderung						mistral-large-latest
+261514	keine Änderung						mistral-large-latest
+261514-01 AA	keine Änderung						mistral-large-latest
+261514-02 ST	keine Änderung						mistral-large-latest
+261515	geändert	bestätigt	volltext_strasse+hausnummer	Poststraße	Bonn-Zentrum	mittel	mistral-large-latest
+261515	geändert	bestätigt	volltext_strasse	Windeckstraße	Bonn-Zentrum	mittel	mistral-large-latest
+261516-02 ST	geändert	bestätigt	volltext_strasse	Friedrichstraße	Bonn-Zentrum	mittel	mistral-large-latest
+261516-02 ST	geändert	bestätigt	volltext_strasse	Thomas-Mann-Straße	Bonn-Zentrum	mittel	mistral-large-latest
+261519-01 ST	keine Änderung						mistral-large-latest
+261525-02 ST	keine Änderung						mistral-large-latest
+261528-03 ST	keine Änderung						mistral-large-latest
+261529-05 ST	geändert	herabgestuft	volltext_strasse+ortsteil	Siemensstraße	Endenich	niedrig	mistral-large-latest
+261529-05 ST	geändert	bestätigt	volltext_strasse+ortsteil	Kolpingstraße	Endenich	mittel	mistral-large-latest
+261529-05 ST	geändert	herabgestuft	volltext_strasse+ortsteil	Frieda-Mager-Allee	Endenich	niedrig	mistral-large-latest
+261551-01 ST	keine Änderung						mistral-large-latest
+261559-02 ST	keine Änderung						mistral-large-latest
+261562-01 ST	keine Änderung						mistral-large-latest
+261562-02 ST	keine Änderung						mistral-large-latest
+261563-01 ST	keine Änderung						mistral-large-latest
+261568	geändert	bestätigt	volltext_ortsteil_name	Röttgen	Röttgen	mittel	mistral-large-latest
+261568	geändert	neu	llm_objekt	Kottenforst	Röttgen	niedrig	mistral-large-latest
+261569	keine Änderung						mistral-large-latest
+261569-01 AA	keine Änderung						mistral-large-latest
+261570-01 ST	keine Änderung						mistral-large-latest
+261572-01 AA	keine Änderung						mistral-large-latest
+261572-02 ST	keine Änderung						mistral-large-latest
+261572-03 AA	keine Änderung						mistral-large-latest
+261586-01 ST	geändert	bestätigt	volltext_ortsteil_name	Mehlem	Mehlem	mittel	mistral-large-latest
+261588	keine Änderung						mistral-large-latest
+261588-01 AA	geändert	neu	llm_strasse	Julius-Leber-Straße	Duisdorf	niedrig	mistral-large-latest
+261588-01 AA	geändert	neu	llm_strasse	Basketsring	Duisdorf	niedrig	mistral-large-latest
+261588-01 AA	geändert	neu	llm_objekt	Rochusplatz	Duisdorf	niedrig	mistral-large-latest
+261592	keine Änderung						mistral-large-latest
+261594-01	keine Änderung						mistral-large-latest
+261599-01 ST	keine Änderung						mistral-large-latest
+261602	keine Änderung						mistral-large-latest
+261604-01 ST	geändert	bestätigt	volltext_strasse+hausnummer	Oberkasseler Straße	Ramersdorf	mittel	mistral-large-latest
+261604-01 ST	geändert	bestätigt	volltext_strasse	Poststraße	Bonn-Zentrum	mittel	mistral-large-latest
+261606-01 ST	keine Änderung						mistral-large-latest
