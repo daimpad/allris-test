@@ -9,7 +9,7 @@ Zur Kennzeichnung: Eine **KI-Vorprüfung** stammt von einem Sprachmodell und ers
 | Nr. | Gegenstand | Art | Empfehlung | Aufwand |
 |---|---|---|---|---|
 | 1 | Kurzfassungen auf der Seite | **erledigt 22.10.2026:** von Hand geprüft (18/12/0), freigegeben mit geschärftem Hinweis | – | – |
-| 2 | Orte aus dem Text durch das Sprachmodell (Stufe C) | Entscheidung | nicht freigeben | keiner |
+| 2 | Orte aus dem Text durch das Sprachmodell (Stufe C) | **erledigt 22.10.2026:** nicht freigegeben, keine neuen Anfragen | – | – |
 | 3 | Ratsassistent | Prüfung von Hand, Lauf mit Anthropic | Systemprompt v0.3 behalten | 36 Antworten, etwa 1 Stunde |
 | 4 | Verortung aus dem Volltext | Prüfung von Hand | Regeln vorerst behalten | 30 Fälle, etwa 45 Minuten |
 | 5 | Gebäude und Anlagen im Titel | Prüfung von Hand | Regeln vorerst behalten | 30 Fälle, etwa 30 Minuten |
@@ -60,7 +60,7 @@ Vorbereitet in `pipeline/stufe_c.py`, nicht freigegeben. KI-Vorprüfungen:
 
 Auch die schwächste Nutzung, nur das Herabstufen bloß erwähnter Orte, war in 19 von 31 Fällen richtig (8 falsch, 4 unklar).
 
-**Empfehlung: nicht freigeben.** Es ist nichts weiter zu tun.
+**Empfehlung: nicht freigeben.** **Entscheidung des Auftraggebers (22.10.2026): nicht freigeben.** Der tägliche Lauf stellt keine neuen Anfragen mehr (`STUFE_C_MAX = 0` in `pages.yml`); vorhandene Antworten bleiben im Branch `kurzfassungen`.
 
 Wer die Herabstufung selbst beurteilen möchte: Prüfbogen `data/export/stufe_c/pruefung_herabstufungen.tsv` (31 Fälle, freiwillig).
 

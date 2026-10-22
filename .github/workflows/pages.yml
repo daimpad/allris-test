@@ -101,7 +101,7 @@ jobs:
         continue-on-error: true
 
       # Sprachmodell (Mistral, gekennzeichnet): Bestand im Branch kurzfassungen; neue Kurzfassungen und Orte der
-      # Stufe C nur mit dem Secret MISTRAL_API_KEY (Kurzfassungen bis 500, Stufe C bis 200 je Lauf). Auf der Seite erst nach Freigabe
+      # Stufe C nur mit dem Secret MISTRAL_API_KEY (Kurzfassungen bis 500 je Lauf; Stufe C seit 22.10.2026 ohne neue Anfragen). Auf der Seite erst nach Freigabe
       # (kurzfassung.FREIGEGEBEN, stufe_c.FREIGEGEBEN). Gesichert wird der Branch nach der Aufbereitung.
       # 500 je täglichem Lauf (Auftraggeber, 21.10.2026); Fassung 6 brauchte mit dem Gegenlesen zwei Anfragen (300),
       # seit Fassung 7 wieder eine; nach einem Merge nur 50, damit mehrere Merges am Tag die Anfragen nicht
@@ -127,8 +127,9 @@ jobs:
         env:
           KURZFASSUNGEN: _kurzfassungen
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
-          # Stufe C, Fassung 2 (21.10.2026): rund 300 Antworten werden neu angefragt
-          STUFE_C_MAX: ${{ github.event_name == 'push' && '50' || '200' }}
+          # Stufe C nicht freigegeben (Entscheidung des Auftraggebers 22.10.2026): keine neuen Anfragen;
+          # vorhandene Antworten bleiben im Branch kurzfassungen, das Audit wird weiter geschrieben
+          STUFE_C_MAX: "0"
         run: |
           python -m pipeline build
           python -m pipeline stufe-c
