@@ -57,6 +57,7 @@ const ZEIT = {
     { date: "2026-09-15", time: "17:00", gremium: "Bezirksvertretung Bonn", name: "Sitzung der Bezirksvertretung Bonn", cancelled: false, state: "durchgeführt", web: "https://example.org/to", invitation: null, agenda_items: 40, source_object: "o/m/1" },
     { date: "2026-11-24", time: "17:00", gremium: "Bezirksvertretung Bonn", name: "Sitzung der Bezirksvertretung Bonn", cancelled: false, state: "terminiert", web: null, invitation: null, agenda_items: 0, source_object: "o/m/2" },
     { date: "2026-11-26", time: "16:00", gremium: "Rat", name: "Sitzung des Rates", cancelled: false, state: "terminiert", web: null, invitation: null, agenda_items: 0, source_object: "o/m/3" },
+    { date: "2026-12-01", time: "15:00", gremium: "Projektbeirat Behindertenpolitischer Teilhabeplan für die Bundesstadt Bonn", name: "Sitzung des Projektbeirats", cancelled: false, state: "terminiert", web: null, invitation: null, agenda_items: 0, source_object: "o/m/4" },
   ],
 };
 const DATENSTAND = { sources: [{ name: "oparl-bonn", url: "https://example.org", license: "CC0 1.0", retrieved_at: "2026-10-18T12:00:00+00:00" }], papers: 3, gaps: ["Vorlagen vor Oktober 2019 sind nicht enthalten."] };
@@ -212,8 +213,19 @@ test("liste_sitzungen: kommende und vergangene bezogen auf heute", async () => {
   assert.deepEqual(k.sitzungen.map((m) => m.datum), ["2026-11-24"]);
   const v = await t.run("liste_sitzungen", { zeitraum: "vergangene" });
   assert.deepEqual(v.sitzungen.map((m) => m.quelle_id), ["o/m/1"]);
-  const alle = await t.run("liste_sitzungen", { von: "2026-11" });
+  const alle = await t.run("liste_sitzungen", { von: "2026-11", bis: "2026-11" });
   assert.equal(alle.treffer_gesamt, 2);
+});
+
+test("liste_sitzungen: „Rat der Stadt Bonn“ meint den Rat, nicht ein Gremium mit „…rat“ und „Bundesstadt Bonn“", async () => {
+  const t = tools();
+  for (const g of ["Rat der Stadt Bonn", "Stadtrat", "Rat der Bundesstadt Bonn", "rat"]) {
+    const r = await t.run("liste_sitzungen", { gremium: g, zeitraum: "alle" });
+    assert.deepEqual(r.anfrage.gremium, ["Rat"], g);
+    assert.deepEqual(r.sitzungen.map((m) => m.datum), ["2026-11-26"], g);
+  }
+  const p = await t.run("liste_sitzungen", { gremium: "Projektbeirat" });
+  assert.deepEqual(p.sitzungen.map((m) => m.quelle_id), ["o/m/4"]);
 });
 
 test("hole_gremium_oder_amt: Amtsnummer bevorzugt das Amt selbst", async () => {
