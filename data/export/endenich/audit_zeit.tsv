@@ -488,8 +488,6 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 241450	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 240236-01 ST	datum_vorlage	2024-08-07	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 240236-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2024-08-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
-241361-01 ST	datum_vorlage	2024-08-07	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-241361-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2024-08-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 241343	datum_vorlage	2024-08-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 241343	folgevorlage: 241343-01 ST	2024-10-15	oparl-bonn	belegt	Stellungnahme der Verwaltung
 241343	beratung: Bezirksvertretung Bonn (Entscheidung)	2024-11-05	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
@@ -498,7 +496,6 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 241357	beratung: Bezirksvertretung Bonn (Entscheidung)	2024-11-05	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 241357	folgevorlage: 241357-02	2025-06-03	oparl-bonn	belegt	Beschlussvorlage
 241361	datum_vorlage	2024-08-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-241361	folgevorlage: 241361-01 ST	2024-08-07	oparl-bonn	belegt	Stellungnahme der Verwaltung
 241361	beratung: Bezirksvertretung Bonn (Entscheidung)	2024-08-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 241361	folgevorlage: 241361-02	2026-02-18	oparl-bonn	belegt	Beschlussvorlage
 241344	datum_vorlage	2024-08-05	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert

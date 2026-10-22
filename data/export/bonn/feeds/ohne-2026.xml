@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ohne-2026</id>
 <title>RIS-Karte Bonn – stadtweit / ohne Ortsbezug 2026</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2026</subtitle>
-<updated>2026-10-21T00:00:00Z</updated>
+<updated>2026-10-22T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ohne-2026.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030062#vorlage</id>
+<title>Neue Vorlage 261990: AfD-Antrag: Realitäten anerkennen, Seilbahn streichen.</title>
+<updated>2026-10-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261990"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030062"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030059#vorlage</id>
 <title>Neue Vorlage 261988: BBB-Anfrage "Erkenntnisse, Gefahrenabwehrmaßnahmen und behördliche Zusammenarbeit im Vorfeld und Umfeld der Amokfahrt vom 3. Dezember 2025 in der Bonner Innenstadt"</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261863"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029753"/>
 <summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029713#vorlage</id>
-<title>Neue Vorlage 261851: Jahresbericht 2025 über die Arbeit des Sachgebietes „Wohnraumstärkung“</title>
-<updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261851"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029713"/>
-<summary>Mitteilungsvorlage · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
 </entry>
 </feed>
