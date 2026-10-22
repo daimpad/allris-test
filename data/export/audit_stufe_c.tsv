@@ -835,3 +835,60 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 261806-01 ST	keine Änderung						mistral-large-latest
 261807	keine Änderung						mistral-large-latest
 261807-01 ST	keine Änderung						mistral-large-latest
+261808	keine Änderung						mistral-large-latest
+261808-01 ST	keine Änderung						mistral-large-latest
+261809	keine Änderung						mistral-large-latest
+261809-01 ST	keine Änderung						mistral-large-latest
+261810	keine Änderung						mistral-large-latest
+261810-01 ST	keine Änderung						mistral-large-latest
+261811	keine Änderung						mistral-large-latest
+261811-01 ST	keine Änderung						mistral-large-latest
+261813	keine Änderung						mistral-large-latest
+261813-01 ST	keine Änderung						mistral-large-latest
+261814	keine Änderung						mistral-large-latest
+261815	keine Änderung						mistral-large-latest
+261815-01 ST	keine Änderung						mistral-large-latest
+261816	keine Änderung						mistral-large-latest
+261831-01 ST	keine Änderung						mistral-large-latest
+261832	keine Änderung						mistral-large-latest
+261835	keine Änderung						mistral-large-latest
+261836	keine Änderung						mistral-large-latest
+261836-01 ST	keine Änderung						mistral-large-latest
+261837	geändert	herabgestuft	volltext_strasse+hausnummer	Kaiser-Karl-Ring	Bonn-Castell	niedrig	mistral-large-latest
+261837	geändert	herabgestuft	volltext_strasse+hausnummer	Graurheindorfer Straße	Bonn-Castell	niedrig	mistral-large-latest
+261837	geändert	neu	llm_objekt	LVR-Klinik Bonn	Bonn-Castell	niedrig	mistral-large-latest
+261840	keine Änderung						mistral-large-latest
+261842	keine Änderung						mistral-large-latest
+261845	keine Änderung						mistral-large-latest
+261845-01 ST	geändert	neu	llm_objekt	Römerbad	Bonn-Castell	niedrig	mistral-large-latest
+261845-01 ST	geändert	bestätigt	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	mistral-large-latest
+261845-01 ST	geändert	neu	llm_objekt	Ennertbad	Pützchen/Bechlinghoven	niedrig	mistral-large-latest
+261845-01 ST	geändert	bestätigt	volltext_ortsteil_name	Friesdorf	Friesdorf	mittel	mistral-large-latest
+261848	keine Änderung						mistral-large-latest
+261849	keine Änderung						mistral-large-latest
+261851	keine Änderung						mistral-large-latest
+261853	keine Änderung						mistral-large-latest
+261861	keine Änderung						mistral-large-latest
+261865	keine Änderung						mistral-large-latest
+261871	keine Änderung						mistral-large-latest
+261876	keine Änderung						mistral-large-latest
+261876-01 AA	keine Änderung						mistral-large-latest
+261876-02 ST	keine Änderung						mistral-large-latest
+261879	keine Änderung						mistral-large-latest
+261879-01 ST	keine Änderung						mistral-large-latest
+261882	keine Änderung						mistral-large-latest
+261883	keine Änderung						mistral-large-latest
+261885	keine Änderung						mistral-large-latest
+261886	keine Änderung						mistral-large-latest
+261890	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
+261890	geändert	bestätigt	volltext_strasse+kreuzung	Wesselstraße	Bonn-Zentrum	mittel	mistral-large-latest
+261890	geändert	bestätigt	volltext_strasse+kreuzung	Maximilianstraße	Bonn-Zentrum	mittel	mistral-large-latest
+261890	geändert	bestätigt	volltext_strasse+kreuzung	Gangolfstraße	Bonn-Zentrum	mittel	mistral-large-latest
+261892	keine Änderung						mistral-large-latest
+261893	keine Änderung						mistral-large-latest
+261895	keine Änderung						mistral-large-latest
+261896	keine Änderung						mistral-large-latest
+261897	keine Änderung						mistral-large-latest
+261898	keine Änderung						mistral-large-latest
+261900	keine Änderung						mistral-large-latest
+261901	keine Änderung						mistral-large-latest
