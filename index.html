@@ -216,6 +216,8 @@
           <span class="card-title">Datensatzbeschreibung (DCAT-AP)</span>
           <span class="card-text">Für Open-Data-Portale; mit Lizenzen je Datei.</span></a>
       </div>
+      <p class="mega-links"><button type="button" class="btn btn-soft" data-about="pruefung"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Wie verlässlich sind die Angaben?</button>
+        <button type="button" class="btn btn-soft" data-about="version"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Version 1.0: Was ist neu?</button></p>
       <details class="acc" id="sources">
         <summary>Quellen, Lizenzen und Datenstand</summary>
         <div>
@@ -453,7 +455,19 @@
       </dl>
 
       <h3>Wie sicher sind die Angaben?</h3>
-      <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Einige sind erschlossen, etwa der Ort aus dem Titel einer Vorlage oder das Datum einer Sitzung. Hat eine Vorlage keinen Ort im Titel, wird auch der Text ihres Dokuments ausgewertet; gezeigt wird dann nur der erkannte Ort, kein Textauszug. Die Suche kann auf Wunsch auch im Text der Dokumente suchen (über OParl-Lite, erst nach einem Klick). Sie sind als „abgeleitet“ gekennzeichnet. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt oder eindeutig erkannter Bebauungsplan mit Geltungsbereich), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt. Stichproben haben wir von Hand geprüft: In Endenich lag der Ort bei 41 von 50 Vorlagen richtig, die Themen passten bei 46 von 49.</p>
+      <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Einige sind erschlossen, etwa der Ort aus dem Titel einer Vorlage oder das Datum einer Sitzung. Hat eine Vorlage keinen Ort im Titel, wird auch der Text ihres Dokuments ausgewertet; gezeigt wird dann nur der erkannte Ort, kein Textauszug. Die Suche kann auf Wunsch auch im Text der Dokumente suchen (über OParl-Lite, erst nach einem Klick). Sie sind als „abgeleitet“ gekennzeichnet. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt oder eindeutig erkannter Bebauungsplan mit Geltungsbereich), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt. Wie gut das gelingt, zeigen Stichproben (nächster Abschnitt).</p>
+
+      <h3 id="about-pruefung" tabindex="-1">Wie verlässlich sind die Angaben?</h3>
+      <p>Abgeleitete Angaben werden in Stichproben von Hand geprüft (richtig / teilweise / falsch):</p>
+      <ul>
+        <li>Ort aus dem Titel, Endenich (50 Vorlagen, 20.10.2026): 41 / 4 / 5; danach zwei Regeln verbessert</li>
+        <li>Gebäude und Anlagen im Titel (30 Vorlagen, 22.10.2026): 24 / 6 / 0</li>
+        <li>Ort aus dem Text der Dokumente (22 Vorlagen, 22.10.2026): 14 / 7 / 1</li>
+        <li>Themen (49 Vorlagen, 20.10.2026): 46 / 2 / 1</li>
+        <li>KI-Kurzfassungen (30 Vorlagen, 22.10.2026): 18 / 12 / 0</li>
+        <li>Verfahren nach Regelwerk (30 Vorgänge): 30 / 0 / 0</li>
+      </ul>
+      <p>„Teilweise“ heißt: im Kern richtig, eine Einzelheit ungenau. Ein Teil der Urteile sind Vorschläge, denen der Auftraggeber im Gespräch nicht widersprochen hat. Die Prüfbögen stehen im Datenpaket und im <a href="https://github.com/daimpad/allris-test/blob/main/ABNAHME.md">Projekt auf GitHub</a>.</p>
 
       <h3>Nach Themen und Parteien suchen</h3>
       <p>In der Liste lassen sich Vorlagen nach Thema (zum Beispiel Verkehr, Bauen, Umwelt) und nach Partei oder Fraktion filtern – im gewählten Gebiet oder in ganz Bonn. Die Themen sind aus dem zuständigen Amt, dem beratenden Ausschuss und Stichworten im Titel abgeleitet; bei jeder Vorlage steht, worauf die Zuordnung beruht. Parteien stammen aus den Einreichenden eines Antrags; auf Wunsch erscheinen auch die Antworten der Verwaltung darauf.</p>
@@ -469,6 +483,16 @@
 
       <h3 id="about-mitwirken" tabindex="-1">Selbst mitwirken</h3>
       <p>Bei jedem Vorgang zeigt der Abschnitt „Selbst mitwirken“, welche Wege in seinem Stand offen sind, mit Frist und Rechtsgrundlage. Sitzungen des Rates und der Bezirksvertretungen sind in der Regel öffentlich. Mit einem Bürgerantrag (§ 24 Gemeindeordnung NRW) können Sie Anregungen und Beschwerden selbst einbringen. Wie das geht, erklärt die <a href="https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php" target="_blank" rel="noopener">Seite der Stadt Bonn zum Bürgerantrag</a>.</p>
+
+      <h3 id="about-version" tabindex="-1">Version 1.0 (22.10.2026)</h3>
+      <p>Neu seit der ersten Fassung:</p>
+      <ul>
+        <li>Kurzfassungen: Zu vielen Vorlagen steht eine kurze Zusammenfassung, mit einem Sprachmodell erstellt und als solche gekennzeichnet.</li>
+        <li>Übersicht über ganz Bonn: Stadtbezirke und Ortsteile lassen sich auf der Karte anklicken und nach Zahl der Vorlagen oder nach Thema einfärben.</li>
+        <li>Reiter „Prozesse“: Verfahren, Gremien und Ämter, wer entscheidet was.</li>
+        <li>„Mitmachen in Bonn“: nächste Sitzungen und Fristen je Stadtbezirk.</li>
+        <li>Mehr Orte: aus dem Text der Dokumente und aus Namen von Gebäuden und Anlagen im Titel.</li>
+      </ul>
 
       <h3>Wer steckt dahinter?</h3>
       <p>Die RIS-Karte hat Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“ erstellt. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Das Modell der Verfahren nach Regelwerk (Abschnitt „Nach Regelwerk (Soll)“ und Hinweise unter „Selbst mitwirken“) stammt aus dem Projekt <a href="https://github.com/anster2025/bonn-entscheidet" target="_blank" rel="noopener">„Bonn entscheidet“<span class="visually-hidden"> (GitHub, neuer Tab)</span></a> von <a href="https://github.com/anster2025" target="_blank" rel="noopener">Thomas (anster2025)<span class="visually-hidden"> (GitHub, neuer Tab)</span></a>, MIT-Lizenz; die RIS-Karte hat es um eigene, belegte Schritte ergänzt. Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
