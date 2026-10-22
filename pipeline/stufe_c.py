@@ -36,8 +36,6 @@ MAX_TOKENS = 1200     # erster Lauf (21.10.2026, 600): zwei Antworten ohne lesba
 MAX_NEUE_OBJEKTE = 4   # mehr neue Gebäude und Anlagen in einer Vorlage gelten als Aufzählung
 MAX_VERSUCHE = 3      # gescheiterte Anfragen werden in späteren Läufen wiederholt
 FASSUNG = 2           # Fassung der Anweisung; ältere Antworten werden neu angefragt (2: KI-Vorprüfung 21.10.2026)
-# Sammellisten mit Punkten verschiedener Art (oft Personalfragen) haben keinen gemeinsamen Ort
-SAMMELLISTE = re.compile(r"^Tagesordnungspunkte in nichtöffentlicher Sitzung", re.I)
 FREIGEGEBEN = False   # erst nach Prüfung der Stichprobe von Hand auf True setzen
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
 DATEI = "orte_stufe_c.jsonl"
@@ -98,7 +96,7 @@ def kandidaten(db):
         papers = [json.loads(line) for line in f]
     for p in papers:
         main = (p.get("mainFile") or {}).get("id")
-        if p["id"] not in own and main and volltext.allowed(p.get("paperType")) and not SAMMELLISTE.match(p.get("name") or ""):
+        if p["id"] not in own and main and volltext.allowed(p.get("paperType")) and not volltext.titel_ohne_ort(p.get("name")):
             out.setdefault(p["reference"], {"id": p["id"], "reference": p["reference"], "name": p.get("name"),
                                             "paperType": p.get("paperType"), "main_file": main, "web": p.get("web")})
     return out

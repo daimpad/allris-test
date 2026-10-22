@@ -263,6 +263,9 @@ def _fulltext(papers, bv_bezirke, locations, gaz, placed):
         text = texts.get((p.get("mainFile") or {}).get("id"))
         if not text or p["id"] in placed or not volltext.allowed(p.get("paperType")):
             continue
+        if volltext.titel_ohne_ort(p.get("name")):
+            audit.append((p["reference"], "Titel ohne gemeinsamen Ort, nicht verortet", "", "", "", "", "", ""))
+            continue
         rows, info = volltext.locate(gaz, text, bv_bezirke.get(p["id"], ()))
         if not rows:
             audit.append((p["reference"], info["befund"], info.get("teil", ""), "", "", "", "", ""))
