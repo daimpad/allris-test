@@ -101,7 +101,7 @@ Läuft auf der Seite seit dem 21.10.2026 (Konfidenz „niedrig“, 837 Vorlagen)
 
 **Prüfbogen:** `data/export/objekte/stichprobe_objekte.tsv` (30 Fälle). Spalte `urteil`: richtig, teilweise oder falsch.
 
-**Ergebnis (22.10.2026, im Gespräch; Vorschläge vom Auftraggeber nicht widersprochen):**
+**Ergebnis (22.10.2026, im Gespräch; Fälle 1–24 Vorschläge vom Auftraggeber nicht widersprochen, Fälle 25–30 ausdrücklich bestätigt):**
 - 24 richtig, 6 teilweise, keine falsch. Die KI-Vorprüfung (26/4/0) weicht in zwei Fällen ab (8, 18).
 - „Teilweise“ heißt hier: Der Ortsteil stimmt, aber das Gebäude ist nur Bezugspunkt (8, 18), Gegenstand ist kein Vorhaben am Ort (5), der Name ist nicht eindeutig (9), die Anlage liegt auf beiden Rheinseiten (4) oder ein künftiger Standort ist gemeint (22).
 - Acht der 30 Fälle sind der Beethovenhalle zugeordnet; die Stichprobe ist dadurch weniger vielfältig.
