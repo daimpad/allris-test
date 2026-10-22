@@ -357,7 +357,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
       const out = steps.map((x, i) => {
         used.add(x.status);
         const o = { nr: i + 1, schritt: g.schritte[x.typ] ?? x.typ, bezeichnung: x.label, status: x.status };
-        if (x.date) o.datum = x.date;
+        if (x.date) { o.datum = x.date; o.zeitbezug = x.date < today ? "vergangen" : x.date === today ? "heute" : "künftig"; }
         if (x.date_status) o.datum_status = x.date_status;
         if (x.role) o.rolle = x.role;
         if (x.result) { o.ergebnis = x.result; o.ergebnis_quelle = x.result_source; }
@@ -370,7 +370,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
       });
       return {
         drucksache: p.reference, titel: short(mask(p.name, p.paper_type)), stand: p.stand, stand_erklaerung: g.staende[p.stand] ?? null,
-        schritte: out, folgevorlagen_gesamt: folge.length,
+        heute: today, schritte: out, folgevorlagen_gesamt: folge.length,
         ...(await sollAngaben(p, used)),
         evidenzstatus: Object.fromEntries([...used].map((k) => [k, g.evidenz[k]])),
         quelle_id: p.source_object, quelle: "Beratungsfolge: OParl-API Stadt Bonn (CC0); Sitzungsdatum und Ergebnis: OParl-Lite (CC BY 4.0)",
