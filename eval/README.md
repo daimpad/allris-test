@@ -53,4 +53,4 @@ Die automatischen Kriterien erhalten jeweils `ja`, `nein` oder `–`, wenn das K
 
 Die Muster sind bewusst einfach. Ein `nein` heißt „prüfen“, nicht zwingend „falsch“. Neutralität und die korrekte Wiedergabe des Evidenzstatus bewertet ein Mensch in den Spalten `(Hand)`.
 
-Bitte die `.tsv`- und `.jsonl`-Dateien beider Läufe zurückgeben. Auf dieser Grundlage wird der Systemprompt überarbeitet (v0.3 mit Änderungsvermerk).
+Bitte die `.tsv`- und `.jsonl`-Dateien beider Läufe zurückgeben. Auf dieser Grundlage wird der Systemprompt überarbeitet, jeweils mit Änderungsvermerk. Der erste Lauf mit Mistral (22.10.2026) führte zu v0.3; Befunde in `BERICHT_2026-10-22.md`.
