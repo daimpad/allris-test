@@ -81,6 +81,26 @@ class KurzfassungTest(unittest.TestCase):
             kurzfassung.erzeugen(d, anfrage=lambda *a: self.fail("keine Anfrage ohne Schlüssel"))
             self.assertFalse((Path(d) / "kurzfassungen.jsonl").exists())
 
+    def test_gegenlesen_berichtigt_und_faellt_zurueck(self):
+        with tempfile.TemporaryDirectory() as d:
+            texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"
+            texte.write_text("\n".join(json.dumps({"uri": f"f{i}", "sha": f"s{i}", "text": TEXT}) for i in range(2)))
+            papers.write_text("\n".join(json.dumps({"reference": f"26000{i}", "name": "Spielplatz", "paperType": "Antrag",
+                                                    "mainFile": {"id": f"f{i}"}}) for i in range(2)))
+            erste = "Der Rat hat beschlossen, den Spielplatz in Endenich mit neuen Geräten auszustatten."
+            neu = iter(["Die Verwaltung schlägt vor, den Spielplatz in Endenich mit neuen Geräten auszustatten.", "OK"])
+            anfrage = lambda titel, text, key: (erste, {})
+            gegenlesen = lambda titel, text, kurz, key: (next(neu), {})
+            with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), \
+                    mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers):
+                kurzfassung.erzeugen(Path(d) / "kurz", anfrage=anfrage, gegenlesen=gegenlesen)
+            rows = sorted(kurzfassung.laden(Path(d) / "kurz").values(), key=lambda r: r["drucksache"])
+            self.assertTrue(rows[0]["kurzfassung"].startswith("Die Verwaltung schlägt vor"))
+            self.assertTrue(rows[0]["beim_gegenlesen_geaendert"])
+            self.assertIsNone(rows[1]["kurzfassung"])   # „OK“ ist zu kurz: erste Fassung bleibt und wird geprüft
+            self.assertEqual(rows[1]["verworfen"], "nicht in Titel oder Text: Rat")
+            self.assertFalse(rows[1]["beim_gegenlesen_geaendert"])
+
     def test_erzeugen_nur_neue_und_verwirft_auszuege(self):
         with tempfile.TemporaryDirectory() as d:
             texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"

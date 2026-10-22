@@ -27,7 +27,8 @@ API = "https://api.mistral.ai/v1/chat/completions"
 # (18 plausibel, 8 teilweise, 2 falsch, 2 unklar; Fehler: falscher Akteur, Vermutungen, falsche Orte, vertauschter
 # Kostenträger; data/export/kurzfassungen/vorpruefung_kurzfassungen_v1.tsv)
 MODELL = os.environ.get("KURZFASSUNG_MODELL", "mistral-large-latest")
-FASSUNG = 5   # 3: ohne Überschrift, Absender im ersten Satz, Kosten nur laut Text (Vorprüfung v2); 4: Fragen von
+FASSUNG = 6   # 6: zweiter Aufruf liest die Kurzfassung gegen den Text gegen und berichtigt sie (Vorprüfung v6: 22/8/0);
+# 3: ohne Überschrift, Absender im ersten Satz, Kosten nur laut Text (Vorprüfung v2); 4: Fragen von
 #               Anfragen nur wie gestellt, Gremium und Fraktion nur laut Text (Vorprüfung v4: 20/10/0); 5: Rolle im
 #               Verfahren (Kenntnisnahme), keine erschlossenen Fragen oder Ursachen, Ebene einer Zahl (Vorprüfung v5: 23/7/0)
 MAX_JE_LAUF = int(os.environ.get("KURZFASSUNG_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
@@ -67,6 +68,19 @@ Beginne direkt mit dem ersten Satz und nenne den Absender darin („Die Verwaltu
 beantragt …“); schreibe keine Überschrift und keine Angaben wie „Absender:“ oder „Art der Vorlage:“.
 Formuliere vollständig mit eigenen Worten; übernimm keine Sätze und keine längeren Wortfolgen aus dem Text. Nenne keine
 Namen von Privatpersonen und keine Hausnummern. Antworte nur mit der Kurzfassung."""
+
+
+GEGENLESEN = """Du prüfst eine Kurzfassung einer Vorlage des Rates der Stadt Bonn gegen den Text der Vorlage und
+berichtigst sie. Prüfe Satz für Satz:
+- Absender und Art der Vorlage (Antrag, Anfrage, Stellungnahme, Mitteilung, Beschlussvorlage) wie im Titel oder Text.
+- Rolle im Verfahren: Was vorgeschlagen, beantragt, angekündigt oder nur zur Kenntnis gegeben wird, darf nicht als
+  beschlossen, zugesagt oder bereits vorliegend erscheinen.
+- Zahlen: Steht jede Zahl so im Text, und gilt sie für die genannte Ebene (Stadt, Bezirk, Verwaltung, Personen)?
+- Fragen einer Anfrage: nur die gestellten Fragen, keine hinzugefügten.
+- Nichts, was der Text nicht sagt: keine Gründe, Folgerungen, Gremien oder Fraktionen ohne Beleg.
+Streiche oder berichtige, was nicht stimmt; ergänze nichts Neues. Behalte einfache Sprache, zwei bis drei kurze Sätze,
+höchstens 60 Wörter, keine längeren Wortfolgen aus dem Text. Antworte nur mit der berichtigten Kurzfassung (oder der
+unveränderten, wenn alles stimmt), ohne Kommentar."""
 
 
 def _woerter(text):
@@ -173,10 +187,10 @@ def pruefe(kurz, text, titel=""):
     return None
 
 
-def _anfrage(titel, text, schluessel, tries=4):
+def _anfrage(titel, text, schluessel, tries=4, system=ANWEISUNG, zusatz=""):
     body = json.dumps({"model": MODELL, "temperature": 0.2, "max_tokens": 220, "messages": [
-        {"role": "system", "content": ANWEISUNG},
-        {"role": "user", "content": f"Titel: {titel}\n\nText der Vorlage:\n{text}"}]}).encode()
+        {"role": "system", "content": system},
+        {"role": "user", "content": f"Titel: {titel}\n\nText der Vorlage:\n{text}{zusatz}"}]}).encode()
     req = urllib.request.Request(API, data=body, headers={"Content-Type": "application/json",
                                                          "Authorization": f"Bearer {schluessel}"})
     for i in range(tries):
@@ -188,6 +202,10 @@ def _anfrage(titel, text, schluessel, tries=4):
             if i == tries - 1:
                 raise
             time.sleep(2 ** (i + 2))
+
+
+def _gegenlesen(titel, text, kurz, schluessel):
+    return _anfrage(titel, text, schluessel, system=GEGENLESEN, zusatz=f"\n\nKurzfassung zum Prüfen:\n{kurz}")
 
 
 def _ergebnis(kurz, grund):
@@ -214,8 +232,10 @@ def _schreiben(base, have):
     tmp.replace(base / "kurzfassungen.jsonl")
 
 
-def erzeugen(verzeichnis=None, anfrage=_anfrage):
+def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
     """Neue Kurzfassungen für Hauptdokumente mit Text (höchstens MAX_JE_LAUF je Lauf); Stichprobe einmalig."""
+    if gegenlesen is None and anfrage is _anfrage:
+        gegenlesen = _gegenlesen
     schluessel = os.environ.get("MISTRAL_API_KEY")
     if not schluessel:
         print("Kurzfassungen: MISTRAL_API_KEY fehlt – nichts erzeugt.")
@@ -237,7 +257,9 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
     # aufbewahrte Entwürfe (verworfen ohne Text der Quelle), damit geänderte Regeln sie wieder zulassen können
     for r in have.values():
         kurz = r["kurzfassung"] or r.get("entwurf")
-        if r.get("fassung", 1) == FASSUNG and kurz and r.get("datei") in texts:
+        if r.get("fassung", 1) == FASSUNG and kurz and r.get("datei") in texts and r["datei"] not in papers:
+            r.update(kurzfassung=None, entwurf=None, verworfen="keine Kurzfassung für diese Art von Vorlage")
+        elif r.get("fassung", 1) == FASSUNG and kurz and r.get("datei") in texts:
             main = re.sub(r"\s+", " ", volltext.clean(texts[r["datei"]]["text"])[0]).strip()[:MAX_ZEICHEN]
             kurz = ohne_kostensatz(glaetten(kurz), main)
             grund = pruefe(kurz, main, (papers.get(r["datei"]) or {}).get("name") or "")
@@ -255,9 +277,21 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage):
         kurz = ohne_kostensatz(glaetten(kurz), main)
         tokens[0] += usage.get("prompt_tokens", 0)
         tokens[1] += usage.get("completion_tokens", 0)
+        geaendert = False
+        if gegenlesen and kurz:
+            try:
+                neu, usage = gegenlesen(titel, main, kurz, schluessel)
+                tokens[0] += usage.get("prompt_tokens", 0)
+                tokens[1] += usage.get("completion_tokens", 0)
+                neu = ohne_kostensatz(glaetten(neu), main)
+                if len(_woerter(neu)) >= 8:   # leere oder abgebrochene Antwort: erste Fassung bleibt
+                    geaendert, kurz = neu != kurz, neu
+            except Exception:   # Gegenlesen gescheitert: erste Fassung wird wie bisher geprüft
+                pass
         grund = pruefe(kurz, main, p.get("name") or "")
         have[texts[uri]["sha"]] = {"sha": texts[uri]["sha"], "datei": uri, "drucksache": p["reference"],
                                    **_ergebnis(kurz, grund), "modell": MODELL, "fassung": FASSUNG,
+                                   "gegengelesen": bool(gegenlesen), "beim_gegenlesen_geaendert": geaendert,
                                    "erzeugt": datetime.now(timezone.utc).date().isoformat()}
         time.sleep(0.5)
         if i % 25 == 0:   # Zwischenstand sichern: bricht der Lauf ab, bleibt das Erzeugte erhalten
