@@ -30,9 +30,9 @@ KI-Vorprüfungen von je 30 Kurzfassungen (`data/export/kurzfassungen/vorpruefung
 | 4 | 23 | 7 | 0 |
 | 5 | 22 | 8 | 0 |
 | 6 (mit Gegenlesen) | 22 | 8 | 0 |
-| 7 (aktuell) | F7_ERGEBNIS |
+| 7 (aktuell) | 18 | 12 | 0 |
 
-„Teilweise“ heißt: im Kern richtig, aber eine Einzelheit ungenau. Häufig wird ein Betrag dem falschen Gegenstand zugeordnet, Geplantes als erledigt dargestellt oder eine Folgerung ohne Beleg ergänzt. Die vereinbarte Schwelle für die Freigabe (27 von 30 plausibel, keine falsch) wurde mit keiner Fassung erreicht. Weitere Änderungen an der Anweisung haben seit Fassung 4 nichts verbessert.
+„Teilweise“ heißt: im Kern richtig, aber eine Einzelheit ungenau. Häufig wird ein Betrag dem falschen Gegenstand zugeordnet, Geplantes als erledigt dargestellt oder eine Folgerung ohne Beleg ergänzt. Die vereinbarte Schwelle für die Freigabe (27 von 30 plausibel, keine falsch) wurde mit keiner Fassung erreicht. Weitere Änderungen an der Anweisung haben seit Fassung 4 nichts verbessert; die Schwankung zwischen 18 und 23 liegt im Rahmen dessen, was bei 30 Fällen zu erwarten ist. Bei Fassung 7 prüfte die KI-Vorprüfung nach eigener Angabe strenger, einige „teilweise“ sind knapp (`vorpruefung_kurzfassungen_v8.tsv`).
 
 **Zu entscheiden** ist eine der drei Möglichkeiten:
 
@@ -40,7 +40,7 @@ KI-Vorprüfungen von je 30 Kurzfassungen (`data/export/kurzfassungen/vorpruefung
 - **B, freigeben mit deutlicher Kennzeichnung:** Die Kurzfassungen erscheinen im Vorgang, im Assistenten, in den Feeds und im Datenpaket, mit dem Hinweis, dass sie mit einem Sprachmodell erstellt sind und Einzelheiten ungenau sein können; maßgeblich ist das Original. Dafür genügt, `FREIGEGEBEN = True` zu setzen.
 - **C, erst nach der Prüfung von Hand:** Die Prüfung von Hand entscheidet zwischen A und B.
 
-**Empfehlung: C.** Die KI-Vorprüfung ist streng, und in bisher 150 vorgeprüften Kurzfassungen der Fassungen 3 bis 7 war keine im Kern falsch. Bestätigt die Prüfung von Hand das, spricht das für B. Findet sie im Kern falsche Kurzfassungen, bleibt es bei A.
+**Empfehlung: C.** Die KI-Vorprüfung ist streng. In den letzten fünf Stichproben (150 Kurzfassungen, seit den automatischen Prüfungen auf fremde Zahlen und Kostensätze) war keine im Kern falsch. Bestätigt die Prüfung von Hand das, spricht das für B. Findet sie im Kern falsche Kurzfassungen, bleibt es bei A.
 
 **Prüfbogen:** [`stichprobe_kurzfassungen_v7.tsv`](https://github.com/daimpad/allris-test/blob/kurzfassungen/stichprobe_kurzfassungen_v7.tsv) im Branch `kurzfassungen`.
 - 30 Kurzfassungen der Fassung 7, je mit Link zum Original im Ratsinformationssystem.
