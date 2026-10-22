@@ -715,3 +715,59 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 261604-01 ST	geändert	bestätigt	volltext_strasse+hausnummer	Oberkasseler Straße	Ramersdorf	mittel	mistral-large-latest
 261604-01 ST	geändert	bestätigt	volltext_strasse	Poststraße	Bonn-Zentrum	mittel	mistral-large-latest
 261606-01 ST	keine Änderung						mistral-large-latest
+261607-01 ST	keine Änderung						mistral-large-latest
+261610-01 ST	keine Änderung						mistral-large-latest
+261611-01 ST	keine Änderung						mistral-large-latest
+261616-01 ST	keine Änderung						mistral-large-latest
+261616-02 AA	keine Änderung						mistral-large-latest
+261619-01 AA	keine Änderung						mistral-large-latest
+261624-01 ST	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
+261626-02 AA	keine Änderung						mistral-large-latest
+261626-03 AA	keine Änderung						mistral-large-latest
+261632	keine Änderung						mistral-large-latest
+261632-01 ST	keine Änderung						mistral-large-latest
+261632-02 AA	keine Änderung						mistral-large-latest
+261635	keine Änderung						mistral-large-latest
+261637-01 ST	keine Änderung						mistral-large-latest
+261642	keine Änderung						mistral-large-latest
+261646	geändert	bestätigt	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	mistral-large-latest
+261646	geändert	bestätigt	volltext_ortsteil_name	Lengsdorf	Lengsdorf	mittel	mistral-large-latest
+261646	geändert	bestätigt	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	mistral-large-latest
+261646-01 AA	keine Änderung						mistral-large-latest
+261647	keine Änderung						mistral-large-latest
+261647-01 AA	keine Änderung						mistral-large-latest
+261647-02 ST	keine Änderung						mistral-large-latest
+261647-03 AA	keine Änderung						mistral-large-latest
+261648-01 ST	keine Änderung						mistral-large-latest
+261656-01 ST	keine Änderung						mistral-large-latest
+261656-02 ST	geändert	neu	llm_objekt	Universität Bonn – Campus Poppelsdorf	Poppelsdorf	niedrig	mistral-large-latest
+261657	keine Änderung						mistral-large-latest
+261658	keine Änderung						mistral-large-latest
+261674	keine Änderung						mistral-large-latest
+261674-01 ST	keine Änderung						mistral-large-latest
+261677	keine Änderung						mistral-large-latest
+261677-01 ST	keine Änderung						mistral-large-latest
+261681	keine Änderung						mistral-large-latest
+261681-01 ST	keine Änderung						mistral-large-latest
+261682	keine Änderung						mistral-large-latest
+261686	keine Änderung						mistral-large-latest
+261686-01 ST	keine Änderung						mistral-large-latest
+261688	geändert	bestätigt	volltext_ortsteil_name	Mehlem	Mehlem	mittel	mistral-large-latest
+261688	geändert	bestätigt	volltext_ortsteil_name	Röttgen	Röttgen	mittel	mistral-large-latest
+261688	geändert	bestätigt	volltext_ortsteil_name	Graurheindorf	Graurheindorf	mittel	mistral-large-latest
+261689	keine Änderung						mistral-large-latest
+261690	keine Änderung						mistral-large-latest
+261692	keine Änderung						mistral-large-latest
+261693	keine Änderung						mistral-large-latest
+261693-01 ST	keine Änderung						mistral-large-latest
+261695	geändert	neu	llm_objekt	Rheinauen Carré	Hochkreuz	niedrig	mistral-large-latest
+261696	geändert	neu	llm_objekt	Beethovenhalle	Bonn-Zentrum	niedrig	mistral-large-latest
+261697	keine Änderung						mistral-large-latest
+261697-01 ST	keine Änderung						mistral-large-latest
+261700	geändert	bestätigt	volltext_ortsteil_name	Poppelsdorf	Poppelsdorf	mittel	mistral-large-latest
+261700	geändert	neu	llm_objekt	Friedhof Poppelsdorf	Poppelsdorf	niedrig	mistral-large-latest
+261700	geändert	neu	llm_objekt	Kottenforst	Röttgen	niedrig	mistral-large-latest
+261700	geändert	neu	llm_objekt	Südfriedhof	Dottendorf	niedrig	mistral-large-latest
+261700-01 AA	keine Änderung						mistral-large-latest
+261701	geändert	neu	llm_objekt	Friedhof Geislar	Geislar	niedrig	mistral-large-latest
+261701	geändert	neu	llm_objekt	Zentralfriedhof	Plittersdorf	niedrig	mistral-large-latest
