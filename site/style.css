@@ -716,3 +716,4 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
   .bt-dot { left: -22px; top: 2px; }
   .bt-dates li { grid-template-columns: 1fr; gap: 0; }
 }
+.mega-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; }
