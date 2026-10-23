@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-lengsdorf</id>
 <title>RIS-Karte Bonn – Lengsdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Lengsdorf</subtitle>
-<updated>2026-10-21T00:00:00Z</updated>
+<updated>2026-10-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-lengsdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029980#vorlage</id>
+<title>Neue Vorlage 261940: Grundstück in Lengsdorf, Max-Habermann-Straße 2 - Neubau von Mehrfamilienhäusern, AZ: 10419/2026</title>
+<updated>2026-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#261940"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029980"/>
+<summary>Mitteilungsvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030041#vorlage</id>
 <title>Neue Vorlage 261646-01 AA: CDU/SPD-Änderungsantrag: Gewährung von Zuschüssen an Vereine für das Jahr 2026 Antrag zur Vorlage 261646</title>
@@ -273,12 +281,68 @@
 <summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025410#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 260027-02 ST CDU-Große Anfrage: Hundefreilaufflächen</title>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025992#beratung-4</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „ungeändert beschlossen“ – 260395 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260395"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025992"/>
+<summary>Entscheidung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025992#beratung-3</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 260395 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260395"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025992"/>
+<summary>Anhörung am 2026-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027185#vorlage</id>
+<title>Neue Vorlage 260680-02 AA: BBB-Änderungsantrag: Installation von Fahrradbügeln Antrag zur Vorlage 260680</title>
 <updated>2026-05-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260027-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025410"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260680-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027185"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027185#beratung-2</id>
+<title>Bezirksvertretung Hardtberg: „abgelehnt“ – 260680-02 AA BBB-Änderungsantrag: Installation von Fahrradbügeln Antrag zur Vorlage 260680</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260680-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027185"/>
+<summary>Entscheidung am 2026-05-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026828#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 260680-01 Installation von Fahrradbügeln - Stellungnahme zum Antrag</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260680-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026828"/>
 <summary>Kenntnisnahme am 2026-05-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026579#beratung-2</id>
+<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 260686 CDU/SPD-Antrag: Beleuchtung Rad-/Fußweg am KAD</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260686"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026579"/>
+<summary>Entscheidung am 2026-05-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026574#beratung-2</id>
+<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 260681 CDU/SPD-Antrag: Fahnenmasten im Stadtbezirk</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260681"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026574"/>
+<summary>Entscheidung am 2026-05-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026573#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 260680 CDU/SPD-Antrag: Installation von Fahrradbügeln</title>
+<updated>2026-05-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260680"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026573"/>
+<summary>Entscheidung am 2026-05-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025179#beratung-3</id>
@@ -297,6 +361,14 @@
 <summary>Kenntnisnahme am 2026-05-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026828#vorlage</id>
+<title>Neue Vorlage 260680-01: Installation von Fahrradbügeln - Stellungnahme zum Antrag</title>
+<updated>2026-04-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260680-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026828"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026734#vorlage</id>
 <title>Neue Vorlage 260754: Bürgerantrag: Antrag auf Überwachung und ordnungsrechtliche Maßnahmen bei illegaler Müllentsorgung im Bereich "Auf dem Kirchbüchel"</title>
 <updated>2026-04-23T00:00:00Z</updated>
@@ -305,12 +377,60 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023629#beratung-4</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 253482 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253482"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023629"/>
+<summary>Anhörung am 2026-04-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023098#beratung-4</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 253273 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253273"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023098"/>
+<summary>Anhörung am 2026-04-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026579#vorlage</id>
+<title>Neue Vorlage 260686: CDU/SPD-Antrag: Beleuchtung Rad-/Fußweg am KAD</title>
+<updated>2026-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260686"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026579"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026574#vorlage</id>
+<title>Neue Vorlage 260681: CDU/SPD-Antrag: Fahnenmasten im Stadtbezirk</title>
+<updated>2026-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260681"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026574"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026573#vorlage</id>
+<title>Neue Vorlage 260680: CDU/SPD-Antrag: Installation von Fahrradbügeln</title>
+<updated>2026-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260680"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026573"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026561#vorlage</id>
 <title>Neue Vorlage 252778-02: BBB-Anfrage: Bituminöse Deckenerneuerung der Fahrbahn „An der Ohligsmühle“ in Lengsdorf, Drucksachengruppe 252778</title>
 <updated>2026-04-14T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#252778-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026561"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025992#vorlage</id>
+<title>Neue Vorlage 260395: Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-03-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260395"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025992"/>
+<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025651#vorlage</id>
@@ -351,14 +471,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260222"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025538"/>
 <summary>Entscheidung am 2026-03-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025410#vorlage</id>
-<title>Neue Vorlage 260027-02 ST: CDU-Große Anfrage: Hundefreilaufflächen</title>
-<updated>2026-02-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260027-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025410"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025569#vorlage</id>
@@ -513,6 +625,14 @@
 <summary>Anhörung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024540#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253640-02 Derletalfest und Rock im Tal</title>
+<updated>2025-12-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253640-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024540"/>
+<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024408#beratung-3</id>
 <title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253659-01 ST Umlaufsperre am Ende der Hubert-Maurer-Straße</title>
 <updated>2025-12-02T00:00:00Z</updated>
@@ -534,6 +654,14 @@
 <updated>2025-12-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253756"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024283"/>
+<summary>Entscheidung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024269#beratung-3</id>
+<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 253746 Gewährung von Zuschüssen an Vereine für das Jahr 2025</title>
+<updated>2025-12-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253746"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024269"/>
 <summary>Entscheidung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
@@ -585,12 +713,36 @@
 <summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024269#vorlage</id>
+<title>Neue Vorlage 253746: Gewährung von Zuschüssen an Vereine für das Jahr 2025</title>
+<updated>2025-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253746"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024269"/>
+<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024540#vorlage</id>
+<title>Neue Vorlage 253640-02: Derletalfest und Rock im Tal</title>
+<updated>2025-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253640-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024540"/>
+<summary>Mitteilungsvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024607#vorlage</id>
 <title>Neue Vorlage 253947: CDU-Antrag: Sanierung Boulebahnen und Hinweisschilder zu den Spielregeln in der Borsigallee Brüser Berg, auf dem Spielplatz Hardtbergstraße und im Kreuzbergpark in Lengsdorf unter Verwendung von Haushaltsmitteln aus dem Feuerwehrtopf 2025</title>
 <updated>2025-11-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253947"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024607"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023629#beratung-3</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „ungeändert beschlossen“ – 253482 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253482"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023629"/>
+<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024408#vorlage</id>
@@ -641,171 +793,19 @@
 <summary>Entscheidung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024197#beratung-2</id>
+<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 240581-18 AA CDU-Änderungsantrag: Beschlussvorlage "Regionales Fahrradmietsystem" Antrag zur Vorlage 240581-17</title>
+<updated>2025-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#240581-18%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024197"/>
+<summary>Entscheidung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024195#beratung-2</id>
 <title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 253656-02 AA CDU-Änderungsantrag:Abbiegeverkehr in die Uhlgasse Antrag zur Vorlage 253656</title>
 <updated>2025-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253656-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024195"/>
 <summary>Anregung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024067#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253656-01 ST Grüne/SPD-Antrag: Abbiegeverkehr in die Uhlgasse</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253656-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024067"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023974#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253638-01 ST Trinkwasserbrunnen in Lengsdorf und Brüser Berg</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253638-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023974"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023964#beratung-4</id>
-<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 253656 Grüne/SPD-Antrag: Abbiegeverkehr in die Uhlgasse</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253656"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023964"/>
-<summary>Anregung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023943#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 253638 CDU-Antrag: Trinkwasserbrunnen in Lengsdorf und Brüser Berg</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253638"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023943"/>
-<summary>Entscheidung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023916#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 252861-01 ST CDU-Große Anfrage: Objekt „Im Feldpütz 18 (nicht 16), 53123 Bonn“</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#252861-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023916"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023661#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231537-03 Maßnahmen gegen Vandalismus an der Kreuzbergschule/Kita und im Kreuzbergpark Lengsdorf</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#231537-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023661"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023465#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253331-01 ST Grüne/SPD-Antrag: Dringende Sanierung des Spielplatzes „Im Brandengarten“ in Bonn-Lengsdorf</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253331-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023465"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023464#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253320-01 ST CDU-Antrag: Spiel- und Bolzplatz Im Brandengarten in Bonn-Lengsdorf</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253320-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023464"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023224#beratung-4</id>
-<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 253331 Grüne/SPD-Antrag: Dringende Sanierung des Spielplatzes „Im Brandengarten“ in Bonn-Lengsdorf</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253331"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023224"/>
-<summary>Entscheidung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023205#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 253320 CDU-Antrag: Spiel- und Bolzplatz Im Brandengarten in Bonn-Lengsdorf</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253320"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023205"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022850#beratung-4</id>
-<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 253145 Qualifizierungsverfahren im Bebauungsplanverfahren Nr. 6319-2 „An der Ziegelei“ - Benennung der Sachpreisrichter*innen</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253145"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022850"/>
-<summary>Empfehlung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022850#beratung-3</id>
-<title>Ausschuss für Wohnen, Planung und Bauen: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 253145 Qualifizierungsverfahren im Bebauungsplanverfahren Nr. 6319-2 „An der Ziegelei“ - Benennung der Sachpreisrichter*innen</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253145"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022850"/>
-<summary>Empfehlung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022249#beratung-3</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 252861 CDU-Große Anfrage: Objekt „Im Feldpütz 16, 53123 Bonn“</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#252861"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022249"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024198#vorlage</id>
-<title>Neue Vorlage 253331-02 AA: CDU-Änderungsantrag: Dringende Sanierung des Spielplatzes „Im Brandengarten“ in Bonn-Lengsdorf Antrag zur Vorlage 253331</title>
-<updated>2025-09-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253331-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024198"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024195#vorlage</id>
-<title>Neue Vorlage 253656-02 AA: CDU-Änderungsantrag:Abbiegeverkehr in die Uhlgasse Antrag zur Vorlage 253656</title>
-<updated>2025-09-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253656-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024195"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024067#vorlage</id>
-<title>Neue Vorlage 253656-01 ST: Grüne/SPD-Antrag: Abbiegeverkehr in die Uhlgasse</title>
-<updated>2025-08-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253656-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024067"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023845#vorlage</id>
-<title>Neue Vorlage 253594: Regenwasserbehandlungsanlage an der A 565 in der Anschlussstelle Bonn-Lengsdorf: Suchschachtungen im Landschaftsschutzgebiet</title>
-<updated>2025-08-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253594"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023845"/>
-<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023964#vorlage</id>
-<title>Neue Vorlage 253656: Grüne/SPD-Antrag: Abbiegeverkehr in die Uhlgasse</title>
-<updated>2025-08-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253656"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023964"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023974#vorlage</id>
-<title>Neue Vorlage 253638-01 ST: Trinkwasserbrunnen in Lengsdorf und Brüser Berg</title>
-<updated>2025-08-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253638-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023974"/>
-<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023967#vorlage</id>
-<title>Neue Vorlage 253659: Umlaufsperre am Ende der Hubert-Maurer-Straße</title>
-<updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253659"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023967"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-weststadt</id>
 <title>RIS-Karte Bonn – Weststadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Weststadt</subtitle>
-<updated>2026-10-13T00:00:00Z</updated>
+<updated>2026-10-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-weststadt.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029709#vorlage</id>
+<title>Neue Vorlage 260745-03 ST: Stellungnahme zum Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der Hausnummer 82</title>
+<updated>2026-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260745-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029709"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029862#vorlage</id>
 <title>Neue Vorlage 261890: Kooperationsantrag CDU/SPD/FDP: Verlagerung der Wache GABI in den Bereich des Hauptbahnhofs</title>
@@ -249,6 +257,14 @@
 <summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026356#beratung-3</id>
+<title>Bezirksvertretung Bonn: „vertagt“ – 260411-01 ST Stellungnahme zum Bürgerantrag: Optimierung des Durchgangsverkehrs im Bereich des Musikerviertels</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260411-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026356"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026214#beratung-3</id>
 <title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 230867-06 Ausführungsplanung Haydnstraße Fahrbahnverengung (Verkehrssicherheit an der Michaelschule)</title>
 <updated>2026-06-23T00:00:00Z</updated>
@@ -335,6 +351,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#230867-06"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026214"/>
 <summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025992#beratung-4</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „ungeändert beschlossen“ – 260395 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260395"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025992"/>
+<summary>Entscheidung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027525#vorlage</id>
@@ -449,6 +473,14 @@
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025992#beratung-3</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 260395 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260395"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025992"/>
+<summary>Anhörung am 2026-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026813#vorlage</id>
 <title>Neue Vorlage 260521-01 ST: Sachstand Guido-Westerwelle-Brücke</title>
 <updated>2026-05-07T00:00:00Z</updated>
@@ -503,6 +535,30 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253599"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023856"/>
 <summary>Entscheidung am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026356#vorlage</id>
+<title>Neue Vorlage 260411-01 ST: Stellungnahme zum Bürgerantrag: Optimierung des Durchgangsverkehrs im Bereich des Musikerviertels</title>
+<updated>2026-04-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260411-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026356"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023629#beratung-4</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 253482 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253482"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023629"/>
+<summary>Anhörung am 2026-04-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023098#beratung-4</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 253273 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253273"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023098"/>
+<summary>Anhörung am 2026-04-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026718#vorlage</id>
@@ -583,6 +639,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#254029-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025990"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025992#vorlage</id>
+<title>Neue Vorlage 260395: Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-03-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260395"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025992"/>
+<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025773#beratung-3</id>
@@ -743,69 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253548"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023759"/>
 <summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023756#beratung-3</id>
-<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 253545 Grüne-Antrag: Übergang Zülpicher Straße/Wesselbahnweg</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253545"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023756"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023708#beratung-2</id>
-<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 253519 Bürgerantrag: Aufstellen einer Sitzbank im Bereich Agrippinenstraße/Beethovenstraße</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253519"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023708"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023019#beratung-3</id>
-<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 253232 Bürgerantrag: Belastbare Zeitschiene für die Realisierung der Rampe an der Guido-Westerwelle-Brücke</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253232"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023019"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021394#beratung-4</id>
-<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 231606-02 Bürgerantrag: Tempo 30 in der Endenicher Straße</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#231606-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021394"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024468#vorlage</id>
-<title>Neue Vorlage 253545-01 ST: Grüne-Antrag: Übergang Zülpicher Straße/Wesselbahnweg</title>
-<updated>2025-10-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253545-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024468"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024416#vorlage</id>
-<title>Neue Vorlage 253232-01 ST: Bürgerantrag: Belastbare Zeitschiene für die Realisierung der Rampe an der Guido-Westerwelle-Brücke</title>
-<updated>2025-10-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253232-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024416"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024346#vorlage</id>
-<title>Neue Vorlage 253548-01 ST: Bürgerantrag: Einrichtung von Parkverboten im Wendehammer der Zülpicher Straße und Befestigung des Übergangs zum Wesselbahnweg</title>
-<updated>2025-10-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253548-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024346"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024433#vorlage</id>
-<title>Neue Vorlage 253793-01 ST: Koalitionsantrag: Aufenthaltsqualität an der Poppelsdorfer Allee verbessern - Rückzugsraum für wohnungslose Menschen schaffen</title>
-<updated>2025-10-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#253793-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024433"/>
-<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

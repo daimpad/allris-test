@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-poppelsdorf</id>
 <title>RIS-Karte Bonn – Poppelsdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Poppelsdorf</subtitle>
-<updated>2026-10-13T00:00:00Z</updated>
+<updated>2026-10-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-poppelsdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029709#vorlage</id>
+<title>Neue Vorlage 260745-03 ST: Stellungnahme zum Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der Hausnummer 82</title>
+<updated>2026-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260745-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029709"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029682#beratung-3</id>
 <title>Bezirksvertretung Bonn: „vertagt“ – 261545-01 ST Stellungnahme zum Bürgerantrag: Antrag zur Einrichtung eines Zebrastreifens in der Straße Am Botanischen Garten auf Höhe der Eisdiele</title>
@@ -134,7 +142,7 @@
 <updated>2026-09-16T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#261474"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028786"/>
-<summary>Mitteilungsvorlage · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
+<summary>Mitteilungsvorlage · federführend: 52 Sport- und Bäderamt · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029149#vorlage</id>
@@ -289,6 +297,30 @@
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027590#beratung-4</id>
+<title>Rat: „nicht abgestimmt“ – 260145-06 AA Änderungsantrag CDU/SPD/FDP (Kooperation): Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-06-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027590"/>
+<summary>Entscheidung am 2026-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027565#beratung-4</id>
+<title>Rat: „abgelehnt“ – 260145-05 AA Änderungsantrag GRÜNE-Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-06-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027565"/>
+<summary>Entscheidung am 2026-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#beratung-6</id>
+<title>Rat: „geändert beschlossen“ – 260145-02 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-06-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Entscheidung am 2026-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026946#vorlage</id>
 <title>Neue Vorlage 260850: Grundhafte Sanierung Im Wingert</title>
 <updated>2026-06-09T00:00:00Z</updated>
@@ -305,12 +337,44 @@
 <summary>Stellungnahme der Verwaltung · federführend: Dezernat III · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027521#vorlage</id>
+<title>Neue Vorlage 260921-01 ST: GRÜNE-Fraktion/Linke-Fraktion/Volt-Gruppe-Große Anfrage: Sichere Mobilität von Kindern und Jugendlichen - Tempo 30 ausbauen</title>
+<updated>2026-06-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260921-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027521"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027765#vorlage</id>
 <title>Neue Vorlage 261060: Bürgerantrag: Aufnahme der Blücherstraße in Poppelsdorf in das „Bonner Baumkonzept“ und Prüfung zusätzlicher Straßenbäume</title>
 <updated>2026-05-28T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#261060"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027765"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027590#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 260145-06 AA Änderungsantrag CDU/SPD/FDP (Kooperation): Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027590"/>
+<summary>Empfehlung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027565#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „abgelehnt“ – 260145-05 AA Änderungsantrag GRÜNE-Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027565"/>
+<summary>Empfehlung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#beratung-5</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „geändert beschlossen“ – 260145-02 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Empfehlung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026768#beratung-3</id>
@@ -321,12 +385,44 @@
 <summary>Entscheidung am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027590#vorlage</id>
+<title>Neue Vorlage 260145-06 AA: Änderungsantrag CDU/SPD/FDP (Kooperation): Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027590"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027590#beratung-2</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „ungeändert beschlossen“ – 260145-06 AA Änderungsantrag CDU/SPD/FDP (Kooperation): Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027590"/>
+<summary>Empfehlung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027565#beratung-2</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „abgelehnt“ – 260145-05 AA Änderungsantrag GRÜNE-Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027565"/>
+<summary>Empfehlung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027341#beratung-3</id>
 <title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260745-01 ST Vertagungsbitte zum Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der Hausnummer 82</title>
 <updated>2026-05-19T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260745-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027341"/>
 <summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 260145-02 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Empfehlung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024937#beratung-3</id>
@@ -361,12 +457,36 @@
 <summary>Entscheidung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027565#vorlage</id>
+<title>Neue Vorlage 260145-05 AA: Änderungsantrag GRÜNE-Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027565"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027341#vorlage</id>
 <title>Neue Vorlage 260745-01 ST: Vertagungsbitte zum Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der Hausnummer 82</title>
 <updated>2026-05-13T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260745-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027341"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026729#beratung-2</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „nicht abgestimmt“ – 260145-04 AA Grüne-Liste-Änderungsantrag: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145-02</title>
+<updated>2026-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026729"/>
+<summary>Empfehlung am 2026-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#beratung-3</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ohne Votum“ – 260145-02 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Empfehlung am 2026-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022551#vorlage</id>
@@ -409,12 +529,52 @@
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung nimmt Stellung zum Bürgerantrag für Tempo 30 in der Sebastianstraße in Endenich zwischen Röckumstraße und Carl-Troll-Straße. Sie lehnt eine durchgehende Zone ab, da Lärmschutz und Unfallgeschehen dies nicht rechtfertigen. Allerdings schlägt sie Tempo 30 im Bereich zweier Fußgängerüberwege vor, um die Sicherheit zu erhöhen. Die Bezirksvertretung soll den Antrag ablehnen.</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026729#vorlage</id>
+<title>Neue Vorlage 260145-04 AA: Grüne-Liste-Änderungsantrag: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145-02</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026729"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026718#vorlage</id>
 <title>Neue Vorlage 260745: Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der Hausnummer 82</title>
 <updated>2026-04-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260745"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026718"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#vorlage</id>
+<title>Neue Vorlage 260145-02: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-03-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026018#vorlage</id>
+<title>Neue Vorlage 260145-01 AA: Änderungsantrag der GRÜNEN Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026018"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026018#beratung-2</id>
+<title>Rat: „abgelehnt“ – 260145-01 AA Änderungsantrag der GRÜNEN Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026018"/>
+<summary>Entscheidung am 2026-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025351#beratung-4</id>
+<title>Rat: „geändert beschlossen“ – 260145 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2026-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025351"/>
+<summary>Entscheidung am 2026-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023611#beratung-4</id>
@@ -441,12 +601,28 @@
 <summary>Empfehlung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025351#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ohne Votum“ – 260145 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2026-03-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025351"/>
+<summary>Empfehlung am 2026-03-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025297#beratung-3</id>
 <title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 232298-02 Würdige Gestaltung des Gedenkorts am vormaligen Standort der Synagoge in Poppelsdorf (Ecke Bennauerstr / Jagdweg)</title>
 <updated>2026-03-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#232298-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025297"/>
 <summary>Kenntnisnahme am 2026-03-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025351#vorlage</id>
+<title>Neue Vorlage 260145: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2026-02-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#260145"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025351"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025572#vorlage</id>
@@ -481,6 +657,38 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024949#vorlage</id>
+<title>Neue Vorlage 253837-02 ST: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253837-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024949"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024949#beratung-3</id>
+<title>Rat: „ungeändert beschlossen“ – 253837-02 ST Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253837-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024949"/>
+<summary>Entscheidung am 2025-12-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024931#beratung-2</id>
+<title>Rat: „nicht abgestimmt“ – 253837-01 AA Änderungsantrag CDU/Grüne/SPD/FDP: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 253837</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253837-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024931"/>
+<summary>Entscheidung am 2025-12-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024434#beratung-4</id>
+<title>Rat: „geändert beschlossen“ – 253837 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253837"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024434"/>
+<summary>Entscheidung am 2025-12-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2017341#beratung-3</id>
 <title>Rat: „ungeändert beschlossen“ – 221416-03 Grüne/SPD/u.w.-Antrag: Tempo 30 nördlich des Marienhospitals - Beanstandung</title>
 <updated>2025-12-15T00:00:00Z</updated>
@@ -489,12 +697,12 @@
 <summary>Entscheidung am 2025-12-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024520#beratung-3</id>
-<title>Rat: „ungeändert beschlossen“ – 240693-03 Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn</title>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024931#vorlage</id>
+<title>Neue Vorlage 253837-01 AA: Änderungsantrag CDU/Grüne/SPD/FDP: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 253837</title>
 <updated>2025-12-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240693-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024520"/>
-<summary>Entscheidung am 2025-12-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253837-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024931"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Koalition beantragt, dass der Ausschuss für Umwelt, Klima und Lokale Agenda vor einer Entscheidung über neue Grabformen und Gebühren auf Bonner Friedhöfen berät. Auch der Runde Tisch Friedhöfe soll vorher beteiligt werden. Die Änderungen betreffen die Gebührenkalkulation für 2026.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024850#vorlage</id>
@@ -529,12 +737,12 @@
 <summary>Entscheidung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024520#vorlage</id>
-<title>Neue Vorlage 240693-03: Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn</title>
-<updated>2025-11-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240693-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024520"/>
-<summary>Beschlussvorlage · federführend: 41 Kulturamt · Stand: entschieden</summary>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024434#vorlage</id>
+<title>Neue Vorlage 253837: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2025-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253837"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024434"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024374#beratung-3</id>
@@ -599,213 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240558"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016609"/>
 <summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016341#beratung-4</id>
-<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 240420 Parksituation in der Troschelstraße</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240420"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016341"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016187#beratung-4</id>
-<title>Bezirksvertretung Bonn: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 240368 Bürgerantrag: Parksituation im Bereich Troschelstraße</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240368"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016187"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2013057#beratung-3</id>
-<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 231338 Bürgerantrag: Verkehrssichernde Maßnahmen Zebrastreifen Argelanderstraße</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#231338"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013057"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024407#vorlage</id>
-<title>Neue Vorlage 211443-05: Umwidmung des auf dem Poppelsdorfer Friedhof gelegenen Ehrenmals "Unserer Helden" zu einem Mahnmal für die "Opfer von Gewaltherrschaft"</title>
-<updated>2025-10-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#211443-05"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024407"/>
-<summary>Mitteilungsvorlage · federführend: 41 Kulturamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024374#vorlage</id>
-<title>Neue Vorlage 253231-01 ST: Bürgerantrag: Realisierung der barrierefreien Lehrtafeln des Naturlehrpfads "Im Wingert" auf dem Clemens-August-Platz</title>
-<updated>2025-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253231-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024374"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021915#vorlage</id>
-<title>Neue Vorlage 252376-01 ST: Sachstände zur Umsetzung von DS 231515, DS 240209, DS 240506 und DS 241500</title>
-<updated>2025-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#252376-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021915"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2013057#vorlage</id>
-<title>Neue Vorlage 231338: Bürgerantrag: Verkehrssichernde Maßnahmen Zebrastreifen Argelanderstraße</title>
-<updated>2025-08-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#231338"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013057"/>
-<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023987#vorlage</id>
-<title>Neue Vorlage 253671: Informationsbrief - Baumaßnahme Kita Mordkapellenpfad</title>
-<updated>2025-08-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253671"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023987"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023704#vorlage</id>
-<title>Neue Vorlage 240672-04: Umbenennung der Schmidtbonnstraße in Bonn-Poppelsdorf</title>
-<updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240672-04"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023704"/>
-<summary>Mitteilungsvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023605#vorlage</id>
-<title>Neue Vorlage 240368-02 ST: Bürgerantrag: Parksituation im Bereich Troschelstraße</title>
-<updated>2025-08-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240368-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023605"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023609#vorlage</id>
-<title>Neue Vorlage 240420-02 ST: Parksituation in der Troschelstraße</title>
-<updated>2025-07-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240420-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023609"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023611#vorlage</id>
-<title>Neue Vorlage 240558-02 ST: Einrichtung einer Einbahnstraßenregelung und zukünftiges Parken in der Troschelstraße</title>
-<updated>2025-07-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240558-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023611"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021855#beratung-4</id>
-<title>Rat: „zur Kenntnis genommen“ – 252708 Aktivitäten zum Thema Baum</title>
-<updated>2025-07-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#252708"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021855"/>
-<summary>Kenntnisnahme am 2025-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023063#beratung-3</id>
-<title>Rat: „ungeändert beschlossen“ – 240672-03 Bürgerantrag Umbenennung "Schmidtbonn" hier: Streichung des Grab „Schmidtbonn“ aus der Ehrenliste</title>
-<updated>2025-07-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240672-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023063"/>
-<summary>Entscheidung am 2025-07-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023363#vorlage</id>
-<title>Neue Vorlage 211355-03 ST: Sachstand der Umsetzung zu DS 211355</title>
-<updated>2025-06-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#211355-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023363"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023063#vorlage</id>
-<title>Neue Vorlage 240672-03: Bürgerantrag Umbenennung "Schmidtbonn" hier: Streichung des Grab „Schmidtbonn“ aus der Ehrenliste</title>
-<updated>2025-06-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240672-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023063"/>
-<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023397#vorlage</id>
-<title>Neue Vorlage 253406: Informationsbrief - Beteiligungsveranstaltung Luisenstraße</title>
-<updated>2025-06-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253406"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023397"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023307#vorlage</id>
-<title>Neue Vorlage 240465-01 ST: Einführung von Tempo 30 im Bereich Trierer Straße/Im Wingert bis Einmündung Melbweg wegen Lärmschutz</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#240465-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023307"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022693#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 252531-01 ST Bürgerantrag: Reduzierung der Umweltbelastung im Wohngebiet durch veränderte Verkehrsführung im Bereich Argelanderstraße und Jagdweg</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#252531-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022693"/>
-<summary>Kenntnisnahme am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021485#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 231796-02 ST Bürgerantrag: Einrichtung einer Tempo 30-Zone im Bereich Robert-Koch-Straße/Im Wingert/Nachtigallenweg</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#231796-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021485"/>
-<summary>Kenntnisnahme am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021434#beratung-3</id>
-<title>Bezirksvertretung Bonn: „erledigt durch Stellungnahme der Verwaltung“ – 252531 Bürgerantrag: Reduzierung der Umweltbelastung im Wohngebiet durch veränderte Verkehrsführung im Bereich Argelanderstraße und Jagdweg</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#252531"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021434"/>
-<summary>Entscheidung am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016057#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 231796-01 ST Bürgerantrag: Einrichtung einer Tempo 30-Zone im Bereich Robert-Koch-Straße/Im Wingert/Nachtigallenweg</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#231796-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016057"/>
-<summary>Kenntnisnahme am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2014079#beratung-2</id>
-<title>Bezirksvertretung Bonn: „abgelehnt“ – 231852 Bürgerantrag: Verlängerung der Tempo 30 Zone im Bereich Robert-Koch-Straße, Venusberg</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#231852"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014079"/>
-<summary>Entscheidung am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2013979#beratung-4</id>
-<title>Bezirksvertretung Bonn: „abgelehnt“ – 231796 Bürgerantrag: Einrichtung einer Tempo 30-Zone im Bereich Robert-Koch-Straße/Im Wingert/Nachtigallenweg</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#231796"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013979"/>
-<summary>Entscheidung am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021855#beratung-3</id>
-<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 252708 Aktivitäten zum Thema Baum</title>
-<updated>2025-06-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#252708"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021855"/>
-<summary>Kenntnisnahme am 2025-06-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023017#vorlage</id>
-<title>Neue Vorlage 253231: Bürgerantrag: Realisierung der barrierefreien Lehrtafeln des Naturlehrpfads "Im Wingert" auf dem Clemens-August-Platz</title>
-<updated>2025-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:poppelsdorf#253231"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023017"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 </feed>

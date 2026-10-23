@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-auerberg</id>
 <title>RIS-Karte Bonn – Auerberg</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Auerberg</subtitle>
-<updated>2026-10-19T00:00:00Z</updated>
+<updated>2026-10-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-auerberg.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029211#vorlage</id>
+<title>Neue Vorlage 261544-01 ST: Stellungnahme zum Bürgerantrag: Anordnung von Tempo 30 im Bereich der Kölnstraße zwischen An der Josefshöhe und Chlodwigsplatz</title>
+<updated>2026-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#261544-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029211"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029743#vorlage</id>
 <title>Neue Vorlage 261862: Aufstellung des Bebauungsplan Nr. 6325-1 „Kölnstraße / Otto-Hahn-Straße“</title>
@@ -129,12 +137,36 @@
 <summary>Beschlussvorlage · federführend: 52 Sport- und Bäderamt · Stand: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026434#beratung-9</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 260616 Umsetzung Aktionsplan des Bonner Freiraumplans – Sachstandsbericht</title>
+<updated>2026-07-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026434"/>
+<summary>Kenntnisnahme am 2026-07-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026131#beratung-5</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 252542-04 Auerberger Mitte - Platz der Begegnung/ Aufwertung der Platzfläche - Prüfergebnisse zum Beschluss DS 252542</title>
 <updated>2026-07-15T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#252542-04"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026131"/>
 <summary>Kenntnisnahme am 2026-07-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026434#beratung-8</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 260616 Umsetzung Aktionsplan des Bonner Freiraumplans – Sachstandsbericht</title>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026434"/>
+<summary>Kenntnisnahme am 2026-07-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026434#beratung-7</id>
+<title>Rat: „zur Kenntnis genommen“ – 260616 Umsetzung Aktionsplan des Bonner Freiraumplans – Sachstandsbericht</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026434"/>
+<summary>Kenntnisnahme am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028155#beratung-4</id>
@@ -159,6 +191,30 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253098-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023435"/>
 <summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026434#beratung-6</id>
+<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 260616 Umsetzung Aktionsplan des Bonner Freiraumplans – Sachstandsbericht</title>
+<updated>2026-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026434"/>
+<summary>Kenntnisnahme am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026644#beratung-4</id>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „zur Kenntnis genommen“ – 260608-01 ST Linke-Antrag: Prävention für Extremwetterlagen und Katastrophenfälle</title>
+<updated>2026-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260608-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026644"/>
+<summary>Entscheidung am 2026-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026434#beratung-4</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260616 Umsetzung Aktionsplan des Bonner Freiraumplans – Sachstandsbericht</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026434"/>
+<summary>Kenntnisnahme am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026128#beratung-4</id>
@@ -199,6 +255,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#261084"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027828"/>
 <summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027504#beratung-3</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 260953 Einleitung des Vergabeverfahrens zur Ergänzung des Verkehrsgrüns in Bonn-Nord 2026</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260953"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027504"/>
+<summary>Entscheidung am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027441#beratung-3</id>
@@ -305,6 +369,14 @@
 <summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026434#vorlage</id>
+<title>Neue Vorlage 260616: Umsetzung Aktionsplan des Bonner Freiraumplans – Sachstandsbericht</title>
+<updated>2026-06-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026434"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020521#vorlage</id>
 <title>Neue Vorlage 240810-02: Mitteilung zum Beschluss zu Antrag von Grüne, CDU und FDP: Bus-Haltestelle „Auerberger Mitte“</title>
 <updated>2026-06-08T00:00:00Z</updated>
@@ -327,6 +399,22 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#261084"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027828"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027504#vorlage</id>
+<title>Neue Vorlage 260953: Einleitung des Vergabeverfahrens zur Ergänzung des Verkehrsgrüns in Bonn-Nord 2026</title>
+<updated>2026-06-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260953"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027504"/>
+<summary>Beschlussvorlage: Einleitung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026644#beratung-3</id>
+<title>Bezirksvertretung Beuel: „verwiesen“ – 260608-01 ST Linke-Antrag: Prävention für Extremwetterlagen und Katastrophenfälle</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260608-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026644"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026933#beratung-4</id>
@@ -393,12 +481,12 @@
 <summary>Beschlussvorlage · federführend: 50 Amt für Soziales und Wohnen · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024398#beratung-4</id>
-<title>Rat: „zur Kenntnis genommen“ – 231965-16 ST Beschluss zum Bonner Freiraumplan hier: Stellungnahme zur DS 231965-14 - Große Anfrage BBB</title>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026644#vorlage</id>
+<title>Neue Vorlage 260608-01 ST: Linke-Antrag: Prävention für Extremwetterlagen und Katastrophenfälle</title>
 <updated>2026-05-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#231965-16%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024398"/>
-<summary>Kenntnisnahme am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260608-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026644"/>
+<summary>Stellungnahme der Verwaltung · federführend: 37 Feuerwehr und Rettungsdienst · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023435#beratung-3</id>
@@ -441,6 +529,14 @@
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026327#beratung-5</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „geändert beschlossen“ – 260557 Beteiligungskonzept Rheingärten</title>
+<updated>2026-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260557"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026327"/>
+<summary>Entscheidung am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024471#beratung-3</id>
 <title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 253456-02 ST Bürgerantrag: Überprüfung zur Kooperationsvereinbarung SEVAS und der Verkehrsführung "An der Josefshöhe" - Stellungnahme der Verwaltung</title>
 <updated>2026-04-29T00:00:00Z</updated>
@@ -473,6 +569,22 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026327#beratung-4</id>
+<title>Beirat Bürgerbeteiligung: „geändert beschlossen“ – 260557 Beteiligungskonzept Rheingärten</title>
+<updated>2026-04-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260557"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026327"/>
+<summary>Empfehlung am 2026-04-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023624#beratung-4</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 253479 Zuschuss an die Fraueninitiative für Bildung und Erziehung FIBEr e.V.</title>
+<updated>2026-04-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253479"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023624"/>
+<summary>Anhörung am 2026-04-23; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026640#beratung-3</id>
 <title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260341-02 ST Stellungnahme zu 260341-01 AA: Sanierung der Turnhalle – An der Josefshöhe 1  - hier: Fällung eines satzungsgeschützten Baumes</title>
 <updated>2026-04-21T00:00:00Z</updated>
@@ -495,6 +607,22 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260501-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026588"/>
 <summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026313#beratung-3</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260502-01 ST Grüne-Bezirksfraktion-Antrag: Weiterführung von Tempo 30 an der Josefshöhe</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260502-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026313"/>
+<summary>Kenntnisnahme am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026234#beratung-3</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 260502 Grüne-Bezirksfraktion-Antrag: Weiterführung von Tempo 30 an der Josefshöhe</title>
+<updated>2026-04-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260502"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026234"/>
+<summary>Entscheidung am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026233#beratung-3</id>
@@ -529,6 +657,14 @@
 <summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026327#beratung-3</id>
+<title>Beirat Kinder- und Jugendbeteiligung: „geändert beschlossen“ – 260557 Beteiligungskonzept Rheingärten</title>
+<updated>2026-04-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260557"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026327"/>
+<summary>Empfehlung am 2026-04-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026588#vorlage</id>
 <title>Neue Vorlage 260501-01 ST: Grüne-Bezirksfraktion-Antrag: Verkehrssicherheit Dublinerstraße/ Ecke Richthofenstraße</title>
 <updated>2026-04-16T00:00:00Z</updated>
@@ -545,12 +681,28 @@
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026327#vorlage</id>
+<title>Neue Vorlage 260557: Beteiligungskonzept Rheingärten</title>
+<updated>2026-04-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260557"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026327"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026131#vorlage</id>
 <title>Neue Vorlage 252542-04: Auerberger Mitte - Platz der Begegnung/ Aufwertung der Platzfläche - Prüfergebnisse zum Beschluss DS 252542</title>
 <updated>2026-04-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#252542-04"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026131"/>
 <summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026313#vorlage</id>
+<title>Neue Vorlage 260502-01 ST: Grüne-Bezirksfraktion-Antrag: Weiterführung von Tempo 30 an der Josefshöhe</title>
+<updated>2026-04-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260502-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026313"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024471#vorlage</id>
@@ -577,6 +729,14 @@
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026234#vorlage</id>
+<title>Neue Vorlage 260502: Grüne-Bezirksfraktion-Antrag: Weiterführung von Tempo 30 an der Josefshöhe</title>
+<updated>2026-03-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260502"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026234"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025828#vorlage</id>
 <title>Neue Vorlage 260341: Sanierung der Turnhalle – An der Josefshöhe 1  - hier: Fällung eines satzungsgeschützten Baumes</title>
 <updated>2026-03-24T00:00:00Z</updated>
@@ -585,11 +745,11 @@
 <summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024398#beratung-3</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 231965-16 ST Beschluss zum Bonner Freiraumplan hier: Stellungnahme zur DS 231965-14 - Große Anfrage BBB</title>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024337#beratung-4</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 240891-03 ST BBB-Anfrage: Weiterführung der Stadtbahnlinie 63</title>
 <updated>2026-03-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#231965-16%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024398"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#240891-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024337"/>
 <summary>Kenntnisnahme am 2026-03-24; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
@@ -609,12 +769,28 @@
 <summary>Kenntnisnahme am 2026-03-24; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025451#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 252458-02 ST Fortschreibung des Bonner Einzelhandels- und Zentrenkonzeptes - Beschluss als städtebauliches Entwicklungskonzept im Sinne des § 1 Abs. 6 Nr. 11 Baugesetzbuch</title>
+<updated>2026-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#252458-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025451"/>
+<summary>Kenntnisnahme am 2026-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025894#vorlage</id>
 <title>Neue Vorlage 260365: Bürgerantrag: Optimierung Lkw-Verkehr im Bereich der Kölnstraße/Änderung der Durchfahrtszeiten</title>
 <updated>2026-03-05T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260365"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025894"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025451#vorlage</id>
+<title>Neue Vorlage 252458-02 ST: Fortschreibung des Bonner Einzelhandels- und Zentrenkonzeptes - Beschluss als städtebauliches Entwicklungskonzept im Sinne des § 1 Abs. 6 Nr. 11 Baugesetzbuch</title>
+<updated>2026-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#252458-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025451"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025277#beratung-3</id>
@@ -631,181 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#254081"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024977"/>
 <summary>Entscheidung am 2026-03-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023435#vorlage</id>
-<title>Neue Vorlage 253098-02: N-Vorlage zum Antrag betr. "Sicherung einer muslimischen Bestattungsfläche am Bonner Nordfriedhof"</title>
-<updated>2026-03-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253098-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023435"/>
-<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025277#vorlage</id>
-<title>Neue Vorlage 254081-01 ST: Stellungnahme zum CDU-Antrag: Wiederherstellung von Halteflächen vor dem Ärztehaus Kölnstraße 480</title>
-<updated>2026-02-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#254081-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025277"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025156#beratung-3</id>
-<title>Rat: „zur Kenntnis genommen“ – 253978-02 ST Bewilligung über- und außerplanmäßiger Aufwendungen und Auszahlungen gemäß § 83 (1) GO NRW bzw. § 85 (1) GO NRW durch den Stadtkämmerer - Liste 5/2025</title>
-<updated>2026-01-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253978-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025156"/>
-<summary>Kenntnisnahme am 2026-01-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024711#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253954-01 ST Bürgerantrag: Verbesserungen der Straßenquerungen des Radwegs an der Kölnstraße</title>
-<updated>2026-01-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253954-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024711"/>
-<summary>Kenntnisnahme am 2026-01-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024616#beratung-3</id>
-<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 253954 Bürgerantrag: Verbesserungen der Straßenquerungen des Radwegs an der Kölnstraße</title>
-<updated>2026-01-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253954"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024616"/>
-<summary>Entscheidung am 2026-01-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025156#vorlage</id>
-<title>Neue Vorlage 253978-02 ST: Bewilligung über- und außerplanmäßiger Aufwendungen und Auszahlungen gemäß § 83 (1) GO NRW bzw. § 85 (1) GO NRW durch den Stadtkämmerer - Liste 5/2025</title>
-<updated>2026-01-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253978-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025156"/>
-<summary>Stellungnahme der Verwaltung · federführend: 20 Stadtkämmerei · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024977#vorlage</id>
-<title>Neue Vorlage 254081: CDU-Antrag: Wiederherstellung von Halteflächen vor dem Ärztehaus Kölnstraße 480</title>
-<updated>2025-12-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#254081"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024977"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024911#beratung-2</id>
-<title>Rat: „abgelehnt“ – 253933-01 AA Grüne-Fraktion - Änderungsantrag: Fortführung des Quartiersmanagements in Auerberg durch das Büro für Architektur und Stadtentwicklung, kurz BASTA, in 2026 Antrag zur Vorlage 253933</title>
-<updated>2025-12-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253933-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024911"/>
-<summary>Entscheidung am 2025-12-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024583#beratung-5</id>
-<title>Rat: „geändert beschlossen“ – 253933 Fortführung des Quartiersmanagements in Auerberg durch das Büro für Architektur und Stadtentwicklung, kurz BASTA, in 2026</title>
-<updated>2025-12-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253933"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024583"/>
-<summary>Entscheidung am 2025-12-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022863#beratung-4</id>
-<title>Rat: „vertagt“ – 231965-15 ST BBB-Anfrage: Beschluss zum Bonner Freiraumplan</title>
-<updated>2025-12-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#231965-15%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022863"/>
-<summary>Kenntnisnahme am 2025-12-11; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024911#vorlage</id>
-<title>Neue Vorlage 253933-01 AA: Grüne-Fraktion - Änderungsantrag: Fortführung des Quartiersmanagements in Auerberg durch das Büro für Architektur und Stadtentwicklung, kurz BASTA, in 2026 Antrag zur Vorlage 253933</title>
-<updated>2025-12-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253933-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024911"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Grünen-Fraktion beantragt, das Quartiersmanagement in Auerberg über März 2026 hinaus fortzuführen. Die Verwaltung soll die Finanzierung sichern und ein Interessenbekundungsverfahren für die künftige Ausrichtung einleiten. Zudem wird regelmäßige Information über die Pläne gefordert.</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024583#beratung-3</id>
-<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 253933 Fortführung des Quartiersmanagements in Auerberg durch das Büro für Architektur und Stadtentwicklung, kurz BASTA, in 2026</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253933"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024583"/>
-<summary>Anhörung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023133#beratung-3</id>
-<title>Bezirksvertretung Bonn: „vertagt“ – 253203-02 ST Bürgerantrag: Beantragung von Verbesserungsmaßnahmen zur Parksituation im Bereich Friedrich-Wöhler-Straße 2c</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253203-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023133"/>
-<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022998#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253203-01 ST Bürgerantrag: Beantragung von Verbesserungsmaßnahmen zur Parksituation im Bereich Friedrich-Wöhler-Straße 2c</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253203-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022998"/>
-<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022978#beratung-3</id>
-<title>Bezirksvertretung Bonn: „vertagt - mit Maßgabe“ – 253203 Bürgerantrag: Beantragung von Verbesserungsmaßnahmen zur Parksituation im Bereich Friedrich-Wöhler-Straße 2c</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253203"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022978"/>
-<summary>Entscheidung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024583#vorlage</id>
-<title>Neue Vorlage 253933: Fortführung des Quartiersmanagements in Auerberg durch das Büro für Architektur und Stadtentwicklung, kurz BASTA, in 2026</title>
-<updated>2025-11-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253933"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024583"/>
-<summary>Beschlussvorlage · federführend: 50 Amt für Soziales und Wohnen · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024398#vorlage</id>
-<title>Neue Vorlage 231965-16 ST: Beschluss zum Bonner Freiraumplan hier: Stellungnahme zur DS 231965-14 - Große Anfrage BBB</title>
-<updated>2025-11-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#231965-16%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024398"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024711#vorlage</id>
-<title>Neue Vorlage 253954-01 ST: Bürgerantrag: Verbesserungen der Straßenquerungen des Radwegs an der Kölnstraße</title>
-<updated>2025-11-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253954-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024711"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024616#vorlage</id>
-<title>Neue Vorlage 253954: Bürgerantrag: Verbesserungen der Straßenquerungen des Radwegs an der Kölnstraße</title>
-<updated>2025-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253954"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024616"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024290#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 253620-01 ST Bürgerantrag: Antrag zur Durchführung von Bürgerversammlungen zu Bauprojekten in Auerberg und Graurheindorf</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253620-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024290"/>
-<summary>Kenntnisnahme am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023906#beratung-3</id>
-<title>Bezirksvertretung Bonn: „abgelehnt“ – 253620 Bürgerantrag: Antrag zur Durchführung von Bürgerversammlungen zu Bauprojekten in Auerberg und Graurheindorf</title>
-<updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253620"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023906"/>
-<summary>Entscheidung am 2025-10-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024290#vorlage</id>
-<title>Neue Vorlage 253620-01 ST: Bürgerantrag: Antrag zur Durchführung von Bürgerversammlungen zu Bauprojekten in Auerberg und Graurheindorf</title>
-<updated>2025-10-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253620-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024290"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

@@ -672,6 +672,15 @@ DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006672
+DTSTAMP:20270127T160000Z
+DTSTART:20270127T160000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006570
 DTSTAMP:20270128T170000Z
 DTSTART:20270128T170000Z
@@ -745,6 +754,15 @@ DTEND:20270223T180000Z
 SUMMARY:Kreiswahlausschuss
 DESCRIPTION:Sitzung des Kreiswahlausschusses\nTagesordnung noch nicht verö
  ffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006673
+DTSTAMP:20270224T160000Z
+DTSTART:20270224T160000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -850,6 +868,15 @@ SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
 DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
  on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
  Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006674
+DTSTAMP:20270414T150000Z
+DTSTART:20270414T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -976,6 +1003,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006675
+DTSTAMP:20270602T150000Z
+DTSTART:20270602T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006587
 DTSTAMP:20270603T160000Z
 DTSTART:20270603T160000Z
@@ -1090,6 +1126,15 @@ DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006676
+DTSTAMP:20270714T150000Z
+DTSTART:20270714T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006555
 DTSTAMP:20270901T150000Z
 DTSTART:20270901T150000Z
@@ -1126,6 +1171,15 @@ DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006677
+DTSTAMP:20270909T150000Z
+DTSTART:20270909T150000Z
+SUMMARY:(PÜMA) Sitzung der Bezirksvertretung Beuel
+DESCRIPTION:(PÜMA) Sitzung der Bezirksvertretung Beuel\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006565
 DTSTAMP:20270914T150000Z
 DTSTART:20270914T150000Z
@@ -1151,6 +1205,15 @@ SUMMARY:Ausschuss für Kinder-\, Jugend und Familie
 DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
  sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
  0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006679
+DTSTAMP:20270922T150000Z
+DTSTART:20270922T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1247,6 +1310,15 @@ DTSTART:20271116T170000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
  t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006680
+DTSTAMP:20271117T160000Z
+DTSTART:20271117T160000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

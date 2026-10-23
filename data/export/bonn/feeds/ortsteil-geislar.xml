@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-geislar</id>
 <title>RIS-Karte Bonn – Geislar</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Geislar</subtitle>
-<updated>2026-10-19T00:00:00Z</updated>
+<updated>2026-10-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-geislar.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029984#vorlage</id>
+<title>Neue Vorlage 261942: Grundstück in Bonn, Abtstraße 33 - Nutzungsänderung im EG: Verwaltungs- und Dispositionsbüro für ein Mietwagenunternehmen, AZ 40482/2026</title>
+<updated>2026-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#261942"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029984"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029739#vorlage</id>
 <title>Neue Vorlage 261792-01 ST: Stellungnahme zum CDU-SPD-FDP-Kooperation-Antrag: Park&amp;Ride an der Nordbrücke</title>
@@ -257,6 +265,30 @@
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027590#beratung-4</id>
+<title>Rat: „nicht abgestimmt“ – 260145-06 AA Änderungsantrag CDU/SPD/FDP (Kooperation): Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-06-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027590"/>
+<summary>Entscheidung am 2026-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027565#beratung-4</id>
+<title>Rat: „abgelehnt“ – 260145-05 AA Änderungsantrag GRÜNE-Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-06-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027565"/>
+<summary>Entscheidung am 2026-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#beratung-6</id>
+<title>Rat: „geändert beschlossen“ – 260145-02 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-06-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Entscheidung am 2026-06-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026831#beratung-3</id>
 <title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260784-01 ST Stellungnahme zum Bürgerantrag: Antrag auf verkehrsberuhigende Maßnahmen im Bereich Oberdorfstraße und Geislarstraße in Bonn-Beuel</title>
 <updated>2026-05-27T00:00:00Z</updated>
@@ -279,6 +311,94 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#261011"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027662"/>
 <summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027590#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 260145-06 AA Änderungsantrag CDU/SPD/FDP (Kooperation): Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027590"/>
+<summary>Empfehlung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027565#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „abgelehnt“ – 260145-05 AA Änderungsantrag GRÜNE-Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027565"/>
+<summary>Empfehlung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#beratung-5</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „geändert beschlossen“ – 260145-02 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-05-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Empfehlung am 2026-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027590#vorlage</id>
+<title>Neue Vorlage 260145-06 AA: Änderungsantrag CDU/SPD/FDP (Kooperation): Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027590"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027590#beratung-2</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „ungeändert beschlossen“ – 260145-06 AA Änderungsantrag CDU/SPD/FDP (Kooperation): Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027590"/>
+<summary>Empfehlung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027565#beratung-2</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „abgelehnt“ – 260145-05 AA Änderungsantrag GRÜNE-Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027565"/>
+<summary>Empfehlung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 260145-02 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Empfehlung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027565#vorlage</id>
+<title>Neue Vorlage 260145-05 AA: Änderungsantrag GRÜNE-Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-05-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027565"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026729#beratung-2</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „nicht abgestimmt“ – 260145-04 AA Grüne-Liste-Änderungsantrag: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145-02</title>
+<updated>2026-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026729"/>
+<summary>Empfehlung am 2026-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#beratung-3</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ohne Votum“ – 260145-02 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Empfehlung am 2026-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025712#beratung-5</id>
+<title>Rat: „zur Kenntnis genommen“ – 260297 Stadtbahn Bonn – Niederkassel – Köln (Linie 17), Aktueller Sachstand</title>
+<updated>2026-05-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260297"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025712"/>
+<summary>Kenntnisnahme am 2026-05-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021444#beratung-9</id>
@@ -321,6 +441,14 @@
 <summary>Kenntnisnahme am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025712#beratung-4</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260297 Stadtbahn Bonn – Niederkassel – Köln (Linie 17), Aktueller Sachstand</title>
+<updated>2026-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260297"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025712"/>
+<summary>Kenntnisnahme am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025161#beratung-3</id>
 <title>Bezirksvertretung Beuel: „geändert beschlossen“ – 260063 Bürgerantrag: Einrichtung von Straßenlaternen im Bereich der Kita "Rheindampfer" (Auf der Rötschen) und der L16 (Niederkasseler Straße)</title>
 <updated>2026-04-29T00:00:00Z</updated>
@@ -335,6 +463,22 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260784"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026810"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026729#vorlage</id>
+<title>Neue Vorlage 260145-04 AA: Grüne-Liste-Änderungsantrag: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145-02</title>
+<updated>2026-04-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026729"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025712#beratung-3</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 260297 Stadtbahn Bonn – Niederkassel – Köln (Linie 17), Aktueller Sachstand</title>
+<updated>2026-04-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260297"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025712"/>
+<summary>Kenntnisnahme am 2026-04-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026220#vorlage</id>
@@ -369,12 +513,68 @@
 <summary>Empfehlung am 2026-03-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026103#vorlage</id>
+<title>Neue Vorlage 260145-02: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 hier: N-Vorlage zum Verweis in die Fachausschüsse aus der Ratssitzung am 12.03.2026</title>
+<updated>2026-03-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026103"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026018#vorlage</id>
+<title>Neue Vorlage 260145-01 AA: Änderungsantrag der GRÜNEN Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026018"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026018#beratung-2</id>
+<title>Rat: „abgelehnt“ – 260145-01 AA Änderungsantrag der GRÜNEN Fraktion - Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 260145</title>
+<updated>2026-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026018"/>
+<summary>Entscheidung am 2026-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025351#beratung-4</id>
+<title>Rat: „geändert beschlossen“ – 260145 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2026-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025351"/>
+<summary>Entscheidung am 2026-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025712#vorlage</id>
+<title>Neue Vorlage 260297: Stadtbahn Bonn – Niederkassel – Köln (Linie 17), Aktueller Sachstand</title>
+<updated>2026-03-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260297"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025712"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025401#beratung-3</id>
 <title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 240391-02 Entsperrung von Haushaltsmitteln zur Umsetzung der Maßnahme "Umwandlung des Rasenspielfeldes in Kunstrasenbelag und Erneuerung der Flutlichtanlage einschließlich der Umrüstung auf eine LED-Beleuchtung am Sportplatz Geislar"</title>
 <updated>2026-03-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#240391-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025401"/>
 <summary>Entscheidung am 2026-03-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025351#beratung-3</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ohne Votum“ – 260145 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2026-03-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025351"/>
+<summary>Empfehlung am 2026-03-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025351#vorlage</id>
+<title>Neue Vorlage 260145: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2026-02-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#260145"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025351"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025401#vorlage</id>
@@ -401,11 +601,99 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024949#vorlage</id>
+<title>Neue Vorlage 253837-02 ST: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253837-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024949"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024949#beratung-3</id>
+<title>Rat: „ungeändert beschlossen“ – 253837-02 ST Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253837-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024949"/>
+<summary>Entscheidung am 2025-12-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024931#beratung-2</id>
+<title>Rat: „nicht abgestimmt“ – 253837-01 AA Änderungsantrag CDU/Grüne/SPD/FDP: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 253837</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253837-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024931"/>
+<summary>Entscheidung am 2025-12-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024434#beratung-4</id>
+<title>Rat: „geändert beschlossen“ – 253837 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2025-12-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253837"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024434"/>
+<summary>Entscheidung am 2025-12-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024719#vorlage</id>
 <title>Neue Vorlage 253473-01 ST: Bürgerantrag: Verkehrsberuhigende Maßnahmen im Bereich Geislarstraße/Ortseingang Geislar</title>
 <updated>2025-12-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253473-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024719"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024931#vorlage</id>
+<title>Neue Vorlage 253837-01 AA: Änderungsantrag CDU/Grüne/SPD/FDP: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026 Antrag zur Vorlage 253837</title>
+<updated>2025-12-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253837-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024931"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Koalition beantragt, dass der Ausschuss für Umwelt, Klima und Lokale Agenda vor einer Entscheidung über neue Grabformen und Gebühren auf Bonner Friedhöfen berät. Auch der Runde Tisch Friedhöfe soll vorher beteiligt werden. Die Änderungen betreffen die Gebührenkalkulation für 2026.</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024692#beratung-6</id>
+<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 253990 Interfraktioneller Antrag: Konsumtive Zuschüsse aus dem Feuerwehrtopf Budget 2025</title>
+<updated>2025-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253990"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024692"/>
+<summary>Entscheidung am 2025-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023905#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 253487-01 ST CDU-Große Anfrage: Beschleunigung der Stadtbahn B56 / Combahnfriedhof / Taktverdichtung nach Siegburg</title>
+<updated>2025-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253487-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023905"/>
+<summary>Kenntnisnahme am 2025-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023644#beratung-3</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 253487 CDU-Große Anfrage: Beschleunigung der Stadtbahn B56 / Combahnfriedhof / Taktverdichtung nach Siegburg</title>
+<updated>2025-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253487"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023644"/>
+<summary>Kenntnisnahme am 2025-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024434#vorlage</id>
+<title>Neue Vorlage 253837: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026</title>
+<updated>2025-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253837"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024434"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024692#vorlage</id>
+<title>Neue Vorlage 253990: Interfraktioneller Antrag: Konsumtive Zuschüsse aus dem Feuerwehrtopf Budget 2025</title>
+<updated>2025-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253990"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024692"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023905#vorlage</id>
+<title>Neue Vorlage 253487-01 ST: CDU-Große Anfrage: Beschleunigung der Stadtbahn B56 / Combahnfriedhof / Taktverdichtung nach Siegburg</title>
+<updated>2025-10-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253487-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023905"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
@@ -465,6 +753,14 @@
 <summary>Kenntnisnahme am 2025-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023644#vorlage</id>
+<title>Neue Vorlage 253487: CDU-Große Anfrage: Beschleunigung der Stadtbahn B56 / Combahnfriedhof / Taktverdichtung nach Siegburg</title>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253487"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023644"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023602#vorlage</id>
 <title>Neue Vorlage 253473: Bürgerantrag: Verkehrsberuhigende Maßnahmen im Bereich Geislarstraße/Ortseingang Geislar</title>
 <updated>2025-07-07T00:00:00Z</updated>
@@ -511,301 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#252848"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022213"/>
 <summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022151#beratung-3</id>
-<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 252823 Bürgerantrag: Einrichtung einer zusätzliche Bushaltestelle an der Kreuzung Niederkasseler Straße/Liestraße</title>
-<updated>2025-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#252823"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022151"/>
-<summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021444#beratung-4</id>
-<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 252536 Zielbeschluss über die wohnbauliche Entwicklung der Fläche „Östlich Aurelianastraße“, Stadtbezirk Beuel, Ortsteil Geislar</title>
-<updated>2025-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#252536"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021444"/>
-<summary>Empfehlung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023453#vorlage</id>
-<title>Neue Vorlage 252536-01 AA: Zielbeschluss über die wohnbauliche Entwicklung der Fläche „Östlich Aurelianastraße“, Stadtbezirk Beuel, Ortsteil Geislar Antrag zur Vorlage 252536</title>
-<updated>2025-06-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#252536-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023453"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023110#beratung-3</id>
-<title>Naturschutzbeirat: „ungeändert beschlossen“ – 253275 Errichtung von Bewässerungs- und Stromleitungen für die landwirtschaftliche Nutzung im Landschaftsschutzgebiet bei Geislar</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253275"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023110"/>
-<summary>Entscheidung am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018817#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241289-01 ST Photovoltaik auf Freiflächen im Stadtgebiet Bonn</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241289-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018817"/>
-<summary>Kenntnisnahme am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023302#vorlage</id>
-<title>Neue Vorlage 253236-01 ST: BBB-Anfrage: Provisorische LSA über die Niederkasseler Straße Höhe Liestraße</title>
-<updated>2025-06-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253236-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023302"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023110#vorlage</id>
-<title>Neue Vorlage 253275: Errichtung von Bewässerungs- und Stromleitungen für die landwirtschaftliche Nutzung im Landschaftsschutzgebiet bei Geislar</title>
-<updated>2025-06-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253275"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023110"/>
-<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021444#vorlage</id>
-<title>Neue Vorlage 252536: Zielbeschluss über die wohnbauliche Entwicklung der Fläche „Östlich Aurelianastraße“, Stadtbezirk Beuel, Ortsteil Geislar</title>
-<updated>2025-06-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#252536"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021444"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023029#vorlage</id>
-<title>Neue Vorlage 253236: BBB-Anfrage: Provisorische LSA über die Niederkasseler Straße Höhe Liestraße</title>
-<updated>2025-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#253236"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023029"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022240#vorlage</id>
-<title>Neue Vorlage 252823-01 ST: Bürgerantrag: Einrichtung einer zusätzliche Bushaltestelle an der Kreuzung Niederkasseler Straße/Liestraße</title>
-<updated>2025-04-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#252823-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022240"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022213#vorlage</id>
-<title>Neue Vorlage 252848: Bürgerantrag: Optimierung der Grünabfall-Entsorgung in Geislar</title>
-<updated>2025-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#252848"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022213"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022467#vorlage</id>
-<title>Neue Vorlage 252848-01 ST: Bürgerantrag: Optimierung der Grünabfall-Entsorgung in Geislar</title>
-<updated>2025-04-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#252848-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022467"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022151#vorlage</id>
-<title>Neue Vorlage 252823: Bürgerantrag: Einrichtung einer zusätzliche Bushaltestelle an der Kreuzung Niederkasseler Straße/Liestraße</title>
-<updated>2025-03-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#252823"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022151"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020520#beratung-3</id>
-<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 241958-01 ST Bürgerantrag: Vorrang an Kreuzungen für Busse und Bahnen</title>
-<updated>2025-03-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241958-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020520"/>
-<summary>Kenntnisnahme am 2025-03-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020520#vorlage</id>
-<title>Neue Vorlage 241958-01 ST: Bürgerantrag: Vorrang an Kreuzungen für Busse und Bahnen</title>
-<updated>2024-12-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241958-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020520"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020447#beratung-2</id>
-<title>Bezirksvertretung Beuel: „zurückgezogen“ – 241753-02 AA BBB-Änderungsantrag zum Bürgerantrag: Verbesserung der Parksituation im Bereich der Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße, Geislarstraße</title>
-<updated>2024-11-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241753-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020447"/>
-<summary>Entscheidung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019592#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 241753-01 ST Bürgerantrag: Verbesserung der Parksituation im Bereich der Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße, Geislarstraße</title>
-<updated>2024-11-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241753-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019592"/>
-<summary>Kenntnisnahme am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019546#beratung-4</id>
-<title>Bezirksvertretung Beuel: „erledigt durch Stellungnahme der Verwaltung“ – 241753 Bürgerantrag: Verbesserung der Parksituation im Bereich der Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße, Geislarstraße</title>
-<updated>2024-11-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241753"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019546"/>
-<summary>Entscheidung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020447#vorlage</id>
-<title>Neue Vorlage 241753-02 AA: BBB-Änderungsantrag zum Bürgerantrag: Verbesserung der Parksituation im Bereich der Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße, Geislarstraße</title>
-<updated>2024-11-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241753-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020447"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019889#beratung-2</id>
-<title>Bezirksvertretung Beuel: „zurückgezogen“ – 230933-04 AA BBB-Änderungsantrag: Erschließungsbeiträge Liestraße und Auestraße</title>
-<updated>2024-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#230933-04%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019889"/>
-<summary>Entscheidung am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019169#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 230933-03 ST Stellungnahme zum Bürgerantrag: Erschließungsbeiträge Liestraße und Auestraße</title>
-<updated>2024-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#230933-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019169"/>
-<summary>Kenntnisnahme am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016355#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 230933-02 ST Stellungnahme zum Bürgerantrag: Erschließungsbeiträge Liestraße und Auestraße</title>
-<updated>2024-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#230933-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016355"/>
-<summary>Kenntnisnahme am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2012477#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 230933-01 ST Stellungnahme zum Bürgerantrag: Erschließungsbeiträge Liestraße und Auestraße</title>
-<updated>2024-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#230933-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012477"/>
-<summary>Kenntnisnahme am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2012184#beratung-6</id>
-<title>Bezirksvertretung Beuel: „abgelehnt“ – 230933 Bürgerantrag: Erschließungsbeiträge Liestraße und Auestraße</title>
-<updated>2024-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#230933"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012184"/>
-<summary>Entscheidung am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019889#vorlage</id>
-<title>Neue Vorlage 230933-04 AA: BBB-Änderungsantrag: Erschließungsbeiträge Liestraße und Auestraße</title>
-<updated>2024-10-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#230933-04%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019889"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019592#vorlage</id>
-<title>Neue Vorlage 241753-01 ST: Bürgerantrag: Verbesserung der Parksituation im Bereich der Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße, Geislarstraße</title>
-<updated>2024-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241753-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019592"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019546#vorlage</id>
-<title>Neue Vorlage 241753: Bürgerantrag: Verbesserung der Parksituation im Bereich der Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße, Geislarstraße</title>
-<updated>2024-10-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241753"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019546"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019169#vorlage</id>
-<title>Neue Vorlage 230933-03 ST: Stellungnahme zum Bürgerantrag: Erschließungsbeiträge Liestraße und Auestraße</title>
-<updated>2024-10-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#230933-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019169"/>
-<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung erklärt, warum für den Ausbau der Liestraße und Auestraße Erschließungsbeiträge erhoben werden müssen. Sie kann rechtlich nicht auf die Beiträge verzichten, da die Straßen erst jetzt vollständig ausgebaut sind. Die Verwaltung schlägt vor, den Bürgerantrag abzulehnen und Vorauszahlungen auf die Beiträge festzusetzen.</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017883#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 230350-02 Errichtung eines Fußgängerüberweges/Zebrastreifens im Bereich Geislarstraße/Ortsausgang Richtung Vilich</title>
-<updated>2024-09-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#230350-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017883"/>
-<summary>Kenntnisnahme am 2024-09-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018817#vorlage</id>
-<title>Neue Vorlage 241289-01 ST: Photovoltaik auf Freiflächen im Stadtgebiet Bonn</title>
-<updated>2024-09-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#241289-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018817"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017883#vorlage</id>
-<title>Neue Vorlage 230350-02: Errichtung eines Fußgängerüberweges/Zebrastreifens im Bereich Geislarstraße/Ortsausgang Richtung Vilich</title>
-<updated>2024-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#230350-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017883"/>
-<summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017095#beratung-3</id>
-<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 240778 Grundstück in Bonn-Beuel, Schwester-Melania-Straße 13 - Errichtung einer Doppelhaushälfte - hier: Geländeanhebung Az.: 458923 (neu: 1923/2019)</title>
-<updated>2024-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#240778"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017095"/>
-<summary>Anhörung am 2024-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016261#beratung-4</id>
-<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 240391 Umwandlung des Rasenspielfeldes in Kunstrasenbelag und Erneuerung der Flutlichtanlage einschließlich der Umrüstung auf eine LED-Beleuchtung am Sportplatz Geislar</title>
-<updated>2024-06-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#240391"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016261"/>
-<summary>Entscheidung am 2024-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016608#beratung-4</id>
-<title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „zur Kenntnis genommen“ – 240557 Zwischenstand zur Umsetzung der von der Wirtschaftsförderung zu koordinierenden Projekten aus dem Klimaplan</title>
-<updated>2024-05-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#240557"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016608"/>
-<summary>Kenntnisnahme am 2024-05-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016261#beratung-3</id>
-<title>Sportausschuss: „ungeändert beschlossen“ – 240391 Umwandlung des Rasenspielfeldes in Kunstrasenbelag und Erneuerung der Flutlichtanlage einschließlich der Umrüstung auf eine LED-Beleuchtung am Sportplatz Geislar</title>
-<updated>2024-05-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#240391"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016261"/>
-<summary>Empfehlung am 2024-05-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2012851#vorlage</id>
-<title>Neue Vorlage 231224: Bürgerantrag: Anbringung Drängelgitter Hammstraße</title>
-<updated>2024-05-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#231224"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012851"/>
-<summary>Bürgerantrag § 24 GO - Öffentlich · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017095#vorlage</id>
-<title>Neue Vorlage 240778: Grundstück in Bonn-Beuel, Schwester-Melania-Straße 13 - Errichtung einer Doppelhaushälfte - hier: Geländeanhebung Az.: 458923 (neu: 1923/2019)</title>
-<updated>2024-05-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#240778"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017095"/>
-<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

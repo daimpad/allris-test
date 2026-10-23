@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-alt-godesberg</id>
 <title>RIS-Karte Bonn – Alt-Godesberg</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Alt-Godesberg</subtitle>
-<updated>2026-10-21T00:00:00Z</updated>
+<updated>2026-10-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-alt-godesberg.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029962#vorlage</id>
+<title>Neue Vorlage 261496-01 ST: Volt-Prüfauftrag: Klare Spurführung an der Kreuzung Burgstraße / Winterstraße / Pfarrer-Minartz-Straße</title>
+<updated>2026-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#261496-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029962"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029821#vorlage</id>
+<title>Neue Vorlage 261307-02 ST: Stellungnahme zu Ausschreibung eines Dienstleistungskonzessionsvertrages für den Bonner Wochenmarkt</title>
+<updated>2026-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#261307-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029821"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029807#vorlage</id>
 <title>Neue Vorlage 260915-01 ST: BBB-Antrag: Einrichtung einer Hol- und Bringzone</title>
@@ -95,6 +111,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#261678"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029278"/>
 <summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026123#beratung-8</id>
+<title>Betriebsausschuss SGB: „zur Kenntnis genommen“ – 260127-01 FDP - Große Anfrage: Zukunft Bonner Bühnen</title>
+<updated>2026-09-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260127-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026123"/>
+<summary>Kenntnisnahme am 2026-09-08; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029111#vorlage</id>
@@ -281,12 +305,36 @@
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027408#beratung-2</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260915 BBB-Antrag: Einrichtung einer Hol- und Bringzone</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260915"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027408"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026538#beratung-3</id>
 <title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 260666 Prüfung und gegebenenfalls Einrichtung von Fußgängerüberwegen (Zebrastreifen) auf der Bonner Straße im Bereich der Hausnummern 43 bis 61</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260666"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026538"/>
 <summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026123#beratung-7</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260127-01 FDP - Große Anfrage: Zukunft Bonner Bühnen</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260127-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026123"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026123#beratung-6</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260127-01 FDP - Große Anfrage: Zukunft Bonner Bühnen</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260127-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026123"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029040#vorlage</id>
@@ -417,6 +465,22 @@
 <summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026123#beratung-5</id>
+<title>Kulturausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 260127-01 FDP - Große Anfrage: Zukunft Bonner Bühnen</title>
+<updated>2026-07-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260127-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026123"/>
+<summary>Kenntnisnahme am 2026-07-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026123#beratung-4</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „vertagt“ – 260127-01 FDP - Große Anfrage: Zukunft Bonner Bühnen</title>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260127-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026123"/>
+<summary>Kenntnisnahme am 2026-07-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025570#beratung-5</id>
 <title>Ausschuss für Planen, Bauen und Denkmalschutz: „abgelehnt“ – 253265-03 SPD-Antrag: Prüfung von Vorfragen für ein mögliches Baugebiet Am Bismarckturm; hier: N-Vorlage</title>
 <updated>2026-07-14T00:00:00Z</updated>
@@ -439,6 +503,22 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260650"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026516"/>
 <summary>Kenntnisnahme am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026123#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 260127-01 FDP - Große Anfrage: Zukunft Bonner Bühnen</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260127-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026123"/>
+<summary>Kenntnisnahme am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027640#beratung-4</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „ungeändert beschlossen“ – 260998 Zuschuss an die Arbeiterwohlfahrt, Kreisverband Bonn/Rhein-Sieg e.V.</title>
+<updated>2026-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260998"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027640"/>
+<summary>Entscheidung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028031#vorlage</id>
@@ -465,12 +545,36 @@
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026644#beratung-4</id>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „zur Kenntnis genommen“ – 260608-01 ST Linke-Antrag: Prävention für Extremwetterlagen und Katastrophenfälle</title>
+<updated>2026-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260608-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026644"/>
+<summary>Entscheidung am 2026-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028264#vorlage</id>
 <title>Neue Vorlage 261280: Bürgerantrag: Antrag auf Anlage von Staudenbeeten im Bereich Moltkeplatz und Ria-Maternus-Platz</title>
 <updated>2026-06-24T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#261280"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028264"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027640#beratung-3</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 260998 Zuschuss an die Arbeiterwohlfahrt, Kreisverband Bonn/Rhein-Sieg e.V.</title>
+<updated>2026-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260998"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027640"/>
+<summary>Anhörung am 2026-06-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026123#beratung-2</id>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260127-01 FDP - Große Anfrage: Zukunft Bonner Bühnen</title>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260127-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026123"/>
+<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028116#vorlage</id>
@@ -489,6 +593,22 @@
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026495#beratung-4</id>
+<title>Rat: „ungeändert beschlossen“ – 260644 Erlass einer Ordnungsbehördlichen Verordnung über das Offenhalten von Verkaufsstellen aus Anlass der Veranstaltung "Bonn Leuchtet"</title>
+<updated>2026-06-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260644"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026495"/>
+<summary>Entscheidung am 2026-06-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026493#beratung-4</id>
+<title>Rat: „ungeändert beschlossen“ – 260643 Erlass einer Ordnungsbehördlichen Verordnung über das Offenhalten von Verkaufsstellen aus Anlass der Veranstaltung "BonnFest"</title>
+<updated>2026-06-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260643"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026493"/>
+<summary>Entscheidung am 2026-06-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027862#vorlage</id>
 <title>Neue Vorlage 231642-02: BBB-Große Anfrage: Überwachung des Verkehrs auf der Koblenzer Straße Drucksachengruppe 231642</title>
 <updated>2026-06-05T00:00:00Z</updated>
@@ -503,6 +623,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#261125"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027891"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027640#vorlage</id>
+<title>Neue Vorlage 260998: Zuschuss an die Arbeiterwohlfahrt, Kreisverband Bonn/Rhein-Sieg e.V.</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260998"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027640"/>
+<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027589#beratung-2</id>
@@ -529,6 +657,22 @@
 <summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026644#beratung-3</id>
+<title>Bezirksvertretung Beuel: „verwiesen“ – 260608-01 ST Linke-Antrag: Prävention für Extremwetterlagen und Katastrophenfälle</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260608-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026644"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023331#beratung-3</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253280-01 ST CDU-Große Anfrage: Schwerpunkte der Arbeit des Zentrenmanagements</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#253280-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023331"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026786#beratung-3</id>
 <title>Ausschuss für Kinder, Jugend und Familie: „geändert beschlossen“ – 260774 Übernahme Trägerschaft für die viergruppige Kindertageseinrichtung im Planungsraum Godesberg-Mitte-West, Bezirk Bad Godesberg-Zentrum, Friesdorfer Str. 57</title>
 <updated>2026-05-20T00:00:00Z</updated>
@@ -545,6 +689,22 @@
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026495#beratung-3</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 260644 Erlass einer Ordnungsbehördlichen Verordnung über das Offenhalten von Verkaufsstellen aus Anlass der Veranstaltung "Bonn Leuchtet"</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260644"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026495"/>
+<summary>Anhörung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026493#beratung-3</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 260643 Erlass einer Ordnungsbehördlichen Verordnung über das Offenhalten von Verkaufsstellen aus Anlass der Veranstaltung "BonnFest"</title>
+<updated>2026-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260643"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026493"/>
+<summary>Anhörung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025570#beratung-3</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „abgelehnt“ – 253265-03 SPD-Antrag: Prüfung von Vorfragen für ein mögliches Baugebiet Am Bismarckturm; hier: N-Vorlage</title>
 <updated>2026-05-19T00:00:00Z</updated>
@@ -553,12 +713,36 @@
 <summary>Empfehlung am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027408#vorlage</id>
+<title>Neue Vorlage 260915: BBB-Antrag: Einrichtung einer Hol- und Bringzone</title>
+<updated>2026-05-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260915"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027408"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027175#vorlage</id>
 <title>Neue Vorlage 231249-16: N- Vorlage Vorentwurfsplanung/Objektplanung „Am Fronhof und Theaterplatz“ (ISEK Bad Godesberg); hier: Ergebnis der politischen Beteiligung zur Materialauswahl für die zukünftige Oberfläche in der Fußgängerzone Bad Godesberg</title>
 <updated>2026-05-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#231249-16"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027175"/>
 <summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026644#vorlage</id>
+<title>Neue Vorlage 260608-01 ST: Linke-Antrag: Prävention für Extremwetterlagen und Katastrophenfälle</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260608-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026644"/>
+<summary>Stellungnahme der Verwaltung · federführend: 37 Feuerwehr und Rettungsdienst · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024737#beratung-4</id>
+<title>Rat: „zur Kenntnis genommen“ – 253999-01 ST Stellungnahme der Verwaltung zum Antrag: Pilotprojekt Revitalisierung und Umnutzung</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#253999-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024737"/>
+<summary>Kenntnisnahme am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025570#vorlage</id>
@@ -583,6 +767,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260774"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026786"/>
 <summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025736#beratung-3</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 260103-01 ST Stellungnahme zum Bürgerantrag: Aufnahme von drei Persönlichkeiten in die Straßenbenennungsliste: Käte Strobel, Eva de Maizière, Sofie Garschagen</title>
+<updated>2026-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260103-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025736"/>
+<summary>Kenntnisnahme am 2026-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025964#beratung-3</id>
@@ -615,197 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#231127-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025307"/>
 <summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023876#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 252926-01 ST Bürgerantrag: Einrichtung einer verkehrsberuhigten Zone in der Straße "Am Draitschbusch" in 53177 Bonn - Bad Godesberg</title>
-<updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#252926-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023876"/>
-<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023805#beratung-2</id>
-<title>Bezirksvertretung Bad Godesberg: „zurückgezogen“ – 253572 CDU-Antrag: Anschaffung und Aufstellung eines Sprühnebelsystems für den Ria-Maternus-Platz (Nebelsäule o.ä.)</title>
-<updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#253572"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023805"/>
-<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023413#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 253282-01 ST Betrieb und Erhalt der Bad Godesberger Brunnenanlagen, u.a. des Brunnens am Ria-Maternus-Platz</title>
-<updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#253282-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023413"/>
-<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023131#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 253282 CDU-Große Anfrage: Betrieb und Erhalt der Bad Godesberger Brunnenanlagen, u.a. des Brunnens am Ria-Maternus-Platz</title>
-<updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#253282"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023131"/>
-<summary>Kenntnisnahme am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022398#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 252926 Bürgerantrag: Einrichtung einer verkehrsberuhigten Zone in der Straße "Am Draitschbusch" in 53177 Bonn - Bad Godesberg</title>
-<updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#252926"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022398"/>
-<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2014477#beratung-2</id>
-<title>Bezirksvertretung Bad Godesberg: „abgelehnt“ – 231127-01 AA Signalisierte Querung für den Fußverkehr auf der Friesdorfer Straße Antrag zur Vorlage 231127</title>
-<updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#231127-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014477"/>
-<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2012644#beratung-5</id>
-<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 231127 Signalisierte Querung für den Fußverkehr auf der Friesdorfer Straße</title>
-<updated>2026-04-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#231127"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012644"/>
-<summary>Entscheidung am 2026-04-22; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026538#vorlage</id>
-<title>Neue Vorlage 260666: Prüfung und gegebenenfalls Einrichtung von Fußgängerüberwegen (Zebrastreifen) auf der Bonner Straße im Bereich der Hausnummern 43 bis 61</title>
-<updated>2026-04-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260666"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026538"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026516#vorlage</id>
-<title>Neue Vorlage 260650: Große Anfrage der AfD-Fraktion: Nationales Erbe schützen! Hier: Bismarckturm Elisabethstraße</title>
-<updated>2026-04-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260650"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026516"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025304#beratung-7</id>
-<title>Kulturausschuss: „zur Kenntnis genommen“ – 260124 Wanderausstellung "Loss mer fiere. 200 jecke Johr en Bonn"</title>
-<updated>2026-03-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260124"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025304"/>
-<summary>Kenntnisnahme am 2026-03-26; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025955#vorlage</id>
-<title>Neue Vorlage 231249-14: Entwurfsplanung/Objektplanung „Am Fronhof und Theaterplatz“ (ISEK Bad Godesberg); hier: Ergebnis der politischen Beteiligung zur Materialauswahl für die zukünftige Oberfläche in der Fußgängerzone Bad Godesberg</title>
-<updated>2026-03-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#231249-14"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025955"/>
-<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025307#vorlage</id>
-<title>Neue Vorlage 231127-02 ST: Prüfergebnis zu DS 231127 - Signalisierte Querung für den Fußverkehr auf der Friesdorfer Straße</title>
-<updated>2026-03-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#231127-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025307"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025964#vorlage</id>
-<title>Neue Vorlage 260247-01 ST: Grüne-Antrag: Mülleimer um die Godesburg austauschen</title>
-<updated>2026-03-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260247-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025964"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025865#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 240454-06 ST BBB-Bezirksfraktion-Antrag: Anbringung eines Hinweisschildes am Straßenschild der Löbestraße Drucksache 240454</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#240454-06%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025865"/>
-<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025840#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231249-13 ST CDU/SPD/FDP-Große Anfrage: Vorentwurfsplanung/Objektplanung „Am Fronhof und Theaterplatz“ (ISEK Bad Godesberg)</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#231249-13%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025840"/>
-<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025658#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260248-01 ST Grüne-Antrag: Kostenübernahme für Hinweisschilder in der Löbestraße aus dem Stadtbezirksbudget</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260248-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025658"/>
-<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025643#beratung-2</id>
-<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 240454-05 BBB-Bezirksfraktion-Antrag: Anbringung eines Hinweisschildes am Straßenschild der Löbestraße Drucksache 240454</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#240454-05"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025643"/>
-<summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025625#beratung-2</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231249-12 CDU/SPD/FDP-Große Anfrage: Vorentwurfsplanung/Objektplanung „Am Fronhof und Theaterplatz“ (ISEK Bad Godesberg)</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#231249-12"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025625"/>
-<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025580#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260248 Grüne-Antrag: Kostenübernahme für Hinweisschilder in der Löbestraße aus dem Stadtbezirksbudget</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260248"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025580"/>
-<summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025455#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260183 Einleitungsbeschluss zur Vergabe von Bewachungsdienstleistungen für das "Haus an der Redoute"</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260183"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025455"/>
-<summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025304#beratung-6</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 260124 Wanderausstellung "Loss mer fiere. 200 jecke Johr en Bonn"</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260124"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025304"/>
-<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023214#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253289-01 CDU-Antrag: Generalsanierung der Godesburg, Umsetzung von Maßnahmen für ein zukünftiges gastronomisches Konzept und weitere Instandsetzungsmaßnahmen sowie Aufwertung der Godesburg als Kulturgut und historisches Zentrum</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#253289-01"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023214"/>
-<summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023142#beratung-4</id>
-<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 253289 CDU-Antrag: Generalsanierung der Godesburg, Umsetzung von Maßnahmen für ein zukünftiges gastronomisches Konzept und weitere Instandsetzungsmaßnahmen sowie Aufwertung der Godesburg als Kulturgut und historisches Zentrum</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#253289"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023142"/>
-<summary>Anregung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022512#beratung-3</id>
-<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 252421-02 N-Vorlage Fällung einer Moor-Birke auf dem städtischen Grundstück Gemarkung Godesberg, Flur 3, Nr. 755, Koblenzer Straße</title>
-<updated>2026-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#252421-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022512"/>
-<summary>Entscheidung am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

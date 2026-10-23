@@ -2,20 +2,20 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 602,
-  "generated_at": "2026-10-23T11:39:33+00:00",
+  "count": 615,
+  "generated_at": "2026-10-23T19:17:01+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-23T11:08:07+00:00"
+    "retrieved_at": "2026-10-23T18:42:01+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-23T11:22:25+00:00"
+    "retrieved_at": "2026-10-23T18:54:50+00:00"
    },
    {
     "name": "osm",
@@ -45,6 +45,30 @@
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
  },
  "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.080328,
+     50.72662
+    ]
+   },
+   "properties": {
+    "reference": "260745-03 ST",
+    "name": "Stellungnahme zum Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der Hausnummer 82",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-10-23",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029709"
+   }
+  },
   {
    "type": "Feature",
    "geometry": {
@@ -578,6 +602,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "260640-01",
+    "name": "Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2026-08-27",
+    "amt": "41 Kulturamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028992"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072678,
      50.724117
     ]
@@ -1082,6 +1130,54 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "260640",
+    "name": "Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum",
+    "paper_type": "Beschlussvorlage",
+    "date": "2026-04-30",
+    "amt": "41 Kulturamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026485"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "260411-01 ST",
+    "name": "Stellungnahme zum Bürgerantrag: Optimierung des Durchgangsverkehrs im Bereich des Musikerviertels",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-04-27",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026356"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.078022,
      50.723774
     ]
@@ -1243,6 +1339,126 @@
     "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026362"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "260104-01 ST",
+    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-04-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "260104-01 ST",
+    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-04-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073172,
+     50.734047
+    ]
+   },
+   "properties": {
+    "reference": "260104-01 ST",
+    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-04-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Gerhard-Domagk-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069409,
+     50.734778
+    ]
+   },
+   "properties": {
+    "reference": "260104-01 ST",
+    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-04-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Robert-Havemann-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "260104-01 ST",
+    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2026-04-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
    }
   },
   {
@@ -1514,6 +1730,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "260395",
+    "name": "Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2026-03-14",
+    "amt": "05 Amt für Integration und Vielfalt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025992"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.07005,
      50.727177
     ]
@@ -1528,33 +1768,9 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "vererbt",
+    "method": "volltext_strasse",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026009"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.07005,
-     50.727177
-    ]
-   },
-   "properties": {
-    "reference": "260076-01 ST",
-    "name": "Volt-Antrag: Taxis auf Umweltspuren",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-03-09",
-    "amt": "33 Bürgerdienste",
-    "place": "Hermann-Wandersleb-Ring",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "vererbt",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025391"
    }
   },
   {
@@ -1658,30 +1874,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.07005,
-     50.727177
-    ]
-   },
-   "properties": {
-    "reference": "260076-02 AA",
-    "name": "Volt-Änderungsantrag zum Volt-Antrag: Taxis auf Umweltspuren Antrag zur Vorlage 260076",
-    "paper_type": "Änderungsantrag",
-    "date": "2026-02-05",
-    "amt": "01-2 Ratsbüro",
-    "place": "Hermann-Wandersleb-Ring",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "vererbt",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025432"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.0709,
      50.726788
     ]
@@ -1778,8 +1970,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.080755,
-     50.715622
+     7.070351,
+     50.725238
     ]
    },
    "properties": {
@@ -1788,36 +1980,12 @@
     "paper_type": "Beschlussvorlage",
     "date": "2025-11-19",
     "amt": "41 Kulturamt",
-    "place": "Kapellenstraße",
-    "level": "strasse",
+    "place": "Endenich",
+    "level": "ortsteil",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "vererbt",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024520"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.07675,
-     50.717578
-    ]
-   },
-   "properties": {
-    "reference": "240693-03",
-    "name": "Bau und Umzug von Gedenkstätte und NS-Dokumentationszentrum Bonn",
-    "paper_type": "Beschlussvorlage",
-    "date": "2025-11-19",
-    "amt": "41 Kulturamt",
-    "place": "Zur Marterkapelle",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "vererbt",
-    "confidence": "mittel",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024520"
    }
   },
@@ -2018,6 +2186,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "253772",
+    "name": "Finanzierung der erläuternden Zusatzschilder in den Neubaugebieten WestSide und Vogelsang",
+    "paper_type": "Antrag",
+    "date": "2025-09-29",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_adjektiv",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024315"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072678,
      50.724117
     ]
@@ -2090,6 +2282,126 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "253646-01 ST",
+    "name": "DS 220774 und DS 241828, Straßen- und Zusatzschilder WestSide und Vogelsang",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-08-25",
+    "amt": "63 Bauordnungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+hausnummer",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024052"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.065876,
+     50.735155
+    ]
+   },
+   "properties": {
+    "reference": "253646-01 ST",
+    "name": "DS 220774 und DS 241828, Straßen- und Zusatzschilder WestSide und Vogelsang",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-08-25",
+    "amt": "63 Bauordnungsamt",
+    "place": "Frieda-Mager-Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024052"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069409,
+     50.734778
+    ]
+   },
+   "properties": {
+    "reference": "253646-01 ST",
+    "name": "DS 220774 und DS 241828, Straßen- und Zusatzschilder WestSide und Vogelsang",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-08-25",
+    "amt": "63 Bauordnungsamt",
+    "place": "Robert-Havemann-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024052"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.066322,
+     50.736421
+    ]
+   },
+   "properties": {
+    "reference": "253646-01 ST",
+    "name": "DS 220774 und DS 241828, Straßen- und Zusatzschilder WestSide und Vogelsang",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-08-25",
+    "amt": "63 Bauordnungsamt",
+    "place": "Simone-Veil-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024052"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064404,
+     50.736188
+    ]
+   },
+   "properties": {
+    "reference": "253646-01 ST",
+    "name": "DS 220774 und DS 241828, Straßen- und Zusatzschilder WestSide und Vogelsang",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-08-25",
+    "amt": "63 Bauordnungsamt",
+    "place": "Vili-Viorel-Păun-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024052"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070126,
      50.723124
     ]
@@ -2155,6 +2467,54 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022885"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "253646",
+    "name": "DS 220774 und DS 241828, Straßen- und Zusatzschilder WestSide und Vogelsang",
+    "paper_type": "Große Anfrage",
+    "date": "2025-08-12",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_adjektiv",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023952"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "253055-01 ST",
+    "name": "Soziale Erhaltungssatzungen in Bonn. Hier: Ergebnisse gesamtstädtisches Grobscreening und Festlegung des weiteren Vorgehens - Ergänzende Informationen",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2025-08-11",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023826"
    }
   },
   {
@@ -2354,47 +2714,23 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.06871,
-     50.737339
+     7.070351,
+     50.725238
     ]
    },
    "properties": {
-    "reference": "241355-02 ST",
-    "name": "Große Anfrage der Grünen-Bezirksfraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2025-07-08",
-    "amt": "63 Bauordnungsamt",
-    "place": "Siemensstraße",
-    "level": "strasse",
+    "reference": "253482",
+    "name": "Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2025-07-21",
+    "amt": "05 Amt für Integration und Vielfalt",
+    "place": "Endenich",
+    "level": "ortsteil",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "vererbt",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023543"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.066322,
-     50.736421
-    ]
-   },
-   "properties": {
-    "reference": "241355-02 ST",
-    "name": "Große Anfrage der Grünen-Bezirksfraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2025-07-08",
-    "amt": "63 Bauordnungsamt",
-    "place": "Simone-Veil-Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "vererbt",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023543"
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023629"
    }
   },
   {
@@ -2416,9 +2752,105 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "vererbt",
+    "method": "volltext_strasse+ortsteil",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023543"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "253055",
+    "name": "Soziale Erhaltungssatzungen in Bonn. Hier: Ergebnisse gesamtstädtisches Grobscreening und Festlegung des weiteren Vorgehens",
+    "paper_type": "Beschlussvorlage",
+    "date": "2025-06-23",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022670"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069318,
+     50.722897
+    ]
+   },
+   "properties": {
+    "reference": "253324",
+    "name": "Einleitung des Vergabeverfahrens zur Pflegearbeiten auf Friedhöfen für die Jahre 2026-2028",
+    "paper_type": "Beschlussvorlage: Einleitung",
+    "date": "2025-06-18",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Hainstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
+    ]
+   },
+   "properties": {
+    "reference": "253165-01 AA",
+    "name": "Fortschreibung des Nahverkehrsplanes – Maßnahmen zum Fahrplanwechsel im Dezember 2025 Antrag zur Vorlage 253165 ÄNDERUNGSANTRAG",
+    "paper_type": "Änderungsantrag",
+    "date": "2025-06-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Kolpingstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023339"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064404,
+     50.736188
+    ]
+   },
+   "properties": {
+    "reference": "253165-01 AA",
+    "name": "Fortschreibung des Nahverkehrsplanes – Maßnahmen zum Fahrplanwechsel im Dezember 2025 Antrag zur Vorlage 253165 ÄNDERUNGSANTRAG",
+    "paper_type": "Änderungsantrag",
+    "date": "2025-06-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Vili-Viorel-Păun-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023339"
    }
   },
   {
@@ -2467,6 +2899,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023096"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "253273",
+    "name": "Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2025-06-06",
+    "amt": "05 Amt für Integration und Vielfalt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023098"
    }
   },
   {
