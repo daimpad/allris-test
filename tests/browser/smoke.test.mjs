@@ -86,7 +86,8 @@ test("Link mit Gebiet: Liste, Vorgang mit Prozesslinie, ohne Verstöße", async 
   await first.click();
   await page.waitForFunction(() => document.querySelector("#detail-heading").textContent === "Vorgang");
   assert.ok(await page.locator("#detail .steps li").count() > 0, "Prozesslinie mit Stationen");
-  assert.ok(page.url().endsWith(`#${ref}`), "Drucksache in der Adresse");
+  // Drucksachen wie „260745-03 ST“ stehen kodiert im Anker (%20)
+  assert.equal(decodeURIComponent(new URL(page.url()).hash.slice(1)), ref, "Drucksache in der Adresse");
   assert.deepEqual(await axe(page), []);
   assert.deepEqual(page.errors, []);
   await page.close();
