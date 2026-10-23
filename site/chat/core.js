@@ -54,6 +54,12 @@ export function validateArgs(schema, args) {
     const ok = p.type === "integer" ? Number.isInteger(v) : p.type === "number" ? typeof v === "number" && Number.isFinite(v) : typeof v === p.type;
     if (!ok) return `Feld „${k}“ hat den falschen Typ (erwartet ${p.type}).`;
     if (p.enum && !p.enum.includes(v)) return `Feld „${k}“: erlaubt sind ${p.enum.join(", ")}.`;
+    // Code-Prüfung 23.10.2026: Grenzen aus dem Schema gelten auch hier; eine Eingabe nur aus Satzzeichen („?“)
+    // passte sonst auf jeden Eintrag einer Liste
+    if (typeof v === "number" && ((p.minimum != null && v < p.minimum) || (p.maximum != null && v > p.maximum)))
+      return `Feld „${k}“ liegt außerhalb des erlaubten Bereichs (${p.minimum ?? "–"} bis ${p.maximum ?? "–"}).`;
+    if (typeof v === "string" && v.length > 500) return `Feld „${k}“ ist zu lang (höchstens 500 Zeichen).`;
+    if (typeof v === "string" && v !== "" && !/[\p{L}\p{N}]/u.test(v)) return `Feld „${k}“ enthält keine Buchstaben oder Ziffern.`;
   }
   return null;
 }

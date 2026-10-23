@@ -4,6 +4,7 @@ GeoJSON aller verorteten Vorlagen und eine Beschreibung des Datensatzes nach DCA
 Alle Dateien ändern sich nur, wenn sich ihr Inhalt ändert (keine Erzeugungszeitpunkte), damit der
 Branch deploy nicht täglich vollständig neu geschrieben wird."""
 import json
+import re
 from datetime import date, datetime, timedelta, timezone
 from urllib.parse import quote
 from xml.sax.saxutils import escape, quoteattr
@@ -36,9 +37,11 @@ def events(p, with_followups=False):
                     "summary": f"{p['paper_type']} · federführend: {p['amt'] or 'unbekannt'} · Stand: {p['stand']}"
                                + (f" · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): {p['kurzfassung']['text']}"
                                   if p.get("kurzfassung") else "")})
-    for i, s in enumerate(p["steps"]):
+    for s in p["steps"]:
         if s["typ"] in ("beratung", "entscheidung") and s.get("result") and s.get("date"):
-            out.append({"date": s["date"], "id": f"{p['source_object']}#beratung-{i}",
+            # ID aus Datum und Gremium, nicht aus der Position: eine neue Folgevorlage oder Beratung verschob sonst
+            # die Nummern, und Feed-Reader zeigten Einträge doppelt (Code-Prüfung 23.10.2026)
+            out.append({"date": s["date"], "id": f"{p['source_object']}#beratung-{s['date']}-{quote(s['label'], safe='')}",
                         "title": f"{s['label']}: „{s['result']}“ – {p['reference']} {p['name']}",
                         "summary": f"{s.get('role') or 'Beratung'} am {s['date']}; Ergebnis laut OParl-Lite. "
                                    f"Stand der Vorlage: {p['stand']}"})
@@ -67,7 +70,8 @@ def _atom(feed_id, title, subtitle, self_url, alt_url, entries):
                   f'<link rel="related" type="text/html" href={quoteattr(e["original"])}/>' if e.get("original") else "",
                   f"<summary>{escape(e['summary'])}</summary>", "</entry>"]
     parts.append("</feed>")
-    return "\n".join(x for x in parts if x) + "\n"
+    # Steuerzeichen aus der Quelle sind in XML nicht erlaubt; sie machten den ganzen Feed ungültig
+    return re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", "\n".join(x for x in parts if x)) + "\n"
 
 
 OPEN = ("in Beratung", "offen")
@@ -115,6 +119,7 @@ def write_feeds(out, areas, cache, names, home, slug, since):
 # --- Sitzungskalender (iCalendar) --------------------------------------------------------------------
 
 def _ics_text(value):
+    value = value.replace("\r\n", "\n").replace("\r", "\n")
     return value.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
 
 

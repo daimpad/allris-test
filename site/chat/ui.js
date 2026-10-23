@@ -144,8 +144,8 @@ function sourceCards(belegt) {
     return `<article class="src-card"><p class="src-title">${esc(c.titel || "Vorlage " + ref)}</p>
       <p class="src-meta">${esc(ref)}${c.art ? " · " + esc(c.art) : ""}${c.datum ? " · " + esc(deDate(c.datum)) : ""}</p>
       <p class="src-actions"><button type="button" class="btn btn-soft ref" data-ref="${esc(ref)}">In der Karte zeigen</button>
-      ${l.ratsinformationssystem ? `<a class="btn btn-ghost" href="${esc(l.ratsinformationssystem)}" target="_blank" rel="noopener noreferrer">Ratsinformationssystem<span class="visually-hidden"> (neuer Tab)</span></a>` : ""}
-      ${l.dokument ? `<a class="btn btn-ghost" href="${esc(l.dokument)}" target="_blank" rel="noopener noreferrer">Dokument<span class="visually-hidden"> (neuer Tab)</span></a>` : ""}</p></article>`;
+      ${/^https:\/\//.test(l.ratsinformationssystem || "") ? `<a class="btn btn-ghost" href="${esc(l.ratsinformationssystem)}" target="_blank" rel="noopener noreferrer">Ratsinformationssystem<span class="visually-hidden"> (neuer Tab)</span></a>` : ""}
+      ${/^https:\/\//.test(l.dokument || "") ? `<a class="btn btn-ghost" href="${esc(l.dokument)}" target="_blank" rel="noopener noreferrer">Dokument<span class="visually-hidden"> (neuer Tab)</span></a>` : ""}</p></article>`;
   }).join("")}</div></details>`;
 }
 
@@ -161,7 +161,7 @@ function status(text, announce = text) {
   $("#chat-status").textContent = text;
   $("#chat-announce").textContent = announce;
 }
-const plain = (md) => md.replace(/\]\(https?:[^)]*\)/g, "]").replace(/[*_`#>|[\]]/g, "").replace(/\s+/g, " ").trim();
+const plain = (md) => md.replace(/\]\(https?:[^)\s]{0,2000}\)/g, "]").replace(/[*_`#>|[\]]/g, "").replace(/\s+/g, " ").trim();
 
 async function ask(question) {
   const q = question.trim();

@@ -61,13 +61,15 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   // nur http(s)-Adressen aus den Daten werden zu Links
   const safeUrl = (u) => (/^https?:\/\//i.test(String(u || "")) ? esc(u) : null);
+  // heutiges Datum in Bonn (nicht UTC: zwischen 0 und 2 Uhr wäre es sonst der Vortag), bei jedem Aufruf neu
+  const heute = () => new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date());
   const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
   const fmtDate = (iso) => iso ? new Date(iso.length === 10 ? iso + "T12:00:00Z" : iso)
     .toLocaleDateString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", year: "numeric" }) : "";
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null;
-  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, planOn = false, allPlans = null, shownPlan = null;
+  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, detailSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, planOn = false, allPlans = null, shownPlan = null;
   let bau = null, bauOn = false, bauLayer = null, shownSite = null, bauByRef = new Map();
   // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
   let search = null, searchLoading = null;
@@ -95,8 +97,10 @@
     chatReady ||= import("./chat/ui.js").catch((e) => { chatReady = null; console.error("Ratsassistent nicht geladen", e); });
     return chatReady;
   }
+  const opener = {};   // Element, das eine Fläche ohne eigene Schaltfläche in der Leiste geöffnet hat (Fokus beim Schließen)
   function setPanel(id, open) {
     const el = document.getElementById(id);
+    if (open && el.hidden && document.activeElement && document.activeElement !== document.body) opener[id] = document.activeElement;
     el.hidden = !open;
     document.querySelectorAll(`.toggle[data-panel="${id}"]`).forEach((b) => b.setAttribute("aria-pressed", String(open)));
     if (id === "panel-list") { document.body.classList.toggle("list-open", open); document.body.classList.toggle("list-closed", !open); }
@@ -119,6 +123,7 @@
     if (target) target.focus();
   }
   function showIntro() {
+    detailSeq++;
     shownPlan = null;
     shownSite = null;
     $("#detail-heading").textContent = "Los geht's";
@@ -129,7 +134,11 @@
   function closePanel(id) {
     setPanel(id, false);
     const t = toggleFor(id);
-    if (t && t.offsetParent) t.focus();
+    // Auswertung, Termine und Mitmachen haben keine Schaltfläche in der Leiste: Fokus zurück auf das öffnende Element,
+    // sonst auf den Eintrag im Menü (Code-Prüfung 23.10.2026: Fokus lag danach auf <body>)
+    const back = t && t.offsetParent ? t : opener[id]?.isConnected && opener[id].offsetParent ? opener[id]
+      : document.querySelector(`[data-mega][aria-controls="${{ "panel-auswertung": "mega-auswertung", "panel-termine": "mega-mitmachen", "panel-mitmachen": "mega-mitmachen" }[id] || ""}"]`);
+    if (back) back.focus();
   }
   document.addEventListener("click", (e) => {
     const t = e.target.closest("[data-panel]");
@@ -618,7 +627,7 @@
     });
     bonnBounds = navBezirke.getBounds();
     const f = new URLSearchParams(location.search).get("flaechen");
-    if (THEMES[f] && index.zahlen?.themen_bonn) navMetric = f;
+    if (Object.hasOwn(THEMES, f || "") && index.zahlen?.themen_bonn) navMetric = f;
     navBreaks();
     navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
     // Legende der Flächen: Stufen der jeweils sichtbaren Ebene
@@ -1017,11 +1026,15 @@
   const loadPlanReg = () => (planReg ||= (planIndexUrl() ? fetch(planIndexUrl()).then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null)));
   const PLAN_MATCH = { eindeutig: "eindeutig zugeordnet", grundnummer: "im Datensatz nur die Grundnummer", mehrdeutig: "mehrere Pläne passen",
     nicht_im_datensatz: "nicht unter den rechtskräftigen Plänen (im Verfahren oder aufgehoben)" };
+  // detailSeq: eine langsam geladene Planchronik überschreibt keine neuere Auswahl (Code-Prüfung 23.10.2026)
   async function showPlan(key) {
+    const seq = ++detailSeq;
     const [reg, data] = await Promise.all([loadPlanReg(), loadPlans()]);
+    if (seq !== detailSeq) return;
     const entries = reg ? reg.plaene.filter((e) => e.nr === key || e.plaene.some((v) => v.name === key)) : [];
     const names = new Set([key, ...entries.flatMap((e) => e.plaene.map((v) => v.name))]);
     const feats = [...new Map(data.features.filter((f) => names.has(f.properties.name)).map((f) => [f.properties.name, f])).values()];
+    if (!entries.length && !feats.length) { showIntro(); return; }   // unbekannte Plannummer (z. B. aus der Adresse)
     const vorlagen = [...new Map(entries.flatMap((e) => e.vorlagen).map((v) => [v.drucksache, v])).values()]
       .sort((a, b) => String(a.datum).localeCompare(String(b.datum)) || a.drucksache.localeCompare(b.drucksache));
     selected = null;
@@ -1073,8 +1086,9 @@
   }
   // Tastatur- und Listenzugang zur Planebene: Pläne mit Vorlagen im gewählten Gebiet
   async function showPlanList() {
+    const seq = ++detailSeq;
     const reg = await loadPlanReg();
-    if (!reg) return;
+    if (!reg || seq !== detailSeq) return;
     const inArea = (e) => area.kind !== "ortsteil" || e.ortsteile.includes(area.name);
     const refs = new Set(papers.map((p) => p.reference));
     const list = reg.plaene.filter((e) => inArea(e) && e.vorlagen.some((v) => refs.has(v.drucksache)));
@@ -1090,8 +1104,7 @@
   }
 
   // --- Baustellen (data/export/bonn/baustellen.json, pipeline/kandidaten.py) -----------------------------
-  const TODAY = new Date().toISOString().slice(0, 10);
-  const siteState = (b) => (!b.aktiv ? "entfallen" : b.von && b.von > TODAY ? "geplant" : "aktuell");
+  const siteState = (b) => (!b.aktiv ? "entfallen" : b.von && b.von > heute() ? "geplant" : "aktuell");
   const SITE_STATE = { aktuell: "laufend", geplant: "geplant", entfallen: "nicht mehr gemeldet" };
   const siteClass = (b) => (b.fremd ? "site-fremd" : `site-${siteState(b)}`);
   // Punkt in Fläche (gerade-ungerade über alle Ringe, Löcher eingeschlossen)
@@ -1134,6 +1147,7 @@
   function showSite(id) {
     const b = bau && bau.baustellen.find((x) => x.id === String(id));
     if (!b) return;
+    detailSeq++;
     selected = null;
     shownPlan = null;
     shownSite = b.id;
@@ -1172,6 +1186,7 @@
     syncUrl();
   }
   function showSiteList() {
+    detailSeq++;
     const list = areaSites().filter((b) => b.aktiv);
     selected = null;
     shownPlan = null;
@@ -1254,7 +1269,7 @@
   // Beteiligung: nächste Sitzung eines beteiligten Gremiums (laut Sitzungsliste der Stadt), Bürgerantrag
   const BUERGERANTRAG = "https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php";
   function participate(p) {
-    const today = new Date().toISOString().slice(0, 10);
+    const today = heute();
     const gremien = new Set(p.steps.filter((s) => s.typ === "beratung" || s.typ === "entscheidung").map((s) => s.label));
     const next = zeit && p.stand !== "entschieden"
       ? zeit.meetings.find((m) => m.date >= today && !m.cancelled && gremien.has(m.gremium)) : null;
@@ -1274,7 +1289,7 @@
     const ul = document.querySelector("#detail .participate ul");
     if (!ul || !d?.mitwirken) return;
     let res;
-    try { res = (await (mitwirkenMod ||= import("./mitwirken.js"))).mitwirken(p, d, zeit ? zeit.meetings : [], new Date().toISOString().slice(0, 10)); }
+    try { res = (await (mitwirkenMod ||= import("./mitwirken.js"))).mitwirken(p, d, zeit ? zeit.meetings : [], heute()); }
     catch (e) { return; }
     if (selected !== p || !ul.isConnected || !res.regeln.length) return;
     const ids = new Set(res.regeln.map((r) => r.id));
@@ -1296,6 +1311,7 @@
   }
 
   function select(p, fromMap) {
+    detailSeq++;
     selected = p;
     shownPlan = null;
     shownSite = null;
@@ -1448,7 +1464,7 @@
     const box = $("#termine");
     const bezirk = areaBezirk();
     const scope = box.querySelector("#termine-scope") ? box.querySelector("#termine-scope").value : "gebiet";
-    const today = new Date().toISOString().slice(0, 10);
+    const today = heute();
     const relevant = (m) => scope === "alle" || !isBV(m.gremium) || !bezirk || m.gremium === `Bezirksvertretung ${bezirk}`;
     const list = zeit.meetings.filter((m) => m.date >= today && relevant(m));
     const where = area.kind === "ohne" ? "Vorlagen ohne Ortsbezug" : area.name;
@@ -1770,8 +1786,10 @@
     $("#f-theme").innerHTML = '<option value="">alle</option>' + Object.entries(THEMES).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join("");
     if (index) $("#scope").hidden = false;
     const params = new URLSearchParams(location.search);
-    const ref = decodeURIComponent(location.hash.slice(1));
-    if (THEMES[params.get("thema")]) $("#f-theme").value = params.get("thema");
+    // fehlerhafte Kodierung im Anker (abgeschnittener Link) darf den Start nicht verhindern (Code-Prüfung 23.10.2026)
+    let ref = "";
+    try { ref = decodeURIComponent(location.hash.slice(1)); } catch (e) { ref = ""; }
+    if (Object.hasOwn(THEMES, params.get("thema") || "")) $("#f-theme").value = params.get("thema");
     if (index && params.get("suche") === "bonn") document.querySelector('input[name="scope"][value="bonn"]').checked = true;
     if (params.get("partei")) await loadSearch();
     await loadArea(params.get("gebiet") || DEFAULT_AREA, true);
@@ -1779,10 +1797,11 @@
     const von = params.get("von"), bis = params.get("bis");
     // Startzustand: nur „Los geht's“; Liste und Zeitleiste öffnen sich, wenn der Link Filter oder einen Zeitraum enthält
     if (["thema", "partei", "suche"].some((k) => params.get(k))) setPanel("panel-list", true);
-    if (tl && ISO_DAY.test(von || "") && ISO_DAY.test(bis || "")) {
+    if (tl && ISO_DAY.test(von || "") && ISO_DAY.test(bis || "") && !Number.isNaN(Date.parse(von)) && !Number.isNaN(Date.parse(bis))) {
       setPanel("timeline-wrap", true);
       tl.setState({ von, bis, zoom: params.get("zoom"), achse: params.get("achse") });
-      range = [von, bis];
+      const st = tl.getState();   // die Zeitleiste ordnet vertauschte Daten; Liste und Zeitleiste zeigen dasselbe
+      range = [st.von, st.bis];
       render();
     }
     if (planOn) drawAllPlans();
