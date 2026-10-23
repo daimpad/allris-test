@@ -68,7 +68,9 @@ test("Karte: Stadtbezirk anklicken, dann Ortsteil laden", async () => {
   pt = await areaPoint(page);
   await page.mouse.click(pt.x, pt.y);
   await page.waitForFunction(() => document.querySelector("#f-area").value.startsWith("ortsteil:"));
-  await page.waitForFunction(() => document.querySelectorAll("#papers button[data-ref]").length > 0);
+  // Liste des Ortsteils geladen („N von M Vorlagen“); einige Ortsteile wie Hardthöhe haben keine Vorlage mit
+  // Ortsbezug, welcher getroffen wird, hängt vom Kartenausschnitt ab. Die leere Liste der Übersicht zählt nicht.
+  await page.waitForFunction(() => /\d+ von \d+ Vorlagen/.test(document.querySelector("#count")?.textContent || ""));
   assert.match(page.url(), /gebiet=ortsteil/);
   assert.deepEqual(page.errors, []);
   await page.close();

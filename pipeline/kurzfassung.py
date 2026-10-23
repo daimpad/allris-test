@@ -45,7 +45,36 @@ PARTEIEN = {"CDU": r"\bCDU\b", "SPD": r"\bSPD\b", "Grüne": r"\bGrüne|\bGRÜNE|
             "Linke": r"\bLinke|\bLINKE", "Volt": r"\bVolt\b", "BBB": r"\bBBB\b|Bürger Bund", "AfD": r"\bAfD\b"}
 GREMIEN = {"Rat": r"\b(Rat|Rates|Rats\w*|Stadtrat\w*)\b", "Bezirksvertretung": r"Bezirksvertretung",
            "Ausschuss": r"[Aa]usschuss"}
-HAUSNUMMER = re.compile(r"(?:straße|str\.|weg|platz|allee|gasse|ring|ufer)\s+\d{1,4}\b", re.I)
+# Hausnummer hinter einer Straßen-Endung („Hauptstraße 12a“, „Bornheimer Str 5“, „Am Burggraben 3“) oder hinter einem
+# Straßennamen aus dem Verzeichnis („Markt 2“); Code-Prüfung 23.10.2026: Buchstabenzusätze und „Str“ ohne Punkt fehlten
+_NR = r"\s+(?:Nr\.\s*)?\d{1,3}(?:\s?[a-zA-Z])?\b(?!\s?(?:%|Prozent|Euro|€|Jahre|Meter|m\b|km|[.,]\d))"
+HAUSNUMMER = re.compile(r"(?:straße|strasse|str\.?|weg|platz|allee|gasse|ring|ufer|damm|pfad|graben|wall|chaussee|"
+                        r"promenade)" + _NR, re.I)
+NACH_NAME = re.compile(r"((?:\S+\s+){0,3}\S+?)" + _NR)
+_STRASSEN = None
+
+
+def strassen():
+    """Namen der Straßen in Bonn (OpenStreetMap, ODbL), klein geschrieben."""
+    global _STRASSEN
+    if _STRASSEN is None:
+        d = json.loads(config.STRASSEN.read_text()) if config.STRASSEN.exists() else {}
+        _STRASSEN = {n.lower() for n in d.get("streets", {})}
+    return _STRASSEN
+
+
+def hausnummer(kurz):
+    """True, wenn die Kurzfassung eine Hausnummer nennt (Datenschutz, CLAUDE.md 5.2)."""
+    if HAUSNUMMER.search(kurz or ""):
+        return True
+    namen = strassen()
+    for m in NACH_NAME.finditer(kurz or ""):
+        teile = m.group(1).split()
+        if teile[-1][-1:] in ",;:":   # „am Holzlarer Weg, 500 Euro …“: Aufzählung, keine Hausnummer
+            continue
+        if any(" ".join(teile[i:]).lower().strip(",;:()") in namen for i in range(len(teile))):
+            return True
+    return False
 
 ANWEISUNG = """Du schreibst Kurzfassungen von Vorlagen des Rates der Stadt Bonn für Bürgerinnen und Bürger ohne
 Verwaltungswissen. Schreibe zwei bis drei kurze Sätze in einfacher Sprache, höchstens 60 Wörter: worum es geht, was
@@ -175,12 +204,15 @@ def fremder_akteur(kurz, quelle):
 
 def pruefe(kurz, text, titel=""):
     """Grund, aus dem eine Kurzfassung verworfen wird, oder None."""
-    if not kurz or len(_woerter(kurz)) < 8:
+    if not kurz:
         return "zu kurz"
+    # Text der Quelle und Hausnummern zuerst: sonst würde ein zu kurzer Entwurf mit ihnen aufbewahrt (_ergebnis)
     if uebernahme(kurz, text, erlaubt=[titel, *namen()]):
         return f"wörtliche Übernahme von mehr als {UEBERNAHME_WOERTER} Wörtern"
-    if HAUSNUMMER.search(kurz):
+    if hausnummer(kurz):
         return "Hausnummer genannt"
+    if len(_woerter(kurz)) < 8:
+        return "zu kurz"
     z = fremde_zahl(kurz, f"{titel} {text}")   # Zahlen im Titel („Controllingbericht 2023“) zählen mit
     if z:
         return f"Zahl nicht im Text: {z}"
@@ -323,5 +355,7 @@ def fuer_seite(verzeichnis=None):
     """Drucksache → Kurzfassung für den Export, nur wenn freigegeben."""
     if not FREIGEGEBEN:
         return {}
+    # Hausnummern auch hier prüfen: die übrigen Prüfungen laufen nur beim Erzeugen (mit Schlüssel)
     return {r["drucksache"]: {"text": glaetten(r["kurzfassung"]), "modell": r["modell"], "erzeugt": r["erzeugt"]}
-            for r in laden(verzeichnis).values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG}
+            for r in laden(verzeichnis).values()
+            if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG and not hausnummer(r["kurzfassung"])}

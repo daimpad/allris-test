@@ -6,10 +6,14 @@
                       Methode und Konfidenz; Straßenebene ohne Hausnummern
 - gremien.json        Gremien und Verwaltungsbereiche mit Zählungen und Thema (abgeleitet)
 - datenstand.json     Abrufzeitpunkte, Lizenzen, Umfang, Verortungsquote, bekannte Lücken
+- einwohner.json      Drucksachen aus der Einwohnerschaft (Bürgeranträge, Anregungen und Beschwerden, Einwohnerfragen)
+                      samt allen Vorlagen desselben Vorgangs; der Assistent lässt in ihren Titeln und Fundstellen
+                      Hausnummern aus (site/chat/tools.js)
 
 Die Dateien tragen keine Erzeugungszeitpunkte (stabile Ausgaben); Abrufzeitpunkte stehen nur in
 datenstand.json."""
 import json
+import re
 from collections import Counter, defaultdict
 
 from . import topics
@@ -19,9 +23,14 @@ PAPER_FIELDS = ("reference", "name", "paper_type", "date", "amt", "web", "main_f
 LOC_FIELDS = ("level", "name", "ortsteil", "stadtbezirk", "stage", "method", "confidence", "evidence")
 REL_FIELDS = ("reference", "paper_type", "name", "date")
 
+# wie EINWOHNER und EINWOHNER_TITEL in site/chat/tools.js
+EINWOHNER = {"Bürgerantrag § 24 GO - Öffentlich", "Anregungen und Beschwerden", "Einwohnerfrage", "Bürgerbrief"}
+EINWOHNER_TITEL = re.compile(r"bürgerantrag|einwohner|anregung|beschwerde", re.I)
+
 LUECKEN = [
     "Vorlagen vor Oktober 2019 sind nicht enthalten.",
-    "Volltexte der Dokumente (PDF) werden nicht ausgewertet; Grundlage sind Titel und Metadaten.",
+    "Volltexte der Dokumente (PDF) werden nur zum Teil ausgewertet: für Orte, wenn Titel und Metadaten keinen nennen, "
+    "und für gekennzeichnete Kurzfassungen; nicht für jede Vorlage liegt ein Text vor, und es gibt keine Zitate.",
     "Verwaltungsinterne Abläufe vor dem Datum der Vorlage sind nicht öffentlich.",
     "Inhalte nichtöffentlicher Beratungen sind nicht einsehbar.",
     "Den Vollzug von Beschlüssen zeigt keine öffentliche Schnittstelle (Beschlusskontrolle).",
@@ -131,6 +140,26 @@ def _dump(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
 
 
+def einwohner(papers):
+    """Drucksachen von Vorlagen aus der Einwohnerschaft und aller Vorlagen, die mit ihnen über- oder untergeordnet
+    verbunden sind (auch über mehrere Stufen): Stellungnahmen und Mitteilungen zu einem Bürgerantrag nennen oft
+    dieselbe Anschrift, tragen aber weder die Art noch das Wort im Titel (Code-Prüfung 23.10.2026)."""
+    nachbarn = defaultdict(set)
+    for p in papers:
+        for r in p["superordinated"] + p["subordinated"]:
+            nachbarn[p["reference"]].add(r["reference"])
+            nachbarn[r["reference"]].add(p["reference"])
+    offen = [p["reference"] for p in papers
+             if p["paper_type"] in EINWOHNER or EINWOHNER_TITEL.search(p["name"] or "")]
+    gesehen = set(offen)
+    while offen:
+        for n in nachbarn[offen.pop()]:
+            if n not in gesehen:
+                gesehen.add(n)
+                offen.append(n)
+    return sorted(gesehen)
+
+
 def write_chat(out, db, cache, meetings, sources, meta):
     papers = sorted(cache.values(), key=lambda p: p["reference"])
     shards = defaultdict(dict)
@@ -141,4 +170,5 @@ def write_chat(out, db, cache, meetings, sources, meta):
     _dump(out / "orte.json", {"meta": meta, "places": places(papers)})
     _dump(out / "gremien.json", {"meta": meta, "organizations": organizations(db, papers, meetings)})
     _dump(out / "datenstand.json", data_status(sources, papers, meetings))
+    _dump(out / "einwohner.json", {"meta": meta, "drucksachen": einwohner(papers)})
     return len(shards)

@@ -160,7 +160,8 @@ def erzeugen(db, verzeichnis=None, anfrage=_anfrage):
 def pruefen(gaz, text, orte, b_rows, bv_bezirke=(), objekte=None, objekt_befunde=None):
     """Gegenprüfung eines Ergebnisses. b_rows: Ortsbezüge aus volltext.locate; objekte: Verzeichnis der Gebäude und
     Anlagen (objekte.Objekte). Liefert (Änderungen, Befund): Änderungen als Zeilen mit aktion („bestätigt“,
-    „herabgestuft“, „neu“) und den Feldern von Gazetteer.locate. objekt_befunde sammelt (Name, Befund) je Objekt."""
+    „herabgestuft“, „neu“) und den Feldern von Gazetteer.locate. objekt_befunde sammelt (Name im Verzeichnis, Befund)
+    je Objekt; der Name des Modells steht wörtlich im Text und wird darum nicht gesammelt (keine Auszüge)."""
     main = volltext.clean(text)[0]
     low = re.sub(r"\s+", " ", main).lower()
     found = []
@@ -172,7 +173,7 @@ def pruefen(gaz, text, orte, b_rows, bv_bezirke=(), objekte=None, objekt_befunde
             # Ortsteil des Modells nur, wenn er im Text steht
             obj, befund = objekte.finden(o["name"], hint if hint.lower() in low else "")
             if objekt_befunde is not None:
-                objekt_befunde.append((o["name"], befund if obj is None else f"{obj['name']} ({obj['ortsteil']}), {befund}"))
+                objekt_befunde.append(("", befund) if obj is None else (f"{obj['name']} ({obj['ortsteil']})", befund))
             if obj:
                 found.append((o, dict(level="objekt", name=obj["name"], ortsteil=obj["ortsteil"], bezirk=obj["bezirk"],
                                       lon=obj["lon"], lat=obj["lat"], confidence="niedrig", method="objekt",
@@ -265,7 +266,7 @@ def anwenden(verzeichnis=None, db_path=None):
         w.writerows(audit)
     with open(config.EXPORT / "audit_stufe_c_objekte.tsv", "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n")
-        w.writerow(["drucksache", "name (Sprachmodell)", "befund (Verzeichnis der Gebäude und Anlagen)"])
+        w.writerow(["drucksache", "gebäude oder anlage (Verzeichnis)", "befund"])
         w.writerows(objekt_audit)
     n = {a: sum(1 for rs in changes.values() for r in rs if r["aktion"] == a) for a in ("neu", "bestätigt", "herabgestuft")}
     print(f"Stufe C: {len(by_ref)} Vorlagen geprüft; {n} → audit_stufe_c.tsv"

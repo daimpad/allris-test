@@ -146,6 +146,18 @@ test("Datenschutz: Hausnummern nur in Titeln aus der Einwohnerschaft ausgelassen
   assert.equal(titel["261088"], "CDU-Antrag: Bäume an der Frongasse 12");
 });
 
+test("Datenschutz: auch Folgevorlagen eines Bürgerantrags ohne Hausnummer, Plannummern bleiben", async () => {
+  // Code-Prüfung 23.10.2026: Stellungnahmen zu Bürgeranträgen tragen weder Art noch Wort „Bürgerantrag“
+  const vorlage = { ...VORLAGE, plans: [{ nr: "7923-2", evidence: "Bebauungsplan 7923-2 an der Frongasse 12", area: true }] };
+  const files = { ...FILES, "bonn/chat/einwohner.json": { drucksachen: ["261088", "261088-01 ST"] }, "bonn/chat/vorlagen/2610.json": { papers: { 261088: vorlage } } };
+  const t = createTools({ today: "2026-10-18", load: async (p) => { if (!(p in files)) throw new Error(`HTTP 404 ${p}`); return structuredClone(files[p]); } });
+  const r = await t.run("suche_vorlagen", {});
+  assert.equal(r.treffer.find((x) => x.drucksache === "261088").titel, `CDU-Antrag: Bäume an der Frongasse ${OHNE_NR}`);
+  const v = await t.run("hole_vorlage", { drucksache: "261088" });
+  assert.equal(v.titel, `CDU-Antrag: Bäume an der Frongasse ${OHNE_NR}`);
+  assert.equal(v.bebauungsplaene[0].fundstelle, `Bebauungsplan 7923-2 an der Frongasse ${OHNE_NR}`);
+});
+
 test("hole_vorlage: KI-Kurzfassung als abgeleitet gekennzeichnet", async () => {
   const kurz = { ...VORLAGE, kurzfassung: { text: "Es geht um Bäume.", modell: "m" } };
   const t = createTools({ today: "2026-10-18", load: async (p) => structuredClone(p === "bonn/chat/vorlagen/2610.json" ? { papers: { 261088: kurz } } : FILES[p]) });
