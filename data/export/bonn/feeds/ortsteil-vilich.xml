@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-vilich</id>
 <title>RIS-Karte Bonn – Vilich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Vilich</subtitle>
-<updated>2026-10-16T00:00:00Z</updated>
+<updated>2026-10-19T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-vilich.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029847#vorlage</id>
+<title>Neue Vorlage 252903-03 ST: Stellungnahme zur Großen Anfrage der BBB-Fraktion: Sanierung der rechtsrheinischen Bahnstrecke auf dem Abschnitt Troisdorf – Wiesbaden vom 10. Juli bis 12. Dezember 2026; hier Ausfall der RB 30  zwischen Remagen und Bonn Hbf und der Verstärkertakte der Linie RB 48 zwischen Köln und Bonn</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#252903-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029847"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029562#beratung-5</id>
 <title>Beirat Bürgerbeteiligung: „geändert beschlossen“ – 261805 Veröffentlichung der Vorhabenliste: 164702 - Aufstellung des vorhabenbezogenen Bebauungsplans „Gartenstraße“</title>
@@ -103,6 +111,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#261698"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029346"/>
 <summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029205#vorlage</id>
+<title>Neue Vorlage 252903-02 ST: Vertagungsbitte zur Große Anfrage der BBB-Fraktion: Sanierung der rechtsrheinischen Bahnstrecke auf dem Abschnitt Troisdorf – Wiesbaden vom 10. Juli bis 12. Dezember 2026; hier Ausfall der RB 30  zwischen Remagen und Bonn Hbf und der Verstärkertakte der Linie RB 48 zwischen Köln und Bonn</title>
+<updated>2026-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#252903-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029205"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029072#beratung-3</id>
@@ -231,6 +247,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#260160-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028573"/>
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029084#vorlage</id>
+<title>Neue Vorlage 252903-01: Große Anfrage der BBB-Fraktion: Sanierung der rechtsrheinischen Bahnstrecke auf dem Abschnitt Troisdorf – Wiesbaden vom 10. Juli bis 12. Dezember 2026; hier Ausfall der RB 30  zwischen Remagen und Bonn Hbf und der Verstärkertakte der Linie RB 48 zwischen Köln und Bonn</title>
+<updated>2026-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#252903-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029084"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028807#vorlage</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#254088"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024984"/>
 <summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024828#beratung-2</id>
-<title>Bezirksvertretung Beuel: „nicht abgestimmt“ – 253706-02 AA Grüne/Linke ÄA: Bürgerantrag: Sperrung der Mathildastraße für den motorisierten Individualverkehr Antrag zur Vorlage 253706</title>
-<updated>2025-12-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#253706-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024828"/>
-<summary>Entscheidung am 2025-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024734#beratung-3</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 222151-03 ST Grüne-Bezirksfraktion-Große Anfrage: Sachstand Errichtung einer Bedarfsampel an der Siegburger Straße</title>
-<updated>2025-12-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#222151-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024734"/>
-<summary>Kenntnisnahme am 2025-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024707#beratung-2</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 222151-02 Grüne-Bezirksfraktion-Große Anfrage: Sachstand Errichtung einer Bedarfsampel an der Siegburger Straße</title>
-<updated>2025-12-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#222151-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024707"/>
-<summary>Kenntnisnahme am 2025-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

@@ -3,27 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ohne-2024</id>
 <title>RIS-Karte Bonn – stadtweit / ohne Ortsbezug 2024</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2024</subtitle>
-<updated>2026-05-20T00:00:00Z</updated>
+<updated>2025-09-04T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ohne-2024.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018829#beratung-7</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „vertagt“ – 241355-01 ST Große Anfrage der Grünen-Bezirksfraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege</title>
-<updated>2026-05-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241355-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018829"/>
-<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018546#beratung-8</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „vertagt“ – 241355 Große Anfrage der Grünen-Bezirksfraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege</title>
-<updated>2026-05-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241355"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018546"/>
-<summary>Kenntnisnahme am 2026-05-20; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015489#beratung-7</id>
 <title>Rat: „zur Kenntnis genommen“ – 231582-07 ST CDU-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582-04 AA</title>
@@ -39,38 +23,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#231582-06%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015472"/>
 <summary>Kenntnisnahme am 2025-09-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018829#beratung-6</id>
-<title>Ausschuss für Wohnen, Planung und Bauen: „vertagt“ – 241355-01 ST Große Anfrage der Grünen-Bezirksfraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241355-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018829"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018829#beratung-5</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241355-01 ST Große Anfrage der Grünen-Bezirksfraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241355-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018829"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018546#beratung-7</id>
-<title>Ausschuss für Wohnen, Planung und Bauen: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 241355 Große Anfrage der Grünen-Bezirksfraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241355"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018546"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018546#beratung-6</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241355 Große Anfrage der Grünen-Bezirksfraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241355"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018546"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2018280#beratung-5</id>
@@ -113,14 +65,6 @@
 <summary>Entscheidung am 2025-07-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017953#beratung-2</id>
-<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „nicht abgestimmt“ – 231582-09 AA Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
-<updated>2025-07-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#231582-09%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017953"/>
-<summary>Empfehlung am 2025-07-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015650#beratung-4</id>
 <title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 231582-08 ST Stellungnahme zum BBB Änderungsantrag 231582-05 AA - Neufassung der Bonner Baumschutzsatzung (BSchS)</title>
 <updated>2025-07-10T00:00:00Z</updated>
@@ -161,46 +105,6 @@
 <summary>Kenntnisnahme am 2025-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020084#beratung-9</id>
-<title>Rat: „ungeändert beschlossen“ – 242020 Grüne-Antrag: Prüfauftrag zu den Mitwirkungsrechten der Bezirksvertretung und der Baumkommission im Verfahren zur Erteilung des Bauvorbescheids (Bebauungsgenehmigung)</title>
-<updated>2025-07-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242020"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020084"/>
-<summary>Entscheidung am 2025-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020084#beratung-8</id>
-<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 242020 Grüne-Antrag: Prüfauftrag zu den Mitwirkungsrechten der Bezirksvertretung und der Baumkommission im Verfahren zur Erteilung des Bauvorbescheids (Bebauungsgenehmigung)</title>
-<updated>2025-06-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242020"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020084"/>
-<summary>Anhörung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019901#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241289-02 ST Photovoltaik auf Freiflächen im Stadtgebiet Bonn</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241289-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019901"/>
-<summary>Kenntnisnahme am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018817#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241289-01 ST Photovoltaik auf Freiflächen im Stadtgebiet Bonn</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241289-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018817"/>
-<summary>Kenntnisnahme am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018423#beratung-5</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241289 Photovoltaik auf Freiflächen im Stadtgebiet Bonn</title>
-<updated>2025-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241289"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018423"/>
-<summary>Kenntnisnahme am 2025-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2019317#beratung-3</id>
 <title>Ausschuss für Kinder, Jugend und Familie: „zur Kenntnis genommen“ – 241573-01 ST Vergünstigter ÖPNV für Jugendgruppen und JuLeiCa-Inhaber*innen</title>
 <updated>2025-06-05T00:00:00Z</updated>
@@ -215,22 +119,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241573"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019076"/>
 <summary>Empfehlung am 2025-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020084#beratung-7</id>
-<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „ungeändert beschlossen“ – 242020 Grüne-Antrag: Prüfauftrag zu den Mitwirkungsrechten der Bezirksvertretung und der Baumkommission im Verfahren zur Erteilung des Bauvorbescheids (Bebauungsgenehmigung)</title>
-<updated>2025-06-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242020"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020084"/>
-<summary>Empfehlung am 2025-06-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020084#beratung-6</id>
-<title>Ausschuss für Wohnen, Planung und Bauen: „ungeändert beschlossen“ – 242020 Grüne-Antrag: Prüfauftrag zu den Mitwirkungsrechten der Bezirksvertretung und der Baumkommission im Verfahren zur Erteilung des Bauvorbescheids (Bebauungsgenehmigung)</title>
-<updated>2025-05-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242020"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020084"/>
-<summary>Empfehlung am 2025-05-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020669#beratung-2</id>
@@ -345,14 +233,6 @@
 <summary>Entscheidung am 2025-05-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020766#beratung-3</id>
-<title>Bezirksvertretung Beuel: „abgelehnt“ – 242275 FDP und BBB Antrag: Nichteinbeziehung der Befragungsergebnisse der online-Beteiligung zur Friedrich Breuer Straße</title>
-<updated>2025-05-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242275"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020766"/>
-<summary>Entscheidung am 2025-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2017173#beratung-4</id>
 <title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 240821 FDP u. BBB Große Anfrage: Sachstand Gelände ehemalige Landwirtschaftskammer Roleber</title>
 <updated>2025-05-07T00:00:00Z</updated>
@@ -375,14 +255,6 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242117"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020316"/>
 <summary>Empfehlung am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020226#beratung-2</id>
-<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 241029-02 BBB-Anfrage: Rheingärten – Vorstellung des finalen Konzeptes</title>
-<updated>2025-05-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241029-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020226"/>
-<summary>Kenntnisnahme am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2019795#beratung-5</id>
@@ -561,14 +433,6 @@
 <summary>Entscheidung am 2025-03-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020520#beratung-3</id>
-<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 241958-01 ST Bürgerantrag: Vorrang an Kreuzungen für Busse und Bahnen</title>
-<updated>2025-03-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241958-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020520"/>
-<summary>Kenntnisnahme am 2025-03-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020401#beratung-3</id>
 <title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 241699-02 ST Abschaltung der Außenbeleuchtung an Schulen zwischen 22 Uhr und 6 Uhr</title>
 <updated>2025-03-19T00:00:00Z</updated>
@@ -625,43 +489,11 @@
 <summary>Entscheidung am 2025-03-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020340#beratung-3</id>
-<title>Hauptausschuss: „abgelehnt“ – 241739-02 N-Vorlage zum FDP/CDU/BBB-Antrag Geflüchtete</title>
-<updated>2025-03-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241739-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020340"/>
-<summary>Entscheidung am 2025-03-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020253#beratung-3</id>
 <title>Bezirksvertretung Beuel: „nicht abgestimmt“ – 240986-30 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
 <updated>2025-03-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-30%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020253"/>
-<summary>Anhörung am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019717#beratung-4</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 241778-01 ST CDU-Antrag: Änderung der Radverkehrsführung auf der Kennedybrücke</title>
-<updated>2025-03-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241778-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019717"/>
-<summary>Kenntnisnahme am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019588#beratung-5</id>
-<title>Bezirksvertretung Beuel: „ungeändert beschlossen - mit Protokollnotiz“ – 241778 CDU-Antrag: Änderung der Radverkehrsführung auf der Kennedybrücke</title>
-<updated>2025-03-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241778"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019588"/>
-<summary>Empfehlung am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018212#beratung-3</id>
-<title>Bezirksvertretung Beuel: „nicht abgestimmt“ – 240986-02 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
-<updated>2025-03-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018212"/>
 <summary>Anhörung am 2025-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
@@ -681,36 +513,12 @@
 <summary>Entscheidung am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020701#beratung-3</id>
-<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 242244 Barrierefreiheit Straßenbahn</title>
-<updated>2025-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242244"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020701"/>
-<summary>Entscheidung am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020698#beratung-4</id>
-<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 242243 Zeitplan Baumaßnahmen Verkehrsbereich</title>
-<updated>2025-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242243"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020698"/>
-<summary>Entscheidung am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020252#beratung-3</id>
 <title>Bezirksvertretung Bonn: „nicht abgestimmt“ – 240986-29 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
 <updated>2025-03-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-29%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020252"/>
 <summary>Anhörung am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020134#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241845-01 ST Entwicklung der ehemaligen Stadtgärtnerei</title>
-<updated>2025-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241845-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020134"/>
-<summary>Kenntnisnahme am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020048#beratung-3</id>
@@ -729,36 +537,12 @@
 <summary>Kenntnisnahme am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019730#beratung-3</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 241845 Entwicklung der ehemaligen Stadtgärtnerei</title>
-<updated>2025-03-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241845"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019730"/>
-<summary>Kenntnisnahme am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2018221#beratung-3</id>
 <title>Bezirksvertretung Bonn: „nicht abgestimmt“ – 240986-03 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
 <updated>2025-03-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018221"/>
 <summary>Anhörung am 2025-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020701#beratung-2</id>
-<title>Ausschuss für Mobilität und Verkehr: „ungeändert beschlossen“ – 242244 Barrierefreiheit Straßenbahn</title>
-<updated>2025-03-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242244"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020701"/>
-<summary>Empfehlung am 2025-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2020698#beratung-3</id>
-<title>Ausschuss für Mobilität und Verkehr: „geändert beschlossen“ – 242243 Zeitplan Baumaßnahmen Verkehrsbereich</title>
-<updated>2025-03-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242243"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020698"/>
-<summary>Empfehlung am 2025-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2020416#beratung-3</id>
@@ -807,5 +591,221 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-15%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018858"/>
 <summary>Empfehlung am 2025-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017553#beratung-112</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „geändert beschlossen“ – 240986 Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017553"/>
+<summary>Empfehlung am 2025-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015845#beratung-4</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „abgelehnt“ – 240196 Anpassung der AEIWWA-Fördermittel</title>
+<updated>2025-03-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240196"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015845"/>
+<summary>Empfehlung am 2025-03-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020251#beratung-3</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „nicht abgestimmt“ – 240986-28 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-28%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020251"/>
+<summary>Empfehlung am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019953#beratung-4</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 241949 CDU-Anfrage: Ausbreitung der Asiatischen Hornisse in Bonn</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241949"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019953"/>
+<summary>Kenntnisnahme am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019480#beratung-5</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 241723 Kommunale Wärmeplanung - Umsetzungsstrategie</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241723"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019480"/>
+<summary>Kenntnisnahme am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019302#beratung-3</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „zur Kenntnis genommen“ – 241652 BBB-Anfrage: Künftige Tiefbaumaßnahmen unter Berücksichtigung der kommunalen Wärmeplanung</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241652"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019302"/>
+<summary>Kenntnisnahme am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019277#beratung-3</id>
+<title>Schulausschuss: „nicht abgestimmt“ – 240986-18 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-18%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019277"/>
+<summary>Empfehlung am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018754#beratung-3</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „nicht abgestimmt“ – 240986-10 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-10%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018754"/>
+<summary>Empfehlung am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018661#beratung-3</id>
+<title>Schulausschuss: „nicht abgestimmt“ – 240986-07 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018661"/>
+<summary>Empfehlung am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017553#beratung-109</id>
+<title>Schulausschuss: „geändert beschlossen“ – 240986 Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017553"/>
+<summary>Empfehlung am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017553#beratung-108</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „geändert beschlossen“ – 240986 Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017553"/>
+<summary>Empfehlung am 2025-03-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020671#beratung-4</id>
+<title>Integrationsrat: „geändert beschlossen“ – 242237 Festlegung der Redezeit im Integrationsrat</title>
+<updated>2025-02-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242237"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020671"/>
+<summary>Entscheidung am 2025-02-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020550#beratung-4</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „geändert beschlossen“ – 242192 Vergabe Integrationspreis des Integrationsrates 2025: Benennung von Jurymitgliedern</title>
+<updated>2025-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242192"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020550"/>
+<summary>Empfehlung am 2025-02-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019310#beratung-3</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „nicht abgestimmt“ – 240986-19 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-19%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019310"/>
+<summary>Empfehlung am 2025-02-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018755#beratung-3</id>
+<title>Sportausschuss: „nicht abgestimmt“ – 240986-11 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-11%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018755"/>
+<summary>Empfehlung am 2025-02-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018753#beratung-3</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „nicht abgestimmt“ – 240986-09 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-09%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018753"/>
+<summary>Empfehlung am 2025-02-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017553#beratung-102</id>
+<title>Ausschuss für Soziales, Migration und Gesundheit: „geändert beschlossen“ – 240986 Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017553"/>
+<summary>Empfehlung am 2025-02-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017553#beratung-101</id>
+<title>Sportausschuss: „geändert beschlossen“ – 240986 Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-02-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017553"/>
+<summary>Empfehlung am 2025-02-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018664#beratung-3</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „nicht abgestimmt“ – 240986-08 ST Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-02-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018664"/>
+<summary>Empfehlung am 2025-02-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2017553#beratung-99</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „geändert beschlossen“ – 240986 Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029</title>
+<updated>2025-02-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#240986"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017553"/>
+<summary>Empfehlung am 2025-02-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019436#beratung-3</id>
+<title>Naturschutzbeirat: „zur Kenntnis genommen“ – 230613-02 Information des MUNV zu politischen Veranstaltungen in Schutzgebieten</title>
+<updated>2025-02-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#230613-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019436"/>
+<summary>Kenntnisnahme am 2025-02-18; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019311#beratung-3</id>
+<title>Naturschutzbeirat: „zur Kenntnis genommen“ – 241656 Mitteilung über die Verwendung der Ersatzgelder (Ersatzgeldverzeichnis) gemäß § 31 Abs. 4 S. 5 LNatSchG NRW</title>
+<updated>2025-02-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#241656"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019311"/>
+<summary>Kenntnisnahme am 2025-02-18; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020746#beratung-11</id>
+<title>Rat: „zur Kenntnis genommen“ – 242267 Regionalplanung, Sachlicher Teilplan Erneuerbare Energien hier: Information zum Sachstand</title>
+<updated>2025-02-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242267"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020746"/>
+<summary>Kenntnisnahme am 2025-02-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020717#beratung-3</id>
+<title>Rat: „ungeändert beschlossen“ – 242251 Bestellung Umlegungsausschuss</title>
+<updated>2025-02-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242251"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020717"/>
+<summary>Entscheidung am 2025-02-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020673#beratung-4</id>
+<title>Rat: „ungeändert beschlossen“ – 242238 Berufung von drei Mitgliedern des Kuratoriums der "Beethovenstiftung für Kunst und Kultur der Bundesstadt Bonn" für die Zeit vom 01.06.2025 bis 31.05.2030</title>
+<updated>2025-02-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242238"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020673"/>
+<summary>Entscheidung am 2025-02-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020617#beratung-6</id>
+<title>Rat: „ungeändert beschlossen“ – 242211 Novellierung der Energieleitlinien: „Bonner Standards für klimafreundlichen Neubau", Klimaplansteckbrief 4.2.2.3.</title>
+<updated>2025-02-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242211"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020617"/>
+<summary>Entscheidung am 2025-02-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020588#beratung-3</id>
+<title>Rat: „zur Kenntnis genommen“ – 242149-01 ST Anzahl Schulabbrecher in den vergangenen 4 Schuljahren</title>
+<updated>2025-02-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2024#242149-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020588"/>
+<summary>Kenntnisnahme am 2025-02-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
