@@ -1566,6 +1566,11 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 231034-01 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 231034-01 ST	veroeffentlichung	Datum der Vorlage	belegt	2023-07-17		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012691	ungeprüft
 231034-01 ST	beratung	Ausschuss für Beteiligung der Bürgerinnen und Bürger (Kenntnisnahme)	belegt	2023-08-30	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012691	ungeprüft
+222042-04	initiierung	Beschlussvorlage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2010890	ungeprüft
+222042-04	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
+222042-04	entscheidung	Rat (Entscheidung)	belegt	2023-03-23	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2010890	ungeprüft
+222042-04	veroeffentlichung	Datum der Vorlage	belegt	2023-07-11		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2010890	ungeprüft
+222042-04	vollzug	Vollzug durch die Verwaltung	unklar				Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt es keine öffentliche Schnittstelle.	ungeprüft
 231152	initiierung	Beschlussvorlage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012704	ungeprüft
 231152	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 231152	veroeffentlichung	Datum der Vorlage	belegt	2023-07-03		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012704	ungeprüft

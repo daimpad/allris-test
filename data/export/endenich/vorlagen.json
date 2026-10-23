@@ -1,20 +1,20 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 617,
-  "generated_at": "2026-10-23T20:32:06+00:00",
+  "count": 618,
+  "generated_at": "2026-10-23T21:15:47+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-23T20:07:02+00:00"
+    "retrieved_at": "2026-10-23T20:44:48+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-23T20:12:29+00:00"
+    "retrieved_at": "2026-10-23T20:51:00+00:00"
    },
    {
     "name": "osm",
@@ -55887,6 +55887,296 @@
    },
    "kurzfassung": {
     "text": "Die Verwaltung lehnt die Aussetzung der Umwidmung des Steinwegs in Bonn-Endenich zur Fahrradstraße ab. Sie begründet dies mit der Bedeutung der Straße für das Radverkehrsnetz und einem geplanten Kompromiss für alle Verkehrsteilnehmenden. Die Verwaltung empfiehlt, den Bürgerantrag abzulehnen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-23"
+   }
+  },
+  {
+   "reference": "222042-04",
+   "name": "Teilweise Beanstandung des Ratsbeschlusses vom 09.02.2023 betr. Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 606 und 607",
+   "paper_type": "Beschlussvorlage",
+   "date": "2023-07-11",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010890",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2450075&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/160",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001682",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2023-03-23T16:02:00.000Z",
+     "cancelled": 0,
+     "number": "5.2",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "222042",
+     "paper_type": "Beschlussvorlage",
+     "name": "Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 606 und 607",
+     "date": "2022-12-21"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Südstadt",
+     "ortsteil": "Südstadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.101215,
+     "lat": 50.727505,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Südstadt",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Alfred-Bucherer-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.077042,
+     "lat": 50.725874,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Alfred-Bucherer-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Bachstraße",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.091845,
+     "lat": 50.732623,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Bachstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Beethovenplatz",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.090263,
+     "lat": 50.730898,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Beethovenplatz",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Colmantstraße",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.092984,
+     "lat": 50.731675,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Colmantstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Endenicher Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.074839,
+     "lat": 50.728058,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenicher Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Frongasse",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.073676,
+     "lat": 50.727971,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Frongasse",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Hermann-Wandersleb-Ring",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07005,
+     "lat": 50.727177,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Hermann-Wandersleb-Ring",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Pastoratsgasse",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07273,
+     "lat": 50.725757,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Pastoratsgasse",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Provinzialstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.063923,
+     "lat": 50.720473,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Provinzialstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Rochusstraße",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.047129,
+     "lat": 50.714322,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Rochusstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "stichwort",
+     "evidence": "bus",
+     "confidence": "niedrig"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Rat",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2023-03-23",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.2",
+     "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite",
+     "note": "datum_vor_vorlage"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2023-07-11",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010890",
+     "note": "datum"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet der Rat",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, Teile eines früheren Beschlusses zu Bus- und Bahnbeschleunigung zu ändern. Sie will Parkplätze in der Endenicher Straße, Frongasse und Alfred-Bucherer-Straße streichen oder prüfen sowie Ampelschaltungen an vier Kreuzungen in Bonn anpassen. Die Änderungen betreffen Endenich, die West- und Südstadt.",
     "modell": "mistral-large-latest",
     "erzeugt": "2026-10-23"
    }
