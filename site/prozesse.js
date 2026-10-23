@@ -6,6 +6,8 @@
 import { deDate } from "./mitwirken.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+// Adressen aus den Daten nur als http(s)-Link (javascript: o. Ä. würde sonst als Link eingesetzt)
+const href = (u) => (/^https?:\/\//i.test(String(u ?? "")) ? esc(u) : "#");
 const num = (n) => Number(n || 0).toLocaleString("de-DE");
 const LANES = ["ew", "rm", "bvm", "vw", "bv", "aus", "rat"];
 const ART_PL = { rat: "Rat", hauptausschuss: "Hauptausschuss", ausschuss: "Fachausschüsse", bezirksvertretung: "Bezirksvertretungen",
@@ -23,7 +25,7 @@ const TABS = ["verfahren", "gremien", "aemter"];
 
 let ctx, soll, data, root, state = { tab: "verfahren", view: "schaubild", verfahren: null, gremium: null, amt: null, frueher: false, q: "" };
 
-const links = (ls) => (ls || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ");
+const links = (ls) => (ls || []).map((l) => `<a href="${href(l.url)}" target="_blank" rel="noopener">${esc(l.label)}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ");
 const beleg = (x) => (x.links && x.links.length ? links(x.links) : x.beleg ? esc(x.beleg) : "");
 
 // --- Verfahren ---------------------------------------------------------------------------------------
@@ -101,7 +103,7 @@ function renderVerfahren() {
       ${ids.map((id) => `<details class="pz-item" data-verfahren="${esc(id)}"${state.verfahren === id ? " open" : ""}><summary><span class="pz-title">${esc(soll.verfahren[id].titel)}</span>
         <span class="pz-meta">${num(count(id))} Vorgänge</span></summary>${verfahrenBody(id, soll.verfahren[id])}</details>`).join("")}${fristen()}`;
   }
-  const vid = soll.verfahren[state.verfahren] ? state.verfahren : "buergerantrag";
+  const vid = Object.hasOwn(soll.verfahren, state.verfahren || "") ? state.verfahren : "buergerantrag";
   const v = soll.verfahren[vid];
   return `<label class="pz-pick">Verfahren <select id="pz-verfahren">${ids.map((id) => `<option value="${esc(id)}"${id === vid ? " selected" : ""}>${esc(soll.verfahren[id].titel)} (${num(count(id))})</option>`).join("")}</select></label>
     <h3 class="pz-h">${esc(v.titel)}</h3>${swimlane(vid, v)}${verfahrenBody(vid, v)}${fristen()}`;
@@ -116,7 +118,7 @@ function zustaendig(g) {
     return `<h4>Zuständigkeit laut Zuständigkeitsordnung (Abschnitt ${esc(z.nr)})</h4>
       ${g.zusto_hinweis ? `<p class="hint">${esc(g.zusto_hinweis)}</p>` : ""}
       ${groups.map(([label, rs]) => `<details class="pz-more"><summary>${esc(g.name)} ${esc(label)} (${rs.length})</summary><ul class="pz-recht">${rs.map((r) => `<li><span class="pz-nr">${esc(r.nr)}</span> ${esc(r.inhalt)}${r.an_bezirksvertretung ? ' <span class="hint">(Bezirksvertretung wird beteiligt)</span>' : ""}</li>`).join("")}</ul></details>`).join("")}
-      <p class="hint">Quelle: <a href="${esc(soll.meta.zusto_url)}" target="_blank" rel="noopener">Zuständigkeitsordnung der Stadt Bonn<span class="visually-hidden"> (neuer Tab)</span></a>, Stand ${esc(soll.meta.zusto_stand || "")}.</p>`;
+      <p class="hint">Quelle: <a href="${href(soll.meta.zusto_url)}" target="_blank" rel="noopener">Zuständigkeitsordnung der Stadt Bonn<span class="visually-hidden"> (neuer Tab)</span></a>, Stand ${esc(soll.meta.zusto_stand || "")}.</p>`;
   }
   const rule = (re) => (soll.zustaendigkeit || []).filter((z) => re.test(`${z.frage} ${z.antwort}`));
   const rules = g.art === "bezirksvertretung" ? rule(/Bezirk|BV/) : g.art === "rat" || g.art === "hauptausschuss" ? rule(/Rat|Hauptausschuss/) : [];
@@ -128,12 +130,12 @@ function gremiumBody(g) {
     <ul class="pz-facts">
       <li>${num(g.beratungen)} Beratungen zu ${num(g.vorlagen)} Vorlagen seit Oktober 2019</li>
       ${g.letzte ? `<li>Letzte Sitzung: ${deDate(g.letzte)}</li>` : ""}
-      ${g.naechste ? `<li>Nächste Sitzung: ${g.naechste.web ? `<a href="${esc(g.naechste.web)}" target="_blank" rel="noopener">${deDate(g.naechste.datum)}<span class="visually-hidden"> (Tagesordnung, neuer Tab)</span></a>` : deDate(g.naechste.datum)}</li>` : ""}
+      ${g.naechste ? `<li>Nächste Sitzung: ${g.naechste.web ? `<a href="${href(g.naechste.web)}" target="_blank" rel="noopener">${deDate(g.naechste.datum)}<span class="visually-hidden"> (Tagesordnung, neuer Tab)</span></a>` : deDate(g.naechste.datum)}</li>` : ""}
       ${g.aufgeloest ? `<li>Aufgelöst: ${deDate(g.aufgeloest)}</li>` : ""}
     </ul>
     ${zustaendig(g)}
     <p class="pz-actions">${g.vorlagen ? `<button type="button" class="btn btn-soft pz-filter" data-name="${esc(g.name)}">Vorlagen dieses Gremiums in der Liste</button>` : ""}
-      ${g.web ? `<a class="btn btn-ghost" href="${esc(g.web)}" target="_blank" rel="noopener">Im Ratsinformationssystem<span class="visually-hidden"> (neuer Tab)</span></a>` : ""}</p>
+      ${g.web ? `<a class="btn btn-ghost" href="${href(g.web)}" target="_blank" rel="noopener">Im Ratsinformationssystem<span class="visually-hidden"> (neuer Tab)</span></a>` : ""}</p>
     <p class="pz-msg hint" aria-live="polite"></p>`;
 }
 const nodeBtn = (g) => `<button type="button" class="org-node org-${esc(g.art)}" data-gremium="${esc(g.id)}" aria-pressed="${state.gremium === g.id}">

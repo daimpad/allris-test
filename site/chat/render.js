@@ -5,11 +5,24 @@ import { REF_RX, sameRef } from "./core.js";
 
 export const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-// Alle http(s)-Adressen aus einem Werkzeugergebnis
+// Felder, in denen ein Werkzeugergebnis Eingaben des Modells wiederholt: daraus keine Adressen übernehmen,
+// sonst könnte das Modell (etwa nach einer Anweisung in einem Titel) jede Adresse anklickbar machen
+const ECHO = new Set(["anfrage", "eingabe", "fehler", "technisch", "parameter"]);
+// Nur Adressen dieser Stellen werden Links (Ratsinformationssystem, Stadt Bonn, OParl-Lite, Gesetze, OSM, Projekt)
+export const LINK_HOSTS = ["bonn.sitzung-online.de", "bonn.de", "oparl.bonn.machdenstaat.de", "recht.nrw.de",
+  "gesetze-im-internet.de", "openstreetmap.org", "github.com"];
+const hostOk = (url) => {
+  try {
+    const h = new URL(url).hostname;
+    return LINK_HOSTS.some((d) => h === d || h.endsWith(`.${d}`));
+  } catch (e) { return false; }
+};
+
+// Alle http(s)-Adressen aus einem Werkzeugergebnis (ohne wiederholte Eingaben, nur bekannte Stellen)
 export function collectUrls(value, set = new Set()) {
-  if (typeof value === "string") { if (/^https?:\/\/\S+$/.test(value)) set.add(value); }
+  if (typeof value === "string") { if (/^https?:\/\/\S+$/.test(value) && hostOk(value)) set.add(value); }
   else if (Array.isArray(value)) value.forEach((v) => collectUrls(v, set));
-  else if (value && typeof value === "object") Object.values(value).forEach((v) => collectUrls(v, set));
+  else if (value && typeof value === "object") Object.entries(value).forEach(([k, v]) => { if (!ECHO.has(k)) collectUrls(v, set); });
   return set;
 }
 
@@ -45,7 +58,8 @@ function text(s, ctx, inLink) {
   return inLink ? html : refsIn(html, ctx);
 }
 
-const LINK = /\[([^\]\n]+)\]\(([^)\s]+)\)|(https?:\/\/[^\s<>()"]*[^\s<>()".,;:!?'])/g;
+// Längen begrenzt: lange Folgen von „[“ in einer Antwort sollen die Seite nicht anhalten (Code-Prüfung 23.10.2026)
+const LINK = /\[([^\]\n[]{1,300})\]\(([^)\s]{1,2000})\)|(https?:\/\/[^\s<>()"]{0,2000}[^\s<>()".,;:!?'])/g;
 
 function links(s, ctx) {
   let out = "", last = 0;

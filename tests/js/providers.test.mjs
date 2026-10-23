@@ -215,3 +215,14 @@ test("Ersatz-IDs für Werkzeugaufrufe ohne ID: eindeutig, 9 Zeichen", async () =
   const b = await collect(stream({ provider: "lokal", model: "m", key: "", history: [{ role: "user", text: "q" }], fetchImpl: fakeFetch(turn) }));
   assert.notEqual(a.find((e) => e.type === "tool_call").id, b.find((e) => e.type === "tool_call").id);
 });
+
+test("Abgebrochene Verbindung: Fehler statt halber Antwort, kein Werkzeugaufruf mit leerer Eingabe", async () => {
+  // Code-Prüfung 23.10.2026: bisher galt eine abgeschnittene Antwort als fertig und ein halb übertragener
+  // Werkzeugaufruf lief mit {} (suche_vorlagen lieferte dann alle Vorlagen)
+  const cut = ANTHROPIC_TOOL_TURN.slice(0, 11);   // mitten in den Argumenten des Werkzeugaufrufs
+  await assert.rejects(collect(stream({ provider: "anthropic", model: "m", key: KEY, history: [{ role: "user", text: "x" }], tools: TOOLS, fetchImpl: fakeFetch(sseResponse(cut)) })),
+    (e) => e instanceof ProviderError && /unterbrochen/.test(e.message));
+  const openaiCut = [O({ role: "assistant", content: "Teil" }), O({ tool_calls: [{ index: 0, id: "c", function: { name: "hole_vorlage", arguments: "{\"drucks" } }] })];
+  await assert.rejects(collect(stream({ provider: "mistral", model: "m", key: KEY, history: [{ role: "user", text: "x" }], tools: TOOLS, fetchImpl: fakeFetch(sseResponse(openaiCut)) })),
+    (e) => e instanceof ProviderError && /unterbrochen/.test(e.message));
+});

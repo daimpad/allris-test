@@ -193,3 +193,12 @@ test("Beträge und Anzahlen gelten nicht als Drucksache", () => {
   assert.deepEqual(c.belegt, ["261798"]);
   assert.deepEqual(c.unbelegt, ["190001-01 ST"]);
 });
+
+test("validateArgs: Grenzen des Schemas, Eingaben nur aus Satzzeichen, Länge", () => {
+  const schema = { type: "object", properties: { radius_m: { type: "integer", minimum: 50, maximum: 2000 }, gremium: { type: "string" } } };
+  assert.match(validateArgs(schema, { radius_m: 100000 }), /außerhalb/);
+  assert.equal(validateArgs(schema, { radius_m: 500 }), null);
+  assert.match(validateArgs(schema, { gremium: "?" }), /keine Buchstaben/);
+  assert.match(validateArgs(schema, { gremium: "x".repeat(501) }), /zu lang/);
+  assert.equal(validateArgs(schema, { gremium: "Rat" }), null);
+});

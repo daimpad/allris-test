@@ -53,3 +53,15 @@ test("Zahlen außerhalb der Drucksachen-Nummern bleiben Text", () => {
   const html = renderMarkdown("Kosten von 150000 Euro, 200000 € und die Nummer 999999.", ctx);
   assert.doesNotMatch(html, /<button|<mark/);
 });
+
+test("Links nur aus Datenfeldern bekannter Stellen, nicht aus wiederholten Eingaben", () => {
+  // Code-Prüfung 23.10.2026: das Stichwort einer Suche kam unverändert zurück und machte so jede Adresse anklickbar
+  const urls = collectUrls({ anfrage: { stichwort: "https://angreifer.example/x" }, eingabe: "https://angreifer.example/y",
+    links: { ratsinformationssystem: "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=1", fremd: "https://angreifer.example/z" } });
+  assert.deepEqual([...urls], ["https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=1"]);
+  const html = renderMarkdown("[Quelle](https://angreifer.example/x)", { urls });
+  assert.ok(!html.includes("<a "));
+  const t = Date.now();
+  renderMarkdown("[".repeat(64000), { urls });
+  assert.ok(Date.now() - t < 1000, "lange Folgen von [ ohne lange Rechenzeit");
+});

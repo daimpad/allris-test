@@ -24,7 +24,11 @@ ATOM = "{http://www.w3.org/2005/Atom}"
 class Feeds(unittest.TestCase):
     def test_ereignisse(self):
         ev = publish.events(PAPER)
-        self.assertEqual([e["id"].split("#")[1] for e in ev], ["vorlage", "beratung-1"])
+        self.assertEqual([e["id"].split("#")[1] for e in ev], ["vorlage", "beratung-2026-06-10-Bezirksvertretung%20Bonn"])
+        # ID bleibt, wenn davor ein Schritt hinzukommt (bisher Position in der Liste)
+        mehr = {**PAPER, "steps": [{"typ": "folgevorlage", "label": "Mitteilung", "reference": "261856-02",
+                                    "title": "Mitteilung", "date": "2026-05-01", "status": "belegt"}] + PAPER["steps"]}
+        self.assertEqual([e["id"] for e in publish.events(mehr)], [e["id"] for e in ev])
         self.assertEqual(len(publish.events(PAPER, with_followups=True)), 3)
         self.assertNotIn("KI-Kurzfassung", ev[0]["summary"])
         kurz = {**PAPER, "kurzfassung": {"text": "Es geht um Bäume.", "modell": "m", "erzeugt": "2026-10-21"}}
