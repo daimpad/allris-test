@@ -36,6 +36,7 @@ GEGENLESEN_AKTIV = False   # Fassung 6: kein messbarer Gewinn, daher abgeschalte
 MAX_JE_LAUF = int(os.environ.get("KURZFASSUNG_MAX", "50"))   # zuerst klein, um Kosten und Güte zu messen
 MAX_ZEICHEN = 12000
 UEBERNAHME_WOERTER = 6
+MAX_VERSUCHE = 3   # gescheiterte Anfragen werden in späteren Läufen wiederholt, dann übersprungen
 FREIGEGEBEN = True   # Prüfung von Hand der Stichprobe v7 (22.10.2026): 18 zutreffend, 12 teilweise, keine falsch;
 #                       Freigabe durch den Auftraggeber mit geschärftem Hinweis
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
@@ -299,17 +300,48 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
             kurz = ohne_kostensatz(glaetten(kurz), main)
             grund = pruefe(kurz, main, (papers.get(r["datei"]) or {}).get("name") or "")
             r.update(_ergebnis(kurz, grund))
-    # ältere Fassungen zuerst (so entsteht die neue Stichprobe aus denselben Vorlagen), danach neue Texte
+    # ältere Fassungen zuerst (so entsteht die neue Stichprobe aus denselben Vorlagen), danach neue Texte, zuletzt
+    # gescheiterte Anfragen (höchstens MAX_VERSUCHE; Code-Prüfung 23.10.2026: eine stets scheiternde Anfrage hielt
+    # sonst jeden Lauf an derselben Stelle an)
     alt = lambda uri: have[texts[uri]["sha"]].get("fassung", 1) < FASSUNG
+    erneut = lambda uri: (have[texts[uri]["sha"]].get("fehler")
+                          and have[texts[uri]["sha"]].get("versuche", 1) < MAX_VERSUCHE)
     todo = ([(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] in have and alt(uri)]
-            + [(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] not in have])[:MAX_JE_LAUF]
+            + [(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] not in have]
+            + [(uri, p) for uri, p in sorted(papers.items())
+               if texts[uri]["sha"] in have and not alt(uri) and erneut(uri)])[:MAX_JE_LAUF]
     tokens = [0, 0]
+    try:
+        _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens)
+    finally:   # bricht der Lauf ab (Zeitgrenze, Fehler), bleibt das Erzeugte erhalten
+        _schreiben(base, have)
+    ok = [r for r in have.values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG]
+    sprachmodell.protokoll(base, "kurzfassungen", MODELL, len(todo), {"ein": tokens[0], "aus": tokens[1]},
+                           sum(1 for uri, p in todo if have[texts[uri]["sha"]].get("verworfen")))
+    print(f"Kurzfassungen: {len(todo)} angefragt ({tokens[0]} Eingabe-, {tokens[1]} Ausgabe-Tokens), "
+          f"{len(ok)} vorhanden, {sum(1 for r in have.values() if r.get('verworfen'))} verworfen, "
+          f"{sum(1 for r in have.values() if r.get('fehler'))} gescheitert → {base}")
+    _stichprobe(base, ok, papers)
+
+
+def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens):
     for i, (uri, p) in enumerate(todo, 1):
         main, _ = volltext.clean(texts[uri]["text"])
         main = re.sub(r"\s+", " ", main).strip()[:MAX_ZEICHEN]
         titel = f"{p.get('name') or ''} (Art der Vorlage: {p.get('paperType') or 'unbekannt'})"
-        kurz, usage = anfrage(titel, main, schluessel)
-        kurz = ohne_kostensatz(glaetten(kurz), main)
+        sha = texts[uri]["sha"]
+        try:
+            kurz, usage = anfrage(titel, main, schluessel)
+            kurz = ohne_kostensatz(glaetten(kurz if isinstance(kurz, str) else ""), main)
+        except Exception as e:   # ein Fehler beim Anbieter hält den Lauf nicht auf
+            vorher = have.get(sha) or {}
+            versuche = vorher.get("versuche", 0) + 1 if vorher.get("fassung", 1) == FASSUNG and vorher.get("fehler") else 1
+            have[sha] = {**vorher, "sha": sha, "datei": uri, "drucksache": p["reference"], "kurzfassung": None,
+                         "verworfen": None, "entwurf": None, "modell": MODELL, "fassung": FASSUNG,
+                         "fehler": f"Anfrage gescheitert: {type(e).__name__}", "versuche": versuche,
+                         "erzeugt": datetime.now(timezone.utc).date().isoformat()}
+            print(f"  {p['reference']}: Anfrage gescheitert ({type(e).__name__}, Versuch {versuche})", flush=True)
+            continue
         tokens[0] += usage.get("prompt_tokens", 0)
         tokens[1] += usage.get("completion_tokens", 0)
         geaendert = False
@@ -324,19 +356,16 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
             except Exception:   # Gegenlesen gescheitert: erste Fassung wird wie bisher geprüft
                 pass
         grund = pruefe(kurz, main, p.get("name") or "")
-        have[texts[uri]["sha"]] = {"sha": texts[uri]["sha"], "datei": uri, "drucksache": p["reference"],
-                                   **_ergebnis(kurz, grund), "modell": MODELL, "fassung": FASSUNG,
-                                   "gegengelesen": bool(gegenlesen), "beim_gegenlesen_geaendert": geaendert,
-                                   "erzeugt": datetime.now(timezone.utc).date().isoformat()}
+        have[sha] = {"sha": sha, "datei": uri, "drucksache": p["reference"],
+                     **_ergebnis(kurz, grund), "modell": MODELL, "fassung": FASSUNG,
+                     "gegengelesen": bool(gegenlesen), "beim_gegenlesen_geaendert": geaendert,
+                     "erzeugt": datetime.now(timezone.utc).date().isoformat()}
         time.sleep(0.5)
         if i % 25 == 0:   # Zwischenstand sichern: bricht der Lauf ab, bleibt das Erzeugte erhalten
             _schreiben(base, have)
-    _schreiben(base, have)
-    ok = [r for r in have.values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG]
-    sprachmodell.protokoll(base, "kurzfassungen", MODELL, len(todo), {"ein": tokens[0], "aus": tokens[1]},
-                           sum(1 for uri, p in todo if have[texts[uri]["sha"]]["verworfen"]))
-    print(f"Kurzfassungen: {len(todo)} neu ({tokens[0]} Eingabe-, {tokens[1]} Ausgabe-Tokens), "
-          f"{len(ok)} vorhanden, {sum(1 for r in have.values() if r['verworfen'])} verworfen → {base}")
+
+
+def _stichprobe(base, ok, papers):
     sample = base / f"stichprobe_kurzfassungen_v{FASSUNG}.tsv"   # Fassung 1: stichprobe_kurzfassungen.tsv
     if not sample.exists() and len(ok) >= 30:
         titel = {p["reference"]: (p.get("name"), p.get("web")) for p in papers.values()}

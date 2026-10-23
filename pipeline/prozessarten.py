@@ -173,13 +173,14 @@ def aemter(db, today):
             fach_unit[label_of[oid]] += n
     out = []
     for label, u in units.items():
-        papers = [p for oid in u["ids"] for p in by_org.get(oid, [])]
+        # feste Reihenfolge (Mengen und Gleichstände sonst je Lauf anders; Code-Prüfung 23.10.2026)
+        papers = [p for oid in sorted(u["ids"]) for p in by_org.get(oid, [])]
         ended = all(b["end"] and b["end"] < today for b in u["bereiche"])
         abteilungen = sorted(({"name": b["name"], "vorlagen": len(by_org.get(b["id"], [])),
                                "aufgeloest": b["end"] if b["end"] and b["end"] < today else None}
                               for b in u["bereiche"] if b["name"] != label),
                              key=lambda a: (bool(a["aufgeloest"]), a["name"]))
-        gc = collections.Counter(g for p in papers for g in gremium_of.get(p[0], ()))
+        gc = collections.Counter(g for p in papers for g in sorted(gremium_of.get(p[0], ())))
         newest = sorted(papers, key=lambda p: (p[4] or "", p[1] or ""), reverse=True)
         politik = sum(p[3] in actors.POLITIK_TYPES for p in papers)
         einwohner = sum(p[3] in actors.EINWOHNER_TYPES for p in papers)
@@ -188,13 +189,15 @@ def aemter(db, today):
              "vorlagen": len(papers), "politik": politik, "einwohner": einwohner, "letzte": newest[0][4] if newest else None,
              "aufgeloest": max(b["end"] for b in u["bereiche"]) if ended else None,
              "abteilungen": abteilungen,
-             "gremien": [{"id": g.rsplit("/", 1)[-1], "name": gname[g], "vorlagen": n} for g, n in gc.most_common(TOP_GREMIEN)],
+             "gremien": [{"id": g.rsplit("/", 1)[-1], "name": gname[g], "vorlagen": n}
+                         for g, n in sorted(gc.items(), key=lambda x: (-x[1], gname[x[0]], x[0]))[:TOP_GREMIEN]],
              "fachlich": fach_unit.get(label, 0),
              "beispiele": [{"drucksache": p[1], "titel": p[2], "datum": p[4]} for p in newest[:BEISPIELE]]}
         if gruppe == "koordination" and papers and max(politik, einwohner) / len(papers) >= 0.5:
             a["hinweis"] = HINWEIS_POLITIK if politik >= einwohner else HINWEIS_EINWOHNER
         if gruppe == "koordination" and fach_von[label]:
-            a["fachlich_aemter"] = [{"name": n, "vorlagen": k} for n, k in fach_von[label].most_common(TOP_GREMIEN)]
+            a["fachlich_aemter"] = [{"name": n, "vorlagen": k}
+                                    for n, k in sorted(fach_von[label].items(), key=lambda x: (-x[1], x[0]))[:TOP_GREMIEN]]
         out.append(a)
     order = [k for k, _ in AMT_GRUPPEN]
     out.sort(key=lambda a: (order.index(a["gruppe"]), a["name"]))

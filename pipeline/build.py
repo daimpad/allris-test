@@ -1,6 +1,7 @@
 """Normalisierung der Rohdaten in eine SQLite-Datenbank (data/build/allris.sqlite)."""
 import csv
 import json
+import re
 import random
 import sqlite3
 from collections import Counter
@@ -68,13 +69,27 @@ def _read_jsonl(path):
         return [json.loads(line) for line in f]
 
 
+# Zahlen außer Postleitzahlen (fünfstellig, 5xxxx) gelten in Ortsangaben der Stadt als Hausnummern; check.py prüft
+_NUMMER = re.compile(r"(?<!\d)(?!5\d{4}\b)\d{1,4}(?:\s?[a-zA-Z](?![a-zA-ZäöüÄÖÜß]))?"
+                     r"(?:\s*(?:-|–|/|bis)\s*\d{1,4}(?:\s?[a-zA-Z](?![a-zA-ZäöüÄÖÜß]))?)?(?!\d)")
+
+
+def ohne_hausnummer(text):
+    """Ortsangabe der Stadt ohne Hausnummer (CLAUDE.md 5.2): bisher hätte eine Hausnummer in der Quelle die
+    tägliche Veröffentlichung angehalten, statt die Straße zu zeigen (Code-Prüfung 23.10.2026)."""
+    out = re.sub(r"\s+,", ",", re.sub(r"\s{2,}", " ", _NUMMER.sub("", (text or "").strip()))).strip(" ,")
+    return out or None
+
+
 def build():
     for path in (config.PAPERS, config.ORGANIZATIONS):
         if not path.exists():
             raise SystemExit(f"Fehlt: {path} – zuerst `python -m pipeline fetch` ausführen.")
     if not config.CONSULTATIONS_LITE.exists():
         print(f"Hinweis: {config.CONSULTATIONS_LITE} fehlt – Beratungen ohne Sitzung/TOP.")
-    papers = [p for p in _read_jsonl(config.PAPERS) if not p.get("deleted")]
+    # dieselbe Vorlage kann beim seitenweisen Abruf zweimal vorkommen (neue Vorlagen verschieben die Seiten);
+    # doppelt eingetragene Einreichende und Zuständigkeiten vermeiden (Code-Prüfung 23.10.2026)
+    papers = list({p["id"]: p for p in _read_jsonl(config.PAPERS) if not p.get("deleted")}.values())
     orgs = json.loads(config.ORGANIZATIONS.read_text())
     lite = ({c["uri"]: c for c in _read_jsonl(config.CONSULTATIONS_LITE)}
             if config.CONSULTATIONS_LITE.exists() else {})
@@ -149,13 +164,13 @@ def build():
                 lon, lat = geom["coordinates"][:2]
                 ot = ortsteile.locate(lon, lat)
             locations[loc["id"]] = (
-                loc["id"], (loc.get("streetAddress") or "").strip() or None, loc.get("postalCode"),
-                loc.get("subLocality"), loc.get("description"), lon, lat,
+                loc["id"], ohne_hausnummer(loc.get("streetAddress")), loc.get("postalCode"),
+                loc.get("subLocality"), ohne_hausnummer(loc.get("description")), lon, lat,
                 ot["ortsteil_bez"] if ot else None, ot["ortsteil"] if ot else None,
                 ot["bezirk_bez"] if ot else None, "strasse", "oparl-bonn")
             rows["ploc"].append((p["id"], loc["id"], "A", "oparl_location",
                                  "hoch" if lon is not None else "niedrig",
-                                 loc.get("description"), loc["id"]))
+                                 ohne_hausnummer(loc.get("description")), loc["id"]))
 
         bv_bezirke[p["id"]] = bezirke
         for nr, ev in plan_numbers(p.get("name")):
