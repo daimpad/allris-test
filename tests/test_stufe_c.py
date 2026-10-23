@@ -74,6 +74,46 @@ class StufeCTest(unittest.TestCase):
         orte[0]["rolle"] = "erwähnt"
         self.assertEqual(stufe_c.pruefen(self.gaz, text, orte[:1], [], objekte=obj)[0], [])
 
+    def test_abgelegt_werden_nur_namen_aus_den_verzeichnissen(self):
+        """Code-Prüfung 23.10.2026: die Wortfolge des Modells steht wörtlich im Text und wird nicht aufbewahrt."""
+        from pipeline.objekte import Objekte
+        obj = Objekte({"way/1": {"name": "Adelheidisschule", "art": "Schule", "ortsteil": "Vilich", "bezirk": "Beuel",
+                                 "lon": 7.1, "lat": 50.75}})
+        text = (KOPF + "Die GGS Adelheidisschule wird erweitert. Ampel an der Kreuzung Endenicher Straße/Mainzer Straße."
+                " Gleise linksrheinisch durch die Stadt.")
+        orte = [{"name": "GGS Adelheidisschule", "art": "objekt", "rolle": "gegenstand", "ortsteil": ""},
+                {"name": "Kreuzung Endenicher Straße/Mainzer Straße", "art": "kreuzung", "rolle": "gegenstand", "ortsteil": ""},
+                {"name": "Gleise linksrheinisch", "art": "objekt", "rolle": "erwähnt", "ortsteil": "Rheinufer"},
+                {"name": "Mehlem", "art": "ortsteil", "rolle": "gegenstand", "ortsteil": ""}]   # nicht im Text
+        abgelegt = stufe_c.verzeichnisnamen(orte, self.gaz, obj, text)
+        self.assertEqual([(o["name"], o["art"], o["ortsteil"]) for o in abgelegt],
+                         [("Adelheidisschule", "objekt", ""), ("Endenicher Straße / Mainzer Straße", "kreuzung", ""),
+                          ("", "objekt", "")])
+        self.assertEqual(abgelegt[0]["osm"], "way/1")
+        self.assertTrue(all(o["verzeichnis"] for o in abgelegt))
+        self.assertEqual(stufe_c.verzeichnisnamen(abgelegt, self.gaz, obj, text), abgelegt)   # nur einmal
+        # Gegenprüfung und Audit wie mit den Namen des Modells
+        b_rows, _ = volltext.locate(self.gaz, text)
+        vorher, nachher = [], []
+        alt = stufe_c.pruefen(self.gaz, text, orte, b_rows, objekte=obj, objekt_befunde=vorher)
+        neu = stufe_c.pruefen(self.gaz, text, abgelegt, b_rows, objekte=obj, objekt_befunde=nachher)
+        self.assertEqual(neu, alt)
+        self.assertEqual(nachher, vorher)
+
+    def test_bestand_wird_bereinigt(self):
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            texte = d / "texte.jsonl"
+            texte.write_text(json.dumps({"uri": "f0", "sha": "s0", "text": KOPF + "Spielfläche hinter der Endenicher Straße"}))
+            (d / stufe_c.DATEI).write_text(json.dumps({"sha": "s0", "datei": "f0", "drucksache": "260000", "orte": [
+                {"name": "Spielfläche hinter der Endenicher Straße", "art": "objekt", "rolle": "gegenstand", "ortsteil": ""}]}) + "\n")
+            with mock.patch.object(config, "TEXTE", texte), mock.patch.object(stufe_c, "Gazetteer", lambda: self.gaz):
+                self.assertEqual(stufe_c.nur_verzeichnis(d), 1)
+                self.assertEqual(stufe_c.nur_verzeichnis(d), 0)
+            inhalt = (d / stufe_c.DATEI).read_text()
+            self.assertNotIn("Spielfläche", inhalt)
+            self.assertEqual([o["name"] for o in stufe_c.laden(d)["s0"]["orte"]], ["Endenicher Straße"])
+
     def test_aufzaehlung_von_gebaeuden_wird_nicht_verortet(self):
         from pipeline.objekte import Objekte
         ots = ["Vilich", "Beuel-Mitte", "Duisdorf", "Endenich", "Kessenich"]
@@ -116,7 +156,8 @@ class StufeCTest(unittest.TestCase):
             calls = []
             def anfrage(titel, text, key):
                 calls.append(titel)
-                return '{"orte": [{"name": "Endenich", "art": "ortsteil", "rolle": "gegenstand"}]}', {"ein": 10, "aus": 5}
+                return ('{"orte": [{"name": "Endenich", "art": "ortsteil", "rolle": "gegenstand"},'
+                        '{"name": "Kopf Endenich", "art": "objekt", "rolle": "erwähnt"}]}'), {"ein": 10, "aus": 5}
             with mock.patch.object(config, "PAPERS", papers), mock.patch.object(config, "TEXTE", texte):
                 with mock.patch.dict(os.environ, {}, clear=True):
                     stufe_c.erzeugen(db, d / "out", anfrage=anfrage)
@@ -127,6 +168,8 @@ class StufeCTest(unittest.TestCase):
             self.assertEqual(len(calls), 1)  # Bürgerantrag ausgenommen, p2 mit eigenem Ortsbezug
             rows = list(stufe_c.laden(d / "out").values())
             self.assertEqual([(r["drucksache"], r["orte"][0]["name"]) for r in rows], [("260000", "Endenich")])
+            # die Wortfolge „Kopf Endenich“ wird nicht abgelegt, nur Namen aus den Verzeichnissen
+            self.assertNotIn("Kopf", (d / "out" / stufe_c.DATEI).read_text())
 
     def test_gescheiterte_anfrage_wird_wiederholt(self):
         with tempfile.TemporaryDirectory() as d:

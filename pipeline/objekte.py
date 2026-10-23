@@ -60,6 +60,8 @@ class Objekte:
             if len(n) >= 4 and n not in GATTUNG and not o["name"][:1].isdigit():
                 self.by_norm[n].setdefault(o["ortsteil"], dict(o, osm=osm))
                 self.ohne_leer.setdefault(n.replace(" ", ""), n)
+        # OSM-Kennung → Objekt (Stufe C legt Gebäude mit Kennung ab, nicht mit der Wortfolge des Modells)
+        self.by_osm = {x["osm"]: x for by_ot in self.by_norm.values() for x in by_ot.values()}
 
     def im_titel(self, titel):
         """Gebäude und Anlagen, deren Name im Titel steht (Regeln für Titel siehe oben)."""

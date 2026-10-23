@@ -3,7 +3,8 @@
 Für Vorlagen ohne eigenen Ortsbezug aus Titel, Ort der Stadt oder Bebauungsplan (dieselben wie bei volltext.py).
 1. Erzeugen (`erzeugen`, nur mit Schlüssel, höchstens MAX_JE_LAUF je Lauf, je Datei-Hash einmal): Das Modell nennt
    aus dem bereinigten Hauptteil je Ort Name, Art und Rolle („gegenstand“ oder „erwähnt“). Gespeichert werden nur
-   diese Angaben, nie Text (Rahmen laut Antwort der Stadt Bonn vom 19.10.2026: keine Zitate, keine Auszüge).
+   Namen aus den Verzeichnissen (`verzeichnisnamen`), nie die Wortfolge des Modells und nie Text (Rahmen laut
+   Antwort der Stadt Bonn vom 19.10.2026: keine Zitate, keine Auszüge; Code-Prüfung 23.10.2026).
    Ablage: orte_stufe_c.jsonl im Branch `kurzfassungen` (Verzeichnis KURZFASSUNGEN).
 2. Gegenprüfen (`pruefen`): Ein Ort zählt nur, wenn sein Name im Hauptteil steht und das Verzeichnis der Stufe B ihn
    einer Straße, einem Ortsteil oder einem Stadtbezirk zuordnet; Gattungsnamen („Markt“) und Listen mit mehr als
@@ -82,12 +83,64 @@ def bereinigen(antwort):
     return out
 
 
+def verzeichnisnamen(orte, gaz, objekte=None, text=None):
+    """Orte des Modells → nur Namen aus den Verzeichnissen: Straßen, Ortsteile und Stadtbezirke (mehrere in einem Namen
+    mit „ / “ verbunden, etwa bei Kreuzungen), Gebäude und Anlagen mit OSM-Kennung. Die Wortfolge des Modells steht
+    wörtlich im Text und wird darum nicht aufbewahrt (keine Auszüge). Was nicht wörtlich im Hauptteil steht oder in
+    keinem Verzeichnis vorkommt, entfällt; bei Gebäuden ohne Treffer bleibt nur der Befund für das Audit. Ohne text
+    entfällt die Prüfung „wörtlich im Hauptteil“ (dann nur Namen aus den Verzeichnissen)."""
+    low = re.sub(r"\s+", " ", volltext.clean(text)[0]).lower() if text is not None else None
+    out = []
+    for o in orte:
+        if o.get("verzeichnis"):
+            out.append(o)
+            continue
+        if low is not None and o["name"].lower() not in low:
+            continue
+        hint = o["ortsteil"] if o["ortsteil"] in gaz.ot_by_name else ""
+        neu = {"art": o["art"], "rolle": o["rolle"], "ortsteil": hint, "verzeichnis": True}
+        if o["art"] == "objekt" and objekte is not None:
+            obj, befund = objekte.finden(o["name"], hint if low is not None and hint.lower() in low else "")
+            if obj:
+                out.append(dict(neu, name=obj["name"], osm=obj["osm"], befund=befund))
+                continue
+            neu["befund"] = befund
+        rows = gaz.locate(f"{o['name']}, {hint}" if hint else o["name"])
+        names = list(dict.fromkeys(r["name"] for r in rows if r["name"] not in volltext.GATTUNG))
+        if names or "befund" in neu:
+            out.append(dict(neu, name=" / ".join(names)))
+    return out
+
+
 def laden(verzeichnis=None):
     path = Path(verzeichnis or VERZEICHNIS) / DATEI
     if not path.exists():
         return {}
     with open(path, encoding="utf-8") as f:
         return {r["sha"]: r for r in map(json.loads, f)}
+
+
+def _schreiben(base, have):
+    with open(base / DATEI, "w", encoding="utf-8") as f:
+        for sha in sorted(have):
+            f.write(json.dumps(have[sha], ensure_ascii=False) + "\n")
+
+
+def nur_verzeichnis(verzeichnis=None):
+    """Bestand bereinigen: Antworten, deren Orte noch die Wortfolge des Modells tragen (vor dem 23.10.2026), auf Namen
+    aus den Verzeichnissen zurückführen. Liefert die Zahl der geänderten Antworten."""
+    base = Path(verzeichnis or VERZEICHNIS)
+    have = laden(base)
+    alt = [r for r in have.values() if any(not o.get("verzeichnis") for o in r["orte"])]
+    if not alt:
+        return 0
+    texte, gaz, objekte = _texte(), Gazetteer(), Objekte()
+    for r in alt:
+        t = texte.get(r["datei"])
+        r["orte"] = verzeichnisnamen(r["orte"], gaz, objekte, t["text"] if t and t["sha"] == r["sha"] else None)
+    _schreiben(base, have)
+    print(f"Stufe C: {len(alt)} Antworten auf Namen aus den Verzeichnissen zurückgeführt → {base / DATEI}")
+    return len(alt)
 
 
 def kandidaten(db):
@@ -130,12 +183,13 @@ def erzeugen(db, verzeichnis=None, anfrage=_anfrage):
     todo = [(ref, p) for ref, p in sorted(kandidaten(db).items())
             if p["main_file"] in texte and offen(texte[p["main_file"]]["sha"])][:MAX_JE_LAUF]
     tokens = {"ein": 0, "aus": 0}
+    gaz, objekte = (Gazetteer(), Objekte()) if todo else (None, None)
     for ref, p in todo:
         t = texte[p["main_file"]]
         main = re.sub(r"\s+", " ", volltext.clean(t["text"])[0]).strip()[:MAX_ZEICHEN]
         try:
             antwort, usage = anfrage(p["name"] or "", main, schluessel)
-            orte, fehler = bereinigen(antwort), None
+            orte, fehler = verzeichnisnamen(bereinigen(antwort), gaz, objekte, t["text"]), None
             if sprachmodell.json_aus(antwort) is None:
                 fehler = ("Antwort abgeschnitten" if usage.get("aus", 0) >= MAX_TOKENS
                           else "Antwort ohne lesbares JSON")
@@ -148,9 +202,7 @@ def erzeugen(db, verzeichnis=None, anfrage=_anfrage):
         have[t["sha"]] = {"sha": t["sha"], "datei": p["main_file"], "drucksache": ref, "orte": orte, "fehler": fehler,
                           "versuche": versuche, "fassung": FASSUNG, "anbieter": sprachmodell.ANBIETER, "modell": MODELL,
                           "erzeugt": datetime.now(timezone.utc).date().isoformat()}
-    with open(base / DATEI, "w", encoding="utf-8") as f:
-        for sha in sorted(have):
-            f.write(json.dumps(have[sha], ensure_ascii=False) + "\n")
+    _schreiben(base, have)
     sprachmodell.protokoll(base, "stufe-c", MODELL, len(todo), tokens,
                            sum(1 for ref, p in todo if have[texte[p["main_file"]]["sha"]]["fehler"]))
     print(f"Stufe C: {len(todo)} neu ({tokens['ein']} Eingabe-, {tokens['aus']} Ausgabe-Tokens, {MODELL}), "
@@ -166,12 +218,18 @@ def pruefen(gaz, text, orte, b_rows, bv_bezirke=(), objekte=None, objekt_befunde
     low = re.sub(r"\s+", " ", main).lower()
     found = []
     for o in orte:
-        if o["name"].lower() not in low:
+        # Namen aus den Verzeichnissen (verzeichnisnamen) wurden beim Ablegen gegen den Hauptteil geprüft
+        verz = o.get("verzeichnis")
+        if not verz and o["name"].lower() not in low:
             continue   # nicht wörtlich im Hauptteil: nicht übernommen
         hint = o["ortsteil"] if o["ortsteil"] in gaz.ot_by_name else ""
         if o["art"] == "objekt" and objekte is not None:
-            # Ortsteil des Modells nur, wenn er im Text steht
-            obj, befund = objekte.finden(o["name"], hint if hint.lower() in low else "")
+            if verz:
+                obj = objekte.by_osm.get(o.get("osm"))
+                befund = o.get("befund", "") if obj or not o.get("osm") else "nicht mehr im Verzeichnis"
+            else:
+                # Ortsteil des Modells nur, wenn er im Text steht
+                obj, befund = objekte.finden(o["name"], hint if hint.lower() in low else "")
             if objekt_befunde is not None:
                 objekt_befunde.append(("", befund) if obj is None else (f"{obj['name']} ({obj['ortsteil']})", befund))
             if obj:
@@ -179,6 +237,8 @@ def pruefen(gaz, text, orte, b_rows, bv_bezirke=(), objekte=None, objekt_befunde
                                       lon=obj["lon"], lat=obj["lat"], confidence="niedrig", method="objekt",
                                       objektart=obj["art"], osm=obj["osm"])))
                 continue
+        if not o["name"]:
+            continue   # Gebäude ohne Treffer im Verzeichnis: nur der Befund
         rows = gaz.locate(f"{o['name']}, {hint}" if hint else o["name"], bv_bezirke)
         rows = [r for r in rows if r["name"] not in volltext.GATTUNG and (not hint or r["level"] != "ortsteil"
                                                                           or r["name"] == hint)]
@@ -322,6 +382,10 @@ def _stichprobe(base, kand, changes):
 
 def schritt():
     """Pipeline-Schritt `stufe-c` (nach build, vor export): neue Anfragen, dann Gegenprüfung und Audit."""
+    try:
+        nur_verzeichnis()
+    except Exception:   # der Bestand bleibt dann unverändert; neue Antworten tragen trotzdem nur Verzeichnisnamen
+        traceback.print_exc()
     db = sqlite3.connect(config.DB)
     try:
         erzeugen(db)
