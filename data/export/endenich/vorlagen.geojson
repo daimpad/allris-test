@@ -2,20 +2,20 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 558,
-  "generated_at": "2026-10-22T19:14:56+00:00",
+  "count": 581,
+  "generated_at": "2026-10-23T05:21:30+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-22T19:05:23+00:00"
+    "retrieved_at": "2026-10-23T04:37:33+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-22T19:07:50+00:00"
+    "retrieved_at": "2026-10-23T04:51:09+00:00"
    },
    {
     "name": "osm",
@@ -4418,6 +4418,102 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "230636-06 AA",
+    "name": "Umsetzung von weiteren Fahrradstraßen in der Stadt Bonn Antrag zur Vorlage 230636",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-10-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012355"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073676,
+     50.727971
+    ]
+   },
+   "properties": {
+    "reference": "230636-06 AA",
+    "name": "Umsetzung von weiteren Fahrradstraßen in der Stadt Bonn Antrag zur Vorlage 230636",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-10-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Frongasse",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012355"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.076835,
+     50.728342
+    ]
+   },
+   "properties": {
+    "reference": "230636-06 AA",
+    "name": "Umsetzung von weiteren Fahrradstraßen in der Stadt Bonn Antrag zur Vorlage 230636",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-10-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Regerstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012355"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078475,
+     50.72715
+    ]
+   },
+   "properties": {
+    "reference": "230636-06 AA",
+    "name": "Umsetzung von weiteren Fahrradstraßen in der Stadt Bonn Antrag zur Vorlage 230636",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-10-16",
+    "amt": "01-2 Ratsbüro",
+    "place": "Wiesenweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012355"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0729439,
      50.7257598
     ]
@@ -5234,6 +5330,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.061371,
+     50.72951
+    ]
+   },
+   "properties": {
+    "reference": "240931",
+    "name": "Denkmalrelevante Vorlagen in anderen Gremien",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2024-06-03",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017440"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.080755,
      50.715622
     ]
@@ -5347,6 +5467,30 @@
     "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017441"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "240679-01 AA",
+    "name": "Fortschreibung des Nahverkehrsplanes – Maßnahmen zum Fahrplanwechsel im Dezember 2024 Antrag zur Vorlage 240679",
+    "paper_type": "Änderungsantrag",
+    "date": "2024-05-23",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017438"
    }
   },
   {
@@ -5690,6 +5834,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "240728",
+    "name": "Informationsbrief - Sanierung Hauptsammler West",
+    "paper_type": "Informationsbrief",
+    "date": "2024-04-24",
+    "amt": "Stabsstellle Bürgerbeteiligung",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017020"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0708877,
      50.7295937
     ]
@@ -5810,6 +5978,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.064404,
+     50.736188
+    ]
+   },
+   "properties": {
+    "reference": "240208-01 ST",
+    "name": "Antrag Grüne: Anbringen einer Gedenktafel für die Opfer des Terroranschlags von Hanau",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-04-11",
+    "amt": "41 Kulturamt",
+    "place": "Vili-Viorel-Păun-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015985"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -5906,6 +6098,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07005,
+     50.727177
+    ]
+   },
+   "properties": {
+    "reference": "240324-01 ST",
+    "name": "CDU-Große Anfrage: Reisezeiten auf Hauptverkehrsachsen",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-04-03",
+    "amt": "Dezernat III",
+    "place": "Hermann-Wandersleb-Ring",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016392"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -5923,6 +6139,30 @@
     "method": "volltext_ortsteil_name",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016717"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.068235,
+     50.724591
+    ]
+   },
+   "properties": {
+    "reference": "240212-02 ST",
+    "name": "Große Anfrage Grüne: Umsetzung Beschluss Dynamische Fahrgastinformationssysteme",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-04-02",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Euskirchener Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016429"
    }
   },
   {
@@ -6067,6 +6307,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016308"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "240037-01 ST",
+    "name": "Grüne Bezirksfraktion: Gehwegbreiten WestSide",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2024-03-04",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015706"
    }
   },
   {
@@ -6266,6 +6530,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "240293",
+    "name": "Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2024-02-20",
+    "amt": "05 Amt für Integration und Vielfalt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016010"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.064353,
      50.727459
     ]
@@ -6307,6 +6595,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015902"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
+    ]
+   },
+   "properties": {
+    "reference": "240208",
+    "name": "Antrag Grüne: Anbringen einer Gedenktafel für die Opfer des Terroranschlags von Hanau",
+    "paper_type": "Antrag",
+    "date": "2024-02-06",
+    "amt": "01-2 Ratsbüro",
+    "place": "Kolpingstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015864"
    }
   },
   {
@@ -6722,6 +7034,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.066322,
+     50.736421
+    ]
+   },
+   "properties": {
+    "reference": "240037",
+    "name": "Grüne Bezirksfraktion: Gehwegbreiten WestSide",
+    "paper_type": "Große Anfrage",
+    "date": "2024-01-09",
+    "amt": "01-2 Ratsbüro",
+    "place": "Simone-Veil-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015487"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.069318,
      50.722897
     ]
@@ -7010,6 +7346,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.075382,
+     50.725715
+    ]
+   },
+   "properties": {
+    "reference": "231724-02 ST",
+    "name": "Carsharing-Parkplätze auf dem Magdalenenplatz - Stellungnahme der Verwaltung",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-11-20",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Magdalenenstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+hausnummer",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014796"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -7058,6 +7418,150 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "231656-02 ST",
+    "name": "Bürgerantrag: Überarbeitung der Parkplatzsituation im \"Musikerviertel\"",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-11-11",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014583"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "232011-01 ST",
+    "name": "Grüne/u.w.-Antrag: DFI-Anzeigen",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-11-11",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014618"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "232011-01 ST",
+    "name": "Grüne/u.w.-Antrag: DFI-Anzeigen",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-11-11",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014618"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "231724-01 ST",
+    "name": "Carsharing-Parkplätze auf dem Magdalenenplatz",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-11-02",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014501"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "232011",
+    "name": "Grüne/u.w.-Antrag: DFI-Anzeigen",
+    "paper_type": "Antrag",
+    "date": "2023-10-31",
+    "amt": "01-2 Ratsbüro",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014459"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "232011",
+    "name": "Grüne/u.w.-Antrag: DFI-Anzeigen",
+    "paper_type": "Antrag",
+    "date": "2023-10-31",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014459"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.07895,
      50.72722
     ]
@@ -7075,6 +7579,54 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014584"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "231679",
+    "name": "Dringlichkeitsantrag CDU zur Planung der Westbahn und einer Schnellbuslinie in den Bonner Westen",
+    "paper_type": "Dringlichkeitsantrag",
+    "date": "2023-10-23",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013737"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "230733-02 AA",
+    "name": "Änderungsantrag der Koalition - FDP-Antrag: Einsatzmöglichkeiten von autonomen Fahren im ÖPNV Antrag zur Vorlage 230733",
+    "paper_type": "Änderungsantrag",
+    "date": "2023-10-19",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014387"
    }
   },
   {
@@ -7226,6 +7778,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "231724",
+    "name": "Carsharing-Parkplätze auf dem Magdalenenplatz",
+    "paper_type": "Antrag",
+    "date": "2023-09-22",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013846"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.07885,
      50.72444
     ]
@@ -7243,6 +7819,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013696"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "230661-02 ST",
+    "name": "Grüne-Antrag: Fortschreibung Nahverkehrsplan - Maßnahmen zum Fahrplanwechsel im Dezember 2024, Drucksachen-Nummer: 230661",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-09-04",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013499"
    }
   },
   {
@@ -7298,6 +7898,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "230661-01",
+    "name": "Grüne-Antrag: Fortschreibung Nahverkehrsplan - Maßnahmen zum Fahrplanwechsel im Dezember 2024, Drucksachen-Nummer: 230661",
+    "paper_type": "Antrag",
+    "date": "2023-08-17",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013414"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0764434,
      50.7249815
     ]
@@ -7315,6 +7939,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012692"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "231282",
+    "name": "Verlegung Straßenstrich",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-08-02",
+    "amt": "33 Bürgerdienste",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012949"
    }
   },
   {
@@ -7363,6 +8011,102 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013019"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "230148-02",
+    "name": "Beschlussvorlage zum Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-07-21",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012412"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "230148-02",
+    "name": "Beschlussvorlage zum Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-07-21",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012412"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.071525,
+     50.732446
+    ]
+   },
+   "properties": {
+    "reference": "230148-02",
+    "name": "Beschlussvorlage zum Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-07-21",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Pfaffenweiherweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012412"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.068989,
+     50.732842
+    ]
+   },
+   "properties": {
+    "reference": "230148-02",
+    "name": "Beschlussvorlage zum Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-07-21",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Ulrich-Haberland-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012412"
    }
   },
   {

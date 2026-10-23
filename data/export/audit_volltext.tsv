@@ -1,94 +1,1592 @@
 drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
+190065-08	kein Ort						
+190232-02	kein Ort						
+190232-03 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+190542	nur in Anlagen genannt, nicht verortet						
+200179-15	kein Ort						
+200179-16 ST	kein Ort						
+200645-06	nur in Anlagen genannt, nicht verortet						
 200645-07	kein Ort						
 200645-09 ST	kein Ort						
+200671	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	mittel	1
+200671	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+200671	verortet	Hauptteil	volltext_strasse	Am Ennertbad	Pützchen/Bechlinghoven	mittel	1
+200749-02	kein Ort						
 200749-03 ST	kein Ort						
+201342	kein Ort						
+201375	nur in Anlagen genannt, nicht verortet						
+201375-01	nur in Anlagen genannt, nicht verortet						
 201740-02 ST	kein Ort						
+201747-01	kein Ort						
+201808-01	kein Ort						
+201835	kein Ort						
 201884-01	nur in Anlagen genannt, nicht verortet						
+201891-02	kein Ort						
 202083-01	kein Ort						
+202197-03	kein Ort						
+202197-04 ST	kein Ort						
+202220-07	kein Ort						
+202220-08	kein Ort						
+202220-09	kein Ort						
+202220-10	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+202220-11	kein Ort						
+202220-12	kein Ort						
 202220-13	kein Ort						
+202220-14	kein Ort						
 202220-16	kein Ort						
+202221-02	kein Ort						
 202221-03	kein Ort						
 202221-04 ST	kein Ort						
+202224-02	kein Ort						
+202302	kein Ort						
 202330-04	verortet	Hauptteil	volltext_strasse	Rheinallee	Godesberg-Villenviertel	mittel	1
 202330-04	verortet	Hauptteil	volltext_strasse	Rheinallee	Plittersdorf	mittel	1
 202330-04	verortet	Hauptteil	volltext_strasse	Rheinallee	Rüngsdorf	mittel	1
+202344-16	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
+202346	nur in Anlagen genannt, nicht verortet						
+210055-04 DA	kein Ort						
+210055-05 ST	kein Ort						
 210314-01 ST	kein Ort						
+210314-04	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+210465-03 ST	kein Ort						
 210478-01 ST	kein Ort						
+210580-08	kein Ort						
+210580-09	kein Ort						
 210807-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
 210807-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
 210807-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 210807-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Lessenich/Meßdorf	Lessenich/Meßdorf	niedrig	1
+211383	kein Ort						
+211546	nur in Anlagen genannt, nicht verortet						
+211626-04	kein Ort						
+211775-01	kein Ort						
+211775-02	kein Ort						
+211817-03 DA	Liste (7 Ortsteile), nicht verortet	Hauptteil					
+211955-03	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	1
+211955-05 AA	kein Ort						
+211984-02	verortet	Hauptteil	volltext_strasse	Friedrichstraße	Bonn-Zentrum	mittel	4
+212087-04	verortet	Hauptteil	volltext_ortsteil_name	Limperich	Limperich	niedrig	1
+212089-06	verortet	Hauptteil	volltext_ortsteil_name	Limperich	Limperich	niedrig	1
+212195-05	kein Ort						
+212195-06	nur in Anlagen genannt, nicht verortet						
+212204-01	kein Ort						
+212312-03	kein Ort						
+212312-04 ST	kein Ort						
+212312-05 ST	kein Ort						
 212329-03	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+212388-01	kein Ort						
+220004-06	verortet	Hauptteil	volltext_strasse+hausnummer	Steinstraße	Plittersdorf	niedrig	1
+220004-07	nur in Anlagen genannt, nicht verortet						
 220117-03	kein Ort						
+220164-01	nur in Anlagen genannt, nicht verortet						
+220209-04 ST	kein Ort						
+220395	nur in Anlagen genannt, nicht verortet						
+220411-05	nur in Anlagen genannt, nicht verortet						
+220436-02	verortet	Hauptteil	volltext_strasse	Herzogsfreudenweg	Röttgen	mittel	1
+220492-03	kein Ort						
 220509-05 ST	kein Ort						
 220650-02 ST	kein Ort						
+220676-01	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+220690-02	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+220690-03 ST	kein Ort						
+220717-02	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 220802-01	kein Ort						
 220802-02 ST	kein Ort						
 220802-05	kein Ort						
+220806-03	kein Ort						
 220806-08	kein Ort						
 220806-09 ST	verortet	Hauptteil	volltext_strasse	Deutschherrenstraße	Lannesdorf	niedrig	1
 220806-09 ST	verortet	Hauptteil	volltext_strasse	Deutschherrenstraße	Muffendorf	niedrig	1
 220806-09 ST	verortet	Hauptteil	volltext_strasse	Deutschherrenstraße	Pennenfeld	niedrig	1
 220806-09 ST	verortet	Hauptteil	volltext_strasse	Ermekeilstraße	Südstadt	niedrig	1
+221044-01	kein Ort						
+221044-02 ST	kein Ort						
+221203-03 ST	kein Ort						
+221203-04 AA	kein Ort						
+221209-02 ST	kein Ort						
+221416-03	verortet	Hauptteil	volltext_strasse	Lotharstraße	Kessenich	niedrig	1
+221416-03	verortet	Hauptteil	volltext_strasse+kreuzung	Heinrich-Lützeler-Straße	Poppelsdorf	mittel	2
+221416-03	verortet	Hauptteil	volltext_strasse+kreuzung	Im Wingert	Poppelsdorf	mittel	5
+221416-03	verortet	Hauptteil	volltext_strasse+kreuzung	Robert-Koch-Straße	Poppelsdorf	mittel	2
+221504-04 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	3
+221504-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Löbestraße	Alt-Godesberg	mittel	2
+221504-07	Liste (8 Ortsteile), nicht verortet	Hauptteil					
+221516-01	verortet	Hauptteil	volltext_strasse	Maximilianstraße	Bonn-Zentrum	mittel	1
+221550-07	kein Ort						
+221550-08 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Schickgasse	Buschdorf	niedrig	1
+221550-09 ST	verortet	Hauptteil	volltext_ortsteil_name	Gronau	Gronau	niedrig	1
+221550-10 AA	Titel ohne gemeinsamen Ort, nicht verortet						
+221550-11 AA	kein Ort						
+221550-12 ST	Titel ohne gemeinsamen Ort, nicht verortet						
+221550-13 AA	kein Ort						
 221550-16	kein Ort						
+221603-02	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+221603-02	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
+221675	nur in Anlagen genannt, nicht verortet						
+221675-01 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+221675-02	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+221682-01	verortet	Hauptteil	volltext_strasse	Lievelingsweg	Nordstadt	niedrig	1
+221682-01	verortet	Hauptteil	volltext_strasse	Lievelingsweg	Tannenbusch	niedrig	1
+221795-02	3 Stadtbezirke, stadtweit, nicht verortet	Hauptteil					
+221795-03 AA	3 Stadtbezirke, stadtweit, nicht verortet	Hauptteil					
+221795-04 ST	kein Ort						
+221795-05	kein Ort						
 221797-02	kein Ort						
 221797-03 ST	kein Ort						
+221829	nur in Anlagen genannt, nicht verortet						
+221847-04 ST	kein Ort						
+221847-05 ST	kein Ort						
 222109-05 AA	kein Ort						
+222173-03	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+222178-06	kein Ort						
 222181-03	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+222489-12	verortet	Hauptteil	volltext_strasse	Burgstraße	Alt-Godesberg	niedrig	1
+222489-12	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	3
+222489-12	verortet	Hauptteil	volltext_strasse+kreuzung	Am Hof	Bonn-Zentrum	mittel	5
+222489-12	verortet	Hauptteil	volltext_strasse+kreuzung	Am Neutor	Bonn-Zentrum	mittel	3
+222489-12	verortet	Hauptteil	volltext_strasse+kreuzung	Belderberg	Bonn-Zentrum	mittel	1
+222489-12	verortet	Hauptteil	volltext_strasse+kreuzung	Bischofsplatz	Bonn-Zentrum	mittel	12
+222489-12	verortet	Hauptteil	volltext_strasse+kreuzung	Fürstenstraße	Bonn-Zentrum	mittel	2
+222489-12	verortet	Hauptteil	volltext_strasse+kreuzung	Martinsplatz	Bonn-Zentrum	mittel	7
+222489-12	verortet	Hauptteil	volltext_strasse+kreuzung	Rathausgasse	Bonn-Zentrum	mittel	4
+222489-12	verortet	Hauptteil	volltext_strasse+kreuzung	Wesselstraße	Bonn-Zentrum	mittel	7
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Hof	Bonn-Zentrum	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Neutor	Bonn-Zentrum	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	An der Schloßkirche	Bonn-Zentrum	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Belderberg	Bonn-Zentrum	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Bischofsplatz	Bonn-Zentrum	mittel	2
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Gerhard-von-Are-Straße	Bonn-Zentrum	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Kaiserplatz	Bonn-Zentrum	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Kaiserplatz	Südstadt	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Martinsplatz	Bonn-Zentrum	mittel	3
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Münsterplatz	Bonn-Zentrum	mittel	2
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Rathausgasse	Bonn-Zentrum	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Remigiusplatz	Bonn-Zentrum	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Rheingasse	Bonn-Zentrum	mittel	1
+222489-13 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Stockenstraße	Bonn-Zentrum	mittel	1
+222489-14 AA	verortet	Hauptteil	volltext_strasse	Rathausgasse	Bonn-Zentrum	mittel	2
+222489-14 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Hof	Bonn-Zentrum	niedrig	1
+222489-14 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Neutor	Bonn-Zentrum	mittel	2
+222489-15 AA	verortet	Hauptteil	volltext_strasse	Rathausgasse	Bonn-Zentrum	mittel	2
+222489-15 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Hof	Bonn-Zentrum	mittel	2
+222489-15 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Neutor	Bonn-Zentrum	mittel	2
+222503-02 ST	kein Ort						
+222503-02	verortet	Hauptteil	volltext_ortsteil_name	Oberkassel	Oberkassel	mittel	1
 222504-03	verortet	Hauptteil	volltext_strasse	An der Umkehr	Ramersdorf	mittel	3
 222504-04	verortet	Hauptteil	volltext_strasse	An der Umkehr	Ramersdorf	mittel	2
 222504-04	verortet	Hauptteil	volltext_strasse	Rilkestraße	Beuel-Mitte	niedrig	1
 222504-05	kein Ort						
+230031-04 ST	verortet	Hauptteil	volltext_ortsteil_name	Oberkassel	Oberkassel	niedrig	1
+230055-28 ST	nur in Anlagen genannt, nicht verortet						
+230055-29 AA	verortet	Hauptteil	volltext_strasse	Christian-Miesen-Straße	Dottendorf	mittel	2
+230055-29 AA	verortet	Hauptteil	volltext_strasse	Maxstraße	Nordstadt	niedrig	1
+230055-29 AA	verortet	Hauptteil	volltext_strasse+hausnummer	Adolfstraße	Nordstadt	mittel	2
+230055-29 AA	verortet	Hauptteil	volltext_strasse+hausnummer	Nordstraße	Bonn-Castell	niedrig	1
+230055-29 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Frankenbad	Nordstadt	niedrig	1
+230148-02	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	niedrig	1
+230148-02	verortet	Hauptteil	volltext_strasse+ortsteil	An der Immenburg	Endenich	mittel	2
+230148-02	verortet	Hauptteil	volltext_strasse+ortsteil	Auf dem Hügel	Endenich	mittel	2
+230148-02	verortet	Hauptteil	volltext_strasse+ortsteil	Pfaffenweiherweg	Endenich	mittel	2
+230148-02	verortet	Hauptteil	volltext_strasse+ortsteil	Ulrich-Haberland-Straße	Endenich	niedrig	1
 230201-06	kein Ort						
+230255-01	nur in Anlagen genannt, nicht verortet						
+230255-02	nur in Anlagen genannt, nicht verortet						
 230255-03 AA	kein Ort						
 230255-04	verortet	Hauptteil	volltext_strasse	Grootestraße	Dransdorf	niedrig	1
 230255-04	verortet	Hauptteil	volltext_strasse+ortsteil	Am Hölder	Röttgen	niedrig	1
 230255-04	verortet	Hauptteil	volltext_strasse+ortsteil	Am Sonnenberg	Küdinghoven	niedrig	1
+230262-02	kein Ort						
+230344-01	kein Ort						
+230386-05 ST	verortet	Hauptteil	volltext_strasse	Mozartstraße	Weststadt	mittel	1
+230386-05 ST	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	mittel	1
+230411	nur in Anlagen genannt, nicht verortet						
+230442-03	verortet	Hauptteil	volltext_strasse	Arnoldstraße	Schwarzrheindorf / Vilich-Rheindorf	niedrig	1
+230442-03	verortet	Hauptteil	volltext_strasse	Erna-Neubauer-Damm	Beuel-Mitte	niedrig	1
+230442-03	verortet	Hauptteil	volltext_strasse	Erna-Neubauer-Damm	Schwarzrheindorf / Vilich-Rheindorf	niedrig	1
 230468-02	kein Ort						
 230468-03 ST	kein Ort						
+230474-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Poppelsdorf	Poppelsdorf	niedrig	1
+230474-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Südstadt	Südstadt	niedrig	1
+230474-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
+230474-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Weststadt	Weststadt	niedrig	1
+230479-03	kein Ort						
+230524	Liste (9 Ortsteile), nicht verortet	Hauptteil					
+230524-01	nur in Anlagen genannt, nicht verortet						
+230524-02	verortet	Hauptteil	volltext_strasse+ortsteil	Schieffelingsweg	Duisdorf	niedrig	1
+230524-03 ST	kein Ort						
+230613-01	kein Ort						
 230613-02	kein Ort						
+230623-02 AA	Liste (8 Ortsteile), nicht verortet	Hauptteil					
+230636	nur in Anlagen genannt, nicht verortet						
+230636-002 AA	kein Ort						
+230636-003 AA	kein Ort						
+230636-004 AA	kein Ort						
+230636-01 ST	nur in Anlagen genannt, nicht verortet						
+230636-05	verortet	Hauptteil	volltext_strasse	Bonner Talweg	Kessenich	niedrig	1
+230636-05	verortet	Hauptteil	volltext_strasse	Bonner Talweg	Südstadt	niedrig	1
+230636-05	verortet	Hauptteil	volltext_strasse	Kurfürstenstraße	Südstadt	mittel	6
+230636-05	verortet	Hauptteil	volltext_strasse+ortsteil	Heinrich-Lützeler-Straße	Poppelsdorf	niedrig	1
+230636-05	verortet	Hauptteil	volltext_strasse+ortsteil	Jagdweg	Poppelsdorf	niedrig	1
+230636-05	verortet	Hauptteil	volltext_strasse+ortsteil	Rehfuesstraße	Poppelsdorf	niedrig	1
+230636-05	verortet	Hauptteil	volltext_strasse+ortsteil	Reuterstraße	Poppelsdorf	niedrig	1
+230636-05	verortet	Hauptteil	volltext_strasse+ortsteil	Robert-Koch-Straße	Poppelsdorf	niedrig	1
+230636-05	verortet	Hauptteil	volltext_strasse+ortsteil	Robert-Koch-Straße	Venusberg	niedrig	1
+230636-06 AA	verortet	Hauptteil	volltext_strasse	Wiesenweg	Endenich	niedrig	1
+230636-06 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Endenicher Straße	Endenich	niedrig	1
+230636-06 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Frongasse	Endenich	niedrig	1
+230636-06 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Regerstraße	Endenich	niedrig	1
+230636-07 AA	verortet	Hauptteil	volltext_strasse	Klufterplatz	Friesdorf	mittel	1
+230636-07 AA	verortet	Hauptteil	volltext_strasse	Promenadenweg	Alt-Godesberg	mittel	2
+230636-07 AA	verortet	Hauptteil	volltext_strasse	Promenadenweg	Godesberg-Nord	mittel	2
+230636-07 AA	verortet	Hauptteil	volltext_strasse+hausnummer	Servatiusstraße	Friesdorf	mittel	2
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Südfriedhof	Friesdorf	mittel	1
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Annaberger Straße	Friesdorf	mittel	1
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Austraße	Rüngsdorf	mittel	1
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Frankengraben	Friesdorf	mittel	2
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Hochkreuzallee	Friesdorf	mittel	2
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Im Erlengrund	Friesdorf	mittel	2
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	In der Kumme	Friesdorf	mittel	1
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	John-J.-McCloy-Ufer	Mehlem	mittel	1
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	John-J.-McCloy-Ufer	Rüngsdorf	mittel	1
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Rüdigerstraße	Mehlem	mittel	2
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Schwalbengarten	Friesdorf	mittel	1
+230636-07 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Siegfriedstraße	Mehlem	mittel	2
+230636-08 ST	kein Ort						
+230636-09 ST	verortet	Hauptteil	volltext_strasse	Argelanderstraße	Kessenich	mittel	3
+230636-09 ST	verortet	Hauptteil	volltext_strasse	Argelanderstraße	Südstadt	mittel	3
+230636-09 ST	verortet	Hauptteil	volltext_strasse	Bonner Talweg	Kessenich	mittel	2
+230636-09 ST	verortet	Hauptteil	volltext_strasse	Bonner Talweg	Südstadt	mittel	2
+230636-09 ST	verortet	Hauptteil	volltext_strasse	Kurfürstenstraße	Südstadt	mittel	13
+230636-09 ST	verortet	Hauptteil	volltext_strasse	Venusbergweg	Südstadt	niedrig	1
+230636-09 ST	verortet	Hauptteil	volltext_strasse	Weberstraße	Gronau	niedrig	1
+230636-09 ST	verortet	Hauptteil	volltext_strasse	Weberstraße	Südstadt	niedrig	1
+230636-09 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Heinrich-Lützeler-Straße	Poppelsdorf	mittel	2
+230636-09 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Jagdweg	Poppelsdorf	mittel	3
+230636-09 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Rehfuesstraße	Poppelsdorf	mittel	2
+230636-09 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Reuterstraße	Poppelsdorf	mittel	4
+230636-09 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Robert-Koch-Straße	Poppelsdorf	niedrig	1
+230636-09 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Robert-Koch-Straße	Venusberg	niedrig	1
+230636-10 ST	kein Ort						
+230636-11	verortet	Hauptteil	volltext_strasse	Bergstraße	Kessenich	niedrig	1
+230636-11	verortet	Hauptteil	volltext_strasse	Bergstraße	Venusberg	niedrig	1
+230636-11	verortet	Hauptteil	volltext_strasse+ortsteil	Kessenicher Straße	Dottendorf	mittel	2
+230636-12	kein Ort						
+230643-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Südstadt	Südstadt	mittel	1
+230643-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	mittel	1
+230643-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Weststadt	Weststadt	mittel	1
+230649-02	kein Ort						
+230652-01 ST	kein Ort						
+230655-03 ST	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	niedrig	1
+230661-01	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	1
+230661-01	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	mittel	1
+230661-01	verortet	Hauptteil	volltext_strasse	Mondorfer Fähre	Graurheindorf	mittel	1
+230661-01	verortet	Hauptteil	volltext_strasse+ortsteil	Agnetendorfer Straße	Tannenbusch	mittel	4
+230661-01	verortet	Hauptteil	volltext_strasse+ortsteil	Oppelner Straße	Tannenbusch	mittel	1
+230661-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
+230661-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	mittel	1
+230661-02 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Agnetendorfer Straße	Tannenbusch	mittel	4
+230661-02 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Oppelner Straße	Tannenbusch	mittel	2
+230661-02 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Waldenburger Ring	Tannenbusch	mittel	1
+230701-01 ST	kein Ort						
+230704	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
+230704-01 AA	kein Ort						
+230704-02	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+230704-03 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Ennertweg	Küdinghoven	mittel	3
+230705-03 ST	kein Ort						
+230705-04	verortet	Hauptteil	volltext_ortsteil_adjektiv	Graurheindorf	Graurheindorf	niedrig	1
+230705-04	verortet	Hauptteil	volltext_strasse	Am Römerkastell	Bonn-Castell	niedrig	1
+230705-04	verortet	Hauptteil	volltext_strasse	Drususstraße	Bonn-Castell	niedrig	1
+230705-04	verortet	Hauptteil	volltext_strasse	Graurheindorfer Straße	Bonn-Castell	mittel	3
+230705-04	verortet	Hauptteil	volltext_strasse	Rosental	Bonn-Castell	mittel	2
+230724-04 ST	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	niedrig	1
+230728-03	kein Ort						
+230728-04 ST	kein Ort						
+230728-05 ST	kein Ort						
+230729-02	verortet	Hauptteil	volltext_strasse	Bischofsplatz	Bonn-Zentrum	mittel	5
+230729-02	verortet	Hauptteil	volltext_strasse	Fürstenstraße	Bonn-Zentrum	niedrig	1
+230729-02	verortet	Hauptteil	volltext_strasse	Martinsplatz	Bonn-Zentrum	mittel	2
+230731-03 ST	kein Ort						
+230733-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
+230734-01 ST	kein Ort						
+230735-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Lannesdorf	Lannesdorf	mittel	1
+230735-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	mittel	1
+230735-01 ST	verortet	Hauptteil	volltext_strasse	Am Kurpark	Alt-Godesberg	mittel	1
+230735-01 ST	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Alt-Godesberg	mittel	1
+230735-01 ST	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Pennenfeld	mittel	1
+230735-01 ST	verortet	Hauptteil	volltext_strasse	Kurfürstenallee	Alt-Godesberg	mittel	3
+230740-01 ST	verortet	Hauptteil	volltext_strasse	Alte Bahnhofstraße	Alt-Godesberg	mittel	1
+230740-01 ST	verortet	Hauptteil	volltext_strasse	Am Kurpark	Alt-Godesberg	mittel	1
+230740-01 ST	verortet	Hauptteil	volltext_strasse	Moltkeplatz	Alt-Godesberg	mittel	1
+230740-01 ST	verortet	Hauptteil	volltext_strasse	Ria-Maternus-Platz	Alt-Godesberg	mittel	1
+230747-02 ST	kein Ort						
+230757	nur in Anlagen genannt, nicht verortet						
+230771-01	verortet	Hauptteil	volltext_strasse+ortsteil	Ermekeilstraße	Südstadt	mittel	1
+230771-01	verortet	Hauptteil	volltext_strasse+ortsteil	Heinrich-Körner-Straße	Kessenich	mittel	1
+230771-01	verortet	Hauptteil	volltext_strasse+ortsteil	Poppelsdorfer Allee	Südstadt	mittel	1
+230771-01	verortet	Hauptteil	volltext_strasse+ortsteil	Reuterstraße	Kessenich	mittel	1
+230771-01	verortet	Hauptteil	volltext_strasse+ortsteil	Reuterstraße	Poppelsdorf	mittel	1
+230771-01	verortet	Hauptteil	volltext_strasse+ortsteil	Reuterstraße	Südstadt	mittel	1
+230782-03	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+230782-03	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+230782-03	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
 230782-04	kein Ort						
+230811-02 ST	nur in Anlagen genannt, nicht verortet						
+230812-01 ST	kein Ort						
+230812-02 ST	kein Ort						
 230812-04 ST	verortet	Hauptteil	volltext_strasse	Kennedyallee	Hochkreuz	mittel	1
 230812-04 ST	verortet	Hauptteil	volltext_strasse	Kennedyallee	Plittersdorf	mittel	1
+230820-02 AA	Liste (13 Ortsteile), nicht verortet	Hauptteil					
+230820-03 AA	kein Ort						
+230820-04 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+230820-05 AA	kein Ort						
+230820-06 AA	verortet	Hauptteil	volltext_strasse	Brunnenallee	Alt-Godesberg	mittel	3
+230820-07 AA	verortet	Hauptteil	volltext_strasse	Im Gries	Lannesdorf	niedrig	1
+230820-07 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Galileistraße	Pennenfeld	mittel	2
 230820-10 AA	verortet	Hauptteil	volltext_strasse	Colmantstraße	Weststadt	mittel	2
+230822-02	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	niedrig	1
+230822-02	verortet	Hauptteil	volltext_strasse	Borsigallee	Brüser Berg	mittel	1
+230822-02	verortet	Hauptteil	volltext_strasse	Brüser Damm	Brüser Berg	mittel	1
+230822-02	verortet	Hauptteil	volltext_strasse	Celsiusstraße	Brüser Berg	mittel	2
+230822-02	verortet	Hauptteil	volltext_strasse	Fahrenheitstraße	Brüser Berg	mittel	1
+230822-02	verortet	Hauptteil	volltext_strasse	Heinkelstraße	Brüser Berg	mittel	1
+230822-02	verortet	Hauptteil	volltext_strasse	Marie-Curie-Straße	Brüser Berg	mittel	1
+230822-02	verortet	Hauptteil	volltext_strasse	Pascalstraße	Brüser Berg	mittel	1
+230822-02	verortet	Hauptteil	volltext_strasse	Riemannstraße	Brüser Berg	mittel	1
+230822-02	verortet	Hauptteil	volltext_strasse	Réaumurstraße	Brüser Berg	mittel	1
+230835-01 ST	kein Ort						
+230835-02 ST	kein Ort						
+230850-02	kein Ort						
+230880-01 AA	kein Ort						
 230880-03	nur in Anlagen genannt, nicht verortet						
+230882-01 ST	kein Ort						
+230882-02 ST	verortet	Hauptteil	volltext_strasse	Wesselheideweg	Duisdorf	mittel	1
+230882-03 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+230897-01 AA	verortet	Hauptteil	volltext_strasse	Annaberger Straße	Friesdorf	mittel	1
+230897-01 AA	verortet	Hauptteil	volltext_strasse	Annaberger Straße	Röttgen	niedrig	1
+230897-01 AA	verortet	Hauptteil	volltext_strasse	Mainzer Straße	Mehlem	mittel	1
+230897-01 AA	verortet	Hauptteil	volltext_strasse	Mainzer Straße	Rüngsdorf	mittel	1
+230897-02 AA	kein Ort						
+230897-03 AA	verortet	Hauptteil	volltext_strasse	Römerplatz	Rüngsdorf	mittel	1
+230897-03 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Giselherstraße	Mehlem	mittel	3
+230897-03 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Gunterstraße	Mehlem	mittel	1
+230897-03 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Görresstraße	Mehlem	mittel	1
+230897-03 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Hagenstraße	Mehlem	mittel	4
+230897-03 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Im Rosenberg	Mehlem	mittel	1
+230897-03 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Mainzer Straße	Mehlem	mittel	2
+230897-03 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Oberaustraße	Mehlem	mittel	6
+230897-03 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Remagener Straße	Mehlem	mittel	1
 230897-05 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Mainzer Straße	Mehlem	mittel	4
 230897-05 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Meckenheimer Straße	Mehlem	mittel	1
 230897-05 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Siegfriedstraße	Mehlem	mittel	1
+230906-05 ST	verortet	Hauptteil	volltext_strasse	Römerstraße	Bonn-Castell	niedrig	1
+230906-05 ST	verortet	Hauptteil	volltext_strasse	Römerstraße	Graurheindorf	niedrig	1
+230960-01 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Argelanderstraße	Südstadt	mittel	2
+230960-01 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Kurfürstenstraße	Südstadt	niedrig	1
+230960-01 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Königstraße	Südstadt	mittel	2
+230960-01 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Weberstraße	Südstadt	mittel	2
+230970-01	nur in Anlagen genannt, nicht verortet						
+230980	nur in Anlagen genannt, nicht verortet						
+231007-01 ST	kein Ort						
+231026	nur in Anlagen genannt, nicht verortet						
+231033-02 ST	kein Ort						
+231033-03 ST	kein Ort						
 231037-02	kein Ort						
+231049-01	kein Ort						
+231058	kein Ort						
+231080-01	kein Ort						
+231080-02 ST	kein Ort						
+231086-03	verortet	Hauptteil	volltext_strasse	Carlo-Schmid-Straße	Hochkreuz	mittel	4
+231087-01 ST	verortet	Hauptteil	volltext_strasse	Emil-Nolde-Straße	Gronau	niedrig	1
+231087-01 ST	verortet	Hauptteil	volltext_strasse	Heinemannstraße	Hochkreuz	niedrig	1
+231087-01 ST	verortet	Hauptteil	volltext_strasse	Karl-Marx-Straße	Gronau	niedrig	1
+231091-01 ST	Liste (9 Ortsteile), nicht verortet	Hauptteil					
+231093	kein Ort						
+231094-01 ST	kein Ort						
+231094-02 AA	kein Ort						
+231094-03 AA	kein Ort						
+231096-01 ST	kein Ort						
+231096-02 AA	kein Ort						
 231098-01	Titel ohne gemeinsamen Ort, nicht verortet						
+231105-02	nur in Anlagen genannt, nicht verortet						
+231106-02 ST	kein Ort						
+231106-04 ST	kein Ort						
+231106-05 ST	kein Ort						
+231106-06 ST	kein Ort						
+231109	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231109-01 ST	nur in Anlagen genannt, nicht verortet						
+231112-02 ST	verortet	Hauptteil	volltext_strasse	Lindenallee	Rüngsdorf	niedrig	1
+231112-02 ST	verortet	Hauptteil	volltext_strasse	Rodeweg	Holzlar	mittel	1
+231112-02 ST	verortet	Hauptteil	volltext_strasse	Siebengebirgsstraße	Hoholz	mittel	1
+231112-02 ST	verortet	Hauptteil	volltext_strasse	Siebengebirgsstraße	Holzlar	mittel	1
+231112-03 AA	verortet	Hauptteil	volltext_strasse	Siebengebirgsstraße	Hoholz	mittel	1
+231112-03 AA	verortet	Hauptteil	volltext_strasse	Siebengebirgsstraße	Holzlar	mittel	1
+231112-04 AA	verortet	Hauptteil	volltext_strasse	Lindenallee	Rüngsdorf	niedrig	1
+231112-04 AA	verortet	Hauptteil	volltext_strasse	Rodeweg	Holzlar	niedrig	1
+231112-05 AA	kein Ort						
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Aennchenplatz	Alt-Godesberg	mittel	1
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Alte Bahnhofstraße	Alt-Godesberg	mittel	1
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Am Kurpark	Alt-Godesberg	mittel	2
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Brunnenallee	Alt-Godesberg	mittel	1
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Koblenzer Straße	Alt-Godesberg	mittel	7
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Kurfürstenallee	Alt-Godesberg	mittel	2
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Löbestraße	Alt-Godesberg	mittel	1
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Redoutenweg	Alt-Godesberg	mittel	1
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Schultheißgasse	Alt-Godesberg	mittel	1
+231131-03	verortet	Hauptteil	volltext_strasse+kreuzung	Theaterplatz	Alt-Godesberg	mittel	2
+231132-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231136	kein Ort						
+231136-01 ST	kein Ort						
+231136-02 ST	kein Ort						
+231144	nur in Anlagen genannt, nicht verortet						
+231145	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+231148-02 ST	kein Ort						
+231149-01	kein Ort						
+231149-02 ST	kein Ort						
+231153-02 ST	kein Ort						
+231157	Titel ohne gemeinsamen Ort, nicht verortet						
 231159	Liste (8 Ortsteile), nicht verortet	Hauptteil					
+231159-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Albertus-Magnus-Straße	Pennenfeld	mittel	1
+231159-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Elsässer Straße	Godesberg-Nord	mittel	4
+231159-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Friesdorfer Straße	Godesberg-Nord	mittel	1
+231159-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Max-Planck-Straße	Pennenfeld	mittel	1
+231159-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Wurzerstraße	Plittersdorf	mittel	1
+231159-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Zanderstraße	Pennenfeld	mittel	1
+231159-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	mittel	1
+231159-02 ST	verortet	Hauptteil	volltext_strasse	Annaberger Straße	Friesdorf	mittel	1
+231159-02 ST	verortet	Hauptteil	volltext_strasse	Annaberger Straße	Röttgen	niedrig	1
+231159-03 ST	Liste (9 Ortsteile), nicht verortet	Hauptteil					
+231160-01 ST	kein Ort						
+231160-02 ST	kein Ort						
+231160-03 AA	kein Ort						
+231176-01 ST	verortet	Hauptteil	volltext_strasse	Brunnenallee	Alt-Godesberg	niedrig	1
+231176-01 ST	verortet	Hauptteil	volltext_strasse	Helmut-Schmidt-Platz	Gronau	niedrig	1
+231176-01 ST	verortet	Hauptteil	volltext_strasse	Remigiusplatz	Bonn-Zentrum	niedrig	1
+231176-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Am Hof	Bonn-Zentrum	niedrig	1
+231176-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Am Neutor	Bonn-Zentrum	niedrig	1
+231176-02 DA	kein Ort						
+231182	kein Ort						
+231182-03 ST	kein Ort						
+231182-04 ST	kein Ort						
 231182-09	kein Ort						
+231183	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	1
+231183	verortet	Hauptteil	volltext_ortsteil_name	Graurheindorf	Graurheindorf	mittel	1
+231183	verortet	Hauptteil	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	mittel	1
+231183	verortet	Hauptteil	volltext_ortsteil_name	Schwarzrheindorf / Vilich-Rheindorf	Schwarzrheindorf / Vilich-Rheindorf	mittel	1
+231187	kein Ort						
+231192	Titel ohne gemeinsamen Ort, nicht verortet						
+231200	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231202	nur in Anlagen genannt, nicht verortet						
+231203-01 ST	kein Ort						
+231203-02 ST	kein Ort						
+231203-03 ST	nur in Anlagen genannt, nicht verortet						
+231212	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	1
+231212	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	mittel	1
+231213	Titel ohne gemeinsamen Ort, nicht verortet						
+231214	kein Ort						
+231215	nur in Anlagen genannt, nicht verortet						
+231219	kein Ort						
+231219-01 AA	kein Ort						
+231219-02 AA	kein Ort						
+231219-04 AA	kein Ort						
+231223	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	mittel	1
+231223-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	niedrig	1
+231223-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	niedrig	1
+231223-03	kein Ort						
+231231	kein Ort						
+231231-01 ST	kein Ort						
+231231-02	kein Ort						
+231232	nur in Anlagen genannt, nicht verortet						
+231232-01 AA	kein Ort						
+231235-02 ST	kein Ort						
+231236-01	kein Ort						
+231239	verortet	Hauptteil	volltext_strasse	Friedrichstraße	Bonn-Zentrum	mittel	6
+231239	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	mittel	2
+231243	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
+231243	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+231243	verortet	Hauptteil	volltext_ortsteil_name	Oberkassel	Oberkassel	niedrig	1
+231243	verortet	Hauptteil	volltext_strasse	Dürenstraße	Godesberg-Villenviertel	mittel	2
+231243	verortet	Hauptteil	volltext_strasse	Frankengraben	Friesdorf	niedrig	1
+231245	kein Ort						
+231248-01 ST	Liste (7 Ortsteile), nicht verortet	Hauptteil					
+231260	kein Ort						
+231268	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	mittel	1
+231269	kein Ort						
+231271-01 ST	kein Ort						
+231274	verortet	Hauptteil	volltext_ortsteil_name	Weststadt	Weststadt	mittel	1
+231275-01 ST	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	mittel	1
+231280	kein Ort						
+231280-01 AA	kein Ort						
+231282	verortet	Hauptteil	volltext_strasse	An der Immenburg	Endenich	niedrig	1
+231282	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
+231282	verortet	Hauptteil	volltext_strasse+kreuzung	Am Dickobskreuz	Weststadt	mittel	10
+231282	verortet	Hauptteil	volltext_strasse+kreuzung	Immenburgstraße	Weststadt	mittel	11
+231282	verortet	Hauptteil	volltext_strasse+kreuzung	Karlstraße	Weststadt	mittel	3
+231284	verortet	Hauptteil	volltext_strasse+ortsteil	Königstraße	Südstadt	mittel	1
+231284	verortet	Hauptteil	volltext_strasse+ortsteil	Lessingstraße	Südstadt	mittel	1
+231284	verortet	Hauptteil	volltext_strasse+ortsteil	Weberstraße	Südstadt	mittel	1
+231284-01 ST	kein Ort						
+231285-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Bornheimer Straße	Nordstadt	mittel	1
+231285-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Weiherstraße	Nordstadt	mittel	1
+231287-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Königstraße	Südstadt	mittel	2
+231287-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Poppelsdorfer Allee	Südstadt	mittel	2
+231289	kein Ort						
+231290	kein Ort						
+231291	Liste (9 Ortsteile), nicht verortet	Hauptteil					
+231292	kein Ort						
+231295-01 ST	kein Ort						
+231296	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	mittel	1
+231296-01 ST	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	mittel	1
+231301	kein Ort						
+231305	kein Ort						
+231308	kein Ort						
+231313	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+231313	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
+231313	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+231313-01 ST	kein Ort						
+231314	verortet	Hauptteil	volltext_strasse+ortsteil	Friedenstraße	Pützchen/Bechlinghoven	mittel	1
+231314-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	mittel	1
+231319	Titel ohne gemeinsamen Ort, nicht verortet						
+231322	Titel ohne gemeinsamen Ort, nicht verortet						
+231323	kein Ort						
+231325	Titel ohne gemeinsamen Ort, nicht verortet						
+231326	Titel ohne gemeinsamen Ort, nicht verortet						
+231327	kein Ort						
+231329	kein Ort						
+231330-01 ST	verortet	Hauptteil	volltext_strasse	Chlodwigplatz	Nordstadt	mittel	2
+231331	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+231332	verortet	Hauptteil	volltext_ortsteil_name	Poppelsdorf	Poppelsdorf	mittel	1
+231332-01 AA	kein Ort						
+231332-02 AA	kein Ort						
+231332-03 AA	kein Ort						
 231332-04 AA	kein Ort						
+231333	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	mittel	1
+231333-01	verortet	Hauptteil	volltext_strasse	Friedrichstraße	Bonn-Zentrum	mittel	1
+231333-02 AA	kein Ort						
+231333-03 ST	kein Ort						
+231334	Titel ohne gemeinsamen Ort, nicht verortet						
+231335	Titel ohne gemeinsamen Ort, nicht verortet						
+231336	kein Ort						
+231336-01 ST	kein Ort						
+231336-02 ST	kein Ort						
+231340	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
+231342	kein Ort						
+231342-01 ST	kein Ort						
+231343	verortet	Hauptteil	volltext_strasse	Annaberger Straße	Friesdorf	mittel	2
+231343	verortet	Hauptteil	volltext_strasse	Annaberger Straße	Röttgen	mittel	2
+231345	Titel ohne gemeinsamen Ort, nicht verortet						
+231346	Titel ohne gemeinsamen Ort, nicht verortet						
+231348	kein Ort						
+231353	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Hardtberg		niedrig	1
+231355	kein Ort						
+231355-01 ST	nur in Anlagen genannt, nicht verortet						
+231357	kein Ort						
+231358	kein Ort						
+231360	Titel ohne gemeinsamen Ort, nicht verortet						
+231361	kein Ort						
+231361-01 AA	kein Ort						
+231361-02 AA	kein Ort						
+231362	Liste (7 Ortsteile), nicht verortet	Hauptteil					
+231363	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231364	kein Ort						
+231365	kein Ort						
+231366	kein Ort						
+231366-01 ST	kein Ort						
+231369	kein Ort						
+231370	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	1
+231377	nur in Anlagen genannt, nicht verortet						
+231378	Titel ohne gemeinsamen Ort, nicht verortet						
+231379	verortet	Hauptteil	volltext_strasse+hausnummer	Sandkaule	Bonn-Zentrum	niedrig	1
+231380	kein Ort						
+231381	kein Ort						
+231382	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	niedrig	1
+231382	verortet	Hauptteil	volltext_strasse	Nordstraße	Bonn-Castell	niedrig	1
+231384	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Acherstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Am Hof	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Am Neutor	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Bischofsplatz	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Bottlerplatz	Bonn-Zentrum	mittel	2
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Brüdergasse	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Dreieck	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Friedensplatz	Bonn-Zentrum	mittel	2
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Friedrichstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Fürstenstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Gangolfstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	In der Sürst	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Kaiserplatz	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Kaiserplatz	Südstadt	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Kasernenstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Kesselgasse	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Martinsplatz	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Mauspfad	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Maximilianstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Mülheimer Platz	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Poststraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Rathausgasse	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Remigiusplatz	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Remigiusstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Sternstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Sterntorbrücke	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Stockenstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Vivatsgasse	Bonn-Zentrum	mittel	2
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Wenzelgasse	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Wesselstraße	Bonn-Zentrum	mittel	1
+231384	verortet	Hauptteil	volltext_strasse+kreuzung	Wilhelmstraße	Bonn-Zentrum	mittel	1
+231386	kein Ort						
+231387	Titel ohne gemeinsamen Ort, nicht verortet						
+231393	Titel ohne gemeinsamen Ort, nicht verortet						
+231394	Liste (11 Ortsteile), nicht verortet	Hauptteil					
+231394-01 AA	verortet	Hauptteil	volltext_strasse	Hensstraße	Godesberg-Villenviertel	mittel	1
+231394-01 AA	verortet	Hauptteil	volltext_strasse+hausnummer	Hopmannstraße	Muffendorf	mittel	1
+231394-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Turmstraße	Plittersdorf	mittel	1
+231394-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Vikariegasse	Plittersdorf	mittel	1
+231396	kein Ort						
+231397	Titel ohne gemeinsamen Ort, nicht verortet						
+231398	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231399	kein Ort						
+231400	kein Ort						
+231400-01 ST	kein Ort						
+231400-04	kein Ort						
+231400-05 ST	kein Ort						
 231400-06 ST	kein Ort						
+231402	kein Ort						
+231403	kein Ort						
+231405	kein Ort						
+231408	verortet	Hauptteil	volltext_strasse	Freier Weg	Schweinheim	mittel	1
+231410-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Hoholz	Hoholz	niedrig	1
+231410-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Holzlar	Holzlar	niedrig	1
+231412	kein Ort						
+231412-01 ST	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	2
+231412-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Am Fronhof	Alt-Godesberg	niedrig	1
+231412-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Theaterplatz	Alt-Godesberg	niedrig	1
+231414	kein Ort						
+231414-01 ST	nur in Anlagen genannt, nicht verortet						
+231418	kein Ort						
+231421	Liste (14 Ortsteile), nicht verortet	Hauptteil					
+231423	kein Ort						
+231425	kein Ort						
+231425-01 ST	kein Ort						
+231425-02 ST	kein Ort						
+231426	kein Ort						
+231430	kein Ort						
+231437	nur in Anlagen genannt, nicht verortet						
+231438	Titel ohne gemeinsamen Ort, nicht verortet						
+231440	kein Ort						
+231441	kein Ort						
+231442	Titel ohne gemeinsamen Ort, nicht verortet						
+231443	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+231443-01 ST	kein Ort						
+231444	kein Ort						
+231446	verortet	Hauptteil	volltext_ortsteil_name	Lessenich/Meßdorf	Lessenich/Meßdorf	niedrig	1
+231446	verortet	Hauptteil	volltext_strasse+hausnummer	Schmittstraße	Duisdorf	mittel	1
+231448	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Damm	Brüser Berg	mittel	1
+231448	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Damm	Duisdorf	mittel	1
+231448	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Damm	Lengsdorf	mittel	1
+231448-01 ST	kein Ort						
+231449	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+231449-01 ST	kein Ort						
+231449-02 ST	kein Ort						
+231449-03 AA	kein Ort						
+231449-04 ST	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+231451	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+231451-01 ST	kein Ort						
+231451-02 ST	verortet	Hauptteil	volltext_strasse	Gaußstraße	Brüser Berg	mittel	1
+231451-03 ST	kein Ort						
+231451-04 ST	verortet	Hauptteil	volltext_strasse	Fahrenheitstraße	Brüser Berg	mittel	1
+231451-04 ST	verortet	Hauptteil	volltext_strasse	Gerberaweg	Duisdorf	mittel	1
+231451-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Gottfried-Kinkel-Straße	Duisdorf	mittel	1
+231451-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	In der Grächt	Lengsdorf	mittel	1
+231451-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Villemombler Straße	Duisdorf	mittel	1
+231451-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Villemombler Straße	Lengsdorf	mittel	1
+231454	Titel ohne gemeinsamen Ort, nicht verortet						
+231455	Titel ohne gemeinsamen Ort, nicht verortet						
+231456-02	kein Ort						
+231459	kein Ort						
+231461	kein Ort						
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Fronhof	Alt-Godesberg	mittel	2
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Kurpark	Alt-Godesberg	mittel	4
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Michaelshof	Alt-Godesberg	mittel	1
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Brunnenallee	Alt-Godesberg	mittel	3
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Bürgerstraße	Alt-Godesberg	mittel	1
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Koblenzer Straße	Alt-Godesberg	mittel	3
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Kurfürstenallee	Alt-Godesberg	mittel	5
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Löbestraße	Alt-Godesberg	mittel	3
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Moltkestraße	Alt-Godesberg	mittel	4
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Pfarrer-Minartz-Straße	Alt-Godesberg	mittel	1
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Schwertberger Straße	Alt-Godesberg	mittel	2
+231463-04 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Villichgasse	Alt-Godesberg	mittel	2
 231463-09 ST	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Alt-Godesberg	mittel	1
 231463-09 ST	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Pennenfeld	mittel	1
+231465	kein Ort						
+231466	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	1
+231468	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+231468	verortet	Hauptteil	volltext_strasse	Salierweg	Graurheindorf	niedrig	4
+231469	Titel ohne gemeinsamen Ort, nicht verortet						
+231472	kein Ort						
+231472-01 AA	kein Ort						
+231474	kein Ort						
+231475	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+231476	Titel ohne gemeinsamen Ort, nicht verortet						
+231477	kein Ort						
+231478	Titel ohne gemeinsamen Ort, nicht verortet						
+231480	Titel ohne gemeinsamen Ort, nicht verortet						
+231482	kein Ort						
+231483	verortet	Hauptteil	volltext_ortsteil_name	Südstadt	Südstadt	mittel	1
+231483	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+231486	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	1
+231488	kein Ort						
+231491	kein Ort						
+231491-01	kein Ort						
+231491-02	kein Ort						
+231491-03	verortet	Hauptteil	volltext_strasse	Viktoriabrücke	Nordstadt	niedrig	1
+231491-04 ST	kein Ort						
+231491-05	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+231491-05	verortet	Hauptteil	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	niedrig	1
+231491-05	verortet	Hauptteil	volltext_strasse	Carlo-Schmid-Straße	Hochkreuz	niedrig	1
+231491-05	verortet	Hauptteil	volltext_strasse	Heckelsbergplatz	Beuel-Mitte	niedrig	1
+231491-05	verortet	Hauptteil	volltext_strasse	Straßburger Weg	Gronau	niedrig	1
+231493	Titel ohne gemeinsamen Ort, nicht verortet						
+231496	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+231497	Titel ohne gemeinsamen Ort, nicht verortet						
+231499	verortet	Hauptteil	volltext_strasse+ortsteil	Buschweg	Röttgen	mittel	1
+231499-01 ST	kein Ort						
+231501	verortet	Hauptteil	volltext_strasse	Budapester Straße	Bonn-Zentrum	mittel	1
+231502	kein Ort						
+231502-01 ST	kein Ort						
+231513	verortet	Hauptteil	volltext_strasse+ortsteil	Vorgebirgsbahnweg	Dransdorf	mittel	1
+231513-01 ST	kein Ort						
+231517	verortet	Hauptteil	volltext_ortsteil_adjektiv	Dransdorf	Dransdorf	mittel	1
+231517-01 ST	verortet	Hauptteil	volltext_ortsteil_adjektiv	Dransdorf	Dransdorf	mittel	1
+231517-01 ST	verortet	Hauptteil	volltext_strasse	Bahnhofstraße	Duisdorf	niedrig	1
+231517-01 ST	verortet	Hauptteil	volltext_strasse	Bahnhofstraße	Lessenich/Meßdorf	mittel	1
+231517-01 ST	verortet	Hauptteil	volltext_strasse	Henri-Spaak-Straße	Duisdorf	niedrig	2
+231520	kein Ort						
+231521	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
+231521	verortet	Hauptteil	volltext_strasse	Thomas-Mann-Straße	Bonn-Zentrum	niedrig	1
+231522	kein Ort						
+231522-01 ST	kein Ort						
+231523	kein Ort						
+231528	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+231528-01 ST	kein Ort						
+231529	kein Ort						
+231529-01 ST	kein Ort						
+231530	verortet	Hauptteil	volltext_strasse	Salierweg	Graurheindorf	mittel	10
+231530-01 AA	kein Ort						
+231536	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	niedrig	1
+231536	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	mittel	1
+231536	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	mittel	1
+231536-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	mittel	1
+231543-02 ST	kein Ort						
+231543-03 ST	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+231550	Titel ohne gemeinsamen Ort, nicht verortet						
+231551	nur in Anlagen genannt, nicht verortet						
+231552	Titel ohne gemeinsamen Ort, nicht verortet						
+231556	verortet	Hauptteil	volltext_ortsteil_name	Muffendorf	Muffendorf	niedrig	1
+231556	verortet	Hauptteil	volltext_strasse	Deichmanns Aue	Rüngsdorf	niedrig	1
+231556-01 ST	kein Ort						
+231556-02 ST	kein Ort						
+231558	kein Ort						
+231559	Titel ohne gemeinsamen Ort, nicht verortet						
+231560	kein Ort						
+231563	kein Ort						
+231567	kein Ort						
+231568	Titel ohne gemeinsamen Ort, nicht verortet						
+231570	nur in Anlagen genannt, nicht verortet						
+231571	nur in Anlagen genannt, nicht verortet						
+231574	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	1
+231577	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231578	kein Ort						
+231578-01 ST	kein Ort						
+231578-02	kein Ort						
+231579	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
+231579	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+231579	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	mittel	1
+231580	nur in Anlagen genannt, nicht verortet						
+231582	kein Ort						
+231582-01 ST	kein Ort						
+231582-02 AA	verortet	Hauptteil	volltext_strasse	Kennedyallee	Hochkreuz	mittel	2
+231582-02 AA	verortet	Hauptteil	volltext_strasse	Kennedyallee	Plittersdorf	mittel	2
+231582-04 AA	kein Ort						
+231582-05 AA	kein Ort						
+231582-06 ST	kein Ort						
+231582-07 ST	kein Ort						
+231582-08 ST	kein Ort						
+231583	kein Ort						
+231584	kein Ort						
+231586	kein Ort						
+231587	nur in Anlagen genannt, nicht verortet						
+231588	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231589	kein Ort						
+231593	nur in Anlagen genannt, nicht verortet						
+231593-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+231593-02 AA	kein Ort						
+231593-03 ST	kein Ort						
+231593-04 AA	kein Ort						
+231593-05 DA	verortet	Hauptteil	volltext_strasse	Am Fronhof	Alt-Godesberg	niedrig	1
+231593-05 DA	verortet	Hauptteil	volltext_strasse	Basteistraße	Rüngsdorf	niedrig	1
+231593-05 DA	verortet	Hauptteil	volltext_strasse	Friedrich-Ebert-Straße	Alt-Godesberg	niedrig	1
+231593-05 DA	verortet	Hauptteil	volltext_strasse	Ria-Maternus-Platz	Alt-Godesberg	niedrig	1
+231593-05 DA	verortet	Hauptteil	volltext_strasse+hausnummer	Friesdorfer Straße	Godesberg-Nord	niedrig	1
+231593-05 DA	verortet	Hauptteil	volltext_strasse+ortsteil	Klufterplatz	Friesdorf	niedrig	1
+231593-05 DA	verortet	Hauptteil	volltext_strasse+ortsteil	Margaretenstraße	Friesdorf	niedrig	1
+231593-06	nur in Anlagen genannt, nicht verortet						
+231593-07	nur in Anlagen genannt, nicht verortet						
+231594	kein Ort						
+231594-01 AA	kein Ort						
+231597	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
+231597	verortet	Hauptteil	volltext_strasse	Am Dickobskreuz	Weststadt	niedrig	1
+231597	verortet	Hauptteil	volltext_strasse	Südstraße	Godesberg-Nord	niedrig	1
+231597	verortet	Hauptteil	volltext_strasse+hausnummer	Immenburgstraße	Weststadt	niedrig	1
+231597	verortet	Hauptteil	volltext_strasse+hausnummer	Lievelingsweg	Tannenbusch	niedrig	1
+231597	verortet	Hauptteil	volltext_strasse+hausnummer	Weststraße	Godesberg-Nord	niedrig	1
+231598	kein Ort						
+231602	Titel ohne gemeinsamen Ort, nicht verortet						
+231607	Titel ohne gemeinsamen Ort, nicht verortet						
+231610	Titel ohne gemeinsamen Ort, nicht verortet						
+231612	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231614	kein Ort						
+231615	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	1
+231615	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	mittel	1
+231616-01 ST	kein Ort						
+231617	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
+231618	kein Ort						
+231619	kein Ort						
+231620	Titel ohne gemeinsamen Ort, nicht verortet						
+231621	kein Ort						
+231624	kein Ort						
+231624-01 ST	kein Ort						
+231625	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	niedrig	1
+231626	Titel ohne gemeinsamen Ort, nicht verortet						
+231627	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	mittel	1
+231627-01	kein Ort						
+231627-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
+231627-02 ST	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
+231627-03	verortet	Hauptteil	volltext_ortsteil_adjektiv	Heiderhof	Heiderhof	mittel	1
+231627-04 ST	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	mittel	1
 231627-08 ST	kein Ort						
+231628	kein Ort						
+231629	kein Ort						
+231629-01 ST	kein Ort						
+231630	kein Ort						
+231631	kein Ort						
+231632-01 ST	kein Ort						
+231634	kein Ort						
+231635	kein Ort						
+231638	nur in Anlagen genannt, nicht verortet						
+231638-01 AA	kein Ort						
+231638-02 ST	kein Ort						
+231638-03	kein Ort						
+231639	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
+231639	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	1
+231639	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	mittel	1
+231639	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+231639	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+231639-01 ST	kein Ort						
+231639-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
+231639-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	niedrig	1
+231639-03 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+231639-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	niedrig	1
+231639-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
+231639-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+231639-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	niedrig	1
+231639-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	niedrig	1
+231641-01 ST	kein Ort						
+231641-02 ST	kein Ort						
+231643	nur in Anlagen genannt, nicht verortet						
+231643-01 ST	kein Ort						
+231647	Titel ohne gemeinsamen Ort, nicht verortet						
+231649	Titel ohne gemeinsamen Ort, nicht verortet						
+231650	Titel ohne gemeinsamen Ort, nicht verortet						
+231652	Liste (9 Ortsteile), nicht verortet	Hauptteil					
+231653-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Combahnstraße	Beuel-Mitte	mittel	1
+231653-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Niederkasseler Straße	Schwarzrheindorf / Vilich-Rheindorf	mittel	1
+231653-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Sankt Augustiner Straße	Beuel-Mitte	mittel	1
+231653-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Sankt Augustiner Straße	Schwarzrheindorf / Vilich-Rheindorf	mittel	1
+231654	kein Ort						
+231656-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Weststadt	Weststadt	mittel	1
+231656-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Poppelsdorf	Poppelsdorf	mittel	1
+231656-02 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Endenicher Straße	Endenich	mittel	2
+231656-02 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Endenicher Straße	Weststadt	mittel	2
+231656-02 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Wittelsbacherring	Weststadt	mittel	1
+231656-02 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Zülpicher Straße	Weststadt	mittel	1
+231660	kein Ort						
+231661	kein Ort						
+231662	kein Ort						
+231662-01 AA	kein Ort						
+231663	kein Ort						
+231663-01 ST	kein Ort						
+231666	kein Ort						
+231667	Titel ohne gemeinsamen Ort, nicht verortet						
+231668	kein Ort						
+231669	kein Ort						
+231670	kein Ort						
+231671	kein Ort						
+231673-01 ST	kein Ort						
+231679	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
+231679	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+231679	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	mittel	1
+231679	verortet	Hauptteil	volltext_strasse	Viktoriabrücke	Nordstadt	mittel	1
+231679-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+231681-01	kein Ort						
+231681-02 AA	verortet	Hauptteil	volltext_strasse+hausnummer	Friesdorfer Straße	Alt-Godesberg	niedrig	1
+231681-03 AA	verortet	Hauptteil	volltext_strasse	Friesdorfer Straße	Friesdorf	niedrig	1
+231681-03 AA	verortet	Hauptteil	volltext_strasse	Friesdorfer Straße	Godesberg-Nord	niedrig	1
+231681-03 AA	verortet	Hauptteil	volltext_strasse+hausnummer	Friesdorfer Straße	Alt-Godesberg	mittel	2
+231681-06	verortet	Hauptteil	volltext_ortsteil_adjektiv	Friesdorf	Friesdorf	niedrig	1
 231681-12 ST	verortet	Hauptteil	volltext_strasse	Friesdorfer Straße	Alt-Godesberg	mittel	2
 231681-12 ST	verortet	Hauptteil	volltext_strasse	Friesdorfer Straße	Friesdorf	niedrig	1
 231681-12 ST	verortet	Hauptteil	volltext_strasse	Friesdorfer Straße	Godesberg-Nord	niedrig	1
+231682	Titel ohne gemeinsamen Ort, nicht verortet						
+231683	kein Ort						
+231684	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+231685	nur in Anlagen genannt, nicht verortet						
+231686	nur in Anlagen genannt, nicht verortet						
+231687	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
+231688	verortet	Hauptteil	volltext_strasse	Baunscheidtstraße	Gronau	niedrig	1
+231688	verortet	Hauptteil	volltext_strasse+hausnummer	Karl-Finkelnburg-Straße	Rüngsdorf	niedrig	1
+231688	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Pennenfeld	niedrig	1
+231688	verortet	Hauptteil	volltext_strasse+hausnummer	Moltkestraße	Alt-Godesberg	niedrig	1
+231691	kein Ort						
+231691-01 ST	kein Ort						
+231691-02 ST	kein Ort						
+231693	kein Ort						
+231697	kein Ort						
+231698	verortet	Hauptteil	volltext_ortsteil_name	Geislar	Geislar	mittel	1
+231698	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	mittel	1
+231698	verortet	Hauptteil	volltext_strasse	Am Ledenhof	Schwarzrheindorf / Vilich-Rheindorf	mittel	1
+231698-01	kein Ort						
+231701	kein Ort						
+231702-01	kein Ort						
+231703	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231703-01 ST	nur in Anlagen genannt, nicht verortet						
+231703-02	kein Ort						
+231704	kein Ort						
+231704-01	verortet	Hauptteil	volltext_strasse+ortsteil	Bonner Talweg	Südstadt	niedrig	1
+231704-01	verortet	Hauptteil	volltext_strasse+ortsteil	Königstraße	Südstadt	niedrig	1
+231704-01	verortet	Hauptteil	volltext_strasse+ortsteil	Prinz-Albert-Straße	Südstadt	niedrig	1
+231704-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	1
+231704-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Südstadt	Südstadt	niedrig	1
+231704-02 AA	verortet	Hauptteil	volltext_strasse	Burbacher Straße	Kessenich	niedrig	1
+231704-02 AA	verortet	Hauptteil	volltext_strasse	Kessenicher Straße	Dottendorf	niedrig	1
+231704-02 AA	verortet	Hauptteil	volltext_strasse	Kessenicher Straße	Kessenich	niedrig	1
+231704-03 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Hospitalweg	Poppelsdorf	mittel	2
+231704-03 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Kirschallee	Poppelsdorf	niedrig	1
+231704-03 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Rehfuesstraße	Poppelsdorf	mittel	2
+231705	kein Ort						
+231706	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
+231706	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	mittel	1
+231706-01	kein Ort						
+231707	kein Ort						
+231712	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231712-02 ST	kein Ort						
+231712-03	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+231713	kein Ort						
+231715	kein Ort						
+231715-01 AA	kein Ort						
+231716	kein Ort						
+231719	kein Ort						
+231719-01 ST	kein Ort						
+231720	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	mittel	1
+231720-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
+231724	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	mittel	1
+231724-01 ST	kein Ort						
+231724-02 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Magdalenenstraße	Endenich	mittel	2
+231726	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+231726	verortet	Hauptteil	volltext_ortsteil_name	Kessenich	Kessenich	niedrig	1
+231726-01	kein Ort						
+231732	verortet	Hauptteil	volltext_strasse+hausnummer	Basketsring	Duisdorf	niedrig	1
+231735	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+231736	verortet	Hauptteil	volltext_strasse	Josefstraße	Bonn-Zentrum	mittel	8
+231736	verortet	Hauptteil	volltext_strasse+kreuzung	Brassertufer	Bonn-Zentrum	mittel	2
+231736	verortet	Hauptteil	volltext_strasse+kreuzung	Brassertufer	Südstadt	mittel	2
+231736	verortet	Hauptteil	volltext_strasse+kreuzung	Erste Fährgasse	Südstadt	mittel	1
+231736	verortet	Hauptteil	volltext_strasse+kreuzung	Rheingasse	Bonn-Zentrum	mittel	11
+231736-01 AA	kein Ort						
+231736-02 AA	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231736-03 ST	kein Ort						
+231736-05 ST	kein Ort						
+231736-06 AA	verortet	Hauptteil	volltext_strasse	Josefstraße	Bonn-Zentrum	mittel	1
+231736-07	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	mittel	1
+231736-07	verortet	Hauptteil	volltext_strasse	Josefstraße	Bonn-Zentrum	mittel	1
+231736-07	verortet	Hauptteil	volltext_strasse	Maximilianstraße	Bonn-Zentrum	mittel	1
+231736-07	verortet	Hauptteil	volltext_strasse	Rathausgasse	Bonn-Zentrum	mittel	1
+231736-08	kein Ort						
+231737	kein Ort						
+231739	kein Ort						
+231739-01 AA	kein Ort						
+231741	kein Ort						
 231742-02	verortet	Hauptteil	volltext_strasse+ortsteil	Auf der Rötschen	Geislar	niedrig	1
 231742-03 ST	kein Ort						
+231743-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Südstadt	Südstadt	niedrig	1
+231743-01 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Rüdigerstraße	Mehlem	niedrig	1
+231744	kein Ort						
 231744-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
 231744-03	kein Ort						
+231753	kein Ort						
+231753-01 AA	kein Ort						
+231753-02 AA	kein Ort						
+231753-03 AA	kein Ort						
+231757	nur in Anlagen genannt, nicht verortet						
+231758	kein Ort						
+231760	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
+231764	verortet	Hauptteil	volltext_strasse	Kaiserplatz	Bonn-Zentrum	mittel	1
+231764	verortet	Hauptteil	volltext_strasse	Kaiserplatz	Südstadt	mittel	1
+231764	verortet	Hauptteil	volltext_strasse	Wesselstraße	Bonn-Zentrum	mittel	1
+231764-01 ST	kein Ort						
+231765	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+231765	verortet	Hauptteil	volltext_ortsteil_name	Poppelsdorf	Poppelsdorf	niedrig	1
+231765-01 AA	kein Ort						
+231765-02 ST	kein Ort						
+231765-03 ST	kein Ort						
+231766	verortet	Hauptteil	volltext_strasse	Hans-Herter-Straße	Buschdorf	mittel	1
+231766-01 ST	verortet	Hauptteil	volltext_strasse	Hans-Herter-Straße	Buschdorf	mittel	1
+231767-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Am Langen Graben	Beuel-Ost	mittel	1
+231767-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Gartenstraße	Vilich	mittel	1
+231767-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Pützchens Chaussee	Beuel-Ost	mittel	4
+231767-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Röhfeldstraße	Beuel-Ost	mittel	3
+231767-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Siegburger Straße	Vilich	mittel	1
+231770	kein Ort						
+231771	kein Ort						
+231773	kein Ort						
+231775	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	mittel	1
+231778	kein Ort						
+231779	kein Ort						
+231779-01 ST	kein Ort						
+231780	kein Ort						
+231780-01 ST	kein Ort						
+231780-02	kein Ort						
 231780-03 AA	kein Ort						
+231781	nur in Anlagen genannt, nicht verortet						
+231781-01 ST	nur in Anlagen genannt, nicht verortet						
+231782	verortet	Hauptteil	volltext_ortsteil_name	Lessenich/Meßdorf	Lessenich/Meßdorf	niedrig	1
+231782	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
+231782	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
+231782-01	kein Ort						
+231783	verortet	Hauptteil	volltext_strasse+kreuzung	Bottlerplatz	Bonn-Zentrum	mittel	2
+231783	verortet	Hauptteil	volltext_strasse+kreuzung	Friedensplatz	Bonn-Zentrum	mittel	2
+231783	verortet	Hauptteil	volltext_strasse+kreuzung	Münsterplatz	Bonn-Zentrum	mittel	2
+231783	verortet	Hauptteil	volltext_strasse+kreuzung	Poststraße	Bonn-Zentrum	mittel	2
+231783	verortet	Hauptteil	volltext_strasse+kreuzung	Vivatsgasse	Bonn-Zentrum	mittel	2
+231783	verortet	Hauptteil	volltext_strasse+kreuzung	Windeckstraße	Bonn-Zentrum	mittel	2
+231784	kein Ort						
+231785	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	1
+231785	verortet	Hauptteil	volltext_strasse+kreuzung	Bischofsplatz	Bonn-Zentrum	mittel	2
+231785	verortet	Hauptteil	volltext_strasse+kreuzung	Franziskanerstraße	Bonn-Zentrum	mittel	1
+231785	verortet	Hauptteil	volltext_strasse+kreuzung	Stockenstraße	Bonn-Zentrum	mittel	4
 231785-01 AA	kein Ort						
+231789	kein Ort						
+231790-02	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231792	kein Ort						
+231798	kein Ort						
+231799	Titel ohne gemeinsamen Ort, nicht verortet						
+231806	kein Ort						
+231807	kein Ort						
+231808-01 ST	kein Ort						
+231809	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
+231816	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231817	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	niedrig	1
+231817-01 ST	kein Ort						
+231820-01 ST	kein Ort						
+231822	kein Ort						
+231823	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	1
+231823	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	mittel	2
+231823-01 ST	kein Ort						
+231824	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231824-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231825	kein Ort						
+231825-01 ST	kein Ort						
+231825-02 AA	kein Ort						
+231826	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+231828	nur in Anlagen genannt, nicht verortet						
+231829	kein Ort						
+231830	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
+231830	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+231832	verortet	Hauptteil	volltext_strasse	Kessenicher Straße	Dottendorf	mittel	1
+231832	verortet	Hauptteil	volltext_strasse	Kessenicher Straße	Kessenich	mittel	1
+231833	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+231834	Liste (11 Ortsteile), nicht verortet	Hauptteil					
+231835	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231835-01 ST	kein Ort						
+231836	Liste (9 Ortsteile), nicht verortet	Hauptteil					
+231841	kein Ort						
+231841-01 ST	kein Ort						
+231841-02 ST	kein Ort						
+231842	Liste (10 Ortsteile), nicht verortet	Hauptteil					
+231845	kein Ort						
+231846-01 ST	kein Ort						
+231846-02 AA	kein Ort						
+231848	Titel ohne gemeinsamen Ort, nicht verortet						
+231849-01 ST	kein Ort						
+231851	kein Ort						
+231851-01 AA	kein Ort						
+231853	kein Ort						
+231854	kein Ort						
+231855	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+231855-01 ST	kein Ort						
+231857	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	mittel	1
+231859	kein Ort						
+231860	kein Ort						
+231863	Titel ohne gemeinsamen Ort, nicht verortet						
+231865	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+231867	kein Ort						
+231868	kein Ort						
+231872	kein Ort						
+231879	Titel ohne gemeinsamen Ort, nicht verortet						
+231880	kein Ort						
+231880-01	kein Ort						
+231880-02 ST	kein Ort						
+231882	verortet	Hauptteil	volltext_strasse	Remigiusplatz	Bonn-Zentrum	mittel	3
+231883	Titel ohne gemeinsamen Ort, nicht verortet						
+231885	kein Ort						
+231889	kein Ort						
+231890	kein Ort						
+231891	kein Ort						
+231892	kein Ort						
+231893	kein Ort						
+231893-01 AA	kein Ort						
+231894	nur in Anlagen genannt, nicht verortet						
+231895	kein Ort						
+231895-01 ST	kein Ort						
+231895-02 AA	kein Ort						
+231896	kein Ort						
+231898	nur in Anlagen genannt, nicht verortet						
+231899	Titel ohne gemeinsamen Ort, nicht verortet						
+231903	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
+231903-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Geislar	Geislar	niedrig	1
+231903-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
+231903-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Holtorf	Holtorf	niedrig	1
+231903-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Oberkassel	Oberkassel	niedrig	1
+231903-01 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Witterschlicker Allee	Brüser Berg	niedrig	1
+231904	Titel ohne gemeinsamen Ort, nicht verortet						
+231906	Titel ohne gemeinsamen Ort, nicht verortet						
+231907	verortet	Hauptteil	volltext_ortsteil_name	Lannesdorf	Lannesdorf	niedrig	1
+231907	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
+231909	Titel ohne gemeinsamen Ort, nicht verortet						
+231910	kein Ort						
+231910-01 ST	kein Ort						
+231911	Titel ohne gemeinsamen Ort, nicht verortet						
+231912	Titel ohne gemeinsamen Ort, nicht verortet						
+231913	kein Ort						
+231913-01 ST	kein Ort						
+231914	kein Ort						
+231917	Titel ohne gemeinsamen Ort, nicht verortet						
+231919	Titel ohne gemeinsamen Ort, nicht verortet						
+231920	kein Ort						
+231920-01 ST	kein Ort						
+231921	kein Ort						
+231921-01 ST	kein Ort						
+231922	kein Ort						
+231924	kein Ort						
+231925	kein Ort						
+231925-01 ST	kein Ort						
+231926	kein Ort						
+231928-01	kein Ort						
+231931	kein Ort						
+231933	nur in Anlagen genannt, nicht verortet						
+231935-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Südstadt	Südstadt	mittel	1
+231937	Titel ohne gemeinsamen Ort, nicht verortet						
+231938	nur in Anlagen genannt, nicht verortet						
+231938-01 AA	kein Ort						
+231941	kein Ort						
+231941-02 ST	kein Ort						
+231941-03	kein Ort						
+231943	kein Ort						
+231943-01 AA	kein Ort						
+231946	nur in Anlagen genannt, nicht verortet						
+231949	kein Ort						
+231953	kein Ort						
+231956	kein Ort						
+231957	Titel ohne gemeinsamen Ort, nicht verortet						
+231958	Titel ohne gemeinsamen Ort, nicht verortet						
+231959	kein Ort						
+231961	Titel ohne gemeinsamen Ort, nicht verortet						
+231962	kein Ort						
+231963	kein Ort						
+231964	kein Ort						
+231965	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	mittel	1
+231965	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
+231965	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
+231965-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Muffendorf	Muffendorf	mittel	1
+231965-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Plittersdorf	Plittersdorf	mittel	1
+231965-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	mittel	1
+231965-01 AA	verortet	Hauptteil	volltext_strasse	Dottendorfer Straße	Dottendorf	mittel	1
+231965-01 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Annaberger Straße	Friesdorf	mittel	1
+231965-01 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Marie-Schlei-Allee	Friesdorf	mittel	1
+231965-01	kein Ort						
+231965-02 AA	verortet	Hauptteil	volltext_strasse+hausnummer	Königswinterer Straße	Limperich	mittel	1
+231965-03 AA	kein Ort						
+231965-04 AA	kein Ort						
+231965-05 AA	kein Ort						
+231965-06 ST	nur in Anlagen genannt, nicht verortet						
+231965-07 AA	kein Ort						
 231965-08 ST	Liste (11 Ortsteile), nicht verortet	Hauptteil					
 231965-09 AA	kein Ort						
+231967	nur in Anlagen genannt, nicht verortet						
+231968	kein Ort						
+231968-01 ST	kein Ort						
+231969	kein Ort						
+231969-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Muffendorf	Muffendorf	niedrig	1
+231970	kein Ort						
+231971	kein Ort						
+231972	nur in Anlagen genannt, nicht verortet						
+231972-01 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+231972-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	1
+231972-03	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	mittel	1
+231972-03	verortet	Hauptteil	volltext_ortsteil_name	Lessenich/Meßdorf	Lessenich/Meßdorf	niedrig	1
+231972-03	verortet	Hauptteil	volltext_strasse	Riemannstraße	Brüser Berg	mittel	2
+231972-03	verortet	Hauptteil	volltext_strasse	Schieffelingsweg	Duisdorf	mittel	2
+231972-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	mittel	1
+231972-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Hochkreuz	Hochkreuz	mittel	1
+231972-04 AA	verortet	Hauptteil	volltext_ortsteil_name	Plittersdorf	Plittersdorf	mittel	1
+231972-04 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Hochkreuzallee	Friesdorf	mittel	1
+231972-04 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Muffendorfer Straße	Muffendorf	mittel	1
+231972-05 ST	kein Ort						
+231972-06 AA	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
+231972-06 AA	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	mittel	1
+231972-07 AA	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	mittel	1
+231972-07 AA	verortet	Hauptteil	volltext_strasse	Kaiser-Karl-Ring	Bonn-Castell	mittel	2
+231972-07 AA	verortet	Hauptteil	volltext_strasse	Kaiser-Karl-Ring	Nordstadt	mittel	2
+231972-08 AA	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	mittel	1
+231973	nur in Anlagen genannt, nicht verortet						
+231974	Liste (13 Ortsteile), nicht verortet	Hauptteil					
+231975	Titel ohne gemeinsamen Ort, nicht verortet						
+231976	kein Ort						
+231976-01 ST	nur in Anlagen genannt, nicht verortet						
+231976-02 ST	nur in Anlagen genannt, nicht verortet						
+231979	3 Stadtbezirke, stadtweit, nicht verortet	Hauptteil					
+231981	kein Ort						
+231981-01 ST	kein Ort						
+231984	kein Ort						
+231985	nur in Anlagen genannt, nicht verortet						
+231987	nur in Anlagen genannt, nicht verortet						
+231992	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	mittel	2
+231992-01 ST	kein Ort						
+231992-02 ST	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Platz	Beuel-Mitte	niedrig	1
+231992-02 ST	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	4
+231993	kein Ort						
+231993-02 ST	kein Ort						
+231994	kein Ort						
+231996	kein Ort						
+231998	Titel ohne gemeinsamen Ort, nicht verortet						
+231999	verortet	Hauptteil	volltext_strasse	Am Köppekreuz	Schwarzrheindorf / Vilich-Rheindorf	mittel	2
+231999	verortet	Hauptteil	volltext_strasse	Bertha-von-Suttner-Platz	Bonn-Zentrum	niedrig	1
+231999	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	1
+232000	Titel ohne gemeinsamen Ort, nicht verortet						
+232001	Titel ohne gemeinsamen Ort, nicht verortet						
+232005	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+232005	verortet	Hauptteil	volltext_strasse	Salierweg	Graurheindorf	niedrig	1
+232007	kein Ort						
+232008	kein Ort						
+232011	verortet	Hauptteil	volltext_strasse	An der Dransdorfer Burg	Dransdorf	mittel	1
+232011	verortet	Hauptteil	volltext_strasse+ortsteil	Auf dem Hügel	Endenich	mittel	2
+232011	verortet	Hauptteil	volltext_strasse+ortsteil	Siemensstraße	Endenich	mittel	2
+232011-01 ST	kein Ort						
+232012	kein Ort						
+232012-01 ST	kein Ort						
+232012-02 ST	verortet	Hauptteil	volltext_strasse	An der Elisabethkirche	Südstadt	niedrig	1
+232012-02 ST	verortet	Hauptteil	volltext_strasse	Kaiserstraße	Gronau	niedrig	1
+232012-02 ST	verortet	Hauptteil	volltext_strasse	Kaiserstraße	Südstadt	niedrig	1
+232012-02 ST	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Platz	Beuel-Mitte	niedrig	1
+232012-02 ST	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	1
+232012-02 ST	verortet	Hauptteil	volltext_strasse	Wilhelm-Levison-Straße	Südstadt	niedrig	1
+232014	kein Ort						
+232016	verortet	Hauptteil	volltext_ortsteil_adjektiv	Tannenbusch	Tannenbusch	mittel	1
+232018	kein Ort						
 232019-02	verortet	Hauptteil	volltext_strasse	Gerd-Höllige-Weg	Alt-Godesberg	niedrig	1
 232019-02	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Alt-Godesberg	niedrig	1
 232019-02	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Pennenfeld	niedrig	1
+232021	kein Ort						
+232022	nur in Anlagen genannt, nicht verortet						
+232025	verortet	Hauptteil	volltext_strasse	Platz der Vereinten Nationen	Gronau	mittel	2
+232025-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	1
+232030	Titel ohne gemeinsamen Ort, nicht verortet						
+232032	Titel ohne gemeinsamen Ort, nicht verortet						
+232033	Titel ohne gemeinsamen Ort, nicht verortet						
+232034	Titel ohne gemeinsamen Ort, nicht verortet						
+232035	kein Ort						
+232036	Liste (20 Ortsteile), nicht verortet	Hauptteil					
+232037	kein Ort						
+232040	verortet	Hauptteil	volltext_strasse+ortsteil	Drachenfelsweg	Limperich	mittel	1
+232040	verortet	Hauptteil	volltext_strasse+ortsteil	Himmerichweg	Limperich	mittel	3
+232040	verortet	Hauptteil	volltext_strasse+ortsteil	Landgrabenweg	Limperich	mittel	1
+232040	verortet	Hauptteil	volltext_strasse+ortsteil	Petersbergweg	Limperich	mittel	1
+232042-01 ST	kein Ort						
+232044	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+232044-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Gangolfstraße	Bonn-Zentrum	mittel	1
+232044-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kaiserplatz	Bonn-Zentrum	mittel	3
+232044-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kaiserplatz	Südstadt	mittel	3
+232044-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Maximilianstraße	Bonn-Zentrum	mittel	4
+232044-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Poststraße	Bonn-Zentrum	mittel	1
+232044-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Wesselstraße	Bonn-Zentrum	mittel	3
+232044-02 AA	verortet	Hauptteil	volltext_strasse	Bahnhofstraße	Duisdorf	niedrig	1
+232044-02 AA	verortet	Hauptteil	volltext_strasse	Bahnhofstraße	Lessenich/Meßdorf	niedrig	1
+232044-02 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Hauptbahnhof	Bonn-Zentrum	niedrig	1
+232044-02 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Maximilianstraße	Bonn-Zentrum	mittel	2
+232044-03	verortet	Hauptteil	volltext_strasse+kreuzung	Am Hauptbahnhof	Bonn-Zentrum	mittel	2
+232044-03	verortet	Hauptteil	volltext_strasse+kreuzung	Maximilianstraße	Bonn-Zentrum	mittel	3
 232044-04	kein Ort						
+232045	kein Ort						
+232047	verortet	Hauptteil	volltext_ortsteil_adjektiv	Venusberg	Venusberg	niedrig	1
+232047	verortet	Hauptteil	volltext_strasse	Godesberger Allee	Friesdorf	niedrig	1
+232047	verortet	Hauptteil	volltext_strasse	Godesberger Allee	Hochkreuz	niedrig	1
+232047	verortet	Hauptteil	volltext_strasse	Godesberger Allee	Plittersdorf	niedrig	1
+232049	nur in Anlagen genannt, nicht verortet						
+232050	verortet	Hauptteil	volltext_ortsteil_name	Beuel-Ost	Beuel-Ost	niedrig	1
+232050	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+232050	verortet	Hauptteil	volltext_strasse	Lievelingsweg	Nordstadt	niedrig	1
+232050	verortet	Hauptteil	volltext_strasse	Lievelingsweg	Tannenbusch	niedrig	1
+232050	verortet	Hauptteil	volltext_strasse	Salierweg	Graurheindorf	niedrig	2
+232054	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
+232054	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+232054	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	mittel	1
+232055	kein Ort						
+232055-01 ST	kein Ort						
+232055-02 ST	kein Ort						
+232056	kein Ort						
+232057	kein Ort						
+232058	kein Ort						
+232065	kein Ort						
+232065-01 ST	kein Ort						
+232066	kein Ort						
+232066-02 ST	kein Ort						
+232067	Titel ohne gemeinsamen Ort, nicht verortet						
+232069	Titel ohne gemeinsamen Ort, nicht verortet						
+232070	kein Ort						
+232071	kein Ort						
+232076	nur in Anlagen genannt, nicht verortet						
+232076-01 AA	kein Ort						
+232079	Titel ohne gemeinsamen Ort, nicht verortet						
+232080	Titel ohne gemeinsamen Ort, nicht verortet						
+232085	kein Ort						
+232087	kein Ort						
+232090	Titel ohne gemeinsamen Ort, nicht verortet						
+232091	kein Ort						
+232092	kein Ort						
+232092-01 ST	kein Ort						
+232097	kein Ort						
+232098	Titel ohne gemeinsamen Ort, nicht verortet						
+232100	kein Ort						
+232100-01 ST	kein Ort						
+232102	kein Ort						
+232103	kein Ort						
+232103-01 ST	kein Ort						
+232103-02 ST	kein Ort						
+232107	verortet	Hauptteil	volltext_strasse+kreuzung	Himmerichweg	Limperich	mittel	1
+232107	verortet	Hauptteil	volltext_strasse+kreuzung	Küdinghovener Straße	Limperich	mittel	2
+232108	kein Ort						
+232108-01 ST	kein Ort						
+232109	kein Ort						
+232110	Titel ohne gemeinsamen Ort, nicht verortet						
+232111	Titel ohne gemeinsamen Ort, nicht verortet						
+232113	kein Ort						
+232118	kein Ort						
+232120	kein Ort						
+232121	Titel ohne gemeinsamen Ort, nicht verortet						
+232123	Titel ohne gemeinsamen Ort, nicht verortet						
+232125	nur in Anlagen genannt, nicht verortet						
+232126	kein Ort						
+232129	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+232137	kein Ort						
+232137-01 ST	kein Ort						
+232138	kein Ort						
+232142	verortet	Hauptteil	volltext_strasse	Lahnweg	Kessenich	mittel	1
+232142	verortet	Hauptteil	volltext_strasse	Schedestraße	Gronau	mittel	1
+232142-01 ST	kein Ort						
+232142-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Katharina-Focke-Straße	Gronau	mittel	1
+232142-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Straßburger Weg	Gronau	mittel	3
+232144	kein Ort						
+232144-01 ST	kein Ort						
+232149	kein Ort						
+232151	verortet	Hauptteil	volltext_ortsteil_name	Küdinghoven	Küdinghoven	mittel	1
+232153	verortet	Hauptteil	volltext_strasse	Ollenhauerstraße	Gronau	niedrig	2
+232155	Titel ohne gemeinsamen Ort, nicht verortet						
+232156	Titel ohne gemeinsamen Ort, nicht verortet						
+232159	kein Ort						
+232160	kein Ort						
+232161	kein Ort						
+232163	Titel ohne gemeinsamen Ort, nicht verortet						
+232164	kein Ort						
+232165	Titel ohne gemeinsamen Ort, nicht verortet						
+232167	kein Ort						
+232172	nur in Anlagen genannt, nicht verortet						
+232173	kein Ort						
+232174	Titel ohne gemeinsamen Ort, nicht verortet						
+232177	kein Ort						
 232177-01	kein Ort						
+232178	Titel ohne gemeinsamen Ort, nicht verortet						
+232179	Titel ohne gemeinsamen Ort, nicht verortet						
+232180-01 ST	kein Ort						
+232180-02 AA	verortet	Hauptteil	volltext_strasse	Hindenburgallee	Plittersdorf	niedrig	1
+232180-02 AA	verortet	Hauptteil	volltext_strasse	Hindenburgplatz	Dottendorf	niedrig	1
+232180-03 ST	kein Ort						
+232180-04 AA	kein Ort						
+232184	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+232184-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	mittel	1
+232184-03 ST	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	mittel	1
+232184-03 ST	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
+232187	kein Ort						
+232188	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+232189	Titel ohne gemeinsamen Ort, nicht verortet						
+232191	kein Ort						
+232195	Titel ohne gemeinsamen Ort, nicht verortet						
+232197	Titel ohne gemeinsamen Ort, nicht verortet						
+232198	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+232201	kein Ort						
+232204	kein Ort						
+232204-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
+232204-01 ST	verortet	Hauptteil	volltext_strasse	Graurheindorfer Straße	Bonn-Castell	niedrig	1
+232204-01 ST	verortet	Hauptteil	volltext_strasse	Rosental	Bonn-Castell	niedrig	1
+232205	kein Ort						
+232205-01 ST	kein Ort						
 232205-02	kein Ort						
 232205-03 ST	verortet	Hauptteil	volltext_ortsteil_name	Oberkassel	Oberkassel	niedrig	1
 232205-03 ST	verortet	Hauptteil	volltext_strasse	Beethovenplatz	Weststadt	niedrig	1
 232205-03 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
+232206	kein Ort						
+232206-01 ST	kein Ort						
+232207	kein Ort						
+232207-01 ST	kein Ort						
+232209	kein Ort						
+232209-01 ST	kein Ort						
+232211	kein Ort						
+232211-01 ST	kein Ort						
+232211-02 ST	kein Ort						
+232211-03 ST	kein Ort						
 232211-07 ST	nur in Anlagen genannt, nicht verortet						
 232211-09 ST	kein Ort						
+232212	kein Ort						
+232212-01 ST	kein Ort						
+232214	Titel ohne gemeinsamen Ort, nicht verortet						
+232218	kein Ort						
+232219	Titel ohne gemeinsamen Ort, nicht verortet						
+232224	kein Ort						
+232227-01 ST	kein Ort						
+232228-01 ST	verortet	Hauptteil	volltext_strasse	Kinkelplatz	Holzlar	niedrig	1
+232229	kein Ort						
+232234	kein Ort						
+232235	Titel ohne gemeinsamen Ort, nicht verortet						
+232238-02	verortet	Hauptteil	volltext_strasse+kreuzung	Bonner Talweg	Kessenich	niedrig	1
+232238-02	verortet	Hauptteil	volltext_strasse+kreuzung	Bonner Talweg	Südstadt	niedrig	1
+232238-02	verortet	Hauptteil	volltext_strasse+kreuzung	Heinrich-Körner-Straße	Kessenich	mittel	2
+232238-02	verortet	Hauptteil	volltext_strasse+kreuzung	Reuterstraße	Kessenich	niedrig	1
+232238-02	verortet	Hauptteil	volltext_strasse+kreuzung	Reuterstraße	Südstadt	mittel	2
+232239	Titel ohne gemeinsamen Ort, nicht verortet						
+232241	Titel ohne gemeinsamen Ort, nicht verortet						
+232242	kein Ort						
+232243	kein Ort						
+232243-01 ST	kein Ort						
+232243-02 AA	kein Ort						
+232243-03	kein Ort						
+232244-02 AA	kein Ort						
+232244-03 ST	kein Ort						
+232245	kein Ort						
+232246	kein Ort						
+232246-01 ST	kein Ort						
+232247	nur in Anlagen genannt, nicht verortet						
+232249	verortet	Hauptteil	volltext_ortsteil_adjektiv	Limperich	Limperich	niedrig	1
+232252	kein Ort						
+232255	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
+232255	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+232255	verortet	Hauptteil	volltext_ortsteil_name	Oberkassel	Oberkassel	niedrig	1
+232255	verortet	Hauptteil	volltext_strasse	Dürenstraße	Godesberg-Villenviertel	mittel	2
+232255	verortet	Hauptteil	volltext_strasse	Frankengraben	Friesdorf	niedrig	1
+232256	kein Ort						
+232256-01 ST	kein Ort						
+232258	Titel ohne gemeinsamen Ort, nicht verortet						
+232259	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+232260	Titel ohne gemeinsamen Ort, nicht verortet						
+232261	kein Ort						
+232262	verortet	Hauptteil	volltext_strasse+ortsteil	Europaring	Duisdorf	mittel	2
+232262	verortet	Hauptteil	volltext_strasse+ortsteil	Konrad-Adenauer-Damm	Duisdorf	mittel	1
+232263	nur in Anlagen genannt, nicht verortet						
 232263-01 AA	kein Ort						
+232265	kein Ort						
+232266	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
+232266-01 ST	nur in Anlagen genannt, nicht verortet						
+232267	verortet	Hauptteil	volltext_strasse+hausnummer	Kaiserstraße	Südstadt	niedrig	1
+232269	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Bad Godesberg		niedrig	1
+232269-01 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Am Fronhof	Alt-Godesberg	mittel	3
+232270	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+232273	nur in Anlagen genannt, nicht verortet						
+232277	kein Ort						
+232278	kein Ort						
+232279	kein Ort						
+232280-01	kein Ort						
+232281	kein Ort						
+232283	kein Ort						
+232285	kein Ort						
+232287	kein Ort						
+232288	kein Ort						
+232288-01 ST	kein Ort						
+232288-02	kein Ort						
 232288-03	kein Ort						
 232288-05	kein Ort						
+232289	kein Ort						
+232289-01 ST	kein Ort						
+232292	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+232295	verortet	Hauptteil	volltext_strasse	Clemens-August-Platz	Poppelsdorf	niedrig	1
+232296	Liste (9 Ortsteile), nicht verortet	Hauptteil					
+232299	kein Ort						
+232299-01 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Thomastraße	Nordstadt	mittel	1
+232300	kein Ort						
+232301	verortet	Hauptteil	volltext_strasse	Kaiserstraße	Gronau	mittel	1
+232301	verortet	Hauptteil	volltext_strasse	Kaiserstraße	Südstadt	mittel	1
+232301-01 ST	verortet	Hauptteil	volltext_strasse	Kaiserstraße	Gronau	mittel	1
+232301-01 ST	verortet	Hauptteil	volltext_strasse	Kaiserstraße	Südstadt	mittel	1
+232302	kein Ort						
+232302-01 ST	kein Ort						
+232304	kein Ort						
+232306	kein Ort						
+232309	verortet	Hauptteil	volltext_strasse	Josefstraße	Bonn-Zentrum	niedrig	1
+232312	nur in Anlagen genannt, nicht verortet						
+232314	Titel ohne gemeinsamen Ort, nicht verortet						
+232315	kein Ort						
+232317	kein Ort						
+232319	kein Ort						
+232327	verortet	Hauptteil	volltext_strasse	Friedrichstraße	Bonn-Zentrum	mittel	2
+232327	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	mittel	2
+232329	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	1
+232329	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+232333	kein Ort						
+232337	verortet	Hauptteil	volltext_strasse	Mülheimer Platz	Bonn-Zentrum	niedrig	1
+232337	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
+232338	kein Ort						
+232340	verortet	Hauptteil	volltext_strasse+hausnummer	Godesberger Allee	Friesdorf	niedrig	1
+232341	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	niedrig	1
+232341	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+232341-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	niedrig	1
+232341-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+232346	kein Ort						
+232347	Titel ohne gemeinsamen Ort, nicht verortet						
+232348	kein Ort						
+232349	verortet	Hauptteil	volltext_strasse+hausnummer	Briandstraße	Duisdorf	niedrig	1
+232349	verortet	Hauptteil	volltext_strasse+hausnummer	Oppelner Straße	Tannenbusch	niedrig	1
+232349	verortet	Hauptteil	volltext_strasse+hausnummer	Schlesienstraße	Tannenbusch	niedrig	1
+232350	kein Ort						
+232352	nur in Anlagen genannt, nicht verortet						
+232355	Titel ohne gemeinsamen Ort, nicht verortet						
+232356	nur in Anlagen genannt, nicht verortet						
+232358	nur in Anlagen genannt, nicht verortet						
+232359	kein Ort						
+232362	kein Ort						
+232366	Titel ohne gemeinsamen Ort, nicht verortet						
+232368	kein Ort						
+232370	kein Ort						
+232371	Liste (10 Ortsteile), nicht verortet	Hauptteil					
+232372	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
+240004	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Bad Godesberg		niedrig	1
+240007	Titel ohne gemeinsamen Ort, nicht verortet						
+240008	kein Ort						
+240010	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+240011-01 ST	kein Ort						
+240011-02	nur in Anlagen genannt, nicht verortet						
+240011-03 AA	kein Ort						
+240012	kein Ort						
+240013	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+240014	kein Ort						
+240015	Titel ohne gemeinsamen Ort, nicht verortet						
+240019	Titel ohne gemeinsamen Ort, nicht verortet						
+240020	kein Ort						
 240020-01 AA	verortet	Hauptteil	volltext_strasse	Am Bleichgraben	Endenich	niedrig	1
 240020-01 AA	verortet	Hauptteil	volltext_strasse	Am Bruch	Duisdorf	niedrig	1
 240020-01 AA	verortet	Hauptteil	volltext_strasse	Steinweg	Duisdorf	niedrig	1
@@ -97,54 +1595,486 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240020-02 AA	verortet	Hauptteil	volltext_strasse	Steinweg	Duisdorf	niedrig	1
 240020-02 AA	verortet	Hauptteil	volltext_strasse	Steinweg	Endenich	mittel	1
 240020-03 ST	kein Ort						
+240020-04 ST	kein Ort						
+240021	nur in Anlagen genannt, nicht verortet						
+240022	kein Ort						
+240024	Titel ohne gemeinsamen Ort, nicht verortet						
+240030	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
+240030	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
+240030	verortet	Hauptteil	volltext_strasse	Budapester Straße	Bonn-Zentrum	niedrig	1
+240030	verortet	Hauptteil	volltext_strasse	Rheingasse	Bonn-Zentrum	niedrig	1
+240030	verortet	Hauptteil	volltext_strasse+kreuzung	Kölnstraße	Bonn-Zentrum	niedrig	1
+240030	verortet	Hauptteil	volltext_strasse+kreuzung	Stiftsplatz	Bonn-Zentrum	niedrig	1
+240031	kein Ort						
+240032	kein Ort						
+240037	verortet	Hauptteil	volltext_strasse	Simone-Veil-Straße	Endenich	mittel	1
+240037-01 ST	verortet	Hauptteil	volltext_strasse	Am Propsthof	Endenich	mittel	1
+240037-01 ST	verortet	Hauptteil	volltext_strasse	Am Propsthof	Nordstadt	mittel	1
+240042	verortet	Hauptteil	volltext_ortsteil_name	Gronau	Gronau	niedrig	1
+240043	kein Ort						
+240045	kein Ort						
+240046	kein Ort						
+240047	Titel ohne gemeinsamen Ort, nicht verortet						
+240048	nur in Anlagen genannt, nicht verortet						
+240048-01 ST	nur in Anlagen genannt, nicht verortet						
+240048-02 AA	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	1
+240056	nur in Anlagen genannt, nicht verortet						
+240057	kein Ort						
+240058	kein Ort						
+240059	Titel ohne gemeinsamen Ort, nicht verortet						
+240060	kein Ort						
+240060-01 AA	kein Ort						
+240061	Titel ohne gemeinsamen Ort, nicht verortet						
+240062	kein Ort						
+240063	kein Ort						
+240065	kein Ort						
+240066	Titel ohne gemeinsamen Ort, nicht verortet						
+240067	kein Ort						
+240067-01 ST	kein Ort						
+240067-02 ST	kein Ort						
+240068	kein Ort						
+240068-01 ST	kein Ort						
+240068-02	kein Ort						
+240068-03 ST	kein Ort						
+240069	kein Ort						
+240069-01 ST	kein Ort						
+240070-01 ST	kein Ort						
+240072	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
+240072-01 ST	kein Ort						
+240073	kein Ort						
+240073-01 ST	kein Ort						
+240073-02	kein Ort						
+240075	kein Ort						
+240075-01 AA	kein Ort						
+240077	Titel ohne gemeinsamen Ort, nicht verortet						
+240078	nur in Anlagen genannt, nicht verortet						
+240079	Titel ohne gemeinsamen Ort, nicht verortet						
+240080-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
+240081	Liste (8 Ortsteile), nicht verortet	Hauptteil					
+240081-01 ST	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+240082-01 ST	kein Ort						
+240083	Titel ohne gemeinsamen Ort, nicht verortet						
+240084	Titel ohne gemeinsamen Ort, nicht verortet						
+240085	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
+240086	verortet	Hauptteil	volltext_strasse	An der Gierponte	Beuel-Mitte	mittel	1
+240086	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Beuel-Mitte	niedrig	1
+240086	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Limperich	niedrig	1
+240086	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Schwarzrheindorf / Vilich-Rheindorf	niedrig	1
+240086-01 ST	verortet	Hauptteil	volltext_strasse	An der Gierponte	Beuel-Mitte	mittel	1
+240086-01 ST	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Beuel-Mitte	niedrig	1
+240086-01 ST	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Limperich	niedrig	1
+240086-01 ST	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Schwarzrheindorf / Vilich-Rheindorf	niedrig	1
+240087	kein Ort						
+240087-01 ST	kein Ort						
+240088	nur in Anlagen genannt, nicht verortet						
+240089	Liste (11 Ortsteile), nicht verortet	Hauptteil					
+240089-01 ST	verortet	Hauptteil	volltext_strasse	Villemombler Straße	Duisdorf	mittel	1
+240089-01 ST	verortet	Hauptteil	volltext_strasse	Villemombler Straße	Lengsdorf	mittel	1
+240090	Titel ohne gemeinsamen Ort, nicht verortet						
+240090-01 ST	kein Ort						
+240091	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+240095	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+240096	kein Ort						
+240098	Titel ohne gemeinsamen Ort, nicht verortet						
+240099	Titel ohne gemeinsamen Ort, nicht verortet						
+240101	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+240101	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+240101	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
+240101-01 AA	kein Ort						
+240102	Titel ohne gemeinsamen Ort, nicht verortet						
+240107	kein Ort						
+240107-01 AA	kein Ort						
+240108	kein Ort						
+240110	kein Ort						
+240113	kein Ort						
+240114	verortet	Hauptteil	volltext_strasse+kreuzung	In der Sürst	Bonn-Zentrum	mittel	1
+240114	verortet	Hauptteil	volltext_strasse+kreuzung	Maximilianstraße	Bonn-Zentrum	mittel	1
+240114	verortet	Hauptteil	volltext_strasse+kreuzung	Poststraße	Bonn-Zentrum	mittel	1
+240114-01 ST	verortet	Hauptteil	volltext_strasse	Poststraße	Bonn-Zentrum	mittel	1
+240115	kein Ort						
+240115-01 ST	kein Ort						
+240119	kein Ort						
+240126	verortet	Hauptteil	volltext_strasse	Salierweg	Graurheindorf	niedrig	1
+240128-01 ST	kein Ort						
+240128-02	kein Ort						
+240129	verortet	Hauptteil	volltext_strasse+hausnummer	Friedrich-Ebert-Allee	Gronau	mittel	2
+240129-01 ST	kein Ort						
+240132	kein Ort						
+240133	Titel ohne gemeinsamen Ort, nicht verortet						
+240140	Liste (7 Ortsteile), nicht verortet	Hauptteil					
+240142	Titel ohne gemeinsamen Ort, nicht verortet						
+240144	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+240144-01 ST	kein Ort						
+240145	Titel ohne gemeinsamen Ort, nicht verortet						
+240146	kein Ort						
+240149	Titel ohne gemeinsamen Ort, nicht verortet						
+240151	kein Ort						
+240152	kein Ort						
+240156	Titel ohne gemeinsamen Ort, nicht verortet						
+240157	Titel ohne gemeinsamen Ort, nicht verortet						
+240161	nur in Anlagen genannt, nicht verortet						
+240163	kein Ort						
+240163-03 ST	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	niedrig	1
+240163-03 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
+240163-03 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Königswinterer Straße	Oberkassel	niedrig	1
+240163-03 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Poppelsdorfer Allee	Weststadt	niedrig	1
+240167	kein Ort						
+240174	Titel ohne gemeinsamen Ort, nicht verortet						
+240176	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
+240176	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
+240176	verortet	Hauptteil	volltext_strasse	Theresienau	Oberkassel	niedrig	1
+240176	verortet	Hauptteil	volltext_strasse+hausnummer	Flemingstraße	Duisdorf	niedrig	1
+240176	verortet	Hauptteil	volltext_strasse+ortsteil	Rochusstraße	Duisdorf	niedrig	1
+240178	Liste (15 Ortsteile), nicht verortet	Hauptteil					
+240179-01 ST	kein Ort						
+240181	kein Ort						
+240182	kein Ort						
+240183	kein Ort						
+240184	Liste (8 Ortsteile), nicht verortet	Hauptteil					
+240185	kein Ort						
+240186	Titel ohne gemeinsamen Ort, nicht verortet						
+240188	kein Ort						
 240188-01	kein Ort						
+240189	kein Ort						
+240193	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+240195	kein Ort						
+240196	kein Ort						
+240197	kein Ort						
 240199-01 ST	kein Ort						
+240200	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+240200-01 ST	kein Ort						
 240200-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+240203	kein Ort						
+240204	kein Ort						
 240204-01 ST	kein Ort						
 240204-02 ST	kein Ort						
 240204-03 AA	kein Ort						
 240204-04 AA	kein Ort						
+240205	kein Ort						
+240206	kein Ort						
+240208	verortet	Hauptteil	volltext_strasse	Elisabeth-Selbert-Platz	Nordstadt	mittel	1
+240208	verortet	Hauptteil	volltext_strasse+ortsteil	Kolpingstraße	Endenich	mittel	1
+240208-01 ST	verortet	Hauptteil	volltext_strasse	Vili-Viorel-Păun-Platz	Endenich	mittel	1
+240211	kein Ort						
+240211-01 ST	kein Ort						
+240211-02	kein Ort						
+240212	verortet	Hauptteil	volltext_strasse	An der Dransdorfer Burg	Dransdorf	mittel	1
+240212-01 ST	kein Ort						
+240212-02 ST	verortet	Hauptteil	volltext_strasse	An der Dransdorfer Burg	Dransdorf	mittel	1
+240212-02 ST	verortet	Hauptteil	volltext_strasse	Euskirchener Straße	Endenich	mittel	1
+240215	verortet	Hauptteil	volltext_strasse+kreuzung	Ahrweg	Kessenich	mittel	1
+240215	verortet	Hauptteil	volltext_strasse+kreuzung	Coburger Straße	Gronau	mittel	1
+240215	verortet	Hauptteil	volltext_strasse+kreuzung	Eduard-Pflüger-Straße	Gronau	mittel	1
+240215	verortet	Hauptteil	volltext_strasse+kreuzung	Markusstraße	Kessenich	mittel	1
+240215	verortet	Hauptteil	volltext_strasse+kreuzung	Rheinweg	Gronau	mittel	2
+240215	verortet	Hauptteil	volltext_strasse+kreuzung	Rheinweg	Kessenich	mittel	2
+240215	verortet	Hauptteil	volltext_strasse+kreuzung	Straßburger Weg	Gronau	mittel	2
+240215-01 ST	kein Ort						
+240221	Titel ohne gemeinsamen Ort, nicht verortet						
+240224	kein Ort						
+240225	verortet	Hauptteil	volltext_strasse	Auf dem Dransdorfer Berg	Dransdorf	mittel	1
+240225-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	1
+240226	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
+240227	nur in Anlagen genannt, nicht verortet						
+240228	kein Ort						
+240230	kein Ort						
+240230-01	kein Ort						
+240230-02 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+240232-01 ST	kein Ort						
+240233-01 ST	kein Ort						
+240235	Titel ohne gemeinsamen Ort, nicht verortet						
+240238	Titel ohne gemeinsamen Ort, nicht verortet						
+240243	kein Ort						
+240245	kein Ort						
+240245-02 ST	kein Ort						
+240245-03 ST	kein Ort						
+240248	kein Ort						
+240248-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+240249	kein Ort						
+240249-01 ST	kein Ort						
+240249-02 AA	kein Ort						
+240250	kein Ort						
+240250-01 ST	kein Ort						
+240251	kein Ort						
+240251-01 ST	kein Ort						
+240252	kein Ort						
+240253	kein Ort						
+240254	kein Ort						
+240255	Liste (11 Ortsteile), nicht verortet	Hauptteil					
+240255-01 ST	kein Ort						
 240255-04 ST	kein Ort						
 240255-20 ST	kein Ort						
 240255-21 ST	kein Ort						
+240259	kein Ort						
+240260	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	mittel	1
+240260	verortet	Hauptteil	volltext_strasse	Schießbergweg	Küdinghoven	niedrig	1
+240260	verortet	Hauptteil	volltext_strasse	Schießbergweg	Limperich	niedrig	1
+240260	verortet	Hauptteil	volltext_strasse	Schießbergweg	Ramersdorf	niedrig	1
 240260-01	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
 240260-01	verortet	Hauptteil	volltext_strasse	Schießbergweg	Küdinghoven	niedrig	1
 240260-01	verortet	Hauptteil	volltext_strasse	Schießbergweg	Limperich	niedrig	1
 240260-01	verortet	Hauptteil	volltext_strasse	Schießbergweg	Ramersdorf	niedrig	1
+240261-01 ST	kein Ort						
+240263	Titel ohne gemeinsamen Ort, nicht verortet						
+240264	kein Ort						
+240265	Titel ohne gemeinsamen Ort, nicht verortet						
+240266	kein Ort						
+240267	Liste (31 Ortsteile), nicht verortet	Hauptteil					
+240268	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	mittel	1
+240268	verortet	Hauptteil	volltext_strasse+kreuzung	Kölnstraße	Bonn-Zentrum	mittel	2
+240268	verortet	Hauptteil	volltext_strasse+kreuzung	Stiftsplatz	Bonn-Zentrum	mittel	2
 240268-01 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	mittel	2
 240268-01 ST	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	mittel	2
 240268-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kölnstraße	Bonn-Zentrum	mittel	4
 240268-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Stiftsplatz	Bonn-Zentrum	mittel	5
+240269	kein Ort						
+240270	verortet	Hauptteil	volltext_strasse	Basketsring	Duisdorf	mittel	2
+240270	verortet	Hauptteil	volltext_strasse+ortsteil	Bredowallee	Brüser Berg	mittel	1
+240270	verortet	Hauptteil	volltext_strasse+ortsteil	Heinkelstraße	Brüser Berg	mittel	1
+240270-01 ST	kein Ort						
+240271	Titel ohne gemeinsamen Ort, nicht verortet						
+240272	kein Ort						
+240272-01 ST	kein Ort						
+240273	Titel ohne gemeinsamen Ort, nicht verortet						
+240280	Titel ohne gemeinsamen Ort, nicht verortet						
+240281	Titel ohne gemeinsamen Ort, nicht verortet						
+240284	Titel ohne gemeinsamen Ort, nicht verortet						
+240285	kein Ort						
+240286	nur in Anlagen genannt, nicht verortet						
+240289	kein Ort						
+240293	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
+240293	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
+240293	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
+240293	verortet	Hauptteil	volltext_ortsteil_name	Weststadt	Weststadt	niedrig	1
+240293	verortet	Hauptteil	volltext_ortsteil_name	Ückesdorf	Ückesdorf	niedrig	1
+240299	Titel ohne gemeinsamen Ort, nicht verortet						
+240301	3 Stadtbezirke, stadtweit, nicht verortet	Hauptteil					
+240301-01 ST	kein Ort						
+240301-02 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+240305	kein Ort						
+240309	kein Ort						
 240309-01 ST	kein Ort						
+240311	verortet	Hauptteil	volltext_strasse	Theaterplatz	Alt-Godesberg	niedrig	1
+240312	kein Ort						
+240313	kein Ort						
+240314	kein Ort						
+240315	Titel ohne gemeinsamen Ort, nicht verortet						
+240316	kein Ort						
+240317	Titel ohne gemeinsamen Ort, nicht verortet						
+240322	Titel ohne gemeinsamen Ort, nicht verortet						
+240324	verortet	Hauptteil	volltext_strasse	Adenauerallee	Gronau	niedrig	1
+240324	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
+240324	verortet	Hauptteil	volltext_strasse	Oxfordstraße	Bonn-Zentrum	niedrig	1
+240324-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Gronau	niedrig	1
+240324-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
+240324-01 ST	verortet	Hauptteil	volltext_strasse	Hermann-Wandersleb-Ring	Endenich	niedrig	1
+240324-01 ST	verortet	Hauptteil	volltext_strasse	Oxfordstraße	Bonn-Zentrum	niedrig	1
 240324-03 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Gronau	niedrig	1
 240324-03 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
 240324-03 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
 240324-03 ST	verortet	Hauptteil	volltext_strasse	Oxfordstraße	Bonn-Zentrum	mittel	3
 240324-03 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Belderberg	Bonn-Zentrum	niedrig	1
+240325	Titel ohne gemeinsamen Ort, nicht verortet						
+240328	Titel ohne gemeinsamen Ort, nicht verortet						
+240329	kein Ort						
+240329-01 ST	kein Ort						
+240330	Titel ohne gemeinsamen Ort, nicht verortet						
+240332	nur in Anlagen genannt, nicht verortet						
+240333	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
+240333	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
+240333	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+240334	kein Ort						
+240335	kein Ort						
+240336	nur in Anlagen genannt, nicht verortet						
+240337	kein Ort						
+240338	nur in Anlagen genannt, nicht verortet						
+240339	kein Ort						
+240340	nur in Anlagen genannt, nicht verortet						
+240342	kein Ort						
+240342-01 ST	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+240344	kein Ort						
+240344-01 ST	kein Ort						
+240350	kein Ort						
+240351	kein Ort						
+240351-01 ST	kein Ort						
 240351-02 DA	kein Ort						
 240351-04 DA	kein Ort						
+240351-05 ST	kein Ort						
+240352	kein Ort						
+240352-01 ST	kein Ort						
+240355	verortet	Hauptteil	volltext_strasse	Platz der Vereinten Nationen	Gronau	mittel	2
+240356	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
+240357	verortet	Hauptteil	volltext_ortsteil_name	Graurheindorf	Graurheindorf	niedrig	1
+240357	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
+240357	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
+240357	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
+240357	verortet	Hauptteil	volltext_strasse+ortsteil	Hohe Straße	Tannenbusch	niedrig	1
+240362	verortet	Hauptteil	volltext_strasse	Dürenstraße	Godesberg-Villenviertel	niedrig	1
+240363	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+240364	Titel ohne gemeinsamen Ort, nicht verortet						
+240366	kein Ort						
+240367	Titel ohne gemeinsamen Ort, nicht verortet						
+240369	Titel ohne gemeinsamen Ort, nicht verortet						
+240370	kein Ort						
 240370-01 ST	kein Ort						
+240372	kein Ort						
+240373	Titel ohne gemeinsamen Ort, nicht verortet						
+240374	Titel ohne gemeinsamen Ort, nicht verortet						
+240375	Titel ohne gemeinsamen Ort, nicht verortet						
+240376	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+240377	kein Ort						
+240378	verortet	Hauptteil	volltext_strasse	Karlstraße	Weststadt	niedrig	1
+240379	kein Ort						
+240380	kein Ort						
+240381	Titel ohne gemeinsamen Ort, nicht verortet						
 240385	kein Ort						
 240387	Titel ohne gemeinsamen Ort, nicht verortet						
+240388	kein Ort						
+240393	kein Ort						
 240393-01 ST	kein Ort						
+240396	Titel ohne gemeinsamen Ort, nicht verortet						
+240398	nur in Anlagen genannt, nicht verortet						
+240399	kein Ort						
+240399-01 ST	kein Ort						
+240400	kein Ort						
+240400-01 AA	kein Ort						
+240403	Titel ohne gemeinsamen Ort, nicht verortet						
+240406	kein Ort						
+240406-01 ST	kein Ort						
 240406-02 AA	kein Ort						
+240406-03 ST	nur in Anlagen genannt, nicht verortet						
+240410	verortet	Hauptteil	volltext_strasse+ortsteil	Breite Straße	Nordstadt	mittel	1
+240410	verortet	Hauptteil	volltext_strasse+ortsteil	Heerstraße	Nordstadt	mittel	2
+240412-01 ST	kein Ort						
 240412-02 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
+240412-03 ST	verortet	Hauptteil	volltext_strasse	Gerbergastraße	Vilich	mittel	1
+240412-03 ST	verortet	Hauptteil	volltext_strasse	Mathildastraße	Vilich	mittel	1
+240412-03 ST	verortet	Hauptteil	volltext_strasse	Schnorrenbergstraße	Vilich	mittel	1
+240412-03 ST	verortet	Hauptteil	volltext_strasse	Stroofstraße	Vilich	mittel	1
+240412-03 ST	verortet	Hauptteil	volltext_strasse	Von-Pfingsten-Straße	Vilich	mittel	1
+240413	kein Ort						
+240416	kein Ort						
+240417	verortet	Hauptteil	volltext_strasse+hausnummer	Mülheimer Platz	Bonn-Zentrum	mittel	1
+240418	kein Ort						
+240419	kein Ort						
+240423	kein Ort						
+240425	kein Ort						
+240426	kein Ort						
+240427	kein Ort						
+240427-01 ST	kein Ort						
+240428	Titel ohne gemeinsamen Ort, nicht verortet						
+240430	nur in Anlagen genannt, nicht verortet						
+240432	kein Ort						
+240434	Liste (14 Ortsteile), nicht verortet	Hauptteil					
+240435	nur in Anlagen genannt, nicht verortet						
 240435-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Aennchenplatz	Alt-Godesberg	mittel	1
 240435-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Am Kurpark	Alt-Godesberg	mittel	1
 240435-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Koblenzer Straße	Alt-Godesberg	mittel	1
 240435-02 AA	verortet	Hauptteil	volltext_strasse	Kaiserplatz	Bonn-Zentrum	niedrig	1
 240435-02 AA	verortet	Hauptteil	volltext_strasse	Kaiserplatz	Südstadt	niedrig	1
+240436	kein Ort						
+240437	kein Ort						
+240439	kein Ort						
+240440	verortet	Hauptteil	volltext_strasse+kreuzung	Bottlerplatz	Bonn-Zentrum	niedrig	1
+240440	verortet	Hauptteil	volltext_strasse+kreuzung	Friedensplatz	Bonn-Zentrum	niedrig	1
+240440	verortet	Hauptteil	volltext_strasse+kreuzung	Münsterplatz	Bonn-Zentrum	niedrig	1
+240440	verortet	Hauptteil	volltext_strasse+kreuzung	Poststraße	Bonn-Zentrum	niedrig	1
+240440	verortet	Hauptteil	volltext_strasse+kreuzung	Vivatsgasse	Bonn-Zentrum	niedrig	1
+240440	verortet	Hauptteil	volltext_strasse+kreuzung	Windeckstraße	Bonn-Zentrum	niedrig	1
+240442	kein Ort						
+240443	verortet	Hauptteil	volltext_strasse	Rosental	Bonn-Castell	mittel	1
+240443	verortet	Hauptteil	volltext_strasse+kreuzung	Königstraße	Südstadt	mittel	1
+240443	verortet	Hauptteil	volltext_strasse+kreuzung	Poppelsdorfer Allee	Südstadt	mittel	1
+240443	verortet	Hauptteil	volltext_strasse+kreuzung	Prinz-Albert-Straße	Südstadt	mittel	1
 240443-01 ST	verortet	Hauptteil	volltext_ortsteil_adjektiv	Poppelsdorf	Poppelsdorf	mittel	1
 240443-01 ST	verortet	Hauptteil	volltext_strasse	Chlodwigplatz	Nordstadt	mittel	1
 240443-01 ST	verortet	Hauptteil	volltext_strasse	Prinz-Albert-Straße	Südstadt	mittel	1
 240443-01 ST	verortet	Hauptteil	volltext_strasse	Rosental	Bonn-Castell	mittel	1
+240448	kein Ort						
+240450	kein Ort						
+240451	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	1
+240452	kein Ort						
+240453	verortet	Hauptteil	volltext_ortsteil_name	Holtorf	Holtorf	mittel	1
+240453	verortet	Hauptteil	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	1
 240453-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
 240453-01 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Schießbergweg	Ramersdorf	mittel	2
+240455	nur in Anlagen genannt, nicht verortet						
+240459	kein Ort						
+240460	verortet	Hauptteil	volltext_strasse	Rheinallee	Godesberg-Villenviertel	mittel	5
+240460	verortet	Hauptteil	volltext_strasse	Rheinallee	Plittersdorf	mittel	5
+240460	verortet	Hauptteil	volltext_strasse	Rheinallee	Rüngsdorf	mittel	5
+240460	verortet	Hauptteil	volltext_strasse+kreuzung	Am Kurpark	Alt-Godesberg	mittel	1
+240460	verortet	Hauptteil	volltext_strasse+kreuzung	Friedrich-Ebert-Straße	Alt-Godesberg	mittel	1
+240460	verortet	Hauptteil	volltext_strasse+kreuzung	Friedrichallee	Rüngsdorf	mittel	2
+240460	verortet	Hauptteil	volltext_strasse+kreuzung	Koblenzer Straße	Alt-Godesberg	mittel	1
+240460	verortet	Hauptteil	volltext_strasse+kreuzung	Koblenzer Straße	Pennenfeld	mittel	1
+240460	verortet	Hauptteil	volltext_strasse+kreuzung	Löbestraße	Alt-Godesberg	mittel	3
+240460	verortet	Hauptteil	volltext_strasse+kreuzung	Moltkestraße	Alt-Godesberg	mittel	1
+240460	verortet	Hauptteil	volltext_strasse+kreuzung	Von-Groote-Platz	Rüngsdorf	mittel	1
+240461	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
+240461	verortet	Hauptteil	volltext_strasse	Joseph-Beuys-Allee	Gronau	niedrig	1
+240462	kein Ort						
+240462-01 ST	kein Ort						
+240463	kein Ort						
+240467	kein Ort						
+240468	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	mittel	1
+240468	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	mittel	1
+240468	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Platz	Poppelsdorf	mittel	1
+240469	verortet	Hauptteil	volltext_ortsteil_name	Vilich- Müldorf	Vilich- Müldorf	niedrig	1
+240471	verortet	Hauptteil	volltext_strasse+hausnummer	Lievelingsweg	Tannenbusch	niedrig	1
+240472	verortet	Hauptteil	volltext_strasse	Pützstraße	Kessenich	mittel	2
+240472	verortet	Hauptteil	volltext_strasse+hausnummer	Bonner Talweg	Südstadt	mittel	1
+240472	verortet	Hauptteil	volltext_strasse+hausnummer	Hausdorffstraße	Kessenich	mittel	2
+240472	verortet	Hauptteil	volltext_strasse+hausnummer	Lessingstraße	Südstadt	mittel	1
+240472	verortet	Hauptteil	volltext_strasse+ortsteil	Hausdorffstraße	Dottendorf	mittel	1
+240472	verortet	Hauptteil	volltext_strasse+ortsteil	Weberstraße	Südstadt	mittel	1
+240472-01	verortet	Hauptteil	volltext_strasse+hausnummer	Bismarckstraße	Südstadt	mittel	1
+240472-01	verortet	Hauptteil	volltext_strasse+hausnummer	Ermekeilstraße	Südstadt	mittel	1
+240472-01	verortet	Hauptteil	volltext_strasse+hausnummer	Hausdorffstraße	Dottendorf	mittel	1
+240472-01	verortet	Hauptteil	volltext_strasse+hausnummer	Lessingstraße	Südstadt	mittel	1
+240472-01	verortet	Hauptteil	volltext_strasse+ortsteil	Bonner Talweg	Kessenich	mittel	2
+240472-01	verortet	Hauptteil	volltext_strasse+ortsteil	Bonner Talweg	Südstadt	mittel	3
+240472-01	verortet	Hauptteil	volltext_strasse+ortsteil	Hausdorffstraße	Kessenich	mittel	2
+240472-01	verortet	Hauptteil	volltext_strasse+ortsteil	Pützstraße	Kessenich	mittel	2
+240472-01	verortet	Hauptteil	volltext_strasse+ortsteil	Weberstraße	Südstadt	mittel	1
+240473	kein Ort						
+240475	kein Ort						
+240476	kein Ort						
+240477	kein Ort						
+240478	kein Ort						
+240479	kein Ort						
+240482	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+240482	verortet	Hauptteil	volltext_strasse	Salierweg	Graurheindorf	niedrig	1
+240485	kein Ort						
+240487	nur in Anlagen genannt, nicht verortet						
+240498	kein Ort						
+240508	kein Ort						
+240510	kein Ort						
+240513	kein Ort						
+240514	kein Ort						
+240515	kein Ort						
+240517	kein Ort						
+240520	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+240523	Titel ohne gemeinsamen Ort, nicht verortet						
+240528	kein Ort						
+240532	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
+240533	kein Ort						
+240534	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+240535	kein Ort						
 240535-01 ST	kein Ort						
+240537	kein Ort						
+240538	kein Ort						
+240539	kein Ort						
+240541	nur in Anlagen genannt, nicht verortet						
+240542	kein Ort						
 240542-01 ST	kein Ort						
+240544	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+240544-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
+240546	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 240546-01 ST	kein Ort						
 240546-02 ST	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Alt-Godesberg	mittel	1
 240546-02 ST	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Pennenfeld	mittel	1
+240548	kein Ort						
 240551	Titel ohne gemeinsamen Ort, nicht verortet						
 240554	nur in Anlagen genannt, nicht verortet						
 240555	kein Ort						
@@ -167,6 +2097,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240578	Liste (10 Ortsteile), nicht verortet	Hauptteil					
 240580	Titel ohne gemeinsamen Ort, nicht verortet						
 240581	Liste (7 Ortsteile), nicht verortet	Hauptteil					
+240581-01 AA	kein Ort						
 240581-06	Liste (10 Ortsteile), nicht verortet	Hauptteil					
 240582	kein Ort						
 240589	kein Ort						
@@ -179,12 +2110,14 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240602	Titel ohne gemeinsamen Ort, nicht verortet						
 240604	kein Ort						
 240604-01	kein Ort						
+240604-02 ST	verortet	Hauptteil	volltext_strasse	Europaring	Duisdorf	mittel	1
 240608	kein Ort						
 240608-01 ST	kein Ort						
 240610	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240611	Titel ohne gemeinsamen Ort, nicht verortet						
 240613	kein Ort						
 240616	kein Ort						
+240616-01	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240617	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 240617	verortet	Hauptteil	volltext_strasse+ortsteil	Helmholtzstraße	Duisdorf	niedrig	1
 240617-01 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Helmholtzstraße	Duisdorf	mittel	2
@@ -224,8 +2157,13 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240646	kein Ort						
 240646-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Dottendorf	Dottendorf	niedrig	1
 240650	kein Ort						
+240650-01 ST	kein Ort						
 240652	kein Ort						
+240652-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Gronau	niedrig	1
+240652-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
+240652-01 ST	verortet	Hauptteil	volltext_strasse	Eduard-Pflüger-Straße	Gronau	niedrig	1
 240653	kein Ort						
+240653-01 ST	kein Ort						
 240655	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240656	verortet	Hauptteil	volltext_strasse	Berliner Platz	Bonn-Zentrum	niedrig	1
 240656	verortet	Hauptteil	volltext_strasse	Berliner Platz	Nordstadt	niedrig	1
@@ -266,13 +2204,25 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240660	kein Ort						
 240662	verortet	Hauptteil	volltext_strasse+ortsteil	Argelanderstraße	Südstadt	niedrig	1
 240662	verortet	Hauptteil	volltext_strasse+ortsteil	Ermekeilstraße	Südstadt	niedrig	1
+240662-01 ST	kein Ort						
 240664	nur in Anlagen genannt, nicht verortet						
 240675	nur in Anlagen genannt, nicht verortet						
 240677	nur in Anlagen genannt, nicht verortet						
 240677-01	kein Ort						
 240679	Liste (25 Ortsteile), nicht verortet	Hauptteil					
+240679-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	1
+240679-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	mittel	1
+240679-01 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Agnetendorfer Straße	Tannenbusch	mittel	1
+240679-01 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Coburger Straße	Gronau	mittel	1
+240679-01 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Oscar-Romero-Allee	Gronau	mittel	1
+240679-01 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Straßburger Weg	Gronau	mittel	2
 240681	kein Ort						
+240681-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+240681-01 ST	verortet	Hauptteil	volltext_strasse	Alte Bonner Straße	Holzlar	niedrig	1
+240681-01 ST	verortet	Hauptteil	volltext_strasse	Im Apfelgarten	Muffendorf	niedrig	1
+240681-01 ST	verortet	Hauptteil	volltext_strasse	Weinheimstraße	Holtorf	niedrig	1
 240682	kein Ort						
+240682-01 ST	kein Ort						
 240684	Titel ohne gemeinsamen Ort, nicht verortet						
 240686	Titel ohne gemeinsamen Ort, nicht verortet						
 240687	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -293,6 +2243,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240700	kein Ort						
 240703	kein Ort						
 240704	kein Ort						
+240704-01 ST	kein Ort						
 240704-02 AA	kein Ort						
 240705	kein Ort						
 240706	verortet	Hauptteil	volltext_strasse+hausnummer	Lievelingsweg	Tannenbusch	niedrig	1
@@ -300,29 +2251,255 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240709	kein Ort						
 240711	verortet	Hauptteil	volltext_ortsteil_name	Bonn-Zentrum	Bonn-Zentrum	niedrig	1
 240713	kein Ort						
+240714-01 ST	kein Ort						
 240714-02	kein Ort						
 240718	Titel ohne gemeinsamen Ort, nicht verortet						
 240719	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	mittel	1
 240719	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	1
 240719	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Beuel		niedrig	1
 240724	Titel ohne gemeinsamen Ort, nicht verortet						
+240726	3 Stadtbezirke, stadtweit, nicht verortet	Hauptteil					
+240727	kein Ort						
+240727-01 ST	kein Ort						
+240728	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	mittel	1
+240728	verortet	Hauptteil	volltext_strasse	Bachstraße	Weststadt	mittel	3
+240728	verortet	Hauptteil	volltext_strasse	Beethovenplatz	Weststadt	mittel	1
+240728	verortet	Hauptteil	volltext_strasse	Herwarthstraße	Weststadt	mittel	4
+240728	verortet	Hauptteil	volltext_strasse	Händelstraße	Weststadt	mittel	4
+240728	verortet	Hauptteil	volltext_strasse	Wittelsbacherring	Weststadt	mittel	1
+240728	verortet	Hauptteil	volltext_strasse+hausnummer	Humboldtstraße	Weststadt	mittel	3
+240729-01 ST	kein Ort						
+240729-02 ST	verortet	Hauptteil	volltext_strasse	Heerstraße	Nordstadt	niedrig	1
+240730	kein Ort						
+240734	kein Ort						
+240736	verortet	Hauptteil	volltext_strasse+ortsteil	Augustusring	Bonn-Castell	niedrig	1
+240736	verortet	Hauptteil	volltext_strasse+ortsteil	Graurheindorfer Straße	Bonn-Castell	niedrig	1
+240737	kein Ort						
+240737-02 ST	verortet	Hauptteil	volltext_ortsteil_adjektiv	Graurheindorf	Graurheindorf	niedrig	1
+240737-02 ST	verortet	Hauptteil	volltext_strasse	Drususstraße	Bonn-Castell	niedrig	1
+240737-02 ST	verortet	Hauptteil	volltext_strasse	Graurheindorfer Straße	Bonn-Castell	niedrig	1
+240737-02 ST	verortet	Hauptteil	volltext_strasse	Rosental	Bonn-Castell	mittel	2
+240738	kein Ort						
+240738-02 ST	kein Ort						
+240739	verortet	Hauptteil	volltext_strasse+kreuzung	Graurheindorfer Straße	Bonn-Castell	niedrig	1
+240739	verortet	Hauptteil	volltext_strasse+kreuzung	Rosental	Bonn-Castell	mittel	2
+240739	verortet	Hauptteil	volltext_strasse+kreuzung	Römerstraße	Bonn-Castell	niedrig	1
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Adenauerallee	Südstadt	mittel	3
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Am Hofgarten	Südstadt	niedrig	1
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Augustusring	Bonn-Castell	niedrig	1
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Brassertufer	Bonn-Zentrum	mittel	3
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Breite Straße	Nordstadt	niedrig	1
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Dorotheenstraße	Nordstadt	mittel	2
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Heerstraße	Nordstadt	mittel	2
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kaiserplatz	Südstadt	niedrig	1
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kölnstraße	Bonn-Castell	mittel	2
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kölnstraße	Bonn-Zentrum	mittel	2
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kölnstraße	Nordstadt	mittel	2
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Leinpfad	Bonn-Castell	mittel	2
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Maxstraße	Nordstadt	niedrig	1
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Rheingasse	Bonn-Zentrum	niedrig	1
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Rosental	Bonn-Castell	mittel	4
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Römerstraße	Bonn-Castell	niedrig	1
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Stockenstraße	Südstadt	niedrig	1
+240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Theaterstraße	Bonn-Zentrum	niedrig	1
+240742	kein Ort						
+240744	kein Ort						
+240745	kein Ort						
+240746	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Beuel		niedrig	1
+240747	kein Ort						
+240748	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+240750	verortet	Hauptteil	volltext_strasse+hausnummer	Konviktstraße	Bonn-Zentrum	niedrig	1
+240753	Titel ohne gemeinsamen Ort, nicht verortet						
+240754	Liste (16 Ortsteile), nicht verortet	Hauptteil					
+240755	verortet	Hauptteil	volltext_ortsteil_adjektiv	Rüngsdorf	Rüngsdorf	niedrig	1
+240755	verortet	Hauptteil	volltext_strasse	Bonner Talweg	Kessenich	niedrig	1
+240755	verortet	Hauptteil	volltext_strasse	Bonner Talweg	Südstadt	niedrig	1
+240755	verortet	Hauptteil	volltext_strasse	Grootestraße	Dransdorf	niedrig	1
+240756	verortet	Hauptteil	volltext_strasse	Graurheindorfer Straße	Bonn-Castell	mittel	1
+240756	verortet	Hauptteil	volltext_strasse	Heerstraße	Nordstadt	mittel	1
+240756	verortet	Hauptteil	volltext_strasse	Rosental	Bonn-Castell	mittel	5
+240756	verortet	Hauptteil	volltext_strasse	Welrichsweg	Bonn-Castell	mittel	1
+240756	verortet	Hauptteil	volltext_strasse+ortsteil	Leinpfad	Graurheindorf	mittel	2
+240756	verortet	Hauptteil	volltext_strasse+ortsteil	Römerstraße	Graurheindorf	mittel	1
+240757	Titel ohne gemeinsamen Ort, nicht verortet						
+240762	kein Ort						
+240762-01 ST	kein Ort						
+240768	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	mittel	1
+240769	kein Ort						
+240771	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	niedrig	1
+240771-01	Liste (7 Ortsteile), nicht verortet	Hauptteil					
+240772	kein Ort						
+240774	nur in Anlagen genannt, nicht verortet						
+240775	kein Ort						
+240776	kein Ort						
+240777	kein Ort						
+240781	verortet	Hauptteil	volltext_ortsteil_name	Südstadt	Südstadt	niedrig	1
+240781-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Weststadt	Weststadt	niedrig	1
+240781-01 AA	verortet	Hauptteil	volltext_strasse+hausnummer	Bonner Talweg	Südstadt	niedrig	1
+240781-01 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Argelanderstraße	Südstadt	niedrig	1
+240781-01 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Reuterstraße	Poppelsdorf	niedrig	1
+240781-01 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Reuterstraße	Südstadt	niedrig	1
+240782	kein Ort						
 240782-01 AA	kein Ort						
 240782-07	Liste (9 Ortsteile), nicht verortet	Hauptteil					
+240784	kein Ort						
+240785	kein Ort						
 240785-01 AA	kein Ort						
 240785-02 ST	kein Ort						
+240786	kein Ort						
+240787	kein Ort						
+240788-01 ST	kein Ort						
+240791	verortet	Hauptteil	volltext_strasse	Karlstraße	Weststadt	niedrig	1
+240792	kein Ort						
+240793	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+240793-01 ST	kein Ort						
+240798	nur in Anlagen genannt, nicht verortet						
+240799	kein Ort						
+240800	kein Ort						
+240802	kein Ort						
+240803	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
+240803	verortet	Hauptteil	volltext_strasse	Rheingasse	Bonn-Zentrum	niedrig	1
+240803	verortet	Hauptteil	volltext_strasse+hausnummer	Brüdergasse	Bonn-Zentrum	niedrig	1
+240803	verortet	Hauptteil	volltext_strasse+hausnummer	Kölnstraße	Bonn-Zentrum	niedrig	1
+240803	verortet	Hauptteil	volltext_strasse+hausnummer	Stiftsplatz	Bonn-Zentrum	niedrig	1
+240804	kein Ort						
+240804-01 ST	kein Ort						
+240805	kein Ort						
+240805-01 ST	verortet	Hauptteil	volltext_strasse	Brunnenallee	Alt-Godesberg	niedrig	1
+240806	kein Ort						
+240812	verortet	Hauptteil	volltext_strasse+kreuzung	Genscherallee	Gronau	niedrig	1
+240812	verortet	Hauptteil	volltext_strasse+kreuzung	Helmut-Kohl-Allee	Gronau	niedrig	1
+240812	verortet	Hauptteil	volltext_strasse+kreuzung	Heussallee	Gronau	niedrig	2
 240812-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Genscherallee	Gronau	mittel	1
 240812-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Helmut-Kohl-Allee	Gronau	mittel	1
 240812-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Heussallee	Gronau	mittel	2
 240812-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Schlegelstraße	Gronau	mittel	1
 240812-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Willy-Brandt-Allee	Gronau	mittel	1
+240816	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	1
+240816	verortet	Hauptteil	volltext_strasse	An der Schloßkirche	Bonn-Zentrum	mittel	1
+240816	verortet	Hauptteil	volltext_strasse	Friedensplatz	Bonn-Zentrum	mittel	1
+240816	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	mittel	1
+240816	verortet	Hauptteil	volltext_strasse+ortsteil	Buchholzstraße	Ippendorf	mittel	1
+240816-01 ST	kein Ort						
+240817	Titel ohne gemeinsamen Ort, nicht verortet						
+240819	kein Ort						
+240821	kein Ort						
+240825	Titel ohne gemeinsamen Ort, nicht verortet						
+240827	nur in Anlagen genannt, nicht verortet						
+240830	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
+240830	verortet	Hauptteil	volltext_strasse	Olof-Palme-Allee	Gronau	niedrig	1
+240830	verortet	Hauptteil	volltext_strasse	Rochusstraße	Duisdorf	niedrig	1
+240830	verortet	Hauptteil	volltext_strasse	Sternenburgstraße	Poppelsdorf	niedrig	1
+240833	Titel ohne gemeinsamen Ort, nicht verortet						
+240834	kein Ort						
+240835	verortet	Hauptteil	volltext_strasse+hausnummer	Meckenheimer Straße	Mehlem	niedrig	1
+240836	verortet	Hauptteil	volltext_strasse+hausnummer	Kollgasse	Mehlem	mittel	4
+240836	verortet	Hauptteil	volltext_strasse+hausnummer	Meckenheimer Straße	Mehlem	mittel	1
+240837	kein Ort						
+240839	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	niedrig	1
+240840	Titel ohne gemeinsamen Ort, nicht verortet						
+240844	kein Ort						
+240844-01 ST	kein Ort						
+240845	kein Ort						
+240846	verortet	Hauptteil	volltext_strasse	Maxstraße	Nordstadt	mittel	2
+240846-01 ST	kein Ort						
+240852	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
+240852	verortet	Hauptteil	volltext_strasse	Am Waldrand	Holtorf	mittel	1
+240852	verortet	Hauptteil	volltext_strasse	Ettenhausener Straße	Hoholz	mittel	2
+240852	verortet	Hauptteil	volltext_strasse	Ettenhausener Straße	Holzlar	mittel	2
+240852	verortet	Hauptteil	volltext_strasse	Ungartenstraße	Hoholz	mittel	2
+240852	verortet	Hauptteil	volltext_strasse	Ungartenstraße	Holtorf	mittel	2
+240852	verortet	Hauptteil	volltext_strasse+ortsteil	Schießbergweg	Ramersdorf	mittel	28
 240852-03 AA	verortet	Hauptteil	volltext_strasse+ortsteil	Schießbergweg	Ramersdorf	mittel	1
+240854	kein Ort						
+240857	kein Ort						
+240861	kein Ort						
+240865	verortet	Hauptteil	volltext_strasse+ortsteil	Europaring	Duisdorf	mittel	2
+240865	verortet	Hauptteil	volltext_strasse+ortsteil	Wesselheideweg	Duisdorf	mittel	1
+240867	kein Ort						
+240870	kein Ort						
+240870-01 ST	kein Ort						
+240872	kein Ort						
+240874	kein Ort						
+240875	nur in Anlagen genannt, nicht verortet						
+240877	kein Ort						
+240878	kein Ort						
+240884	verortet	Hauptteil	volltext_strasse+hausnummer	Am Hauptbahnhof	Bonn-Zentrum	mittel	1
+240886	verortet	Hauptteil	volltext_strasse+kreuzung	Heinrich-Brüning-Straße	Gronau	mittel	1
+240886	verortet	Hauptteil	volltext_strasse+kreuzung	Winston-Churchill-Straße	Gronau	mittel	1
+240888	nur in Anlagen genannt, nicht verortet						
+240889	kein Ort						
+240890	Titel ohne gemeinsamen Ort, nicht verortet						
+240893	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+240896	kein Ort						
+240897	kein Ort						
+240898	kein Ort						
+240899	Titel ohne gemeinsamen Ort, nicht verortet						
+240900	nur in Anlagen genannt, nicht verortet						
+240901	kein Ort						
+240902	kein Ort						
+240903	kein Ort						
+240905	Titel ohne gemeinsamen Ort, nicht verortet						
+240906	kein Ort						
+240907	kein Ort						
+240909	nur in Anlagen genannt, nicht verortet						
+240911	kein Ort						
+240913	kein Ort						
+240915	Titel ohne gemeinsamen Ort, nicht verortet						
+240917	kein Ort						
+240918	Titel ohne gemeinsamen Ort, nicht verortet						
+240919	kein Ort						
+240922	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+240924	kein Ort						
+240927	kein Ort						
+240928	kein Ort						
+240929	kein Ort						
+240931	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
+240931	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Weststadt	niedrig	1
+240931	verortet	Hauptteil	volltext_strasse+hausnummer	Am Helpert	Muffendorf	niedrig	1
+240931	verortet	Hauptteil	volltext_strasse+ortsteil	Am Bleichgraben	Endenich	niedrig	1
+240932	nur in Anlagen genannt, nicht verortet						
+240936	nur in Anlagen genannt, nicht verortet						
+240937	nur in Anlagen genannt, nicht verortet						
+240938	kein Ort						
+240940	kein Ort						
+240940-01 ST	kein Ort						
+240941	verortet	Hauptteil	volltext_strasse	Quantiusstraße	Bonn-Zentrum	niedrig	1
+240941	verortet	Hauptteil	volltext_strasse	Quantiusstraße	Weststadt	niedrig	1
 240941-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kaiserplatz	Bonn-Zentrum	niedrig	1
 240941-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kaiserplatz	Südstadt	niedrig	1
 240941-02 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Maximilianstraße	Bonn-Zentrum	niedrig	1
+240943	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
+240943	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
+240943	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
+240946	kein Ort						
+240952	Liste (11 Ortsteile), nicht verortet	Hauptteil					
+240953	Titel ohne gemeinsamen Ort, nicht verortet						
+240954	nur in Anlagen genannt, nicht verortet						
+240955	Titel ohne gemeinsamen Ort, nicht verortet						
+240956	Titel ohne gemeinsamen Ort, nicht verortet						
+240958	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	niedrig	1
+240958	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
+240958	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+240958	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
+240968	kein Ort						
+240972	kein Ort						
+240973	kein Ort						
+240975	kein Ort						
+240978	kein Ort						
+240980	Titel ohne gemeinsamen Ort, nicht verortet						
+240982	kein Ort						
 240982-02 ST	kein Ort						
+240983	Titel ohne gemeinsamen Ort, nicht verortet						
+240985	kein Ort						
+240986	kein Ort						
 240986-18 ST	kein Ort						
 240986-19 ST	kein Ort						
 240986-20 ST	kein Ort						
+240988	kein Ort						
+240988-01 ST	kein Ort						
+240991	verortet	Hauptteil	volltext_strasse+hausnummer	Markt	Bonn-Zentrum	niedrig	1
+240993	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 241129-04	kein Ort						
 241214-02 AA	kein Ort						
 241272-01 ST	kein Ort						
