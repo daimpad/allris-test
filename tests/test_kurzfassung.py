@@ -55,6 +55,17 @@ class KurzfassungTest(unittest.TestCase):
         self.assertTrue(kurzfassung.pruefe("Die Verwaltung schlägt vor, den Spielplatz an der Endenicher Straße neu zu gestalten.", TEXT)
                         .startswith("wörtliche Übernahme"))
 
+    def test_hausnummern_in_allen_schreibweisen(self):
+        # Code-Prüfung 23.10.2026: Buchstabenzusätze, „Str“ ohne Punkt und Straßen ohne Endung fehlten
+        for t in ["an der Hauptstraße 12a", "Endenicher Allee 11a", "Bornheimer Str 5", "Am Burggraben 3",
+                  "am Markt 2", "Kölnstraße Nr. 7"]:
+            self.assertTrue(kurzfassung.hausnummer(t), t)
+        for t in ["2 neue Bänke am Markt", "Bonner Wochenmarkt 25 % weniger", "am Holzlarer Weg, 500 Euro",
+                  "Wohnungsmarkt 2025", "Kölnstraße 30 Prozent"]:
+            self.assertFalse(kurzfassung.hausnummer(t), t)
+        # auch ein zu kurzer Entwurf wird mit Hausnummer nicht aufbewahrt
+        self.assertEqual(kurzfassung.pruefe("Bänke an der Hauptstraße 12a.", TEXT), "Hausnummer genannt")
+
     def test_markdown_wird_entfernt(self):
         self.assertEqual(kurzfassung.glaetten("Baum in der Straße *Am Herrengarten*, **gefällt**."),
                          "Baum in der Straße Am Herrengarten, gefällt.")

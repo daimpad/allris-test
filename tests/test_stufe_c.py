@@ -69,7 +69,8 @@ class StufeCTest(unittest.TestCase):
         self.assertEqual([(r["name"], r["level"], r["method"], r["ortsteil"], r["confidence"]) for r in rows],
                          [("Adelheidisschule", "objekt", "llm_objekt", "Vilich", "niedrig")])
         self.assertIn("OpenStreetMap", rows[0]["evidence"])
-        self.assertEqual(befunde[1], ("Marktschule", "nicht im Verzeichnis"))
+        # nur Namen aus dem Verzeichnis, nie die Wortfolge des Modells aus dem Text (keine Auszüge)
+        self.assertEqual(befunde, [("Adelheidisschule (Vilich)", befunde[0][1]), ("", "nicht im Verzeichnis")])
         orte[0]["rolle"] = "erwähnt"
         self.assertEqual(stufe_c.pruefen(self.gaz, text, orte[:1], [], objekte=obj)[0], [])
 

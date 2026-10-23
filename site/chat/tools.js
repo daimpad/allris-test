@@ -4,8 +4,9 @@
 // Tokenbudget: ein Ergebnis bleibt unter MAX_CHARS Zeichen (etwa 3.500 Tokens); längere Listen werden
 // seitenweise nachgeladen (Parameter `seite`).
 // Datenschutz: Ortsangaben nur auf Straßen-, Ortsteil- oder Bezirksebene (keine Hausnummern, pipeline/check.py);
-// keine Namen natürlicher Personen (pipeline/actors.py). In Titeln von Vorlagen aus der Einwohnerschaft
-// (Bürgeranträge, Anregungen und Beschwerden, Einwohnerfragen) werden Hausnummern ausgelassen.
+// keine Namen natürlicher Personen (pipeline/actors.py). In Titeln und Fundstellen von Vorlagen aus der Einwohnerschaft
+// (Bürgeranträge, Anregungen und Beschwerden, Einwohnerfragen) und aller Vorlagen desselben Vorgangs
+// (bonn/chat/einwohner.json, pipeline/chat.py) werden Hausnummern ausgelassen.
 
 import { mitwirken } from "../mitwirken.js";
 export const PAGE = 10;
@@ -13,7 +14,9 @@ export const MAX_CHARS = 12000;
 const TITLE_MAX = 180;
 const EINWOHNER = new Set(["Bürgerantrag § 24 GO - Öffentlich", "Anregungen und Beschwerden", "Einwohnerfrage", "Bürgerbrief"]);
 const EINWOHNER_TITEL = /bürgerantrag|einwohner|anregung|beschwerde/i;
-const NR = String.raw`\d{1,4}\s?[a-zA-Z]?(?:\s*(?:-|–|bis|und|u\.|/|,)\s*\d{1,4}\s?[a-zA-Z]?)*\b`;
+// höchstens drei Ziffern: Plannummern wie „7923-2“ sind keine Hausnummern
+// Buchstabenzusatz nur als einzelner Buchstabe („12a“, „12 a“), nicht der Anfang des nächsten Wortes („33 und“)
+const NR = String.raw`\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?(?:\s*(?:-|–|bis|und|u\.|/|,)\s*\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?)*(?!\d)`;
 const SUFFIX = String.raw`[\p{L}.-]*(?:straße|strasse|str\.|weg|platz|gasse|allee|ring|ufer|damm|pfad|chaussee|hof|markt|graben|berg|feld)`;
 export const OHNE_NR = "[Hausnummer ausgelassen]";
 const STAENDE = ["entschieden", "beraten, ohne Entscheidung", "in Beratung", "offen", "ohne Beratungsfolge"];
@@ -238,14 +241,17 @@ export function createTools({ load, today = berlinToday() } = {}) {
     return hit;
   }
 
-  // Hausnummern hinter bekannten Straßennamen oder Straßen-Endungen ausblenden (nur Vorlagen aus der Einwohnerschaft)
+  // Hausnummern hinter bekannten Straßennamen oder Straßen-Endungen ausblenden (nur Vorlagen aus der Einwohnerschaft
+  // und ihre Vorgänge; mask(text, Art, Drucksache))
   async function masker() {
     const d = await places();
     if (!d._mask) {
+      let ew = new Set();
+      try { ew = new Set((await get("bonn/chat/einwohner.json")).drucksachen); } catch (e) { /* ältere Exporte ohne Datei */ }
       const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       const names = [...new Set(d.places.filter((p) => p.level === "strasse").map((p) => p.name))].sort((a, b) => b.length - a.length).map(esc);
       const rx = new RegExp(String.raw`((?:${[...names, SUFFIX].join("|")})\s+)${NR}`, "giu");
-      d._mask = (title, type) => (title && (EINWOHNER.has(type) || EINWOHNER_TITEL.test(title)) ? title.replace(rx, `$1${OHNE_NR}`) : title);
+      d._mask = (title, type, ref) => (title && (EINWOHNER.has(type) || EINWOHNER_TITEL.test(title) || ew.has(ref)) ? title.replace(rx, `$1${OHNE_NR}`) : title);
     }
     return d._mask;
   }
@@ -254,7 +260,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
     const s = await search();
     return (s._byRef ||= new Map(s.rows.map((r) => [r[0], r])));
   }
-  const item = (s, r, mask) => ({ drucksache: r[0], titel: short(mask(r[1], s.types[r[3]])), datum: r[2], art: s.types[r[3]] ?? null, stand: s.stands[r[4]] });
+  const item = (s, r, mask) => ({ drucksache: r[0], titel: short(mask(r[1], s.types[r[3]], r[0])), datum: r[2], art: s.types[r[3]] ?? null, stand: s.stands[r[4]] });
 
   async function retrieved() {
     const d = await status();
@@ -326,18 +332,18 @@ export function createTools({ load, today = berlinToday() } = {}) {
       const rel = relOf(mask);
       const label = g.themen || {};
       return {
-        drucksache: p.reference, titel: mask(p.name, p.paper_type), art: p.paper_type, datum: p.date,
+        drucksache: p.reference, titel: mask(p.name, p.paper_type, p.reference), art: p.paper_type, datum: p.date,
         stand: p.stand, stand_erklaerung: g.staende[p.stand] ?? null,
         federfuehrendes_amt: p.amt,
         zustaendigkeit: p.responsibility.map((r) => ({ amt: r.label, bereich: r.name, art: r.kind, status: r.derived ? "abgeleitet" : "belegt" })),
-        einreichende: p.originators.map((o) => ({ name: o.actor, typ: o.actor_type, status: o.derived ? "abgeleitet" : "belegt", fundstelle: o.evidence })),
+        einreichende: p.originators.map((o) => ({ name: o.actor, typ: o.actor_type, status: o.derived ? "abgeleitet" : "belegt", fundstelle: mask(o.evidence, p.paper_type, p.reference) })),
         themen: p.themes.map((t) => ({ thema: label[t.theme] ?? t.theme, status: "abgeleitet", methode: t.method, fundstelle: t.evidence, konfidenz: t.confidence })),
         parteien: p.parties,
         kurzfassung: p.kurzfassung ? { text: p.kurzfassung.text, status: "abgeleitet", modell: p.kurzfassung.modell,
           hinweis: "Mit einem Sprachmodell aus dem Text des Dokuments formuliert, kein Zitat. Einzelheiten können ungenau sein, etwa ob etwas beschlossen oder nur vorgeschlagen ist. Maßgeblich ist das Original." } : null,
-        orte: p.locations.slice(0, 10).map(loc),
+        orte: p.locations.slice(0, 10).map(locOf(mask, p)),
         orte_gesamt: p.locations.length,
-        bebauungsplaene: p.plans.map((x) => ({ nummer: x.nr, fundstelle: x.evidence, geltungsbereich_bekannt: x.area, treffer: x.match || null })),
+        bebauungsplaene: p.plans.map((x) => ({ nummer: x.nr, fundstelle: mask(x.evidence, p.paper_type, p.reference), geltungsbereich_bekannt: x.area, treffer: x.match || null })),
         uebergeordnet: p.superordinated.slice(0, 5).map(rel),
         folgevorlagen: p.subordinated.slice(0, 10).map(rel),
         folgevorlagen_gesamt: p.subordinated.length,
@@ -364,12 +370,12 @@ export function createTools({ load, today = berlinToday() } = {}) {
         if (x.number) o.top = x.number;
         if (x.stand && (x.typ === "beratung" || x.typ === "entscheidung")) o.beratungsstatus = x.stand;
         if (x.actors?.length) { o.einreichende = x.actors; o.einreichende_status = x.actors_status; }
-        if (x.reference) { o.drucksache = x.reference; o.titel = short(mask(x.title, x.label)); }
+        if (x.reference) { o.drucksache = x.reference; o.titel = short(mask(x.title, x.label, x.reference)); }
         if (x.note) o.hinweis = g.hinweise[x.note] ?? x.note;
         return o;
       });
       return {
-        drucksache: p.reference, titel: short(mask(p.name, p.paper_type)), stand: p.stand, stand_erklaerung: g.staende[p.stand] ?? null,
+        drucksache: p.reference, titel: short(mask(p.name, p.paper_type, p.reference)), stand: p.stand, stand_erklaerung: g.staende[p.stand] ?? null,
         heute: today, schritte: out, folgevorlagen_gesamt: folge.length,
         ...(await sollAngaben(p, used)),
         evidenzstatus: Object.fromEntries([...used].map((k) => [k, g.evidenz[k]])),
@@ -491,7 +497,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
     async suche_bebauungsplan(a) {
       const d = await plaene();
       const mask = await masker();
-      const vorlage = (v) => ({ drucksache: v.drucksache, datum: v.datum, art: v.art, titel: short(mask(v.titel, v.art)), stand: v.stand });
+      const vorlage = (v) => ({ drucksache: v.drucksache, datum: v.datum, art: v.art, titel: short(mask(v.titel, v.art, v.drucksache)), stand: v.stand });
       const hinweise = ["Erfasst sind Pläne, deren Nummer im Titel einer Vorlage ab Oktober 2019 steht.",
         "Verfahrensschritte: Soll nach BauGB; eine Vorlage ist einem Schritt zugeordnet, wenn ihr Titel ihn nennt (abgeleitet). „soll“ heißt: keine Vorlage nennt den Schritt – nicht, dass er fehlt. Vereinfachte Verfahren (§§ 13, 13a BauGB) haben weniger Schritte."];
       if (a.nummer) {
@@ -559,8 +565,8 @@ export function createTools({ load, today = berlinToday() } = {}) {
   return { run, tools: TOOLS };
 }
 
-const loc = (l) => ({ ort: l.name, ebene: l.level, ortsteil: l.ortsteil, stadtbezirk: l.stadtbezirk, stufe: l.stage, methode: l.method, konfidenz: l.confidence, fundstelle: l.evidence });
-const relOf = (mask) => (r) => ({ drucksache: r.reference, art: r.paper_type, titel: short(mask(r.name, r.paper_type)), datum: r.date });
+const locOf = (mask, p) => (l) => ({ ort: l.name, ebene: l.level, ortsteil: l.ortsteil, stadtbezirk: l.stadtbezirk, stufe: l.stage, methode: l.method, konfidenz: l.confidence, fundstelle: mask(l.evidence, p.paper_type, p.reference) });
+const relOf = (mask) => (r) => ({ drucksache: r.reference, art: r.paper_type, titel: short(mask(r.name, r.paper_type, r.reference)), datum: r.date });
 
 function dist(lat1, lon1, lat2, lon2) {
   const rad = Math.PI / 180, dLat = (lat2 - lat1) * rad, dLon = (lon2 - lon1) * rad;

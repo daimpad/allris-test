@@ -36,6 +36,18 @@ class Chat(unittest.TestCase):
         self.assertEqual(len(out), 1)
         self.assertEqual([p[0] for p in out[0]["papers"]], ["261090", "261088"])
 
+    def test_einwohner_mit_allen_vorlagen_des_vorgangs(self):
+        antrag = {**PAPER, "reference": "221454", "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+                  "subordinated": [{"reference": "221454-01 ST"}], "superordinated": []}
+        stellung = {**PAPER, "reference": "221454-01 ST", "paper_type": "Stellungnahme der Verwaltung",
+                    "name": "Bebauung an der Grimmgasse", "superordinated": [{"reference": "221454"}],
+                    "subordinated": [{"reference": "221454-02"}]}
+        mitteilung = {**PAPER, "reference": "221454-02", "paper_type": "Mitteilungsvorlage", "name": "Mitteilung",
+                      "superordinated": [{"reference": "221454-01 ST"}], "subordinated": []}
+        anderes = {**PAPER, "subordinated": [], "superordinated": []}
+        self.assertEqual(chat.einwohner([antrag, stellung, mitteilung, anderes]),
+                         ["221454", "221454-01 ST", "221454-02"])
+
     def test_teildatei_nach_praefix(self):
         self.assertEqual(chat.shard_key("261088-01 ST"), chat.shard_key("261088"))
 
