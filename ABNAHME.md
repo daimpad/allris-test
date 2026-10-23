@@ -1,6 +1,6 @@
 # Abnahme: offene Entscheidungen und Prüfungen
 
-Stand 22.10.2026. Diese Liste nennt alles, was der Auftraggeber entscheiden, von Hand prüfen oder in eigenen Konten erledigen muss. Was technisch erledigt ist, steht in `CLAUDE.md` (Abschnitt 9).
+Stand 23.10.2026. Diese Liste nennt alles, was der Auftraggeber entscheiden, von Hand prüfen oder in eigenen Konten erledigen muss. Was technisch erledigt ist, steht in `CLAUDE.md` (Abschnitt 9).
 
 Zur Kennzeichnung: Eine **KI-Vorprüfung** stammt von einem Sprachmodell und ersetzt keine Prüfung von Hand.
 
@@ -14,7 +14,7 @@ Zur Kennzeichnung: Eine **KI-Vorprüfung** stammt von einem Sprachmodell und ers
 | 4 | Verortung aus dem Volltext | **erledigt 22.10.2026:** 14 richtig, 7 teilweise, 1 falsch, 8 entfallen | Regeln behalten | – |
 | 5 | Gebäude und Anlagen im Titel | **erledigt 22.10.2026:** 24 richtig, 6 teilweise, keine falsch | Regeln behalten | – |
 | 6 | Konten und Server | eigene Konten | – | je 10–20 Minuten |
-| 7 | Außenwirkung | Entscheidung | siehe 7 | – |
+| 7 | Außenwirkung | **teilweise erledigt 23.10.2026:** Issue-Entwurf freigegeben, Kontakt zum Autor erledigt; offen: Hackathon-Rahmen | siehe 7 | – |
 
 Die Prüfbögen sind TSV-Dateien. Sie lassen sich in einer Tabellenkalkulation öffnen; die Spalte `urteil` ist leer und wird von Hand gefüllt. Ausgefüllt bitte zurückgeben oder im Repository einchecken.
 
@@ -119,10 +119,10 @@ Läuft auf der Seite seit dem 21.10.2026 (Konfidenz „niedrig“, 837 Vorlagen)
 
 | Gegenstand | Empfehlung |
 |---|---|
-| Issue an OParl-Lite (Codeberg): Felder `location` und `underDirectionOf` übernehmen | ja, sachlich und kurz. Die Felder sind in der OParl-API der Stadt vorhanden und für Verortung und Zuständigkeit zentral. Ein Entwurf folgt auf Wunsch. |
-| Kontakt zum Autor von „Bonn entscheidet“ (Soll-Modell) | nach dem Hackathon. Übernahme und Ergänzungen sind dokumentiert (`soll/`). |
+| Issue an OParl-Lite (Codeberg) | **23.10.2026:** `underDirectionOf` ist inzwischen in OParl-Lite enthalten. Offen bleibt `location` (bei 20 von 20 geprüften Vorlagen nicht verknüpft). Entwurf `docs/entwurf_issue_oparl_lite.md` vom Auftraggeber freigegeben; er stellt das Issue selbst ein. |
+| Kontakt zum Autor von „Bonn entscheidet“ (Soll-Modell) | **erledigt** (Mitteilung des Auftraggebers 23.10.2026) |
 | Antwort von opendata@bonn.de zu den Baustellen-Datensätzen | abwarten. Das Archiv läuft unabhängig davon. |
-| Hackathon-Rahmen (Datum, Teilnehmende, Ergebnisformat) | mitteilen; danach entstehen Leitfaden und „good first issues“ |
+| Hackathon-Rahmen (Datum, Teilnehmende, Ergebnisformat) | offen (23.10.2026); danach entstehen Leitfaden und „good first issues“. Die Planung des Hackathons läuft in den Issues von `oparl-lite-2` (#85 Ablauf, #86 Aufgaben, #87 Datenzugang). |
 
 ## Bereits abgenommen (zur Erinnerung)
 
