@@ -112,6 +112,31 @@ class KurzfassungTest(unittest.TestCase):
             self.assertEqual(rows[1]["verworfen"], "nicht in Titel oder Text: Rat")
             self.assertFalse(rows[1]["beim_gegenlesen_geaendert"])
 
+    def test_gescheiterte_anfrage_haelt_den_lauf_nicht_an(self):
+        # Code-Prüfung 23.10.2026: ein Fehler beendete bisher den ganzen Lauf, ohne Zwischenstand
+        with tempfile.TemporaryDirectory() as d:
+            texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"
+            texte.write_text("\n".join(json.dumps({"uri": f"f{i}", "sha": f"s{i}", "text": TEXT}) for i in range(2)))
+            papers.write_text("\n".join(json.dumps({"reference": f"26000{i}", "name": f"Spielplatz Nr{i}",
+                                                    "paperType": "Antrag", "mainFile": {"id": f"f{i}"}}) for i in range(2)))
+            gut = "Der Spielplatz in Endenich soll neue Geräte und bessere Wege bekommen, bezahlt von der Stadt."
+            calls = []
+            def anfrage(titel, text, key):
+                calls.append(1)
+                if "Nr0" in titel:   # diese Anfrage scheitert immer
+                    raise TimeoutError("Anbieter antwortet nicht")
+                return gut, {}
+            out = Path(d) / "kurz"
+            with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), \
+                    mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers):
+                for _ in range(4):
+                    kurzfassung.erzeugen(out, anfrage=anfrage)
+            rows = {r["drucksache"]: r for r in kurzfassung.laden(out).values()}
+            self.assertEqual(rows["260001"]["kurzfassung"], gut)          # zweiter Eintrag trotz Fehler davor erzeugt
+            self.assertEqual(rows["260000"]["fehler"], "Anfrage gescheitert: TimeoutError")
+            self.assertEqual(rows["260000"]["versuche"], kurzfassung.MAX_VERSUCHE)   # danach nicht mehr angefragt
+            self.assertEqual(len(calls), 1 + kurzfassung.MAX_VERSUCHE)
+
     def test_erzeugen_nur_neue_und_verwirft_auszuege(self):
         with tempfile.TemporaryDirectory() as d:
             texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"

@@ -44,8 +44,12 @@ jobs:
             data/raw/organizations.json
             data/raw/verwaltungsbereiche.json
             data/raw/STAND.json
+            data/raw/meetings.json
+            data/raw/legislative_terms.json
             data/geo/bebauungsplaene_bonn.geojson
             data/geo/bebauungsplaene_protokoll.tsv
+            data/geo/hausnummern_bonn.json
+            data/geo/objekte_bonn.json
           key: raw-${{ github.run_id }}
           restore-keys: raw-
 
@@ -114,7 +118,10 @@ jobs:
           KURZFASSUNG_MAX: ${{ github.event_name == 'push' && '50' || '500' }}
         run: |
           url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
-          if git ls-remote --exit-code --heads "$url" kurzfassungen > /dev/null; then
+          # Exit-Code 2: Branch fehlt; jeder andere Fehler (Netz) bricht ab, statt mit leerem Bestand weiterzumachen
+          rc=0; git ls-remote --exit-code --heads "$url" kurzfassungen > /dev/null || rc=$?
+          if [ "$rc" -ne 0 ] && [ "$rc" -ne 2 ]; then echo "Abfrage des Branches kurzfassungen gescheitert ($rc)"; exit 1; fi
+          if [ "$rc" -eq 0 ]; then
             git clone -q --depth 1 --branch kurzfassungen "$url" _kurzfassungen
           else
             git init -q -b kurzfassungen _kurzfassungen
@@ -199,7 +206,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
-          if git ls-remote --exit-code --heads "$url" deploy > /dev/null; then
+          # Exit-Code 2: Branch fehlt; jeder andere Fehler (Netz) bricht ab, statt mit leerem Bestand weiterzumachen
+          rc=0; git ls-remote --exit-code --heads "$url" deploy > /dev/null || rc=$?
+          if [ "$rc" -ne 0 ] && [ "$rc" -ne 2 ]; then echo "Abfrage des Branches deploy gescheitert ($rc)"; exit 1; fi
+          if [ "$rc" -eq 0 ]; then
             git clone -q --depth 1 --branch deploy "$url" _deploy
           else
             git init -q -b deploy _deploy

@@ -1,6 +1,7 @@
 """Abruf der Rohdaten: städtische OParl-API (Primärquelle) und OParl-Lite (Sitzungen, TOPs)."""
 import concurrent.futures as cf
 import json
+import os
 from datetime import datetime, timezone
 
 from . import config
@@ -17,32 +18,65 @@ def _stamp(key):
     config.STAND.write_text(json.dumps(stand, ensure_ascii=False, indent=1) + "\n")
 
 
+# Ein neuer Abruf ersetzt den vorhandenen Stand nur, wenn er mindestens diesen Anteil der Objekte enthält; sonst
+# bricht der Schritt ab und der letzte Stand (Zwischenspeicher bzw. Repository) bleibt (Code-Prüfung 23.10.2026:
+# eine leere Antwort mit Status 200 hätte sonst Vorlagen oder Bebauungspläne für Tage entfernt)
+MIN_ANTEIL = 0.9
+
+
+def _write(path, text):
+    """Schreibt erst in eine temporäre Datei und ersetzt dann: ein Abbruch hinterlässt keine halbe Datei."""
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    os.replace(tmp, path)
+
+
+def _jsonl_count(path):
+    if not path.exists():
+        return 0
+    with open(path, encoding="utf-8") as f:
+        return sum(1 for line in f if line.strip())
+
+
+def _guard(label, new, old):
+    """Bricht ab, wenn der neue Abruf deutlich weniger Objekte enthält als der vorhandene Stand."""
+    if old and new < MIN_ANTEIL * old:
+        raise RuntimeError(f"{label}: nur {new} statt bisher {old} – unvollständige Antwort? Vorhandener Stand bleibt.")
+
+
 def _oparl_list(url, size=100, workers=6):
     first = get_json(f"{url}?page=1&size={size}")
     pages = first["pagination"]["totalPages"]
-    print(f"{url}: {first['pagination']['totalElements']} Objekte, {pages} Seiten", flush=True)
+    total = first["pagination"]["totalElements"]
+    print(f"{url}: {total} Objekte, {pages} Seiten", flush=True)
     results = {1: first["data"]}
     with cf.ThreadPoolExecutor(max_workers=workers) as ex:
         fetch = lambda p: (p, get_json(f"{url}?page={p}&size={size}")["data"])
         for p, data in ex.map(fetch, range(2, pages + 1)):
             results[p] = data
-    return [item for p in sorted(results) for item in results[p]]
+    empty = [p for p in sorted(results) if not results[p] and p < pages]
+    items = [item for p in sorted(results) for item in results[p]]
+    # neue Objekte während des Abrufs verschieben die Seiten etwas; leere Seiten oder große Lücken nicht
+    if empty or len(items) < MIN_ANTEIL * total:
+        raise RuntimeError(f"{url}: unvollständig ({len(items)} von {total} Objekten, leere Seiten: {empty[:5]})")
+    return items
 
 
 def fetch_papers():
     papers = _oparl_list(f"{config.OPARL_BODY}/papers")
-    with open(config.PAPERS, "w", encoding="utf-8") as f:
-        for p in papers:
-            f.write(json.dumps(p, ensure_ascii=False) + "\n")
+    _guard("Vorlagen", len(papers), _jsonl_count(config.PAPERS))
+    _write(config.PAPERS, "".join(json.dumps(p, ensure_ascii=False) + "\n" for p in papers))
     _stamp("papers")
     print(f"{len(papers)} Vorlagen → {config.PAPERS}")
 
 
 def fetch_organizations():
     orgs = _oparl_list(f"{config.OPARL_BODY}/organizations")
-    config.ORGANIZATIONS.write_text(json.dumps(orgs, ensure_ascii=False))
+    if config.ORGANIZATIONS.exists():
+        _guard("Organisationen", len(orgs), len(json.loads(config.ORGANIZATIONS.read_text())))
+    _write(config.ORGANIZATIONS, json.dumps(orgs, ensure_ascii=False))
     vb = [o for o in orgs if o.get("organizationType") == "Verwaltungsbereich"]
-    config.VERWALTUNGSBEREICHE.write_text(json.dumps(vb, ensure_ascii=False))
+    _write(config.VERWALTUNGSBEREICHE, json.dumps(vb, ensure_ascii=False))
     _stamp("organizations")
     print(f"{len(orgs)} Organisationen, davon {len(vb)} Verwaltungsbereiche")
 
@@ -50,13 +84,15 @@ def fetch_organizations():
 def fetch_meetings():
     """Sitzungen (auch künftige) und Wahlperioden aus der städtischen OParl-API."""
     meetings = _oparl_list(f"{config.OPARL_BODY}/meetings")
+    if config.MEETINGS.exists():
+        _guard("Sitzungen", len(meetings), len(json.loads(config.MEETINGS.read_text())))
+    terms = _oparl_list(f"{config.OPARL_BODY}/legislativeTerms", size=10)
     keep = ("id", "name", "meetingState", "cancelled", "start", "end", "organization", "web")
     # Tagesordnung (web) und Einladung erscheinen etwa zwei Wochen vor der Sitzung
-    config.MEETINGS.write_text(json.dumps(
+    _write(config.MEETINGS, json.dumps(
         [{**{k: m.get(k) for k in keep}, "invitation": (m.get("invitation") or {}).get("accessUrl"),
           "agenda_items": len(m.get("agendaItem") or [])} for m in meetings], ensure_ascii=False))
-    terms = _oparl_list(f"{config.OPARL_BODY}/legislativeTerms", size=10)
-    config.LEGISLATIVE_TERMS.write_text(json.dumps(terms, ensure_ascii=False))
+    _write(config.LEGISLATIVE_TERMS, json.dumps(terms, ensure_ascii=False))
     _stamp("meetings")
     print(f"{len(meetings)} Sitzungen, {len(terms)} Wahlperioden")
 
@@ -86,14 +122,17 @@ def fetch_consultations_lite(page=100, workers=2):
     with cf.ThreadPoolExecutor(max_workers=workers) as ex:
         for off, res in ex.map(lambda o: (o, run(o)), range(page, total, page)):
             items[off] = res["items"]
-    seen = set()
-    with open(config.CONSULTATIONS_LITE, "w", encoding="utf-8") as f:
-        for off in sorted(items):
-            for c in items[off]:
-                if c["uri"] in seen:
-                    continue
-                seen.add(c["uri"])
-                f.write(json.dumps(c, ensure_ascii=False) + "\n")
+    seen, lines = set(), []
+    for off in sorted(items):
+        for c in items[off]:
+            if c["uri"] in seen:
+                continue
+            seen.add(c["uri"])
+            lines.append(json.dumps(c, ensure_ascii=False) + "\n")
+    if len(seen) < MIN_ANTEIL * total:
+        raise RuntimeError(f"OParl-Lite: unvollständig ({len(seen)} von {total} Beratungen)")
+    _guard("Beratungen (OParl-Lite)", len(seen), _jsonl_count(config.CONSULTATIONS_LITE))
+    _write(config.CONSULTATIONS_LITE, "".join(lines))
     _stamp("consultations_lite")
     print(f"{len(seen)} Beratungen → {config.CONSULTATIONS_LITE}")
 
@@ -104,10 +143,16 @@ OVERPASS_QUERY = '[out:json][timeout:90];way["highway"]["name"]({s},{w},{n},{e})
 def _overpass(query):
     for url in config.OVERPASS:
         try:
-            return post_form(url, {"data": query}, tries=3)
+            data = post_form(url, {"data": query}, tries=3)
         except Exception as exc:  # nächster Server
             print(f"  {url}: {exc}", flush=True)
-    raise RuntimeError("Kein Overpass-Server erreichbar.")
+            continue
+        # Overpass meldet Zeitüberschreitungen mit Status 200 und einem Vermerk; das Ergebnis ist dann unvollständig
+        if "runtime error" in (data.get("remark") or ""):
+            print(f"  {url}: {data['remark'][:120]}", flush=True)
+            continue
+        return data
+    raise RuntimeError("Kein Overpass-Server erreichbar oder Antwort unvollständig.")
 
 
 def _tile_ways(s, w, n, e, depth=0):
@@ -129,7 +174,7 @@ def _tile_ways(s, w, n, e, depth=0):
             missing += miss
         return ways, missing
     config.OSM_TILES.mkdir(parents=True, exist_ok=True)
-    cache.write_text(json.dumps(elements, ensure_ascii=False))
+    _write(cache, json.dumps(elements, ensure_ascii=False))
     return elements, []
 
 
@@ -150,8 +195,7 @@ def fetch_streets(step=0.05):
                                   "highway": el["tags"].get("highway"),
                                   "coords": [[p["lon"], p["lat"]] for p in el["geometry"]]}
         print(f"Kachel {i}/{len(tiles)}: {len(ways)} Ways, {len(miss)} Teilkacheln fehlen", flush=True)
-    config.OSM_STREETS.write_text(json.dumps(
-        {"ways": list(ways.values()), "missing_tiles": missing}, ensure_ascii=False))
+    _write(config.OSM_STREETS, json.dumps({"ways": list(ways.values()), "missing_tiles": missing}, ensure_ascii=False))
     _stamp("osm_streets")
     print(f"{len(ways)} Ways → {config.OSM_STREETS}; fehlende Teilkacheln: {len(missing)}")
 
@@ -175,8 +219,10 @@ def fetch_plans():
                                 "begruendung": https(f["properties"].get("begruendung_link"))},
                  "geometry": {"type": f["geometry"]["type"], "coordinates": rnd(f["geometry"]["coordinates"])}}
                 for f in data["features"] if f.get("geometry")]
+    if config.BPLAN.exists():
+        _guard("Bebauungspläne", len(features), len(json.loads(config.BPLAN.read_text())["features"]))
     _plan_changes(features)
-    config.BPLAN.write_text(json.dumps({
+    _write(config.BPLAN, json.dumps({
         "type": "FeatureCollection",
         "meta": {"source": config.BPLAN_URL, "license": config.SOURCES["bplan-bonn"]["license"],
                  "retrieved_at": _now()},
@@ -202,7 +248,9 @@ def fetch_housenumbers():
             out.setdefault(street, {}).setdefault(ot["ortsteil_bez"], set()).add(nr)
             n += 1
     key = lambda x: (int(x) if x.isdigit() else 10**6, x)
-    config.HAUSNUMMERN.write_text(json.dumps({
+    if config.HAUSNUMMERN.exists():
+        _guard("Hausnummern", n, json.loads(config.HAUSNUMMERN.read_text())["meta"].get("adressen", 0))
+    _write(config.HAUSNUMMERN, json.dumps({
         "meta": {"source": config.HAUSNUMMERN_URL, "license": config.SOURCES["hnr-bonn"]["license"],
                  "retrieved_at": _now(), "adressen": n,
                  "note": "Straße → Ortsteil → Hausnummern ohne Zusatz; Ortsteil per Point-in-Polygon (Ortsteilflächen "
@@ -259,7 +307,9 @@ def fetch_objects():
             out[f"{x['type']}/{x['id']}"] = {"name": t["name"].strip(), "art": art, "ortsteil": ot["ortsteil_bez"],
                                             "bezirk": ot["bezirk_bez"], "lon": round(c["lon"], 6),
                                             "lat": round(c["lat"], 6)}
-    config.OBJEKTE.write_text(json.dumps({
+    if config.OBJEKTE.exists():
+        _guard("Gebäude und Anlagen", len(out), json.loads(config.OBJEKTE.read_text())["meta"].get("objekte", 0))
+    _write(config.OBJEKTE, json.dumps({
         "meta": {"source": config.SOURCES["osm"]["url"], "license": config.SOURCES["osm"]["license"],
                  "retrieved_at": _now(), "objekte": len(out),
                  "note": "benannte Gebäude und Anlagen (öffentliche Einrichtungen, Grün- und Sportanlagen, Friedhöfe, "
@@ -293,22 +343,49 @@ def fetch_texts(max_files=3000, batch=10, pause=1.0):
         off += 100
         time.sleep(pause)
     todo = [f for f in listing if (have.get(f["uri"]) or {}).get("sha") != f["textSha256"]][:max_files]
-    for i in range(0, len(todo), batch):
-        chunk = todo[i:i + batch]
-        body = " ".join(f'f{j}: fileByUri(uri:"{f["uri"]}"){{ uri textSha256 text }}' for j, f in enumerate(chunk))
-        data = post_graphql(config.LITE_GRAPHQL, "{ " + body + " }")
-        for j, f in enumerate(chunk):
-            d = data.get(f"f{j}") or {}
-            if d.get("text"):
-                have[f["uri"]] = {"uri": f["uri"], "sha": d.get("textSha256"), "papers": [p["uri"] for p in f["papers"]],
-                                  "text": d["text"]}
-        time.sleep(pause)
-    with open(config.TEXTE, "w", encoding="utf-8") as fh:
-        for uri in sorted(have):
-            fh.write(json.dumps(have[uri], ensure_ascii=False) + "\n")
+
+    def holen(chunk):
+        # URIs als GraphQL-Variablen, nicht in den Abfragetext eingesetzt
+        head = ", ".join(f"$u{j}: String!" for j in range(len(chunk)))
+        body = " ".join(f"f{j}: fileByUri(uri: $u{j}) {{ uri textSha256 text }}" for j in range(len(chunk)))
+        return post_graphql(config.LITE_GRAPHQL, f"query({head}) {{ {body} }}",
+                            {f"u{j}": f["uri"] for j, f in enumerate(chunk)}, tries=3)
+
+    def sichern():
+        _write(config.TEXTE, "".join(json.dumps(have[uri], ensure_ascii=False) + "\n" for uri in sorted(have)))
+
+    # Zwischenstände sichern und einzelne fehlerhafte Dateien überspringen (Code-Prüfung 23.10.2026: bisher
+    # ging bei einem Fehler oder bei der Zeitgrenze des Workflows alles verloren, und eine stets fehlerhafte Datei
+    # hielt den Abruf jeden Tag an derselben Stelle an)
+    neu, fehler = 0, 0
+    try:
+        for i in range(0, len(todo), batch):
+            chunk = todo[i:i + batch]
+            try:
+                parts = [(chunk, holen(chunk))]
+            except Exception:
+                parts = []
+                for f in chunk:   # einzeln wiederholen, fehlerhafte Datei überspringen
+                    try:
+                        parts.append(([f], holen([f])))
+                    except Exception as exc:
+                        fehler += 1
+                        print(f"  Volltext übersprungen: {f['uri']} ({type(exc).__name__})", flush=True)
+            for files, data in parts:
+                for j, f in enumerate(files):
+                    d = data.get(f"f{j}") or {}
+                    if d.get("text"):
+                        have[f["uri"]] = {"uri": f["uri"], "sha": d.get("textSha256"),
+                                          "papers": [p["uri"] for p in f["papers"]], "text": d["text"]}
+                        neu += 1
+            if (i // batch) % 20 == 19:
+                sichern()
+            time.sleep(pause)
+    finally:
+        sichern()
     _stamp("texte")
-    print(f"Volltexte: {len(listing)} Hauptdokumente mit Text in OParl-Lite, {len(todo)} neu oder geändert abgerufen, "
-          f"{len(have)} lokal → {config.TEXTE}")
+    print(f"Volltexte: {len(listing)} Hauptdokumente mit Text in OParl-Lite, {neu} von {len(todo)} neuen oder "
+          f"geänderten abgerufen, {fehler} übersprungen, {len(have)} lokal → {config.TEXTE}")
 
 
 def _plan_changes(features):
