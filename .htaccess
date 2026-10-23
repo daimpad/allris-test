@@ -23,5 +23,19 @@ AddCharset utf-8 .json .geojson .tsv .md .js .css
   ExpiresByType image/x-icon "access plus 1 week"
 </IfModule>
 
+# HTML, Skripte und Stile ohne Versionsnummer im Namen: immer beim Server nachfragen (ETag, meist „304“),
+# damit nach einer Veröffentlichung kein altes app.js mit neuen Daten läuft (Code-Prüfung 23.10.2026)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|mjs|css|webmanifest|md)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # Sicherheit: kein Einbetten in fremde Seiten (die Seite enthält ein Feld für API-Schlüssel), kein Erraten von
+  # Dateitypen, Herkunft nur als Domain weitergeben, nur HTTPS
+  Header always set Content-Security-Policy "frame-ancestors 'self'"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
 RedirectMatch 404 /\.git
 ErrorDocument 404 /404.html

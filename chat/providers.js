@@ -159,7 +159,8 @@ async function* anthropic({ model, key, system, history, tools, toolChoice, maxT
   const res = await post(p.url, headers, body, { signal, key, fetchImpl });
   const blocks = [];
   const json = {};
-  let stop = null, served = model, usage = {};
+  const closed = new Set();   // Blöcke mit content_block_stop
+  let stop = null, served = model, usage = {}, ended = false;
   for await (const { data } of sse(res.body, signal)) {
     let ev;
     try { ev = JSON.parse(data); } catch (e) { continue; }
@@ -180,6 +181,7 @@ async function* anthropic({ model, key, system, history, tools, toolChoice, maxT
         break;
       }
       case "content_block_stop": {
+        closed.add(ev.index);
         const b = blocks[ev.index];
         if (b?.type === "tool_use") {
           const parsed = parseArgs(json[ev.index]);
@@ -192,13 +194,17 @@ async function* anthropic({ model, key, system, history, tools, toolChoice, maxT
         stop = ev.delta?.stop_reason ?? stop;
         usage = { ...usage, ...ev.usage };
         break;
+      case "message_stop": ended = true; break;
       case "error":
         throw new ProviderError(explain(ev.error?.type === "overloaded_error" ? 529 : 400, ev.error?.message, key), { status: 0 });
       default: break;
     }
   }
+  // Verbindung ohne Abschluss: die Antwort ist unvollständig; ein halb übertragener Werkzeugaufruf darf nicht mit
+  // leerer Eingabe ausgeführt werden (Code-Prüfung 23.10.2026)
+  if (!ended && stop == null) throw new ProviderError(INCOMPLETE, { status: 0 });   // stop_reason kommt erst am Ende
   // Nach einem Wechsel auf ein Ausweichmodell: vor der letzten Grenze nur Textblöcke behalten
-  const list = blocks.filter(Boolean);
+  const list = blocks.filter((b, i) => b && (b.type !== "tool_use" || closed.has(i)));
   const edge = list.map((b) => b.type).lastIndexOf("fallback");
   const kept = list.filter((b, i) => b.type !== "fallback" && (i > edge || b.type === "text"));
   const calls = kept.filter((b) => b.type === "tool_use");
@@ -210,6 +216,8 @@ async function* anthropic({ model, key, system, history, tools, toolChoice, maxT
     raw: { provider: "anthropic", content },
   };
 }
+
+const INCOMPLETE = "Die Verbindung wurde unterbrochen, bevor die Antwort vollständig war. Bitte die Frage erneut stellen.";
 
 // --- OpenAI-kompatible Chat Completions (Mistral, OpenRouter, lokale Server) ---------------------------------
 export function toOpenAI(history, system, { toolName = false } = {}) {
@@ -237,10 +245,10 @@ async function* openai({ provider, model, key, system, history, tools, toolChoic
     } : {}),
   };
   const res = await post(endpoint(provider, baseUrl), headers, body, { signal, key, fetchImpl });
-  let text = "", finish = null, served = model, usage = {};
+  let text = "", finish = null, served = model, usage = {}, done = false;
   const calls = [];
   for await (const { data } of sse(res.body, signal)) {
-    if (data.trim() === "[DONE]") break;
+    if (data.trim() === "[DONE]") { done = true; break; }
     let ev;
     try { ev = JSON.parse(data); } catch (e) { continue; }
     if (ev.error) throw new ProviderError(explain(ev.error.code || 400, ev.error.message, key));
@@ -262,6 +270,8 @@ async function* openai({ provider, model, key, system, history, tools, toolChoic
     });
     if (choice.finish_reason) finish = choice.finish_reason;
   }
+  // ohne „[DONE]“ und ohne finish_reason ist die Antwort abgebrochen (siehe oben)
+  if (!done && !finish) throw new ProviderError(INCOMPLETE, { status: 0 });
   const list = calls.filter(Boolean).map((c) => ({ ...c, id: c.id || newCallId() }));
   for (const c of list) {
     const parsed = parseArgs(c.args);

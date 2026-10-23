@@ -134,7 +134,8 @@ export const norm = (s) => String(s ?? "").toLowerCase().normalize("NFC")
   .replace(/[^\p{L}\p{N}§]+/gu, " ").trim();
 const words = (s) => norm(s).split(" ").filter(Boolean);
 const short = (t) => (t && t.length > TITLE_MAX ? t.slice(0, TITLE_MAX - 1) + "…" : t);
-const berlinToday = () => new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date());
+const BERLIN = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" });
+const berlinToday = () => BERLIN.format(new Date());
 
 export function dateBound(v, end) {
   if (v == null || v === "") return null;
@@ -177,7 +178,9 @@ function resolve(list, query, what) {
 }
 
 // --- Werkzeuge ---------------------------------------------------------------------------------------------
-export function createTools({ load, today = berlinToday() } = {}) {
+export function createTools({ load, today: fest = null } = {}) {
+  // heute je Aufruf neu (ein über Mitternacht offenes Fenster ordnete Sitzungen sonst falsch ein); fest nur für Tests
+  const today = () => fest ?? berlinToday();
   const cache = new Map();
   const get = (path) => {
     if (!cache.has(path)) cache.set(path, Promise.resolve(load(path)).catch((e) => { cache.delete(path); throw e; }));
@@ -218,7 +221,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
     if (d?.mitwirken) {
       let z = null;
       try { z = await get("bonn/zeit.json"); } catch (e) { z = null; }
-      const m = mitwirken(p, d, z ? z.meetings : [], today);
+      const m = mitwirken(p, d, z ? z.meetings : [], today());
       if (m.regeln.length) {
         o.mitwirken = m.regeln.map((r) => ({ hinweis: r.text, frist: r.frist, ...(r.verstrichen ? { frist_verstrichen: true } : {}),
           rechtsgrundlage: r.beleg, ...(r.sitzung?.web ? { tagesordnung: r.sitzung.web } : {}) }));
@@ -363,7 +366,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
       const out = steps.map((x, i) => {
         used.add(x.status);
         const o = { nr: i + 1, schritt: g.schritte[x.typ] ?? x.typ, bezeichnung: x.label, status: x.status };
-        if (x.date) { o.datum = x.date; o.zeitbezug = x.date < today ? "vergangen" : x.date === today ? "heute" : "künftig"; }
+        if (x.date) { o.datum = x.date; o.zeitbezug = x.date < today() ? "vergangen" : x.date === today() ? "heute" : "künftig"; }
         if (x.date_status) o.datum_status = x.date_status;
         if (x.role) o.rolle = x.role;
         if (x.result) { o.ergebnis = x.result; o.ergebnis_quelle = x.result_source; }
@@ -376,7 +379,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
       });
       return {
         drucksache: p.reference, titel: short(mask(p.name, p.paper_type, p.reference)), stand: p.stand, stand_erklaerung: g.staende[p.stand] ?? null,
-        heute: today, schritte: out, folgevorlagen_gesamt: folge.length,
+        heute: today(), schritte: out, folgevorlagen_gesamt: folge.length,
         ...(await sollAngaben(p, used)),
         evidenzstatus: Object.fromEntries([...used].map((k) => [k, g.evidenz[k]])),
         quelle_id: p.source_object, quelle: "Beratungsfolge: OParl-API Stadt Bonn (CC0); Sitzungsdatum und Ergebnis: OParl-Lite (CC BY 4.0)",
@@ -427,11 +430,11 @@ export function createTools({ load, today = berlinToday() } = {}) {
       let names = null;
       if (a.gremium) names = new Set(resolve([...new Set(z.meetings.map((m) => m.gremium))].sort(), a.gremium, "Gremium"));
       let list = z.meetings.filter((m) => (!names || names.has(m.gremium)) && (!von || m.date >= von) && (!bis || m.date <= bis) &&
-        (zeitraum === "alle" || (zeitraum === "kommende" ? m.date >= today : m.date < today)));
+        (zeitraum === "alle" || (zeitraum === "kommende" ? m.date >= today() : m.date < today())));
       list = zeitraum === "kommende" ? list : [...list].reverse();
       const p = page(list, a.seite);
       return {
-        anfrage: { gremium: names ? [...names] : null, von, bis, zeitraum, heute: today },
+        anfrage: { gremium: names ? [...names] : null, von, bis, zeitraum, heute: today() },
         treffer_gesamt: p.treffer_gesamt, seite: p.seite, seiten: p.seiten,
         sitzungen: p.items.map((m) => ({ datum: m.date, uhrzeit: m.time, gremium: m.gremium, name: m.name, abgesagt: m.cancelled,
           status: m.state, tagesordnung: m.web, einladung: m.invitation, tagesordnungspunkte: m.agenda_items || null, quelle_id: m.source_object })),
@@ -460,8 +463,8 @@ export function createTools({ load, today = berlinToday() } = {}) {
         if (o.type === "Gremium") {
           const ms = z.meetings.filter((m) => m.gremium === o.name && !m.cancelled);
           Object.assign(d, { beratungen: o.consultations, davon_entscheidend: o.deciding, sitzungen: o.meetings,
-            letzte_sitzung: ms.filter((m) => m.date < today).at(-1)?.date ?? null,
-            naechste_sitzung: ms.find((m) => m.date >= today)?.date ?? null });
+            letzte_sitzung: ms.filter((m) => m.date < today()).at(-1)?.date ?? null,
+            naechste_sitzung: ms.find((m) => m.date >= today())?.date ?? null });
         } else {
           Object.assign(d, { amt: o.amt, federfuehrende_vorlagen: o.papers_led });
           if (o.name === o.amt) d.federfuehrende_vorlagen_amt_gesamt = orgs.filter((x) => x.amt === o.amt).reduce((n, x) => n + x.papers_led, 0);
@@ -535,7 +538,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
         const rad = a.radius_m || 300;
         list = list.map((b) => ({ ...b, _d: dist(a.lat, a.lon, b.lat, b.lon) })).filter((b) => b._d <= rad).sort((x, y) => x._d - y._d);
       }
-      const stand = (b) => (!b.aktiv ? "nicht mehr gemeldet" : b.von && b.von > today ? "geplant" : "laufend");
+      const stand = (b) => (!b.aktiv ? "nicht mehr gemeldet" : b.von && b.von > today() ? "geplant" : "laufend");
       const items = list.map((b) => ({
         baustelle_id: b.id, bezeichnung: b.bezeichnung, strasse: b.strasse, stadtbezirk: b.stadtbezirk, massnahme: b.massnahme,
         traeger: b.traeger, anderer_traeger: b.fremd, von: b.von, bis: b.bis, termine: "unverbindlich", stand: stand(b),
@@ -549,7 +552,7 @@ export function createTools({ load, today = berlinToday() } = {}) {
 
     async datenstand() {
       const d = await status();
-      return { heute: today, ...d, quelle: "Datenstand der RIS-Karte Bonn" };
+      return { heute: today(), ...d, quelle: "Datenstand der RIS-Karte Bonn" };
     },
   };
 

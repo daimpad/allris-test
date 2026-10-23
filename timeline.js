@@ -465,11 +465,12 @@
       center(d) { setLevel(level, t(d)); },
       getState() { return { von: iso(range[0]), bis: iso(range[1]), zoom: LEVELS[level].name, achse: dimSel.value }; },
       setState(s) {
-        if (s.achse) dimSel.value = s.achse;
+        // nur gültige Werte aus der Adresse übernehmen (unbekannte Achse oder Datum hielt sonst den Start an)
+        if ([...dimSel.options].some((o) => o.value === s.achse)) dimSel.value = s.achse;
         const z = LEVELS.findIndex((l) => l.name === s.zoom);
         if (z >= 0) level = z;
-        if (s.von && s.bis) {
-          range = [t(s.von), t(s.bis)];
+        if (s.von && s.bis && Number.isFinite(t(s.von)) && Number.isFinite(t(s.bis))) {
+          range = [t(s.von), t(s.bis)].sort((a, b) => a - b);
           setLevel(level, (range[0] + range[1]) / 2);
           setRange(range[0], range[1], true);
         }

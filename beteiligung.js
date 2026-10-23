@@ -5,6 +5,8 @@
 import { addDays, deDate } from "./mitwirken.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+// Adressen aus den Daten nur als http(s)-Link (javascript: o. Ä. würde sonst als Link eingesetzt)
+const href = (u) => (/^https?:\/\//i.test(String(u ?? "")) ? esc(u) : "#");
 const BEZIRKE = ["Bonn", "Bad Godesberg", "Beuel", "Hardtberg"];
 // Reihenfolge und Überschriften der Wege; Texte und Belege aus den Regeln des Soll-Modells
 const WEGE = [
@@ -20,7 +22,7 @@ const BUERGERANTRAG_URL = "https://www.bonn.de/vv/produkte/buergerantrag-anregun
 
 let ctx, soll, root, state = { bezirk: "Bonn" };
 
-const links = (ls) => (ls || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ");
+const links = (ls) => (ls || []).map((l) => `<a href="${href(l.url)}" target="_blank" rel="noopener">${esc(l.label)}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ");
 const when = (m) => `${deDate(m.date)}${m.time ? `, ${esc(m.time)} Uhr` : ""}`;
 
 // nächste Sitzung eines Gremiums (nicht abgesagt), optional erst ab einem Datum
@@ -39,7 +41,7 @@ function gelegenheiten(bz, today) {
   const stadtSitzung = stadt ? next(stadt, addDays(today, 21)) : null;
   const row = (label, body) => `<li><span class="bt-when">${label}</span><span>${body}</span></li>`;
   const items = [
-    sitzung && row(when(sitzung), `Nächste Sitzung der ${esc(bv)}${sitzung.web ? ` · <a href="${esc(sitzung.web)}" target="_blank" rel="noopener">Tagesordnung<span class="visually-hidden"> (neuer Tab)</span></a>` : " · Tagesordnung noch nicht veröffentlicht"}`),
+    sitzung && row(when(sitzung), `Nächste Sitzung der ${esc(bv)}${sitzung.web ? ` · <a href="${href(sitzung.web)}" target="_blank" rel="noopener">Tagesordnung<span class="visually-hidden"> (neuer Tab)</span></a>` : " · Tagesordnung noch nicht veröffentlicht"}`),
     frist && row(`bis ${deDate(addDays(frist.date, -21))}`, `Einwohnerfrage oder Bürgerantrag für die Sitzung der ${esc(bv)} am ${deDate(frist.date)} einreichen`),
     stadtSitzung && row(`bis ${deDate(addDays(stadtSitzung.date, -21))}`, `Bürgerantrag zu einem stadtweiten Anliegen für den ${esc(stadt)} am ${deDate(stadtSitzung.date)}`),
     rat && row(when(rat), "Nächste Sitzung des Rates, öffentlich und im Livestream"),
@@ -54,7 +56,7 @@ function zeitstrahl() {
   const fr = soll.fristen || [];
   return `<section aria-labelledby="bt-fristen-h"><h3 id="bt-fristen-h">Fristen rund um eine Sitzung</h3>
     <ol class="bt-line">${fr.map((f) => `<li class="${f.t === 0 ? "bt-day" : ""}"><span class="bt-dot" aria-hidden="true"></span><strong>${esc(f.label)}</strong><span>${esc(f.was)}</span></li>`).join("")}</ol>
-    <p class="hint">T ist der Sitzungstag. Rechtsgrundlagen: ${[...new Map(fr.flatMap((f) => f.links || []).map((l) => [l.url, l])).values()].map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label.replace(/\s*§.*$/, ""))}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ")}</p></section>`;
+    <p class="hint">T ist der Sitzungstag. Rechtsgrundlagen: ${[...new Map(fr.flatMap((f) => f.links || []).map((l) => [l.url, l])).values()].map((l) => `<a href="${href(l.url)}" target="_blank" rel="noopener">${esc(l.label.replace(/\s*§.*$/, ""))}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ")}</p></section>`;
 }
 
 function wege(bz, today) {
@@ -78,7 +80,8 @@ function wege(bz, today) {
 function render() {
   const body = root.querySelector("#bt-body");
   if (!soll) { body.innerHTML = '<p class="hint">Das Regelwerk ist nicht verfügbar.</p>'; return; }
-  const today = new Date().toISOString().slice(0, 10), bz = state.bezirk;
+  // heutiges Datum in Bonn, nicht UTC
+  const today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date()), bz = state.bezirk;
   body.innerHTML = `<label class="bt-pick">Ihr Stadtbezirk <select id="bt-bezirk">${BEZIRKE.map((b) => `<option${b === bz ? " selected" : ""}>${esc(b)}</option>`).join("")}</select></label>
     ${gelegenheiten(bz, today)}${zeitstrahl()}${wege(bz, today)}
     <p class="hint">Vereinfachte Darstellung nach der Geschäftsordnung des Rates, der Hauptsatzung, der Gemeindeordnung NRW und dem Baugesetzbuch; keine Rechtsauskunft. Welche Wege bei einem bestimmten Vorgang offen sind, zeigt dort der Abschnitt „Selbst mitwirken“.</p>`;

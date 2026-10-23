@@ -2,20 +2,20 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 615,
-  "generated_at": "2026-10-23T19:17:01+00:00",
+  "count": 617,
+  "generated_at": "2026-10-23T19:57:27+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-23T18:42:01+00:00"
+    "retrieved_at": "2026-10-23T19:24:24+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-23T18:54:50+00:00"
+    "retrieved_at": "2026-10-23T19:33:57+00:00"
    },
    {
     "name": "osm",
@@ -33,13 +33,13 @@
     "name": "bplan-bonn",
     "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
-    "retrieved_at": "2026-10-21T16:19:51+00:00"
+    "retrieved_at": "2026-10-18T18:31:59+00:00"
    },
    {
     "name": "hnr-bonn",
     "url": "https://opendata.bonn.de/dataset/strassenliste-straßennamen-straßenverzeichnis-hausnummern-georeferenziert",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Hausnummern georeferenziert“)",
-    "retrieved_at": "2026-10-21T16:20:01+00:00"
+    "retrieved_at": "2026-10-20T15:20:47+00:00"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
@@ -616,7 +616,7 @@
     "level": "ortsteil",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "vererbt",
+    "method": "volltext_ortsteil_name",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028992"
    }
@@ -691,6 +691,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028952"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "253926-02",
+    "name": "Lärmschutzmaßnahmen Autobahn hier: Mitteilungsvorlage zum Sachstand des Verfahrens",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2026-08-02",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028476"
    }
   },
   {
@@ -859,6 +883,78 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027753"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "261100",
+    "name": "Große Anfrage der Grünen-Fraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege",
+    "paper_type": "Große Anfrage",
+    "date": "2026-06-08",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027849"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.066322,
+     50.736421
+    ]
+   },
+   "properties": {
+    "reference": "261100",
+    "name": "Große Anfrage der Grünen-Fraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege",
+    "paper_type": "Große Anfrage",
+    "date": "2026-06-08",
+    "amt": "01-2 Ratsbüro",
+    "place": "Simone-Veil-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027849"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.067574,
+     50.736429
+    ]
+   },
+   "properties": {
+    "reference": "261100",
+    "name": "Große Anfrage der Grünen-Fraktion: WestSide - Fertigstellung Gebäude, Nutzung, Plätze und Verkehrswege",
+    "paper_type": "Große Anfrage",
+    "date": "2026-06-08",
+    "amt": "01-2 Ratsbüro",
+    "place": "Václav-Havel-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027849"
    }
   },
   {

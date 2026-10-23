@@ -52,6 +52,8 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 261553	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 261553	beratung: Ausschuss für Mobilität und Verkehr (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 261553	folgevorlage: 261553-01 ST	2026-10-09	oparl-bonn	belegt	Stellungnahme der Verwaltung
+253926-02	datum_vorlage	2026-08-02	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+253926-02	beratung: Bezirksvertretung Hardtberg (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 253158-02 ST	datum_vorlage	2026-07-29	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 253158-02 ST	beratung: Hauptausschuss (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 253158-02 ST	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
@@ -73,6 +75,10 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 261146	folgevorlage: 261146-01 ST	2026-06-24	oparl-bonn	belegt	Stellungnahme der Verwaltung
 221976-01	datum_vorlage	2026-06-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 221976-01	beratung: Bezirksvertretung Bonn (Entscheidung)			unklar	Beratung ohne verknüpfte Sitzung
+261100	datum_vorlage	2026-06-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+261100	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2026-06-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+261100	beratung: Ausschuss für Planen, Bauen und Denkmalschutz (Kenntnisnahme)	2026-07-14	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+261100	folgevorlage: 261100-01	2026-10-04	oparl-bonn	belegt	Stellungnahme der Verwaltung
 253158-01 AA	datum_vorlage	2026-06-03	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 253158-01 AA	beratung: Rat (Entscheidung)	2026-07-09	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 253158-01 AA	beratung: Hauptausschuss (Empfehlung)	2026-09-17	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
