@@ -138,6 +138,26 @@ test("Zahlen zum Gebiet: Flächen nach Kontextdaten, Steckbrief im Ortsteil", as
   await page.close();
 });
 
+test("Zuschaltbare Flächen: erst beim Hineinzoomen, Legende mit Quelle, Zustand in der Adresse", async () => {
+  const page = await open("?gebiet=ortsteil:beuel-mitte");
+  await page.locator(".map-kx-uesg").click();
+  await page.locator(".map-kx-brw").click();
+  assert.match(page.url(), /ebenen=uesg%2Cbrw|ebenen=uesg,brw/);
+  const legend = page.locator(".map-legend");
+  await page.waitForFunction(() => /Überschwemmungsgebiet, festgesetzt/.test(document.querySelector(".map-legend").textContent));
+  // ab Ortsteil-Zoom gezeichnet: Flächen in der eigenen Ebene, Stufen der Bodenrichtwerte in der Legende
+  await page.waitForFunction(() => document.querySelectorAll(".leaflet-kontextflaechen-pane path").length > 10);
+  await page.waitForFunction(() => /€\/m²/.test(document.querySelector(".map-legend").textContent));
+  assert.match(await legend.textContent(), /vorläufig gesichert.*Verbindlich sind die Karten des Landes.*dl-de\/zero-2\.0.*Wohnbauland.*BORIS NRW/s);
+  assert.deepEqual(await axe(page), []);
+  // herausgezoomt: keine Flächen, Hinweis in der Legende
+  for (let i = 0; i < 4; i++) await page.locator(".leaflet-control-zoom-out").click();
+  await page.waitForFunction(() => document.querySelectorAll(".leaflet-kontextflaechen-pane path").length === 0);
+  assert.match(await legend.textContent(), /hineinzoomen/);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
 test("Suche im Text der Dokumente: erst nach Klick, ohne Textausschnitt", async () => {
   const page = await open();
   const suche = await (await fetch(SITE + "data/export/bonn/suche.json")).json();

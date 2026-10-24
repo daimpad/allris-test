@@ -24,14 +24,14 @@ def _round(o):
     return o
 
 
-def simplify(collection):
+def simplify(collection, toleranz=TOLERANZ):
     """FeatureCollection mit vereinfachten Geometrien; Eigenschaften unverändert, leere Geometrien bleiben leer."""
     feats = []
     for f in collection.get("features", []):
         g = f.get("geometry")
         if g:
             s = shape(g)
-            v = s.simplify(TOLERANZ, preserve_topology=True)
+            v = s.simplify(toleranz, preserve_topology=True)
             g = _round(mapping(v if not v.is_empty else s))
         feats.append({"type": "Feature", "properties": f.get("properties", {}), "geometry": g})
     return {"type": "FeatureCollection", "features": feats}

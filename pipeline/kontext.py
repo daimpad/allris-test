@@ -27,7 +27,7 @@ from pathlib import Path
 from shapely import STRtree, from_wkb, make_valid, prepare, union_all
 from shapely.geometry import Point, mapping, shape
 
-from . import config
+from . import config, flaechen
 
 KONTEXT = config.ROOT / "data" / "kontext"
 DL = Path(os.environ.get("KONTEXT_DL", config.ROOT / "_kontext_dl"))
@@ -40,6 +40,7 @@ OUT = "kontext.json"
 AUDIT = "audit_kontext.tsv"
 MIN_EINWOHNER = 100          # darunter keine Anteile und Mittelwerte (Hardthöhe: 20 Einwohner)
 DRINGEND = {"Handlungspriorität 1", "Handlungspriorität 2"}   # Wortlaut der Karte: „dringender Handlungsbedarf“
+UESG_GESAMT = "festgesetzt oder vorläufig gesichert"
 VEREINFACHUNG = 0.00001      # etwa 1 m, für die Ausschnitte der Flächen
 
 Z = "https://www.destatis.de/static/DE/zensus/gitterdaten/"
@@ -154,8 +155,11 @@ def _flaeche(g, nach_wgs):
     return json.loads(json.dumps(mapping(g)), parse_float=lambda x: round(float(x), 6))
 
 
-def ausschnitte():
-    """Ausschnitte für Bonn erzeugen (pyproj und pyshp nötig)."""
+def ausschnitte(nur=None):
+    """Ausschnitte für Bonn erzeugen (pyproj und pyshp nötig). nur: Quellen, die neu geschnitten werden
+    (Umgebungsvariable KONTEXT_NUR, z. B. „ueberschwemmung“); Standard alle."""
+    nur = set(filter(None, (nur if nur is not None else os.environ.get("KONTEXT_NUR", "")).split(",")))
+    teil = lambda k: not nur or k in nur
     import shapefile
     from pyproj import Transformer
     KONTEXT.mkdir(parents=True, exist_ok=True)
@@ -171,124 +175,137 @@ def ausschnitte():
     bonn = union_all([g for *_, g in ots])
     w, s, e, n = bonn.bounds
 
-    # Zensus: Zellen mit Mittelpunkt in Bonn
-    dl = {k: _laden(k, u) for k, u in QUELLEN["zensus"]["dateien"].items()}
-    zellen = {}
-    def zelle(row):
-        x, y = float(row["x_mp_100m"]), float(row["y_mp_100m"])
-        lon, lat = von3035.transform(x, y)
-        if not (w <= lon <= e and s <= lat <= n):
-            return None
-        gid = row.get("GITTER_ID_100m") or row.get("GITTER_ID_100M")
-        if gid not in zellen:
-            if not finde(lon, lat):
+    if teil("zensus"):
+        # Zensus: Zellen mit Mittelpunkt in Bonn
+        dl = {k: _laden(k, u) for k, u in QUELLEN["zensus"]["dateien"].items()}
+        zellen = {}
+        def zelle(row):
+            x, y = float(row["x_mp_100m"]), float(row["y_mp_100m"])
+            lon, lat = von3035.transform(x, y)
+            if not (w <= lon <= e and s <= lat <= n):
                 return None
-            zellen[gid] = {"gitter_id": gid, "lon": round(lon, 6), "lat": round(lat, 6), "einwohner": 0,
-                           "unter_18": "", "ab_65": "", "miete": "", "wohnungen": ""}
-        return zellen[gid]
-    for row in _csv_aus_zip(dl["bev.zip"], "100m"):
-        if (z := zelle(row)) is not None:
-            z["einwohner"] = int(row["Einwohner"])
-    for key, datei, spalte in (("unter_18", "u18.zip", "AnteilUnter18"), ("ab_65", "a65.zip", None)):
-        for row in _csv_aus_zip(dl[datei], "100m"):
             gid = row.get("GITTER_ID_100m") or row.get("GITTER_ID_100M")
-            if gid in zellen:
-                col = spalte or next(k for k in row if k.startswith("Anteil"))
-                v = _num(row[col])
-                zellen[gid][key] = "" if v is None else v
-    for row in _csv_aus_zip(dl["miete.zip"], "100m"):
-        if (z := zelle(row)) is not None:
-            m, n_whg = _num(row["durchschnMieteQM"]), _num(row["AnzahlWohnungen"])
-            z["miete"], z["wohnungen"] = ("" if m is None else m), ("" if n_whg is None else int(n_whg))
-    with open(ZENSUS, "w", newline="", encoding="utf-8") as f:
-        wr = csv.DictWriter(f, fieldnames=["gitter_id", "lon", "lat", "einwohner", "unter_18", "ab_65", "miete", "wohnungen"],
-                            delimiter="\t", lineterminator="\n")
-        wr.writeheader()
-        wr.writerows(sorted(zellen.values(), key=lambda z: z["gitter_id"]))
-    vermerk("zensus", zellen=len(zellen))
-    print(f"Zensus: {len(zellen)} Zellen, {sum(z['einwohner'] for z in zellen.values())} Einwohner → {ZENSUS}")
+            if gid not in zellen:
+                if not finde(lon, lat):
+                    return None
+                zellen[gid] = {"gitter_id": gid, "lon": round(lon, 6), "lat": round(lat, 6), "einwohner": 0,
+                               "unter_18": "", "ab_65": "", "miete": "", "wohnungen": ""}
+            return zellen[gid]
+        for row in _csv_aus_zip(dl["bev.zip"], "100m"):
+            if (z := zelle(row)) is not None:
+                z["einwohner"] = int(row["Einwohner"])
+        for key, datei, spalte in (("unter_18", "u18.zip", "AnteilUnter18"), ("ab_65", "a65.zip", None)):
+            for row in _csv_aus_zip(dl[datei], "100m"):
+                gid = row.get("GITTER_ID_100m") or row.get("GITTER_ID_100M")
+                if gid in zellen:
+                    col = spalte or next(k for k in row if k.startswith("Anteil"))
+                    v = _num(row[col])
+                    zellen[gid][key] = "" if v is None else v
+        for row in _csv_aus_zip(dl["miete.zip"], "100m"):
+            if (z := zelle(row)) is not None:
+                m, n_whg = _num(row["durchschnMieteQM"]), _num(row["AnzahlWohnungen"])
+                z["miete"], z["wohnungen"] = ("" if m is None else m), ("" if n_whg is None else int(n_whg))
+        with open(ZENSUS, "w", newline="", encoding="utf-8") as f:
+            wr = csv.DictWriter(f, fieldnames=["gitter_id", "lon", "lat", "einwohner", "unter_18", "ab_65", "miete", "wohnungen"],
+                                delimiter="\t", lineterminator="\n")
+            wr.writeheader()
+            wr.writerows(sorted(zellen.values(), key=lambda z: z["gitter_id"]))
+        vermerk("zensus", zellen=len(zellen))
+        print(f"Zensus: {len(zellen)} Zellen, {sum(z['einwohner'] for z in zellen.values())} Einwohner → {ZENSUS}")
 
-    # Bodenrichtwerte: Wohnbauland (NUTA W*), baureif, ohne bebaute Flächen im Außenbereich (ASB)
-    path = _laden("brw.zip", QUELLEN["bodenrichtwerte"]["dateien"]["brw.zip"])
-    ziel = DL / "brw"
-    with zipfile.ZipFile(path) as z:
-        z.extractall(ziel)
-    shp = next(ziel.glob("*.shp"))
-    r = shapefile.Reader(str(shp.with_suffix("")))
-    names = [f[0] for f in r.fields[1:]]
-    feats = []
-    for sr in r.iterShapeRecords():
-        d = dict(zip(names, sr.record))
-        if d["GENA"] == "Bonn" and d["NUTA"].startswith("W") and d["ENTW"] == "B" and d["ERGNUTA"] != "ASB":
-            feats.append({"type": "Feature", "properties": {"zone": d["BRWZNR"], "brw": _num(d["BRW"]), "nutzung": d["NUTA"],
-                                                             "ergaenzung": d["ERGNUTA"], "ortsteil_boris": d["ORTST"], "stichtag": d["STAG"]},
-                          "geometry": _flaeche(shape(sr.shape.__geo_interface__), von25832.transform)})
-    feats.sort(key=lambda f: (f["properties"]["zone"], f["properties"]["brw"]))
-    meta = {"quelle": QUELLEN["bodenrichtwerte"]["titel"], "lizenz": QUELLEN["bodenrichtwerte"]["lizenz"]}
-    _geojson(BRW, feats, meta)
-    vermerk("bodenrichtwerte", zonen=len(feats), stand=feats[0]["properties"]["stichtag"] if feats else None)
-    print(f"Bodenrichtwerte: {len(feats)} Zonen → {BRW}")
-
-    # Klimaanalyse: Flächen mit Handlungspriorität in Bonn (GeoPackage)
-    path = _laden("phk.zip", QUELLEN["klima"]["dateien"]["phk.zip"])
-    ziel = DL / "phk"
-    if not any(ziel.glob("*.gpkg")):
+    if teil("bodenrichtwerte"):
+        # Bodenrichtwerte: Wohnbauland (NUTA W*), baureif, ohne bebaute Flächen im Außenbereich (ASB)
+        path = _laden("brw.zip", QUELLEN["bodenrichtwerte"]["dateien"]["brw.zip"])
+        ziel = DL / "brw"
         with zipfile.ZipFile(path) as z:
             z.extractall(ziel)
-    db = sqlite3.connect(next(ziel.glob("*.gpkg")))
-    feats = []
-    for fid, blob, hp, ew in db.execute("SELECT fid, geom, Handlungspriorität, Einwohnerzahl FROM PL_KY_PHK_HP "
-                                        "WHERE GN = 'Bonn' ORDER BY fid"):
-        env = {0: 0, 1: 32, 2: 48, 3: 48, 4: 64}[(blob[3] >> 1) & 7]
-        g = from_wkb(bytes(blob[8 + env:])).buffer(0)
-        feats.append({"type": "Feature", "properties": {"id": fid, "prioritaet": hp, "einwohner": round(ew or 0, 1)},
-                      "geometry": _flaeche(g, von25832.transform)})
-    _geojson(KLIMA, feats, {"quelle": QUELLEN["klima"]["titel"], "lizenz": QUELLEN["klima"]["lizenz"]})
-    vermerk("klima", flaechen=len(feats))
-    print(f"Klimaanalyse: {len(feats)} Flächen → {KLIMA}")
+        shp = next(ziel.glob("*.shp"))
+        r = shapefile.Reader(str(shp.with_suffix("")))
+        names = [f[0] for f in r.fields[1:]]
+        feats = []
+        for sr in r.iterShapeRecords():
+            d = dict(zip(names, sr.record))
+            if d["GENA"] == "Bonn" and d["NUTA"].startswith("W") and d["ENTW"] == "B" and d["ERGNUTA"] != "ASB":
+                feats.append({"type": "Feature", "properties": {"zone": d["BRWZNR"], "brw": _num(d["BRW"]), "nutzung": d["NUTA"],
+                                                                 "ergaenzung": d["ERGNUTA"], "ortsteil_boris": d["ORTST"], "stichtag": d["STAG"]},
+                              "geometry": _flaeche(shape(sr.shape.__geo_interface__), von25832.transform)})
+        feats.sort(key=lambda f: (f["properties"]["zone"], f["properties"]["brw"]))
+        meta = {"quelle": QUELLEN["bodenrichtwerte"]["titel"], "lizenz": QUELLEN["bodenrichtwerte"]["lizenz"]}
+        _geojson(BRW, feats, meta)
+        vermerk("bodenrichtwerte", zonen=len(feats), stand=feats[0]["properties"]["stichtag"] if feats else None)
+        print(f"Bodenrichtwerte: {len(feats)} Zonen → {BRW}")
 
-    # Überschwemmungsgebiete: festgesetzt und vorläufig gesichert, auf Bonn zugeschnitten
-    path = _laden("uesg.zip", QUELLEN["ueberschwemmung"]["dateien"]["uesg.zip"])
-    ziel = DL / "uesg"
-    with zipfile.ZipFile(path) as z:
-        z.extractall(ziel)
-    from shapely import transform
-    bonn25832 = transform(bonn, nach25832.transform, interleaved=False).buffer(100)
-    teile = []
-    for name in ("festgesetzte_Ueberschwemmungsgebiete", "vorlaeufig_gesicherte_Ueberschwemmungsgebiete"):
-        for sh in shapefile.Reader(str(ziel / name)).iterShapes():
-            g = shape(sh.__geo_interface__)
-            if g.intersects(bonn25832):
-                teile.append(g.buffer(0).intersection(bonn25832))
-    flaeche = union_all(teile)
-    _geojson(UESG, [{"type": "Feature", "properties": {"art": "festgesetzt oder vorläufig gesichert"},
-                     "geometry": _flaeche(flaeche, von25832.transform)}],
-             {"quelle": QUELLEN["ueberschwemmung"]["titel"], "lizenz": QUELLEN["ueberschwemmung"]["lizenz"]})
-    vermerk("ueberschwemmung", stand=_datum(QUELLEN["ueberschwemmung"]["dateien"]["uesg.zip"]))
-    print(f"Überschwemmungsgebiete: {len(teile)} Teile → {UESG}")
+    if teil("klima"):
+        # Klimaanalyse: Flächen mit Handlungspriorität in Bonn (GeoPackage)
+        path = _laden("phk.zip", QUELLEN["klima"]["dateien"]["phk.zip"])
+        ziel = DL / "phk"
+        if not any(ziel.glob("*.gpkg")):
+            with zipfile.ZipFile(path) as z:
+                z.extractall(ziel)
+        db = sqlite3.connect(next(ziel.glob("*.gpkg")))
+        feats = []
+        for fid, blob, hp, ew in db.execute("SELECT fid, geom, Handlungspriorität, Einwohnerzahl FROM PL_KY_PHK_HP "
+                                            "WHERE GN = 'Bonn' ORDER BY fid"):
+            env = {0: 0, 1: 32, 2: 48, 3: 48, 4: 64}[(blob[3] >> 1) & 7]
+            g = from_wkb(bytes(blob[8 + env:])).buffer(0)
+            feats.append({"type": "Feature", "properties": {"id": fid, "prioritaet": hp, "einwohner": round(ew or 0, 1)},
+                          "geometry": _flaeche(g, von25832.transform)})
+        _geojson(KLIMA, feats, {"quelle": QUELLEN["klima"]["titel"], "lizenz": QUELLEN["klima"]["lizenz"]})
+        vermerk("klima", flaechen=len(feats))
+        print(f"Klimaanalyse: {len(feats)} Flächen → {KLIMA}")
 
-    # Kitas: Einrichtungen in Bonn
-    path = _laden("kitas.csv", QUELLEN["kitas"]["dateien"]["kitas.csv"])
-    rows = []
-    with open(path, encoding="utf-8-sig") as f:
-        for k in csv.DictReader(f, delimiter=";"):
-            try:
-                lat, lon = map(float, k["Geokoordinate"].split(","))
-            except ValueError:
-                continue
-            if finde(lon, lat):
-                rows.append({"id": k["Id"], "name": k["Einrichtung Name"], "lon": round(lon, 6), "lat": round(lat, 6),
-                             "plaetze_u3": int(_num(k["U3-Plätze"]) or 0), "plaetze_ue3": int(_num(k["Ü3-Plätze"]) or 0)})
-    rows.sort(key=lambda r: int(r["id"]))
-    with open(KITAS, "w", newline="", encoding="utf-8") as f:
-        wr = csv.DictWriter(f, fieldnames=list(rows[0]), delimiter="\t", lineterminator="\n")
-        wr.writeheader()
-        wr.writerows(rows)
-    vermerk("kitas", einrichtungen=len(rows), stand=_datum(QUELLEN["kitas"]["dateien"]["kitas.csv"]))
-    print(f"Kitas: {len(rows)} → {KITAS}")
+    if teil("ueberschwemmung"):
+        # Überschwemmungsgebiete: festgesetzt und vorläufig gesichert, auf Bonn zugeschnitten
+        path = _laden("uesg.zip", QUELLEN["ueberschwemmung"]["dateien"]["uesg.zip"])
+        ziel = DL / "uesg"
+        with zipfile.ZipFile(path) as z:
+            z.extractall(ziel)
+        from shapely import transform
+        bonn25832 = transform(bonn, nach25832.transform, interleaved=False).buffer(100)
+        # Gesamtfläche (für die Kennzahl, ohne innere Grenzen) und die vorläufig gesicherten Teile, die nicht zugleich
+        # festgesetzt sind (nur für die Karte; getrennt vereinfachte Teilflächen ließen an gemeinsamen Grenzen Spalten)
+        arten = {}
+        for art, name in (("festgesetzt", "festgesetzte_Ueberschwemmungsgebiete"),
+                          ("vorläufig gesichert", "vorlaeufig_gesicherte_Ueberschwemmungsgebiete")):
+            teile = []
+            for sh in shapefile.Reader(str(ziel / name)).iterShapes():
+                g = shape(sh.__geo_interface__)
+                if g.intersects(bonn25832):
+                    teile.append(g.buffer(0).intersection(bonn25832))
+            arten[art] = teile
+        gesamt = union_all(arten["festgesetzt"] + arten["vorläufig gesichert"])
+        vorlaeufig = union_all(arten["vorläufig gesichert"]).difference(union_all(arten["festgesetzt"]))
+        teile = [(UESG_GESAMT, gesamt)] + ([("vorläufig gesichert", vorlaeufig)] if not vorlaeufig.is_empty else [])
+        _geojson(UESG, [{"type": "Feature", "properties": {"art": art}, "geometry": _flaeche(g, von25832.transform)}
+                        for art, g in teile],
+                 {"quelle": QUELLEN["ueberschwemmung"]["titel"], "lizenz": QUELLEN["ueberschwemmung"]["lizenz"]})
+        vermerk("ueberschwemmung", stand=_datum(QUELLEN["ueberschwemmung"]["dateien"]["uesg.zip"]))
+        print(f"Überschwemmungsgebiete: {len(teile)} Flächen → {UESG}")
+
+    if teil("kitas"):
+        # Kitas: Einrichtungen in Bonn
+        path = _laden("kitas.csv", QUELLEN["kitas"]["dateien"]["kitas.csv"])
+        rows = []
+        with open(path, encoding="utf-8-sig") as f:
+            for k in csv.DictReader(f, delimiter=";"):
+                try:
+                    lat, lon = map(float, k["Geokoordinate"].split(","))
+                except ValueError:
+                    continue
+                if finde(lon, lat):
+                    rows.append({"id": k["Id"], "name": k["Einrichtung Name"], "lon": round(lon, 6), "lat": round(lat, 6),
+                                 "plaetze_u3": int(_num(k["U3-Plätze"]) or 0), "plaetze_ue3": int(_num(k["Ü3-Plätze"]) or 0)})
+        rows.sort(key=lambda r: int(r["id"]))
+        with open(KITAS, "w", newline="", encoding="utf-8") as f:
+            wr = csv.DictWriter(f, fieldnames=list(rows[0]), delimiter="\t", lineterminator="\n")
+            wr.writeheader()
+            wr.writerows(rows)
+        vermerk("kitas", einrichtungen=len(rows), stand=_datum(QUELLEN["kitas"]["dateien"]["kitas.csv"]))
+        print(f"Kitas: {len(rows)} → {KITAS}")
 
     STAND.write_text(json.dumps(stand, ensure_ascii=False, indent=1, sort_keys=True) + "\n")
-    fetch_haltestellen()
+    if teil("haltestellen"):
+        fetch_haltestellen()
 
 
 def fetch_haltestellen():
@@ -344,7 +361,8 @@ def kennzahlen():
     zonen = json.loads(BRW.read_text())["features"]
     zgeo = [flaeche(f) for f in zonen]
     ztree = STRtree(zgeo)
-    uesg = union_all([flaeche(f) for f in json.loads(UESG.read_text())["features"]])
+    # Kennzahl aus der Gesamtfläche; die Teilfläche „vorläufig gesichert“ dient nur der Karte
+    uesg = union_all([flaeche(f) for f in json.loads(UESG.read_text())["features"] if f["properties"]["art"] == UESG_GESAMT])
     prepare(uesg)
     with open(ZENSUS, encoding="utf-8") as f:
         for z in csv.DictReader(f, delimiter="\t"):
@@ -426,6 +444,31 @@ def kennzahlen():
     return werte, audit
 
 
+# Zuschaltbare Flächen der Karte (nur beim Einschalten geladen): Überschwemmungsgebiete je Art, Bodenrichtwertzonen.
+# Gröber vereinfacht als die Gebietsflächen (etwa 5 m), weil sie nur zur Einordnung dienen; verbindlich sind die Quellen.
+FLAECHEN = {"ueberschwemmung": (UESG, ("art",)), "bodenrichtwerte": (BRW, ("zone", "brw", "ergaenzung", "stichtag"))}
+FLAECHEN_TOLERANZ = 0.00005
+
+
+def _uesg_karte(gj):
+    """Für die Karte: festgesetzt (Gesamtfläche ohne vorläufig gesicherte Teile) und vorläufig gesichert."""
+    fs = {f["properties"]["art"]: make_valid(shape(f["geometry"])) for f in gj["features"]}
+    v = fs.get("vorläufig gesichert")
+    teile = [("festgesetzt", fs[UESG_GESAMT].difference(v) if v else fs[UESG_GESAMT])] + ([("vorläufig gesichert", v)] if v else [])
+    return {"features": [{"type": "Feature", "properties": {"art": a}, "geometry": mapping(g)} for a, g in teile]}
+
+
+def zuschaltbar(ziel):
+    ziel.mkdir(parents=True, exist_ok=True)
+    for name, (src, felder) in FLAECHEN.items():
+        gj = json.loads(src.read_text())
+        if name == "ueberschwemmung":
+            gj = _uesg_karte(gj)
+        gj = {"features": [{**f, "properties": {k: f["properties"].get(k) for k in felder}} for f in gj["features"]]}
+        data = flaechen.simplify(gj, FLAECHEN_TOLERANZ)
+        (ziel / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n")
+
+
 def write():
     """Pipeline-Schritt `kontext`: export/bonn/kontext.json und export/audit_kontext.tsv."""
     if not all(p.exists() for p in (ZENSUS, BRW, KLIMA, UESG, KITAS, HALT, STAND, HALT_STAND)):
@@ -446,6 +489,7 @@ def write():
            "stadtbezirk_je_ortsteil": zuordnung}
     out = config.EXPORT / "bonn" / OUT
     out.parent.mkdir(parents=True, exist_ok=True)
+    zuschaltbar(config.EXPORT / "bonn" / "flaechen")
     out.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n")
     with open(config.EXPORT / AUDIT, "w", newline="", encoding="utf-8") as f:
         wr = csv.writer(f, delimiter="\t", lineterminator="\n")

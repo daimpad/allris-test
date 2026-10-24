@@ -270,6 +270,7 @@ dl.facts dd { min-width: 0; overflow-wrap: anywhere; } dl.facts dd .derived { di
 .link-btn:hover { text-decoration-thickness: 2px; }
 .plan-papers li { margin: 0 0 6px; }
 .map-legend .swatch-plan { border-radius: 2px; background: rgba(14, 116, 144, 0.15); border: 1.5px solid #0e7490; box-shadow: none; }
+.map-legend .swatch-area { border-radius: 2px; border: 1px solid rgba(15, 15, 20, 0.35); box-shadow: none; }
 .map-legend .btn { margin-top: 6px; }
 .site-marker { background: none; border: 0; }
 .site-icon { display: inline-block; width: 14px; height: 14px; border-radius: 3px; transform: rotate(45deg); box-sizing: border-box; flex: none; }
