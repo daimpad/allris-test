@@ -2,19 +2,19 @@
  "meta": {
   "ortsteil": "Endenich",
   "count": 618,
-  "generated_at": "2026-10-23T21:15:47+00:00",
+  "generated_at": "2026-10-24T05:15:56+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-23T20:44:48+00:00"
+    "retrieved_at": "2026-10-24T04:34:44+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-23T20:51:00+00:00"
+    "retrieved_at": "2026-10-24T04:39:40+00:00"
    },
    {
     "name": "osm",
@@ -52761,6 +52761,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über Fragen des Ausschusses für Mobilität und Verkehr zum Hermann-Wandersleb-Ring. Die einfarbige Markierung soll bei gutem Wetter im Oktober 2023 erfolgen. Die Baustelle in der Rochusstraße endet ebenfalls im Oktober. Radverkehr wird im September gezählt, Autoverkehr im November 2023.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-24"
    }
   },
   {
@@ -53033,6 +53038,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass die Max-Bruch-Straße in Endenich Teil eines laufenden Parkraumkonzepts für die Weststadt ist. Die geforderte Überprüfung des Parkverbots wird darin geprüft. Eine separate Entscheidung gibt es vorerst nicht.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-24"
    }
   },
   {
@@ -53201,6 +53211,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Stadt Bonn informiert Anwohner der Alfred-Bucherer-Straße über den Entfall von sechs bis sieben Parkplätzen. Die bisher erlaubte Gehwegparkzone wird aufgehoben, um Fußgängern – besonders Menschen mit Einschränkungen – sichere Wege zu ermöglichen. Eine Woche lang gibt es Verwarnungen, danach kostenpflichtige Knöllchen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-24"
    }
   },
   {
@@ -53337,6 +53352,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung bestätigt, dass der Gehweg in der Alfred-Bucherer-Straße zwischen zwei Hausnummern zu schmal ist. Sie schlägt vor, den Gehweg zu verbreitern, Parkflächen zu entfernen und Poller aufzustellen, um Fußgänger und Radfahrer besser zu schützen. Die Kosten werden nicht genannt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-24"
    }
   },
   {
@@ -56322,6 +56342,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass sie eine Baugenehmigung für ein Lehr- und Forschungsforum der Universität Bonn an der Campusallee in Poppelsdorf erteilt hat. Das Gebäude entspricht weitgehend dem Bebauungsplan, kleine Abweichungen wurden genehmigt. Der Ausschuss soll dies zur Kenntnis nehmen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-24"
    }
   },
   {
