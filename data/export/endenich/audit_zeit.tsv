@@ -312,6 +312,10 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 253059	beratung: Bezirksvertretung Bonn (Entscheidung)	2025-06-17	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 242261-02 ST	datum_vorlage	2025-04-29	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 242261-02 ST	beratung: Ausschuss für Beteiligung der Bürgerinnen und Bürger (Kenntnisnahme)	2025-05-15	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+253013	datum_vorlage	2025-04-24	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+253013	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+253013	beratung: Hauptausschuss (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+253013	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 252816	datum_vorlage	2025-04-22	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 252816	beratung: Naturschutzbeirat (Anregung)	2025-05-07	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 252902	datum_vorlage	2025-04-22	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert

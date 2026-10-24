@@ -1,20 +1,20 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 617,
-  "generated_at": "2026-10-24T12:26:43+00:00",
+  "count": 618,
+  "generated_at": "2026-10-24T16:56:52+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-24T11:56:57+00:00"
+    "retrieved_at": "2026-10-24T16:26:02+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-24T12:02:04+00:00"
+    "retrieved_at": "2026-10-24T16:31:51+00:00"
    },
    {
     "name": "osm",
@@ -1372,7 +1372,7 @@
   },
   {
    "reference": "261749",
-   "name": "Bürgerantrag: Modellprojekt „Schwammstadt“ - klimagerechte Umgestaltung und Förderung des Radverkehrs im Teilabschnitt Endenicher Straße 238 bis 220",
+   "name": "Bürgerantrag: Modellprojekt „Schwammstadt“ - klimagerechte Umgestaltung und Förderung des Radverkehrs im Teilabschnitt Endenicher Straße [Hausnummer ausgelassen]",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2026-09-29",
    "amt": "01-1 Bürgerbüro",
@@ -6178,7 +6178,7 @@
   },
   {
    "reference": "253599-04 ST",
-   "name": "Vertagungsbitte zum BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599",
+   "name": "Vertagungsbitte zum BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen] Drucksachengruppe 253599",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2026-05-06",
    "amt": "61 Stadtplanungsamt",
@@ -6224,7 +6224,7 @@
     {
      "reference": "253599",
      "paper_type": "Anregungen und Beschwerden",
-     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328",
+     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]",
      "date": "2025-08-05"
     }
    ],
@@ -7087,7 +7087,7 @@
   },
   {
    "reference": "253599-02 AA",
-   "name": "BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328; Drucksachengruppe 253599",
+   "name": "BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]; Drucksachengruppe 253599",
    "paper_type": "Änderungsantrag",
    "date": "2026-04-17",
    "amt": "01-2 Ratsbüro",
@@ -7133,7 +7133,7 @@
     {
      "reference": "253599",
      "paper_type": "Anregungen und Beschwerden",
-     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328",
+     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]",
      "date": "2025-08-05"
     }
    ],
@@ -7224,7 +7224,7 @@
   },
   {
    "reference": "253599-03",
-   "name": "BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599",
+   "name": "BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen] Drucksachengruppe 253599",
    "paper_type": "Antrag",
    "date": "2026-04-17",
    "amt": "01-2 Ratsbüro",
@@ -7270,7 +7270,7 @@
     {
      "reference": "253599",
      "paper_type": "Anregungen und Beschwerden",
-     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328",
+     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]",
      "date": "2025-08-05"
     }
    ],
@@ -9529,7 +9529,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026009",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -11932,7 +11932,7 @@
   },
   {
    "reference": "253295-01 ST",
-   "name": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse 1 in Endenich",
+   "name": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse [Hausnummer ausgelassen] in Endenich",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2025-10-01",
    "amt": "33 Bürgerdienste",
@@ -11978,7 +11978,7 @@
     {
      "reference": "253295",
      "paper_type": "Anregungen und Beschwerden",
-     "name": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse 1 in Endenich",
+     "name": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse [Hausnummer ausgelassen] in Endenich",
      "date": "2025-06-05"
     }
    ],
@@ -12068,7 +12068,7 @@
   },
   {
    "reference": "253599-01 ST",
-   "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328",
+   "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2025-10-01",
    "amt": "61 Stadtplanungsamt",
@@ -12114,7 +12114,7 @@
     {
      "reference": "253599",
      "paper_type": "Anregungen und Beschwerden",
-     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328",
+     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]",
      "date": "2025-08-05"
     }
    ],
@@ -14445,7 +14445,7 @@
   },
   {
    "reference": "253599",
-   "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328",
+   "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-08-05",
    "amt": "01-1 Bürgerbüro",
@@ -14500,25 +14500,25 @@
     {
      "reference": "253599-01 ST",
      "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328",
+     "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]",
      "date": "2025-10-01"
     },
     {
      "reference": "253599-02 AA",
      "paper_type": "Änderungsantrag",
-     "name": "BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328; Drucksachengruppe 253599",
+     "name": "BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]; Drucksachengruppe 253599",
      "date": "2026-04-17"
     },
     {
      "reference": "253599-03",
      "paper_type": "Antrag",
-     "name": "BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599",
+     "name": "BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen] Drucksachengruppe 253599",
      "date": "2026-04-17"
     },
     {
      "reference": "253599-04 ST",
      "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Vertagungsbitte zum BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599",
+     "name": "Vertagungsbitte zum BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen] Drucksachengruppe 253599",
      "date": "2026-05-06"
     }
    ],
@@ -14600,7 +14600,7 @@
      "date": "2025-10-01",
      "source": "oparl-bonn",
      "reference": "253599-01 ST",
-     "title": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328"
+     "title": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]"
     },
     {
      "typ": "folgevorlage",
@@ -14609,7 +14609,7 @@
      "date": "2026-04-17",
      "source": "oparl-bonn",
      "reference": "253599-02 AA",
-     "title": "BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 328; Drucksachengruppe 253599"
+     "title": "BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]; Drucksachengruppe 253599"
     },
     {
      "typ": "folgevorlage",
@@ -14618,7 +14618,7 @@
      "date": "2026-04-17",
      "source": "oparl-bonn",
      "reference": "253599-03",
-     "title": "BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599"
+     "title": "BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen] Drucksachengruppe 253599"
     },
     {
      "typ": "entscheidung",
@@ -14641,7 +14641,7 @@
      "date": "2026-05-06",
      "source": "oparl-bonn",
      "reference": "253599-04 ST",
-     "title": "Vertagungsbitte zum BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße 308 und 330 Drucksachengruppe 253599"
+     "title": "Vertagungsbitte zum BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen] Drucksachengruppe 253599"
     }
    ],
    "soll": {
@@ -16620,7 +16620,7 @@
   },
   {
    "reference": "253295",
-   "name": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse 1 in Endenich",
+   "name": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse [Hausnummer ausgelassen] in Endenich",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-06-05",
    "amt": "01-1 Bürgerbüro",
@@ -16675,7 +16675,7 @@
     {
      "reference": "253295-01 ST",
      "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse 1 in Endenich",
+     "name": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse [Hausnummer ausgelassen] in Endenich",
      "date": "2025-10-01"
     }
    ],
@@ -16737,7 +16737,7 @@
      "date": "2025-10-01",
      "source": "oparl-bonn",
      "reference": "253295-01 ST",
-     "title": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse 1 in Endenich"
+     "title": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse [Hausnummer ausgelassen] in Endenich"
     },
     {
      "typ": "entscheidung",
@@ -18713,6 +18713,259 @@
    }
   },
   {
+   "reference": "253013",
+   "name": "Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahrens Nr. 6421-1 \"Universitäts-Campus Endenich\"",
+   "paper_type": "Informationsbrief",
+   "date": "2025-04-24",
+   "amt": "01-1 Bürgerbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022560",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2962053&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-1 Bürgerbüro",
+     "name": "01-1 Bürgerbüro"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/169",
+     "method": "paper_type",
+     "evidence": "Informationsbrief",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Rat",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Hauptausschuss",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    },
+    {
+     "position": 2,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Ulrich-Haberland-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.0705029,
+     "lat": 50.7320461,
+     "stage": "A",
+     "method": "oparl_location",
+     "confidence": "hoch",
+     "evidence": "Ulrich-Haberland-Straße, 53121 Bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/21042",
+     "source": "oparl-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Auf dem Hügel",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.0734714,
+     "lat": 50.7283008,
+     "stage": "A",
+     "method": "oparl_location",
+     "confidence": "hoch",
+     "evidence": "Auf dem Hügel, 53121 Bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/21179",
+     "source": "oparl-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Hermann-Wandersleb-Ring",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.0758417,
+     "lat": 50.7287614,
+     "stage": "A",
+     "method": "oparl_location",
+     "confidence": "hoch",
+     "evidence": "Hermann-Wandersleb-Ring, 53121 Bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/21546",
+     "source": "oparl-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Gerhard-Domagk-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.0737035,
+     "lat": 50.7337687,
+     "stage": "A",
+     "method": "oparl_location",
+     "confidence": "hoch",
+     "evidence": "Gerhard-Domagk-Straße, 53121 Bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/21621",
+     "source": "oparl-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Am Propsthof",
+     "ortsteil": "Nordstadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07525,
+     "lat": 50.7399,
+     "stage": "A",
+     "method": "oparl_location",
+     "confidence": "hoch",
+     "evidence": "Am Propsthof, 53229 Bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/22309",
+     "source": "oparl-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Pfaffenweiherweg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.0710231,
+     "lat": 50.7328523,
+     "stage": "A",
+     "method": "oparl_location",
+     "confidence": "hoch",
+     "evidence": "Pfaffenweiherweg, 53229 Bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/locations/23011",
+     "source": "oparl-bonn"
+    }
+   ],
+   "plans": [
+    {
+     "nr": "6421-1",
+     "evidence": "Bebauungsplanverfahrens Nr. 6421-1",
+     "match": "nicht_im_datensatz",
+     "names": [],
+     "area": false
+    }
+   ],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022560",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "bauen",
+     "method": "stichwort",
+     "evidence": "bebauungsplan",
+     "confidence": "niedrig"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Informationsbrief",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022560",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2025-04-24",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022560",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    },
+    {
+     "typ": "beratung",
+     "label": "Hauptausschuss",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    }
+   ],
+   "soll": {
+    "verfahren": "mitteilung",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Informationsbrief“",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "252816",
    "name": "Stellungnahme des AK des Naturschutzbeirates zur \"Neugestaltung des Endenicher Parks\" Bezug auf die DS. Nr. 242008 und 240490",
    "paper_type": "Antrag",
@@ -20148,7 +20401,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2022148",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -20400,7 +20653,7 @@
   },
   {
    "reference": "252661-002 ST",
-   "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße 238",
+   "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße [Hausnummer ausgelassen]",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2025-03-24",
    "amt": "61 Stadtplanungsamt",
@@ -20446,7 +20699,7 @@
     {
      "reference": "252661",
      "paper_type": "Anregungen und Beschwerden",
-     "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße 238",
+     "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße [Hausnummer ausgelassen]",
      "date": "2025-02-26"
     }
    ],
@@ -22180,7 +22433,7 @@
     {
      "reference": "252661",
      "paper_type": "Anregungen und Beschwerden",
-     "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße 238",
+     "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße [Hausnummer ausgelassen]",
      "date": "2025-02-26"
     }
    ],
@@ -23036,7 +23289,7 @@
   },
   {
    "reference": "252661",
-   "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße 238",
+   "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße [Hausnummer ausgelassen]",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-02-26",
    "amt": "01-1 Bürgerbüro",
@@ -23097,7 +23350,7 @@
     {
      "reference": "252661-002 ST",
      "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße 238",
+     "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße [Hausnummer ausgelassen]",
      "date": "2025-03-24"
     }
    ],
@@ -23182,7 +23435,7 @@
      "date": "2025-03-24",
      "source": "oparl-bonn",
      "reference": "252661-002 ST",
-     "title": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße 238"
+     "title": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße [Hausnummer ausgelassen]"
     },
     {
      "typ": "entscheidung",
@@ -38565,7 +38818,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017441",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [],
    "parties": [],
    "steps": [
@@ -39074,7 +39327,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2017421",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -44535,6 +44788,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Fraktion Grüne/Unabhängige Wähler*innen fragt, ob die Planungen für den Neubau des Zentralen Omnibusbahnhofs, das Projekt „Uni trifft City“, die Siemensstraße und die Brüdergasse noch 2023 oder spätestens Anfang 2024 mit ausreichend Vorlauf vorgestellt werden. Gefragt wird auch nach dem Stand der Förderprojekte und Verzögerungen. Betroffen sind diese Bereiche in Bonn.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-24"
    }
   },
   {
@@ -45963,7 +46221,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2015864",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "kultur",
@@ -47518,7 +47776,7 @@
    "date": "2024-01-13",
    "amt": "61 Stadtplanungsamt",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015424",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2660077&OTYP=41",
+   "main_file": null,
    "responsibility": [
     {
      "kind": "federfuehrend",
@@ -47734,7 +47992,7 @@
   },
   {
    "reference": "232310-01 ST",
-   "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. 331",
+   "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. [Hausnummer ausgelassen]",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2024-01-11",
    "amt": "33 Bürgerdienste",
@@ -47780,7 +48038,7 @@
     {
      "reference": "232310",
      "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-     "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. 331",
+     "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. [Hausnummer ausgelassen]",
      "date": "2023-12-15"
     }
    ],
@@ -49135,7 +49393,7 @@
   },
   {
    "reference": "232310",
-   "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. 331",
+   "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. [Hausnummer ausgelassen]",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2023-12-15",
    "amt": "Stabsstellle Bürgerbeteiligung",
@@ -49190,7 +49448,7 @@
     {
      "reference": "232310-01 ST",
      "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. 331",
+     "name": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. [Hausnummer ausgelassen]",
      "date": "2024-01-11"
     }
    ],
@@ -49245,7 +49503,7 @@
      "date": "2024-01-11",
      "source": "oparl-bonn",
      "reference": "232310-01 ST",
-     "title": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. 331"
+     "title": "Bürgerantrag: Einrichtung eines Zebrasteifens im Bereich der Endenicher Str. [Hausnummer ausgelassen]"
     },
     {
      "typ": "entscheidung",
@@ -50348,6 +50606,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung nimmt Stellung zu einem Bürgerantrag für einen Gehweg in der Straße Am Burggraben zwischen Pastoratsgasse und Am Cöllenhof. Sie prüft, ob ein verkehrsberuhigter Bereich möglich ist, da die Straße zu schmal für Gehwege neben der geplanten Fahrradstraße ist.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-24"
    }
   },
   {
@@ -50484,6 +50747,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass am Magdalenenplatz in Endenich vier Carsharing-Parkplätze für die Anbieter cambio und scouter eingerichtet wurden. Zwei E-Ladesäulen kommen hinzu. Die Plätze sollen den Parkdruck verringern und sind Teil eines stadtweiten Ausbaus. Eine Verlegung ist nur mit Zustimmung der Anbieter möglich.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-24"
    }
   },
   {
@@ -50763,6 +51031,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen und unabhängige Fraktionen fragen, wann die Stadt kontrollieren wird, dass der Gehweg an der Alfred-Bucherer-Straße frei bleibt. Sie weisen darauf hin, dass der Weg trotz Frist bis zum 13. Oktober 2023 weiterhin zugeparkt und nicht nutzbar ist.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-24"
    }
   },
   {
@@ -63810,7 +64083,7 @@
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009497",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "bauen",
@@ -71792,7 +72065,7 @@
     }
    ],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005891",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "bauen",
@@ -72575,7 +72848,7 @@
   },
   {
    "reference": "211119-02",
-   "name": "Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+   "name": "Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]",
    "paper_type": "Mitteilungsvorlage",
    "date": "2022-03-09",
    "amt": "33 Bürgerdienste",
@@ -72621,7 +72894,7 @@
     {
      "reference": "211119",
      "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-     "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+     "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]",
      "date": "2021-06-29"
     }
    ],
@@ -78067,7 +78340,7 @@
   },
   {
    "reference": "211627-01 ST",
-   "name": "Bürgerantrag: Begrünung vor Haus Hainstraße 20 in Bonn-Endenich",
+   "name": "Bürgerantrag: Begrünung vor Haus Hainstraße [Hausnummer ausgelassen] in Bonn-Endenich",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2021-09-21",
    "amt": "66 Tiefbauamt",
@@ -78113,7 +78386,7 @@
     {
      "reference": "211627",
      "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-     "name": "Bürgerantrag: Begrünung vor Haus Hainstraße 20 in Bonn-Endenich",
+     "name": "Bürgerantrag: Begrünung vor Haus Hainstraße [Hausnummer ausgelassen] in Bonn-Endenich",
      "date": "2021-09-08"
     }
    ],
@@ -78663,7 +78936,7 @@
   },
   {
    "reference": "211627",
-   "name": "Bürgerantrag: Begrünung vor Haus Hainstraße 20 in Bonn-Endenich",
+   "name": "Bürgerantrag: Begrünung vor Haus Hainstraße [Hausnummer ausgelassen] in Bonn-Endenich",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-09-08",
    "amt": "01-1 Bürgerbüro",
@@ -78718,7 +78991,7 @@
     {
      "reference": "211627-01 ST",
      "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Begrünung vor Haus Hainstraße 20 in Bonn-Endenich",
+     "name": "Bürgerantrag: Begrünung vor Haus Hainstraße [Hausnummer ausgelassen] in Bonn-Endenich",
      "date": "2021-09-21"
     }
    ],
@@ -78786,7 +79059,7 @@
      "date": "2021-09-21",
      "source": "oparl-bonn",
      "reference": "211627-01 ST",
-     "title": "Bürgerantrag: Begrünung vor Haus Hainstraße 20 in Bonn-Endenich"
+     "title": "Bürgerantrag: Begrünung vor Haus Hainstraße [Hausnummer ausgelassen] in Bonn-Endenich"
     },
     {
      "typ": "entscheidung",
@@ -79228,7 +79501,7 @@
   },
   {
    "reference": "211119-01 ST",
-   "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+   "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2021-08-25",
    "amt": "66 Tiefbauamt",
@@ -79274,7 +79547,7 @@
     {
      "reference": "211119",
      "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-     "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+     "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]",
      "date": "2021-06-29"
     }
    ],
@@ -80890,7 +81163,7 @@
   },
   {
    "reference": "211119",
-   "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+   "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-06-29",
    "amt": "01-1 Bürgerbüro",
@@ -80953,13 +81226,13 @@
     {
      "reference": "211119-01 ST",
      "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+     "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]",
      "date": "2021-08-25"
     },
     {
      "reference": "211119-02",
      "paper_type": "Mitteilungsvorlage",
-     "name": "Optimierung Parksituation vor Ärztehaus Endenicher Allee 96",
+     "name": "Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]",
      "date": "2022-03-09"
     }
    ],
@@ -81049,7 +81322,7 @@
      "date": "2021-08-25",
      "source": "oparl-bonn",
      "reference": "211119-01 ST",
-     "title": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee 96"
+     "title": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]"
     },
     {
      "typ": "folgevorlage",
@@ -81058,7 +81331,7 @@
      "date": "2022-03-09",
      "source": "oparl-bonn",
      "reference": "211119-02",
-     "title": "Optimierung Parksituation vor Ärztehaus Endenicher Allee 96"
+     "title": "Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]"
     },
     {
      "typ": "vollzug",
@@ -85893,7 +86166,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7863",
-   "stand": "entschieden",
+   "stand": "in Beratung",
    "themes": [
     {
      "theme": "bauen",
@@ -86178,7 +86451,7 @@
   },
   {
    "reference": "201780-01 ST",
-   "name": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße 85",
+   "name": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße [Hausnummer ausgelassen]",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2021-02-01",
    "amt": "66 Tiefbauamt",
@@ -86224,7 +86497,7 @@
     {
      "reference": "201780",
      "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-     "name": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße 85",
+     "name": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße [Hausnummer ausgelassen]",
      "date": "2020-10-08"
     }
    ],
@@ -88411,7 +88684,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8723",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "bauen",
@@ -88772,7 +89045,7 @@
   },
   {
    "reference": "201780",
-   "name": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße 85",
+   "name": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße [Hausnummer ausgelassen]",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-10-08",
    "amt": "01-1 Bürgerbüro",
@@ -88827,7 +89100,7 @@
     {
      "reference": "201780-01 ST",
      "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße 85",
+     "name": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße [Hausnummer ausgelassen]",
      "date": "2021-02-01"
     }
    ],
@@ -88889,7 +89162,7 @@
      "date": "2021-02-01",
      "source": "oparl-bonn",
      "reference": "201780-01 ST",
-     "title": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße 85"
+     "title": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße [Hausnummer ausgelassen]"
     },
     {
      "typ": "entscheidung",
@@ -90384,7 +90657,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8132",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -90559,7 +90832,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/8134",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -91345,7 +91618,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/7728",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -99718,7 +99991,7 @@
   },
   {
    "reference": "190912-1 ST",
-   "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. 80 - 100 - Stellungnahme der Verwaltung",
+   "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. [Hausnummer ausgelassen] - Stellungnahme der Verwaltung",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2020-01-07",
    "amt": "33 Bürgerdienste",
@@ -99764,7 +100037,7 @@
     {
      "reference": "190912",
      "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-     "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. 80 - 100",
+     "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. [Hausnummer ausgelassen]",
      "date": "2019-11-27"
     }
    ],
@@ -100979,7 +101252,7 @@
   },
   {
    "reference": "190912",
-   "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. 80 - 100",
+   "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. [Hausnummer ausgelassen]",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2019-11-27",
    "amt": "01-1 Bürgerbüro",
@@ -101034,7 +101307,7 @@
     {
      "reference": "190912-1 ST",
      "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. 80 - 100 - Stellungnahme der Verwaltung",
+     "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. [Hausnummer ausgelassen] - Stellungnahme der Verwaltung",
      "date": "2020-01-07"
     }
    ],
@@ -101089,7 +101362,7 @@
      "date": "2020-01-07",
      "source": "oparl-bonn",
      "reference": "190912-1 ST",
-     "title": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. 80 - 100 - Stellungnahme der Verwaltung"
+     "title": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. [Hausnummer ausgelassen] - Stellungnahme der Verwaltung"
     },
     {
      "typ": "entscheidung",
@@ -103786,7 +104059,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/399",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "umwelt",
@@ -103915,7 +104188,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/403",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "umwelt",
@@ -104658,7 +104931,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/815",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",

@@ -536,6 +536,9 @@
   const BZ_LINE = { color: "#6d28d9", weight: 2, opacity: 0.7, fillOpacity: 1 };
   const GLASS = { color: "#ffffff", weight: 2.5, opacity: 1, fillColor: "url(#nav-glass)", fillOpacity: 1 };
   const navRenderer = L.svg({ pane: "gebiete", padding: 0.3 });
+  // Farbverläufe, sobald das SVG da ist: beim Start mit ?gebiet= hat die Karte bei initNav noch keine Ansicht, Leaflet
+  // legt die Ebene erst danach an und updateNav lief schon (Code-Prüfung 24.10.2026: Flächen ohne Füllung)
+  navRenderer.on("add", () => navDefs());
   let otBreaks = [], bzBreaks = [];
   function navDefs() {
     const svg = navRenderer._container;
@@ -569,7 +572,14 @@
     const v = Object.values(kontext.ortsteile).map((o) => o[key]).filter((x) => x != null).sort((a, b) => a - b);
     const st = KONTEXT_STEP[key] || 1;
     const br = [0.2, 0.4, 0.6, 0.8].map((q) => Math.round(Math.ceil(v[Math.floor(q * (v.length - 1))] / st) * st * 10) / 10);
-    return [...new Set(br)];
+    return [...new Set(br)].filter((b) => b > 0);   // keine Klasse „unter 0 %“ (viele Ortsteile ohne Überschwemmungsgebiet)
+  }
+  // Tabellenzelle; beim Bodenrichtwert der Anteil der Einwohner in einer Zone, wenn viele außerhalb wohnen
+  // (Misch- und Kerngebiete ohne Zone für Wohnbauland; Schwelle aus kontext.json)
+  function kCell(key, o) {
+    const v = kFmt(key, o[key]), cov = o.bodenrichtwert_abdeckung, ab = kontext.meta.bodenrichtwert_hinweis_ohne_zone;
+    if (key !== "bodenrichtwert" || o[key] == null || cov == null || ab == null || 100 - cov < ab) return v;
+    return `${v}<br><span class="kontext-note">gilt für ${Math.round(cov)} % der Einwohner, die übrigen wohnen außerhalb von Zonen für Wohnbauland</span>`;
   }
   // „8,30 bis unter 8,90 €/m²“: die Einheit nur einmal
   const kNum = (key, v) => kFmt(key, v).replace(/\s?(%|€\/m²)$/, "");
@@ -589,7 +599,7 @@
     const cmp = bez ? kontext.bezirke[bez] : kontext.bonn, cmpName = bez ? `Stadtbezirk ${bez}` : "ganz Bonn";
     const klein = own.einwohner < kontext.meta.mindest_einwohner;
     const rows = (kontext.meta.reihenfolge || Object.keys(kontext.meta.kennzahlen)).map((k) => `<tr><th scope="row">${esc(kontext.meta.kennzahlen[k].titel)}</th>
-      <td>${kFmt(k, own[k])}</td><td>${kFmt(k, cmp[k])}</td></tr>`).join("");
+      <td>${kCell(k, own)}</td><td>${kCell(k, cmp)}</td></tr>`).join("");
     const quellen = Object.values(kontext.meta.quellen).map((q) => `<li>${safeUrl(q.url) ? `<a href="${safeUrl(q.url)}">${esc(q.titel)}</a>` : esc(q.titel)}
       – ${esc(q.lizenz)}${q.stand ? `, Stand ${esc(q.stand.length === 10 ? fmtDate(q.stand) : q.stand)}` : ""}</li>`).join("");
     const methoden = (kontext.meta.reihenfolge || Object.keys(kontext.meta.kennzahlen)).map((k) => kontext.meta.kennzahlen[k]).map((d) => `<li><strong>${esc(d.titel)}:</strong> ${esc(d.methode)}</li>`).join("");
@@ -614,7 +624,7 @@
     const keys = [...new Set((p.themes || []).flatMap((t) => KONTEXT_THEMA[t.theme] || []))].slice(0, 3);
     const v = kontext.ortsteile[ot], b = kontext.bezirke[bez] || {};
     if (!keys.some((k) => v[k] != null)) return "";
-    const rows = keys.map((k) => `<tr><th scope="row">${esc(kontext.meta.kennzahlen[k].titel)}</th><td>${kFmt(k, v[k])}</td><td>${kFmt(k, b[k])}</td></tr>`).join("");
+    const rows = keys.map((k) => `<tr><th scope="row">${esc(kontext.meta.kennzahlen[k].titel)}</th><td>${kCell(k, v)}</td><td>${kCell(k, b)}</td></tr>`).join("");
     const qs = [...new Set(keys.map((k) => kontext.meta.kennzahlen[k].quelle))].map((q) => kontext.meta.quellen[q]).filter(Boolean)
       .map((q) => `${esc(q.titel)} (${esc(q.lizenz)}${q.stand ? `, Stand ${esc(q.stand.length === 10 ? fmtDate(q.stand) : q.stand)}` : ""})`).join("; ");
     return `<section class="kontext-vorgang" aria-labelledby="kontext-h"><h4 id="kontext-h">Zum Ortsteil ${esc(ot)} <span class="derived">abgeleitet</span></h4>
@@ -1160,12 +1170,18 @@
           pane: "kontextflaechen",
           style: (f) => ({ color: "#7f4210", weight: 0.8, fillColor: BRW_FARBE[brwStufe(f.properties.brw, br)], fillOpacity: 0.45 }),
           onEachFeature: (f, layer) => layer.bindTooltip(`Bodenrichtwert ${esc(de(f.properties.brw))} €/m²${f.properties.ergaenzung ? ` · ${esc(ERGAENZUNG[f.properties.ergaenzung] || f.properties.ergaenzung)}` : ""}
-            <br><span class="nav-dim">Wohnbauland, Zone ${esc(f.properties.zone)} · Stichtag ${esc(fmtDate(f.properties.stichtag || stand || ""))} · BORIS NRW</span>`, { sticky: true }),
+            <br><span class="nav-dim">Wohnbauland, Zone ${esc(f.properties.zone)} · Stichtag ${esc(fmtDate(f.properties.stichtag || stand || ""))} · BORIS NRW</span>`, { sticky: true })
+            .on("click", (e) => clickOrtsteil(e.latlng)),
         });
       }
       kxLayers[k].addTo(map);
     }
     if (legendEl) drawLegend();
+  }
+  // Die Zonen liegen über den Ortsteilflächen; ein Klick wählt wie sonst den Ortsteil an dieser Stelle
+  function clickOrtsteil(ll) {
+    if (!navOrtsteile || !map.hasLayer(navOrtsteile)) return;
+    navOrtsteile.eachLayer((l) => { if (inGeom(ll.lng, ll.lat, l.feature.geometry)) l.fire("click"); });
   }
   function kxLegend() {
     if (!kontext || !kxOn.size) return "";

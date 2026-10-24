@@ -103,7 +103,7 @@
    }
   },
   {
-   "@id": "https://ris-bonn.datenatlas.de/data/export/allris-bonn-export.zip",
+   "@id": "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip",
    "@type": "dcat:Distribution",
    "dct:title": {
     "@language": "de",
@@ -114,10 +114,10 @@
     "@value": "Alle Exporte, Audit-Protokolle (TSV), Verifikation und Lizenzübersicht."
    },
    "dcat:accessURL": {
-    "@id": "https://ris-bonn.datenatlas.de/data/export/allris-bonn-export.zip"
+    "@id": "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip"
    },
    "dcat:downloadURL": {
-    "@id": "https://ris-bonn.datenatlas.de/data/export/allris-bonn-export.zip"
+    "@id": "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip"
    },
    "dcat:mediaType": {
     "@id": "https://www.iana.org/assignments/media-types/application/zip"

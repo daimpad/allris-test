@@ -1,5 +1,5 @@
 nr	drucksache	ortsteil_der_hausnummer	ortsteil_laut_verzeichnis_der_stadt	abgleich (maschinell)	einschaetzung (KI-Vorprüfung)	begruendung (KI-Vorprüfung)
-1	190844	Mehlem	Mehlem	gleich	teilweise	Strecke zwischen zwei Adressen (Ellesdorfer Straße 12 bis An der Nesselburg 18); die Hausnummer bestimmt nur den Abschnitt An der Nesselburg
+1	190844	Mehlem	Mehlem	gleich	teilweise	Strecke zwischen zwei Adressen (Ellesdorfer Straße [Hausnummer ausgelassen] bis An der Nesselburg [Hausnummer ausgelassen]); die Hausnummer bestimmt nur den Abschnitt An der Nesselburg
 2	200635	Godesberg-Nord	Godesberg-Nord	gleich	plausibel	Stadion an der Adresse; „Gemarkung Friesdorf“ im Titel ist der Katasterbezirk, nicht der Ortsteil
 3	210499	Heiderhof	Heiderhof	gleich	plausibel	Grundstück an der Adresse; „Bonn-Lannesdorf“ meint vermutlich die Gemarkung
 4	211148	Godesberg-Nord	Godesberg-Nord	gleich	plausibel	Grundstück an der Adresse; „Bonn-Friesdorf“ meint vermutlich die Gemarkung
