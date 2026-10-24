@@ -71,6 +71,7 @@
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null, kontext = null;
   let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, detailSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, planOn = false, allPlans = null, shownPlan = null;
   let bau = null, bauOn = false, bauLayer = null, shownSite = null, bauByRef = new Map();
+  let kxOn = new Set(), kxData = {}, kxLayers = {}, brwBr = null;  // zuschaltbare Flächen (Überschwemmung, Bodenrichtwerte)
   // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
   let search = null, searchLoading = null;
   const THEMES = {  // wie pipeline/topics.THEMES
@@ -448,6 +449,29 @@
       },
     });
     new BauToggle().addTo(map);
+    // Überschwemmungsgebiete und Bodenrichtwertzonen (Kontextdaten): erst beim Einschalten geladen, ab Ortsteil-Zoom gezeichnet
+    kxOn = new Set((new URLSearchParams(location.search).get("ebenen") || "").split(",").filter((k) => Object.hasOwn(KX, k)));
+    for (const [k, d] of Object.entries(KX)) {
+      const Toggle = L.Control.extend({
+        options: { position: "bottomright" },
+        onAdd() {
+          const b = L.DomUtil.create("button", `map-style map-kx map-kx-${k}`);
+          b.type = "button";
+          b.textContent = d.label;
+          b.setAttribute("aria-pressed", String(kxOn.has(k)));
+          b.hidden = !kontext;
+          b.addEventListener("click", () => {
+            if (kxOn.has(k)) kxOn.delete(k); else kxOn.add(k);
+            b.setAttribute("aria-pressed", String(kxOn.has(k)));
+            drawKx(); syncUrl();
+          });
+          L.DomEvent.disableClickPropagation(b);
+          return b;
+        },
+      });
+      new Toggle().addTo(map);
+    }
+    map.on("zoomend", () => { if (kxOn.size) drawKx(); });
     // mobil: die Schaltflächen unten rechts hinter „Kartenoptionen“, damit sie die Karte nicht verdecken
     const MapMenu = L.Control.extend({
       options: { position: "bottomright" },
@@ -831,7 +855,8 @@
         <li><span class="site-icon site-geplant" aria-hidden="true"></span>Baustelle der Stadt, geplant</li>
         <li><span class="site-icon site-fremd" aria-hidden="true"></span>Baustelle anderer Träger (Versorger, Straßen NRW, Bahn)</li></ul>
         <p class="hint">Termine unverbindlich; ${bau.meta.archiv_beginn ? `Archiv seit ${fmtDate(bau.meta.archiv_beginn)}` : "aktueller Stand, ohne Archiv"}.</p>
-        <button type="button" class="btn btn-soft" id="bau-list">Baustellen im Gebiet als Liste</button>` : ""}`;
+        <button type="button" class="btn btn-soft" id="bau-list">Baustellen im Gebiet als Liste</button>` : ""}
+      ${kxLegend()}`;
     const b = legendEl.querySelector("#plan-list");
     if (b) b.addEventListener("click", showPlanList);
     const bl = legendEl.querySelector("#bau-list");
@@ -1099,6 +1124,64 @@
     }
   }
 
+  // Zuschaltbare Flächen aus den Kontextdaten (pipeline/kontext.py → flaechen/*.json); Einordnung, verbindlich sind die Quellen
+  const KX_ZOOM = 13;
+  const UESG_STYLE = { festgesetzt: { color: "#1d4ed8", weight: 1, fillColor: "#1d4ed8", fillOpacity: 0.32 },
+    "vorläufig gesichert": { color: "#1d4ed8", weight: 1, dashArray: "4 3", fillColor: "#60a5fa", fillOpacity: 0.22 } };
+  const BRW_FARBE = ["#fdecd2", "#f8c98f", "#ec9f52", "#c46d22", "#7f4210"];
+  const KX = {
+    uesg: { label: "Überschwemmungsgebiete", file: "ueberschwemmung", quelle: "ueberschwemmung" },
+    brw: { label: "Bodenrichtwerte", file: "bodenrichtwerte", quelle: "bodenrichtwerte" },
+  };
+  // Stufen nach Quintilen der Zonenwerte, auf 10 €/m² gerundet
+  function brwBreaks(feats) {
+    const v = feats.map((f) => f.properties.brw).filter((x) => x != null).sort((a, b) => a - b);
+    return [...new Set([0.2, 0.4, 0.6, 0.8].map((q) => Math.ceil(v[Math.floor(q * (v.length - 1))] / 10) * 10))];
+  }
+  const brwStufe = (v, br) => br.filter((b) => v >= b).length;
+  const ERGAENZUNG = { EFH: "Ein- und Zweifamilienhäuser", MFH: "Mehrfamilienhäuser" };
+  const kxQuelle = (k) => (kontext && kontext.meta.quellen[KX[k].quelle]) || {};
+  async function drawKx() {
+    if (legendEl) drawLegend();
+    const visible = map.getZoom() >= KX_ZOOM;
+    for (const k of Object.keys(KX)) {
+      const want = kxOn.has(k) && visible;
+      if (!want) { if (kxLayers[k]) { kxLayers[k].remove(); kxLayers[k] = null; } continue; }
+      if (kxLayers[k]) continue;
+      kxData[k] ||= fetch(`${BONN}flaechen/${KX[k].file}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+      const data = await kxData[k];
+      if (!data || kxLayers[k] || !kxOn.has(k) || map.getZoom() < KX_ZOOM) continue;
+      if (!map.getPane("kontextflaechen")) map.createPane("kontextflaechen").style.zIndex = 360;
+      if (k === "uesg") {
+        kxLayers[k] = L.geoJSON(data, { pane: "kontextflaechen", interactive: false, style: (f) => UESG_STYLE[f.properties.art] || UESG_STYLE.festgesetzt });
+      } else {
+        const br = brwBr = brwBreaks(data.features), stand = kxQuelle(k).stand;
+        kxLayers[k] = L.geoJSON(data, {
+          pane: "kontextflaechen",
+          style: (f) => ({ color: "#7f4210", weight: 0.8, fillColor: BRW_FARBE[brwStufe(f.properties.brw, br)], fillOpacity: 0.45 }),
+          onEachFeature: (f, layer) => layer.bindTooltip(`Bodenrichtwert ${esc(de(f.properties.brw))} €/m²${f.properties.ergaenzung ? ` · ${esc(ERGAENZUNG[f.properties.ergaenzung] || f.properties.ergaenzung)}` : ""}
+            <br><span class="nav-dim">Wohnbauland, Zone ${esc(f.properties.zone)} · Stichtag ${esc(fmtDate(f.properties.stichtag || stand || ""))} · BORIS NRW</span>`, { sticky: true }),
+        });
+      }
+      kxLayers[k].addTo(map);
+    }
+    if (legendEl) drawLegend();
+  }
+  function kxLegend() {
+    if (!kontext || !kxOn.size) return "";
+    const q = (k) => { const x = kxQuelle(k); return `${safeUrl(x.url) ? `<a href="${safeUrl(x.url)}">${esc(x.titel)}</a>` : esc(x.titel || "")}, ${esc(x.lizenz || "")}${x.stand ? `, Stand ${esc(x.stand.length === 10 ? fmtDate(x.stand) : x.stand)}` : ""}`; };
+    const zoom = map.getZoom() < KX_ZOOM ? '<p class="hint">Zum Anzeigen der Flächen hineinzoomen.</p>' : "";
+    let h = "";
+    if (kxOn.has("uesg")) h += `<ul><li><span class="swatch swatch-area" style="background:${UESG_STYLE.festgesetzt.fillColor}" aria-hidden="true"></span>Überschwemmungsgebiet, festgesetzt</li>
+      <li><span class="swatch swatch-area" style="background:${UESG_STYLE["vorläufig gesichert"].fillColor}" aria-hidden="true"></span>Überschwemmungsgebiet, vorläufig gesichert</li></ul>
+      <p class="hint">Einordnung, keine Aussage zu Starkregen. Verbindlich sind die Karten des Landes. Quelle: ${q("uesg")}.</p>`;
+    if (kxOn.has("brw")) {
+      const br = brwBr;
+      h += `${br ? `<ul>${[0, ...br].map((lo, i) => `<li><span class="swatch swatch-area" style="background:${BRW_FARBE[i]}" aria-hidden="true"></span>${i === 0 ? `unter ${de(br[0])}` : i === br.length ? `ab ${de(lo)}` : `${de(lo)} bis unter ${de(br[i])}`} €/m²</li>`).join("")}</ul>` : ""}
+      <p class="hint">Bodenrichtwerte für Wohnbauland, andere Nutzungen fehlen. Einordnung, kein Urteil; verbindlich ist BORIS NRW. Quelle: ${q("brw")}.</p>`;
+    }
+    return h + zoom;
+  }
   // Planebene: alle Geltungsbereiche; Klick öffnet die Planchronik
   const PLAN_STYLE = { color: "#0e7490", weight: 1.5, fillColor: "#0e7490", fillOpacity: 0.08 };
   async function drawAllPlans() {
@@ -1794,6 +1877,7 @@
     state.plan = !selected && shownPlan ? shownPlan : "";
     state.baustellen = bauOn ? "1" : "";
     state.baustelle = !selected && shownSite ? shownSite : "";
+    state.ebenen = Object.keys(KX).filter((k) => kxOn.has(k)).join(",");
     const pz = !$("#panel-prozesse").hidden && pzState;
     state.prozesse = pz ? pz.tab : "";
     state.ansicht = pz && pz.view === "liste" ? "liste" : "";
@@ -1903,6 +1987,7 @@
     }
     if (planOn) drawAllPlans();
     if (bauOn) drawSites();
+    if (kxOn.size) drawKx();
     const initial = papers.find((p) => p.reference === ref);
     if (initial) select(initial);
     else if (params.get("plan")) await showPlan(params.get("plan"));

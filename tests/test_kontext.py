@@ -74,6 +74,15 @@ class Kennzahlen(unittest.TestCase):
         Path(f.name).unlink()
         self.assertEqual(len(befunde), 5)   # Einwohner, Lizenz der Kitas (drei Kennzahlen), Hardthöhe
 
+    def test_zuschaltbare_flaechen_fuer_die_karte(self):
+        d = Path(self.tmp.name) / "bonn" / "flaechen"
+        uesg = json.loads((d / "ueberschwemmung.json").read_text())
+        self.assertEqual({f["properties"]["art"] for f in uesg["features"]}, {"festgesetzt", "vorläufig gesichert"})
+        brw = json.loads((d / "bodenrichtwerte.json").read_text())
+        self.assertEqual(len(brw["features"]), 317)
+        self.assertEqual(set(brw["features"][0]["properties"]), {"zone", "brw", "ergaenzung", "stichtag"})
+        self.assertLess((d / "ueberschwemmung.json").stat().st_size + (d / "bodenrichtwerte.json").stat().st_size, 1_000_000)
+
     def test_ausgabe_ohne_zeitstempel_und_gleich_bei_wiederholung(self):
         before = self.path.read_bytes()
         with mock.patch.object(config, "EXPORT", Path(self.tmp.name)):
