@@ -2,7 +2,7 @@
 import re
 import sqlite3
 
-from . import actors, config
+from . import actors, config, kontext
 
 # Werte aus phase0/BERICHT_phase0.md (Abruf 17.10.2026)
 PHASE0 = {
@@ -114,3 +114,7 @@ def check():
     db.close()
     if with_number:
         raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Ortsangaben (CLAUDE.md 5.2).")
+
+    print("\nKontextdaten je Ortsteil")
+    if befunde := kontext.pruefen():
+        raise SystemExit(f"Prüfung fehlgeschlagen: Kontextdaten ({'; '.join(befunde)}).")

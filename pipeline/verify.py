@@ -114,6 +114,9 @@ Inhalt
 - bonn/prozesse.json: typische Wege (Folge der Beratungen) je Vorlagenart
 - bonn/vorlagen.geojson: alle verorteten Vorlagen (ein Punkt je Vorlage und Straße)
 - bonn/termine.ics: Sitzungskalender (iCalendar); bonn/dcat.jsonld: Beschreibung nach DCAT-AP
+- bonn/kontext.json: Kontextdaten je Ortsteil, Stadtbezirk und ganz Bonn (Zensus 2022, Bodenrichtwerte,
+  Haltestellen, Kitas, Hitze, Überschwemmungsgebiete; abgeleitet, je Kennzahl mit Quelle, Lizenz und Stand);
+  audit_kontext.tsv: Umrechnung je Gebiet; kontext/STAND.json: Quellen der Ausschnitte
 - glossar.json: Ergebnistexte, Evidenzstatus, Stände und Begriffe mit Fundstelle
 - (nicht im Paket: Atom-Feeds unter bonn/feeds/ und Daten des Ratsassistenten unter bonn/chat/ auf
   der Seite; sie wiederholen die Gebietsdateien)
@@ -209,6 +212,11 @@ def package(target=None, archive=None):
         for path in reports:
             if path.exists():
                 z.write(path, "allris-bonn/berichte/" + ("PHASE0.md" if path.name == "BERICHT.md" else path.name))
+        # Kontextdaten: Quellen der Ausschnitte und Bericht der Prüfung
+        for path in (config.ROOT / "data" / "kontext" / "STAND.json", config.ROOT / "data" / "kontext" / "haltestellen_stand.json", config.ROOT / "kontext" / "phase0" / "BERICHT.md",
+                     config.ROOT / "kontext" / "PHASE1.md"):
+            if path.exists():
+                z.write(path, "allris-bonn/kontext/" + ("PHASE0.md" if path.name == "BERICHT.md" else path.name))
         for path in sorted((config.ROOT / "soll").glob("PHASE*.md")):
             z.write(path, "allris-bonn/berichte/soll/" + path.name)
         for path in sorted((config.ROOT / "soll" / "pruefung").glob("*.tsv")):

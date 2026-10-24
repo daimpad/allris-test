@@ -35,5 +35,6 @@ Entscheidungen des Auftraggebers (24.10.2026): Kontext zu Vorlagen, kein eigener
 3. **Vorgang und Assistent.**
 
 ## Entscheidungen zu Einzelfragen (Auftraggeber, 24.10.2026)
+- **Nach Phase 0:** Hitze als Anteil der Einwohner in Flächen mit Priorität 1–2 („dringender Handlungsbedarf“); Bodenrichtwert nur Wohnbauland; Anteile und Mittelwerte erst ab 100 Einwohnern.
 - **Vergleichswert** im Steckbrief und im Vorgang: der eigene Stadtbezirk.
 - **Große Dateien** (Bodenrichtwerte 184 MB, Klimaanalyse bis 3 GB): Ausschnitt für Bonn einmalig erzeugen und im Repository ablegen (`data/kontext/`); neu schneiden nur bei einem neuen Stand der Quelle (Bodenrichtwerte jährlich, Klimaanalyse bei neuer Fassung).

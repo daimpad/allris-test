@@ -89,6 +89,10 @@ Gespeichert werden nur die Ergebnisse des Modells, nie Text der Dokumente (Branc
 | Stadt Bonn, [Lage der Bebauungspläne](https://opendata.bonn.de/dataset/lage-der-bebauungspläne) | 1.128 rechtskräftige Pläne mit Plan und Begründung | CC0 1.0 |
 | Stadt Bonn, [Hausnummern georeferenziert](https://opendata.bonn.de/dataset/strassenliste-straßennamen-straßenverzeichnis-hausnummern-georeferenziert) | Ortsteil je Hausnummer (nur zur Verortung, ohne Anzeige der Nummer) | CC0 1.0 |
 | Stadt Bonn, Baustellen (Stadtplan) | laufende und geplante Baustellen | CC0 1.0 (laut Auftraggeber) |
+| [Zensus 2022](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/gitterzellen.html), Gitterzellen 100 m | Einwohner, Altersanteile, Nettokaltmiete je Ortsteil (umgerechnet) | dl-de/by-2.0, © Statistisches Bundesamt (Destatis) |
+| [BORIS NRW](https://www.opengeodata.nrw.de/produkte/infrastruktur_bauen_wohnen/boris/BRW/) | Bodenrichtwerte Wohnbauland | dl-de/zero-2.0 |
+| Land NRW, [Klimaanalyse 2026](https://www.opengeodata.nrw.de/produkte/umwelt_klima/klima/klimaanalyse/), [Überschwemmungsgebiete](https://www.opengeodata.nrw.de/produkte/umwelt_klima/wasser/hochwasser/uesg/), [Kitas](https://www.opengeodata.nrw.de/produkte/bildung_wissenschaft/kitas/) | Hitze (Planungshinweiskarte), Überschwemmungsgebiete, Kindertageseinrichtungen | dl-de/zero-2.0; Kitas dl-de/by-2.0 |
+| [VRS-Fahrplandaten (GTFS)](https://www.vrs.de/fuer-unternehmen/open-data-service) | Haltestellen | dl-de/zero-2.0 |
 | OpenStreetMap | Straßenverzeichnis, Kartenhintergrund | ODbL 1.0, © OpenStreetMap-Mitwirkende |
 
 Die Daten werden täglich neu abgerufen. Lizenzen je Datei: [`data/LICENSE-DATA.md`](data/LICENSE-DATA.md). Der Code steht unter MIT-Lizenz ([`LICENSE`](LICENSE)).

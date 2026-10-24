@@ -86,9 +86,10 @@ class Dcat(unittest.TestCase):
             files = [x["@id"] for x in json.loads(path.read_text())["dcat:distribution"]]
             self.assertFalse(any(f.endswith("kurzfassungen.tsv") for f in files))
             publish.write_dcat(path, "2019-10-01", "2026-10-21", kurzfassungen=True)
-            dist = json.loads(path.read_text())["dcat:distribution"][-1]
-            self.assertTrue(dist["@id"].endswith("bonn/kurzfassungen.tsv"))
-            self.assertIn("Sprachmodell", dist["dct:description"]["@value"])
+            dists = {x["@id"].rsplit("/", 1)[-1]: x for x in json.loads(path.read_text())["dcat:distribution"]}
+            self.assertIn("Sprachmodell", dists["kurzfassungen.tsv"]["dct:description"]["@value"])
+            # Kontextdaten je Ortsteil mit Namensnennung (Zensus, Kitas)
+            self.assertTrue(dists["kontext.json"]["dct:license"]["@id"].endswith("dl-by-de/2.0"))
 
 
 if __name__ == "__main__":
