@@ -435,6 +435,7 @@ def write():
     stand = {**json.loads(STAND.read_text()), "haltestellen": json.loads(HALT_STAND.read_text())}
     meta = {"hinweis": "Einordnung, kein Urteil. Alle Werte sind auf Ortsteile umgerechnet (abgeleitet).",
             "mindest_einwohner": MIN_EINWOHNER,
+            "reihenfolge": list(KENNZAHLEN),   # Reihenfolge für Steckbrief und Assistent (die Schlüssel werden sortiert)
             "quellen": {k: {f: stand[k].get(f) for f in ("titel", "url", "lizenz", "stand")} for k in sorted(stand)},
             "kennzahlen": {k: {"titel": t, "einheit": u, "quelle": q, "methode": m} for k, (t, u, q, m) in KENNZAHLEN.items()}}
     doc = {"meta": meta,

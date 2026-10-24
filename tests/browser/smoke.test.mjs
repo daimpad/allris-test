@@ -108,6 +108,26 @@ test("Themenebene: Flächen nach Anteil eines Themas, Zustand in der Adresse", a
   await page.close();
 });
 
+test("Zahlen zum Gebiet: Flächen nach Kontextdaten, Steckbrief im Ortsteil", async () => {
+  const page = await open();
+  await page.locator("#nav-metric").selectOption("kontext-miete");
+  assert.match(page.url(), /flaechen=kontext-miete/);
+  assert.match(await page.locator(".nav-legend").textContent(), /Zensus 2022.*Stand 15\.05\.2022.*kein Urteil/s);
+  await page.waitForFunction(() => [...document.querySelectorAll(".nav-label-bz")].every((e) => /€\/m²$/.test(e.textContent)));
+  assert.deepEqual(await axe(page), []);
+  // Steckbrief: Ortsteil neben dem Stadtbezirk, Kennzahlen in fester Reihenfolge
+  await page.goto(SITE + "?gebiet=ortsteil:endenich", { waitUntil: "networkidle" });
+  await page.waitForFunction(() => !document.querySelector("#kontext-box")?.hidden);
+  await page.locator('.toggle[data-panel="panel-list"]').click();
+  await page.locator("#kontext-box > summary").click();
+  const head = await page.locator("#kontext-box thead").textContent();
+  assert.match(head, /Endenich.*Stadtbezirk Bonn/s);
+  assert.match(await page.locator("#kontext-box tbody tr").first().textContent(), /Einwohner/);
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
 test("Suche im Text der Dokumente: erst nach Klick, ohne Textausschnitt", async () => {
   const page = await open();
   const suche = await (await fetch(SITE + "data/export/bonn/suche.json")).json();
