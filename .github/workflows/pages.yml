@@ -50,6 +50,8 @@ jobs:
             data/geo/bebauungsplaene_protokoll.tsv
             data/geo/hausnummern_bonn.json
             data/geo/objekte_bonn.json
+            data/kontext/haltestellen_bonn.tsv
+            data/kontext/haltestellen_stand.json
           key: raw-${{ github.run_id }}
           restore-keys: raw-
 
@@ -84,6 +86,15 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%u)" = "1" ]; then
             python -m pipeline fetch-housenumbers
             python -m pipeline fetch-objects
+          fi
+        continue-on-error: true
+
+      # Haltestellen (VRS-GTFS) monatlich; die übrigen Kontextdaten sind Ausschnitte im Repository (kontext/KONZEPT.md)
+      - name: Abruf Haltestellen (VRS; am 1. des Monats und auf Knopfdruck)
+        if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%d)" = "01" ]; then
+            python -m pipeline fetch-haltestellen
           fi
         continue-on-error: true
 
@@ -141,6 +152,7 @@ jobs:
           python -m pipeline build
           python -m pipeline stufe-c
           python -m pipeline export
+          python -m pipeline kontext
           python -m pipeline check
           python -m pipeline soll
 

@@ -18,6 +18,7 @@ LICENCE = {  # EU-Vokabular für Lizenzen (DCAT-AP)
     "cc0": "http://publications.europa.eu/resource/authority/licence/CC0",
     "cc-by": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
     "odbl": "http://publications.europa.eu/resource/authority/licence/ODC_BL",
+    "dl-de-by": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
 }
 
 
@@ -255,6 +256,12 @@ def write_dcat(path, data_start, modified, kurzfassungen=False):
         ] + ([dist("KI-Kurzfassungen (TSV)", "bonn/kurzfassungen.tsv", "text/tab-separated-values", "cc-by",
                    "Mit einem Sprachmodell aus dem Text der Hauptdokumente formulierte Kurzfassungen, abgeleitet und "
                    "gekennzeichnet; kein Zitat, Einzelheiten können ungenau sein. Maßgeblich ist das Original.")]
-             if kurzfassungen else []),
+             if kurzfassungen else [])
+          + ([dist("Kontextdaten je Ortsteil (JSON)", "bonn/kontext.json", "application/json", "dl-de-by",
+                   "Kennzahlen je Ortsteil, Stadtbezirk und ganz Bonn zur Einordnung von Vorlagen: Einwohner und Altersanteile "
+                   "und Nettokaltmiete (Zensus 2022, © Destatis), Bodenrichtwert Wohnbauland (BORIS NRW), Haltestellen (VRS), "
+                   "Kitas (Land NRW), Hitze (Klimaanalyse NRW), Überschwemmungsgebiete (Land NRW); auf Ortsteile umgerechnet "
+                   "(abgeleitet), je Kennzahl mit Quelle, Lizenz und Stand.")]
+             if (config.ROOT / "data" / "kontext" / "STAND.json").exists() else []),
     }
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
