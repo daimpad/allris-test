@@ -21,6 +21,8 @@ const SUFFIX = String.raw`[\p{L}.-]*(?:straße|strasse|str\.|weg|platz|gasse|all
 export const OHNE_NR = "[Hausnummer ausgelassen]";
 const STAENDE = ["entschieden", "beraten, ohne Entscheidung", "in Beratung", "offen", "ohne Beratungsfolge"];
 const THEMEN = ["verkehr", "bauen", "umwelt", "bildung", "kinder", "soziales", "kultur", "wirtschaft", "sicherheit", "beteiligung"];
+const KENNZAHLEN = ["einwohner", "unter_18", "ab_65", "miete", "bodenrichtwert", "haltestellen", "kitas", "kita_plaetze_u3", "kita_plaetze_ue3", "hitze", "ueberschwemmung"];
+const GANZ_BONN = new Set(["ganz bonn", "stadt bonn", "bundesstadt bonn", "bonn gesamt", "gesamte stadt", "gesamtstadt"]);
 const DATUM = { type: "string", description: "Datum als JJJJ, JJJJ-MM oder JJJJ-MM-TT" };
 const SEITE = { type: "integer", minimum: 1, description: "Ergebnisseite (je 10 Treffer), Standard 1" };
 const DRUCKSACHE = { type: "string", description: "Drucksachennummer, z. B. 261798 oder 261798-01" };
@@ -122,6 +124,17 @@ export const TOOLS = [
     },
   },
   {
+    name: "hole_kontext",
+    description: "Zahlen zu einem Ortsteil, Stadtbezirk oder ganz Bonn zur Einordnung: Einwohner, Altersanteile, Nettokaltmiete (Zensus 2022), Bodenrichtwert Wohnbauland, Haltestellen, Kitas, Hitzebelastung, Überschwemmungsgebiet; je Wert Quelle, Lizenz, Stand und Methode, dazu der Vergleichswert des Stadtbezirks bzw. von ganz Bonn. Alle Werte abgeleitet (auf Gebiete umgerechnet); kein Beleg für eine Vorlage.",
+    parameters: {
+      type: "object", additionalProperties: false, required: ["gebiet"],
+      properties: {
+        gebiet: { type: "string", description: "Ortsteil (z. B. Endenich), Stadtbezirk (Bonn, Bad Godesberg, Beuel, Hardtberg) oder „ganz Bonn“" },
+        kennzahlen: { type: "array", items: { type: "string", enum: KENNZAHLEN }, description: "nur diese Kennzahlen; Standard alle" },
+      },
+    },
+  },
+  {
     name: "datenstand",
     description: "Datenstand: Abrufzeitpunkte und Lizenzen der Quellen, Umfang, Anteil verorteter Vorlagen, bekannte Lücken.",
     parameters: { type: "object", additionalProperties: false, properties: {} },
@@ -193,6 +206,7 @@ export function createTools({ load, today: fest = null } = {}) {
   const plaene = () => get("bonn/plaene.json");
   const baustellen = () => get("bonn/baustellen.json");
   const sollModell = () => get("bonn/soll.json");
+  const kontextDaten = () => get("bonn/kontext.json");
 
   // Soll nach Regelwerk (bonn/soll.json): Verfahren, Schritte mit Rechtsgrundlage, Abgleich der Gremienarten
   async function sollAngaben(p, used) {
@@ -548,6 +562,39 @@ export function createTools({ load, today: fest = null } = {}) {
       }));
       return { ...page(items, a.seite), archiv_beginn: d.meta.archiv_beginn, abruf: d.meta.abruf, hinweise: d.meta.hinweise,
         quelle: `Stadt Bonn, Baustellen – ${d.meta.lizenz}` };
+    },
+
+    // Kontextdaten je Gebiet (pipeline/kontext.py): Einordnung, kein Urteil, keine Rangfolge
+    async hole_kontext(a) {
+      const d = await kontextDaten();
+      if (!a.gebiet) throw new ToolError("Bitte ein Gebiet angeben.", { beispiele: ["Endenich", "Beuel", "ganz Bonn"] });
+      let ebene, name, werte, vergleich = null, vergleichName = null;
+      if (GANZ_BONN.has(norm(a.gebiet))) { ebene = "stadt"; name = "ganz Bonn"; werte = d.bonn; }
+      else {
+        const bez = Object.keys(d.bezirke).filter((b) => norm(b) === norm(a.gebiet) || norm(`stadtbezirk ${b}`) === norm(a.gebiet));
+        if (bez.length) { ebene = "stadtbezirk"; name = bez[0]; werte = d.bezirke[name]; vergleich = d.bonn; vergleichName = "ganz Bonn"; }
+        else {
+          const ot = resolve(Object.keys(d.ortsteile).sort(), norm(a.gebiet).replace(/^(ortsteil|stadtteil) /, ""), "Ortsteil");
+          if (ot.length > 1) throw new ToolError(`„${a.gebiet}“ ist nicht eindeutig.`, { moegliche_werte: ot });
+          ebene = "ortsteil"; name = ot[0]; werte = d.ortsteile[name];
+          const b = d.stadtbezirk_je_ortsteil?.[name];
+          if (b) { vergleich = d.bezirke[b]; vergleichName = `Stadtbezirk ${b}`; }
+        }
+      }
+      const keys = (a.kennzahlen?.length ? a.kennzahlen : d.meta.reihenfolge).filter((k) => d.meta.kennzahlen[k]);
+      const kennzahlen = keys.map((k) => {
+        const m = d.meta.kennzahlen[k], q = d.meta.quellen[m.quelle] || {};
+        return { kennzahl: m.titel, wert: werte[k] ?? null, einheit: m.einheit, ...(vergleich ? { vergleich: vergleich[k] ?? null } : {}),
+          quelle: q.titel, lizenz: q.lizenz, stand: q.stand, link: q.url, methode: m.methode };
+      });
+      const klein = ebene === "ortsteil" && werte.einwohner < d.meta.mindest_einwohner;
+      return {
+        gebiet: name, ebene, ...(vergleichName ? { vergleich_mit: vergleichName } : {}),
+        ...(ebene === "ortsteil" ? { stadtbezirk: d.stadtbezirk_je_ortsteil?.[name] ?? null } : {}),
+        evidenz: "abgeleitet", kennzahlen,
+        hinweise: [d.meta.hinweis, "Zur Einordnung, kein Beleg für eine Vorlage oder einen Beschluss; keine Rangfolge der Gebiete. Stichtage der Quellen verschieden.",
+          ...(klein ? [`Unter ${d.meta.mindest_einwohner} Einwohnern keine Anteile und Mittelwerte (wert: null).`] : [])],
+      };
     },
 
     async datenstand() {
