@@ -124,6 +124,16 @@ test("Zahlen zum Gebiet: Flächen nach Kontextdaten, Steckbrief im Ortsteil", as
   assert.match(head, /Endenich.*Stadtbezirk Bonn/s);
   assert.match(await page.locator("#kontext-box tbody tr").first().textContent(), /Einwohner/);
   assert.deepEqual(await axe(page), []);
+  // Vorgang in genau einem Ortsteil: Kennzahlen passend zum Thema, als Einordnung gekennzeichnet
+  const ende = (await (await fetch(SITE + "data/export/bonn/ortsteile/endenich.json")).json()).papers;
+  const bau = ende.find((p) => (p.themes || [])[0]?.theme === "bauen" && p.locations.every((l) => l.method !== "vererbt" && l.ortsteil === "Endenich"));
+  await page.goto(SITE + "?gebiet=ortsteil:endenich#" + encodeURIComponent(bau.reference), { waitUntil: "networkidle" });
+  await page.waitForFunction(() => document.querySelector("#detail-heading").textContent === "Vorgang");
+  const box = page.locator("#detail .kontext-vorgang");
+  assert.match(await box.locator("h4").textContent(), /Zum Ortsteil Endenich.*abgeleitet/s);
+  assert.match(await box.locator("tbody").textContent(), /Bodenrichtwert.*Nettokaltmiete/s);
+  assert.match(await box.locator(".hint").textContent(), /kein Beleg für die Vorlage.*Stand/s);
+  assert.deepEqual(await axe(page), []);
   assert.deepEqual(page.errors, []);
   await page.close();
 });

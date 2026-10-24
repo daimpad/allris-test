@@ -93,19 +93,33 @@ const SOLL = {
     frist: "14 Tage vor der Sitzung", tage: 0, beleg: "GeschO § 2 Abs. 2", links: [] }],
   buergerantrag_ziel: { bezirk: "Bezirksvertretung {bezirk}", stadt: "Ausschuss für Beteiligung der Bürgerinnen und Bürger" },
 };
+const KONTEXT = {
+  meta: { hinweis: "Einordnung, kein Urteil. Alle Werte sind auf Ortsteile umgerechnet (abgeleitet).", mindest_einwohner: 100,
+    reihenfolge: ["einwohner", "miete", "hitze"],
+    quellen: { zensus: { titel: "Zensus 2022", lizenz: "dl-de/by-2.0", stand: "2022-05-15", url: "https://www.zensus2022.de/" },
+      klima: { titel: "Klimaanalyse NRW", lizenz: "dl-de/zero-2.0", stand: "2026", url: "https://www.opengeodata.nrw.de/" } },
+    kennzahlen: { einwohner: { titel: "Einwohner", einheit: "", quelle: "zensus", methode: "Zellen nach Mittelpunkt" },
+      miete: { titel: "durchschnittliche Nettokaltmiete", einheit: "€/m²", quelle: "zensus", methode: "Mittel der Zellen" },
+      hitze: { titel: "Hitze", einheit: "%", quelle: "klima", methode: "Anteil der Einwohner" } } },
+  bonn: { einwohner: 321351, miete: 9.09, hitze: 55.3 },
+  bezirke: { Bonn: { einwohner: 150114, miete: 9.58, hitze: 67.3 }, Hardtberg: { einwohner: 33000, miete: 8.5, hitze: 30 } },
+  ortsteile: { Endenich: { einwohner: 12733, miete: 10.12, hitze: 53.3 }, "Hardthöhe": { einwohner: 20 }, "Bonn-Zentrum": { einwohner: 9000, miete: 11, hitze: 90 } },
+  stadtbezirk_je_ortsteil: { Endenich: "Bonn", "Hardthöhe": "Hardtberg", "Bonn-Zentrum": "Bonn" },
+};
 const FILES = {
   "glossar.json": GLOSSAR, "bonn/suche.json": SUCHE, "bonn/chat/orte.json": ORTE, "bonn/chat/vorlagen/2610.json": { papers: { 261088: VORLAGE } },
   "bonn/chat/gremien.json": GREMIEN, "bonn/zeit.json": ZEIT, "bonn/chat/datenstand.json": DATENSTAND,
   "bonn/plaene.json": PLAENE, "bonn/baustellen.json": BAUSTELLEN, "bonn/soll.json": SOLL,
+  "bonn/kontext.json": KONTEXT,
 };
 const tools = () => createTools({
   today: "2026-10-18",
   load: async (p) => { if (!(p in FILES)) throw new Error(`HTTP 404 ${p}`); return structuredClone(FILES[p]); },
 });
 
-test("Werkzeugdefinitionen: zehn Werkzeuge mit Objekt-Schema", () => {
-  assert.equal(TOOLS.length, 10);
-  assert.equal(new Set(TOOLS.map((t) => t.name)).size, 10);
+test("Werkzeugdefinitionen: elf Werkzeuge mit Objekt-Schema", () => {
+  assert.equal(TOOLS.length, 11);
+  assert.equal(new Set(TOOLS.map((t) => t.name)).size, 11);
   for (const t of TOOLS) {
     assert.equal(t.parameters.type, "object");
     assert.ok(t.description.length > 30, t.name);
@@ -292,6 +306,30 @@ test("suche_baustellen: Straße, Drucksache, Umkreis, beendete nur auf Wunsch", 
   assert.equal(fremd.items[0].stand, "geplant");
 });
 
+test("hole_kontext: Ortsteil mit Stadtbezirk, Stadtbezirk mit ganz Bonn, Quelle und Stand, kleine Ortsteile", async () => {
+  const t = tools();
+  const r = await t.run("hole_kontext", { gebiet: "Ortsteil Endenich" });
+  assert.equal(r.gebiet, "Endenich");
+  assert.equal(r.ebene, "ortsteil");
+  assert.equal(r.vergleich_mit, "Stadtbezirk Bonn");
+  assert.equal(r.evidenz, "abgeleitet");
+  const miete = r.kennzahlen.find((k) => k.kennzahl === "durchschnittliche Nettokaltmiete");
+  assert.deepEqual([miete.wert, miete.vergleich, miete.einheit, miete.stand, miete.lizenz], [10.12, 9.58, "€/m²", "2022-05-15", "dl-de/by-2.0"]);
+  assert.ok(r.hinweise.some((h) => /kein Beleg/.test(h) && /keine Rangfolge/.test(h)));
+  const bez = await t.run("hole_kontext", { gebiet: "Stadtbezirk Bonn", kennzahlen: ["hitze"] });
+  assert.equal(bez.ebene, "stadtbezirk");
+  assert.equal(bez.vergleich_mit, "ganz Bonn");
+  assert.deepEqual(bez.kennzahlen.map((k) => [k.wert, k.vergleich]), [[67.3, 55.3]]);
+  const bonn = await t.run("hole_kontext", { gebiet: "ganz Bonn" });
+  assert.equal(bonn.ebene, "stadt");
+  assert.ok(!("vergleich" in bonn.kennzahlen[0]));
+  const klein = await t.run("hole_kontext", { gebiet: "Hardthöhe" });
+  assert.equal(klein.kennzahlen.find((k) => k.kennzahl === "Hitze").wert, null);
+  assert.ok(klein.hinweise.some((h) => /Unter 100 Einwohnern/.test(h)));
+  assert.equal((await t.run("hole_kontext", { gebiet: "zentrum" })).gebiet, "Bonn-Zentrum");
+  assert.ok((await t.run("hole_kontext", { gebiet: "Atlantis" })).fehler);
+});
+
 test("Fehler und Begrenzung", async () => {
   const t = tools();
   assert.ok((await t.run("gibt_es_nicht", {})).fehler);
@@ -312,6 +350,7 @@ test("echter Export: alle Werkzeuge, Größe, Datenschutz", { skip: !REAL && "ke
     ["suche_ort", { ort: "Endenich" }], ["suche_ort", { lat: 50.7295, lon: 7.0614 }],
     ["liste_sitzungen", {}], ["hole_gremium_oder_amt", { name: "Rat" }], ["erklaere_begriff", { begriff: "vertagt" }], ["datenstand", {}],
     ["suche_bebauungsplan", { nummer: "6122-1" }], ["suche_bebauungsplan", { ortsteil: "Endenich" }],
+    ["hole_kontext", { gebiet: "Endenich" }], ["hole_kontext", { gebiet: "Beuel" }], ["hole_kontext", { gebiet: "ganz Bonn" }],
   ];
   if (await access(new URL("bonn/baustellen.json", ROOT)).then(() => true, () => false)) calls.push(["suche_baustellen", { stadtbezirk: "Bonn" }]);
   for (const [n, a] of calls) {

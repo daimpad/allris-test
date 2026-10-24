@@ -576,6 +576,28 @@
       <details class="acc"><summary>Quellen und Methode</summary><div><ul>${quellen}</ul><ul>${methoden}</ul></div></details>`;
     box.hidden = false;
   }
+  // Vorgang: zwei bis drei Kennzahlen passend zum (abgeleiteten) Thema, nur bei genau einem Ortsteil (eigene Ortsbezüge)
+  const KONTEXT_THEMA = { bauen: ["bodenrichtwert", "miete"], soziales: ["miete", "ab_65", "unter_18"],
+    bildung: ["unter_18", "kitas", "kita_plaetze_ue3"], kinder: ["unter_18", "kitas", "kita_plaetze_u3"],
+    verkehr: ["haltestellen", "einwohner"], umwelt: ["hitze", "ueberschwemmung"] };
+  function kontextVorgang(p) {
+    if (!kontext) return "";
+    const own = p.locations.filter((l) => l.method !== "vererbt");
+    const ots = [...new Set(own.map((l) => l.ortsteil).filter(Boolean))];
+    if (ots.length !== 1 || !kontext.ortsteile[ots[0]]) return "";
+    const ot = ots[0], bez = (kontext.stadtbezirk_je_ortsteil || {})[ot];
+    if (!bez || own.some((l) => l.stadtbezirk && l.stadtbezirk !== bez)) return "";   // Ortsbezüge in einem anderen Stadtbezirk
+    const keys = [...new Set((p.themes || []).flatMap((t) => KONTEXT_THEMA[t.theme] || []))].slice(0, 3);
+    const v = kontext.ortsteile[ot], b = kontext.bezirke[bez] || {};
+    if (!keys.some((k) => v[k] != null)) return "";
+    const rows = keys.map((k) => `<tr><th scope="row">${esc(kontext.meta.kennzahlen[k].titel)}</th><td>${kFmt(k, v[k])}</td><td>${kFmt(k, b[k])}</td></tr>`).join("");
+    const qs = [...new Set(keys.map((k) => kontext.meta.kennzahlen[k].quelle))].map((q) => kontext.meta.quellen[q]).filter(Boolean)
+      .map((q) => `${esc(q.titel)} (${esc(q.lizenz)}${q.stand ? `, Stand ${esc(q.stand.length === 10 ? fmtDate(q.stand) : q.stand)}` : ""})`).join("; ");
+    return `<section class="kontext-vorgang" aria-labelledby="kontext-h"><h4 id="kontext-h">Zum Ortsteil ${esc(ot)} <span class="derived">abgeleitet</span></h4>
+      <table class="kontext-table"><thead><tr><th scope="col">Kennzahl</th><th scope="col">${esc(ot)}</th><th scope="col">Stadtbezirk ${esc(bez)}</th></tr></thead>
+      <tbody>${rows}</tbody></table>
+      <p class="hint">Einordnung, kein Beleg für die Vorlage und kein Urteil über den Ortsteil. Auswahl nach dem abgeleiteten Thema; Werte auf Ortsteile umgerechnet.${v.einwohner < kontext.meta.mindest_einwohner ? ` Unter ${de(kontext.meta.mindest_einwohner)} Einwohnern keine Anteile und Mittelwerte.` : ""} Quellen: ${qs}.</p></section>`;
+  }
   // Stufengrenzen: Ortsteile nach Quintilen, Stadtbezirke in gleichen Abständen bis zum Höchstwert
   function quintiles(values) {
     const v = [...values].sort((a, b) => a - b);
@@ -1431,6 +1453,7 @@
       ${p.soll && index ? '<section class="soll" aria-labelledby="soll-h"><h4 id="soll-h">Nach Regelwerk (Soll)</h4><div class="soll-box"><p class="hint">Wird geladen …</p></div></section>' : ""}
       ${participate(p)}
       <h4>Ortsbezug</h4><ul class="locs">${locs}</ul>
+      ${kontextVorgang(p)}
       ${(p.plans || []).length ? `<h4>Bebauungspläne</h4><ul class="locs plans">${p.plans.map((x) => `<li data-plan="${esc(x.nr)}"><strong>Bebauungsplan ${esc(x.nr)}</strong>
         ${x.area ? '<span class="plan-meta">– Geltungsbereich auf der Karte</span>' : " – nicht im Datensatz der rechtskräftigen Pläne (im Verfahren oder aufgehoben); keine Fläche verfügbar"}
         <br><span class="meta">Fundstelle: „${esc(x.evidence)}“</span>

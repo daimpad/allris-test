@@ -35,6 +35,8 @@ class Kennzahlen(unittest.TestCase):
         self.assertEqual(sum(v["einwohner"] for v in self.doc["ortsteile"].values()), 321351)
         self.assertEqual(sum(v["einwohner"] for v in self.doc["bezirke"].values()), 321351)
         self.assertEqual(len(self.doc["ortsteile"]), 51)
+        self.assertEqual(set(self.doc["stadtbezirk_je_ortsteil"]), set(self.doc["ortsteile"]))
+        self.assertEqual(self.doc["stadtbezirk_je_ortsteil"]["Endenich"], "Bonn")
 
     def test_reihenfolge_fuer_den_steckbrief(self):
         self.assertEqual(self.doc["meta"]["reihenfolge"], list(kontext.KENNZAHLEN))

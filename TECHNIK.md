@@ -279,7 +279,7 @@ Die Zahlen gibt `python -m pipeline check` aus.
 
 ## Ratsassistent
 
-Zehn Werkzeuge in `site/chat/tools.js` über die statischen Exporte (`suche_vorlagen`, `hole_vorlage`, `hole_prozesslinie`, `suche_ort`, `liste_sitzungen`, `hole_gremium_oder_amt`, `erklaere_begriff`, `suche_bebauungsplan`, `suche_baustellen`, `datenstand`). Adapter für Anthropic, Mistral, OpenRouter und lokale Modelle (`providers.js`), Chat-Kern (`core.js`), Schlüssel nur im Arbeitsspeicher oder auf Wunsch im Sitzungsspeicher (`keys.js`). Systemprompt mit Änderungsvermerk: `site/chat/systemprompt.md`. Auswertung: `eval/run.mjs`, `eval/fragen.json`.
+Elf Werkzeuge in `site/chat/tools.js` über die statischen Exporte (`suche_vorlagen`, `hole_vorlage`, `hole_prozesslinie`, `suche_ort`, `liste_sitzungen`, `hole_gremium_oder_amt`, `erklaere_begriff`, `suche_bebauungsplan`, `suche_baustellen`, `hole_kontext`, `datenstand`). Adapter für Anthropic, Mistral, OpenRouter und lokale Modelle (`providers.js`), Chat-Kern (`core.js`), Schlüssel nur im Arbeitsspeicher oder auf Wunsch im Sitzungsspeicher (`keys.js`). Systemprompt mit Änderungsvermerk: `site/chat/systemprompt.md`. Auswertung: `eval/run.mjs`, `eval/fragen.json`.
 
 ## Offene Daten
 

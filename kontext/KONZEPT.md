@@ -21,7 +21,7 @@ Entscheidungen des Auftraggebers (24.10.2026): Kontext zu Vorlagen, kein eigener
 - **Karte:** in der vorhandenen Flächenauswahl (`flaechen=`) zusätzliche Kennzahlen; fünf Stufen wie bisher, Legende mit Quelle und Stichtag. Überschwemmungsgebiete und Bodenrichtwertzonen als zuschaltbare Flächen beim Hineinzoomen; Haltestellen und Kitas als Punkte.
 - **Gebiet:** kurzer Steckbrief des Ortsteils (alle Kennzahlen, mit Vergleichswert für den Stadtbezirk).
 - **Vorgang:** Feld „Zum Ortsteil“ mit zwei bis drei Kennzahlen passend zum Thema der Vorlage (Wohnen → Miete, Boden; Schule → Kinderanteil, Kitas; Verkehr → Haltestellen; Klima → Hitze, Überschwemmung).
-- **Ratsassistent:** Werkzeug `kontext_ortsteil` mit denselben Werten und Quellen.
+- **Ratsassistent:** Werkzeug `hole_kontext` (umgesetzt unter diesem Namen, passend zu den übrigen Werkzeugen) mit denselben Werten und Quellen.
 
 ## Später, wenn Daten freigegeben werden
 - **Wanderung:** Zu- und Fortzüge je Ortsteil als Saldo-Farbe; mit Herkunft und Ziel als Pfeile zwischen Ortsteilen. Voraussetzung: Daten der Statistikstelle (Anfrage `ANFRAGE_statistikstelle.md`).
