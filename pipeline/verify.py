@@ -6,7 +6,7 @@ import sqlite3
 import zipfile
 from pathlib import Path
 
-from . import config
+from . import config, maske
 from .export import _meetings, _paper_detail, _write_tsv
 from .net import get_json
 
@@ -27,6 +27,7 @@ def verify(n=50, seed=2026):
     ids = rnd.sample(pilot, min(n // 2, len(pilot)))
     ids += rnd.sample([i for i in rest if i not in set(ids)], n - len(ids))
     rows, ok_papers = [], 0
+    m = maske.aus_db(db)   # Titel aus der Einwohnerschaft ohne Hausnummer (verglichen wird der volle Titel)
     for pid in ids:
         p = db.execute("SELECT * FROM paper WHERE id = ?", (pid,)).fetchone()
         try:
@@ -46,6 +47,8 @@ def verify(n=50, seed=2026):
         for field, mine, theirs in checks:
             same = str(mine or "") == str(theirs or "")
             all_ok &= same
+            if field == "name":
+                mine, theirs = m(mine, p["reference"]), m(theirs, p["reference"])
             rows.append([p["reference"], field, mine, theirs, "ok" if same else "abweichend"])
         ok_papers += all_ok
     db.close()

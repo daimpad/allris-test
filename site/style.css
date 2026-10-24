@@ -412,6 +412,7 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .kontext .hint { margin: 0 0 6px; }
 .kontext-table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
 .kontext-table th:first-child { width: 46%; }
+.kontext-table .kontext-note { display: inline-block; margin-top: 2px; font-size: 12px; line-height: 1.35; color: var(--text-muted); }
 .kontext-table th, .kontext-table td { padding: 4px 6px; border-bottom: 1px solid var(--border-alt); vertical-align: top; }
 .kontext-table thead th { font-weight: 500; color: var(--text-muted); text-align: right; overflow-wrap: anywhere; hyphens: auto; }
 .kontext-table thead th:first-child, .kontext-table tbody th { text-align: left; font-weight: 400; }
@@ -441,6 +442,9 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .map-style { font: 500 13px/1 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); cursor: pointer; }
 .map-legend { font: 400 12.5px/1.4 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); max-width: 260px; }
 .map-legend summary { cursor: pointer; font-weight: 600; }
+/* mit zugeschalteten Ebenen wird die Legende lang: höchstens 45 % der Fensterhöhe, Titel bleibt sichtbar */
+.map-legend[open] { max-height: 45vh; overflow-y: auto; overscroll-behavior: contain; }
+.map-legend[open] > summary { position: sticky; top: -8px; margin: -8px 0 0; padding: 8px 0 4px; background: var(--surface-strong); }
 .map-legend ul { list-style: none; margin: 6px 0 0; padding: 0; }
 .map-legend li { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
 .map-legend .swatch { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(15, 15, 20, 0.25); flex: none; }

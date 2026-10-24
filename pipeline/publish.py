@@ -189,7 +189,8 @@ def write_geojson(path, cache, sources):
                                  "web": p["web"], "source_object": p["source_object"]}})
     path.write_text(json.dumps({
         "type": "FeatureCollection",
-        "meta": {"sources": sources, "note": "Ein Punkt je Vorlage und Straße (Straßenebene, keine Hausnummern). "
+        "meta": {"sources": sources, "note": "Ein Punkt je Vorlage und Straße (Straßenebene, keine Hausnummern; in Titeln von Vorlagen aus der "
+                 "Einwohnerschaft und ihren Folgevorlagen ist die Hausnummer ausgeblendet, das Original verlinkt `web`). "
                  "Ortsbezüge mit location_source 'osm' sind aus OpenStreetMap abgeleitet (ODbL 1.0); "
                  "Stand und Ergebnisse stützen sich auf OParl-Lite (CC BY 4.0); übrige Felder CC0 1.0."},
         "features": features}, ensure_ascii=False, separators=(",", ":")))
@@ -204,9 +205,10 @@ def write_dcat(path, data_start, modified, kurzfassungen=False):
               "OpenStreetMap ODbL 1.0. Einzelheiten: " + f"{site}data/LICENSE-DATA.md")
 
     def dist(name, file, media, licence, desc):
-        return {"@id": f"{base}{file}", "@type": "dcat:Distribution", "dct:title": {"@language": "de", "@value": name},
-                "dct:description": {"@language": "de", "@value": desc}, "dcat:accessURL": {"@id": f"{base}{file}"},
-                "dcat:downloadURL": {"@id": f"{base}{file}"}, "dcat:mediaType": {"@id": mt + media},
+        url = file if file.startswith("https://") else f"{base}{file}"
+        return {"@id": url, "@type": "dcat:Distribution", "dct:title": {"@language": "de", "@value": name},
+                "dct:description": {"@language": "de", "@value": desc}, "dcat:accessURL": {"@id": url},
+                "dcat:downloadURL": {"@id": url}, "dcat:mediaType": {"@id": mt + media},
                 "dct:license": {"@id": LICENCE[licence]}, "dct:rights": {"@type": "dct:RightsStatement", "rdfs:label": rights}}
 
     doc = {
@@ -237,7 +239,7 @@ def write_dcat(path, data_start, modified, kurzfassungen=False):
         "dcat:distribution": [
             dist("Verortete Vorlagen (GeoJSON)", "bonn/vorlagen.geojson", "application/geo+json", "odbl",
                  "Ein Punkt je Vorlage und Straße mit Stufe, Methode, Konfidenz und Fundstelle der Verortung."),
-            dist("Datenpaket (Zip)", "allris-bonn-export.zip", "application/zip", "odbl",
+            dist("Datenpaket (Zip)", config.PAKET_URL, "application/zip", "odbl",
                  "Alle Exporte, Audit-Protokolle (TSV), Verifikation und Lizenzübersicht."),
             dist("Zeitleiste: Monatsaggregate (JSON)", "bonn/zeit.json", "application/json", "cc-by",
                  "Vorlagen je Monat, Gebiet und Vorlagenart; Sitzungen; Wahlperioden."),

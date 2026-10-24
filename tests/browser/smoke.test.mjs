@@ -118,6 +118,8 @@ test("Zahlen zum Gebiet: Flächen nach Kontextdaten, Steckbrief im Ortsteil", as
   // Steckbrief: Ortsteil neben dem Stadtbezirk, Kennzahlen in fester Reihenfolge
   await page.goto(SITE + "?gebiet=ortsteil:endenich", { waitUntil: "networkidle" });
   await page.waitForFunction(() => !document.querySelector("#kontext-box")?.hidden);
+  // Link mit Gebiet: die Farbverläufe der Flächen sind vorhanden (Code-Prüfung 24.10.2026)
+  await page.waitForFunction(() => document.querySelector("#nav-c0"));
   await page.locator('.toggle[data-panel="panel-list"]').click();
   await page.locator("#kontext-box > summary").click();
   const head = await page.locator("#kontext-box thead").textContent();

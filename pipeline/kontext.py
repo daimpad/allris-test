@@ -14,6 +14,7 @@ Schritte:
 import csv
 import io
 import json
+import math
 import os
 import shutil
 import sqlite3
@@ -39,6 +40,9 @@ ZENSUS, BRW, KLIMA, UESG, KITAS, HALT = (KONTEXT / n for n in (
 OUT = "kontext.json"
 AUDIT = "audit_kontext.tsv"
 MIN_EINWOHNER = 100          # darunter keine Anteile und Mittelwerte (Hardthöhe: 20 Einwohner)
+# Bodenrichtwert: Hinweis, wenn mindestens so viele Prozent der Einwohner in keiner Zone für Wohnbauland wohnen
+# (Misch- und Kerngebiete; Entscheidung des Auftraggebers 24.10.2026)
+BRW_HINWEIS_OHNE_ZONE = 33
 DRINGEND = {"Handlungspriorität 1", "Handlungspriorität 2"}   # Wortlaut der Karte: „dringender Handlungsbedarf“
 UESG_GESAMT = "festgesetzt oder vorläufig gesichert"
 VEREINFACHUNG = 0.00001      # etwa 1 m, für die Ausschnitte der Flächen
@@ -75,7 +79,7 @@ KENNZAHLEN = {
     "ab_65": ("Anteil ab 65 Jahren", "%", "zensus", "wie „unter 18“"),
     "miete": ("durchschnittliche Nettokaltmiete", "€/m²", "zensus", "Mittel der Zellen, gewichtet nach Wohnungen (Bestandsmieten, kein Mietspiegel)"),
     "bodenrichtwert": ("Bodenrichtwert Wohnbauland (Median)", "€/m²", "bodenrichtwerte",
-                       "Zone, in der eine Zelle liegt (bei überlagerten Zonen zu gleichen Teilen); Median nach Einwohnern; nur baureifes Wohnbauland, ohne bebaute Flächen im Außenbereich"),
+                       "Zone, in der eine Zelle liegt (bei überlagerten Zonen zu gleichen Teilen); Median nach Einwohnern; nur baureifes Wohnbauland, ohne bebaute Flächen im Außenbereich; bodenrichtwert_abdeckung: Anteil der Einwohner in einer solchen Zone"),
     "haltestellen": ("Haltestellen", "Anzahl", "haltestellen", "Haltestellen (Steige zusammengefasst) im Gebiet"),
     "kitas": ("Kindertageseinrichtungen", "Anzahl", "kitas", "Einrichtungen im Gebiet"),
     "kita_plaetze_u3": ("Kita-Plätze unter 3 Jahren", "Anzahl", "kitas", "Summe der Einrichtungen im Gebiet"),
@@ -85,7 +89,7 @@ KENNZAHLEN = {
     "ueberschwemmung": ("Anteil der Einwohner im Überschwemmungsgebiet", "%", "ueberschwemmung",
                         "Einwohner in Zellen, deren Mittelpunkt im Überschwemmungsgebiet liegt"),
 }
-ANTEILE = {"unter_18", "ab_65", "miete", "bodenrichtwert", "hitze", "ueberschwemmung"}   # erst ab MIN_EINWOHNER
+ANTEILE = {"unter_18", "ab_65", "miete", "bodenrichtwert", "bodenrichtwert_abdeckung", "hitze", "ueberschwemmung"}   # erst ab MIN_EINWOHNER
 
 
 def _num(s):
@@ -340,10 +344,14 @@ def fetch_haltestellen():
 # --- Kennzahlen (täglich) -------------------------------------------------------------------------------------------
 
 def _wmedian(paare):
+    """Gewichteter Median; liegt die Hälfte genau auf der Grenze zweier Werte, deren Mittel (Code-Prüfung
+    24.10.2026: Zellen in zwei überlagerten Zonen zu gleichen Teilen ergaben sonst stets die günstigere Zone)."""
     paare, acc = sorted(paare), 0
     gesamt = sum(g for _, g in paare)
-    for v, g in paare:
+    for i, (v, g) in enumerate(paare):
         acc += g
+        if math.isclose(acc, gesamt / 2) and i + 1 < len(paare):
+            return round((v + paare[i + 1][0]) / 2, 1)
         if acc >= gesamt / 2:
             return v
     return None
@@ -433,6 +441,7 @@ def kennzahlen():
             v["ab_65"] = round(a["ab_65"] / e, 1)
             v["miete"] = round(a["miete_summe"] / a["wohnungen"], 2) if a["wohnungen"] else None
             v["bodenrichtwert"] = _wmedian(brw[g])
+            v["bodenrichtwert_abdeckung"] = round(100 - 100 * a["brw_ohne_zone"] / e, 1)   # Anteil der Einwohner in einer Zone
             v["hitze"] = round(100 * a["klima_dringend"] / a["klima_ew"], 1) if a["klima_ew"] else None
             v["ueberschwemmung"] = round(100 * a["ueberschwemmung"] / e, 1)
         werte[g] = v
@@ -479,6 +488,7 @@ def write():
     stand = {**json.loads(STAND.read_text()), "haltestellen": json.loads(HALT_STAND.read_text())}
     meta = {"hinweis": "Einordnung, kein Urteil. Alle Werte sind auf Ortsteile umgerechnet (abgeleitet).",
             "mindest_einwohner": MIN_EINWOHNER,
+            "bodenrichtwert_hinweis_ohne_zone": BRW_HINWEIS_OHNE_ZONE,
             "reihenfolge": list(KENNZAHLEN),   # Reihenfolge für Steckbrief und Assistent (die Schlüssel werden sortiert)
             "quellen": {k: {f: stand[k].get(f) for f in ("titel", "url", "lizenz", "stand")} for k in sorted(stand)},
             "kennzahlen": {k: {"titel": t, "einheit": u, "quelle": q, "methode": m} for k, (t, u, q, m) in KENNZAHLEN.items()}}

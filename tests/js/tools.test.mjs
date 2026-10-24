@@ -95,15 +95,17 @@ const SOLL = {
 };
 const KONTEXT = {
   meta: { hinweis: "Einordnung, kein Urteil. Alle Werte sind auf Ortsteile umgerechnet (abgeleitet).", mindest_einwohner: 100,
-    reihenfolge: ["einwohner", "miete", "hitze"],
+    reihenfolge: ["einwohner", "miete", "bodenrichtwert", "hitze"], bodenrichtwert_hinweis_ohne_zone: 33,
     quellen: { zensus: { titel: "Zensus 2022", lizenz: "dl-de/by-2.0", stand: "2022-05-15", url: "https://www.zensus2022.de/" },
       klima: { titel: "Klimaanalyse NRW", lizenz: "dl-de/zero-2.0", stand: "2026", url: "https://www.opengeodata.nrw.de/" } },
     kennzahlen: { einwohner: { titel: "Einwohner", einheit: "", quelle: "zensus", methode: "Zellen nach Mittelpunkt" },
       miete: { titel: "durchschnittliche Nettokaltmiete", einheit: "€/m²", quelle: "zensus", methode: "Mittel der Zellen" },
+      bodenrichtwert: { titel: "Bodenrichtwert Wohnbauland (Median)", einheit: "€/m²", quelle: "zensus", methode: "Median" },
       hitze: { titel: "Hitze", einheit: "%", quelle: "klima", methode: "Anteil der Einwohner" } } },
   bonn: { einwohner: 321351, miete: 9.09, hitze: 55.3 },
   bezirke: { Bonn: { einwohner: 150114, miete: 9.58, hitze: 67.3 }, Hardtberg: { einwohner: 33000, miete: 8.5, hitze: 30 } },
-  ortsteile: { Endenich: { einwohner: 12733, miete: 10.12, hitze: 53.3 }, "Hardthöhe": { einwohner: 20 }, "Bonn-Zentrum": { einwohner: 9000, miete: 11, hitze: 90 } },
+  ortsteile: { Endenich: { einwohner: 12733, miete: 10.12, hitze: 53.3 }, "Hardthöhe": { einwohner: 20 },
+    "Bonn-Zentrum": { einwohner: 9000, miete: 11, hitze: 90, bodenrichtwert: 980, bodenrichtwert_abdeckung: 34.2 } },
   stadtbezirk_je_ortsteil: { Endenich: "Bonn", "Hardthöhe": "Hardtberg", "Bonn-Zentrum": "Bonn" },
 };
 const FILES = {
@@ -326,7 +328,11 @@ test("hole_kontext: Ortsteil mit Stadtbezirk, Stadtbezirk mit ganz Bonn, Quelle 
   const klein = await t.run("hole_kontext", { gebiet: "Hardthöhe" });
   assert.equal(klein.kennzahlen.find((k) => k.kennzahl === "Hitze").wert, null);
   assert.ok(klein.hinweise.some((h) => /Unter 100 Einwohnern/.test(h)));
-  assert.equal((await t.run("hole_kontext", { gebiet: "zentrum" })).gebiet, "Bonn-Zentrum");
+  const zentrum = await t.run("hole_kontext", { gebiet: "zentrum" });
+  assert.equal(zentrum.gebiet, "Bonn-Zentrum");
+  const brw = zentrum.kennzahlen.find((k) => /Bodenrichtwert/.test(k.kennzahl));
+  assert.equal(brw.anteil_einwohner_in_zone, 34.2);
+  assert.match(brw.hinweis, /34 % der Einwohner/);
   assert.ok((await t.run("hole_kontext", { gebiet: "Atlantis" })).fehler);
 });
 

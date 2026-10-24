@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import datetime, timezone
 
-from . import chat, config, flaechen, gebietszahlen, glossar, plans, process as proc, prozessarten, publish, soll, topics
+from . import chat, config, flaechen, gebietszahlen, glossar, maske, plans, process as proc, prozessarten, publish, soll, topics
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -44,6 +44,16 @@ def _kurzfassungen():
     return _KURZ
 
 
+_MASKE = [None, None]
+
+
+def _maske(db):
+    """Hausnummern in Titeln aus der Einwohnerschaft (maske.py), je Datenbankverbindung einmal aufgebaut."""
+    if _MASKE[0] is not db:
+        _MASKE[:] = [db, maske.aus_db(db)]
+    return _MASKE[1]
+
+
 def _paper_detail(db, pid):
     p = db.execute(
         "SELECT p.*, o.label AS amt, o.name AS vb_name FROM paper p "
@@ -61,10 +71,11 @@ def _paper_detail(db, pid):
         "SELECT actor, actor_type, organization_id, method, evidence, derived "
         "FROM paper_originator WHERE paper_id = ?", (pid,)).fetchall()
     locs = _locations(db, pid)
-    rel = lambda sql: [dict(r) for r in db.execute(sql, (pid,))]
+    m = _maske(db)
+    rel = lambda sql: [{**dict(r), "name": m(r["name"], r["reference"])} for r in db.execute(sql, (pid,))]
     d = {
         "reference": p["reference"],
-        "name": p["name"],
+        "name": m(p["name"], p["reference"]),
         "paper_type": p["paper_type"],
         "date": p["date"],
         "amt": p["amt"],
@@ -120,6 +131,7 @@ def _audit_rows(db, where="", params=()):
             "pl.source_object FROM paper_location pl JOIN paper p ON p.id = pl.paper_id "
             f"JOIN location l ON l.id = pl.location_id {where} ORDER BY p.date DESC, p.reference", params):
         pid, *vals = r
+        vals[3] = _maske(db)(vals[3], vals[0])
         status = "Quelle (Stufe A)" if vals[4] == "A" else "ungeprüft"
         if vals[4] != "A" and pid in a and vals[6] != "stadtbezirk":
             status = "bestätigt durch Stufe A" if vals[8] in a[pid] else "abweichend von Stufe A"
@@ -327,7 +339,8 @@ def _sample(db, out, ortsteil, n=50, seed=2026):
     pick = sorted(random.Random(seed).sample(ids, min(n, len(ids))))
     rows = []
     for i, pid in enumerate(pick, 1):
-        p = db.execute("SELECT reference, date, paper_type, name, web FROM paper WHERE id = ?", (pid,)).fetchone()
+        p = list(db.execute("SELECT reference, date, paper_type, name, web FROM paper WHERE id = ?", (pid,)).fetchone())
+        p[3] = _maske(db)(p[3], p[0])
         locs = db.execute(
             "SELECT COALESCE(l.street, l.description), pl.method, pl.confidence, pl.evidence "
             "FROM paper_location pl JOIN location l ON l.id = pl.location_id "
@@ -521,7 +534,7 @@ def plan_audit_rows(db, where="", args=()):
         back = "; ".join(f"{e} ({m}, {ot or 'ohne Ortsteil'})" for e, m, ot in db.execute(
             "SELECT DISTINCT pp.evidence, pp.method, l.ortsteil FROM plan_precedence pp JOIN location l ON l.id = pp.location_id "
             "WHERE pp.paper_id = ? ORDER BY 1, 3", (pid,)))
-        out.append([ref, name, nr, ev, match, "; ".join(names) or "nicht im Datensatz",
+        out.append([ref, _maske(db)(name, ref), nr, ev, match, "; ".join(names) or "nicht im Datensatz",
                     "; ".join(sorted({f["properties"]["inkraft_seit"] or "" for f in hits})), "; ".join(ortsteile),
                     CONFIDENCE.get(match, "–"), back,
                     "ungeprüft" if hits else "kein rechtskräftiger Plan (Verfahren oder aufgehoben)"])
