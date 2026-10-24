@@ -137,6 +137,39 @@ class KurzfassungTest(unittest.TestCase):
             self.assertEqual(rows["260000"]["versuche"], kurzfassung.MAX_VERSUCHE)   # danach nicht mehr angefragt
             self.assertEqual(len(calls), 1 + kurzfassung.MAX_VERSUCHE)
 
+    def test_kontoausfall_beendet_den_lauf_ohne_dokumente_zu_sperren(self):
+        # Code-Prüfung 24.10.2026: 401 oder eine Serie von Fehlern zählte als Fehler jedes Dokuments; nach drei Tagen
+        # Ausfall wurden die Dokumente nie wieder angefragt
+        import urllib.error
+        with tempfile.TemporaryDirectory() as d:
+            n = kurzfassung.SERIE + 3
+            texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"
+            texte.write_text("\n".join(json.dumps({"uri": f"f{i}", "sha": f"s{i}", "text": TEXT}) for i in range(n)))
+            papers.write_text("\n".join(json.dumps({"reference": f"2600{i:02d}", "name": f"Spielplatz Nr{i}",
+                                                    "paperType": "Antrag", "mainFile": {"id": f"f{i}"}}) for i in range(n)))
+            gut = "Der Spielplatz in Endenich soll neue Geräte und bessere Wege bekommen, bezahlt von der Stadt."
+            calls, fehler = [], [urllib.error.HTTPError("u", 401, "Unauthorized", {}, None)]
+            def anfrage(titel, text, key):
+                calls.append(1)
+                if fehler[0]:
+                    raise fehler[0]
+                return gut, {}
+            out = Path(d) / "kurz"
+            with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), \
+                    mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers):
+                for _ in range(3):
+                    kurzfassung.erzeugen(out, anfrage=anfrage)
+                self.assertEqual(len(calls), 3)                      # je Lauf eine Anfrage, dann Ende
+                self.assertEqual(kurzfassung.laden(out), {})         # kein Dokument als gescheitert vermerkt
+                fehler[0] = TimeoutError("Netz")                     # Serie gewöhnlicher Fehler
+                calls.clear()
+                kurzfassung.erzeugen(out, anfrage=anfrage)
+                self.assertEqual(len(calls), kurzfassung.SERIE)
+                self.assertEqual(kurzfassung.laden(out), {})
+                fehler[0] = None                                     # Schlüssel wieder gültig: alle werden angefragt
+                kurzfassung.erzeugen(out, anfrage=anfrage)
+            self.assertEqual(sum(1 for r in kurzfassung.laden(out).values() if r["kurzfassung"] == gut), n)
+
     def test_erzeugen_nur_neue_und_verwirft_auszuege(self):
         with tempfile.TemporaryDirectory() as d:
             texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"

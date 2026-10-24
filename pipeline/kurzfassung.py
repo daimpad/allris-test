@@ -16,6 +16,7 @@ import os
 import random
 import re
 import time
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -37,6 +38,11 @@ MAX_JE_LAUF = int(os.environ.get("KURZFASSUNG_MAX", "50"))   # zuerst klein, um 
 MAX_ZEICHEN = 12000
 UEBERNAHME_WOERTER = 6
 MAX_VERSUCHE = 3   # gescheiterte Anfragen werden in späteren Läufen wiederholt, dann übersprungen
+# Fehler, die das Konto betreffen (Schlüssel, Zahlung, Rechte, Kontingent), und eine Serie gescheiterter Anfragen
+# beenden den Lauf, ohne die Dokumente als gescheitert zu zählen (Code-Prüfung 24.10.2026: ein Ausfall von drei Tagen
+# sperrte sonst die betroffenen Dokumente dauerhaft, und jede Anfrage wartete erst die Wiederholungen ab)
+KONTO_FEHLER = (401, 402, 403, 429)
+SERIE = 5
 FREIGEGEBEN = True   # Prüfung von Hand der Stichprobe v7 (22.10.2026): 18 zutreffend, 12 teilweise, keine falsch;
 #                       Freigabe durch den Auftraggeber mit geschärftem Hinweis
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
@@ -234,6 +240,10 @@ def _anfrage(titel, text, schluessel, tries=4, system=ANWEISUNG, zusatz=""):
             with urllib.request.urlopen(req, timeout=120) as r:
                 d = json.load(r)
             return d["choices"][0]["message"]["content"].strip(), d.get("usage") or {}
+        except urllib.error.HTTPError as e:
+            if e.code in KONTO_FEHLER[:3] or i == tries - 1:   # Schlüssel, Zahlung, Rechte: Wiederholen hilft nicht
+                raise
+            time.sleep(2 ** (i + 2))
         except Exception:
             if i == tries - 1:
                 raise
@@ -317,7 +327,7 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
         _schreiben(base, have)
     ok = [r for r in have.values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG]
     sprachmodell.protokoll(base, "kurzfassungen", MODELL, len(todo), {"ein": tokens[0], "aus": tokens[1]},
-                           sum(1 for uri, p in todo if have[texts[uri]["sha"]].get("verworfen")))
+                           sum(1 for uri, p in todo if have.get(texts[uri]["sha"], {}).get("verworfen")))
     print(f"Kurzfassungen: {len(todo)} angefragt ({tokens[0]} Eingabe-, {tokens[1]} Ausgabe-Tokens), "
           f"{len(ok)} vorhanden, {sum(1 for r in have.values() if r.get('verworfen'))} verworfen, "
           f"{sum(1 for r in have.values() if r.get('fehler'))} gescheitert → {base}")
@@ -325,6 +335,7 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
 
 
 def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens):
+    serie = []   # (sha, Eintrag vorher) der zuletzt in Folge gescheiterten Anfragen
     for i, (uri, p) in enumerate(todo, 1):
         main, _ = volltext.clean(texts[uri]["text"])
         main = re.sub(r"\s+", " ", main).strip()[:MAX_ZEICHEN]
@@ -335,6 +346,17 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
             kurz = ohne_kostensatz(glaetten(kurz if isinstance(kurz, str) else ""), main)
         except Exception as e:   # ein Fehler beim Anbieter hält den Lauf nicht auf
             vorher = have.get(sha) or {}
+            konto = isinstance(e, urllib.error.HTTPError) and e.code in KONTO_FEHLER
+            if konto or len(serie) + 1 >= SERIE:
+                for alt_sha, v in serie:   # die Serie zählt nicht als Fehler der einzelnen Dokumente
+                    if v:
+                        have[alt_sha] = v
+                    else:
+                        have.pop(alt_sha, None)
+                grund = f"HTTP {e.code}" if konto else f"{SERIE} Anfragen in Folge gescheitert"
+                print(f"  Lauf beendet: {grund} ({type(e).__name__}); die Dokumente werden im nächsten Lauf angefragt", flush=True)
+                return
+            serie.append((sha, dict(vorher) if vorher else None))
             versuche = vorher.get("versuche", 0) + 1 if vorher.get("fassung", 1) == FASSUNG and vorher.get("fehler") else 1
             have[sha] = {**vorher, "sha": sha, "datei": uri, "drucksache": p["reference"], "kurzfassung": None,
                          "verworfen": None, "entwurf": None, "modell": MODELL, "fassung": FASSUNG,
@@ -342,6 +364,7 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
                          "erzeugt": datetime.now(timezone.utc).date().isoformat()}
             print(f"  {p['reference']}: Anfrage gescheitert ({type(e).__name__}, Versuch {versuche})", flush=True)
             continue
+        serie.clear()
         tokens[0] += usage.get("prompt_tokens", 0)
         tokens[1] += usage.get("completion_tokens", 0)
         geaendert = False

@@ -46,14 +46,24 @@ jobs:
             data/raw/STAND.json
             data/raw/meetings.json
             data/raw/legislative_terms.json
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
+      # Selten abgerufene Dateien, die auch im Repository liegen: eigener Zwischenspeicher, dessen Schlüssel den Stand
+      # im Repository enthält. Ein Commit an einer dieser Dateien beginnt so mit der Fassung im Repository, statt vom
+      # Zwischenspeicher überschrieben zu werden (Code-Prüfung 24.10.2026: bis zum nächsten Montag galt sonst der alte Stand).
+      - name: Geodaten und Haltestellen des letzten Abrufs
+        uses: actions/cache@v4
+        with:
+          path: |
             data/geo/bebauungsplaene_bonn.geojson
             data/geo/bebauungsplaene_protokoll.tsv
             data/geo/hausnummern_bonn.json
             data/geo/objekte_bonn.json
             data/kontext/haltestellen_bonn.tsv
             data/kontext/haltestellen_stand.json
-          key: raw-${{ github.run_id }}
-          restore-keys: raw-
+          key: geo-${{ hashFiles('data/geo/bebauungsplaene_bonn.geojson', 'data/geo/hausnummern_bonn.json', 'data/geo/objekte_bonn.json', 'data/kontext/haltestellen_bonn.tsv', 'data/kontext/haltestellen_stand.json') }}-${{ github.run_id }}
+          restore-keys: geo-${{ hashFiles('data/geo/bebauungsplaene_bonn.geojson', 'data/geo/hausnummern_bonn.json', 'data/geo/objekte_bonn.json', 'data/kontext/haltestellen_bonn.tsv', 'data/kontext/haltestellen_stand.json') }}-
 
       - name: Abruf OParl-API Stadt Bonn (Vorlagen)
         run: python -m pipeline fetch-papers
@@ -79,7 +89,7 @@ jobs:
         timeout-minutes: 25
         continue-on-error: true
 
-      # Hausnummern ändern sich selten; sonst gilt der Stand im Repository
+      # Hausnummern ändern sich selten; sonst gilt der Stand aus dem Zwischenspeicher bzw. dem Repository
       - name: Abruf Hausnummern (Stadt Bonn) und Gebäude und Anlagen (OSM; montags und auf Knopfdruck)
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
         run: |
@@ -144,11 +154,13 @@ jobs:
       - name: Aufbereiten, Geokodierung, Export
         env:
           KURZFASSUNGEN: _kurzfassungen
-          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
-          # Stufe C nicht freigegeben (Entscheidung des Auftraggebers 22.10.2026): keine neuen Anfragen;
-          # vorhandene Antworten bleiben im Branch kurzfassungen, das Audit wird weiter geschrieben
+          # Stufe C nicht freigegeben (Entscheidung des Auftraggebers 22.10.2026): keine neuen Anfragen und daher
+          # kein Schlüssel; vorhandene Antworten bleiben im Branch kurzfassungen, das Audit wird weiter geschrieben
           STUFE_C_MAX: "0"
         run: |
+          # Ohne den Bestand der Kurzfassungen (Branch nicht geladen) fehlten sie auf der Seite; dann lieber
+          # abbrechen, die veröffentlichte Seite bleibt auf dem letzten Stand (Code-Prüfung 24.10.2026)
+          if [ ! -d _kurzfassungen/.git ]; then echo "Branch kurzfassungen nicht geladen – Abbruch"; exit 1; fi
           python -m pipeline build
           python -m pipeline stufe-c
           python -m pipeline export

@@ -127,6 +127,7 @@
     detailSeq++;
     shownPlan = null;
     shownSite = null;
+    if (planLayer) { planLayer.remove(); planLayer = null; }   // Umriss eines zuvor gewählten Vorgangs (Gebietswechsel)
     $("#detail-heading").textContent = "Los geht's";
     $("#detail").innerHTML = INTRO;
     const t = toggleFor("timeline-wrap");
@@ -450,7 +451,8 @@
     });
     new BauToggle().addTo(map);
     // Überschwemmungsgebiete und Bodenrichtwertzonen (Kontextdaten): erst beim Einschalten geladen, ab Ortsteil-Zoom gezeichnet
-    kxOn = new Set((new URLSearchParams(location.search).get("ebenen") || "").split(",").filter((k) => Object.hasOwn(KX, k)));
+    // ohne kontext.json keine Ebenen aus der Adresse: die Schalter wären ausgeblendet und die Ebene nicht abschaltbar
+    kxOn = new Set((new URLSearchParams(location.search).get("ebenen") || "").split(",").filter((k) => kontext && Object.hasOwn(KX, k)));
     for (const [k, d] of Object.entries(KX)) {
       const Toggle = L.Control.extend({
         options: { position: "bottomright" },
@@ -1280,6 +1282,7 @@
   // Tastatur- und Listenzugang zur Planebene: Pläne mit Vorlagen im gewählten Gebiet
   async function showPlanList() {
     const seq = ++detailSeq;
+    if (planLayer) { planLayer.remove(); planLayer = null; }
     const reg = await loadPlanReg();
     if (!reg || seq !== detailSeq) return;
     const inArea = (e) => area.kind !== "ortsteil" || e.ortsteile.includes(area.name);
@@ -1483,7 +1486,7 @@
     if (!ul || !d?.mitwirken) return;
     let res;
     try { res = (await (mitwirkenMod ||= import("./mitwirken.js"))).mitwirken(p, d, zeit ? zeit.meetings : [], heute()); }
-    catch (e) { return; }
+    catch (e) { mitwirkenMod = null; return; }   // beim nächsten Vorgang neu laden (Code-Prüfung 24.10.2026)
     if (selected !== p || !ul.isConnected || !res.regeln.length) return;
     const ids = new Set(res.regeln.map((r) => r.id));
     const drop = (sel) => ul.querySelector(sel)?.remove();
@@ -1850,8 +1853,8 @@
         },
       });
       return m;
-    });
-    return pzReady.then((m) => { m.show(s); return m; });
+    }).catch((e) => { pzReady = null; console.warn("Prozesse nicht geladen", e); return null; });   // beim nächsten Öffnen erneut
+    return pzReady.then((m) => { if (m) m.show(s); return m; });
   }
 
   // --- Fläche „Mitmachen in Bonn“ (site/beteiligung.js, erst beim Öffnen geladen) --------------------------
@@ -1875,8 +1878,8 @@
         },
       });
       return m;
-    });
-    return mmReady.then((m) => { m.show(s || { bezirk: mmState ? mmState.bezirk : areaBezirk() || "Bonn" }); return m; });
+    }).catch((e) => { mmReady = null; console.warn("Mitmachen nicht geladen", e); return null; });   // beim nächsten Öffnen erneut
+    return mmReady.then((m) => { if (m) m.show(s || { bezirk: mmState ? mmState.bezirk : areaBezirk() || "Bonn" }); return m; });
   }
 
   // --- URL-Zustand -----------------------------------------------------------------------------------
