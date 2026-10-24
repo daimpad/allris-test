@@ -329,14 +329,17 @@ def fetch_haltestellen():
                 punkte[(s["stop_name"], ot)].append((lon, lat))
     if len(punkte) < 300:
         raise RuntimeError(f"Haltestellen: nur {len(punkte)} in Bonn – Abruf unvollständig, Stand bleibt")
+    q = QUELLEN["haltestellen"]
+    # ohne Last-Modified gilt der Tag des Abrufs; ein leerer Stand hielte sonst die Prüfung in check bis zum
+    # nächsten monatlichen Abruf an (Code-Prüfung 24.10.2026)
+    stand = _datum(q["dateien"]["gtfs.zip"]) or datetime.now(timezone.utc).date().isoformat()
     with open(HALT, "w", newline="", encoding="utf-8") as f:
         wr = csv.writer(f, delimiter="\t", lineterminator="\n")
         wr.writerow(["name", "ortsteil", "lon", "lat", "steige"])
         for (name, ot), pts in sorted(punkte.items()):
             wr.writerow([name, ot, round(statistics.fmean(p[0] for p in pts), 6), round(statistics.fmean(p[1] for p in pts), 6), len(pts)])
-    q = QUELLEN["haltestellen"]
     HALT_STAND.write_text(json.dumps({"titel": q["titel"], "url": q["url"], "lizenz": q["lizenz"],
-                                      "stand": _datum(q["dateien"]["gtfs.zip"]), "haltestellen": len(punkte)},
+                                      "stand": stand, "haltestellen": len(punkte)},
                                      ensure_ascii=False, indent=1, sort_keys=True) + "\n")
     print(f"Haltestellen: {len(punkte)} in Bonn → {HALT}")
 

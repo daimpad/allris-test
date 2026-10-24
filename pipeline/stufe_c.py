@@ -121,9 +121,11 @@ def laden(verzeichnis=None):
 
 
 def _schreiben(base, have):
-    with open(base / DATEI, "w", encoding="utf-8") as f:
+    tmp = base / (DATEI + ".tmp")   # erst vollständig schreiben, dann ersetzen (wie kurzfassung._schreiben)
+    with open(tmp, "w", encoding="utf-8") as f:
         for sha in sorted(have):
             f.write(json.dumps(have[sha], ensure_ascii=False) + "\n")
+    tmp.replace(base / DATEI)
 
 
 def nur_verzeichnis(verzeichnis=None):
@@ -168,6 +170,9 @@ def _texte():
 
 def erzeugen(db, verzeichnis=None, anfrage=_anfrage):
     """Neue Antworten des Modells für Kandidaten mit Text (höchstens MAX_JE_LAUF); ohne Schlüssel nichts."""
+    if MAX_JE_LAUF <= 0:   # nicht freigegeben (22.10.2026): weder Texte noch Bestand laden, nichts schreiben
+        print("Stufe C: keine neuen Anfragen (STUFE_C_MAX = 0).")
+        return
     schluessel = sprachmodell.schluessel()
     if not schluessel:
         print(f"Stufe C: {sprachmodell.SCHLUESSEL[sprachmodell.ANBIETER]} fehlt – nichts angefragt.")

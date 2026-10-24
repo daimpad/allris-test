@@ -54,8 +54,8 @@ jobs:
             data/raw/organizations.json
             data/raw/verwaltungsbereiche.json
             data/raw/STAND.json
-            data/geo/bebauungsplaene_bonn.geojson
-            data/geo/bebauungsplaene_protokoll.tsv
+            data/raw/meetings.json
+            data/raw/legislative_terms.json
           key: raw-browser
           restore-keys: raw-
       - name: Abruf, falls kein Zwischenspeicher vorhanden ist

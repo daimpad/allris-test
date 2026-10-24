@@ -39,6 +39,8 @@ jobs:
           ANBIETER: ${{ inputs.anbieter }}
           MODELL: ${{ inputs.modell }}
           FRAGEN: ${{ inputs.fragen }}
+        # bash mit pipefail: ein Abbruch von run.mjs (etwa ohne Schlüssel) färbt den Lauf rot, trotz „| tee“
+        shell: bash
         run: |
           set -- --anbieter "$ANBIETER" --modell "$MODELL" --daten https://daimpad.github.io/allris-test/data/export/ --aus _auswertung
           [ -n "$FRAGEN" ] && set -- "$@" --fragen "$FRAGEN"
@@ -47,6 +49,8 @@ jobs:
         if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANBIETER: ${{ inputs.anbieter }}
+          MODELL: ${{ inputs.modell }}
         run: |
           ls _auswertung/*.tsv > /dev/null 2>&1 || { echo "keine Ergebnisse"; exit 0; }
           url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
@@ -63,5 +67,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -q -m "Auswertung Ratsassistent $(date -u +%F) (${{ inputs.anbieter }}, ${{ inputs.modell }})"
+          git commit -q -m "Auswertung Ratsassistent $(date -u +%F) ($ANBIETER, $MODELL)"
           git push -q "$url" HEAD:auswertung
