@@ -68,7 +68,7 @@
     .toLocaleDateString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", year: "numeric" }) : "";
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
-  let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null;
+  let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null, kontext = null;
   let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, detailSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, planOn = false, allPlans = null, shownPlan = null;
   let bau = null, bauOn = false, bauLayer = null, shownSite = null, bauByRef = new Map();
   // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
@@ -525,6 +525,57 @@
         <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>`;
     svg.insertBefore(defs, svg.firstChild);
   }
+  // Kontextdaten je Ortsteil (kontext.json, pipeline/kontext.py): Einordnung, kein Urteil; alle Werte abgeleitet.
+  // Gefärbt werden nur Anteile und Mittelwerte – Zahlen wie Kitas oder Haltestellen bilden vor allem die Größe ab.
+  const KONTEXT_FARBE = { unter_18: "Anteil unter 18 Jahren", ab_65: "Anteil ab 65 Jahren", miete: "Nettokaltmiete (Zensus 2022)",
+    bodenrichtwert: "Bodenrichtwert Wohnbauland", hitze: "Hitze: dringender Handlungsbedarf", ueberschwemmung: "Im Überschwemmungsgebiet" };
+  const KONTEXT_STEP = { miete: 0.1, bodenrichtwert: 10 };
+  const kKey = (m) => (m || "").startsWith("kontext-") ? m.slice(8) : null;
+  function kFmt(key, v) {
+    if (v == null) return "–";
+    const unit = kontext.meta.kennzahlen[key].einheit;
+    if (unit === "%") return `${Number(v).toLocaleString("de-DE", { maximumFractionDigits: 1 })} %`;
+    if (unit === "€/m²") return `${Number(v).toLocaleString("de-DE", { minimumFractionDigits: key === "miete" ? 2 : 0, maximumFractionDigits: 2 })} €/m²`;
+    return de(v);
+  }
+  // Wert eines Gebiets aus index.json (Ortsteile tragen stadtbezirk, Stadtbezirke nicht)
+  const kValue = (info, key) => ((info.stadtbezirk ? kontext.ortsteile : kontext.bezirke)[info.name] || {})[key] ?? null;
+  // Stufen nach Quintilen der Ortsteile, gerundet (Prozent ganz, Miete 0,1 €, Bodenrichtwert 10 €); gleich für Stadtbezirke
+  function kBreaks(key) {
+    const v = Object.values(kontext.ortsteile).map((o) => o[key]).filter((x) => x != null).sort((a, b) => a - b);
+    const st = KONTEXT_STEP[key] || 1;
+    const br = [0.2, 0.4, 0.6, 0.8].map((q) => Math.round(Math.ceil(v[Math.floor(q * (v.length - 1))] / st) * st * 10) / 10);
+    return [...new Set(br)];
+  }
+  // „8,30 bis unter 8,90 €/m²“: die Einheit nur einmal
+  const kNum = (key, v) => kFmt(key, v).replace(/\s?(%|€\/m²)$/, "");
+  const kRanges = (br, key) => [0, ...br].map((lo, k) => (k === 0 ? `unter ${kFmt(key, br[0])}` : k === br.length ? `ab ${kFmt(key, lo)}`
+    : `${kNum(key, lo)} bis unter ${kFmt(key, br[k])}`));
+  function kQuelle(key) {
+    const d = kontext.meta.kennzahlen[key], q = kontext.meta.quellen[d.quelle] || {};
+    return { ...d, q, stand: q.stand ? (q.stand.length === 10 ? fmtDate(q.stand) : q.stand) : "" };
+  }
+  // Steckbrief in der Liste: alle Kennzahlen des Gebiets neben dem Stadtbezirk (Ortsteil) bzw. ganz Bonn (Stadtbezirk)
+  function fillKontext() {
+    const box = $("#kontext-box");
+    if (!box) return;
+    const own = kontext && area && (area.kind === "ortsteil" ? kontext.ortsteile[area.name] : area.kind === "bezirk" ? kontext.bezirke[area.name] : null);
+    if (!own) { box.hidden = true; return; }
+    const bez = area.kind === "ortsteil" ? areaBezirk() : null;
+    const cmp = bez ? kontext.bezirke[bez] : kontext.bonn, cmpName = bez ? `Stadtbezirk ${bez}` : "ganz Bonn";
+    const klein = own.einwohner < kontext.meta.mindest_einwohner;
+    const rows = (kontext.meta.reihenfolge || Object.keys(kontext.meta.kennzahlen)).map((k) => `<tr><th scope="row">${esc(kontext.meta.kennzahlen[k].titel)}</th>
+      <td>${kFmt(k, own[k])}</td><td>${kFmt(k, cmp[k])}</td></tr>`).join("");
+    const quellen = Object.values(kontext.meta.quellen).map((q) => `<li>${safeUrl(q.url) ? `<a href="${safeUrl(q.url)}">${esc(q.titel)}</a>` : esc(q.titel)}
+      – ${esc(q.lizenz)}${q.stand ? `, Stand ${esc(q.stand.length === 10 ? fmtDate(q.stand) : q.stand)}` : ""}</li>`).join("");
+    const methoden = (kontext.meta.reihenfolge || Object.keys(kontext.meta.kennzahlen)).map((k) => kontext.meta.kennzahlen[k]).map((d) => `<li><strong>${esc(d.titel)}:</strong> ${esc(d.methode)}</li>`).join("");
+    box.innerHTML = `<summary>Zahlen zu ${esc(area.name)}<span class="derived">abgeleitet</span></summary>
+      <p class="hint">Zur Einordnung der Vorlagen, kein Urteil über das Gebiet. Alle Werte sind auf ${area.kind === "ortsteil" ? "Ortsteile" : "Stadtbezirke"} umgerechnet; Stichtage verschieden.${klein ? ` Unter ${de(kontext.meta.mindest_einwohner)} Einwohnern keine Anteile und Mittelwerte.` : ""}</p>
+      <table class="kontext-table"><thead><tr><th scope="col">Kennzahl</th><th scope="col">${esc(area.name)}</th><th scope="col">${esc(cmpName)}</th></tr></thead>
+      <tbody>${rows}</tbody></table>
+      <details class="acc"><summary>Quellen und Methode</summary><div><ul>${quellen}</ul><ul>${methoden}</ul></div></details>`;
+    box.hidden = false;
+  }
   // Stufengrenzen: Ortsteile nach Quintilen, Stadtbezirke in gleichen Abständen bis zum Höchstwert
   function quintiles(values) {
     const v = [...values].sort((a, b) => a - b);
@@ -541,7 +592,9 @@
   }
   const shareRanges = (br) => [0, ...br].map((lo, k) => (k === br.length ? `ab ${pct(lo)}` : `${pct(lo)} bis unter ${pct(br[k])}`));
   function navBreaks() {
-    if (!navMetric) {
+    if (kKey(navMetric)) {
+      otBreaks = bzBreaks = kBreaks(kKey(navMetric));
+    } else if (!navMetric) {
       otBreaks = quintiles(index.ortsteile.map((o) => o.jahr || 0));
       const maxBz = Math.max(1, ...index.bezirke.map((b) => b.jahr || 0));
       bzBreaks = [0.2, 0.4, 0.6, 0.8].map((q) => Math.round(q * maxBz) + 1);
@@ -554,20 +607,29 @@
   function navTip(info, scope) {
     if (!navMetric) return `<span class="nav-big">${de(info.jahr)}</span> Vorlagen in den letzten 12 Monaten
       <br><span class="nav-dim">${de(scope === "bz" ? info.alle : info.count)} seit Oktober 2019</span>${fact(info.auffaellig)}`;
+    const kk = kKey(navMetric);
+    if (kk) {
+      const v = kValue(info, kk), d = kQuelle(kk), b = scope === "ot" ? kontext.bezirke[info.stadtbezirk] : null;
+      if (v == null) return `${esc(d.titel)}: <span class="nav-dim">keine Angabe (unter ${de(kontext.meta.mindest_einwohner)} Einwohnern)</span>`;
+      return `<span class="nav-big">${kFmt(kk, v)}</span> ${esc(d.titel)}
+        <br><span class="nav-dim">${b ? `Stadtbezirk ${esc(info.stadtbezirk)} ${kFmt(kk, b[kk])} · ` : ""}ganz Bonn ${kFmt(kk, kontext.bonn[kk])} · Stand ${esc(d.stand)} · abgeleitet</span>`;
+    }
     const label = esc(THEMES[navMetric]), bonn = (index.zahlen?.themen_bonn || {})[navMetric] || 0;
     if (!info.themen) return `${label}: <span class="nav-dim">zu wenige Vorlagen für einen Anteil (unter ${de(index.zahlen?.themen_min || 20)})</span>`;
     const [n, share] = info.themen[navMetric] || [0, 0];
     return `<span class="nav-big">${pct(share)}</span> der Vorlagen: ${label}
       <br><span class="nav-dim">${de(n)} von ${de(scope === "bz" ? info.alle : info.count)} seit Oktober 2019 · ganz Bonn ${pct(bonn)} · Themen abgeleitet</span>`;
   }
-  const navNumber = (info) => (!navMetric ? de(info.jahr) : info.themen ? pct((info.themen[navMetric] || [0, 0])[1]) : "–");
+  const navNumber = (info) => (kKey(navMetric) ? kFmt(kKey(navMetric), kValue(info, kKey(navMetric)))
+    : !navMetric ? de(info.jahr) : info.themen ? pct((info.themen[navMetric] || [0, 0])[1]) : "–");
   const otInfo = (l) => index.ortsteile.find((o) => o.name === l.feature.properties.ortsteil_bez) || {};
   const bzInfo = (l) => index.bezirke.find((b) => b.name === l.feature.properties.bezirk_bez) || {};
   // Themenebene: statt der Zahl der Vorlagen der Anteil eines Themas an allen Vorlagen des Gebiets seit 2019
   // (index.json, gebietszahlen.theme_shares; Themen abgeleitet); unter der Mindestzahl grau
   let navMetric = "";
   const NAV_NONE = "hsl(240, 6%, 82%)";
-  const metricValue = (info) => (!navMetric ? info.jahr || 0 : info.themen ? (info.themen[navMetric] || [0, 0])[1] : null);
+  const metricValue = (info) => (kKey(navMetric) ? kValue(info, kKey(navMetric))
+    : !navMetric ? info.jahr || 0 : info.themen ? (info.themen[navMetric] || [0, 0])[1] : null);
   const pct = (v) => `${Number(v).toLocaleString("de-DE", { maximumFractionDigits: 0 })} %`;
   const navFill = (info, br) => { const v = metricValue(info); return v == null ? NAV_NONE : step(klass(v, br)); };
   const fact = (a) => (a ? `<br><span class="nav-dim">Auffällig häufig: ${esc(a.label)} (${a.anteil} % hier, ${a.anteil_bonn} % in ganz Bonn)</span>` : "");
@@ -628,6 +690,7 @@
     bonnBounds = navBezirke.getBounds();
     const f = new URLSearchParams(location.search).get("flaechen");
     if (Object.hasOwn(THEMES, f || "") && index.zahlen?.themen_bonn) navMetric = f;
+    if (kontext && Object.hasOwn(KONTEXT_FARBE, kKey(f) || "")) navMetric = f;
     navBreaks();
     navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
     // Legende der Flächen: Stufen der jeweils sichtbaren Ebene
@@ -637,9 +700,12 @@
         navLegend = L.DomUtil.create("details", "nav-legend");
         navLegend.open = !MOBILE.matches;
         const themes = index.zahlen?.themen_bonn ? Object.entries(THEMES) : [];
-        navLegend.innerHTML = `<summary></summary>${themes.length ? `<label class="nav-metric">Flächen färben nach
-          <select id="nav-metric"><option value="">Zahl der Vorlagen (12 Monate)</option><optgroup label="Anteil eines Themas (seit 2019)">
-          ${themes.map(([k, v]) => `<option value="${k}"${k === navMetric ? " selected" : ""}>${esc(v)}</option>`).join("")}</optgroup></select></label>` : ""}
+        const kx = kontext ? Object.entries(KONTEXT_FARBE) : [];
+        const opt = (k, v) => `<option value="${k}"${k === navMetric ? " selected" : ""}>${esc(v)}</option>`;
+        navLegend.innerHTML = `<summary></summary>${themes.length || kx.length ? `<label class="nav-metric">Flächen färben nach
+          <select id="nav-metric"><option value="">Zahl der Vorlagen (12 Monate)</option>
+          ${themes.length ? `<optgroup label="Anteil eines Themas (seit 2019)">${themes.map(([k, v]) => opt(k, v)).join("")}</optgroup>` : ""}
+          ${kx.length ? `<optgroup label="Zahlen zum Gebiet (abgeleitet)">${kx.map(([k, v]) => opt(`kontext-${k}`, v)).join("")}</optgroup>` : ""}</select></label>` : ""}
           <div class="nav-legend-body"></div>`;
         navLegend.querySelector("#nav-metric")?.addEventListener("change", (e) => {
           navMetric = e.target.value;
@@ -706,8 +772,14 @@
     navOrtsteile.eachLayer((l) => l.setStyle(otStyle(l)));
     if (navLegend) {
       const z = index.zahlen || {}, br = far ? bzBreaks : otBreaks;
-      navLegend.querySelector("summary").textContent = navMetric ? `Anteil: ${THEMES[navMetric]}` : "Vorlagen der letzten 12 Monate";
-      navLegend.querySelector(".nav-legend-body").innerHTML = navMetric
+      const kk = kKey(navMetric), kd = kk && kQuelle(kk);
+      navLegend.querySelector("summary").textContent = kk ? kd.titel : navMetric ? `Anteil: ${THEMES[navMetric]}` : "Vorlagen der letzten 12 Monate";
+      navLegend.querySelector(".nav-legend-body").innerHTML = kk
+        ? `<ol class="nav-ramp">${kRanges(br, kk).map((r, k) => `<li><span class="nav-sw nav-sw${k}" aria-hidden="true"></span>${r}</li>`).join("")}
+            <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>keine Angabe (unter ${de(kontext.meta.mindest_einwohner)} Einwohnern)</li></ol>
+          <p>Je ${far ? "Stadtbezirk" : "Ortsteil"}, Stufen nach den Werten der Ortsteile; ganz Bonn ${kFmt(kk, kontext.bonn[kk])}. ${esc(kd.methode)}.
+            Quelle: ${esc(kd.q.titel || "")} (${esc(kd.q.lizenz || "")}), Stand ${esc(kd.stand)}. <span class="derived">abgeleitet</span> Zur Einordnung, kein Urteil über das Gebiet.</p>`
+        : navMetric
         ? `<ol class="nav-ramp">${shareRanges(br).map((r, k) => `<li><span class="nav-sw nav-sw${k}" aria-hidden="true"></span>${r}</li>`).join("")}
             <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>zu wenige Vorlagen (unter ${de(z.themen_min || 20)})</li></ol>
           <p>Anteil der Vorlagen mit diesem Thema an allen Vorlagen mit Ortsbezug je ${far ? "Stadtbezirk" : "Ortsteil"} seit Oktober 2019; in ganz Bonn ${pct((z.themen_bonn || {})[navMetric] || 0)}. <span class="derived">abgeleitet</span> Themen aus Amt, Ausschuss und Stichwort; eine Vorlage kann mehrere Themen haben.</p>`
@@ -1439,12 +1511,13 @@
   function subscribeArea() {
     const box = $("#subscribe");
     document.querySelectorAll('link[rel="alternate"][type="application/atom+xml"]').forEach((l) => l.remove());
-    if (!index || area.kind === "bonn") { box.hidden = true; fillMitmachen(); return; }
+    if (!index || area.kind === "bonn") { box.hidden = true; fillMitmachen(); fillKontext(); return; }
     const href = `${BONN}feeds/${area.kind}-${area.key}.xml`;
     const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
     box.innerHTML = `<a class="btn btn-soft" href="${href}" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ${esc(where)} abonnieren</a>`;
     box.hidden = false;
     fillMitmachen();
+    fillKontext();
     const l = document.createElement("link");
     Object.assign(l, { rel: "alternate", type: "application/atom+xml", href, title: `RIS-Karte Bonn – ${where}` });
     document.head.appendChild(l);
@@ -1719,9 +1792,10 @@
     const json = (url) => fetch(url).then((r) => (r.ok ? r.json() : null)).catch(() => null);
     const shapes = Promise.all([loadGeo("ortsteil"), loadGeo("bezirk")]);
     // Baustellen mit möglichen Umsetzungen (nur Konfidenz hoch); ohne Datei bleibt die Funktion ausgeblendet
-    const [g, idx, z, bs] = await Promise.all([json(GLOSSAR_URL), json(BONN + "index.json"), json(BONN + "zeit.json"),
-      json(BONN + "baustellen.json")]);
+    const [g, idx, z, bs, kx] = await Promise.all([json(GLOSSAR_URL), json(BONN + "index.json"), json(BONN + "zeit.json"),
+      json(BONN + "baustellen.json"), json(BONN + "kontext.json")]);
     index = idx;
+    kontext = index && kx && kx.ortsteile ? kx : null;
     zeit = index ? z : null;
     bau = index && bs && bs.baustellen.length ? bs : null;
     for (const b of bau ? bau.baustellen : []) for (const c of b.kandidaten) {

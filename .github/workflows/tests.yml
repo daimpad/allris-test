@@ -67,6 +67,7 @@ jobs:
         run: |
           python -m pipeline build
           python -m pipeline export
+          python -m pipeline kontext
           python -m pipeline soll
       - name: Seite zusammenstellen
         run: |

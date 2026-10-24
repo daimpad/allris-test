@@ -36,6 +36,10 @@ class Kennzahlen(unittest.TestCase):
         self.assertEqual(sum(v["einwohner"] for v in self.doc["bezirke"].values()), 321351)
         self.assertEqual(len(self.doc["ortsteile"]), 51)
 
+    def test_reihenfolge_fuer_den_steckbrief(self):
+        self.assertEqual(self.doc["meta"]["reihenfolge"], list(kontext.KENNZAHLEN))
+        self.assertEqual(self.doc["meta"]["reihenfolge"][0], "einwohner")
+
     def test_kleine_ortsteile_ohne_anteile(self):
         hardthoehe = self.doc["ortsteile"]["Hardthöhe"]
         self.assertLess(hardthoehe["einwohner"], kontext.MIN_EINWOHNER)
