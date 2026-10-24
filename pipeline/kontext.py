@@ -432,6 +432,7 @@ def write():
         print("Kontextdaten: Ausschnitte fehlen (python -m pipeline kontext-ausschnitte) – übersprungen.")
         return
     werte, audit = kennzahlen()
+    zuordnung = {n: b for n, b, _ in _gebiete()[0]}
     stand = {**json.loads(STAND.read_text()), "haltestellen": json.loads(HALT_STAND.read_text())}
     meta = {"hinweis": "Einordnung, kein Urteil. Alle Werte sind auf Ortsteile umgerechnet (abgeleitet).",
             "mindest_einwohner": MIN_EINWOHNER,
@@ -441,7 +442,8 @@ def write():
     doc = {"meta": meta,
            "bonn": werte[("bonn", "Bonn")],
            "bezirke": {n: v for (art, n), v in werte.items() if art == "bezirk"},
-           "ortsteile": {n: v for (art, n), v in werte.items() if art == "ortsteil"}}
+           "ortsteile": {n: v for (art, n), v in werte.items() if art == "ortsteil"},
+           "stadtbezirk_je_ortsteil": zuordnung}
     out = config.EXPORT / "bonn" / OUT
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n")
