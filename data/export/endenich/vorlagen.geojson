@@ -2,20 +2,20 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 618,
-  "generated_at": "2026-10-24T07:50:32+00:00",
+  "count": 617,
+  "generated_at": "2026-10-24T11:11:31+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-24T07:31:22+00:00"
+    "retrieved_at": "2026-10-24T10:53:13+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-24T07:37:00+00:00"
+    "retrieved_at": "2026-10-24T10:58:48+00:00"
    },
    {
     "name": "osm",
@@ -3331,126 +3331,6 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021687"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.0705029,
-     50.7320461
-    ]
-   },
-   "properties": {
-    "reference": "253013",
-    "name": "Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahrens Nr. 6421-1 \"Universitäts-Campus Endenich\"",
-    "paper_type": "Informationsbrief",
-    "date": "2025-04-24",
-    "amt": "01-1 Bürgerbüro",
-    "place": "Ulrich-Haberland-Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "A",
-    "method": "oparl_location",
-    "confidence": "hoch",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022560"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.0734714,
-     50.7283008
-    ]
-   },
-   "properties": {
-    "reference": "253013",
-    "name": "Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahrens Nr. 6421-1 \"Universitäts-Campus Endenich\"",
-    "paper_type": "Informationsbrief",
-    "date": "2025-04-24",
-    "amt": "01-1 Bürgerbüro",
-    "place": "Auf dem Hügel",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "A",
-    "method": "oparl_location",
-    "confidence": "hoch",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022560"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.0758417,
-     50.7287614
-    ]
-   },
-   "properties": {
-    "reference": "253013",
-    "name": "Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahrens Nr. 6421-1 \"Universitäts-Campus Endenich\"",
-    "paper_type": "Informationsbrief",
-    "date": "2025-04-24",
-    "amt": "01-1 Bürgerbüro",
-    "place": "Hermann-Wandersleb-Ring",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "A",
-    "method": "oparl_location",
-    "confidence": "hoch",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022560"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.0737035,
-     50.7337687
-    ]
-   },
-   "properties": {
-    "reference": "253013",
-    "name": "Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahrens Nr. 6421-1 \"Universitäts-Campus Endenich\"",
-    "paper_type": "Informationsbrief",
-    "date": "2025-04-24",
-    "amt": "01-1 Bürgerbüro",
-    "place": "Gerhard-Domagk-Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "A",
-    "method": "oparl_location",
-    "confidence": "hoch",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022560"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.0710231,
-     50.7328523
-    ]
-   },
-   "properties": {
-    "reference": "253013",
-    "name": "Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahrens Nr. 6421-1 \"Universitäts-Campus Endenich\"",
-    "paper_type": "Informationsbrief",
-    "date": "2025-04-24",
-    "amt": "01-1 Bürgerbüro",
-    "place": "Pfaffenweiherweg",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "A",
-    "method": "oparl_location",
-    "confidence": "hoch",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022560"
    }
   },
   {

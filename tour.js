@@ -17,7 +17,7 @@
       text: "Ein Stichwort oder eine Drucksachennummer eingeben, etwa „Radweg“ oder „261856“. Darunter stehen Schnellfilter nach Thema und Partei; die Treffer lassen sich in der Liste anzeigen." },
     { target: "#f-area",
       title: "Gebiet wählen",
-      text: "Ein Ortsteil, ein ganzer Stadtbezirk oder Vorlagen ohne Ortsbezug je Jahr. Zu Beginn zeigt die Karte ganz Bonn: erst einen Stadtbezirk anklicken, dann einen Ortsteil. Herangezoomt lassen sich Ortsteile direkt anklicken; „Ganz Bonn ansehen“ führt zurück. In der Legende oben links lassen sich die Flächen statt nach der Zahl der Vorlagen nach dem Anteil eines Themas färben, etwa Verkehr. Karte, Liste und Zeitleiste zeigen jeweils das gewählte Gebiet." },
+      text: "Ein Ortsteil, ein ganzer Stadtbezirk oder Vorlagen ohne Ortsbezug je Jahr. Zu Beginn zeigt die Karte ganz Bonn: erst einen Stadtbezirk anklicken, dann einen Ortsteil. Herangezoomt lassen sich Ortsteile direkt anklicken; „Ganz Bonn ansehen“ führt zurück. In der Legende oben links lassen sich die Flächen statt nach der Zahl der Vorlagen nach dem Anteil eines Themas färben, etwa Verkehr, oder nach Zahlen zum Gebiet wie Miete, Altersanteilen oder Hitze (abgeleitet, zur Einordnung). Ist ein Ortsteil gewählt, stehen diese Zahlen auch in der Liste neben denen des Stadtbezirks. Karte, Liste und Zeitleiste zeigen jeweils das gewählte Gebiet." },
     { before: (ui) => { if (MOBILE.matches) { ui.panel("panel-detail", false); ui.mapMenu(true); } }, rect: (ui) => ui.areaRect(), fallback: "#map",
       beacons: [".marker-cluster, path.leaflet-interactive", ".map-color", ".map-plans", ".map-bau", ".map-legend"],
       title: "Die Karte",

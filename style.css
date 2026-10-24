@@ -406,6 +406,17 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .termine-filters { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: end; }
 .subscribe { margin: -2px 0 10px; }
 .subscribe .btn { font-size: 13px; padding: 7px 12px; }
+/* Zahlen zum Gebiet (Kontextdaten, abgeleitet) */
+.kontext > summary .derived { margin-left: auto; margin-right: 6px; font-weight: 400; }
+.kontext .hint { margin: 0 0 6px; }
+.kontext-table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
+.kontext-table th:first-child { width: 46%; }
+.kontext-table th, .kontext-table td { padding: 4px 6px; border-bottom: 1px solid var(--border-alt); vertical-align: top; }
+.kontext-table thead th { font-weight: 500; color: var(--text-muted); text-align: right; overflow-wrap: anywhere; hyphens: auto; }
+.kontext-table thead th:first-child, .kontext-table tbody th { text-align: left; font-weight: 400; }
+.kontext-table td { text-align: right; font-variant-numeric: tabular-nums; }
+.kontext .acc { margin-top: 8px; }
+.kontext .acc ul + ul { margin-top: 6px; }
 /* Suchraum, Themen */
 .scope { display: flex; gap: 0; border: 1px solid var(--border-alt); border-radius: 999px; padding: 3px; margin: 0 0 4px; background: var(--surface); }
 .scope label { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 10px; border-radius: 999px; font-size: 13px; cursor: pointer; }
