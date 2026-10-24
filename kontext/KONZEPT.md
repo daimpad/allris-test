@@ -19,7 +19,7 @@ Entscheidungen des Auftraggebers (24.10.2026): Kontext zu Vorlagen, kein eigener
 
 ## Darstellung
 - **Karte:** in der vorhandenen Flächenauswahl (`flaechen=`) zusätzliche Kennzahlen; fünf Stufen wie bisher, Legende mit Quelle und Stichtag. Überschwemmungsgebiete und Bodenrichtwertzonen als zuschaltbare Flächen beim Hineinzoomen; Haltestellen und Kitas als Punkte.
-- **Gebiet:** kurzer Steckbrief des Ortsteils (alle Kennzahlen, mit Vergleichswert für ganz Bonn).
+- **Gebiet:** kurzer Steckbrief des Ortsteils (alle Kennzahlen, mit Vergleichswert für den Stadtbezirk).
 - **Vorgang:** Feld „Zum Ortsteil“ mit zwei bis drei Kennzahlen passend zum Thema der Vorlage (Wohnen → Miete, Boden; Schule → Kinderanteil, Kitas; Verkehr → Haltestellen; Klima → Hitze, Überschwemmung).
 - **Ratsassistent:** Werkzeug `kontext_ortsteil` mit denselben Werten und Quellen.
 
@@ -30,10 +30,10 @@ Entscheidungen des Auftraggebers (24.10.2026): Kontext zu Vorlagen, kein eigener
 
 ## Umsetzung in Phasen (je mit Rückfrage)
 0. **Prüfung:** Abruf, Ausschnitt Bonn, Umrechnung für Endenich und zwei weitere Ortsteile; Abgleich mit veröffentlichten Werten der Stadt; Bericht.
-1. **Pipeline:** `pipeline/kontext.py` → `kontext.json` je Ortsteil, Audit der Umrechnung (TSV), Abruf monatlich (Bodenrichtwerte jährlich), Lizenzzeilen, DCAT.
+1. **Pipeline:** `pipeline/kontext.py` → `kontext.json` je Ortsteil, Audit der Umrechnung (TSV), Ausschnitte für Bonn in `data/kontext/` (neu nur bei neuem Stand der Quelle; Haltestellen monatlich), Lizenzzeilen, DCAT.
 2. **Karte und Steckbrief.**
 3. **Vorgang und Assistent.**
 
-## Offene Fragen
-- Vergleichswert: ganz Bonn oder Stadtbezirk?
-- Große Dateien (Bodenrichtwerte 184 MB, Klimaanalyse bis 3 GB): Ausschnitt einmalig erzeugen und im Repository ablegen oder bei jedem Abruf neu schneiden?
+## Entscheidungen zu Einzelfragen (Auftraggeber, 24.10.2026)
+- **Vergleichswert** im Steckbrief und im Vorgang: der eigene Stadtbezirk.
+- **Große Dateien** (Bodenrichtwerte 184 MB, Klimaanalyse bis 3 GB): Ausschnitt für Bonn einmalig erzeugen und im Repository ablegen (`data/kontext/`); neu schneiden nur bei einem neuen Stand der Quelle (Bodenrichtwerte jährlich, Klimaanalyse bei neuer Fassung).
