@@ -38,6 +38,10 @@
     }
     return v;
   };
+  const ORIGIN = Date.UTC(2019, 8, 30);
+  // Kalendertag seit dem 30.09.2019 in Ortszeit (Fächer der Zeitleiste)
+  const dayNo = (ms) => { const d = new Date(ms); return Math.round((Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) - ORIGIN) / DAY); };
+  const addDays = (ms, k) => { const d = new Date(ms); d.setDate(d.getDate() + k); return d.getTime(); };
   const iso = (ms) => { const d = new Date(ms); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
   const DE = new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
   const DE_MONTH = new Intl.DateTimeFormat("de-DE", { month: "long", year: "numeric" });
@@ -146,18 +150,20 @@
           return { start, end, parts, total: parts.reduce((s, p) => s + p[1], 0), label: deMonth(start) };
         });
       }
-      const size = bin === "week" ? 7 * DAY : DAY, counts = new Map();
-      const add = (ms) => { const k = Math.floor((ms - t("2019-09-30")) / size); counts.set(k, (counts.get(k) || 0) + 1); };
+      // nach Kalendertagen zählen, nicht in festen 24-Stunden-Schritten: sonst begannen die Fächer im Winter um
+      // 23 Uhr des Vortags und trugen dessen Datum (Code-Prüfung 24.10.2026)
+      const n = bin === "week" ? 7 : 1, counts = new Map();
+      const add = (ms) => { const k = Math.floor(dayNo(ms) / n); counts.set(k, (counts.get(k) || 0) + 1); };
       for (const p of papers) {
         if (dim === "vorlage") { if (p.date) add(t(p.date)); }
         else for (const s of p.steps) if ((s.typ === "beratung" || s.typ === "entscheidung") && s.date) add(t(s.date));
       }
       const out = [];
-      for (let k = Math.floor((view[0] - t("2019-09-30")) / size) - 1; ; k++) {
-        const start = t("2019-09-30") + k * size;
+      for (let k = Math.floor(dayNo(view[0]) / n) - 1; ; k++) {
+        const start = new Date(2019, 8, 30 + k * n).getTime();
         if (start > view[1]) break;
-        const n = counts.get(k) || 0;
-        out.push({ start, end: start + size, parts: [["Vorlagen", n]], total: n,
+        const c = counts.get(k) || 0;
+        out.push({ start, end: new Date(2019, 8, 30 + (k + 1) * n).getTime(), parts: [["Vorlagen", c]], total: c,
           label: bin === "week" ? `Woche ab ${de(start)}` : de(start) });
       }
       return out;
@@ -435,9 +441,9 @@
       if (keys[e.key]) { e.preventDefault(); keys[e.key](); }
     });
     handles.forEach((hd) => hd.addEventListener("keydown", (e) => {
-      const i = +hd.dataset.h, r = range.slice(), step = LEVELS[level].bin === "month" ? 30 * DAY : DAY;
-      const map = { ArrowLeft: -step, ArrowDown: -step, ArrowRight: step, ArrowUp: step, PageDown: -365 * DAY, PageUp: 365 * DAY };
-      if (map[e.key] !== undefined) r[i] += map[e.key];
+      const i = +hd.dataset.h, r = range.slice(), step = LEVELS[level].bin === "month" ? 30 : 1;
+      const map = { ArrowLeft: -step, ArrowDown: -step, ArrowRight: step, ArrowUp: step, PageDown: -365, PageUp: 365 };
+      if (map[e.key] !== undefined) r[i] = addDays(r[i], map[e.key]);   // Kalendertage, auch über die Zeitumstellung
       else if (e.key === "Home") r[i] = extent[0];
       else if (e.key === "End") r[i] = extent[1];
       else return;

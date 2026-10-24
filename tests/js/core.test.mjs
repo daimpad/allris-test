@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import { createChat, checkCitations, collectRefs, validateArgs, MAX_TOOL_CALLS } from "../../site/chat/core.js";
 import { ProviderError } from "../../site/chat/providers.js";
 import { createKeyStore } from "../../site/chat/keys.js";
+import { TOOLS as WERKZEUGE } from "../../site/chat/tools.js";
 
 const TOOLS = [
   { name: "hole_vorlage", description: "", parameters: { type: "object", additionalProperties: false, required: ["drucksache"], properties: { drucksache: { type: "string" } } } },
@@ -143,6 +144,22 @@ test("Schema-Prüfung", () => {
   assert.match(validateArgs(s, { stand: "zu" }), /erlaubt/);
   assert.match(validateArgs(s, { foo: 1 }), /Unbekanntes Feld/);
   assert.match(validateArgs(s, []), /kein Objekt/);
+});
+
+// Code-Prüfung 24.10.2026: Listen wurden immer abgelehnt (typeof [] ist "object"); jede Eigenschaft jedes
+// Werkzeugs muss mit einem gültigen Beispielwert die Prüfung bestehen
+test("Schema-Prüfung: gültige Beispielwerte für alle Werkzeuge, Listen mit erlaubten Werten", () => {
+  const sample = (p) => (p.enum ? p.enum[0] : p.type === "integer" ? Math.max(1, p.minimum ?? 1) : p.type === "number" ? 50.7
+    : p.type === "boolean" ? true : p.type === "array" ? [sample(p.items || { type: "string" })] : "Endenich");
+  for (const t of WERKZEUGE) for (const [k, p] of Object.entries(t.parameters.properties || {})) {
+    const args = Object.fromEntries((t.parameters.required || []).map((r) => [r, sample(t.parameters.properties[r])]));
+    args[k] = sample(p);
+    assert.equal(validateArgs(t.parameters, args), null, `${t.name}.${k}`);
+  }
+  const kx = WERKZEUGE.find((t) => t.name === "hole_kontext").parameters;
+  assert.equal(validateArgs(kx, { gebiet: "Endenich", kennzahlen: ["miete", "hitze"] }), null);
+  assert.match(validateArgs(kx, { gebiet: "Endenich", kennzahlen: ["rangfolge"] }), /erlaubt/);
+  assert.match(validateArgs(kx, { gebiet: "Endenich", kennzahlen: "miete" }), /falschen Typ/);
 });
 
 test("Schlüssel: Arbeitsspeicher als Standard, sessionStorage nur auf Wunsch, nie localStorage", () => {

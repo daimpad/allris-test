@@ -14,6 +14,10 @@ class Median(unittest.TestCase):
         self.assertEqual(kontext._wmedian([(500, 3), (700, 1), (900, 1)]), 500)
         self.assertIsNone(kontext._wmedian([]))
 
+    def test_gleichstand_ergibt_mittel(self):
+        self.assertEqual(kontext._wmedian([(460, 0.5), (770, 0.5)]), 615)
+        self.assertEqual(kontext._wmedian([(500, 1), (600, 1), (700, 2)]), 650)
+
 
 class Kennzahlen(unittest.TestCase):
     """Mit den Ausschnitten im Repository (data/kontext/)."""

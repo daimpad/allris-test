@@ -12,7 +12,7 @@ import json
 import re
 import unicodedata
 
-from . import actors, config, soll
+from . import actors, config, maske, soll
 
 # Gremienarten der OParl-API, die Entscheidungen treffen oder beraten (ohne Fraktionen, Gruppen und interne Gremien)
 ARTEN = {"Rat": "rat", "Ratsgremien": "ausschuss", "Bezirksvertretungen": "bezirksvertretung",
@@ -148,9 +148,10 @@ def aemter(db, today):
         u["co"] |= cls == actors.CO_DEZERNAT
         u["bereiche"].append({"id": oid, "name": name, "end": end})
     by_org = collections.defaultdict(list)
+    m = maske.aus_db(db)
     for pid, ref, name, ptype, date, org in db.execute(
             "SELECT id, reference, name, paper_type, date, under_direction_of FROM paper"):
-        by_org[org].append((pid, ref, name, ptype, date))
+        by_org[org].append((pid, ref, m(name, ref), ptype, date))
     gremium_of = collections.defaultdict(set)
     gname = {}
     for pid, oid, gn in db.execute(
@@ -207,7 +208,8 @@ def aemter(db, today):
 def site_data(db, today=None):
     today = today or datetime.date.today().isoformat()
     rows = soll.vorgaenge(db)
-    titles = {ref: (name, date) for ref, name, date in db.execute("SELECT reference, name, date FROM paper")}
+    m = maske.aus_db(db)   # Hausnummern in Titeln aus der Einwohnerschaft (Beispiele je Verfahren)
+    titles = {ref: (m(name, ref), date) for ref, name, date in db.execute("SELECT reference, name, date FROM paper")}
     meetings = json.loads(config.MEETINGS.read_text()) if config.MEETINGS.exists() else []
     meetings = meetings.get("data", []) if isinstance(meetings, dict) else meetings
     terms = json.loads(config.LEGISLATIVE_TERMS.read_text()) if config.LEGISLATIVE_TERMS.exists() else []

@@ -83,3 +83,6 @@ BAUSTELLEN_LICENSE = ("CC0 1.0 (Stadt Bonn, Baustellen tagesaktuell und geplant;
 
 # Öffentliche Adresse der Seite (für absolute Links in Feeds, Kalender und DCAT-Beschreibung)
 SITE_URL = os.environ.get("SITE_URL", "https://ris-bonn.datenatlas.de/")
+# Das Datenpaket (Zip) liegt nur auf GitHub Pages; der Branch `deploy` für die Hauptadresse enthält es nicht
+# (pages.yml, Schritt „Branch deploy“, setzt dieselbe Adresse in index.html und datenschutz.html)
+PAKET_URL = os.environ.get("PAKET_URL", "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip")

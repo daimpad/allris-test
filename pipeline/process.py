@@ -22,7 +22,10 @@ SONDER_TYPES = {
     "Eilentscheidung HA": "Eilentscheidung im Hauptausschuss",
 }
 NICHTOEFFENTLICH_TYPE = "Tagesordnungspunkte in nichtöffentlicher Sitzung"
-SCHLEIFE = ("vertagt", "verwiesen", "nicht aufgenommen")
+SCHLEIFE = ("vertagt", "verwiesen", "nicht aufgenommen", "weitere Lesung")
+# Ergebnisse, die eine Beratung abschließen, ohne dass das Gremium entschieden hat (Code-Prüfung 24.10.2026:
+# „nicht abgestimmt“ einer entscheidenden Beratung galt als Entscheidung, 326 Vorlagen)
+KEIN_BESCHLUSS = ("nicht abgestimmt", "ohne Votum")
 VOLLZUG = ("beschlossen",)
 
 # Erläuterungen; in den Exporten steht nur der Schlüssel (`note`), die Texte stehen in der Seite.
@@ -152,7 +155,8 @@ def stand(p):
     s = p["process"]
     if not s:
         return "ohne Beratungsfolge"
-    if any(x["authoritative"] and is_final(x["result"]) for x in s):
+    if any(x["authoritative"] and is_final(x["result"]) and not any(k in x["result"] for k in KEIN_BESCHLUSS)
+           for x in s):
         return "entschieden"
     if not any(x["result"] for x in s):
         return "offen"

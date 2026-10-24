@@ -51,8 +51,17 @@ export function validateArgs(schema, args) {
     const p = props[k];
     if (!p) return `Unbekanntes Feld „${k}“.`;
     if (v == null) continue;
-    const ok = p.type === "integer" ? Number.isInteger(v) : p.type === "number" ? typeof v === "number" && Number.isFinite(v) : typeof v === p.type;
+    const ok = p.type === "integer" ? Number.isInteger(v) : p.type === "number" ? typeof v === "number" && Number.isFinite(v)
+      : p.type === "array" ? Array.isArray(v) : typeof v === p.type;
     if (!ok) return `Feld „${k}“ hat den falschen Typ (erwartet ${p.type}).`;
+    // Listen (z. B. kennzahlen in hole_kontext): Typ und erlaubte Werte je Eintrag (Code-Prüfung 24.10.2026)
+    if (Array.isArray(v)) {
+      if (v.length > 50) return `Feld „${k}“ hat zu viele Einträge.`;
+      const it = p.items || {};
+      if (it.type && v.some((x) => typeof x !== it.type)) return `Feld „${k}“: jeder Eintrag muss vom Typ ${it.type} sein.`;
+      if (it.enum && v.some((x) => !it.enum.includes(x))) return `Feld „${k}“: erlaubt sind ${it.enum.join(", ")}.`;
+      continue;
+    }
     if (p.enum && !p.enum.includes(v)) return `Feld „${k}“: erlaubt sind ${p.enum.join(", ")}.`;
     // Code-Prüfung 23.10.2026: Grenzen aus dem Schema gelten auch hier; eine Eingabe nur aus Satzzeichen („?“)
     // passte sonst auf jeden Eintrag einer Liste

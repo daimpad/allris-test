@@ -543,6 +543,7 @@ export function createTools({ load, today: fest = null } = {}) {
 
     async suche_baustellen(a) {
       const d = await baustellen();
+      const mask = await masker();
       let list = d.baustellen.filter((b) => a.auch_beendete || b.aktiv);
       if (a.ort) { const w = words(a.ort); list = list.filter((b) => w.every((x) => norm(`${b.bezeichnung} ${b.strasse || ""}`).includes(x))); }
       if (a.stadtbezirk) list = list.filter((b) => b.stadtbezirk === a.stadtbezirk);
@@ -557,7 +558,7 @@ export function createTools({ load, today: fest = null } = {}) {
         baustelle_id: b.id, bezeichnung: b.bezeichnung, strasse: b.strasse, stadtbezirk: b.stadtbezirk, massnahme: b.massnahme,
         traeger: b.traeger, anderer_traeger: b.fremd, von: b.von, bis: b.bis, termine: "unverbindlich", stand: stand(b),
         ...(near ? { abstand_m: Math.round(b._d) } : {}),
-        moegliche_umsetzung: b.kandidaten.map((c) => ({ drucksache: c.drucksache, titel: short(c.titel), entschieden_am: c.entschieden_am,
+        moegliche_umsetzung: b.kandidaten.map((c) => ({ drucksache: c.drucksache, titel: short(mask(c.titel, null, c.drucksache)), entschieden_am: c.entschieden_am,
           abstand_m: c.abstand_m, kriterien: c.kriterien, evidenz: "abgeleitet – Indiz, kein Beleg" })),
       }));
       return { ...page(items, a.seite), archiv_beginn: d.meta.archiv_beginn, abruf: d.meta.abruf, hinweise: d.meta.hinweise,
@@ -584,8 +585,15 @@ export function createTools({ load, today: fest = null } = {}) {
       const keys = (a.kennzahlen?.length ? a.kennzahlen : d.meta.reihenfolge).filter((k) => d.meta.kennzahlen[k]);
       const kennzahlen = keys.map((k) => {
         const m = d.meta.kennzahlen[k], q = d.meta.quellen[m.quelle] || {};
-        return { kennzahl: m.titel, wert: werte[k] ?? null, einheit: m.einheit, ...(vergleich ? { vergleich: vergleich[k] ?? null } : {}),
+        const o = { kennzahl: m.titel, wert: werte[k] ?? null, einheit: m.einheit, ...(vergleich ? { vergleich: vergleich[k] ?? null } : {}),
           quelle: q.titel, lizenz: q.lizenz, stand: q.stand, link: q.url, methode: m.methode };
+        // Bodenrichtwert: Anteil der Einwohner in einer Zone für Wohnbauland; Hinweis, wenn viele außerhalb wohnen
+        const cov = werte.bodenrichtwert_abdeckung, ab = d.meta.bodenrichtwert_hinweis_ohne_zone;
+        if (k === "bodenrichtwert" && cov != null) {
+          o.anteil_einwohner_in_zone = cov;
+          if (ab != null && 100 - cov >= ab) o.hinweis = `Gilt nur für ${Math.round(cov)} % der Einwohner; die übrigen wohnen außerhalb von Zonen für Wohnbauland (Misch- und Kerngebiete).`;
+        }
+        return o;
       });
       const klein = ebene === "ortsteil" && werte.einwohner < d.meta.mindest_einwohner;
       return {

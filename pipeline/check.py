@@ -1,8 +1,9 @@
 """Prüfung: Kennzahlen gegen den Phase-0-Bericht, Verknüpfungsquote, Datenschutz."""
+import json
 import re
 import sqlite3
 
-from . import actors, config, kontext
+from . import actors, config, kontext, maske
 
 # Werte aus phase0/BERICHT_phase0.md (Abruf 17.10.2026)
 PHASE0 = {
@@ -111,10 +112,27 @@ def check():
 
     print("\nDatenschutz")
     print("Orte mit Hausnummer in Straße oder Beschreibung:", len(with_number), with_number[:5])
+    offen = titel_mit_hausnummer(maske.aus_db(db))
+    print("Titel aus der Einwohnerschaft mit Hausnummer in Suche und GeoJSON:", len(offen), offen[:5])
     db.close()
     if with_number:
         raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Ortsangaben (CLAUDE.md 5.2).")
+    if offen:
+        raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Titeln aus der Einwohnerschaft (maske.py).")
 
     print("\nKontextdaten je Ortsteil")
     if befunde := kontext.pruefen():
         raise SystemExit(f"Prüfung fehlgeschlagen: Kontextdaten ({'; '.join(befunde)}).")
+
+
+def titel_mit_hausnummer(m, base=None):
+    """Drucksachen aus der Einwohnerschaft, deren Titel in suche.json oder vorlagen.geojson noch eine Hausnummer
+    trägt (Entscheidung des Auftraggebers 24.10.2026: überall ausblenden)."""
+    base = base or config.EXPORT / "bonn"
+    offen = set()
+    if (f := base / "suche.json").exists():
+        offen |= {r[0] for r in json.loads(f.read_text())["rows"] if m.offen(r[1], r[0])}
+    if (f := base / "vorlagen.geojson").exists():
+        offen |= {x["properties"]["reference"] for x in json.loads(f.read_text())["features"]
+                  if m.offen(x["properties"].get("name"), x["properties"]["reference"])}
+    return sorted(offen)
