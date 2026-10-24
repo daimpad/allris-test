@@ -153,7 +153,12 @@ test("Zuschaltbare Flächen: erst beim Hineinzoomen, Legende mit Quelle, Zustand
   assert.match(await legend.textContent(), /vorläufig gesichert.*Verbindlich sind die Karten des Landes.*dl-de\/zero-2\.0.*Wohnbauland.*BORIS NRW/s);
   assert.deepEqual(await axe(page), []);
   // herausgezoomt: keine Flächen, Hinweis in der Legende
-  for (let i = 0; i < 4; i++) await page.locator(".leaflet-control-zoom-out").click();
+  // je Klick das Ende der Animation abwarten: Klicks während der Animation rechnen vom selben Zoom aus (CI)
+  for (let i = 0; i < 4; i++) {
+    await page.locator(".leaflet-control-zoom-out").click();
+    await page.waitForFunction(() => !document.querySelector(".leaflet-zoom-anim"));
+    await page.waitForTimeout(300);
+  }
   await page.waitForFunction(() => document.querySelectorAll(".leaflet-kontextflaechen-pane path").length === 0);
   assert.match(await legend.textContent(), /hineinzoomen/);
   assert.deepEqual(page.errors, []);
