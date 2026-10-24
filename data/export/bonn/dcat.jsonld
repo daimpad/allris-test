@@ -325,6 +325,34 @@
     "@type": "dct:RightsStatement",
     "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
    }
+  },
+  {
+   "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/kontext.json",
+   "@type": "dcat:Distribution",
+   "dct:title": {
+    "@language": "de",
+    "@value": "Kontextdaten je Ortsteil (JSON)"
+   },
+   "dct:description": {
+    "@language": "de",
+    "@value": "Kennzahlen je Ortsteil, Stadtbezirk und ganz Bonn zur Einordnung von Vorlagen: Einwohner und Altersanteile und Nettokaltmiete (Zensus 2022, © Destatis), Bodenrichtwert Wohnbauland (BORIS NRW), Haltestellen (VRS), Kitas (Land NRW), Hitze (Klimaanalyse NRW), Überschwemmungsgebiete (Land NRW); auf Ortsteile umgerechnet (abgeleitet), je Kennzahl mit Quelle, Lizenz und Stand."
+   },
+   "dcat:accessURL": {
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/kontext.json"
+   },
+   "dcat:downloadURL": {
+    "@id": "https://ris-bonn.datenatlas.de/data/export/bonn/kontext.json"
+   },
+   "dcat:mediaType": {
+    "@id": "https://www.iana.org/assignments/media-types/application/json"
+   },
+   "dct:license": {
+    "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+   },
+   "dct:rights": {
+    "@type": "dct:RightsStatement",
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://ris-bonn.datenatlas.de/data/LICENSE-DATA.md"
+   }
   }
  ]
 }
