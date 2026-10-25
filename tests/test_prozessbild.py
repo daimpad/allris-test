@@ -1,5 +1,7 @@
 """Prozessbild der Themenseite (pipeline/prozessbild.py): Zeitachse, Punkte, Sitzungen mit Frist, Aufrufe."""
+import tempfile
 import unittest
+from pathlib import Path
 
 from pipeline import dossier, prozessbild
 from tests.test_dossier import vorlage
@@ -54,6 +56,19 @@ class Prozessbild(unittest.TestCase):
         self.assertIn('href="../../?gebiet=ortsteil:endenich#261285"', html)
         self.assertIn('title="1 entschieden"', html)
         self.assertIn('data-start="0.', html)
+
+
+    def test_bild_zum_teilen(self):
+        text = prozessbild.bild(self.d, "https://example.org/thema/kultur-und-haushalt/")
+        self.assertIn("Datenstand 18.10.2026", text)
+        self.assertIn("https://example.org/thema/kultur-und-haushalt/", text)
+        self.assertIn('<svg x="0" y="74"', text)  # Zeitleiste eingebettet
+        with tempfile.TemporaryDirectory() as tmp:
+            png = prozessbild.schreibe_bild(self.d, Path(tmp), "https://example.org/")
+            self.assertTrue((Path(tmp) / "kultur-zeitleiste.svg").exists())
+            self.assertEqual(png, (Path(tmp) / "kultur-zeitleiste.png").exists())
+            if png:
+                self.assertEqual((Path(tmp) / "kultur-zeitleiste.png").read_bytes()[:4], b"\x89PNG")
 
 
 if __name__ == "__main__":

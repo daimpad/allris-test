@@ -127,6 +127,7 @@ class Seite(unittest.TestCase):
         self.assertIn("Kulturausschuss 10.06.2026: beschlossen", html)
         self.assertIn("01.12.2026, 18:00 Uhr: Kulturausschuss", html)
         self.assertNotIn("o. Ä..", html)
+        self.assertNotIn("og:image", html)  # ohne PNG kein Vorschaubild
 
     def test_ohne_daten_keine_seite(self):
         with tempfile.TemporaryDirectory() as tmp:

@@ -341,10 +341,19 @@ def write(site, site_url, page):
     n = sum(len(s["vorlagen"]) for s in d["straenge"])
     out = site / PFAD / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(site_url, PFAD, "Kultur und Haushalt – RIS-Karte Bonn",
-                        f"Haushalt 2027/2028 und Kulturförderung in Bonn: {n} Vorlagen aus dem Ratsinformationssystem "
-                        "in vier Strängen, der Weg des Haushalts und die nächsten Sitzungen.",
-                        body(d, "../../"), "../../"), encoding="utf-8")
+    titel = "Kultur und Haushalt – RIS-Karte Bonn"
+    text = (f"Haushalt 2027/2028 und Kulturförderung in Bonn: {n} Vorlagen aus dem Ratsinformationssystem "
+            "in vier Strängen, der Weg des Haushalts und die nächsten Sitzungen.")
+    head = ""
+    png = site / "data" / "export" / "bonn" / "dossiers" / "kultur-zeitleiste.png"
+    if png.exists():  # Vorschaubild beim Teilen: die Zeitleiste
+        bild = f"{site_url}data/export/bonn/dossiers/kultur-zeitleiste.png"
+        head = "".join(f'\n  <meta property="{k}" content="{escape(v)}">' for k, v in (
+            ("og:type", "article"), ("og:site_name", "RIS-Karte Bonn"), ("og:locale", "de_DE"), ("og:title", titel),
+            ("og:description", text), ("og:url", site_url + PFAD), ("og:image", bild),
+            ("og:image:alt", "Zeitleiste: Haushalt und Kultur in Rat, Ausschüssen und Bezirksvertretungen")))
+        head += '\n  <meta name="twitter:card" content="summary_large_image">'
+    out.write_text(page(site_url, PFAD, titel, text, body(d, "../../"), "../../", head), encoding="utf-8")
     print(f"Themenseite Kultur und Haushalt: {n} Vorlagen")
     return [PFAD]
 

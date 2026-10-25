@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import date, datetime, timezone
 
-from . import chat, config, dossier, flaechen, gebietszahlen, glossar, maske, plans, process as proc, prozessarten, publish, soll, topics
+from . import chat, config, dossier, flaechen, prozessbild, gebietszahlen, glossar, maske, plans, process as proc, prozessarten, publish, soll, topics
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -280,6 +280,7 @@ def export_all():
     publish.write_calendar(out / "dossiers" / "kultur.ics",
                            [m for m in meetings if m["gremium"] in dossier.SITZUNGEN
                             or m["gremium"].startswith("Bezirksvertretung")], date.fromisoformat(heute))
+    prozessbild.schreibe_bild(kultur, out / "dossiers", f"{config.SITE_URL}{dossier.PFAD}")
     refs = {r["reference"] for s in kultur["straenge"] for r in s["vorlagen"]}
     publish.write_topic_feed(out / "dossiers" / "kultur.xml", "kultur",
                              "Kultur und Haushalt", [(pid, p) for pid, p in cache.items() if p["reference"] in refs],
