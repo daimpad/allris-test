@@ -22,7 +22,7 @@ Grundlage: `phase0/BERICHT.md`. Die Seite liegt unter `thema/kultur-und-haushalt
 126 Vorlagen: 19 Haushalt, 32 Bühnen, 22 Kulturförderung/Zuschüsse/Gebühren, 53 weitere. Sitzungen: Hauptausschuss 05.11., Rat 12.11., Finanzausschuss 26.11., Kulturausschuss 01.12., Hauptausschuss 03.12., Rat 10.12.2026.
 
 ## Grenzen
-- Die Zuordnung ist nicht von Hand geprüft.
+- Die Zuordnung ist nur in einer Stichprobe von Hand geprüft (`PRUEFUNG.md`).
 - Den Haushaltsplan auf bonn.de verlinkt die Seite nicht direkt: Die Adressen der PDF-Dateien ließen sich von hier aus nicht prüfen, weil die Seite der Stadt automatische Abrufe abweist.
 - Die Vorlage zur Einbringung 2027/2028 fällt unter Strang 1, sobald sie erscheint, weil ihr Titel „Haushaltssatzung“ enthält.
 

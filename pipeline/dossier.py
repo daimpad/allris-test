@@ -18,12 +18,18 @@ from . import config, maske, process as proc
 SEIT = "2025-11-01"  # Beginn der 12. Wahlperiode (legislative_terms)
 PFAD = "thema/kultur-und-haushalt/"
 KULTUR_AEMTER = ("41 ", "42 ", "45 ", "46 ", "48 ")  # Kulturamt, Stadtbibliothek, Kunstmuseum, Theater, Beethovenorchester
+# Stabsstelle Beethovenhalle (Prüfung 25.10.2026) nur mit „Beethovenhalle“ im Titel: sie betreut auch den
+# Finanzausschuss (Sitzungstermine, nichtöffentliche Tagesordnungen) und das World Conference Center
+STELLEN_MIT_TITEL = {"II-1 Stabsstelle Konferenzzentrum/Beethovenhalle": re.compile(r"Beethovenhalle")}
 KULTUR_GREMIEN = ("Kulturausschuss", "Kulturkommission")
 HAUSHALT = re.compile(r"Haushaltssatzung|Haushaltssperre|haushaltswirtschaftlich|Haushaltskonsolidierung|Konsolidierung|"
                       r"Haushaltssicherung|Eckwert|Haushaltsplan|Doppelhaushalt|Nachtragshaushalt", re.I)
 FINANZEN = re.compile(r"Förder|Zuschuss|Zuschüsse|Einspar|Kürzung|Gebühr|Entgelt|Wirtschaftsplan|Festbetrag|"
-                      r"Gleichbehandlung|Haushalt|Finanz|Drittmittel|Budget|Kosten", re.I)
+                      r"Gleichbehandlung|Haushalt|Finanz|Drittmittel|Budget|Kosten|Controlling", re.I)
 BUEHNEN = "260127"     # Stammnummer „Zukunft der Bonner Bühnen“
+# Prüfung im Gespräch 25.10.2026 (kultur/PRUEFUNG.md): ein Titeltreffer zieht das ganze Verfahren (Stammnummer) mit
+BUEHNEN_TITEL = re.compile(r"Bühnen|Theaterliegenschaft", re.I)
+KULTURFEST = re.compile(r"Kulturfest|Kultur- und Begegnungsfest", re.I)
 VERGLEICH = "240986"   # Haushaltssatzung 2025/2026 (Vergleich: Zahl der Vorlagen im Verfahren)
 TERMINPLAN = "261064"  # Rahmenterminplan Haushalt 2027/2028 (Grundlage der Schritte)
 SITZUNGEN = ("Kulturausschuss", "Kulturkommission", "Ausschuss für Finanzen, Beteiligungen und Vergabe",
@@ -33,14 +39,18 @@ SITZUNGEN_JE_GREMIUM = 2
 STRAENGE = [
     ("haushalt", "Haushalt und Konsolidierung",
      "Titel nennt Haushaltssatzung, Haushaltssperre, haushaltswirtschaftliche Lage, Konsolidierung, Eckwerte o. Ä."),
-    ("buehnen", "Zukunft der Bonner Bühnen", f"Drucksache {BUEHNEN} und ihre Folgevorlagen"),
+    ("buehnen", "Zukunft der Bonner Bühnen",
+     f"Drucksache {BUEHNEN} und ihre Folgevorlagen sowie Verfahren, in denen ein Titel „Bühnen“ oder "
+     "„Theaterliegenschaften“ nennt"),
     ("kultur_finanzen", "Kulturförderung, Zuschüsse, Gebühren",
-     "Kulturamt, Stadtbibliothek, Kunstmuseum, Theater oder Beethovenorchester federführend oder Beratung im "
-     "Kulturausschuss bzw. in der Kulturkommission, und der Titel nennt Förderung, Zuschüsse, Einsparung, Gebühren, "
-     "Entgelte, Wirtschaftsplan, Finanzierung o. Ä."),
+     "Kulturamt, Stadtbibliothek, Kunstmuseum, Theater, Beethovenorchester oder Stabsstelle Beethovenhalle "
+     "(nur mit „Beethovenhalle“ im Titel) federführend oder Beratung im Kulturausschuss bzw. in der Kulturkommission, und der Titel nennt Förderung, "
+     "Zuschüsse, Einsparung, Gebühren, Entgelte, Wirtschaftsplan, Finanzierung, Controlling o. Ä.; dazu Verfahren, "
+     "in denen ein Titel ein Kulturfest nennt"),
     ("kultur_weitere", "Weitere Vorlagen aus Kulturamt und Kulturausschuss",
      "wie zuvor, ohne Bezug zu Geld im Titel"),
 ]
+EINGEKLAPPT = {"kultur_weitere"}  # vollständig, auf der Seite eingeklappt (Entscheidung 25.10.2026)
 
 # Weg des Haushalts 2027/2028: zusammengefasst aus Mitteilungsvorlage 261064 und ihrer Anlage (Terminplan),
 # selbst formuliert, ohne Zitate (Rahmen der Stadt Bonn vom 19.10.2026)
@@ -76,18 +86,33 @@ def _wort(m):
     return text[a:b].strip("-")
 
 
-def _strang(p):
+def _verfahren(cache):
+    """Stammnummer → (Strang, Grund) für Verfahren, die ein Titel seit SEIT einem Strang zuweist (ganzes Verfahren)."""
+    out = {}
+    for p in sorted(cache.values(), key=lambda p: p["reference"]):
+        if (p.get("date") or "") < SEIT:
+            continue
+        for key, rx in (("buehnen", BUEHNEN_TITEL), ("kultur_finanzen", KULTURFEST)):
+            m = rx.search(p.get("name") or "")
+            if m and _stamm(p["reference"]) not in out:
+                out[_stamm(p["reference"])] = (key, f"Verfahren {_stamm(p['reference'])}; Titel: „{_wort(m)}“")
+    return out
+
+
+def _strang(p, verfahren=None):
     """(Strang, Grund) einer Vorlage oder None; jede Vorlage gehört zu höchstens einem Strang."""
     name, amt = p.get("name") or "", p.get("amt") or ""
     if _stamm(p["reference"]) == BUEHNEN:
         return "buehnen", f"Folgevorlage zu {BUEHNEN}" if p["reference"] != BUEHNEN else "Stammvorlage"
     if (p.get("date") or "") < SEIT:
         return None
+    if _stamm(p["reference"]) in (verfahren or {}):
+        return verfahren[_stamm(p["reference"])]
     m = HAUSHALT.search(name)
     if m:
         return "haushalt", f"Titel: „{_wort(m)}“"
     gremien = sorted({s["gremium"] for s in p["process"] if s.get("gremium") in KULTUR_GREMIEN})
-    if amt.startswith(KULTUR_AEMTER):
+    if amt.startswith(KULTUR_AEMTER) or (amt in STELLEN_MIT_TITEL and STELLEN_MIT_TITEL[amt].search(name)):
         grund = f"federführend: {amt}"
     elif gremien:
         grund = "Beratung im " + " und in der ".join(gremien)
@@ -115,8 +140,9 @@ def _eintrag(p, home, today):
 def daten(cache, home, meetings, today, meta):
     """Inhalt der Themenseite aus den Vorlagen des Exports (cache: id → Vorgang, home: id → Gebiet)."""
     straenge = {k: [] for k, _, _ in STRAENGE}
+    verfahren = _verfahren(cache)
     for pid, p in cache.items():
-        hit = _strang(p)
+        hit = _strang(p, verfahren)
         if hit:
             straenge[hit[0]].append({**_eintrag(p, home.get(pid), today), "grund": hit[1]})
     for rows in straenge.values():
@@ -133,7 +159,8 @@ def daten(cache, home, meetings, today, meta):
     return {
         "meta": {**meta, "seit": SEIT, "hinweis": "Zuordnung zu den Strängen abgeleitet (feste Regeln, je Vorlage "
                  "mit Grund); Schritte des Haushalts aus Drucksache 261064 zusammengefasst, keine Zitate"},
-        "straenge": [{"key": k, "titel": t, "regel": r, "vorlagen": straenge[k]} for k, t, r in STRAENGE],
+        "straenge": [{"key": k, "titel": t, "regel": r, "eingeklappt": k in EINGEKLAPPT, "vorlagen": straenge[k]}
+                     for k, t, r in STRAENGE],
         "sitzungen": termine,
         "haushalt_schritte": [{"titel": t, "zeit": z, "text": x} for t, z, x in SCHRITTE],
         "terminplan": plan and {"reference": TERMINPLAN, "web": plan[1].get("web"), "gebiet": home.get(plan[0])},
@@ -190,14 +217,18 @@ def body(d, root):
     straenge = []
     for s in d["straenge"]:
         rows = "\n".join(_row(root, r) for r in s["vorlagen"])
-        straenge.append(f"""    <h3 id="{s['key']}">{escape(s['titel'])} ({len(s['vorlagen'])})</h3>
-    <p class="meta">Regel (abgeleitet): {escape(s['regel'].rstrip('.'))}.</p>
-""" + (f"""    <table>
+        tabelle = (f"""    <table>
       <thead><tr><th scope="col">Datum</th><th scope="col">Drucksache</th><th scope="col">Titel</th><th scope="col">Stand</th></tr></thead>
       <tbody>
 {rows}
       </tbody>
-    </table>""" if rows else "    <p>Keine Vorlagen.</p>"))
+    </table>""" if rows else "    <p>Keine Vorlagen.</p>")
+        if rows and s.get("eingeklappt"):
+            tabelle = (f"    <details>\n      <summary>Alle {len(s['vorlagen'])} Vorlagen anzeigen</summary>\n"
+                       f"{tabelle}\n    </details>")
+        straenge.append(f"""    <h3 id="{s['key']}">{escape(s['titel'])} ({len(s['vorlagen'])})</h3>
+    <p class="meta">Regel (abgeleitet): {escape(s['regel'].rstrip('.'))}.</p>
+""" + tabelle)
     inhalt = " · ".join(f'<a href="#{s["key"]}">{escape(s["titel"])}</a>' for s in d["straenge"])
     return f"""    <h1>Kultur und Haushalt</h1>
     <p class="lead">Welche Vorlagen und Verfahren hängen mit dem Haushalt der Stadt Bonn und der Kulturförderung zusammen? Diese Seite ordnet Vorlagen aus dem Ratsinformationssystem seit Beginn der Wahlperiode ({_date(d["meta"]["seit"])}) und zeigt, wann und wo darüber beraten wird.</p>
@@ -221,7 +252,7 @@ def body(d, root):
     </ul>
     <h2>Vorlagen nach Strang</h2>
     <p>{inhalt}</p>
-    <p class="meta">Jede Vorlage steht in höchstens einem Strang. Die Zuordnung folgt festen Regeln (Amt, Gremium, Wörter im Titel, Drucksachennummer) und ist nicht von Hand geprüft; der Grund steht je Vorlage dabei. Der Stand ist aus der Beratungsfolge abgeleitet, Ergebnisse stehen wörtlich wie in der Quelle.</p>
+    <p class="meta">Jede Vorlage steht in höchstens einem Strang. Die Zuordnung folgt festen Regeln (Amt, Gremium, Wörter im Titel, Drucksachennummer); der Grund steht je Vorlage dabei. Eine Stichprobe von 30 Vorlagen wurde am 25.10.2026 von Hand geprüft (keine unpassend), danach wurden die Regeln ergänzt. Der Stand ist aus der Beratungsfolge abgeleitet, Ergebnisse stehen wörtlich wie in der Quelle.</p>
 {chr(10).join(straenge)}
     <h2>Was diese Seite nicht zeigt</h2>
     <ul>
