@@ -5,12 +5,15 @@ Die Zuordnung der Vorlagen zu den Strängen ist abgeleitet: feste Regeln aus Amt
 Drucksachennummer (STRAENGE), je Vorlage mit Grund. Keine Bewertung, keine Beträge, keine Zitate aus den
 Dokumenten; der Weg des Haushalts ist aus Mitteilungsvorlage 261064 zusammengefasst.
 Ausgabe: export/bonn/dossiers/kultur.json (export_all) und die statische Seite (seo-Schritt)."""
+import csv
 import json
+import random
 import re
+import sqlite3
 from html import escape
 from urllib.parse import quote
 
-from . import process as proc
+from . import config, maske, process as proc
 
 SEIT = "2025-11-01"  # Beginn der 12. Wahlperiode (legislative_terms)
 PFAD = "thema/kultur-und-haushalt/"
@@ -244,3 +247,49 @@ def write(site, site_url, page):
                         body(d, "../../"), "../../"), encoding="utf-8")
     print(f"Themenseite Kultur und Haushalt: {n} Vorlagen")
     return [PFAD]
+
+
+# --- Stichprobe zur Prüfung von Hand --------------------------------------------------------------------
+
+STICHPROBE = config.EXPORT / "kultur" / "stichprobe_kultur.tsv"
+STICHPROBE_JE_STRANG = {"haushalt": 4, "buehnen": 4, "kultur_finanzen": 7, "kultur_weitere": 7}
+STICHPROBE_OHNE = 8
+# Gegenprobe: nicht zugeordnete Vorlagen mit Kulturbezug im Titel (fehlt etwas?); Sportplätze und Straßennamen nicht
+KANDIDAT = re.compile(r"Kultur|Theater|Museum|Bibliothek|Oper\b|Musik(?!erviertel)|Kunst(?!rasen)|Beethoven|Bühne|"
+                      r"Festival|Konzert|Orchester", re.I)
+
+
+def stichprobe(src=None, out=STICHPROBE, seed=2026, db_path=None):
+    """Prüfbogen: je Strang einige zugeordnete Vorlagen (passt die Zuordnung?) und nicht zugeordnete Vorlagen mit
+    Kulturbezug im Titel (fehlen sie?). Wird nur einmal gezogen; eine vorhandene Datei bleibt unverändert."""
+    if out.exists():
+        print(f"Stichprobe vorhanden, unverändert: {out}")
+        return
+    d = json.loads((src or config.EXPORT / "bonn" / "dossiers" / "kultur.json").read_text(encoding="utf-8"))
+    rnd = random.Random(seed)
+    rows = []
+    for s in d["straenge"]:
+        for r in rnd.sample(s["vorlagen"], min(STICHPROBE_JE_STRANG[s["key"]], len(s["vorlagen"]))):
+            rows.append([r["reference"], r["date"], r["paper_type"], r["name"], r["web"] or "", s["titel"], r["grund"]])
+    drin = {r["reference"] for s in d["straenge"] for r in s["vorlagen"]}
+    db = sqlite3.connect(db_path or config.DB)
+    m = maske.aus_db(db)
+    ohne = [list(r) for r in db.execute("SELECT reference, date, paper_type, name, web FROM paper WHERE date >= ? "
+                                        "ORDER BY reference", (SEIT,))
+            if r[0] not in drin and KANDIDAT.search(r[3] or "")]
+    je_verfahren = {}  # eine Vorlage je Verfahren (Stammnummer), damit die Gegenprobe breiter streut
+    for r in ohne:
+        je_verfahren.setdefault(_stamm(r[0]), r)
+    for r in rnd.sample(sorted(je_verfahren.values()), min(STICHPROBE_OHNE, len(je_verfahren))):
+        r[3] = m(r[3], r[0])
+        rows.append([*r[:4], r[4] or "", "nicht zugeordnet", f"Titel: „{_wort(KANDIDAT.search(r[3]))}“ (Gegenprobe)"])
+    db.close()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
+        w.writerow(["nr", "drucksache", "datum", "vorlagenart", "titel", "link", "strang (laut Regel)", "grund",
+                    "urteil (passend/teilweise/unpassend; bei „nicht zugeordnet“: fehlt/richtig ausgelassen)",
+                    "richtiger strang (falls abweichend)", "anmerkung"])
+        for i, r in enumerate(rows, 1):
+            w.writerow([i, *r, "", "", ""])
+    print(f"Stichprobe Kultur und Haushalt: {len(rows)} Vorlagen ({len(je_verfahren)} Verfahren ohne Zuordnung) → {out}")

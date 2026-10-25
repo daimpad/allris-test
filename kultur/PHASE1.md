@@ -25,3 +25,12 @@ Grundlage: `phase0/BERICHT.md`. Die Seite liegt unter `thema/kultur-und-haushalt
 - Die Zuordnung ist nicht von Hand geprüft.
 - Den Haushaltsplan auf bonn.de verlinkt die Seite nicht direkt: Die Adressen der PDF-Dateien ließen sich von hier aus nicht prüfen, weil die Seite der Stadt automatische Abrufe abweist.
 - Die Vorlage zur Einbringung 2027/2028 fällt unter Strang 1, sobald sie erscheint, weil ihr Titel „Haushaltssatzung“ enthält.
+
+## Prüfbogen (25.10.2026)
+`data/export/kultur/stichprobe_kultur.tsv`, Schritt `kultur-stichprobe` (einmalig, wird nicht überschrieben):
+- **22 zugeordnete Vorlagen:** 4 Haushalt, 4 Bühnen, 7 Kulturförderung, 7 weitere. Frage: Passt der Strang?
+- **8 nicht zugeordnete Vorlagen** mit Kulturbezug im Titel, je Verfahren eine (Gegenprobe). Frage: Fehlt die Vorlage auf der Seite?
+
+Erste Auffälligkeiten beim Ziehen:
+- Vorlagen zur Bühnen-Debatte außerhalb der Stammnummer 260127, etwa der Bürger:innenrat 260756, stehen unter „weitere“ oder fehlen.
+- Kulturfestivals der Bezirksvertretungen fehlen.
