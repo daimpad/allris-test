@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 657,
+  "count": 665,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -9523,6 +9523,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "231031-01 ST",
+    "name": "Vergabe von Fördermitteln für Projekte der entwicklungspolitischen Bildungsarbeit und zur Stärkung der Bonner Projektpartnerschaften sowie für die Umsetzung der Agenda 203",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-06-12",
+    "amt": "02 Amt für Internationales und globale Nachhaltigkeit",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012541"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.07005,
      50.727177
     ]
@@ -9540,6 +9564,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012552"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "231031",
+    "name": "Vergabe von Fördermitteln für Projekte der entwicklungspolitischen Bildungsarbeit und zur Stärkung der Bonner Projektpartnerschaften sowie für die Umsetzung der Agenda 203",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-06-02",
+    "amt": "02 Amt für Internationales und globale Nachhaltigkeit",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012410"
    }
   },
   {
@@ -9739,6 +9787,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "230888",
+    "name": "Grabstätten Johann Ignaz Schnorrenberg, Gabriel von Pfingsten und Leo Breuer",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-05-14",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012086"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.071393,
      50.735432
     ]
@@ -9900,6 +9972,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012060"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
+    ]
+   },
+   "properties": {
+    "reference": "221697-133 AA",
+    "name": "CDU-Änderungsantrag zur Einbringung der Haushaltssatzung für die Haushaltsjahre 2023/2024 und des Finanz- und Investitionsprogramms 2022 bis 2027 (Haushaltskonsolidierung) Antrag zur Vorlage 221697",
+    "paper_type": "Änderungsantrag",
+    "date": "2023-04-27",
+    "amt": "01-2 Ratsbüro",
+    "place": "Hermann-Wandersleb-Ring",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011988"
    }
   },
   {
@@ -10219,6 +10315,102 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "230148-01 ST",
+    "name": "Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-03-07",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011044"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "230148-01 ST",
+    "name": "Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-03-07",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011044"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.071525,
+     50.732446
+    ]
+   },
+   "properties": {
+    "reference": "230148-01 ST",
+    "name": "Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-03-07",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Pfaffenweiherweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011044"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.068989,
+     50.732842
+    ]
+   },
+   "properties": {
+    "reference": "230148-01 ST",
+    "name": "Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2023-03-07",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Ulrich-Haberland-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011044"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0776268,
      50.7281331
     ]
@@ -10332,6 +10524,198 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010369"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "222042-02 AA",
+    "name": "Grüne/SPD/u.w.-AA: Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 606 und 607 Antrag zur Vorlage 222042",
+    "paper_type": "Änderungsantrag",
+    "date": "2023-01-31",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010522"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073676,
+     50.727971
+    ]
+   },
+   "properties": {
+    "reference": "222042-02 AA",
+    "name": "Grüne/SPD/u.w.-AA: Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 606 und 607 Antrag zur Vorlage 222042",
+    "paper_type": "Änderungsantrag",
+    "date": "2023-01-31",
+    "amt": "01-2 Ratsbüro",
+    "place": "Frongasse",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010522"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
+    ]
+   },
+   "properties": {
+    "reference": "222042-02 AA",
+    "name": "Grüne/SPD/u.w.-AA: Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 606 und 607 Antrag zur Vorlage 222042",
+    "paper_type": "Änderungsantrag",
+    "date": "2023-01-31",
+    "amt": "01-2 Ratsbüro",
+    "place": "Hermann-Wandersleb-Ring",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010522"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "222042-02 AA",
+    "name": "Grüne/SPD/u.w.-AA: Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 606 und 607 Antrag zur Vorlage 222042",
+    "paper_type": "Änderungsantrag",
+    "date": "2023-01-31",
+    "amt": "01-2 Ratsbüro",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010522"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07296,
+     50.730096
+    ]
+   },
+   "properties": {
+    "reference": "230148",
+    "name": "Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Antrag",
+    "date": "2023-01-13",
+    "amt": "01-2 Ratsbüro",
+    "place": "An der Immenburg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010208"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "230148",
+    "name": "Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Antrag",
+    "date": "2023-01-13",
+    "amt": "01-2 Ratsbüro",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010208"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.071525,
+     50.732446
+    ]
+   },
+   "properties": {
+    "reference": "230148",
+    "name": "Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Antrag",
+    "date": "2023-01-13",
+    "amt": "01-2 Ratsbüro",
+    "place": "Pfaffenweiherweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010208"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.068989,
+     50.732842
+    ]
+   },
+   "properties": {
+    "reference": "230148",
+    "name": "Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+    "paper_type": "Antrag",
+    "date": "2023-01-13",
+    "amt": "01-2 Ratsbüro",
+    "place": "Ulrich-Haberland-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010208"
    }
   },
   {
@@ -15732,6 +16116,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000633"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "201420-02",
+    "name": "Auswirkungen der Corona-Krise auf das Bonner Bildungssystem",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-04-13",
+    "amt": "05 Amt für Integration und Vielfalt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10447"
    }
   },
   {

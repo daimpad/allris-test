@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 657,
+  "count": 665,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -55696,6 +55696,216 @@
    }
   },
   {
+   "reference": "231031-01 ST",
+   "name": "Vergabe von Fördermitteln für Projekte der entwicklungspolitischen Bildungsarbeit und zur Stärkung der Bonner Projektpartnerschaften sowie für die Umsetzung der Agenda 203",
+   "paper_type": "Stellungnahme der Verwaltung",
+   "date": "2023-06-12",
+   "amt": "02 Amt für Internationales und globale Nachhaltigkeit",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012541",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2530666&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "02 Amt für Internationales und globale Nachhaltigkeit",
+     "name": "02 Amt für Internationales und globale Nachhaltigkeit"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/3",
+     "method": "paper_type",
+     "evidence": "Stellungnahme der Verwaltung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2002039",
+     "gremium": "Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit",
+     "meeting": "Sitzung des Ausschusses für für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit",
+     "start_date": "2023-06-21T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.1.1",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "231031",
+     "paper_type": "Beschlussvorlage",
+     "name": "Vergabe von Fördermitteln für Projekte der entwicklungspolitischen Bildungsarbeit und zur Stärkung der Bonner Projektpartnerschaften sowie für die Umsetzung der Agenda 203",
+     "date": "2023-06-02"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "niedrig",
+     "evidence": "übergeordnete Vorlage 231031",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Küdinghoven",
+     "ortsteil": "Küdinghoven",
+     "stadtbezirk": "Beuel",
+     "lon": 7.153335,
+     "lat": 50.731593,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "niedrig",
+     "evidence": "übergeordnete Vorlage 231031",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Lannesdorf",
+     "ortsteil": "Lannesdorf",
+     "stadtbezirk": "Bad Godesberg",
+     "lon": 7.174308,
+     "lat": 50.662995,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "niedrig",
+     "evidence": "übergeordnete Vorlage 231031",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Vilich",
+     "ortsteil": "Vilich",
+     "stadtbezirk": "Beuel",
+     "lon": 7.133462,
+     "lat": 50.749014,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "niedrig",
+     "evidence": "übergeordnete Vorlage 231031",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Vilich- Müldorf",
+     "ortsteil": "Vilich- Müldorf",
+     "stadtbezirk": "Beuel",
+     "lon": 7.145143,
+     "lat": 50.759422,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "niedrig",
+     "evidence": "übergeordnete Vorlage 231031",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012541",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "bildung",
+     "method": "stichwort",
+     "evidence": "bildung",
+     "confidence": "niedrig"
+    },
+    {
+     "theme": "wirtschaft",
+     "method": "gremium",
+     "evidence": "Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "beteiligung",
+     "method": "amt",
+     "evidence": "02 Amt für Internationales und globale Nachhaltigkeit",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012541",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2023-06-12",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012541",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2023-06-21",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.1.1",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "ausschuss-entscheidung",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet ein Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "aus"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "231083",
    "name": "BBB-Antrag Neue Markierung für Umweltspur Hermann-Wandersleb-Ring",
    "paper_type": "Dringlichkeitsantrag",
@@ -55814,6 +56024,225 @@
     "passung": "passt",
     "ist": [
      "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "231031",
+   "name": "Vergabe von Fördermitteln für Projekte der entwicklungspolitischen Bildungsarbeit und zur Stärkung der Bonner Projektpartnerschaften sowie für die Umsetzung der Agenda 203",
+   "paper_type": "Beschlussvorlage",
+   "date": "2023-06-02",
+   "amt": "02 Amt für Internationales und globale Nachhaltigkeit",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012410",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2523042&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "02 Amt für Internationales und globale Nachhaltigkeit",
+     "name": "02 Amt für Internationales und globale Nachhaltigkeit"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/3",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2002039",
+     "gremium": "Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit",
+     "meeting": "Sitzung des Ausschusses für für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit",
+     "start_date": "2023-06-21T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.1",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [
+    {
+     "reference": "231031-01 ST",
+     "paper_type": "Stellungnahme der Verwaltung",
+     "name": "Vergabe von Fördermitteln für Projekte der entwicklungspolitischen Bildungsarbeit und zur Stärkung der Bonner Projektpartnerschaften sowie für die Umsetzung der Agenda 203",
+     "date": "2023-06-12"
+    }
+   ],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Küdinghoven",
+     "ortsteil": "Küdinghoven",
+     "stadtbezirk": "Beuel",
+     "lon": 7.153335,
+     "lat": 50.731593,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Küdinghoven",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Lannesdorf",
+     "ortsteil": "Lannesdorf",
+     "stadtbezirk": "Bad Godesberg",
+     "lon": 7.174308,
+     "lat": 50.662995,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Lannesdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Vilich",
+     "ortsteil": "Vilich",
+     "stadtbezirk": "Beuel",
+     "lon": 7.133462,
+     "lat": 50.749014,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Vilich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Vilich- Müldorf",
+     "ortsteil": "Vilich- Müldorf",
+     "stadtbezirk": "Beuel",
+     "lon": 7.145143,
+     "lat": 50.759422,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Vilich- Müldorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "bildung",
+     "method": "stichwort",
+     "evidence": "bildung",
+     "confidence": "niedrig"
+    },
+    {
+     "theme": "wirtschaft",
+     "method": "gremium",
+     "evidence": "Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "beteiligung",
+     "method": "amt",
+     "evidence": "02 Amt für Internationales und globale Nachhaltigkeit",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2023-06-02",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012410",
+     "note": "datum"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "date": "2023-06-12",
+     "source": "oparl-bonn",
+     "reference": "231031-01 ST",
+     "title": "Vergabe von Fördermitteln für Projekte der entwicklungspolitischen Bildungsarbeit und zur Stärkung der Bonner Projektpartnerschaften sowie für die Umsetzung der Agenda 203"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2023-06-21",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.1",
+     "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "ausschuss-entscheidung",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet ein Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "aus"
     ],
     "abweichung": []
    }
@@ -57076,6 +57505,169 @@
    }
   },
   {
+   "reference": "230888",
+   "name": "Grabstätten Johann Ignaz Schnorrenberg, Gabriel von Pfingsten und Leo Breuer",
+   "paper_type": "Beschlussvorlage",
+   "date": "2023-05-14",
+   "amt": "67 Amt für Umwelt und Stadtgrün",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012086",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2505213&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "67 Amt für Umwelt und Stadtgrün",
+     "name": "67-0 Verwaltung"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/296",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001687",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2023-06-13T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.28",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012086",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Küdinghoven",
+     "ortsteil": "Küdinghoven",
+     "stadtbezirk": "Beuel",
+     "lon": 7.153335,
+     "lat": 50.731593,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Küdinghoven",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012086",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Vilich",
+     "ortsteil": "Vilich",
+     "stadtbezirk": "Beuel",
+     "lon": 7.133462,
+     "lat": 50.749014,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Vilich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012086",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012086",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "umwelt",
+     "method": "amt",
+     "evidence": "67 Amt für Umwelt und Stadtgrün",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012086",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2023-05-14",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012086",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Rat",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2023-06-13",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.28",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet der Rat",
+    "passung": "passt",
+    "ist": [
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "230685",
    "name": "Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 6322-3, Stadtbezirk Bonn, Ortsteil Endenich; „Am Propsthof 92/92A“ (zukünftig Luise-Straus-Ernst-Allee 2)",
    "paper_type": "Beschlussvorlage",
@@ -57759,6 +58351,138 @@
     "passung": "passt",
     "ist": [
      "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "221697-133 AA",
+   "name": "CDU-Änderungsantrag zur Einbringung der Haushaltssatzung für die Haushaltsjahre 2023/2024 und des Finanz- und Investitionsprogramms 2022 bis 2027 (Haushaltskonsolidierung) Antrag zur Vorlage 221697",
+   "paper_type": "Änderungsantrag",
+   "date": "2023-04-27",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011988",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2503453&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "CDU",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/45",
+     "method": "title",
+     "evidence": "CDU-Änderungsantrag zur Einbringung der Haus",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001685",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2023-04-27T15:04:00.000Z",
+     "cancelled": 0,
+     "number": "5.1.37",
+     "result": "abgelehnt",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "221697",
+     "paper_type": "Beschlussvorlage",
+     "name": "Einbringung der Haushaltssatzung für die Haushaltsjahre 2023/2024 und des Finanz- und Investitionsprogramms 2022 bis 2027",
+     "date": "2023-04-17"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Hermann-Wandersleb-Ring",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07005,
+     "lat": 50.727177,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Hermann-Wandersleb-Ring",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011988",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011988",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "wirtschaft",
+     "method": "stichwort",
+     "evidence": "haushalt",
+     "confidence": "niedrig"
+    }
+   ],
+   "parties": [
+    "CDU"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Änderungsantrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011988",
+     "actors": [
+      "CDU"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2023-04-27",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011988",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Rat",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2023-04-27",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.1.37",
+     "result": "abgelehnt",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet der Rat",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
     ],
     "abweichung": []
    }
@@ -59869,6 +60593,199 @@
    }
   },
   {
+   "reference": "230148-01 ST",
+   "name": "Unterhaltungsrückstand Immenburgpark",
+   "paper_type": "Stellungnahme der Verwaltung",
+   "date": "2023-03-07",
+   "amt": "67 Amt für Umwelt und Stadtgrün",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2011044",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2458058&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "67 Amt für Umwelt und Stadtgrün",
+     "name": "67-1 Bauabteilung I"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/297",
+     "method": "paper_type",
+     "evidence": "Stellungnahme der Verwaltung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001883",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2023-04-18T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "10.3.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "230148",
+     "paper_type": "Antrag",
+     "name": "Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+     "date": "2023-01-13"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Lessenich/Meßdorf",
+     "ortsteil": "Lessenich/Meßdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.041713,
+     "lat": 50.726092,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 230148",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "An der Immenburg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07296,
+     "lat": 50.730096,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 230148",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Auf dem Hügel",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.069428,
+     "lat": 50.731564,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 230148",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Pfaffenweiherweg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071525,
+     "lat": 50.732446,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 230148",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Ulrich-Haberland-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.068989,
+     "lat": 50.732842,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 230148",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011044",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "umwelt",
+     "method": "amt",
+     "evidence": "67 Amt für Umwelt und Stadtgrün",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011044",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2023-03-07",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2011044",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2023-04-18",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "10.3.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-rat",
+    "sicherheit": "hoch",
+    "grund": "Antrag mit Beratung in Rat oder Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "230373-01 ST",
    "name": "Einrichtung einer beschränkten Parkzone vor dem Kindergarten Brahmsstraße",
    "paper_type": "Stellungnahme der Verwaltung",
@@ -60638,6 +61555,512 @@
     "passung": "passt",
     "ist": [
      "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "222042-02 AA",
+   "name": "Grüne/SPD/u.w.-AA: Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 606 und 607 Antrag zur Vorlage 222042",
+   "paper_type": "Änderungsantrag",
+   "date": "2023-01-31",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010522",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2434222&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Grüne",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/47",
+     "method": "title",
+     "evidence": "Grüne/SPD/u.w.-AA",
+     "derived": 1
+    },
+    {
+     "actor": "SPD",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/46",
+     "method": "title",
+     "evidence": "Grüne/SPD/u.w.-AA",
+     "derived": 1
+    },
+    {
+     "actor": "weitere (u.w., nicht aufgelöst)",
+     "actor_type": "unaufgelöst",
+     "organization_id": null,
+     "method": "title",
+     "evidence": "Grüne/SPD/u.w.-AA",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Anhörung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001881",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2023-01-31T16:00:00.000Z",
+     "cancelled": 0,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "terminiert"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "222042",
+     "paper_type": "Beschlussvorlage",
+     "name": "Beschleunigung der Bus- und Bahnlinien – Umsetzung von Maßnahmen auf dem Weg der Buslinien 606 und 607",
+     "date": "2022-12-21"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Südstadt",
+     "ortsteil": "Südstadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.101215,
+     "lat": 50.727505,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Südstadt",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Bachstraße",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.091845,
+     "lat": 50.732623,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Bachstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Beethovenplatz",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.090263,
+     "lat": 50.730898,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Beethovenplatz",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Colmantstraße",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.092984,
+     "lat": 50.731675,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Colmantstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Endenicher Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.074839,
+     "lat": 50.728058,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenicher Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Frongasse",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.073676,
+     "lat": 50.727971,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Frongasse",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Hermann-Wandersleb-Ring",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07005,
+     "lat": 50.727177,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Hermann-Wandersleb-Ring",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Provinzialstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.063923,
+     "lat": 50.720473,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Provinzialstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Rochusstraße",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.047129,
+     "lat": 50.714322,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Rochusstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "stichwort",
+     "evidence": "bus",
+     "confidence": "niedrig"
+    }
+   ],
+   "parties": [
+    "Grüne",
+    "SPD"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Änderungsantrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "actors": [
+      "Grüne",
+      "SPD",
+      "weitere (u.w., nicht aufgelöst)"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2023-01-31",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010522",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Anhörung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2023-01-31",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "stand": "terminiert"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet der Rat",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "230148",
+   "name": "Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+   "paper_type": "Antrag",
+   "date": "2023-01-13",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2010208",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2415637&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    },
+    {
+     "kind": "fachlich",
+     "method": "stellungnahme",
+     "evidence": "230148-01 ST",
+     "derived": 1,
+     "label": "67 Amt für Umwelt und Stadtgrün",
+     "name": "67-1 Bauabteilung I"
+    },
+    {
+     "kind": "fachlich",
+     "method": "stellungnahme",
+     "evidence": "230148-02",
+     "derived": 1,
+     "label": "67 Amt für Umwelt und Stadtgrün",
+     "name": "67-0 Verwaltung"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Grüne",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/47",
+     "method": "title",
+     "evidence": "Grüne/SPD/u.w.-Antrag",
+     "derived": 1
+    },
+    {
+     "actor": "SPD",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/46",
+     "method": "title",
+     "evidence": "Grüne/SPD/u.w.-Antrag",
+     "derived": 1
+    },
+    {
+     "actor": "weitere (u.w., nicht aufgelöst)",
+     "actor_type": "unaufgelöst",
+     "organization_id": null,
+     "method": "title",
+     "evidence": "Grüne/SPD/u.w.-Antrag",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Anregung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001883",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2023-04-18T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "10.3",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [
+    {
+     "reference": "230148-01 ST",
+     "paper_type": "Stellungnahme der Verwaltung",
+     "name": "Unterhaltungsrückstand Immenburgpark",
+     "date": "2023-03-07"
+    },
+    {
+     "reference": "230148-02",
+     "paper_type": "Beschlussvorlage",
+     "name": "Beschlussvorlage zum Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark",
+     "date": "2023-07-21"
+    }
+   ],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Lessenich/Meßdorf",
+     "ortsteil": "Lessenich/Meßdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.041713,
+     "lat": 50.726092,
+     "stage": "B",
+     "method": "volltext_ortsteil_adjektiv",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Lessenich/Meßdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "An der Immenburg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07296,
+     "lat": 50.730096,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: An der Immenburg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Auf dem Hügel",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.069428,
+     "lat": 50.731564,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Auf dem Hügel",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Pfaffenweiherweg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071525,
+     "lat": 50.732446,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Pfaffenweiherweg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Ulrich-Haberland-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.068989,
+     "lat": 50.732842,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Ulrich-Haberland-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "umwelt",
+     "method": "amt",
+     "evidence": "67 Amt für Umwelt und Stadtgrün",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Grüne",
+    "SPD"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Antrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "actors": [
+      "Grüne",
+      "SPD",
+      "weitere (u.w., nicht aufgelöst)"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2023-01-13",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2010208",
+     "note": "datum"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "date": "2023-03-07",
+     "source": "oparl-bonn",
+     "reference": "230148-01 ST",
+     "title": "Unterhaltungsrückstand Immenburgpark"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Anregung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2023-04-18",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "10.3",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "date": "2023-07-21",
+     "source": "oparl-bonn",
+     "reference": "230148-02",
+     "title": "Beschlussvorlage zum Grüne/SPD/u.w.-Antrag: Unterhaltungsrückstand Immenburgpark"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-rat",
+    "sicherheit": "hoch",
+    "grund": "Antrag mit Beratung in Rat oder Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "bv",
+     "rat"
     ],
     "abweichung": []
    }
@@ -92424,6 +93847,162 @@
     "passung": "passt",
     "ist": [
      "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "201420-02",
+   "name": "Auswirkungen der Corona-Krise auf das Bonner Bildungssystem",
+   "paper_type": "Mitteilungsvorlage",
+   "date": "2021-04-13",
+   "amt": "05 Amt für Integration und Vielfalt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10447",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=273256&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "05 Amt für Integration und Vielfalt",
+     "name": "05 Amt für Integration und Vielfalt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/148",
+     "method": "paper_type",
+     "evidence": "Mitteilungsvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/584",
+     "gremium": "Integrationsrat",
+     "meeting": "Sitzung des Integrationsrates",
+     "start_date": "2021-05-05T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.2",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "201420",
+     "paper_type": "Antrag",
+     "name": "Auswirkungen der Corona-Krise auf das Bonner Bildungssystem",
+     "date": "2020-07-29"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Brüser Berg",
+     "ortsteil": "Brüser Berg",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.04792,
+     "lat": 50.692894,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Brüser Berg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10447",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10447",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10447",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "bildung",
+     "method": "stichwort",
+     "evidence": "bildung",
+     "confidence": "niedrig"
+    },
+    {
+     "theme": "beteiligung",
+     "method": "amt",
+     "evidence": "05 Amt für Integration und Vielfalt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10447",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-04-13",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/10447",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Integrationsrat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-05-05",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.2",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-rat",
+    "sicherheit": "hoch",
+    "grund": "Antrag mit Beratung in Rat oder Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "aus"
     ],
     "abweichung": []
    }
