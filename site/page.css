@@ -32,3 +32,4 @@ a { color: var(--accent-ink); }
   .page table, .page tbody, .page tr, .page td { display: block; width: auto; } .page thead { display: none; }
   .page tr { padding: 8px 0; border-bottom: 1px solid var(--line); } .page td { border: 0; padding: 2px 0; }
 }
+.page details summary { cursor: pointer; font-weight: 600; color: var(--accent-ink); padding: 6px 0; }

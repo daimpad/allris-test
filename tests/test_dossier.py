@@ -69,6 +69,46 @@ class Straenge(unittest.TestCase):
         self.assertEqual(self.d["terminplan"]["reference"], "261064")
 
 
+class RegelnNachPruefung(unittest.TestCase):
+    """Prüfung im Gespräch 25.10.2026 (kultur/PRUEFUNG.md)."""
+
+    def setUp(self):
+        cache = {
+            "a": vorlage("260756", "Volt-Antrag: Bürger:innenrat im Prozess „Zukunft der Bonner Bühnen“",
+                         amt="01-2 Ratsbüro", gremien=("Kulturausschuss",)),
+            "b": vorlage("260756-01 AA", "Änderungsantrag zum Bürgerrat", amt="01-2 Ratsbüro"),
+            "c": vorlage("260949", "Absage des Kultur- und Begegnungsfestes 2026", amt="05 Amt für Integration und Vielfalt"),
+            "d": vorlage("260949-01 ST", "Stellungnahme der Verwaltung", amt="05 Amt für Integration und Vielfalt"),
+            "e": vorlage("260798", "Controllingbericht der Stabsstelle Beethovenhalle für das I.–IV. Quartal 2025",
+                         amt="II-1 Stabsstelle Konferenzzentrum/Beethovenhalle"),
+            "f": vorlage("250500", "Zukunft der Bonner Bühnen (alte Wahlperiode)", date="2025-03-01"),
+            "h": vorlage("260148", "Sitzungstermine des Ausschusses für Finanzen 2026",
+                         amt="II-1 Stabsstelle Konferenzzentrum/Beethovenhalle"),
+            "g": vorlage("261500", "Ausstellung im Stadtmuseum", amt="41 Kulturamt"),
+        }
+        self.d = dossier.daten(cache, {}, [], "2026-10-25", {})
+        self.rows = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_buehnen_ganzes_verfahren(self):
+        self.assertEqual(self.rows["260756"], ("buehnen", "Verfahren 260756; Titel: „Bühnen“"))
+        self.assertEqual(self.rows["260756-01 AA"][0], "buehnen")  # Folgevorlage ohne Wort im Titel
+        self.assertNotIn("250500", self.rows)  # vor Beginn der Wahlperiode
+
+    def test_kulturfest_und_beethovenhalle(self):
+        self.assertEqual(self.rows["260949"][0], "kultur_finanzen")
+        self.assertEqual(self.rows["260949-01 ST"][0], "kultur_finanzen")
+        self.assertEqual(self.rows["260798"], ("kultur_finanzen", "federführend: II-1 Stabsstelle "
+                                                "Konferenzzentrum/Beethovenhalle; Titel: „Controllingbericht“"))
+        self.assertNotIn("260148", self.rows)  # Stabsstelle ohne „Beethovenhalle“ im Titel
+
+    def test_weitere_eingeklappt(self):
+        weitere = next(s for s in self.d["straenge"] if s["key"] == "kultur_weitere")
+        self.assertTrue(weitere["eingeklappt"])
+        html = dossier.body(self.d, "../../")
+        self.assertIn("<details>\n      <summary>Alle 1 Vorlagen anzeigen</summary>", html)
+        self.assertEqual(html.count("<details>"), 1)
+
+
 class Seite(unittest.TestCase):
     def test_seite_und_sitemap_pfad(self):
         d = dossier.daten(CACHE, {"d": "ortsteil:endenich"}, MEETINGS, "2026-10-25", {})
@@ -106,7 +146,8 @@ class Stichprobe(unittest.TestCase):
             db.close()
             out = tmp / "stichprobe.tsv"
             dossier.stichprobe(tmp / "kultur.json", out, db_path=tmp / "db.sqlite")
-            rows = list(csv.reader(out.open(encoding="utf-8"), delimiter="\t"))
+            with out.open(encoding="utf-8") as f:
+                rows = list(csv.reader(f, delimiter="\t"))
             ohne = [r[1] for r in rows[1:] if r[6] == "nicht zugeordnet"]
             self.assertEqual(ohne, ["261900"])  # eine Vorlage je Verfahren, kein Kunstrasen, nichts Zugeordnetes
             self.assertEqual(len(rows) - 1, 6 + 1)  # alle 6 zugeordneten (je Strang höchstens die Sollzahl) + 1
