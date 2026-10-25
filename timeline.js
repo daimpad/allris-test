@@ -171,8 +171,9 @@
 
     // --- Zeichnen ---------------------------------------------------------------------------------
     function draw() {
-      if (!data) return;
-      width = stage.clientWidth || 600;
+      // eingeklappt nicht zeichnen; der ResizeObserver zeichnet, sobald die Zeitleiste sichtbar wird
+      if (!data || !stage.clientWidth) return;
+      width = stage.clientWidth;
       const w = W();
       svg.setAttribute("viewBox", `0 0 ${w} ${H()}`);
       root.classList.toggle("tl-has-sites", sites.length > 0);

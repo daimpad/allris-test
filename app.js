@@ -1095,7 +1095,7 @@
   }
   function legend() {
     return `<details class="acc"><summary>Legende Evidenzstatus</summary><div class="legend">${["belegt", "abgeleitet", "nicht_öffentlich", "unklar"]
-      .concat("soll").map((s) => `<span><span class="mark mark-${s}" aria-hidden="true">${s === "unklar" ? "?" : ""}</span><strong>${STATUS[s]}</strong> – ${STATUS_TEXT[s] || ""}</span>`).join("")}
+      .concat("soll").map((s) => `<span><span class="mark mark-${s}" aria-hidden="true">${s === "unklar" ? "?" : ""}</span><strong>${STATUS[s]}</strong> – ${esc(STATUS_TEXT[s] || "")}</span>`).join("")}
       <span class="hint">Linie: durchgezogen = belegt, gestrichelt = abgeleitet, gepunktet = nicht öffentlich oder unklar.</span></div></details>`;
   }
   function glossary(p) {
@@ -1963,11 +1963,15 @@
       const b = e.target.closest("button[data-ref]");
       if (b) select(papers.find((p) => p.reference === b.dataset.ref));
     });
+    // Vorschau in der Zeitleiste nur beim Wechsel der Vorlage (mouseover feuert für jedes Kindelement erneut)
+    let hoverRef = null;
     $("#papers").addEventListener("mouseover", (e) => {
       const b = e.target.closest("button[data-ref]");
-      if (b && tl) tl.select(papers.find((p) => p.reference === b.dataset.ref), true);
+      if (!b || !tl || b.dataset.ref === hoverRef) return;
+      hoverRef = b.dataset.ref;
+      tl.select(papers.find((p) => p.reference === hoverRef), true);
     });
-    $("#papers").addEventListener("mouseleave", () => tl && tl.select(selected));
+    $("#papers").addEventListener("mouseleave", () => { hoverRef = null; if (tl) tl.select(selected); });
     // Menü „Mitmachen“: Termine; Menü „Auswertung“: Reiter Kennzahlen und Verfahrenswege
     if (zeit) $("#cta-termine").addEventListener("click", () => { setPanel("panel-termine", true); showTermine(); focusPanel("panel-termine"); });
     else $("#cta-termine").hidden = true;

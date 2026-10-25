@@ -2,44 +2,37 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 640,
-  "generated_at": "2026-10-25T05:26:29+00:00",
+  "count": 657,
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
-    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-25T04:36:58+00:00"
+    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
-    "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-25T04:53:26+00:00"
+    "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)"
    },
    {
     "name": "osm",
     "url": "https://www.openstreetmap.org (Overpass API)",
-    "license": "ODbL 1.0, © OpenStreetMap-Mitwirkende",
-    "retrieved_at": "2026-10-17T15:49:06+00:00"
+    "license": "ODbL 1.0, © OpenStreetMap-Mitwirkende"
    },
    {
     "name": "geo-bonn",
     "url": "https://opendata.bonn.de/dataset/flächen-der-ortsteile",
-    "license": "CC0 1.0 (Stadt Bonn)",
-    "retrieved_at": "2026-10-17"
+    "license": "CC0 1.0 (Stadt Bonn)"
    },
    {
     "name": "bplan-bonn",
     "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
-    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
-    "retrieved_at": "2026-10-18T18:31:59+00:00"
+    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)"
    },
    {
     "name": "hnr-bonn",
     "url": "https://opendata.bonn.de/dataset/strassenliste-straßennamen-straßenverzeichnis-hausnummern-georeferenziert",
-    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Hausnummern georeferenziert“)",
-    "retrieved_at": "2026-10-20T15:20:47+00:00"
+    "license": "CC0 1.0 (Stadt Bonn, Datensatz „Hausnummern georeferenziert“)"
    }
   ],
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
@@ -115,78 +108,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029806"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.065876,
-     50.735155
-    ]
-   },
-   "properties": {
-    "reference": "261529-05 ST",
-    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-10-09",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Frieda-Mager-Allee",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029700"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.064,
-     50.735647
-    ]
-   },
-   "properties": {
-    "reference": "261529-05 ST",
-    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-10-09",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Kolpingstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029700"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.06871,
-     50.737339
-    ]
-   },
-   "properties": {
-    "reference": "261529-05 ST",
-    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-10-09",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Siemensstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029700"
    }
   },
   {
@@ -691,30 +612,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028952"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.070351,
-     50.725238
-    ]
-   },
-   "properties": {
-    "reference": "253926-02",
-    "name": "Lärmschutzmaßnahmen Autobahn hier: Mitteilungsvorlage zum Sachstand des Verfahrens",
-    "paper_type": "Mitteilungsvorlage",
-    "date": "2026-08-02",
-    "amt": "67 Amt für Umwelt und Stadtgrün",
-    "place": "Endenich",
-    "level": "ortsteil",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_ortsteil_name",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028476"
    }
   },
   {
@@ -1250,30 +1147,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "260411-01 ST",
-    "name": "Stellungnahme zum Bürgerantrag: Optimierung des Durchgangsverkehrs im Bereich des Musikerviertels",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-04-27",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026356"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      7.078022,
      50.723774
     ]
@@ -1435,126 +1308,6 @@
     "method": "strasse+kreuzung",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026362"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.072251,
-     50.735946
-    ]
-   },
-   "properties": {
-    "reference": "260104-01 ST",
-    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-04-01",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Am Propsthof",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.069428,
-     50.731564
-    ]
-   },
-   "properties": {
-    "reference": "260104-01 ST",
-    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-04-01",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Auf dem Hügel",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.073172,
-     50.734047
-    ]
-   },
-   "properties": {
-    "reference": "260104-01 ST",
-    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-04-01",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Gerhard-Domagk-Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.069409,
-     50.734778
-    ]
-   },
-   "properties": {
-    "reference": "260104-01 ST",
-    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-04-01",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Robert-Havemann-Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.06871,
-     50.737339
-    ]
-   },
-   "properties": {
-    "reference": "260104-01 ST",
-    "name": "Bürgerantrag: Antrag auf Optimierung der Anbindung der Buslinien 631–633 an die Innenstadt",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2026-04-01",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Siemensstraße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026157"
    }
   },
   {
@@ -3631,30 +3384,6 @@
     ]
    },
    "properties": {
-    "reference": "252686-001 ST",
-    "name": "Einwohnerfragen zur Kautexbahn",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2025-04-04",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Endenich",
-    "level": "ortsteil",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_ortsteil_name",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022111"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.070351,
-     50.725238
-    ]
-   },
-   "properties": {
     "reference": "242332-01 AA",
     "name": "Änderungsantrag der Koalition - Verkauf von Ökopunkten für den 6-streifigen Ausbau der BAB 565 zwischen der AS BN-Endenich und dem AK BN-Nord Antrag zur Vorlage 242332",
     "paper_type": "Änderungsantrag",
@@ -3962,8 +3691,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.064353,
-     50.727459
+     7.0708877,
+     50.7295937
     ]
    },
    "properties": {
@@ -3976,7 +3705,7 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "volltext_strasse",
+    "method": "vererbt",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021671"
    }
@@ -4459,30 +4188,6 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019059"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.069428,
-     50.731564
-    ]
-   },
-   "properties": {
-    "reference": "242197-01 ST",
-    "name": "Optimierung Fahrplangestaltung Linie 631",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2025-01-25",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Auf dem Hügel",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020956"
    }
   },
   {
@@ -8642,6 +8347,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "220492-03",
+    "name": "Weiterführung des JOBWÄRTS-Programms",
+    "paper_type": "Beschlussvorlage",
+    "date": "2023-11-28",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014983"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0728361,
      50.7212216
     ]
@@ -8803,30 +8532,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014819"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.074839,
-     50.728058
-    ]
-   },
-   "properties": {
-    "reference": "231656-02 ST",
-    "name": "Bürgerantrag: Überarbeitung der Parkplatzsituation im \"Musikerviertel\"",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2023-11-11",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Endenicher Straße",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_strasse+ortsteil",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014583"
    }
   },
   {
@@ -11426,6 +11131,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "221989",
+    "name": "Koalitionsantrag: Schieneninfrastruktur der S 23 nutzen - keine wochenlangen innerstädtischen Schienenersatzverkehre",
+    "paper_type": "Antrag",
+    "date": "2022-10-06",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2008715"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -11522,6 +11251,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.069318,
+     50.722897
+    ]
+   },
+   "properties": {
+    "reference": "221753",
+    "name": "Einleitung des Vergabeverfahrens zur Pflegearbeiten auf 4 Friedhöfen für die Jahre 2023-2025",
+    "paper_type": "Beschlussvorlage: Einleitung",
+    "date": "2022-09-12",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Hainstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2008230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0764434,
      50.7249815
     ]
@@ -11587,6 +11340,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2008187"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "221548",
+    "name": "Barrierefreier Ausbau von Bushaltestellen (2. Priorität, 1. Baustufe) im Stadtbezirk Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2022-09-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007640"
    }
   },
   {
@@ -11690,6 +11467,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "221423-01 ST",
+    "name": "Berichtspflicht ÖPNV-Maßnahmen",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-08-15",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007563"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.07005,
      50.727177
     ]
@@ -11731,6 +11532,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007611"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "221415-01 ST",
+    "name": "Bushaltestelle \"Immenburgpark\"",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-08-12",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007573"
    }
   },
   {
@@ -11786,6 +11611,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "221423",
+    "name": "Berichtspflicht ÖPNV-Maßnahmen",
+    "paper_type": "Antrag",
+    "date": "2022-08-02",
+    "amt": "Bezirksverwaltungsstelle Bonn",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007423"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.073676,
      50.727971
     ]
@@ -11834,6 +11683,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "221415",
+    "name": "Grüne/SPD/u.w.-Antrag: Bushaltestelle \"Immenburgpark\"",
+    "paper_type": "Antrag",
+    "date": "2022-07-27",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007414"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.07885,
      50.72444
     ]
@@ -11875,6 +11748,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2007201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "221196",
+    "name": "Aufstellflächen vor Ampeln für Fahrräder",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2022-07-09",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006965"
    }
   },
   {
@@ -11954,6 +11851,78 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.069248,
+     50.729591
+    ]
+   },
+   "properties": {
+    "reference": "220637-09 AA",
+    "name": "Grüne/SPD/u.w.-Änderungsantrag: Neuaufstellung Regionalplan Köln - Beteiligung: Stellungnahme der Stadt Bonn Antrag zur Vorlage 220637",
+    "paper_type": "Änderungsantrag",
+    "date": "2022-06-07",
+    "amt": "01-2 Ratsbüro",
+    "place": "Maria-von-Linden-Weg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006963"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.066191,
+     50.724665
+    ]
+   },
+   "properties": {
+    "reference": "220637-09 AA",
+    "name": "Grüne/SPD/u.w.-Änderungsantrag: Neuaufstellung Regionalplan Köln - Beteiligung: Stellungnahme der Stadt Bonn Antrag zur Vorlage 220637",
+    "paper_type": "Änderungsantrag",
+    "date": "2022-06-07",
+    "amt": "01-2 Ratsbüro",
+    "place": "Theodor-Litt-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006963"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "221108",
+    "name": "Bereitstellung zusätzlicher Stellen zur Aufgabenbewältigung im Städtischen Gebäudemanagement Bonn (SGB)",
+    "paper_type": "Beschlussvorlage",
+    "date": "2022-06-02",
+    "amt": "85 Städtisches Gebäudemanagement Bonn",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006724"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -11971,6 +11940,54 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "220840-01 ST",
+    "name": "Fortschreibung des Nahverkehrsplans – Maßnahmen zum Fahrplanwechsel im Dezember 2022",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-05-31",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006781"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064059,
+     50.731039
+    ]
+   },
+   "properties": {
+    "reference": "220733-01 ST",
+    "name": "Gefährliche Nutzung von Gehwegen durch Fahrradfahrer",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-05-25",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Heinz-Stelling-Weg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006606"
    }
   },
   {
@@ -12146,6 +12163,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "220786",
+    "name": "Hitzeanpassung und –vorsorge – Hitzeaktionsplan und nachhaltiges Anpassungskonzept",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2022-05-16",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006085"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.06378,
      50.73546
     ]
@@ -12163,6 +12204,438 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006229"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069409,
+     50.734778
+    ]
+   },
+   "properties": {
+    "reference": "220775-01 ST",
+    "name": "Herstellung der Wegeverbindung im Quartier WestSide",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-04-27",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Robert-Havemann-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006113"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.067574,
+     50.736429
+    ]
+   },
+   "properties": {
+    "reference": "220775-01 ST",
+    "name": "Herstellung der Wegeverbindung im Quartier WestSide",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-04-27",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Václav-Havel-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006113"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.067574,
+     50.736429
+    ]
+   },
+   "properties": {
+    "reference": "220772-01 ST",
+    "name": "Herrichtung des historischen Laborgebäudes im Quartier WestSide",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-04-25",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Václav-Havel-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006114"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "220773",
+    "name": "Grüne/SPD/u.w.-Antrag: Benennung von Verkehrsflächen im Quartier Vogelsang/WestSide",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006063"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.065876,
+     50.735155
+    ]
+   },
+   "properties": {
+    "reference": "220773",
+    "name": "Grüne/SPD/u.w.-Antrag: Benennung von Verkehrsflächen im Quartier Vogelsang/WestSide",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Frieda-Mager-Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006063"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073172,
+     50.734047
+    ]
+   },
+   "properties": {
+    "reference": "220773",
+    "name": "Grüne/SPD/u.w.-Antrag: Benennung von Verkehrsflächen im Quartier Vogelsang/WestSide",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Gerhard-Domagk-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006063"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
+    ]
+   },
+   "properties": {
+    "reference": "220773",
+    "name": "Grüne/SPD/u.w.-Antrag: Benennung von Verkehrsflächen im Quartier Vogelsang/WestSide",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Kolpingstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006063"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064404,
+     50.736188
+    ]
+   },
+   "properties": {
+    "reference": "220773",
+    "name": "Grüne/SPD/u.w.-Antrag: Benennung von Verkehrsflächen im Quartier Vogelsang/WestSide",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Vili-Viorel-Păun-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006063"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.067574,
+     50.736429
+    ]
+   },
+   "properties": {
+    "reference": "220773",
+    "name": "Grüne/SPD/u.w.-Antrag: Benennung von Verkehrsflächen im Quartier Vogelsang/WestSide",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Václav-Havel-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006063"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.065876,
+     50.735155
+    ]
+   },
+   "properties": {
+    "reference": "220774",
+    "name": "Grüne/SPD/u.w.-Antrag: Namenszusatzschilder im Quartier WestSide/Vogelsang",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Frieda-Mager-Allee",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006064"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069409,
+     50.734778
+    ]
+   },
+   "properties": {
+    "reference": "220774",
+    "name": "Grüne/SPD/u.w.-Antrag: Namenszusatzschilder im Quartier WestSide/Vogelsang",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Robert-Havemann-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006064"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.066322,
+     50.736421
+    ]
+   },
+   "properties": {
+    "reference": "220774",
+    "name": "Grüne/SPD/u.w.-Antrag: Namenszusatzschilder im Quartier WestSide/Vogelsang",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Simone-Veil-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006064"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064404,
+     50.736188
+    ]
+   },
+   "properties": {
+    "reference": "220774",
+    "name": "Grüne/SPD/u.w.-Antrag: Namenszusatzschilder im Quartier WestSide/Vogelsang",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Vili-Viorel-Păun-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006064"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.067574,
+     50.736429
+    ]
+   },
+   "properties": {
+    "reference": "220774",
+    "name": "Grüne/SPD/u.w.-Antrag: Namenszusatzschilder im Quartier WestSide/Vogelsang",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Václav-Havel-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006064"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069409,
+     50.734778
+    ]
+   },
+   "properties": {
+    "reference": "220775",
+    "name": "Grüne/SPD/u.w.-Antrag: Herstellung der Wegeverbindung im Quartier WestSide",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Robert-Havemann-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006065"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.067574,
+     50.736429
+    ]
+   },
+   "properties": {
+    "reference": "220775",
+    "name": "Grüne/SPD/u.w.-Antrag: Herstellung der Wegeverbindung im Quartier WestSide",
+    "paper_type": "Antrag",
+    "date": "2022-04-14",
+    "amt": "01-2 Ratsbüro",
+    "place": "Václav-Havel-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006065"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.067574,
+     50.736429
+    ]
+   },
+   "properties": {
+    "reference": "220772",
+    "name": "Grüne/SPD/u.w.-Antrag: Herrichtung des historischen Laborgebäudes im Quartier WestSide",
+    "paper_type": "Antrag",
+    "date": "2022-04-13",
+    "amt": "01-2 Ratsbüro",
+    "place": "Václav-Havel-Platz",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2006062"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064059,
+     50.731039
+    ]
+   },
+   "properties": {
+    "reference": "220733",
+    "name": "Gefährliche Nutzung von Gehwegen durch Fahrradfahrer",
+    "paper_type": "Antrag",
+    "date": "2022-04-07",
+    "amt": "01-2 Ratsbüro",
+    "place": "Heinz-Stelling-Weg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005998"
    }
   },
   {
@@ -12271,6 +12744,30 @@
     ]
    },
    "properties": {
+    "reference": "220021-06 AA",
+    "name": "Grüne/SPD/LINKE-AA: Wohnen über Parken Antrag zur Vorlage 220021",
+    "paper_type": "Änderungsantrag",
+    "date": "2022-03-15",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_adjektiv",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005685"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
     "reference": "220324",
     "name": "Frühzeitige Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB zum Bebauungsplan Nr. 6421-1 „Universitäts-Campus Endenich“ im Stadtbezirk Bonn, Ortsteil Endenich",
     "paper_type": "Beschlussvorlage",
@@ -12283,6 +12780,54 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005136"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.076179,
+     50.724239
+    ]
+   },
+   "properties": {
+    "reference": "220561",
+    "name": "Wiederwahl der Schiedsperson für den Teilschiedsamtsbezirk 8",
+    "paper_type": "Beschlussvorlage",
+    "date": "2022-03-14",
+    "amt": "33 Bürgerdienste",
+    "place": "Röckumstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005640"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078022,
+     50.723774
+    ]
+   },
+   "properties": {
+    "reference": "220561",
+    "name": "Wiederwahl der Schiedsperson für den Teilschiedsamtsbezirk 8",
+    "paper_type": "Beschlussvorlage",
+    "date": "2022-03-14",
+    "amt": "33 Bürgerdienste",
+    "place": "Sebastianstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005640"
    }
   },
   {
@@ -12355,6 +12900,54 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005490"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "220492",
+    "name": "Programm JOBWÄRTS",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2022-03-04",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005453"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "220405",
+    "name": "Lead City - Evaluationsbericht",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2022-03-02",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005272"
    }
   },
   {
@@ -12763,6 +13356,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004994"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.062139,
+     50.724531
+    ]
+   },
+   "properties": {
+    "reference": "220065-02 AA",
+    "name": "CDU-AA: Erprobungsmaßnahme Tempo 30 Antrag zur Vorlage 220065",
+    "paper_type": "Änderungsantrag",
+    "date": "2022-02-01",
+    "amt": "01-2 Ratsbüro",
+    "place": "Heerweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004960"
    }
   },
   {
@@ -13555,54 +14172,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002733"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.070351,
-     50.725238
-    ]
-   },
-   "properties": {
-    "reference": "210251-02 AA",
-    "name": "Bürgerantrag: Bitte um einen Antrag der Stadt Bonn bei der LANUV auf Feinstaubmessung PM 2,5 in Bonn und auf Einrichtung einer weiteren stationären Dauermessstation — zum Gesundheitsschutz der Bonner Bevölkerung Antrag zur Vorlage 210251",
-    "paper_type": "Änderungsantrag",
-    "date": "2021-09-23",
-    "amt": "01-2 Ratsbüro",
-    "place": "Endenich",
-    "level": "ortsteil",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_ortsteil_name",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002914"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.070351,
-     50.725238
-    ]
-   },
-   "properties": {
-    "reference": "211450-01 ST",
-    "name": "Bürgerantrag: A 565 Starkregenauswirkungen für Bonn beim Ausbau einbeziehen",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2021-09-22",
-    "amt": "66 Tiefbauamt",
-    "place": "Endenich",
-    "level": "ortsteil",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "volltext_ortsteil_adjektiv",
-    "confidence": "niedrig",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002657"
    }
   },
   {
