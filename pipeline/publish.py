@@ -47,7 +47,7 @@ def events(p, with_followups=False):
                         "summary": f"{s.get('role') or 'Beratung'} am {s['date']}; Ergebnis laut OParl-Lite. "
                                    f"Stand der Vorlage: {p['stand']}"})
         if with_followups and s["typ"] == "folgevorlage" and s.get("date"):
-            out.append({"date": s["date"], "id": f"{p['source_object']}#folge-{s['reference']}",
+            out.append({"date": s["date"], "id": f"{p['source_object']}#folge-{quote(s['reference'], safe='')}",
                         "title": f"{s['label']} {s['reference']}: {s['title']}",
                         "summary": f"Folgevorlage zu {p['reference']}"})
     return out

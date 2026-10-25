@@ -274,9 +274,10 @@ def _fulltext(papers, bv_bezirke, locations, gaz, placed):
         print(f"Volltext: {config.TEXTE} fehlt – keine Verortung aus Dokumenten.")
         return []
     out, audit, found = [], [], {}
+    kette = volltext.einwohner_kette(papers)
     for p in papers:
         text = texts.get((p.get("mainFile") or {}).get("id"))
-        if not text or p["id"] in placed or not volltext.allowed(p.get("paperType")):
+        if not text or p["id"] in placed or not volltext.allowed(p.get("paperType")) or p["id"] in kette:
             continue
         if volltext.titel_ohne_ort(p.get("name")):
             audit.append((p["reference"], "Titel ohne gemeinsamen Ort, nicht verortet", "", "", "", "", "", ""))

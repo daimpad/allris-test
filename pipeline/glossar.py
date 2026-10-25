@@ -20,6 +20,12 @@ ERGEBNISSE = {
     "ohne Votum": "Das Gremium hat keine Empfehlung abgegeben.",
     "erledigt durch Stellungnahme der Verwaltung": "Der Antrag gilt als erledigt, weil die Verwaltung schriftlich "
                                                    "Stellung genommen hat.",
+    "wg. Sitzungsabbruch nicht behandelt (vertagt)": "Die Sitzung wurde abgebrochen, bevor der Punkt beraten wurde; "
+                                                      "er gilt als vertagt.",
+    "weitere Lesung erforderlich": "Das Gremium hat beraten, aber noch nicht abschließend; der Punkt soll in einer "
+                                   "weiteren Sitzung erneut beraten werden.",
+    "weitere Lesung": "Das Gremium hat beraten, aber noch nicht abschließend; der Punkt soll in einer weiteren Sitzung "
+                      "erneut beraten werden.",
     "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt": "Der Punkt wurde zu Beginn der Sitzung von der "
                                                                        "Tagesordnung genommen oder verschoben.",
     "mit Protokollnotiz": "Zusätzlich wurde eine Anmerkung ins Protokoll aufgenommen.",

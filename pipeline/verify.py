@@ -1,6 +1,5 @@
 """Verifikation: Stichprobe exportierter Vorlagen gegen die OParl-API der Stadt abgleichen, und
 Datenpaket (Zip) mit Exporten, Audit-Protokollen und Lizenzen erzeugen."""
-import json
 import random
 import sqlite3
 import zipfile

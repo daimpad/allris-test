@@ -20,6 +20,15 @@ class Flaechen(unittest.TestCase):
         self.assertIsNone(out["features"][1]["geometry"])
         self.assertTrue(all(len(str(c).split(".")[-1]) <= 5 for p in g for c in p))
 
+    def test_ungueltige_flaeche_wird_gueltig(self):
+        # Fläche, die sich selbst schneidet (wie Bebauungsplan 8118-1 in den Daten der Stadt)
+        from shapely.geometry import shape
+        acht = [[7.0, 50.7], [7.01, 50.71], [7.01, 50.7], [7.0, 50.71], [7.0, 50.7]]
+        out = flaechen.simplify({"features": [{"properties": {}, "geometry": {"type": "Polygon", "coordinates": [acht]}}]})
+        g = shape(out["features"][0]["geometry"])
+        self.assertTrue(g.is_valid)
+        self.assertGreater(g.area, 0)
+
     def test_schreibt_json(self):
         with tempfile.TemporaryDirectory() as d:
             sizes = flaechen.write(Path(d))

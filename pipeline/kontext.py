@@ -283,7 +283,9 @@ def ausschnitte(nur=None):
         _geojson(UESG, [{"type": "Feature", "properties": {"art": art}, "geometry": _flaeche(g, von25832.transform)}
                         for art, g in teile],
                  {"quelle": QUELLEN["ueberschwemmung"]["titel"], "lizenz": QUELLEN["ueberschwemmung"]["lizenz"]})
-        vermerk("ueberschwemmung", stand=_datum(QUELLEN["ueberschwemmung"]["dateien"]["uesg.zip"]))
+        # die Datei des Landes wird jede Nacht neu erzeugt; ihr Datum ist daher der Tag des Abrufs, kein Stand der Daten
+        # (Code-Prüfung 24.10.2026)
+        vermerk("ueberschwemmung", stand=f"laufend aktualisiert, Abruf {datetime.now(timezone.utc):%d.%m.%Y}")
         print(f"Überschwemmungsgebiete: {len(teile)} Flächen → {UESG}")
 
     if teil("kitas"):

@@ -22,6 +22,12 @@ ATOM = "{http://www.w3.org/2005/Atom}"
 
 
 class Feeds(unittest.TestCase):
+    def test_folgevorlage_mit_gueltiger_id(self):
+        # Code-Prüfung 24.10.2026: Drucksachen wie „261856-01 ST“ ergaben IDs mit Leerzeichen (keine gültige IRI)
+        ev = publish.events(PAPER, with_followups=True)
+        folge = [e["id"] for e in ev if "#folge-" in e["id"]]
+        self.assertEqual([i.split("#")[1] for i in folge], ["folge-261856-01%20ST"])
+
     def test_ereignisse(self):
         ev = publish.events(PAPER)
         self.assertEqual([e["id"].split("#")[1] for e in ev], ["vorlage", "beratung-2026-06-10-Bezirksvertretung%20Bonn"])
@@ -72,7 +78,7 @@ class Kalender(unittest.TestCase):
         self.assertIn(b"DTSTART:20261104T160000Z", raw)
         self.assertNotIn(b"DTEND", raw)  # 23:59:59 ist kein echtes Ende
         self.assertTrue(all(len(line) <= 75 for line in raw.split(b"\r\n")))
-        self.assertIn("Bezirksvertretung\\, Bad Godesberg\;".encode(), raw.replace(b"\r\n ", b""))
+        self.assertIn("Bezirksvertretung\\, Bad Godesberg\\;".encode(), raw.replace(b"\r\n ", b""))
         raw.decode("utf-8")  # Faltung trennt keine Umlaute
 
 
