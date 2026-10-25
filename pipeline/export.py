@@ -7,7 +7,7 @@ import random
 import re
 import shutil
 import sqlite3
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 from . import chat, config, dossier, flaechen, gebietszahlen, glossar, maske, plans, process as proc, prozessarten, publish, soll, topics
 
@@ -273,9 +273,17 @@ def export_all():
     _dump(out / "prozessarten.json", prozessarten.site_data(db))
 
     # Themenseite „Kultur und Haushalt“: Vorlagen in Strängen, Sitzungen, Weg des Haushalts (dossier.py)
-    _dump(out / "dossiers" / "kultur.json",
-          dossier.daten(cache, home, meetings, proc.local_day(stand) if stand else datetime.now(timezone.utc).date().isoformat(),
-                        _meta(db, True)))
+    heute = proc.local_day(stand) if stand else datetime.now(timezone.utc).date().isoformat()
+    kultur = dossier.daten(cache, home, meetings, heute, _meta(db, True))
+    _dump(out / "dossiers" / "kultur.json", kultur)
+    # Aufrufe der Themenseite: Kalender mit den Sitzungen der beteiligten Gremien, Feed mit den Vorlagen der Stränge
+    publish.write_calendar(out / "dossiers" / "kultur.ics",
+                           [m for m in meetings if m["gremium"] in dossier.SITZUNGEN
+                            or m["gremium"].startswith("Bezirksvertretung")], date.fromisoformat(heute))
+    refs = {r["reference"] for s in kultur["straenge"] for r in s["vorlagen"]}
+    publish.write_topic_feed(out / "dossiers" / "kultur.xml", "kultur",
+                             "Kultur und Haushalt", [(pid, p) for pid, p in cache.items() if p["reference"] in refs],
+                             home, f"{config.SITE_URL}{dossier.PFAD}")
 
     # Vereinfachte Flächen für die Seite (Navigation, Umrisse, Bebauungspläne), komprimierbar als .json
     flaechen.write(out)

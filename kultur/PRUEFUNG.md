@@ -14,10 +14,10 @@ Prüfbogen: `data/export/kultur/stichprobe_kultur.tsv` mit 30 Vorlagen. Geprüft
   - Kulturfest „Vielfalt!“ (Nr. 30)
 
 ## Entscheidungen und Regeländerungen
-1. **Bühnen:** Ein Titel mit „Bühnen“ oder „Theaterliegenschaften“ ordnet das ganze Verfahren (Stammnummer) dem Strang zu.
+1. **Bühnen:** Ein Titel mit „Bühnen“ oder „Theaterliegenschaften“ ordnet das ganze Verfahren (Stammnummer) dem Strang zu. Nachtrag 25.10.2026: auch „Schauspiel“ (Entscheidung des Auftraggebers). Neu im Strang sind damit 261861 („Zukunft des Schauspiels“) und 261896 („Aufgabe der Schauspielsparte“).
 2. **Beethovenhalle:** Die Stabsstelle Konferenzzentrum/Beethovenhalle zählt nur, wenn „Beethovenhalle“ im Titel steht. Grund: Die Stabsstelle betreut auch den Finanzausschuss (Sitzungstermine, nichtöffentliche Tagesordnungen) und das World Conference Center. „Controlling“ gilt als Geldbezug.
 3. **Kulturfeste:** Ein Titel mit „Kulturfest“ oder „Kultur- und Begegnungsfest“ ordnet das ganze Verfahren dem Strang „Kulturförderung, Zuschüsse, Gebühren“ zu. „Kulturfestival“ ist dabei eingeschlossen.
 4. **Strang „Weitere“:** Er bleibt vollständig und erscheint auf der Seite eingeklappt.
 5. **Konsolidierung anderer Fachbereiche:** Diese Anträge bleiben im Strang „Haushalt“.
 
-Mit den neuen Regeln stehen alle 30 Vorlagen dort, wo sie in der Prüfung eingeordnet wurden. Die Seite enthält danach 142 statt 126 Vorlagen: 19 Haushalt, 43 Bühnen, 34 Kulturförderung, 46 weitere.
+Mit den neuen Regeln stehen alle 30 Vorlagen dort, wo sie in der Prüfung eingeordnet wurden. Die Seite enthält danach 142 statt 126 Vorlagen: 19 Haushalt, 43 Bühnen, 34 Kulturförderung, 46 weitere. Mit „Schauspiel“ sind es 143 (45 Bühnen, 45 weitere).
