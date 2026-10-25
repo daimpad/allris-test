@@ -879,7 +879,6 @@ drucksache	strasse	ortsteile_ohne_hausnummer	ortsteil_der_hausnummer	wirkung
 231549	Hermannstraße	Beuel-Mitte	Beuel-Mitte	bestätigt
 231555	Max-Planck-Straße	Pennenfeld	Pennenfeld	bestätigt
 231603	Markt	Bonn-Zentrum	Bonn-Zentrum	bestätigt
-231603-01 ST	Markt	Bonn-Zentrum	Bonn-Zentrum	bestätigt
 231623	Hohe Straße	Tannenbusch	Tannenbusch	bestätigt
 231637	Trierer Straße	Ippendorf; Poppelsdorf	Poppelsdorf	eindeutig
 231694	Friesdorfer Straße	Alt-Godesberg; Friesdorf; Godesberg-Nord	Alt-Godesberg	eindeutig
@@ -1236,3 +1235,4 @@ drucksache	strasse	ortsteile_ohne_hausnummer	ortsteil_der_hausnummer	wirkung
 261870	Am Wesselpütz	Duisdorf	Duisdorf	bestätigt
 261940	Max-Habermann-Straße	Duisdorf	Duisdorf	bestätigt
 261942	Abtstraße	Geislar	Geislar	bestätigt
+261983	Römerstraße	Bonn-Castell; Graurheindorf	Bonn-Castell	eindeutig

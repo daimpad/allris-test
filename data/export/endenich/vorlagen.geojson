@@ -2,20 +2,20 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 618,
-  "generated_at": "2026-10-24T17:31:47+00:00",
+  "count": 640,
+  "generated_at": "2026-10-25T05:26:29+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-24T17:07:08+00:00"
+    "retrieved_at": "2026-10-25T04:36:58+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-24T17:12:45+00:00"
+    "retrieved_at": "2026-10-25T04:53:26+00:00"
    },
    {
     "name": "osm",
@@ -12362,6 +12362,150 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "220157-01 ST",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-03-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005041"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.071525,
+     50.732446
+    ]
+   },
+   "properties": {
+    "reference": "220157-01 ST",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-03-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Pfaffenweiherweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005041"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069409,
+     50.734778
+    ]
+   },
+   "properties": {
+    "reference": "220157-01 ST",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-03-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Robert-Havemann-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005041"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "220157-01 ST",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-03-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005041"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.066322,
+     50.736421
+    ]
+   },
+   "properties": {
+    "reference": "220157-01 ST",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-03-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Simone-Veil-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005041"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063966,
+     50.732684
+    ]
+   },
+   "properties": {
+    "reference": "220157-01 ST",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2022-03-01",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Verweyenstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005041"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -12722,6 +12866,150 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "220157",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Antrag",
+    "date": "2022-01-19",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004730"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.071525,
+     50.732446
+    ]
+   },
+   "properties": {
+    "reference": "220157",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Antrag",
+    "date": "2022-01-19",
+    "amt": "01-2 Ratsbüro",
+    "place": "Pfaffenweiherweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004730"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069409,
+     50.734778
+    ]
+   },
+   "properties": {
+    "reference": "220157",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Antrag",
+    "date": "2022-01-19",
+    "amt": "01-2 Ratsbüro",
+    "place": "Robert-Havemann-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004730"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "220157",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Antrag",
+    "date": "2022-01-19",
+    "amt": "01-2 Ratsbüro",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004730"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.066322,
+     50.736421
+    ]
+   },
+   "properties": {
+    "reference": "220157",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Antrag",
+    "date": "2022-01-19",
+    "amt": "01-2 Ratsbüro",
+    "place": "Simone-Veil-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004730"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063966,
+     50.732684
+    ]
+   },
+   "properties": {
+    "reference": "220157",
+    "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+    "paper_type": "Antrag",
+    "date": "2022-01-19",
+    "amt": "01-2 Ratsbüro",
+    "place": "Verweyenstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004730"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0757404,
      50.7221736
     ]
@@ -12811,6 +13099,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004234"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "212174",
+    "name": "Förderprogramm „KommunalerKlimaschutz.NRW“ Besonderer Förderbereich „Emissionsfreie Innenstadt“ hier: Ausbauplanung und Einleitung des Vergabeverfahrens für die Radpendlerroute Abschnitt 1.1 Bonn-Alfter-Bornheim",
+    "paper_type": "Beschlussvorlage: Einleitung",
+    "date": "2021-12-20",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003739"
    }
   },
   {
@@ -13010,6 +13322,54 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "212024",
+    "name": "Mitteilung über Gefahrenbaumfällungen (die der Baumschutzsatzung unterliegen) im Stadtbezirk Bonn",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-11-06",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+hausnummer",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003492"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "211989",
+    "name": "Ausbau A 565 im Stadtgebiet Bonn",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-11-02",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003427"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0758417,
      50.7287614
     ]
@@ -13027,6 +13387,78 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003508"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "211722-01 ST",
+    "name": "Sachstand \"Westbahn\"",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-10-28",
+    "amt": "66 Tiefbauamt",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003117"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.074839,
+     50.728058
+    ]
+   },
+   "properties": {
+    "reference": "211722-01 ST",
+    "name": "Sachstand \"Westbahn\"",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-10-28",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenicher Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003117"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07005,
+     50.727177
+    ]
+   },
+   "properties": {
+    "reference": "211722-01 ST",
+    "name": "Sachstand \"Westbahn\"",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-10-28",
+    "amt": "66 Tiefbauamt",
+    "place": "Hermann-Wandersleb-Ring",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003117"
    }
   },
   {
@@ -13130,6 +13562,54 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "210251-02 AA",
+    "name": "Bürgerantrag: Bitte um einen Antrag der Stadt Bonn bei der LANUV auf Feinstaubmessung PM 2,5 in Bonn und auf Einrichtung einer weiteren stationären Dauermessstation — zum Gesundheitsschutz der Bonner Bevölkerung Antrag zur Vorlage 210251",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-09-23",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002914"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "211450-01 ST",
+    "name": "Bürgerantrag: A 565 Starkregenauswirkungen für Bonn beim Ausbau einbeziehen",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-09-22",
+    "amt": "66 Tiefbauamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_adjektiv",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002657"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.069318,
      50.722897
     ]
@@ -13219,6 +13699,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002636"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "211582",
+    "name": "Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung für die Koordination und Begleitung der ehrenamtlichen Flüchtlingshilfe im Jahr 2021",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-09-07",
+    "amt": "05 Amt für Integration und Vielfalt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002549"
    }
   },
   {
@@ -13346,6 +13850,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "211392",
+    "name": "Denkmalrelevante Vorlagen in anderen Ratsgremien",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-08-13",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_adjektiv",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002157"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.072251,
      50.735946
     ]
@@ -13466,6 +13994,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.066233,
+     50.720257
+    ]
+   },
+   "properties": {
+    "reference": "211225",
+    "name": "Anpassung des Linienwegs der SB 69",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-07-29",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Kollegienweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001883"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0684095,
      50.7252941
     ]
@@ -13507,6 +14059,126 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001976"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "211040-02",
+    "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+    "paper_type": "Dringlichkeitsentscheidung OB",
+    "date": "2021-07-14",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001790"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "211040-02",
+    "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+    "paper_type": "Dringlichkeitsentscheidung OB",
+    "date": "2021-07-14",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001790"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073172,
+     50.734047
+    ]
+   },
+   "properties": {
+    "reference": "211040-02",
+    "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+    "paper_type": "Dringlichkeitsentscheidung OB",
+    "date": "2021-07-14",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Gerhard-Domagk-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001790"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "211040-02",
+    "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+    "paper_type": "Dringlichkeitsentscheidung OB",
+    "date": "2021-07-14",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+ortsteil",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001790"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "211188",
+    "name": "Mietkostenzuschuss für das Zentrallager Sachspenden Bonn e. V. (ZeSaBo) für das Jahr 2021",
+    "paper_type": "Beschlussvorlage",
+    "date": "2021-07-14",
+    "amt": "50 Amt für Soziales und Wohnen",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001811"
    }
   },
   {
@@ -13579,6 +14251,126 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001081"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.061371,
+     50.72951
+    ]
+   },
+   "properties": {
+    "reference": "201928-95 AA",
+    "name": "Einbringung der Haushaltssatzung für die Haushaltsjahre 2021/2022, des Finanz- und Investitionsprogramms 2020 bis 2025 sowie der 3. Fortschreibung des Haushaltssicherungskonzeptes (HSK) für den Zeitraum 2021 - 2024 Antrag zur Vorlage 201928",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-06-24",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001653"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "211040-01 ST",
+    "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-06-21",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001535"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "211040-01 ST",
+    "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-06-21",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001535"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.073172,
+     50.734047
+    ]
+   },
+   "properties": {
+    "reference": "211040-01 ST",
+    "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-06-21",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Gerhard-Domagk-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001535"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "211040-01 ST",
+    "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-06-21",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse+kreuzung",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001535"
    }
   },
   {
@@ -13682,6 +14474,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.061371,
+     50.72951
+    ]
+   },
+   "properties": {
+    "reference": "201928-76 ST",
+    "name": "Einbringung der Haushaltssatzung für die Haushaltsjahre 2021/2022, des Finanz- und Investitionsprogramms 2020 bis 2025 sowie der 3. Fortschreibung des Haushaltssicherungskonzeptes (HSK) für den Zeitraum 2021 - 2024",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-06-14",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001374"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -13723,6 +14539,30 @@
     "method": "ortsteil_adjektiv",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000673"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "210955-01 ST",
+    "name": "Denkmalrelevante Vorlagen in anderen Ratsgremien",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-06-10",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001342"
    }
   },
   {
@@ -13778,6 +14618,102 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.073172,
+     50.734047
+    ]
+   },
+   "properties": {
+    "reference": "211040",
+    "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+    "paper_type": "Dringlichkeitsantrag",
+    "date": "2021-06-07",
+    "amt": "01-2 Ratsbüro",
+    "place": "Gerhard-Domagk-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001322"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.061371,
+     50.72951
+    ]
+   },
+   "properties": {
+    "reference": "201928-66 AA",
+    "name": "Straßenbaumaßnahmen",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-06-02",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Bleichgraben",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001312"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.072251,
+     50.735946
+    ]
+   },
+   "properties": {
+    "reference": "201928-66 AA",
+    "name": "Straßenbaumaßnahmen",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-06-02",
+    "amt": "01-2 Ratsbüro",
+    "place": "Am Propsthof",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001312"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.064,
+     50.735647
+    ]
+   },
+   "properties": {
+    "reference": "201928-66 AA",
+    "name": "Straßenbaumaßnahmen",
+    "paper_type": "Änderungsantrag",
+    "date": "2021-06-02",
+    "amt": "01-2 Ratsbüro",
+    "place": "Kolpingstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001312"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0737035,
      50.7337687
     ]
@@ -13795,6 +14731,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "210955",
+    "name": "Denkmalrelevante Vorlagen in anderen Ratsgremien",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2021-05-29",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_adjektiv",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001091"
    }
   },
   {
@@ -13843,6 +14803,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001053"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078475,
+     50.72715
+    ]
+   },
+   "properties": {
+    "reference": "210813",
+    "name": "Einleitung des Vergabeverfahrens Erneuerung der Notstromversorgung von 5 Pumpwerken",
+    "paper_type": "Beschlussvorlage: Einleitung",
+    "date": "2021-05-18",
+    "amt": "66 Tiefbauamt",
+    "place": "Wiesenweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000787"
    }
   },
   {
@@ -14011,6 +14995,30 @@
     "method": "ortsteil_adjektiv",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000589"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.062139,
+     50.724531
+    ]
+   },
+   "properties": {
+    "reference": "210715",
+    "name": "Schließzeiten - Weck Werk Bahnübergang",
+    "paper_type": "Antrag",
+    "date": "2021-04-30",
+    "amt": "01-2 Ratsbüro",
+    "place": "Heerweg",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000602"
    }
   },
   {

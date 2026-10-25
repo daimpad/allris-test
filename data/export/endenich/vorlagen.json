@@ -1,20 +1,20 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 618,
-  "generated_at": "2026-10-24T17:31:47+00:00",
+  "count": 640,
+  "generated_at": "2026-10-25T05:26:29+00:00",
   "sources": [
    {
     "name": "oparl-bonn",
     "url": "https://www.bonn.sitzung-online.de/oparl/bodies/1",
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Ratsinformationssystem OParl-API“)",
-    "retrieved_at": "2026-10-24T17:07:08+00:00"
+    "retrieved_at": "2026-10-25T04:36:58+00:00"
    },
    {
     "name": "oparl-lite",
     "url": "https://oparl.bonn.machdenstaat.de/graphql",
     "license": "CC BY 4.0 (OParl-Lite Bonn, machdenstaat)",
-    "retrieved_at": "2026-10-24T17:12:45+00:00"
+    "retrieved_at": "2026-10-25T04:53:26+00:00"
    },
    {
     "name": "osm",
@@ -28679,15 +28679,15 @@
      "position": 0,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2002929",
+     "meeting_id": null,
      "gremium": "Bezirksvertretung Hardtberg",
-     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
-     "start_date": "2024-11-26T17:00:00.000Z",
-     "cancelled": 0,
-     "number": "10.1.1",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
     }
    ],
    "superordinated": [
@@ -28731,7 +28731,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2020192",
-   "stand": "beraten, ohne Entscheidung",
+   "stand": "offen",
    "themes": [
     {
      "theme": "verkehr",
@@ -28776,13 +28776,9 @@
      "role": "Kenntnisnahme",
      "status": "belegt",
      "source": "oparl-bonn",
-     "date": "2024-11-26",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "10.1.1",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
     }
    ],
    "soll": {
@@ -47776,7 +47772,7 @@
    "date": "2024-01-13",
    "amt": "61 Stadtplanungsamt",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015424",
-   "main_file": null,
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2660077&OTYP=41",
    "responsibility": [
     {
      "kind": "federfuehrend",
@@ -73281,6 +73277,249 @@
    }
   },
   {
+   "reference": "220157-01 ST",
+   "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+   "paper_type": "Stellungnahme der Verwaltung",
+   "date": "2022-03-01",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005041",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2216172&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-3 Stadtverkehr"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/227",
+     "method": "paper_type",
+     "evidence": "Stellungnahme der Verwaltung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000613",
+     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
+     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
+     "start_date": "2022-02-23T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.17.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000473",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2022-03-17T16:05:00.000Z",
+     "cancelled": 0,
+     "number": "6.9.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "220157",
+     "paper_type": "Antrag",
+     "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+     "date": "2022-01-19"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Am Propsthof",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.072251,
+     "lat": 50.735946,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 220157",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Pfaffenweiherweg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071525,
+     "lat": 50.732446,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 220157",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Robert-Havemann-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.069409,
+     "lat": 50.734778,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 220157",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Siemensstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.06871,
+     "lat": 50.737339,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 220157",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Simone-Veil-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.066322,
+     "lat": 50.736421,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 220157",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Verweyenstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.063966,
+     "lat": 50.732684,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "mittel",
+     "evidence": "übergeordnete Vorlage 220157",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005041",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "bauen",
+     "method": "gremium",
+     "evidence": "Ausschuss für Wohnen, Planung und Bauen",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005041",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Wohnen, Planung und Bauen",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-02-23",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.17.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite",
+     "note": "datum_vor_vorlage"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2022-03-01",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005041",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-03-17",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.9.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-rat",
+    "sicherheit": "hoch",
+    "grund": "Antrag mit Beratung in Rat oder Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "220415",
    "name": "Einleitung des Vergabeverfahrens zur Ergänzung des Verkehrsgrüns in Bonn - Endenich und Weststadt",
    "paper_type": "Beschlussvorlage: Einleitung",
@@ -75317,6 +75556,338 @@
    }
   },
   {
+   "reference": "220157",
+   "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+   "paper_type": "Antrag",
+   "date": "2022-01-19",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2004730",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2199288&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    },
+    {
+     "kind": "fachlich",
+     "method": "stellungnahme",
+     "evidence": "220157-01 ST",
+     "derived": 1,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-3 Stadtverkehr"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Grüne",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/47",
+     "method": "title",
+     "evidence": "Grüne/SPD/LINKE-Antrag",
+     "derived": 1
+    },
+    {
+     "actor": "SPD",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/46",
+     "method": "title",
+     "evidence": "Grüne/SPD/LINKE-Antrag",
+     "derived": 1
+    },
+    {
+     "actor": "Die Linke",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/142",
+     "method": "title",
+     "evidence": "Grüne/SPD/LINKE-Antrag",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Empfehlung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000613",
+     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
+     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
+     "start_date": "2022-02-23T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.17",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000473",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2022-03-17T16:05:00.000Z",
+     "cancelled": 0,
+     "number": "6.9",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 2,
+     "role": "Empfehlung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000854",
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": "Sitzung des Ausschusses für Mobilität und Verkehr",
+     "start_date": "2022-02-16T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.1",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 3,
+     "role": "Anhörung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000525",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2022-02-08T16:00:00.000Z",
+     "cancelled": 0,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "terminiert"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [
+    {
+     "reference": "220157-01 ST",
+     "paper_type": "Stellungnahme der Verwaltung",
+     "name": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“",
+     "date": "2022-03-01"
+    }
+   ],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Am Propsthof",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.072251,
+     "lat": 50.735946,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Propsthof",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Pfaffenweiherweg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.071525,
+     "lat": 50.732446,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Pfaffenweiherweg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Robert-Havemann-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.069409,
+     "lat": 50.734778,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Robert-Havemann-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Siemensstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.06871,
+     "lat": 50.737339,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Siemensstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Simone-Veil-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.066322,
+     "lat": 50.736421,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Simone-Veil-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Verweyenstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.063966,
+     "lat": 50.732684,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Verweyenstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "bauen",
+     "method": "gremium",
+     "evidence": "Ausschuss für Wohnen, Planung und Bauen",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Die Linke",
+    "Grüne",
+    "SPD"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Antrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "actors": [
+      "Grüne",
+      "SPD",
+      "Die Linke"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2022-01-19",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2004730",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Anhörung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-02-08",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "stand": "terminiert"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Empfehlung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-02-16",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.1",
+     "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Wohnen, Planung und Bauen",
+     "role": "Empfehlung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-02-23",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.17",
+     "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "date": "2022-03-01",
+     "source": "oparl-bonn",
+     "reference": "220157-01 ST",
+     "title": "Grüne/SPD/LINKE-Antrag: Allee-, Erschließungs- und ÖPNV-Verbesserung für den Bereich „Propsthof/WestSide“"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Rat",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-03-17",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.9",
+     "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-rat",
+    "sicherheit": "hoch",
+    "grund": "Antrag mit Beratung in Rat oder Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "212386",
    "name": "Sofortmaßnahme zur Wiederherstellung von Mindestbreiten auf Gehwegen",
    "paper_type": "Mitteilungsvorlage",
@@ -75997,6 +76568,281 @@
     "verfahren": "mitteilung",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Mitteilungsvorlage“",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "212174",
+   "name": "Förderprogramm „KommunalerKlimaschutz.NRW“ Besonderer Förderbereich „Emissionsfreie Innenstadt“ hier: Ausbauplanung und Einleitung des Vergabeverfahrens für die Radpendlerroute Abschnitt 1.1 Bonn-Alfter-Bornheim",
+   "paper_type": "Beschlussvorlage: Einleitung",
+   "date": "2021-12-20",
+   "amt": "66 Tiefbauamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003739",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2165208&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "66 Tiefbauamt",
+     "name": "66 Tiefbauamt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/35",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage: Einleitung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Empfehlung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000549",
+     "gremium": "Ausschuss für Finanzen, Beteiligungen und Vergabe",
+     "meeting": "Sitzung des Ausschusses für Finanzen, Beteiligungen und Vergabe",
+     "start_date": "2022-02-09T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "7.3",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000471",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2022-02-10T16:01:00.000Z",
+     "cancelled": 0,
+     "number": "5.11",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 2,
+     "role": "Empfehlung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000853",
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": "Sitzung des Ausschusses für Mobilität und Verkehr",
+     "start_date": "2022-01-19T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.6",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 3,
+     "role": "Anhörung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000525",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2022-02-08T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "8.7",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Am Propsthof",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.072251,
+     "lat": 50.735946,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Propsthof",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003739",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Am Propsthof",
+     "ortsteil": "Nordstadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.073776,
+     "lat": 50.739016,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Propsthof",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003739",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Brühler Straße",
+     "ortsteil": "Nordstadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07083,
+     "lat": 50.740726,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Brühler Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003739",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Grootestraße",
+     "ortsteil": "Dransdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.041895,
+     "lat": 50.741421,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Grootestraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003739",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003739",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "66 Tiefbauamt",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "umwelt",
+     "method": "stichwort",
+     "evidence": "klima",
+     "confidence": "niedrig"
+    },
+    {
+     "theme": "wirtschaft",
+     "method": "gremium",
+     "evidence": "Ausschuss für Finanzen, Beteiligungen und Vergabe",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage: Einleitung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003739",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-12-20",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003739",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Empfehlung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-01-19",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.6",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Anhörung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-02-08",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "8.7",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Finanzen, Beteiligungen und Vergabe",
+     "role": "Empfehlung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-02-09",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "7.3",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Rat",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2022-02-10",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.11",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet der Rat",
     "passung": "passt",
     "ist": [
      "aus",
@@ -77256,6 +78102,368 @@
    }
   },
   {
+   "reference": "212024",
+   "name": "Mitteilung über Gefahrenbaumfällungen (die der Baumschutzsatzung unterliegen) im Stadtbezirk Bonn",
+   "paper_type": "Mitteilungsvorlage",
+   "date": "2021-11-06",
+   "amt": "67 Amt für Umwelt und Stadtgrün",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003492",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2154142&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "67 Amt für Umwelt und Stadtgrün",
+     "name": "67-6 Untere Naturschutzbehörde"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/302",
+     "method": "paper_type",
+     "evidence": "Mitteilungsvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/440",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2021-12-07T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "12.4",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/676",
+     "gremium": "Baumkommission",
+     "meeting": "Sitzung der Baumkommission",
+     "start_date": "2021-11-22T13:00:00.000Z",
+     "cancelled": 0,
+     "number": "9.2",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Auf dem Hügel",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.069428,
+     "lat": 50.731564,
+     "stage": "B",
+     "method": "volltext_strasse+hausnummer",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Auf dem Hügel",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003492",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Büttinghausenstraße",
+     "ortsteil": "Kessenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.108216,
+     "lat": 50.71105,
+     "stage": "B",
+     "method": "volltext_strasse+hausnummer",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Büttinghausenstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003492",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Hausdorffstraße",
+     "ortsteil": "Dottendorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.110369,
+     "lat": 50.70633,
+     "stage": "B",
+     "method": "volltext_strasse+hausnummer",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Hausdorffstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003492",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Johanniterstraße",
+     "ortsteil": "Gronau",
+     "stadtbezirk": "Bonn",
+     "lon": 7.13332,
+     "lat": 50.71094,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Johanniterstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003492",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Saarweg",
+     "ortsteil": "Kessenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.114195,
+     "lat": 50.713879,
+     "stage": "B",
+     "method": "volltext_strasse+hausnummer",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Saarweg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003492",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003492",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "umwelt",
+     "method": "amt",
+     "evidence": "67 Amt für Umwelt und Stadtgrün",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003492",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-11-06",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003492",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Baumkommission",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-11-22",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "9.2",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-12-07",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "12.4",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "mitteilung",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Mitteilungsvorlage“",
+    "passung": "passt",
+    "ist": [
+     "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "211989",
+   "name": "Ausbau A 565 im Stadtgebiet Bonn",
+   "paper_type": "Mitteilungsvorlage",
+   "date": "2021-11-02",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003427",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2151945&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61 Stadtplanungsamt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/30",
+     "method": "paper_type",
+     "evidence": "Mitteilungsvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000594",
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": "Gemeinsame Sitzung der Ausschüsse für Mobilität und Verkehr und für Wohnen, Planung und Bauen der Bundesstadt Bonn mit dem Ausschuss für Planung und Verkehr des Rhein-Sieg-Kreises",
+     "start_date": "2021-11-16T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "4.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003427",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Tannenbusch",
+     "ortsteil": "Tannenbusch",
+     "stadtbezirk": "Bonn",
+     "lon": 7.050171,
+     "lat": 50.749408,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Tannenbusch",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003427",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003427",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "gremium",
+     "evidence": "Ausschuss für Mobilität und Verkehr",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "bauen",
+     "method": "amt",
+     "evidence": "61 Stadtplanungsamt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003427",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-11-02",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003427",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-11-16",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "4.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "mitteilung",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Mitteilungsvorlage“",
+    "passung": "passt",
+    "ist": [
+     "aus"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "212036",
    "name": "Bürgerantrag: Tempo 30 während Test der Umweltspuren Hermann-Wandersleb-Ring",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
@@ -77398,6 +78606,290 @@
     "passung": "passt",
     "ist": [
      "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "211722-01 ST",
+   "name": "Sachstand \"Westbahn\"",
+   "paper_type": "Stellungnahme der Verwaltung",
+   "date": "2021-10-28",
+   "amt": "66 Tiefbauamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2003117",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2140578&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "66 Tiefbauamt",
+     "name": "66 Tiefbauamt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/35",
+     "method": "paper_type",
+     "evidence": "Stellungnahme der Verwaltung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/400",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2021-10-28T16:02:00.000Z",
+     "cancelled": 0,
+     "number": "1.7.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/411",
+     "gremium": "Bezirksvertretung Hardtberg",
+     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
+     "start_date": "2021-11-30T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "2.2.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 2,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/558",
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": "Sitzung des Ausschusses für Mobilität und Verkehr",
+     "start_date": "2021-11-23T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "1.2.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 3,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/500",
+     "gremium": "Ausschuss für Wohnen, Planung und Bauen",
+     "meeting": "Sitzung des Ausschusses für Wohnen, Planung und Bauen",
+     "start_date": "2021-11-24T17:10:00.000Z",
+     "cancelled": 0,
+     "number": "1.3.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 4,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/440",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2021-12-07T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "2.1.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "211722",
+     "paper_type": "Große Anfrage",
+     "name": "CDU Große-Anfrage: Sachstand \"Westbahn\"",
+     "date": "2021-09-29"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Auf dem Hügel",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.069428,
+     "lat": 50.731564,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Auf dem Hügel",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003117",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Endenicher Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.074839,
+     "lat": 50.728058,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenicher Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003117",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Hermann-Wandersleb-Ring",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07005,
+     "lat": 50.727177,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Hermann-Wandersleb-Ring",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003117",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003117",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "66 Tiefbauamt",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "bauen",
+     "method": "gremium",
+     "evidence": "Ausschuss für Wohnen, Planung und Bauen",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003117",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-10-28",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2003117",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-10-28",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "1.7.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-11-23",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "1.2.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Wohnen, Planung und Bauen",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-11-24",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "1.3.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Hardtberg",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-11-30",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "2.2.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-12-07",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "2.1.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "grosse-anfrage",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Große Anfrage“",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
     ],
     "abweichung": []
    }
@@ -78344,6 +79836,303 @@
    }
   },
   {
+   "reference": "210251-02 AA",
+   "name": "Bürgerantrag: Bitte um einen Antrag der Stadt Bonn bei der LANUV auf Feinstaubmessung PM 2,5 in Bonn und auf Einrichtung einer weiteren stationären Dauermessstation — zum Gesundheitsschutz der Bonner Bevölkerung Antrag zur Vorlage 210251",
+   "paper_type": "Änderungsantrag",
+   "date": "2021-09-23",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002914",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2134032&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    }
+   ],
+   "originators": [],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/643",
+     "gremium": "Ausschuss für Umwelt, Klima und Lokale Agenda",
+     "meeting": "Sitzung des Ausschusses für Umwelt, Klima und Lokale Agenda",
+     "start_date": "2021-11-25T17:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.2.2",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "210251",
+     "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+     "name": "Bürgerantrag: Bitte um einen Antrag der Stadt Bonn bei der LANUV auf Feinstaubmessung PM 2,5 in Bonn und auf Einrichtung einer weiteren stationären Dauermessstation — zum Gesundheitsschutz der Bonner Bevölkerung",
+     "date": "2021-03-15"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Auerberg",
+     "ortsteil": "Auerberg",
+     "stadtbezirk": "Bonn",
+     "lon": 7.073975,
+     "lat": 50.756604,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Auerberg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002914",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002914",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002914",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "umwelt",
+     "method": "gremium",
+     "evidence": "Ausschuss für Umwelt, Klima und Lokale Agenda",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "soziales",
+     "method": "stichwort",
+     "evidence": "gesundheit",
+     "confidence": "niedrig"
+    }
+   ],
+   "parties": [],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Änderungsantrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002914"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-09-23",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002914",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Ausschuss für Umwelt, Klima und Lokale Agenda",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-11-25",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.2.2",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "buergerantrag",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)",
+    "passung": "passt",
+    "ist": [
+     "aus"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "211450-01 ST",
+   "name": "Bürgerantrag: A 565 Starkregenauswirkungen für Bonn beim Ausbau einbeziehen",
+   "paper_type": "Stellungnahme der Verwaltung",
+   "date": "2021-09-22",
+   "amt": "66 Tiefbauamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002657",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2121012&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "66 Tiefbauamt",
+     "name": "66 Tiefbauamt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/35",
+     "method": "paper_type",
+     "evidence": "Stellungnahme der Verwaltung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000610",
+     "gremium": "Ausschuss für Beteiligung der Bürgerinnen und Bürger",
+     "meeting": "Sitzung des Ausschusses für Beteiligung der Bürgerinnen und Bürger",
+     "start_date": "2021-09-29T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.10.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "211450",
+     "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
+     "name": "Bürgerantrag: A 565 Starkregenauswirkungen für Bonn beim Ausbau einbeziehen",
+     "date": "2021-08-12"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Dransdorf",
+     "ortsteil": "Dransdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.049516,
+     "lat": 50.736959,
+     "stage": "B",
+     "method": "volltext_ortsteil_adjektiv",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Dransdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002657",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_adjektiv",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002657",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002657",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "66 Tiefbauamt",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "beteiligung",
+     "method": "gremium",
+     "evidence": "Ausschuss für Beteiligung der Bürgerinnen und Bürger",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002657",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-09-22",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002657",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Beteiligung der Bürgerinnen und Bürger",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-09-29",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.10.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "buergerantrag",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)",
+    "passung": "passt",
+    "ist": [
+     "aus"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "211627-01 ST",
    "name": "Bürgerantrag: Begrünung vor Haus Hainstraße [Hausnummer ausgelassen] in Bonn-Endenich",
    "paper_type": "Stellungnahme der Verwaltung",
@@ -79099,6 +80888,203 @@
    }
   },
   {
+   "reference": "211582",
+   "name": "Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung für die Koordination und Begleitung der ehrenamtlichen Flüchtlingshilfe im Jahr 2021",
+   "paper_type": "Beschlussvorlage",
+   "date": "2021-09-07",
+   "amt": "05 Amt für Integration und Vielfalt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002549",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2115237&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "05 Amt für Integration und Vielfalt",
+     "name": "05 Amt für Integration und Vielfalt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/148",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Anhörung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/655",
+     "gremium": "Integrationsrat",
+     "meeting": "Sitzung des Integrationsrates",
+     "start_date": "2021-10-26T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.3",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/568",
+     "gremium": "Ausschuss für Soziales, Migration und Gesundheit",
+     "meeting": "Sitzung des Ausschusses für Soziales, Migration und Gesundheit",
+     "start_date": "2021-09-23T16:14:00.000Z",
+     "cancelled": 0,
+     "number": "5.8",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002549",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Lengsdorf",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.06959,
+     "lat": 50.710105,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Lengsdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002549",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Röttgen",
+     "ortsteil": "Röttgen",
+     "stadtbezirk": "Bonn",
+     "lon": 7.065814,
+     "lat": 50.660943,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Röttgen",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002549",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002549",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "soziales",
+     "method": "gremium",
+     "evidence": "Ausschuss für Soziales, Migration und Gesundheit",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "beteiligung",
+     "method": "amt",
+     "evidence": "05 Amt für Integration und Vielfalt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002549",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-09-07",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002549",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Ausschuss für Soziales, Migration und Gesundheit",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-09-23",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.8",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Integrationsrat",
+     "role": "Anhörung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-10-26",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.3",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "ausschuss-entscheidung",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet ein Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "aus"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "211290-01 ST",
    "name": "Bürgerantrag: Parksituation am Schmittenpfädchen in Bonn-Endenich",
    "paper_type": "Stellungnahme der Verwaltung",
@@ -79777,6 +81763,135 @@
      "aus",
      "bv",
      "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "211392",
+   "name": "Denkmalrelevante Vorlagen in anderen Ratsgremien",
+   "paper_type": "Mitteilungsvorlage",
+   "date": "2021-08-13",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002157",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2092007&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-0 Verwaltung"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/224",
+     "method": "paper_type",
+     "evidence": "Mitteilungsvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000247",
+     "gremium": "Unterausschuss Denkmalschutz",
+     "meeting": "Sitzung des Unterausschusses Denkmalschutz",
+     "start_date": "2021-08-31T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "11.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_adjektiv",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002157",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002157",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "bauen",
+     "method": "amt",
+     "evidence": "61 Stadtplanungsamt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002157",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-08-13",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2002157",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Unterausschuss Denkmalschutz",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-08-31",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "11.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "mitteilung",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Mitteilungsvorlage“",
+    "passung": "passt",
+    "ist": [
+     "aus"
     ],
     "abweichung": []
    }
@@ -80690,6 +82805,442 @@
    }
   },
   {
+   "reference": "211225",
+   "name": "Anpassung des Linienwegs der SB 69",
+   "paper_type": "Mitteilungsvorlage",
+   "date": "2021-07-29",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001883",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2085704&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-3 Stadtverkehr"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/227",
+     "method": "paper_type",
+     "evidence": "Mitteilungsvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000415",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2021-08-16T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "7.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/437",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2021-08-24T15:00:00.000Z",
+     "cancelled": 0,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "terminiert"
+    },
+    {
+     "position": 2,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/556",
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": "Sitzung des Ausschusses für Mobilität und Verkehr",
+     "start_date": "2021-08-18T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "9.9",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 3,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/409",
+     "gremium": "Bezirksvertretung Hardtberg",
+     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
+     "start_date": "2021-08-31T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "12.3",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Brüser Berg",
+     "ortsteil": "Brüser Berg",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.04792,
+     "lat": 50.692894,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Brüser Berg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Friesdorf",
+     "ortsteil": "Friesdorf",
+     "stadtbezirk": "Bad Godesberg",
+     "lon": 7.124253,
+     "lat": 50.693926,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Friesdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "An der Ziegelei",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.065424,
+     "lat": 50.709485,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: An der Ziegelei",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Auf dem Kirchbüchel",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.059649,
+     "lat": 50.707443,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Auf dem Kirchbüchel",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Auf dem Kirchbüchel",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.064905,
+     "lat": 50.708229,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Auf dem Kirchbüchel",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Basketsring",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.060887,
+     "lat": 50.70599,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Basketsring",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Carl-Schurz-Straße",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.056073,
+     "lat": 50.71433,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Carl-Schurz-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Edith-Stein-Anlage",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.054103,
+     "lat": 50.711241,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Edith-Stein-Anlage",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Fontainengraben",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.054067,
+     "lat": 50.711807,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Fontainengraben",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Geschwister-Scholl-Straße",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.052683,
+     "lat": 50.709782,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Geschwister-Scholl-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Goerdelerstraße",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.048789,
+     "lat": 50.70654,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Goerdelerstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Julius-Leber-Straße",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.055237,
+     "lat": 50.709446,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Julius-Leber-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Kollegienweg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.066233,
+     "lat": 50.720257,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Kollegienweg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Provinzialstraße",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.067044,
+     "lat": 50.712315,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Provinzialstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Schieffelingsweg",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.063141,
+     "lat": 50.718282,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Schieffelingsweg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Villemombler Straße",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.053189,
+     "lat": 50.715117,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Villemombler Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Villemombler Straße",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.063098,
+     "lat": 50.710901,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Villemombler Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+   "stand": "in Beratung",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-07-29",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001883",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-08-16",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "7.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-08-18",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "9.9",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-08-24",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "stand": "terminiert"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Hardtberg",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-08-31",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "12.3",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "mitteilung",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Mitteilungsvorlage“",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "211290",
    "name": "Bürgerantrag: Parksituation am Schmittenpfädchen in Bonn-Endenich",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
@@ -81026,6 +83577,350 @@
     "passung": "passt",
     "ist": [
      "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "211040-02",
+   "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+   "paper_type": "Dringlichkeitsentscheidung OB",
+   "date": "2021-07-14",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001790",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2084435&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61 Stadtplanungsamt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/30",
+     "method": "paper_type",
+     "evidence": "Dringlichkeitsentscheidung OB",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Genehmigung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000415",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2021-08-16T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "4.1",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "211040",
+     "paper_type": "Dringlichkeitsantrag",
+     "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+     "date": "2021-06-07"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Am Propsthof",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.072251,
+     "lat": 50.735946,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Propsthof",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001790",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Auf dem Hügel",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.069428,
+     "lat": 50.731564,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Auf dem Hügel",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001790",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Gerhard-Domagk-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.073172,
+     "lat": 50.734047,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Gerhard-Domagk-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001790",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Hans-Sachs-Straße",
+     "ortsteil": "Dransdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.058901,
+     "lat": 50.736016,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Hans-Sachs-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001790",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Immenburgstraße",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.078377,
+     "lat": 50.733558,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Immenburgstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001790",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Siemensstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.06871,
+     "lat": 50.737339,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Siemensstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001790",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001790",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "bauen",
+     "method": "amt",
+     "evidence": "61 Stadtplanungsamt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Dringlichkeitsentscheidung OB",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001790",
+     "note": "sonderweg",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-07-14",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001790",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Genehmigung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-08-16",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "4.1",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "dringlichkeitsantrag",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Dringlichkeitsantrag“",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "211188",
+   "name": "Mietkostenzuschuss für das Zentrallager Sachspenden Bonn e. V. (ZeSaBo) für das Jahr 2021",
+   "paper_type": "Beschlussvorlage",
+   "date": "2021-07-14",
+   "amt": "50 Amt für Soziales und Wohnen",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001811",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2084523&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "50 Amt für Soziales und Wohnen",
+     "name": "50-1 Personal- und Organisation, Innenprüfung, Koordination Jobcenter, Prozesssteuerung etc."
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/252",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/567",
+     "gremium": "Ausschuss für Soziales, Migration und Gesundheit",
+     "meeting": "Sitzung des Ausschusses für Soziales, Migration und Gesundheit",
+     "start_date": "2021-08-26T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.3",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001811",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001811",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "soziales",
+     "method": "amt",
+     "evidence": "50 Amt für Soziales und Wohnen",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001811",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-07-14",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001811",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Ausschuss für Soziales, Migration und Gesundheit",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-08-26",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.3",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "ausschuss-entscheidung",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet ein Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "aus"
     ],
     "abweichung": []
    }
@@ -81552,6 +84447,375 @@
    }
   },
   {
+   "reference": "201928-95 AA",
+   "name": "Einbringung der Haushaltssatzung für die Haushaltsjahre 2021/2022, des Finanz- und Investitionsprogramms 2020 bis 2025 sowie der 3. Fortschreibung des Haushaltssicherungskonzeptes (HSK) für den Zeitraum 2021 - 2024 Antrag zur Vorlage 201928",
+   "paper_type": "Änderungsantrag",
+   "date": "2021-06-24",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001653",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2073887&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    }
+   ],
+   "originators": [],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/396",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2021-06-24T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.2.28",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "201928",
+     "paper_type": "Beschlussvorlage",
+     "name": "Einbringung der Haushaltssatzung für die Haushaltsjahre 2021/2022, des Finanz- und Investitionsprogramms 2020 bis 2025 sowie der 3. Fortschreibung des Haushaltssicherungskonzeptes (HSK) für den Zeitraum 2021 - 2024",
+     "date": "2021-01-11"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Lessenich/Meßdorf",
+     "ortsteil": "Lessenich/Meßdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.041713,
+     "lat": 50.726092,
+     "stage": "B",
+     "method": "volltext_ortsteil_adjektiv",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Lessenich/Meßdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001653",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Am Bleichgraben",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.061371,
+     "lat": 50.72951,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Bleichgraben",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001653",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001653",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "wirtschaft",
+     "method": "stichwort",
+     "evidence": "haushalt",
+     "confidence": "niedrig"
+    }
+   ],
+   "parties": [],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Änderungsantrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001653"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-06-24",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001653",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Rat",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-24",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.2.28",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet der Rat",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "211040-01 ST",
+   "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+   "paper_type": "Stellungnahme der Verwaltung",
+   "date": "2021-06-21",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001535",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2068491&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-3 Stadtverkehr"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/227",
+     "method": "paper_type",
+     "evidence": "Stellungnahme der Verwaltung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000272",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2021-06-28T16:00:00.000Z",
+     "cancelled": 0,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "terminiert"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "211040",
+     "paper_type": "Dringlichkeitsantrag",
+     "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+     "date": "2021-06-07"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Am Dickobskreuz",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.075182,
+     "lat": 50.735153,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Dickobskreuz",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Am Propsthof",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.072251,
+     "lat": 50.735946,
+     "stage": "B",
+     "method": "volltext_strasse+kreuzung",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Propsthof",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Auf dem Hügel",
+     "ortsteil": "Dransdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.060141,
+     "lat": 50.735464,
+     "stage": "B",
+     "method": "volltext_strasse+kreuzung",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Auf dem Hügel",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Auf dem Hügel",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.069428,
+     "lat": 50.731564,
+     "stage": "B",
+     "method": "volltext_strasse+kreuzung",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Auf dem Hügel",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Gerhard-Domagk-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.073172,
+     "lat": 50.734047,
+     "stage": "B",
+     "method": "volltext_strasse+kreuzung",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Gerhard-Domagk-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Hans-Sachs-Straße",
+     "ortsteil": "Dransdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.058901,
+     "lat": 50.736016,
+     "stage": "B",
+     "method": "volltext_strasse+kreuzung",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Hans-Sachs-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Siemensstraße",
+     "ortsteil": "Dransdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.061226,
+     "lat": 50.735787,
+     "stage": "B",
+     "method": "volltext_strasse+kreuzung",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Siemensstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Siemensstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.06871,
+     "lat": 50.737339,
+     "stage": "B",
+     "method": "volltext_strasse+kreuzung",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Siemensstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-06-21",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001535",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-28",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "stand": "terminiert"
+    }
+   ],
+   "soll": {
+    "verfahren": "dringlichkeitsantrag",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Dringlichkeitsantrag“",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "210697-01",
    "name": "Verbesserungen für den Fußweg zwischen Hainstraße und Provinzialstraße",
    "paper_type": "Mitteilungsvorlage",
@@ -81871,6 +85135,163 @@
     "passung": "passt",
     "ist": [
      "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "201928-76 ST",
+   "name": "Einbringung der Haushaltssatzung für die Haushaltsjahre 2021/2022, des Finanz- und Investitionsprogramms 2020 bis 2025 sowie der 3. Fortschreibung des Haushaltssicherungskonzeptes (HSK) für den Zeitraum 2021 - 2024",
+   "paper_type": "Stellungnahme der Verwaltung",
+   "date": "2021-06-14",
+   "amt": "66 Tiefbauamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001374",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2062385&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "66 Tiefbauamt",
+     "name": "66 Tiefbauamt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/35",
+     "method": "paper_type",
+     "evidence": "Stellungnahme der Verwaltung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/396",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2021-06-24T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.2.18",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "201928",
+     "paper_type": "Beschlussvorlage",
+     "name": "Einbringung der Haushaltssatzung für die Haushaltsjahre 2021/2022, des Finanz- und Investitionsprogramms 2020 bis 2025 sowie der 3. Fortschreibung des Haushaltssicherungskonzeptes (HSK) für den Zeitraum 2021 - 2024",
+     "date": "2021-01-11"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Lessenich/Meßdorf",
+     "ortsteil": "Lessenich/Meßdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.041713,
+     "lat": 50.726092,
+     "stage": "B",
+     "method": "volltext_ortsteil_adjektiv",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Lessenich/Meßdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001374",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Am Bleichgraben",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.061371,
+     "lat": 50.72951,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Bleichgraben",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001374",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001374",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "66 Tiefbauamt",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "wirtschaft",
+     "method": "stichwort",
+     "evidence": "haushalt",
+     "confidence": "niedrig"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001374",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-06-14",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001374",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-24",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.2.18",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet der Rat",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "rat"
     ],
     "abweichung": []
    }
@@ -82203,6 +85624,161 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, den Endenicher Park neu zu gestalten. Dafür soll eine Vorentwurfsplanung auf Basis von Bürgerworkshops und einer Konzeptskizze erstellt werden. Die Kosten von 30.000 Euro für 2021 trägt das Sport- und Bäderamt. Der Park in Endenich ist betroffen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-25"
+   }
+  },
+  {
+   "reference": "210955-01 ST",
+   "name": "Denkmalrelevante Vorlagen in anderen Ratsgremien",
+   "paper_type": "Stellungnahme der Verwaltung",
+   "date": "2021-06-10",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001342",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2059519&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-0 Verwaltung"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/224",
+     "method": "paper_type",
+     "evidence": "Stellungnahme der Verwaltung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/659",
+     "gremium": "Unterausschuss Denkmalschutz",
+     "meeting": "Sitzung des Unterausschusses Denkmalschutz",
+     "start_date": "2021-06-15T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "10.2.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "210955",
+     "paper_type": "Mitteilungsvorlage",
+     "name": "Denkmalrelevante Vorlagen in anderen Ratsgremien",
+     "date": "2021-05-29"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "niedrig",
+     "evidence": "übergeordnete Vorlage 210955",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001091",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Oberkassel",
+     "ortsteil": "Oberkassel",
+     "stadtbezirk": "Beuel",
+     "lon": 7.172688,
+     "lat": 50.715151,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "niedrig",
+     "evidence": "übergeordnete Vorlage 210955",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001091",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001342",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "bauen",
+     "method": "amt",
+     "evidence": "61 Stadtplanungsamt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001342",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-06-10",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001342",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Unterausschuss Denkmalschutz",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-15",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "10.2.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "mitteilung",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Mitteilungsvorlage“",
+    "passung": "passt",
+    "ist": [
+     "aus"
+    ],
+    "abweichung": []
    }
   },
   {
@@ -82445,6 +86021,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, den Ausbau der Straßen, Wege und Grünflächen im Baugebiet „Am Vogelsang“ in Endenich zu genehmigen. Zudem soll die Fällung von 117 Bäumen erlaubt werden, für die 122 neue gepflanzt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-25"
    }
   },
   {
@@ -82680,6 +86261,437 @@
    }
   },
   {
+   "reference": "211040",
+   "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+   "paper_type": "Dringlichkeitsantrag",
+   "date": "2021-06-07",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001322",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2058719&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    },
+    {
+     "kind": "fachlich",
+     "method": "stellungnahme",
+     "evidence": "211040-01 ST",
+     "derived": 1,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-3 Stadtverkehr"
+    },
+    {
+     "kind": "fachlich",
+     "method": "stellungnahme",
+     "evidence": "211040-02",
+     "derived": 1,
+     "label": "61 Stadtplanungsamt",
+     "name": "61 Stadtplanungsamt"
+    }
+   ],
+   "originators": [],
+   "process": [
+    {
+     "position": 0,
+     "role": "Anregung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/436",
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2021-06-15T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "10.2",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    },
+    {
+     "position": 1,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2000272",
+     "gremium": "Rat",
+     "meeting": "Sitzung des Rates",
+     "start_date": "2021-06-28T16:00:00.000Z",
+     "cancelled": 0,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "terminiert"
+    },
+    {
+     "position": 2,
+     "role": "Empfehlung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/555",
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": "Sitzung des Ausschusses für Mobilität und Verkehr",
+     "start_date": "2021-06-02T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.12",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [
+    {
+     "reference": "211040-01 ST",
+     "paper_type": "Stellungnahme der Verwaltung",
+     "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+     "date": "2021-06-21"
+    },
+    {
+     "reference": "211040-02",
+     "paper_type": "Dringlichkeitsentscheidung OB",
+     "name": "Änderung Linienweg N9 zum Fahrplanwechsel 2021",
+     "date": "2021-07-14"
+    }
+   ],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Am Dickobskreuz",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.075182,
+     "lat": 50.735153,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Dickobskreuz",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001322",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Gerhard-Domagk-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.073172,
+     "lat": 50.734047,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Gerhard-Domagk-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001322",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Gerhard-Domagk-Straße",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.075212,
+     "lat": 50.732902,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Gerhard-Domagk-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001322",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001322",
+   "stand": "in Beratung",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "bauen",
+     "method": "amt",
+     "evidence": "61 Stadtplanungsamt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Dringlichkeitsantrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001322"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Empfehlung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-02",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.12",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite",
+     "note": "datum_vor_vorlage"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-06-07",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001322",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Anregung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-15",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "10.2",
+     "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "date": "2021-06-21",
+     "source": "oparl-bonn",
+     "reference": "211040-01 ST",
+     "title": "Änderung Linienweg N9 zum Fahrplanwechsel 2021"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Rat",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-28",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "stand": "terminiert"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Dringlichkeitsentscheidung OB",
+     "status": "belegt",
+     "date": "2021-07-14",
+     "source": "oparl-bonn",
+     "reference": "211040-02",
+     "title": "Änderung Linienweg N9 zum Fahrplanwechsel 2021"
+    }
+   ],
+   "soll": {
+    "verfahren": "dringlichkeitsantrag",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Dringlichkeitsantrag“",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "201928-66 AA",
+   "name": "Straßenbaumaßnahmen",
+   "paper_type": "Änderungsantrag",
+   "date": "2021-06-02",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001312",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2058378&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    }
+   ],
+   "originators": [],
+   "process": [
+    {
+     "position": 0,
+     "role": "Empfehlung",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/555",
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": "Sitzung des Ausschusses für Mobilität und Verkehr",
+     "start_date": "2021-06-02T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.1.12",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "201928",
+     "paper_type": "Beschlussvorlage",
+     "name": "Einbringung der Haushaltssatzung für die Haushaltsjahre 2021/2022, des Finanz- und Investitionsprogramms 2020 bis 2025 sowie der 3. Fortschreibung des Haushaltssicherungskonzeptes (HSK) für den Zeitraum 2021 - 2024",
+     "date": "2021-01-11"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Lessenich/Meßdorf",
+     "ortsteil": "Lessenich/Meßdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.041713,
+     "lat": 50.726092,
+     "stage": "B",
+     "method": "volltext_ortsteil_adjektiv",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Lessenich/Meßdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001312",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Am Bleichgraben",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.061371,
+     "lat": 50.72951,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Bleichgraben",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001312",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Am Propsthof",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.072251,
+     "lat": 50.735946,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Propsthof",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001312",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Am Propsthof",
+     "ortsteil": "Nordstadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.073776,
+     "lat": 50.739016,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Am Propsthof",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001312",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Kolpingstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.064,
+     "lat": 50.735647,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Kolpingstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001312",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Siemensstraße",
+     "ortsteil": "Dransdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.061226,
+     "lat": 50.735787,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Siemensstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001312",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001312",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "gremium",
+     "evidence": "Ausschuss für Mobilität und Verkehr",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Änderungsantrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001312"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-06-02",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001312",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Empfehlung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-02",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.1.12",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet der Rat",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
    "reference": "210274-02 ST",
    "name": "Bürgerantrag: Gerhard-Domagk-Straße + Linienführung 631/632",
    "paper_type": "Stellungnahme der Verwaltung",
@@ -82822,6 +86834,165 @@
     "verfahren": "buergerantrag",
     "sicherheit": "hoch",
     "grund": "Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)",
+    "passung": "passt",
+    "ist": [
+     "aus"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "210955",
+   "name": "Denkmalrelevante Vorlagen in anderen Ratsgremien",
+   "paper_type": "Mitteilungsvorlage",
+   "date": "2021-05-29",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001091",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2048488&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-0 Verwaltung"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/224",
+     "method": "paper_type",
+     "evidence": "Mitteilungsvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/659",
+     "gremium": "Unterausschuss Denkmalschutz",
+     "meeting": "Sitzung des Unterausschusses Denkmalschutz",
+     "start_date": "2021-06-15T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "10.2",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [
+    {
+     "reference": "210955-01 ST",
+     "paper_type": "Stellungnahme der Verwaltung",
+     "name": "Denkmalrelevante Vorlagen in anderen Ratsgremien",
+     "date": "2021-06-10"
+    }
+   ],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_adjektiv",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001091",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Oberkassel",
+     "ortsteil": "Oberkassel",
+     "stadtbezirk": "Beuel",
+     "lon": 7.172688,
+     "lat": 50.715151,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Oberkassel",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001091",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001091",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "bauen",
+     "method": "amt",
+     "evidence": "61 Stadtplanungsamt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001091",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-05-29",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2001091",
+     "note": "datum"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Stellungnahme der Verwaltung",
+     "status": "belegt",
+     "date": "2021-06-10",
+     "source": "oparl-bonn",
+     "reference": "210955-01 ST",
+     "title": "Denkmalrelevante Vorlagen in anderen Ratsgremien"
+    },
+    {
+     "typ": "beratung",
+     "label": "Unterausschuss Denkmalschutz",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-15",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "10.2",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "mitteilung",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Mitteilungsvorlage“",
     "passung": "passt",
     "ist": [
      "aus"
@@ -83154,6 +87325,208 @@
    }
   },
   {
+   "reference": "210813",
+   "name": "Einleitung des Vergabeverfahrens Erneuerung der Notstromversorgung von 5 Pumpwerken",
+   "paper_type": "Beschlussvorlage: Einleitung",
+   "date": "2021-05-18",
+   "amt": "66 Tiefbauamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000787",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2036005&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "66 Tiefbauamt",
+     "name": "66 Tiefbauamt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/35",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage: Einleitung",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/503",
+     "gremium": "Ausschuss für Finanzen, Beteiligungen und Vergabe",
+     "meeting": "Sitzung des Ausschusses für Finanzen, Beteiligungen und Vergabe",
+     "start_date": "2021-06-09T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "5.15",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Friedrich-Breuer-Straße",
+     "ortsteil": "Beuel-Mitte",
+     "stadtbezirk": "Beuel",
+     "lon": 7.1243,
+     "lat": 50.740447,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Friedrich-Breuer-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000787",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Landgrabenweg",
+     "ortsteil": "Limperich",
+     "stadtbezirk": "Beuel",
+     "lon": 7.133752,
+     "lat": 50.725283,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Landgrabenweg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000787",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Landgrabenweg",
+     "ortsteil": "Ramersdorf",
+     "stadtbezirk": "Beuel",
+     "lon": 7.151023,
+     "lat": 50.720632,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Landgrabenweg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000787",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Ringstraße",
+     "ortsteil": "Beuel-Mitte",
+     "stadtbezirk": "Beuel",
+     "lon": 7.124237,
+     "lat": 50.733431,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Ringstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000787",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Wiesenweg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.078475,
+     "lat": 50.72715,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Wiesenweg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000787",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000787",
+   "stand": "entschieden",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "66 Tiefbauamt",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "wirtschaft",
+     "method": "gremium",
+     "evidence": "Ausschuss für Finanzen, Beteiligungen und Vergabe",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage: Einleitung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000787",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-05-18",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000787",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Ausschuss für Finanzen, Beteiligungen und Vergabe",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-06-09",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "5.15",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "ausschuss-entscheidung",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet ein Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "aus"
+    ],
+    "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, ein Vergabeverfahren für die Erneuerung der Notstromversorgung von fünf Pumpwerken zu starten. Die Pumpwerke liegen an der Landgrabenweg, RSE-Trasse, Wiesenweg, Ringstraße und Friedrich-Breuer-Straße. Die Kosten betragen voraussichtlich 195.000 Euro.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-25"
+   }
+  },
+  {
    "reference": "210869",
    "name": "CDU: Endenicher Allee - Straßenplanung zwischen Alfred-Bucherer-Straße und BAB 565, hier: nördliche Straßenseite",
    "paper_type": "Dringlichkeitsantrag",
@@ -83288,6 +87661,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion beantragt dringend, einen früheren Beschluss zur Endenicher Allee zwischen Alfred-Bucherer-Straße und Autobahn 565 aufzuheben. Sie schlägt vor, die nördliche Straßenseite nach Variante 1 zu gestalten, um 16 Parkplätze zu erhalten. Der Protest von Anwohnern soll so berücksichtigt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-25"
    }
   },
   {
@@ -83438,6 +87816,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass der städtische Entsorger bonnorange zwei Altpapiercontainer an der Ecke Herwarthstraße und Endenicher Straße aufstellen wird. Die Container sollen bald dort stehen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-25"
    }
   },
   {
@@ -83720,6 +88103,141 @@
      "date_source": "oparl-lite",
      "number": "6.11",
      "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Vollzug durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-bv",
+    "sicherheit": "hoch",
+    "grund": "Antrag, beraten nur in Bezirksvertretungen",
+    "passung": "passt",
+    "ist": [
+     "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "210715",
+   "name": "Schließzeiten - Weck Werk Bahnübergang",
+   "paper_type": "Antrag",
+   "date": "2021-04-30",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000602",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2025978&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    }
+   ],
+   "originators": [],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/407",
+     "gremium": "Bezirksvertretung Hardtberg",
+     "meeting": "Sitzung der Bezirksvertretung Hardtberg",
+     "start_date": "2021-05-18T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.10",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Bahnhofstraße",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.043403,
+     "lat": 50.717796,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Bahnhofstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000602",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Heerweg",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.062139,
+     "lat": 50.724531,
+     "stage": "B",
+     "method": "volltext_strasse",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Heerweg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000602",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Helmholtzstraße",
+     "ortsteil": "Duisdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.055733,
+     "lat": 50.71983,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Helmholtzstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000602",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000602",
+   "stand": "entschieden",
+   "themes": [],
+   "parties": [],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Antrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000602"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2021-04-30",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2000602",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Bezirksvertretung Hardtberg",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2021-05-18",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.10",
+     "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite"
     },
