@@ -217,6 +217,9 @@ jobs:
           cp -r data/export _site/data/
           cp data/LICENSE-DATA.md _site/data/
           cp data/geo/*.geojson _site/data/geo/
+          # Abrufzeitpunkt der Bebauungspläne nicht in die Seite: sonst ändert sich der Branch deploy ohne neuen Inhalt
+          # (der Zeitpunkt steht in data/raw/STAND.json und im Datenpaket)
+          python -c "import json, pathlib; p = pathlib.Path('_site/data/geo/bebauungsplaene_bonn.geojson'); d = json.loads(p.read_text()); d.get('meta', {}).pop('retrieved_at', None); p.write_text(json.dumps(d, ensure_ascii=False, separators=(',', ':')) + '\n')"
 
       - name: Auffindbarkeit (robots.txt, sitemap.xml, Adressen für SITE_URL)
         run: python -m pipeline seo

@@ -143,9 +143,11 @@ def namen():
 
 
 def uebernahme(kurz, text, n=UEBERNAHME_WOERTER + 1, erlaubt=()):
-    """Erste Wortfolge aus n Wörtern, die wörtlich auch im Text steht (sonst None). Stellen, an denen die Kurzfassung
-    eine Angabe aus `erlaubt` wiederholt (Titel der Vorlage, Namen von Gremien; ab drei Wörtern), zählen nicht: Sie
-    sind öffentliche Angaben aus der OParl-API, kein Auszug aus dem Dokument."""
+    """Erste übernommene Wortfolge mit mehr als UEBERNAHME_WOERTER Wörtern aus dem Text (sonst None). Wörter, mit denen
+    die Kurzfassung eine Angabe aus `erlaubt` wiederholt (Titel der Vorlage, Namen von Gremien; ab drei Wörtern),
+    zählen nicht: Sie sind öffentliche Angaben aus der OParl-API, kein Auszug aus dem Dokument. Gezählt wird über die
+    ganze zusammenhängende Übernahme (Code-Prüfung 24.10.2026: bisher galt jedes Fenster, das eine erlaubte Angabe
+    berührte, als frei, so dass sechs Wörter davor und danach unbemerkt blieben)."""
     folgen = _folgen(_woerter(text), n)
     k = _woerter(kurz)
     frei = set()
@@ -153,10 +155,21 @@ def uebernahme(kurz, text, n=UEBERNAHME_WOERTER + 1, erlaubt=()):
         w = _woerter(e)
         if len(w) >= 3:
             frei |= {j for i in range(len(k) - len(w) + 1) if k[i:i + len(w)] == w for j in range(i, i + len(w))}
+    gedeckt = [False] * len(k)   # Wörter, die in einer Folge aus n Wörtern des Textes liegen
     for i in range(len(k) - n + 1):
-        f = tuple(k[i:i + n])
-        if f in folgen and not frei & set(range(i, i + n)):
-            return " ".join(f)
+        if tuple(k[i:i + n]) in folgen:
+            gedeckt[i:i + n] = [True] * n
+    i = 0
+    while i < len(k):
+        if not gedeckt[i]:
+            i += 1
+            continue
+        j = i
+        while j < len(k) and gedeckt[j]:
+            j += 1
+        if sum(1 for x in range(i, j) if x not in frei) > UEBERNAHME_WOERTER:
+            return " ".join(k[i:j])
+        i = j
     return None
 
 

@@ -25,6 +25,16 @@ class KurzfassungTest(unittest.TestCase):
         self.assertIsNone(kurzfassung.fremder_akteur("Der Beirat empfiehlt den Spielplatz.", text))
         self.assertEqual(kurzfassung.pruefe(kurz, text, "Antrag der Grünen"), "nicht in Titel oder Text: Rat")
 
+    def test_lange_uebernahme_um_einen_gremiennamen(self):
+        # Code-Prüfung 24.10.2026: sechs Wörter davor und danach blieben unbemerkt, weil jedes Fenster den Namen berührte
+        text = ("Die Verwaltung wird gebeten, dem Ausschuss für Planung, Verkehr und Denkmalschutz bis Ende des Jahres "
+                "zu berichten. Weitere Sätze folgen hier.")
+        gremium = ["Ausschuss für Planung, Verkehr und Denkmalschutz"]
+        kurz = "Die Verwaltung wird gebeten, dem Ausschuss für Planung, Verkehr und Denkmalschutz bis Ende des Jahres zu berichten."
+        self.assertIsNotNone(kurzfassung.uebernahme(kurz, text, erlaubt=gremium))
+        kurz = "Bis Ende des Jahres soll die Verwaltung dem Ausschuss für Planung, Verkehr und Denkmalschutz berichten."
+        self.assertIsNone(kurzfassung.uebernahme(kurz, text, erlaubt=gremium))
+
     def test_titel_und_gremien_sind_keine_uebernahme(self):
         text = "Der Ausschuss für Planung, Verkehr und Denkmalschutz berät die Sanierung der Brücke an der Kölnstraße."
         kurz = "Der Ausschuss für Planung, Verkehr und Denkmalschutz soll über eine neue Brücke beraten."

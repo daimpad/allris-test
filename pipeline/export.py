@@ -290,7 +290,8 @@ def export_pilot(ortsteil=config.PILOT_ORTSTEIL):
         "JOIN paper p ON p.id = pl.paper_id WHERE l.ortsteil = ? ORDER BY p.date DESC, p.reference",
         (ortsteil,))]
     papers = [_paper_detail(db, pid) for pid in ids]
-    meta = _meta(db, ortsteil=ortsteil, count=len(papers))
+    # ohne Zeitpunkte wie die Gebietsdateien: sonst änderte sich der Branch deploy bei jedem Lauf (Code-Prüfung 24.10.2026)
+    meta = _meta(db, True, ortsteil=ortsteil, count=len(papers))
     out = config.EXPORT / ortsteil.lower()
     out.mkdir(parents=True, exist_ok=True)
     (out / "vorlagen.json").write_text(

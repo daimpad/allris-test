@@ -73,6 +73,16 @@ class VolltextTest(unittest.TestCase):
         self.assertFalse(volltext.allowed("Anregungen und Beschwerden"))
         self.assertTrue(volltext.allowed("Stellungnahme der Verwaltung"))
 
+    def test_folgevorlagen_von_buergerantraegen_nicht_aus_dem_volltext(self):
+        # Code-Prüfung 24.10.2026: Stellungnahmen zu einem Bürgerantrag nennen oft dieselbe Anschrift
+        U = "https://www.bonn.sitzung-online.de/oparl/papers/"
+        papers = [{"id": U + "1", "reference": "231681", "paperType": "Bürgerantrag § 24 GO - Öffentlich", "name": "x",
+                   "subordinatedPaper": [U + "2"]},
+                  {"id": U + "2", "reference": "231681-12 ST", "paperType": "Stellungnahme der Verwaltung", "name": "y",
+                   "superordinatedPaper": [U + "1"]},
+                  {"id": U + "3", "reference": "250001", "paperType": "Beschlussvorlage", "name": "z"}]
+        self.assertEqual(volltext.einwohner_kette(papers), {U + "1", U + "2"})
+
     def test_liste_vieler_ortsteile_wird_nicht_verortet(self):
         text = KOPF + ", ".join(["Endenich", "Duisdorf", "Lengsdorf", "Tannenbusch", "Beuel-Mitte", "Mehlem"])
         rows, info = volltext.locate(self.gaz, text)

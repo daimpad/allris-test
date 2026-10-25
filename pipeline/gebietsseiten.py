@@ -6,7 +6,6 @@ Keine Erzeugungszeitpunkte, damit sich der Branch deploy nur bei Inhaltsänderun
 import json
 from collections import Counter
 from html import escape
-from pathlib import Path
 from urllib.parse import quote
 
 from . import topics
@@ -52,7 +51,9 @@ def _page(site_url, path, title, description, body, root):
 
 def _area_body(kind_label, name, bezirk, key, papers, root):
     stand = Counter(p["stand"] for p in papers)
-    themes = Counter(t["theme"] for p in papers for t in (p.get("themes") or [])[:1])
+    # alle Themen einer Vorlage zählen, wie die Karte (gebietszahlen.shares); das erste Thema folgt nur der
+    # Reihenfolge in topics.THEMES und bevorzugte Verkehr (Code-Prüfung 24.10.2026)
+    themes = Counter(th for p in papers for th in {t["theme"] for t in (p.get("themes") or [])})
     dates = sorted(p["date"] for p in papers if p.get("date"))
     latest = sorted(papers, key=lambda p: (p.get("date") or "", p["reference"]), reverse=True)[:LATEST]
     map_url = f"{root}?gebiet={quote(key, safe=':')}"
@@ -72,7 +73,7 @@ def _area_body(kind_label, name, bezirk, key, papers, root):
     <ul>
       <li>{len(papers)} Vorlagen{f" von {_date(dates[0])} bis {_date(dates[-1])}" if dates else ""}</li>
       <li>Stand: {stand_list or "–"}</li>
-      <li>Häufigste Themen (abgeleitet): {theme_list or "–"}</li>
+      <li>Häufigste Themen (abgeleitet; eine Vorlage kann mehrere haben): {theme_list or "–"}</li>
     </ul>
     <h2>Die {len(latest)} jüngsten Vorlagen</h2>
     <table>
