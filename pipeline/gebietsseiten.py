@@ -19,7 +19,7 @@ def _date(iso):
     return f"{iso[8:10]}.{iso[5:7]}.{iso[:4]}" if iso and len(iso) >= 10 else "–"
 
 
-def _page(site_url, path, title, description, body, root):
+def _page(site_url, path, title, description, body, root, head=""):
     return f"""<!doctype html>
 <html lang="de">
 <head>
@@ -31,7 +31,7 @@ def _page(site_url, path, title, description, body, root):
   <link rel="canonical" href="{escape(site_url + path)}">
   <link rel="icon" href="{root}favicon.ico" sizes="32x32">
   <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="{root}page.css">
+  <link rel="stylesheet" href="{root}page.css">{head}
 </head>
 <body>
   <header class="page-head">

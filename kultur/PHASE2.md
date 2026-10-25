@@ -29,3 +29,9 @@ Entscheidungen des Auftraggebers:
 ## Grenzen
 - Die Phasen sind geplant. Der Kulturausschuss tagt am 01.12.2026, also nach dem Finanzausschuss am 26.11.2026. Ob der Haushalt dort beraten wird, zeigt erst die Tagesordnung.
 - Die Linie des Datenstands ändert die Seite täglich.
+
+## Nachtrag: Bild zum Teilen (25.10.2026)
+- **Dateien:** `dossiers/kultur-zeitleiste.svg` und `.png` (doppelte Auflösung), täglich im Export erzeugt und im Datenpaket enthalten.
+- **Inhalt:** die Zeitleiste mit Überschrift, Datenstand, Hinweis auf die abgeleiteten Angaben, Adresse der Themenseite (Nummern, Vorlagen, Fristen) und Quellen. So ist das Bild auch ohne die Seite verständlich.
+- **Auf der Seite:** Links zu PNG und SVG unter der Grafik. Das PNG dient als Vorschaubild beim Teilen (Open Graph, `summary_large_image`).
+- **Technik:** Das PNG erzeugt `cairosvg` (in `requirements.txt`). Fehlt Cairo auf dem Server, entsteht nur das SVG; Seite und Vorschaubild entfallen dann ohne Fehler.

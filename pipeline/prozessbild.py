@@ -186,6 +186,46 @@ def svg(d):
     return "".join(out)
 
 
+BILD = "kultur-zeitleiste"  # dossiers/kultur-zeitleiste.svg und .png (zum Teilen)
+
+
+def bild(d, seiten_url):
+    """Eigenständiges SVG zum Teilen: Zeitleiste mit Überschrift, Datenstand, Quellen und Adresse der Seite."""
+    innen = svg(d).replace('class="pb-svg" ', "", 1).replace('role="img" aria-labelledby="pb-titel pb-text" ', "", 1)
+    breite, hoehe_innen = W, int(innen.split('viewBox="0 0 ')[1].split('"')[0].split()[1])
+    kopf, fuss = 74, 54
+    hoehe = kopf + hoehe_innen + fuss
+    innen = innen.replace("<svg ", f'<svg x="0" y="{kopf}" width="{breite}" height="{hoehe_innen}" ', 1)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {breite} {hoehe}" width="{breite}" height="{hoehe}" '
+            f'font-family="Inter, system-ui, sans-serif">'
+            f'<title id="pbb-titel">Kultur und Haushalt in Bonn: Zeitleiste der Beratungen</title>'
+            f'<desc id="pbb-text">{escape(_beschreibung(d))} Nummern und Vorlagen: {escape(seiten_url)}</desc>'
+            f'<rect width="{breite}" height="{hoehe}" fill="#ffffff"/>'
+            f'<text x="16" y="34" font-size="22" font-weight="700" fill="{TEXT}">Kultur und Haushalt in Bonn: '
+            f'Wo steht das Verfahren, wo kann man sich einbringen?</text>'
+            f'<text x="16" y="58" font-size="13" fill="{GRAU}">Datenstand {_datum(d["heute"])} · Beschlüsse und Anträge '
+            f'seit {_datum(d["meta"]["seit"])} · Zuordnung und Phasen abgeleitet, Phasen geplant laut 261064</text>'
+            f'{innen}'
+            f'<text x="16" y="{kopf + hoehe_innen + 22}" font-size="12" fill="{TEXT}">Nummern, Vorlagen und Fristen: '
+            f'{escape(seiten_url)}</text>'
+            f'<text x="16" y="{kopf + hoehe_innen + 40}" font-size="11" fill="{GRAU}">RIS-Karte Bonn · Daten: OParl-API '
+            f'der Stadt Bonn (CC0), Sitzungen und Ergebnisse OParl-Lite (CC BY 4.0) · maßgeblich sind die Originale im '
+            f'Ratsinformationssystem</text></svg>\n')
+
+
+def schreibe_bild(d, ordner, seiten_url):
+    """Schreibt das Bild als SVG und, wenn cairosvg mit Cairo verfügbar ist, als PNG (doppelte Auflösung)."""
+    text = bild(d, seiten_url)
+    (ordner / f"{BILD}.svg").write_text(text, encoding="utf-8")
+    try:
+        import cairosvg
+        cairosvg.svg2png(bytestring=text.encode("utf-8"), write_to=str(ordner / f"{BILD}.png"), scale=2)
+    except Exception as e:  # ohne Cairo bleibt es beim SVG; die Seite verweist dann nur darauf
+        print(f"Zeitleiste als PNG nicht erzeugt ({type(e).__name__}); nur SVG")
+        return False
+    return True
+
+
 def _beschreibung(d):
     n = {k: sum(1 for p in d["punkte"] if p["art"] == k) for k in ART}
     naechste = ", ".join(f"{s['gremium']} am {_datum(s['date'])}" for s in d["sitzungen"][:4])
@@ -272,6 +312,7 @@ def abschnitt(d, root):
     <div class="pb-rahmen pb-breit" tabindex="0" role="region" aria-label="Zeitleiste, waagerecht verschiebbar" data-start="{_x(d["heute"]) / W:.3f}">
       {svg(d)}
     </div>
+    <p class="meta">Bild zum Teilen (täglich aktualisiert): <a href="{root}data/export/bonn/dossiers/{BILD}.png">PNG</a> · <a href="{root}data/export/bonn/dossiers/{BILD}.svg">SVG</a></p>
 {liste(d, root)}
 {aufrufe(d, root)}
     <h3>Stand der Vorlagen je Strang</h3>
