@@ -90421,6 +90421,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass die Endenicher Burg saniert werden muss. Sie schlägt vor, schnell die Fassade zu streichen und später ein umfassendes Sanierungskonzept zu erstellen, das mit der Denkmalbehörde abgestimmt wird. Auch Wege und Grünflächen sollen instand gesetzt werden, Kosten dafür sollen im nächsten Haushalt eingeplant werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-25"
    }
   },
   {
@@ -91834,6 +91839,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung gibt die Stellungnahme eines Bürgers wieder. Er äußert sich schriftlich zur Gerhard-Domagk-Straße und zur Buslinienführung 631/632, statt in der Sitzung zu sprechen. Seine Unterlagen werden den Beratungsunterlagen hinzugefügt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-25"
    }
   },
   {
