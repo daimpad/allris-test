@@ -85,6 +85,8 @@ class RegelnNachPruefung(unittest.TestCase):
             "h": vorlage("260148", "Sitzungstermine des Ausschusses für Finanzen 2026",
                          amt="II-1 Stabsstelle Konferenzzentrum/Beethovenhalle"),
             "g": vorlage("261500", "Ausstellung im Stadtmuseum", amt="41 Kulturamt"),
+            "i": vorlage("261861", "Grünen-Antrag: Zukunft des Schauspiels", amt="01-2 Ratsbüro",
+                         gremien=("Kulturausschuss",)),
         }
         self.d = dossier.daten(cache, {}, [], "2026-10-25", {})
         self.rows = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
@@ -93,6 +95,7 @@ class RegelnNachPruefung(unittest.TestCase):
         self.assertEqual(self.rows["260756"], ("buehnen", "Verfahren 260756; Titel: „Bühnen“"))
         self.assertEqual(self.rows["260756-01 AA"][0], "buehnen")  # Folgevorlage ohne Wort im Titel
         self.assertNotIn("250500", self.rows)  # vor Beginn der Wahlperiode
+        self.assertEqual(self.rows["261861"], ("buehnen", "Verfahren 261861; Titel: „Schauspiels“"))
 
     def test_kulturfest_und_beethovenhalle(self):
         self.assertEqual(self.rows["260949"][0], "kultur_finanzen")

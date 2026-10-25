@@ -29,7 +29,7 @@ FINANZEN = re.compile(r"Förder|Zuschuss|Zuschüsse|Einspar|Kürzung|Gebühr|Ent
                       r"Gleichbehandlung|Haushalt|Finanz|Drittmittel|Budget|Kosten|Controlling", re.I)
 BUEHNEN = "260127"     # Stammnummer „Zukunft der Bonner Bühnen“
 # Prüfung im Gespräch 25.10.2026 (kultur/PRUEFUNG.md): ein Titeltreffer zieht das ganze Verfahren (Stammnummer) mit
-BUEHNEN_TITEL = re.compile(r"Bühnen|Theaterliegenschaft", re.I)
+BUEHNEN_TITEL = re.compile(r"Bühnen|Theaterliegenschaft|Schauspiel", re.I)  # „Schauspiel“ seit 25.10.2026
 KULTURFEST = re.compile(r"Kulturfest|Kultur- und Begegnungsfest", re.I)
 VERGLEICH = "240986"   # Haushaltssatzung 2025/2026 (Vergleich: Zahl der Vorlagen im Verfahren)
 TERMINPLAN = "261064"  # Rahmenterminplan Haushalt 2027/2028 (Grundlage der Schritte)
@@ -60,8 +60,8 @@ STRAENGE = [
     ("haushalt", "Haushalt und Konsolidierung",
      "Titel nennt Haushaltssatzung, Haushaltssperre, haushaltswirtschaftliche Lage, Konsolidierung, Eckwerte o. Ä."),
     ("buehnen", "Zukunft der Bonner Bühnen",
-     f"Drucksache {BUEHNEN} und ihre Folgevorlagen sowie Verfahren, in denen ein Titel „Bühnen“ oder "
-     "„Theaterliegenschaften“ nennt"),
+     f"Drucksache {BUEHNEN} und ihre Folgevorlagen sowie Verfahren, in denen ein Titel „Bühnen“, "
+     "„Theaterliegenschaften“ oder „Schauspiel“ nennt"),
     ("kultur_finanzen", "Kulturförderung, Zuschüsse, Gebühren",
      "Kulturamt, Stadtbibliothek, Kunstmuseum, Theater, Beethovenorchester oder Stabsstelle Beethovenhalle "
      "(nur mit „Beethovenhalle“ im Titel) federführend oder Beratung im Kulturausschuss bzw. in der Kulturkommission, und der Titel nennt Förderung, "

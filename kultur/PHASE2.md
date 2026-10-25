@@ -13,7 +13,7 @@ Entscheidungen des Auftraggebers:
   - **Zeitachse:** Sie reicht von November 2025 bis März 2027. Die Monate ab September 2026 sind breiter gezeichnet. Eine Linie zeigt den Datenstand.
   - **Bahnen:** „Haushalt 2027/2028“ mit Aufstellung (nicht öffentlich), Einbringung und Beratung, Beschluss und Genehmigung; darunter Bezirksvertretungen, Kulturausschuss, andere Ausschüsse, Finanzausschuss sowie Hauptausschuss und Rat.
   - **Phasen:** geplant laut Terminplan 261064, abgeleitet.
-  - **Punkte:** 23 Beschlüsse und Anträge aus den Strängen Haushalt, Bühnen und Kulturförderung, nummeriert und unterschieden nach entschieden, beraten oder offen.
+  - **Punkte:** Beschlüsse und Anträge (25 am 25.10.2026, nach Aufnahme von „Schauspiel“ in die Bühnen-Regel) aus den Strängen Haushalt, Bühnen und Kulturförderung, nummeriert und unterschieden nach entschieden, beraten oder offen.
   - **Lage eines Punkts:** die letzte Beratung mit Ergebnis, sonst die nächste. Ohne Beratungsfolge liegt der Punkt auf der Bahn des ersten Gremiums, ersatzweise des Rates, am Tag der Vorlage.
   - **Sitzungen:** Kommende öffentliche Sitzungen tragen ein Hand-Symbol, dazu die Frist 21 Tage vorher (GeschO §§ 26, 27; berechnet). Der Zeitraum der Haushaltsberatung ist farbig hinterlegt.
   - **Barrierefreiheit:** Die Grafik hat einen Titel und eine Beschreibung. Die nummerierte Liste darunter ist die Textfassung.
