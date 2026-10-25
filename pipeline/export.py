@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import datetime, timezone
 
-from . import chat, config, flaechen, gebietszahlen, glossar, maske, plans, process as proc, prozessarten, publish, soll, topics
+from . import chat, config, dossier, flaechen, gebietszahlen, glossar, maske, plans, process as proc, prozessarten, publish, soll, topics
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -271,6 +271,11 @@ def export_all():
     _dump(out / "soll.json", soll.site_data())
     # Reiter „Prozesse“: Vorgänge je Verfahren mit Beispielen, Gremien mit Sitzungen und Zuständigkeit
     _dump(out / "prozessarten.json", prozessarten.site_data(db))
+
+    # Themenseite „Kultur und Haushalt“: Vorlagen in Strängen, Sitzungen, Weg des Haushalts (dossier.py)
+    _dump(out / "dossiers" / "kultur.json",
+          dossier.daten(cache, home, meetings, proc.local_day(stand) if stand else datetime.now(timezone.utc).date().isoformat(),
+                        _meta(db, True)))
 
     # Vereinfachte Flächen für die Seite (Navigation, Umrisse, Bebauungspläne), komprimierbar als .json
     flaechen.write(out)
