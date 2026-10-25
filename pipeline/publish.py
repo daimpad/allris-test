@@ -117,6 +117,20 @@ def write_feeds(out, areas, cache, names, home, slug, since):
             f"{base}vorlagen/{name}.xml", site_link(area, p["reference"]), entries))
 
 
+def write_topic_feed(path, key, title, papers, home, page_url):
+    """Feed einer Themenseite: letzte Ereignisse der Vorlagen aller Stränge."""
+    entries = []
+    for pid, p in papers:
+        for e in events(p):
+            entries.append({**e, "link": site_link(home.get(pid, "gesamt"), p["reference"]), "original": p["web"]})
+    entries = sorted(entries, key=lambda e: (e["date"], e["id"]), reverse=True)[:FEED_LIMIT]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(_atom(
+        f"tag:allris-bonn,2026:feed/thema/{key}", f"RIS-Karte Bonn – {title}",
+        f"Neue Vorlagen und Beratungsergebnisse: {title} (Zuordnung abgeleitet)",
+        f"{config.SITE_URL}data/export/bonn/dossiers/{path.name}", page_url, entries))
+
+
 # --- Sitzungskalender (iCalendar) --------------------------------------------------------------------
 
 def _ics_text(value):

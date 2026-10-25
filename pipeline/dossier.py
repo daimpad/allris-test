@@ -10,6 +10,7 @@ import json
 import random
 import re
 import sqlite3
+from datetime import date, timedelta
 from html import escape
 from urllib.parse import quote
 
@@ -34,7 +35,26 @@ VERGLEICH = "240986"   # Haushaltssatzung 2025/2026 (Vergleich: Zahl der Vorlage
 TERMINPLAN = "261064"  # Rahmenterminplan Haushalt 2027/2028 (Grundlage der Schritte)
 SITZUNGEN = ("Kulturausschuss", "Kulturkommission", "Ausschuss für Finanzen, Beteiligungen und Vergabe",
              "Hauptausschuss", "Rat")
-SITZUNGEN_JE_GREMIUM = 2
+SITZUNGEN_JE_GREMIUM = 2  # Bezirksvertretungen: je eine (Haushaltsberatung und Einwohnerfragestunde, GeschO § 26)
+FRIST_TAGE = 21  # Anträge, Bürgeranträge und Einwohnerfragen spätestens 21 Tage vor der Sitzung (GeschO §§ 26, 27)
+
+# Prozessbild: Bahnen von oben nach unten (Schlüssel, Beschriftung)
+BAHNEN = [("plan", "Haushalt 2027/2028"), ("bv", "Bezirksvertretungen"), ("kultur", "Kulturausschuss"),
+          ("fach", "andere Ausschüsse"), ("finanz", "Finanzausschuss"), ("rat", "Hauptausschuss, Rat")]
+PUNKT_ARTEN = ("Beschlussvorlage", "Antrag", "Dringlichkeitsantrag")  # Punkte: Beschlüsse und Anträge
+PUNKT_STRAENGE = ("haushalt", "buehnen", "kultur_finanzen")
+# Phasen des Haushalts 2027/2028 laut Terminplan in 261064 (geplant, abgeleitet): oben der Ablauf im Ganzen,
+# darunter die Gremien, in denen beraten wird (Bahn, von, bis, Beschriftung, nicht öffentlich)
+PHASEN = [("plan", "2026-02-27", "2026-09-30", "Aufstellung in der Verwaltung", True),
+          ("plan", "2026-10-01", "2026-11-30", "Einbringung, Beratung", False),
+          ("plan", "2026-12-01", "2026-12-31", "Beschluss", False),
+          ("plan", "2027-01-01", "2027-03-31", "Genehmigung", False),
+          ("bv", "2026-10-01", "2026-11-30", "Beratung des Haushalts", False),
+          ("kultur", "2026-10-01", "2026-11-30", "Beratung des Haushalts", False),
+          ("fach", "2026-10-01", "2026-11-30", "Beratung des Haushalts", False),
+          ("finanz", "2026-11-01", "2026-11-30", "Vorberatung für den Rat", False),
+          ("rat", "2026-10-01", "2026-11-15", "Einbringung des Entwurfs", False),
+          ("rat", "2026-12-01", "2026-12-31", "Beschluss der Haushaltssatzung", False)]
 
 STRAENGE = [
     ("haushalt", "Haushalt und Konsolidierung",
@@ -137,6 +157,39 @@ def _eintrag(p, home, today):
     }
 
 
+def bahn(gremium):
+    g = gremium or ""
+    if g in KULTUR_GREMIEN:
+        return "kultur"
+    if g.startswith("Bezirksvertretung"):
+        return "bv"
+    if g == "Ausschuss für Finanzen, Beteiligungen und Vergabe":
+        return "finanz"
+    if g in ("Hauptausschuss", "Rat"):
+        return "rat"
+    return "fach"
+
+
+def _punkt(p, e):
+    """Lage eines Beschlusses oder Antrags im Prozessbild: letzte Beratung mit Ergebnis, sonst die nächste,
+    sonst das erste Gremium der Beratungsfolge am Tag der Vorlage."""
+    lb, nb = e["letzte_beratung"], e["naechste_beratung"]
+    if lb:
+        gremium, datum = lb["gremium"], lb["date"] or e["date"]
+    elif nb:
+        gremium, datum = nb["gremium"], nb["date"]
+    else:
+        gremium, datum = next((s["gremium"] for s in p["process"] if s.get("gremium")), "Rat"), e["date"]
+    art = "entschieden" if e["stand"] == "entschieden" else "offen" if e["stand"] in ("offen", "ohne Beratungsfolge") \
+        else "beraten"
+    return {"reference": e["reference"], "name": e["name"], "date": datum, "bahn": bahn(gremium), "gremium": gremium,
+            "art": art, "stand": e["stand"], "gebiet": e["gebiet"], "web": e["web"]}
+
+
+def _frist(datum):
+    return (date.fromisoformat(datum) - timedelta(days=FRIST_TAGE)).isoformat()
+
+
 def daten(cache, home, meetings, today, meta):
     """Inhalt der Themenseite aus den Vorlagen des Exports (cache: id → Vorgang, home: id → Gebiet)."""
     straenge = {k: [] for k, _, _ in STRAENGE}
@@ -144,15 +197,24 @@ def daten(cache, home, meetings, today, meta):
     for pid, p in cache.items():
         hit = _strang(p, verfahren)
         if hit:
-            straenge[hit[0]].append({**_eintrag(p, home.get(pid), today), "grund": hit[1]})
+            straenge[hit[0]].append({**_eintrag(p, home.get(pid), today), "grund": hit[1], "_pid": pid})
+    punkte = sorted((_punkt(cache[r["_pid"]], r) for k in PUNKT_STRAENGE for r in straenge[k]
+                     if r["paper_type"] in PUNKT_ARTEN), key=lambda x: (x["date"] or "", x["reference"]))
+    for i, x in enumerate(punkte, 1):
+        x["nr"] = i
+    for rows in straenge.values():
+        for r in rows:
+            del r["_pid"]
     for rows in straenge.values():
         rows.sort(key=lambda r: (r["date"] or "", r["reference"]), reverse=True)
     termine, je = [], {}
     for m in meetings:
-        if m["date"] >= today and not m["cancelled"] and m["gremium"] in SITZUNGEN:
-            if je.get(m["gremium"], 0) < SITZUNGEN_JE_GREMIUM:
+        bv = m["gremium"].startswith("Bezirksvertretung")
+        if m["date"] >= today and not m["cancelled"] and (m["gremium"] in SITZUNGEN or bv):
+            if je.get(m["gremium"], 0) < (1 if bv else SITZUNGEN_JE_GREMIUM):
                 je[m["gremium"]] = je.get(m["gremium"], 0) + 1
-                termine.append({k: m[k] for k in ("date", "time", "gremium", "web", "source_object")})
+                termine.append({**{k: m[k] for k in ("date", "time", "gremium", "web", "source_object")},
+                                "bahn": bahn(m["gremium"]), "frist": _frist(m["date"])})
     by_ref = {p["reference"]: (pid, p) for pid, p in cache.items()}
     plan = by_ref.get(TERMINPLAN)
     vergleich = by_ref.get(VERGLEICH)
@@ -161,7 +223,10 @@ def daten(cache, home, meetings, today, meta):
                  "mit Grund); Schritte des Haushalts aus Drucksache 261064 zusammengefasst, keine Zitate"},
         "straenge": [{"key": k, "titel": t, "regel": r, "eingeklappt": k in EINGEKLAPPT, "vorlagen": straenge[k]}
                      for k, t, r in STRAENGE],
+        "heute": today,
         "sitzungen": termine,
+        "punkte": punkte,
+        "phasen": [{"bahn": b, "von": v, "bis": t, "text": x, "intern": i} for b, v, t, x, i in PHASEN],
         "haushalt_schritte": [{"titel": t, "zeit": z, "text": x} for t, z, x in SCHRITTE],
         "terminplan": plan and {"reference": TERMINPLAN, "web": plan[1].get("web"), "gebiet": home.get(plan[0])},
         "vergleich": vergleich and {
@@ -202,6 +267,7 @@ def _row(root, r):
 
 
 def body(d, root):
+    from . import prozessbild
     schritte = "\n".join(f'      <li><strong>{escape(s["titel"])}</strong> ({escape(s["zeit"])}): {escape(s["text"])}</li>'
                          for s in d["haushalt_schritte"])
     tp = d.get("terminplan")
@@ -212,7 +278,9 @@ def body(d, root):
                  f'{vg["vorlagen"]} Vorlagen, vor allem Änderungsanträge und Stellungnahmen der Verwaltung.</p>\n') if vg else ""
     sitzungen = "\n".join(
         f'      <li>{_date(m["date"])}{(", " + m["time"] + " Uhr") if m.get("time") else ""}: {escape(m["gremium"])}'
-        + (f' (<a href="{escape(m["web"])}">Tagesordnung</a>)' if m.get("web") else "") + "</li>"
+        + (f' (<a href="{escape(m["web"])}">Tagesordnung</a>)' if m.get("web") else "")
+        + (f' <small>– Frist für Anträge und Fragen: {_date(m["frist"])}</small>' if m.get("frist", "") >= d["heute"]
+           else "") + "</li>"
         for m in d["sitzungen"]) or "      <li>Keine Sitzungen eingetragen.</li>"
     straenge = []
     for s in d["straenge"]:
@@ -233,20 +301,21 @@ def body(d, root):
     return f"""    <h1>Kultur und Haushalt</h1>
     <p class="lead">Welche Vorlagen und Verfahren hängen mit dem Haushalt der Stadt Bonn und der Kulturförderung zusammen? Diese Seite ordnet Vorlagen aus dem Ratsinformationssystem seit Beginn der Wahlperiode ({_date(d["meta"]["seit"])}) und zeigt, wann und wo darüber beraten wird.</p>
     <p class="meta">Die Seite beschreibt Verfahren; sie bewertet keine Entscheidungen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
+{prozessbild.abschnitt(d, root)}
     <h2>So entsteht der Haushalt 2027/2028</h2>
     <p>Zusammengefasst aus der {tp_link} (abgeleitet, keine Zitate). Die Zeitangaben sind geplant; Abweichungen sind möglich.</p>
     <ol>
 {schritte}
     </ol>
-{vergleich}    <h2>Nächste Sitzungen</h2>
-    <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher.</p>
+{vergleich}    <h2 id="sitzungen">Nächste Sitzungen</h2>
+    <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher. Die Frist (21 Tage vorher, GeschO §§ 26, 27) ist berechnet.</p>
     <ul>
 {sitzungen}
     </ul>
     <h2>Mitwirken</h2>
     <ul>
       <li><strong>Sitzungen besuchen:</strong> Rat und Ausschüsse tagen in der Regel öffentlich (§ 48 GO NRW).</li>
-      <li><strong>Einwohnerfragestunde:</strong> In Sitzungen können Einwohnerinnen und Einwohner Fragen stellen; Einzelheiten regelt die Geschäftsordnung des Rates.</li>
+      <li><strong>Einwohnerfragestunde:</strong> In den Bezirksvertretungen können Einwohnerinnen und Einwohner bis zu zwei Fragen stellen, eingereicht spätestens 21 Tage vor der Sitzung (GeschO § 26).</li>
       <li><strong>Anregungen und Beschwerden (§ 24 GO NRW):</strong> Jede Person kann sich schriftlich an den Rat oder eine Bezirksvertretung wenden. <a href="https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php">Bürgerantrag bei der Stadt Bonn</a></li>
       <li><a href="{root}?mitmachen=1">Alle Wege, Fristen und Sitzungen je Stadtbezirk auf der Karte</a></li>
     </ul>
