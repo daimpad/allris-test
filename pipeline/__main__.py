@@ -1,7 +1,7 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|fetch-haltestellen|kontext|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|fetch-haltestellen|kontext|kultur-stichprobe|all}"""
 import sys
 
-from . import baustellen, build, check, export, fetch, geocode, kandidaten, kontext, kurzfassung, seo, soll, stufe_c, verify
+from . import baustellen, build, check, dossier, export, fetch, geocode, kandidaten, kontext, kurzfassung, seo, soll, stufe_c, verify
 
 STEPS = {
     "fetch": fetch.fetch_all,
@@ -29,6 +29,7 @@ STEPS = {
     "kontext-ausschnitte": kontext.ausschnitte,  # einmalig: Ausschnitte für Bonn (Zensus, Bodenrichtwerte, Klima, ...)
     "fetch-haltestellen": kontext.fetch_haltestellen,  # monatlich: Haltestellen (VRS-GTFS)
     "kontext": kontext.write,  # Kontextdaten je Ortsteil (nach export)
+    "kultur-stichprobe": dossier.stichprobe,  # einmalig: Prüfbogen zur Themenseite Kultur und Haushalt (nach export)
     "soll": soll.write,  # Soll-Modell der Prozessebene: Verfahren je Vorgang, Abgleich mit den Beratungen (Audit)  # Baustellen und mögliche Umsetzungen (hoch) für die Seite
 }
 

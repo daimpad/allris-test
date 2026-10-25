@@ -1,5 +1,7 @@
 """Themenseite „Kultur und Haushalt“ (pipeline/dossier.py): Regeln der Stränge, Daten und Seite."""
+import csv
 import json
+import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
@@ -86,6 +88,31 @@ class Seite(unittest.TestCase):
     def test_ohne_daten_keine_seite(self):
         with tempfile.TemporaryDirectory() as tmp:
             self.assertEqual(dossier.write(Path(tmp), "https://example.org/", gebietsseiten._page), [])
+
+
+class Stichprobe(unittest.TestCase):
+    def test_zuordnung_und_gegenprobe_einmalig(self):
+        d = dossier.daten(CACHE, {}, MEETINGS, "2026-10-25", {})
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            (tmp / "kultur.json").write_text(json.dumps(d))
+            db = sqlite3.connect(tmp / "db.sqlite")
+            db.executescript("""CREATE TABLE paper (id TEXT, reference TEXT, paper_type TEXT, name TEXT, date TEXT, web TEXT);
+                INSERT INTO paper VALUES ('x', '261900', 'Antrag', 'Kulturfestival im Park', '2026-05-01', NULL),
+                  ('y', '261900-01 ST', 'Stellungnahme der Verwaltung', 'Kulturfestival im Park', '2026-06-01', NULL),
+                  ('z', '261901', 'Antrag', 'Sanierung Kunstrasenplatz', '2026-05-01', NULL),
+                  ('w', '261285', 'Antrag', 'Gleichbehandlung der Kulturangebote', '2026-06-01', NULL);""")
+            db.commit()
+            db.close()
+            out = tmp / "stichprobe.tsv"
+            dossier.stichprobe(tmp / "kultur.json", out, db_path=tmp / "db.sqlite")
+            rows = list(csv.reader(out.open(encoding="utf-8"), delimiter="\t"))
+            ohne = [r[1] for r in rows[1:] if r[6] == "nicht zugeordnet"]
+            self.assertEqual(ohne, ["261900"])  # eine Vorlage je Verfahren, kein Kunstrasen, nichts Zugeordnetes
+            self.assertEqual(len(rows) - 1, 6 + 1)  # alle 6 zugeordneten (je Strang höchstens die Sollzahl) + 1
+            out.write_text("geprüft")
+            dossier.stichprobe(tmp / "kultur.json", out, db_path=tmp / "db.sqlite")
+            self.assertEqual(out.read_text(), "geprüft")
 
 
 if __name__ == "__main__":
