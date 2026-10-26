@@ -6982,6 +6982,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232211-08	kein Ort						
 232211-09 ST	kein Ort						
 232212	kein Ort						
+232212-01 ST	kein Ort						
 232214	Titel ohne gemeinsamen Ort, nicht verortet						
 232218	kein Ort						
 232219	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -8538,9 +8539,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241177-06	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	1
 241177-07 ST	kein Ort						
 241177-09 ST	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	mittel	3
-241177-10	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
-241177-10	verortet	Hauptteil	volltext_strasse	Lambareneweg	Nordstadt	mittel	5
-241177-10	verortet	Hauptteil	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	4
 241177-11 ST	kein Ort						
 241177-12 AA	kein Ort						
 241177-13 AA	kein Ort						
@@ -8685,7 +8683,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241326	Titel ohne gemeinsamen Ort, nicht verortet						
 241328	kein Ort						
 241328-01 ST	kein Ort						
-241330	Liste (9 Ortsteile), nicht verortet	Hauptteil					
 241330-01 IB	Liste (7 Ortsteile), nicht verortet	Hauptteil					
 241331	kein Ort						
 241331-01 ST	kein Ort						
@@ -9290,6 +9287,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
 241998	kein Ort						
+241998-01 ST	kein Ort						
 242006	Titel ohne gemeinsamen Ort, nicht verortet						
 242009	Titel ohne gemeinsamen Ort, nicht verortet						
 242011	nur in Anlagen genannt, nicht verortet						
@@ -11848,7 +11846,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260494-01 AA	kein Ort						
 260495	verortet	Hauptteil	volltext_strasse	Brühler Straße	Nordstadt	mittel	2
 260495	verortet	Hauptteil	volltext_strasse	Justus-von-Liebig-Straße	Dransdorf	mittel	2
-260498	kein Ort						
 260498-01 ST	kein Ort						
 260500	verortet	Hauptteil	volltext_ortsteil_name	Plittersdorf	Plittersdorf	niedrig	1
 260502	verortet	Hauptteil	volltext_strasse+bezirk	Kölnstraße	Auerberg	mittel	2
@@ -11929,7 +11926,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260596	kein Ort						
 260597	kein Ort						
 260597-01	kein Ort						
-260599	kein Ort						
 260599-01 ST	nur in Anlagen genannt, nicht verortet						
 260599-02 ST	kein Ort						
 260600	kein Ort						
@@ -12351,7 +12347,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Argelanderstraße	Südstadt	niedrig	1
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Ermekeilstraße	Südstadt	niedrig	1
 260971	kein Ort						
-260971-01 ST	kein Ort						
 260972	nur in Anlagen genannt, nicht verortet						
 260974	Titel ohne gemeinsamen Ort, nicht verortet						
 260976	kein Ort						
@@ -12785,7 +12780,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261305	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Limperich	niedrig	1
 261305	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Schwarzrheindorf / Vilich-Rheindorf	niedrig	1
 261306	kein Ort						
-261306-01 ST	kein Ort						
 261307	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	2
 261307-01 AA	kein Ort						
 261307-02 ST	kein Ort						
