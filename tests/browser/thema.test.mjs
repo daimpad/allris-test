@@ -106,6 +106,25 @@ test("Themenseite Verkehr: Stränge nach Stadtbezirk, Übersicht thema/, ohne Ve
   await page.close();
 });
 
+test("Themenseite Wohnen: Stränge, weitere nach Stadtbezirk, Verweis auf die Planebene, ohne Verstöße", async () => {
+  const page = await browser.newPage({ viewport: { width: 1024, height: 900 }, bypassCSP: true });
+  page.errors = [];
+  page.on("pageerror", (e) => page.errors.push(String(e)));
+  await page.goto(SITE + "thema/wohnen-und-bauen/", { waitUntil: "networkidle" });
+  for (const k of ["turbo", "bebauungsplan", "wohnraum", "denkmal", "weitere"]) {
+    assert.ok(await page.locator(`.pb-schalter[data-strang='${k}']`).count(), "Schalter " + k);
+  }
+  assert.ok(await page.locator("#weitere ~ details summary").count() >= 2, "weitere je Stadtbezirk");
+  assert.equal(await page.locator("a[href='../../?plaene=1']").count(), 1);
+  await page.locator("a.pb-ziel[data-ziel^='punkt-']").first().click();
+  assert.equal(await page.locator("#pb-detail").isHidden(), false);
+  assert.deepEqual(await axe(page), []);
+  await page.goto(SITE + "thema/", { waitUntil: "networkidle" });
+  assert.equal(await page.locator("a[href='../thema/wohnen-und-bauen/']").count(), 1);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
 test("Themenseite Schule: Stränge, Detailfeld, ohne Verstöße", async () => {
   const page = await browser.newPage({ viewport: { width: 390, height: 900 }, bypassCSP: true });
   page.errors = [];

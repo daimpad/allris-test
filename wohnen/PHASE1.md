@@ -2,7 +2,7 @@
 
 **Grundlage:** `phase0/BERICHT.md` mit den Entscheidungen vom 26.10.2026.
 
-**Stand:** Entwurf. `wohnen` steht in `ENTWUERFE`, nicht in `ALLE`: kein Export, keine Seite, bis der Prüfbogen im Gespräch geprüft ist.
+**Stand:** Nach der Prüfung im Gespräch am 26.10.2026 sind die Regeln ergänzt (A–C), und die Seite ist veröffentlicht (`PRUEFUNG.md`). Bis dahin war `wohnen` ein Entwurf ohne Seite und ohne Export.
 
 ## Regeln (`pipeline/themenseiten/wohnen.py`, abgeleitet, je Vorlage mit Grund)
 Die erste passende Regel gilt.
