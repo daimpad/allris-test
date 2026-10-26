@@ -395,7 +395,11 @@ def body(t, d, root):
 """ + tabelle)
     inhalt = " · ".join(f'<a href="#{s["key"]}">{escape(s["titel"])}</a>' for s in d["straenge"])
     nicht = "\n".join(f"      <li>{x}</li>" for x in t.nicht_gezeigt)
-    return f"""    <h1>{escape(t.titel)}</h1>
+    ink, von, bis = t.farben  # Kopf wie die Kachel der Übersicht thema/ (Symbol und Farbverlauf)
+    return f"""    <div class="thema-kopf" style="--k-ink:{ink};--k-von:{von};--k-bis:{bis}">
+      <div class="kachel-kopf thema-band">{_svg(t.symbol, "kachel-symbol")}<a class="thema-alle" href="{root}{UEBERSICHT}">Alle Themen</a></div>
+      <h1>{escape(t.titel)}</h1>
+    </div>
     <p class="lead">{escape(t.lead.format(seit=_date(d["meta"]["seit"])))}</p>
     <p class="meta">Die Seite beschreibt Verfahren; sie bewertet keine Entscheidungen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
 {prozessbild.abschnitt(t, d, root)}
