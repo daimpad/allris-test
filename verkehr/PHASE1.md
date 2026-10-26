@@ -2,7 +2,7 @@
 
 **Grundlage:** `phase0/BERICHT.md` mit den Entscheidungen vom 26.10.2026.
 
-**Stand:** Entwurf. Die Seite ist nicht veröffentlicht: `verkehr` steht in `ENTWUERFE`, nicht in `ALLE`. Deshalb gibt es weder eine Seite noch Daten im Export.
+**Stand:** Nach der Prüfung im Gespräch am 26.10.2026 sind die Regeln ergänzt, und die Seite ist veröffentlicht (`PRUEFUNG.md`). Bis dahin war `verkehr` ein Entwurf ohne Seite und ohne Export.
 
 ## Regeln (`pipeline/themenseiten/verkehr.py`, abgeleitet, je Vorlage mit Grund)
 Die erste passende Regel gilt.

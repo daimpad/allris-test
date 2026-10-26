@@ -1,5 +1,6 @@
-// Browser-Prüfung der Themenseite „Kultur und Haushalt“ (pipeline/prozessbild.py, site/thema.js): Detailfeld
-// zu Punkt und Sitzung, Esc, Schalter der Stränge, Auswahl im Seitenlink; Barrierefreiheit mit axe-core
+// Browser-Prüfung der Themenseiten (pipeline/prozessbild.py, site/thema.js): Kultur und Haushalt mit Detailfeld
+// zu Punkt und Sitzung, Esc, Schalter der Stränge, Auswahl im Seitenlink; Verkehr und Mobilität mit Stadtbezirken
+// und Übersicht thema/; Barrierefreiheit mit axe-core
 // (WCAG 2.1 A und AA). Erwartet die zusammengestellte Seite mit dem Schritt seo unter SITE.
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
@@ -83,6 +84,24 @@ test("Themenseite: Link mit Auswahl und Strängen stellt den Zustand her", async
   const zustand = await page.$$eval(".pb-schalter", (bs) => bs.map((b) => `${b.dataset.strang}=${b.getAttribute("aria-pressed")}`));
   assert.ok(zustand.includes("haushalt=true") && zustand.every((z) => z.startsWith("haushalt") || z.endsWith("false")),
     zustand.join(" "));
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
+test("Themenseite Verkehr: Stränge nach Stadtbezirk, Übersicht thema/, ohne Verstöße", async () => {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, bypassCSP: true });
+  page.errors = [];
+  page.on("pageerror", (e) => page.errors.push(String(e)));
+  await page.goto(SITE + "thema/verkehr-und-mobilitaet/", { waitUntil: "networkidle" });
+  assert.ok(await page.locator("#weitere ~ details summary").count() >= 2, "weitere Vorlagen je Stadtbezirk");
+  assert.ok(await page.locator(".pb-schalter[data-strang='nordbruecke']").isVisible(), "Schalter Nordbrücke");
+  await page.locator("a.pb-ziel[data-ziel^='punkt-']").first().click();
+  assert.equal(await page.locator("#pb-detail").isHidden(), false);
+  assert.deepEqual(await axe(page), []);
+  await page.goto(SITE + "thema/", { waitUntil: "networkidle" });
+  assert.equal(await page.locator("a[href='../thema/verkehr-und-mobilitaet/']").count(), 1);
+  assert.equal(await page.locator("a[href='../thema/kultur-und-haushalt/']").count(), 1);
+  assert.deepEqual(await axe(page), []);
   assert.deepEqual(page.errors, []);
   await page.close();
 });

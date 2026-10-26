@@ -1,5 +1,5 @@
-"""Themenseite „Verkehr und Mobilität“ (thema/verkehr-und-mobilitaet/), ENTWURF: noch nicht in ALLE, erscheint
-erst nach Prüfung des Prüfbogens im Gespräch. Phase 0 und Entscheidungen: verkehr/phase0/BERICHT.md.
+"""Themenseite „Verkehr und Mobilität“ (thema/verkehr-und-mobilitaet/). Phase 0 und Entscheidungen:
+verkehr/phase0/BERICHT.md; Prüfbogen im Gespräch geprüft am 26.10.2026, danach Regeln ergänzt (verkehr/PRUEFUNG.md).
 
 Grundlage ist die abgeleitete Themenzuordnung „Verkehr und Mobilität“ (topics.py: Amt 61-3 Stadtverkehr und 66,
 Ausschuss für Mobilität und Verkehr, Stichwörter). Stränge nach Wörtern im Titel, die Sperrung der Nordbrücke als
@@ -10,20 +10,25 @@ from datetime import date
 from ..dossier import Regel, Thema
 from . import haushalt
 
-# Vergabe der Grünpflege an Straßen („Verkehrsgrün“) gehört nicht zum Thema (Phase 0: 7 Vorlagen)
+# Vergabe der Grünpflege an Straßen („Verkehrsgrün“) gehört nicht zum Thema (Phase 0: 7 Vorlagen); Abwasser und
+# Abfall ebenso (Prüfung 26.10.2026: Abwasserbeseitigungskonzept, Altglascontainer an einer Haltestelle)
 AUSSCHLUSS = re.compile(r"Verkehrsgrün|Straßenbegleitgrün|Landschaftsgärtnerische Pflege|Verkehrssicherung und "
-                        r"Unterhalt", re.I)
+                        r"Unterhalt|Abwasser|Altglas|Glascontainer|Abfall|Müll", re.I)
 NORDBRUECKE = re.compile(r"Nordbrücke", re.I)  # auch „Nordbrückensperrung“, „Nordbrücken-Sperrung“
 BUS_BAHN = re.compile(r"ÖPNV|ÖSPV|Nahverkehr|\bBus(?!iness)|Busse|Haltestelle|Stadtbahn|Straßenbahn|Seilbahn|S-Bahn|"
                       r"Regionalbahn|Bahnhof|Schienen|Fahrplan|\bTakt|\bLinie|\bSB ?\d|Ticket|Rufbus|On-Demand|"
                       r"Stadtwerke|SWB", re.I)
-# Parken vor Rad und Fuß (Gehwegparken), aber nicht Fahrradparken
+# Parken vor Bus und Bahn (Parkplätze am Bahnhof) und vor Rad und Fuß (Gehwegparken), aber nicht Fahrradparken
+# und nicht Fahrrad- oder Lastenradstellplätze; „Park- und …“ mit Ergänzungsstrich zählt (Prüfung 26.10.2026)
 PARKEN = re.compile(r"(?<!fahrrad)(?<!rad)park(?:en|platz|plätz|raum|haus|häus|gebühr|schein|verbot|druck|situation|"
-                    r"möglichkeit|zone)|Bewohnerpark|Anwohnerpark|Halteverbot|Stellpl(?:atz|ätz)|Ladezone|Lieferzone",
-                    re.I)
+                    r"möglichkeit|zone)|\bPark- |Park ?(?:&|\+|and) ?Ride|\bP\+R\b|Bewohnerpark|Anwohnerpark|Halteverbot|"
+                    r"(?<!rad)(?<!rad-)(?<!ab)Stellpl(?:atz|ätz)|Ladezone|Lieferzone", re.I)
 RAD_FUSS = re.compile(r"\bRad(?:verkehr|weg|fahr|streifen|schnell|spur|station|abstell|bügel|route|netz|parken|achse|"
                       r"pendler|wege)|Fahrrad|Lastenrad|Fußverkehr|Fußgänger|Fußweg|Gehweg|Zebrastreifen|Querung|"
                       r"Bürgersteig|Gehsteig|E-Scooter|Scooter", re.I)
+# Auch außerhalb der Themenzuordnung (Prüfung 26.10.2026: Gegenprobe, 3 von 6 fehlten)
+EINSPURIG = re.compile(r"einspurig", re.I)  # Überholverbot für einspurige Fahrzeuge (Radverkehr)
+ZUSATZ = re.compile(r"Beschilderung|Verkehrszeichen|Überhol|Fahrbeziehung|Fahrstreifen|Autobahn", re.I)
 MOBIL = ("Ausschuss für Mobilität und Verkehr",)
 
 THEMA = Thema(
@@ -42,25 +47,30 @@ THEMA = Thema(
          "außerhalb der Themenzuordnung)"),
         ("bus_bahn", "Bus und Bahn",
          "Thema Verkehr und Mobilität, und der Titel nennt ÖPNV, Nahverkehr, Bus, Haltestelle, Stadtbahn, Seilbahn, "
-         "Bahnhof, Fahrplan, Takt, Linie, Ticket o. Ä."),
+         "Bahnhof, Fahrplan, Takt, Linie, Ticket o. Ä. (nicht Parken)"),
         ("parken", "Parken",
          "Thema Verkehr und Mobilität, und der Titel nennt Parken, Parkplätze, Parkraum, Parkgebühren, "
-         "Bewohnerparken, Halteverbot, Stellplätze o. Ä. (nicht Fahrradparken)"),
+         "Bewohnerparken, Halteverbot, Stellplätze o. Ä. (nicht Fahrradparken, nicht Fahrrad- oder "
+         "Lastenradstellplätze)"),
         ("rad_fuss", "Rad- und Fußverkehr",
          "Thema Verkehr und Mobilität, und der Titel nennt Radverkehr, Radwege, Fahrrad, Fußverkehr, Gehwege, "
-         "Zebrastreifen, Querungen, E-Scooter o. Ä."),
+         "Zebrastreifen, Querungen, E-Scooter o. Ä.; dazu Titel mit einspurigen Fahrzeugen"),
         ("weitere", "Weitere Vorlagen zu Verkehr und Mobilität",
-         "Thema Verkehr und Mobilität ohne die Merkmale der anderen Stränge; nach Stadtbezirk"),
+         "Thema Verkehr und Mobilität ohne die Merkmale der anderen Stränge, dazu Titel mit Beschilderung, "
+         "Verkehrszeichen, Überholen, Fahrbeziehung, Fahrstreifen oder Autobahn; ohne Abwasser, Abfall und "
+         "Grünpflege; nach Stadtbezirk"),
     ],
     regeln=[
         # ganzes Verfahren nur, wenn die Stammvorlage die Nordbrücke nennt (sonst zöge ein Änderungsantrag zum
         # Nahverkehrsplan das ganze Verfahren mit); einzelne Vorlagen über den Titel
         Regel("nordbruecke", verfahren_titel=NORDBRUECKE, nur_stammvorlage=True),
         Regel("nordbruecke", titel=NORDBRUECKE),
-        Regel("bus_bahn", thema="verkehr", titel=BUS_BAHN),
         Regel("parken", thema="verkehr", titel=PARKEN),
+        Regel("bus_bahn", thema="verkehr", titel=BUS_BAHN),
         Regel("rad_fuss", thema="verkehr", titel=RAD_FUSS),
         Regel("weitere", thema="verkehr"),
+        Regel("rad_fuss", titel=EINSPURIG),
+        Regel("weitere", titel=ZUSATZ),
     ],
     ausschluss=AUSSCHLUSS,
     nach_bezirk=frozenset({"weitere"}),  # vollständig, je Stadtbezirk eingeklappt (Entscheidung 26.10.2026)
@@ -84,7 +94,8 @@ THEMA = Thema(
             "Vorlage mit Grund); Schritte des Haushalts aus Drucksache 261064 zusammengefasst, keine Zitate",
     bild_titel="Zeitleiste: Verkehr und Mobilität in Rat, Hauptausschuss und Mobilitätsausschuss",
     feed_text="zu Verkehr und Mobilität",
-    pruefung_text="Die Zuordnung ist noch nicht von Hand geprüft.",
+    pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 26.10.2026 im Gespräch geprüft (16 passend, 3 teilweise, "
+                  "5 unpassend; in der Gegenprobe fehlten 3 von 6), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten von Maßnahmen stehen in den Dokumenten der Vorlagen und im Haushaltsplan "
         "der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge.",

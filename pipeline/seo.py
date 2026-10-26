@@ -38,5 +38,6 @@ def write(site=Path("_site"), site_url=None):
     (site / "robots.txt").write_text(robots(site_url), encoding="utf-8")
     areas = gebietsseiten.write(site, site_url)
     themen = [pfad for t in THEMENSEITEN for pfad in dossier.write(t, site, site_url, gebietsseiten._page)]
+    themen = dossier.uebersicht(THEMENSEITEN, site, site_url, gebietsseiten._page) + themen
     (site / "sitemap.xml").write_text(sitemap(site_url, [*themen, *areas]), encoding="utf-8")
     print(f"robots.txt, sitemap.xml und Adressen für {site_url}")
