@@ -230,6 +230,11 @@ class Schule(unittest.TestCase):
             "h": v("261907", "Tagesordnungspunkte in nichtöffentlicher Sitzung", amt="40 Schulamt"),
             "i": v("261908", "Neubau der Musikschule"),
             "j": v("261909", "Abbau von Altschulden"),
+            "k": v("261910", "Schulstraße in Lengsdorf - Gehwegergänzung"),
+            "l": v("261911", "Kleine Anfrage zu Schulstraßen"),
+            "m": v("261912", "Betreuungsangebot für Vorschulkinder"),
+            "n": v("261913", "Errichtung einer Schranke am Berufskolleg"),
+            "o": v("261914", "Errichtung einer dritten Gesamtschule in Beuel"),
         }
         self.d = dossier.daten(self.t, cache, {}, [], "2026-10-26", {})
         self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
@@ -245,7 +250,16 @@ class Schule(unittest.TestCase):
         for ref in ("261905", "261906", "261907", "261908", "261909"):
             self.assertNotIn(ref, self.by, ref)
 
-    def test_entwurf_ohne_seite(self):
+    def test_regeln_nach_pruefung(self):
+        # A: „Schulstraße“ in der Einzahl ist ein Straßenname, „Schulstraßen“ zählen
+        self.assertNotIn("261910", self.by)
+        self.assertEqual(self.by["261911"], ("schulweg", "Titel: „Schulstraßen“"))
+        # B: Errichtung nur einer Schule; C: „Vorschul…“ ist kein Schulwort
+        self.assertEqual(self.by["261913"], ("weitere", "Titel: „Berufskolleg“"))
+        self.assertEqual(self.by["261914"][0], "plaetze")
+        self.assertNotIn("261912", self.by)
+
+    def test_veroeffentlicht(self):
         from pipeline.themenseiten import ENTWUERFE
-        self.assertIn(self.t, ENTWUERFE)
-        self.assertNotIn(self.t, ALLE)
+        self.assertIn(self.t.key, [t.key for t in ALLE])
+        self.assertNotIn(self.t, ENTWUERFE)

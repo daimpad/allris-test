@@ -1,5 +1,5 @@
-"""Themenseite „Schule und Bildung“ (thema/schule-und-bildung/), ENTWURF: noch nicht in ALLE, erscheint erst nach
-Prüfung des Prüfbogens im Gespräch. Phase 0 und Entscheidungen: schule/phase0/BERICHT.md.
+"""Themenseite „Schule und Bildung“ (thema/schule-und-bildung/). Phase 0 und Entscheidungen: schule/phase0/BERICHT.md;
+Prüfbogen im Gespräch geprüft am 26.10.2026, danach Regeln A–C (schule/PRUEFUNG.md).
 
 Eigene Regeln statt der vorhandenen Themenzuordnung (dort trifft „Bildung“ auch die Bildung von Ausschüssen):
 Schulamt, Schulausschuss und Wörter für Schulen im Titel. Nur Schulen, ohne Kitas, Musikschule und Weiterbildung
@@ -10,14 +10,21 @@ from datetime import date
 from ..dossier import Regel, Thema, Zustaendig
 from . import haushalt
 
-# Wörter für Schulen; nicht Volkshochschule, Musikschule, Hochschule, Kunst- oder Tanzschule, nicht „Schulden“
-SCHULE = re.compile(r"(?<!volkshoch)(?<!musik)(?<!hoch)(?<!kunst)(?<!tanz)Schul(?!d)|Gymnasi|Berufskolleg|"
-                    r"Förderzentrum|\bOGS\b|Ganztag|Schüler", re.I)
-SCHULWEG = re.compile(r"Schulweg|Schulstraße|Elterntaxi|Schülerverkehr|Schüler\S*\s?-?Ticket|Schülerticket|Schulbus|Querung|"
+# „Schulstraße“ in der Einzahl ist meist ein Straßenname (Prüfung 26.10.2026: Lengsdorf); es zählen nur
+# „Schulstraßen“ und „eine(r) Schulstraße“
+STRASSENNAME = r"(?!straße\b)"
+SCHULSTRASSE = r"Schulstraßen|\beiner? Schulstraße"
+# Wörter für Schulen; nicht Volkshochschule, Musikschule, Hochschule, Kunst- oder Tanzschule, nicht „Schulden“,
+# nicht „Vorschul…“ (Kinder vor der Einschulung, Prüfung 26.10.2026)
+SCHULE = re.compile(SCHULSTRASSE + r"|(?<!volkshoch)(?<!musik)(?<!hoch)(?<!kunst)(?<!tanz)(?<!vor)Schul(?!d)"
+                    + STRASSENNAME + r"|Gymnasi|Berufskolleg|Förderzentrum|\bOGS\b|Ganztag|Schüler", re.I)
+SCHULWEG = re.compile(SCHULSTRASSE + r"|Schulweg|Elterntaxi|Schülerverkehr|Schüler\S*\s?-?Ticket|Schülerticket|Schulbus|Querung|"
                       r"Ampel|Zebrastreifen|Tempo|Fußgänger|Radweg|Fahrrad|Verkehr|Haltestelle|Parken|Parkpl", re.I)
 BAU = re.compile(r"Neubau|Sanierung|saniert|Erweiterung|Umbau|Ausbau|Modulbau|Container|Interim|Turnhalle|"
                  r"Sporthalle|Mensa|Toilette|Schulhof|Brandschutz|Schulbau|Gebäude|Pavillon|Dach", re.I)
-PLAETZE = re.compile(r"\bOGS\b|Ganztag|Zügigkeit|zügig|Schulplätze|Errichtung|Gründung|Auflösung|Anmelde|Kapazität|"
+# Errichtung und Gründung nur einer Schule (Prüfung 26.10.2026: „Errichtung einer Schranke“)
+PLAETZE = re.compile(r"\bOGS\b|Ganztag|Zügigkeit|zügig|Schulplätze|(?:Errichtung|Gründung) (?:einer|eines|der|des) "
+                     r"(?:\S+ )?\S*(?:schule|Gymnasium|Berufskolleg|Förderzentrum)|Auflösung|Anmelde|Kapazität|"
                      r"Eingangsklasse|Schulentwicklung|Aufnahme|Schulnetz|Klassenbildung|Betreuung", re.I)
 # Sammellisten nichtöffentlicher Punkte und Formalien des Ausschusses
 AUSSCHLUSS = re.compile(r"Tagesordnungspunkte in nichtöffentlicher Sitzung|Bestellung der Schriftführung|"
@@ -37,14 +44,14 @@ THEMA = Thema(
     seit="2025-11-01",  # Beginn der 12. Wahlperiode (legislative_terms)
     straenge=[
         ("schulweg", "Schulweg und Schülerticket",
-         "Titel nennt eine Schule und Schulweg, Schulstraße, Elterntaxi, Schülerticket, Querung, Ampel, Zebrastreifen, Tempo, "
+         "Titel nennt eine Schule und Schulweg, Schulstraßen, Elterntaxi, Schülerticket, Querung, Ampel, Zebrastreifen, Tempo, "
          "Radweg, Haltestelle, Parken o. Ä."),
         ("bau", "Schulbau und Sanierung",
          "Titel nennt eine Schule und Neubau, Sanierung, Erweiterung, Umbau, Interim, Container, Turnhalle, Mensa, "
          "Toiletten, Schulhof, Brandschutz o. Ä."),
         ("plaetze", "Schulplätze und Ganztag",
-         "Titel nennt eine Schule und Zügigkeit, Errichtung, Gründung, Anmeldungen, Kapazität, Schulentwicklung, "
-         "Betreuung oder den offenen Ganztag (OGS)"),
+         "Titel nennt eine Schule und Zügigkeit, Errichtung oder Gründung einer Schule, Anmeldungen, Kapazität, "
+         "Schulentwicklung, Betreuung oder den offenen Ganztag (OGS)"),
         ("weitere", "Weitere Vorlagen zu Schulen",
          "Schulamt federführend, Beratung im Schulausschuss oder eine Schule im Titel, ohne die Merkmale der anderen "
          "Stränge; ohne Kitas, Musikschule, Volkshochschule und Sammellisten nichtöffentlicher Punkte"),
@@ -79,7 +86,8 @@ THEMA = Thema(
             "mit Grund); Schritte des Haushalts aus Drucksache 261064 zusammengefasst, keine Zitate",
     bild_titel="Zeitleiste: Schulen in Rat, Hauptausschuss, Schulausschuss und Bezirksvertretungen",
     feed_text="zu Schulen",
-    pruefung_text="Die Zuordnung ist noch nicht von Hand geprüft.",
+    pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 26.10.2026 im Gespräch geprüft (18 passend, 3 teilweise, "
+                  "3 unpassend; in der Gegenprobe fehlte keine von 6), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten von Schulbau und Sanierung stehen in den Dokumenten der Vorlagen und im "
         "Haushaltsplan der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge.",
