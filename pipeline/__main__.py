@@ -1,8 +1,8 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|all}"""
 import sys
 
 from . import baustellen, build, check, dossier, export, fetch, geocode, kandidaten, kontext, kurzfassung, seo, soll, stufe_c, verify
-from .themenseiten import kultur, schule, verkehr
+from .themenseiten import kultur, schule, verkehr, wohnen
 
 STEPS = {
     "fetch": fetch.fetch_all,
@@ -33,6 +33,7 @@ STEPS = {
     "kultur-stichprobe": lambda: dossier.stichprobe(kultur.THEMA),  # einmalig: Prüfbogen zur Themenseite (nach export)
     "verkehr-stichprobe": lambda: dossier.stichprobe(verkehr.THEMA),  # einmalig: Prüfbogen (Entwurf, aus der Datenbank)
     "schule-stichprobe": lambda: dossier.stichprobe(schule.THEMA),  # einmalig: Prüfbogen (Entwurf, aus der Datenbank)
+    "wohnen-stichprobe": lambda: dossier.stichprobe(wohnen.THEMA),  # einmalig: Prüfbogen (Entwurf, aus der Datenbank)
     "soll": soll.write,  # Soll-Modell der Prozessebene: Verfahren je Vorgang, Abgleich mit den Beratungen (Audit)  # Baustellen und mögliche Umsetzungen (hoch) für die Seite
 }
 

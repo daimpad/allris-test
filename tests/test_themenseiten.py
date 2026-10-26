@@ -263,3 +263,49 @@ class Schule(unittest.TestCase):
         from pipeline.themenseiten import ENTWUERFE
         self.assertIn(self.t.key, [t.key for t in ALLE])
         self.assertNotIn(self.t, ENTWUERFE)
+
+
+class Wohnen(unittest.TestCase):
+    """Regelentwurf der Themenseite Wohnen und Bauen (themenseiten/wohnen.py, Entwurf): Reihenfolge der Titelregeln,
+    Zuständigkeit ohne Verkehr (ohne_thema), Ausschluss von Bühnen und „Miet…“ ohne Wohnbezug."""
+
+    def setUp(self):
+        from pipeline.themenseiten import wohnen
+
+        def v(ref, name, amt="01-2 Ratsbüro", gremien=("Bezirksvertretung Bonn",), themen=()):
+            p = vorlage(ref, name, amt=amt, gremien=gremien)
+            p["themes"] = [{"theme": t, "method": "stichwort", "evidence": t} for t in themen]
+            p["locations"] = []
+            return p
+        self.t = wohnen.THEMA
+        cache = {
+            "a": v("261900", "Verfahrensbeschleunigung in der Bauleitplanung"),
+            "b": v("261901", "Bebauungsplan Nr. 1234-5 „Am Bach“ mit gefördertem Wohnraum"),
+            "c": v("261902", "Antrag: Housing First"),
+            "d": v("261903", "Eintragung in die Denkmalliste"),
+            "e": v("261904", "Tempo 30 vor einem denkmalgeschützten Haus", themen=("verkehr",)),
+            "f": v("261905", "Nutzungsänderung eines Ladens", amt="63 Bauordnungsamt"),
+            "g": v("261906", "Neue Ampel an der Kreuzung", amt="61 Stadtplanungsamt", themen=("verkehr",)),
+            "h": v("261907", "Fahrradmietsystem: neue Stationen"),
+            "i": v("261908", "Zukunft Bonner Bühnen: Denkmalschutz"),
+            "j": v("261909", "Sachstand", gremien=("Ausschuss für Planen, Bauen und Denkmalschutz",)),
+        }
+        self.d = dossier.daten(self.t, cache, {}, [], "2026-10-26", {})
+        self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_straenge(self):
+        self.assertEqual(self.by["261900"][0], "turbo")  # vor Bebauungsplänen
+        self.assertEqual(self.by["261901"][0], "bebauungsplan")  # vor Wohnraum
+        self.assertEqual(self.by["261902"], ("wohnraum", "Titel: „Housing First“"))
+        self.assertEqual(self.by["261903"][0], "denkmal")
+        self.assertEqual(self.by["261905"], ("weitere", "federführend: 63 Bauordnungsamt"))
+        self.assertEqual(self.by["261909"][0], "weitere")
+
+    def test_ohne_verkehr_und_ausschluss(self):
+        for ref in ("261904", "261906", "261907", "261908"):
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_entwurf_ohne_seite(self):
+        from pipeline.themenseiten import ENTWUERFE
+        self.assertIn(self.t, ENTWUERFE)
+        self.assertNotIn(self.t.key, [t.key for t in ALLE])

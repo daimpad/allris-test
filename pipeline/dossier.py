@@ -40,7 +40,8 @@ class Regel:
     - titel: Wort im Titel; mit zustaendig oder thema zusätzlich dazu, sonst allein
     - zustaendig: Amt, Stelle oder Gremium; ohne Treffer im Titel gilt der Strang sonst
     - thema: Schlüssel der Themenzuordnung (topics.py, abgeleitet); wie zustaendig
-    - bedingung: ein zweites Merkmal, das der Titel zusätzlich nennen muss (z. B. ein Wort für Schule)"""
+    - bedingung: ein zweites Merkmal, das der Titel zusätzlich nennen muss (z. B. ein Wort für Schule)
+    - ohne_thema: Schlüssel der Themenzuordnung; Vorlagen mit diesem Thema überspringen die Regel"""
     strang: str
     stammnummer: str = None
     verfahren_titel: re.Pattern = None
@@ -50,6 +51,7 @@ class Regel:
     thema: str = None
     sonst: str = None
     bedingung: re.Pattern = None
+    ohne_thema: str = None
 
 
 @dataclass(frozen=True)
@@ -161,6 +163,8 @@ def zuordnen(t, p, verfahren=None):
             continue
         mb = r.bedingung and r.bedingung.search(name)
         if r.bedingung and not mb:
+            continue
+        if r.ohne_thema and _thema(r.ohne_thema, p):
             continue
         if r.zustaendig or r.thema:
             grund = _zustaendig(r.zustaendig, p) if r.zustaendig else _thema(r.thema, p)
