@@ -44,3 +44,16 @@ Entscheidungen des Auftraggebers:
 - **Bedienung:** mit der Tabulatortaste erreichbar, mit deutlichem Fokus (Rahmen und kräftige Kontur). Der Name für Screenreader ist der Kurztext des Elements. Ohne `role="img"`, weil die Kinder eines Bildes für Screenreader nicht erreichbar wären. Geprüft wurde in Chromium: 45 Links im Barrierebaum, axe ohne Verstöße bei 1440 und 390 px, vnu ohne Fehler.
 - **Bild zum Teilen:** bleibt ohne Links.
 - **Liste unter dem Bild:** bleibt als Textfassung erhalten.
+
+## Nachtrag: Bild interaktiv (26.10.2026, Stufe 2)
+- **Detailfeld unter dem Bild:** Ein Klick oder die Eingabetaste öffnet es; man bleibt auf der Seite.
+  - Punkt: Art, federführendes Amt, Stand, Strang mit Grund (abgeleitet), Beratungsfolge mit dem Ergebnis wörtlich aus der Quelle, Links zu Karte und Original.
+  - Sitzung: Datum, berechnete Frist (abgeleitet), Tagesordnung, Kalender, Wege zum Mitwirken.
+  - Planbalken: Zeitraum, „geplant laut 261064“, Links.
+- **Schalter:** blenden die Stränge Haushalt, Bühnen und Kulturförderung aus. Punkte und Listenzeilen anderer Stränge treten zurück.
+- **Hervorhebung:** Bild und Liste heben sich gegenseitig hervor.
+- **Seitenlink:** Auswahl und Schalter stehen in der Adresse, etwa `#auswahl=261285&straenge=haushalt`.
+- **Bedienung:** Esc schließt das Feld, der Fokus kehrt zum Element zurück. Die Auswahl wird für Screenreader angesagt. Die Schalter melden ihren Zustand mit `aria-pressed`.
+- **Ohne Skript:** Die Links aus Stufe 1 bleiben wirksam, die Schalter sind verborgen.
+- **Daten:** stehen als JSON in der Seite (wird nicht ausgeführt, `</` maskiert), damit Bild und Feld denselben Stand haben. Die Punkte in `kultur.json` haben zusätzlich Strang, Grund, Art, Amt und Beratungsfolge. Es kommt keine neue Quelle hinzu.
+- **Prüfung:** Browser-Test `tests/browser/thema.test.mjs`; die Browser-Prüfung auf GitHub baut dafür jetzt mit dem Schritt `seo`. Geprüft bei 1440, 1024 und 390 px: axe ohne Verstöße, vnu ohne Fehler.
