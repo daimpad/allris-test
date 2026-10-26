@@ -138,6 +138,13 @@ test("Themenseite Klima: Stränge, Verweise auf die Karte, ohne Verstöße", asy
   await page.locator("a.pb-ziel[data-ziel^='punkt-']").first().click();
   assert.equal(await page.locator("#pb-detail").isHidden(), false);
   assert.deepEqual(await axe(page), []);
+  // Übersicht thema/: Kacheln mit Symbol, Strängen und Sitzung; die ganze Kachel führt zur Themenseite
+  await page.goto(SITE + "thema/", { waitUntil: "networkidle" });
+  assert.ok(await page.locator(".kachel").count() >= 5, "Kacheln");
+  assert.equal(await page.locator(".kachel .kachel-symbol").count(), await page.locator(".kachel").count());
+  assert.deepEqual(await axe(page), []);
+  await page.locator(".kachel", { hasText: "Klima und Umwelt" }).click({ position: { x: 20, y: 20 } });
+  await page.waitForURL(/klima-und-umwelt/);
   assert.deepEqual(page.errors, []);
   await page.close();
 });

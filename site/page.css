@@ -94,3 +94,62 @@ a { color: var(--accent-ink); }
 .pb-legende i { display: inline-block; width: 14px; height: 14px; min-width: 0; border: 1px solid var(--accent-ink); }
 .pb-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (max-width: 600px) { .pb-balken li { grid-template-columns: 1fr; gap: 2px; } }
+/* Übersicht thema/ (pipeline/dossier.py, uebersicht): Kacheln je Thema, Glas mit Farbverlauf (DESIGN.md) */
+.themen-zahlen { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 14px 0 6px; }
+.themen-zahlen li { padding: 6px 14px; border-radius: 999px; background: rgba(124, 58, 237, 0.08); color: var(--muted); font-size: 15px; }
+.themen-zahlen strong { color: var(--text); font-variant-numeric: tabular-nums; }
+body:has(.kacheln) :is(.page-head, .page, .page-foot) { width: min(1120px, calc(100% - 32px)); }
+body:has(.kacheln) .page { background: transparent; box-shadow: none; padding: 8px 0 12px; }
+.themen-kopf { max-width: 780px; padding: 18px 28px 20px; border-radius: 22px; background: rgba(255, 255, 255, 0.72); border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: 0 10px 30px rgba(15, 15, 20, 0.06); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.themen-kopf .meta { margin-bottom: 0; }
+.kacheln {
+  list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+}
+.kachel {
+  position: relative; display: flex; flex-direction: column; overflow: hidden; border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78); border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 10px 30px rgba(15, 15, 20, 0.08);
+  backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.kachel:hover, .kachel:focus-within { transform: translateY(-4px); box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 18px 40px color-mix(in srgb, var(--k-von) 28%, transparent); }
+.kachel:focus-within { outline: 3px solid var(--k-ink); outline-offset: 3px; }
+.kachel-kopf {
+  position: relative; height: 112px; display: flex; align-items: center; padding: 0 22px;
+  background:
+    radial-gradient(circle at 88% 20%, rgba(255, 255, 255, 0.35) 0 22px, transparent 23px),
+    radial-gradient(circle at 76% 78%, rgba(255, 255, 255, 0.18) 0 38px, transparent 39px),
+    radial-gradient(circle at 98% 92%, rgba(255, 255, 255, 0.22) 0 14px, transparent 15px),
+    linear-gradient(135deg, var(--k-von), var(--k-bis));
+}
+.kachel-symbol {
+  width: 64px; height: 64px; padding: 14px; border-radius: 20px; color: #fff;
+  background: rgba(255, 255, 255, 0.22); border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 6px 18px rgba(15, 15, 20, 0.15); transition: transform 0.25s ease;
+}
+.kachel:hover .kachel-symbol, .kachel:focus-within .kachel-symbol { transform: rotate(-6deg) scale(1.06); }
+.kachel-inhalt { display: flex; flex-direction: column; gap: 10px; padding: 16px 22px 20px; flex: 1; }
+.kachel h2 { margin: 0; padding: 0; border: 0; font-size: 22px; letter-spacing: -0.02em; }
+.kachel h2 a { color: var(--text); text-decoration: none; }
+.kachel h2 a::after { content: ""; position: absolute; inset: 0; border-radius: 22px; }  /* ganze Kachel klickbar */
+.kachel h2 a:focus-visible { outline: none; }
+.kachel-zahl { margin: 0; color: var(--muted); font-size: 15px; }
+.kachel-zahl strong { font-size: 30px; line-height: 1; color: var(--k-ink); font-variant-numeric: tabular-nums; letter-spacing: -0.03em; margin-right: 2px; }
+.kachel-straenge { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; }
+.kachel-straenge li {
+  font-size: 13px; font-weight: 600; color: var(--k-ink); padding: 3px 4px 3px 10px; border-radius: 999px;
+  background: color-mix(in srgb, var(--k-von) 9%, #fff); border: 1px solid color-mix(in srgb, var(--k-von) 22%, #fff);
+}
+.kachel-n { display: inline-block; min-width: 24px; margin-left: 2px; padding: 0 6px; border-radius: 999px; text-align: center; background: #fff; color: var(--text); font-variant-numeric: tabular-nums; }
+.kachel-sitzung { display: flex; gap: 8px; align-items: flex-start; margin: auto 0 0; padding-top: 10px; border-top: 1px solid var(--line); font-size: 14px; color: var(--text); }
+.kachel-leise { color: var(--muted); }
+.kachel-hand { flex: none; width: 20px; height: 20px; color: var(--k-ink); margin-top: 1px; }
+@media (prefers-reduced-motion: reduce) {
+  .kachel, .kachel-symbol { transition: none; }
+  .kachel:hover, .kachel:focus-within, .kachel:hover .kachel-symbol, .kachel:focus-within .kachel-symbol { transform: none; }
+}
+@media (max-width: 600px) {
+  .themen-kopf { padding: 12px 16px 14px; }
+  .kacheln { gap: 14px; } .kachel-kopf { height: 88px; } .kachel-symbol { width: 52px; height: 52px; padding: 11px; }
+}

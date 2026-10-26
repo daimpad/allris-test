@@ -116,4 +116,6 @@ THEMA = Thema(
     # nicht „Grün“ allein (Parteiname), nicht „Tier“ in „Quartier“, nicht Ortsnamen wie Wasserland oder Hofgarten
     kandidat=re.compile(r"Klima|Umwelt|Grünfl|Grünanl|Grünpfl|Begrün|Natur|Energie|Gewässer|Grundwasser|Trinkwasser|"
                         r"Lärm|Luftqualität|\bTier|Nachhaltig|Lokale Agenda|Ressourcen", re.I),
+    farben=("#047857", "#059669", "#84cc16"),  # Übersicht thema/: Schrift, Verlauf
+    symbol='<path d="M5 19C5 10 11 5 20 4c-1 9-6 15-15 15z"/><path d="M5 19 13 11"/>',
 )
