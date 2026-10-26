@@ -2,7 +2,7 @@
 
 **Grundlage:** `phase0/BERICHT.md` mit den Entscheidungen vom 26.10.2026.
 
-**Stand:** Entwurf. `klima` steht in `ENTWUERFE`, nicht in `ALLE`: kein Export, keine Seite, bis der Prüfbogen im Gespräch geprüft ist.
+**Stand:** Nach der Prüfung im Gespräch am 26.10.2026 sind die Regeln ergänzt (A–E), und die Seite ist veröffentlicht (`PRUEFUNG.md`). Bis dahin war `klima` ein Entwurf ohne Seite und ohne Export.
 
 ## Regeln (`pipeline/themenseiten/klima.py`, abgeleitet, je Vorlage mit Grund)
 Die erste passende Regel gilt. Keine Regel gilt für Vorlagen mit dem Thema Verkehr (`ohne_thema`); sie bleiben auf der Verkehrsseite.

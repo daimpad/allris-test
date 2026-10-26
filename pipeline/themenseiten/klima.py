@@ -1,5 +1,5 @@
-"""Themenseite „Klima und Umwelt“ (thema/klima-und-umwelt/), ENTWURF: noch nicht in ALLE, erscheint erst nach
-Prüfung des Prüfbogens im Gespräch. Phase 0 und Entscheidungen: klima/phase0/BERICHT.md.
+"""Themenseite „Klima und Umwelt“ (thema/klima-und-umwelt/). Phase 0 und Entscheidungen: klima/phase0/BERICHT.md;
+Prüfbogen im Gespräch geprüft am 26.10.2026, danach Regeln A–E (klima/PRUEFUNG.md).
 
 Eigene Regeln (Entscheidung 26.10.2026): Wörter im Titel für Klimaschutz und Energie, Klimaanpassung, Grün und
 Natur, Abfall und Sauberkeit; übrige Vorlagen aus Umweltamt, Umweltausschuss und Naturschutzbeirat nach Stadtbezirk
@@ -22,12 +22,18 @@ ANPASSUNG = re.compile(r"Klimaanpassung|Hitze|Starkregen|Hochwasser|Überschwemm
 GRUEN = re.compile(r"\bBäume|\bBaum(?!aßnahme|arkt)|Fällgenehm|Fällung|Grünfläche|Grünanlage|Grünzug|Parkanlage|"
                    r"Stadtpark|Naturschutz|Naturpark|Biotop|Landschaftsschutz|\bWald|Kleinstwald|Insekt|Blühwiese|"
                    r"Blühstreifen|Begrünung|Kleingarten|Streuobst|Artenschutz|Biodiversität|Vogelschutz|Freiraumplan|"
-                   r"Rheinaue", re.I)
+                   r"Rheinaue|Neozoen|Neophyt|invasive Arten|heimische (?:Arten|Fauna|Flora)|autochthon", re.I)
+# Toiletten in Parks gehören nicht zu Grün und Natur, sondern zu „weitere“ (Prüfung 26.10.2026)
+TOILETTE = re.compile(r"Toilette|\bWC\b", re.I)
+# „klimagerecht“ u. Ä. erst nach den übrigen Strängen (Prüfung 26.10.2026: Hof- und Fassadenprogramm fehlte)
+KLIMAGERECHT = re.compile(r"klimagerecht|klimafreundlich|klimaangepasst", re.I)
+LAERM = re.compile(r"Lärm", re.I)  # auch ohne Umweltamt als Federführung (Prüfung 26.10.2026)
 ABFALL = re.compile(r"Abfall|Müll|Sauberkeit|Mülleimer|Papierkörbe|Wertstoff|Glascontainer|Altglas|Recycling|"
                     r"Eigenreinigung|Straßenreinigung|Littering|Verpackung|Mehrweg|Sperrmüll|illegal entsorg|bonnorange",
                     re.I)
+# Bau-Turbo und Planungsbeschleunigung stehen auf der Seite Wohnen und Bauen (Prüfung 26.10.2026)
 AUSSCHLUSS = re.compile(r"Tagesordnungspunkte in nichtöffentlicher Sitzung|Bestellung der Schriftführung|"
-                        r"Sitzungstermine", re.I)
+                        r"Sitzungstermine|Bau-?Turbo|§ ?36a|Planungsturbo", re.I)
 UMWELTAMT = Zustaendig(aemter=("67 ",), gremien=(UMWELT, "Naturschutzbeirat"))
 OHNE = "verkehr"  # Verkehr bleibt auf der Verkehrsseite (Entscheidung 26.10.2026)
 
@@ -45,26 +51,30 @@ THEMA = Thema(
     straenge=[
         ("klimaschutz", "Klimaschutz und Energie",
          "Titel nennt Klimaschutz, den Klimaplan, Klimaneutralität, CO2, Wärmeplanung, Solar, Fernwärme, Windenergie "
-         "oder Energieeinsparung (nicht Verkehr)"),
+         "oder Energieeinsparung, dazu „klimagerecht“ und „klimafreundlich“ (nicht Verkehr)"),
         ("anpassung", "Klimaanpassung",
          "Titel nennt Klimaanpassung, Hitze, Starkregen, Hochwasser, Überschwemmung, Entsiegelung, Trinkbrunnen oder "
          "Regenwasser (nicht Verkehr)"),
         ("gruen", "Bäume, Grün und Natur",
          "Titel nennt Bäume, Fällungen, Grünflächen, Parkanlagen, Naturschutz, Biotope, Wald, Kleingärten, Begrünung "
-         "oder Artenschutz (nicht Verkehr)"),
+         "oder Artenschutz, auch heimische und invasive Arten (nicht Verkehr, nicht Toiletten)"),
         ("abfall", "Abfall und Sauberkeit",
          "Titel nennt Abfall, Müll, Sauberkeit, Wertstoffe, Glascontainer, Verpackung, Mehrweg oder Straßenreinigung "
          "(nicht Verkehr)"),
         ("weitere", "Weitere Vorlagen zu Umwelt",
          "Amt für Umwelt und Stadtgrün federführend oder Beratung im Umweltausschuss oder Naturschutzbeirat, ohne die "
-         "Merkmale der anderen Stränge und ohne Verkehr (darunter Lärm, Luft und Friedhöfe); nach Stadtbezirk"),
+         "Merkmale der anderen Stränge, dazu Lärm im Titel; ohne Verkehr und ohne „Bau-Turbo“ (darunter Luft, "
+         "Friedhöfe und Toiletten in Parks); nach Stadtbezirk"),
     ],
     regeln=[
         Regel("klimaschutz", titel=KLIMASCHUTZ, ohne_thema=OHNE),
         Regel("anpassung", titel=ANPASSUNG, ohne_thema=OHNE),
+        Regel("weitere", titel=TOILETTE, bedingung=GRUEN, ohne_thema=OHNE),
         Regel("gruen", titel=GRUEN, ohne_thema=OHNE),
         Regel("abfall", titel=ABFALL, ohne_thema=OHNE),
+        Regel("klimaschutz", titel=KLIMAGERECHT, ohne_thema=OHNE),
         Regel("weitere", zustaendig=UMWELTAMT, ohne_thema=OHNE),
+        Regel("weitere", titel=LAERM, ohne_thema=OHNE),
     ],
     ausschluss=AUSSCHLUSS,
     nach_bezirk=frozenset({"weitere"}),  # je Stadtbezirk eingeklappt (Entscheidung 26.10.2026)
@@ -88,7 +98,8 @@ THEMA = Thema(
             "mit Grund); Schritte des Haushalts aus Drucksache 261064 zusammengefasst, keine Zitate",
     bild_titel="Zeitleiste: Klima und Umwelt in Rat, Hauptausschuss und Umweltausschuss",
     feed_text="zu Klima und Umwelt",
-    pruefung_text="Die Zuordnung ist noch nicht von Hand geprüft.",
+    pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 26.10.2026 im Gespräch geprüft (17 passend, 6 teilweise, "
+                  "2 unpassend; in der Gegenprobe fehlten 2 von 5), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten und Fördersummen stehen in den Dokumenten der Vorlagen und im Haushaltsplan "
         "der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge.",

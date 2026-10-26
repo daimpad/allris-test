@@ -342,6 +342,11 @@ class Klima(unittest.TestCase):
             "g": v("261906", "Sondervermögen „Infrastruktur und Klimaneutralität“"),
             "h": v("261907", "Baumaßnahme an der Schule"),
             "i": v("261908", "Rasenmähroboter", gremien=("Ausschuss für Umwelt, Klima und Lokale Agenda",)),
+            "j": v("261909", "Toilettensituation am Eingang der Rheinaue"),
+            "k": v("261910", "Bonner Leitlinien zum „Bau-Turbo“", gremien=("Ausschuss für Umwelt, Klima und Lokale Agenda",)),
+            "l": v("261911", "Heimische Fauna vor Neozoen schützen", amt="67 Amt für Umwelt und Stadtgrün"),
+            "m": v("261912", "Lärmbelastung durch den Schienengüterverkehr"),
+            "n": v("261913", "Klimagerechtes Hof- und Fassadenprogramm"),
         }
         self.d = dossier.daten(self.t, cache, {}, [], "2026-10-26", {})
         self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
@@ -358,7 +363,14 @@ class Klima(unittest.TestCase):
         for ref in ("261905", "261906", "261907"):
             self.assertNotIn(ref, self.by, ref)
 
-    def test_entwurf_ohne_seite(self):
+    def test_regeln_nach_pruefung(self):
+        self.assertEqual(self.by["261909"][0], "weitere")  # A: Toiletten in Parks
+        self.assertNotIn("261910", self.by)  # B: Bau-Turbo auf der Seite Wohnen und Bauen
+        self.assertEqual(self.by["261911"][0], "gruen")  # C: Artenschutz
+        self.assertEqual(self.by["261912"], ("weitere", "Titel: „Lärmbelastung“"))  # D: Lärm
+        self.assertEqual(self.by["261913"][0], "klimaschutz")  # E: klimagerecht
+
+    def test_veroeffentlicht(self):
         from pipeline.themenseiten import ENTWUERFE
-        self.assertIn(self.t, ENTWUERFE)
-        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertIn(self.t.key, [t.key for t in ALLE])
+        self.assertNotIn(self.t, ENTWUERFE)

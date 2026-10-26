@@ -125,6 +125,23 @@ test("Themenseite Wohnen: Stränge, weitere nach Stadtbezirk, Verweis auf die Pl
   await page.close();
 });
 
+test("Themenseite Klima: Stränge, Verweise auf die Karte, ohne Verstöße", async () => {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, bypassCSP: true });
+  page.errors = [];
+  page.on("pageerror", (e) => page.errors.push(String(e)));
+  await page.goto(SITE + "thema/klima-und-umwelt/", { waitUntil: "networkidle" });
+  for (const k of ["klimaschutz", "anpassung", "gruen", "abfall", "weitere"]) {
+    assert.ok(await page.locator(`.pb-schalter[data-strang='${k}']`).count(), "Schalter " + k);
+  }
+  assert.equal(await page.locator("a[href='../../?flaechen=kontext-hitze']").count(), 1);
+  assert.equal(await page.locator("a[href='../../?ebenen=uesg']").count(), 1);
+  await page.locator("a.pb-ziel[data-ziel^='punkt-']").first().click();
+  assert.equal(await page.locator("#pb-detail").isHidden(), false);
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
 test("Themenseite Schule: Stränge, Detailfeld, ohne Verstöße", async () => {
   const page = await browser.newPage({ viewport: { width: 390, height: 900 }, bypassCSP: true });
   page.errors = [];
