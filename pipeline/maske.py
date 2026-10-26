@@ -34,14 +34,18 @@ class Maske:
             strassen = json.loads(config.STRASSEN.read_text())["streets"] if config.STRASSEN.exists() else []
         self.rx = _muster(strassen)
 
+    def _betroffen(self, titel, ref):
+        # ohne Ziffer keine Hausnummer: spart die teure Regex bei den meisten Titeln (gleiche Ergebnisse)
+        return bool(titel) and ref in self.refs and any(c.isdigit() for c in titel)
+
     def __call__(self, titel, ref):
-        if not titel or ref not in self.refs:
+        if not self._betroffen(titel, ref):
             return titel
         return self.rx.sub(lambda m: m.group(1) + OHNE_NR, titel)
 
     def offen(self, titel, ref):
         """Bleibt nach dem Ausblenden eine Hausnummer stehen? (Prüfung in check.py)"""
-        return bool(titel) and ref in self.refs and bool(self.rx.search(titel))
+        return self._betroffen(titel, ref) and bool(self.rx.search(titel))
 
 
 def aus_db(db, strassen=None):
