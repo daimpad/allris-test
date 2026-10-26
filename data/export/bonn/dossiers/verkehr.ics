@@ -1,0 +1,572 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//RIS-Karte Bonn//Sitzungskalender//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006495
+DTSTAMP:20260928T170000Z
+DTSTART:20260928T170000Z
+DTEND:20260928T184100Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung: https://www.bonn.sitzung-onlin
+ e.de/public/TO010?SILFDNR=2006495\nEinladung: https://www.bonn.sitzung-onl
+ ine.de/public/doc?DOCTYP=108&DOLFDNR=3224151&OTYP=41\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006495
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005745
+DTSTAMP:20261008T160000Z
+DTSTART:20261008T160000Z
+DTEND:20261008T162800Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=
+ 2005745\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=1
+ 08&DOLFDNR=3222207&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005745
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005621
+DTSTAMP:20261013T150000Z
+DTSTART:20261013T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung: https://www.b
+ onn.sitzung-online.de/public/TO010?SILFDNR=2005621\nEinladung: https://www
+ .bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3229208&OTYP=41\nQue
+ lle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005621
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005646
+DTSTAMP:20261014T150000Z
+DTSTART:20261014T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung: https://www.
+ bonn.sitzung-online.de/public/TO010?SILFDNR=2005646\nEinladung: https://ww
+ w.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3230473&OTYP=41\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005646
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005611
+DTSTAMP:20261104T160000Z
+DTSTART:20261104T160000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung: http
+ s://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005611\nEinladung: ht
+ tps://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3241720&OTY
+ P=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005611
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005848
+DTSTAMP:20261104T170000Z
+DTSTART:20261104T170000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005848\nEinla
+ dung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=324
+ 1746&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005848
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005586
+DTSTAMP:20261105T170000Z
+DTSTART:20261105T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung: https://www.bonn.si
+ tzung-online.de/public/TO010?SILFDNR=2005586\nEinladung: https://www.bonn.
+ sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3241870&OTYP=41\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005586
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005627
+DTSTAMP:20261110T170000Z
+DTSTART:20261110T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005587
+DTSTAMP:20261112T160000Z
+DTSTART:20261112T160000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005620
+DTSTAMP:20261124T160000Z
+DTSTART:20261124T160000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005746
+DTSTAMP:20261126T170000Z
+DTSTART:20261126T170000Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005839
+DTSTAMP:20261126T170000Z
+DTSTART:20261126T170000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005612
+DTSTAMP:20261202T160000Z
+DTSTART:20261202T160000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005647
+DTSTAMP:20261202T160000Z
+DTSTART:20261202T160000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005588
+DTSTAMP:20261203T170000Z
+DTSTART:20261203T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005628
+DTSTAMP:20261208T170000Z
+DTSTART:20261208T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005589
+DTSTAMP:20261210T160000Z
+DTSTART:20261210T160000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006592
+DTSTAMP:20270126T170000Z
+DTSTART:20270126T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006672
+DTSTAMP:20270127T160000Z
+DTSTART:20270127T160000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006485
+DTSTAMP:20270202T170000Z
+DTSTART:20270202T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006559
+DTSTAMP:20270216T160000Z
+DTSTART:20270216T160000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006549
+DTSTAMP:20270217T160000Z
+DTSTART:20270217T160000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006475
+DTSTAMP:20270218T160000Z
+DTSTART:20270218T160000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006673
+DTSTAMP:20270224T160000Z
+DTSTART:20270224T160000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006560
+DTSTAMP:20270316T160000Z
+DTSTART:20270316T160000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006593
+DTSTAMP:20270316T170000Z
+DTSTART:20270316T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006486
+DTSTAMP:20270318T170000Z
+DTSTART:20270318T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006551
+DTSTAMP:20270407T150000Z
+DTSTART:20270407T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006476
+DTSTAMP:20270408T150000Z
+DTSTART:20270408T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006674
+DTSTAMP:20270414T150000Z
+DTSTART:20270414T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006561
+DTSTAMP:20270420T150000Z
+DTSTART:20270420T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006594
+DTSTAMP:20270427T160000Z
+DTSTART:20270427T160000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006487
+DTSTAMP:20270504T160000Z
+DTSTART:20270504T160000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006552
+DTSTAMP:20270512T150000Z
+DTSTART:20270512T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006477
+DTSTAMP:20270513T150000Z
+DTSTART:20270513T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006562
+DTSTAMP:20270525T150000Z
+DTSTART:20270525T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006595
+DTSTAMP:20270601T160000Z
+DTSTART:20270601T160000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006675
+DTSTAMP:20270602T150000Z
+DTSTART:20270602T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006488
+DTSTAMP:20270608T160000Z
+DTSTART:20270608T160000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006554
+DTSTAMP:20270616T150000Z
+DTSTART:20270616T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006478
+DTSTAMP:20270617T150000Z
+DTSTART:20270617T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006596
+DTSTAMP:20270706T160000Z
+DTSTART:20270706T160000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006563
+DTSTAMP:20270713T150000Z
+DTSTART:20270713T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006676
+DTSTAMP:20270714T150000Z
+DTSTART:20270714T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006555
+DTSTAMP:20270901T150000Z
+DTSTART:20270901T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006489
+DTSTAMP:20270902T160000Z
+DTSTART:20270902T160000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006479
+DTSTAMP:20270907T150000Z
+DTSTART:20270907T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006565
+DTSTAMP:20270914T150000Z
+DTSTART:20270914T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006597
+DTSTAMP:20270914T160000Z
+DTSTART:20270914T160000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006679
+DTSTAMP:20270922T150000Z
+DTSTART:20270922T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006556
+DTSTAMP:20271006T150000Z
+DTSTART:20271006T150000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006490
+DTSTAMP:20271007T160000Z
+DTSTART:20271007T160000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006481
+DTSTAMP:20271014T150000Z
+DTSTART:20271014T150000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006567
+DTSTAMP:20271019T150000Z
+DTSTART:20271019T150000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006599
+DTSTAMP:20271116T170000Z
+DTSTART:20271116T170000Z
+SUMMARY:Bezirksvertretung Hardtberg
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006680
+DTSTAMP:20271117T160000Z
+DTSTART:20271117T160000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006557
+DTSTAMP:20271124T160000Z
+DTSTART:20271124T160000Z
+SUMMARY:Bezirksvertretung Bad Godesberg
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006568
+DTSTAMP:20271130T160000Z
+DTSTART:20271130T160000Z
+SUMMARY:Bezirksvertretung Bonn
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
+ öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006491
+DTSTAMP:20271202T170000Z
+DTSTART:20271202T170000Z
+SUMMARY:Hauptausschuss
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006482
+DTSTAMP:20271209T160000Z
+DTSTART:20271209T160000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

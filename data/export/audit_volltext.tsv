@@ -9315,7 +9315,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
-242029	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	1
 242031	kein Ort						
 242032	kein Ort						
 242034	kein Ort						
@@ -11805,6 +11804,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260459	nur in Anlagen genannt, nicht verortet						
 260459-01 AA	kein Ort						
 260460	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
+260460-01	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
 260461	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
 260462	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	mittel	1
 260462	verortet	Hauptteil	volltext_strasse	Loki-Schmidt-Platz	Dottendorf	mittel	2
@@ -11941,6 +11941,10 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260606	kein Ort						
 260607	Titel ohne gemeinsamen Ort, nicht verortet						
 260608	verortet	Hauptteil	volltext_strasse	Möhneplatz	Beuel-Mitte	mittel	2
+260608-01 ST	verortet	Hauptteil	volltext_strasse	Auerberger Mitte	Auerberg	niedrig	1
+260608-01 ST	verortet	Hauptteil	volltext_strasse	Bischofsplatz	Bonn-Zentrum	niedrig	1
+260608-01 ST	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	1
+260608-01 ST	verortet	Hauptteil	volltext_strasse	Theaterplatz	Alt-Godesberg	niedrig	1
 260609	Titel ohne gemeinsamen Ort, nicht verortet						
 260611	nur in Anlagen genannt, nicht verortet						
 260611-01 ST	kein Ort						
@@ -12184,6 +12188,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260815-01 ST	kein Ort						
 260815-02 ST	kein Ort						
 260816	kein Ort						
+260816-02 AA	kein Ort						
 260817	kein Ort						
 260817-01 ST	kein Ort						
 260819	kein Ort						
@@ -12872,6 +12877,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261425-01 ST	verortet	Hauptteil	volltext_strasse	Von-Sandt-Ufer	Plittersdorf	mittel	1
 261425-01 ST	verortet	Hauptteil	volltext_strasse	Von-Sandt-Ufer	Rüngsdorf	mittel	1
 261426	kein Ort						
+261426-01 ST	kein Ort						
 261426-02 AA	kein Ort						
 261428	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
 261428	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
@@ -12903,6 +12909,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261464-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Friedrich-Breuer-Straße	Beuel-Mitte	mittel	1
 261464-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Hermannstraße	Beuel-Mitte	mittel	1
 261464-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Rheinaustraße	Beuel-Mitte	mittel	2
+261465	kein Ort						
 261474	verortet	Hauptteil	volltext_strasse+ortsteil	Trierer Straße	Poppelsdorf	mittel	1
 261475	kein Ort						
 261477	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
@@ -12987,6 +12994,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261576	kein Ort						
 261576-01 ST	kein Ort						
 261578	Titel ohne gemeinsamen Ort, nicht verortet						
+261578-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
 261578-02 AA	Titel ohne gemeinsamen Ort, nicht verortet						
 261581	nur in Anlagen genannt, nicht verortet						
 261582	nur in Anlagen genannt, nicht verortet						
@@ -13188,6 +13196,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261810	kein Ort						
 261810-01 ST	kein Ort						
 261811	kein Ort						
+261811-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 261813	kein Ort						
 261813-01 ST	kein Ort						
 261814	kein Ort						
@@ -13247,6 +13256,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261898	nur in Anlagen genannt, nicht verortet						
 261899	kein Ort						
 261900	kein Ort						
+261901	kein Ort						
 261902	Titel ohne gemeinsamen Ort, nicht verortet						
 261921	kein Ort						
 261923	kein Ort						
