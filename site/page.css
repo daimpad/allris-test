@@ -51,6 +51,11 @@ a { color: var(--accent-ink); }
 .pb-knopf-leise { background: rgba(124, 58, 237, 0.1); color: var(--accent-ink); }
 .pb-breit { position: relative; left: 50%; transform: translateX(-50%); width: min(1120px, calc(100vw - 32px)); background: #fff; border: 1px solid var(--line); padding: 8px; box-shadow: 0 8px 32px rgba(15, 15, 20, 0.08); }
 .pb-breit .pb-svg { min-width: 900px; }
+.pb-ziel { cursor: pointer; }
+.pb-ziel:hover > circle, .pb-ziel:hover > rect { stroke-width: 3px; }
+.pb-ziel:focus { outline: none; }
+.pb-ziel:focus-visible > circle, .pb-ziel:focus-visible > rect { stroke: #0f0f14; stroke-width: 3.5px; }
+.pb-ziel:focus-visible { outline: 2px solid #0f0f14; outline-offset: 2px; }
 .pb-balken { list-style: none; padding: 0; margin: 8px 0; }
 .pb-balken li { display: grid; grid-template-columns: minmax(120px, 34%) 1fr; gap: 10px; align-items: center; margin: 6px 0; font-size: 14px; }
 .pb-bar { display: flex; height: 24px; border-radius: 6px; overflow: hidden; border: 1px solid var(--accent-ink); }

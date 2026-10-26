@@ -35,3 +35,12 @@ Entscheidungen des Auftraggebers:
 - **Inhalt:** die Zeitleiste mit Überschrift, Datenstand, Hinweis auf die abgeleiteten Angaben, Adresse der Themenseite (Nummern, Vorlagen, Fristen) und Quellen. So ist das Bild auch ohne die Seite verständlich.
 - **Auf der Seite:** Links zu PNG und SVG unter der Grafik. Das PNG dient als Vorschaubild beim Teilen (Open Graph, `summary_large_image`).
 - **Technik:** Das PNG erzeugt `cairosvg` (in `requirements.txt`). Fehlt Cairo auf dem Server, entsteht nur das SVG; Seite und Vorschaubild entfallen dann ohne Fehler.
+
+## Nachtrag: Bild anklickbar (26.10.2026)
+- **Ziele im Bild:**
+  - Punkte öffnen den Vorgang auf der Karte; ohne Gebiet das Original im Ratsinformationssystem.
+  - Sitzungen öffnen die Tagesordnung, sobald die Stadt sie veröffentlicht hat, sonst die Terminliste der Seite.
+  - Planbalken öffnen die Mitteilungsvorlage 261064.
+- **Bedienung:** mit der Tabulatortaste erreichbar, mit deutlichem Fokus (Rahmen und kräftige Kontur). Der Name für Screenreader ist der Kurztext des Elements. Ohne `role="img"`, weil die Kinder eines Bildes für Screenreader nicht erreichbar wären. Geprüft wurde in Chromium: 45 Links im Barrierebaum, axe ohne Verstöße bei 1440 und 390 px, vnu ohne Fehler.
+- **Bild zum Teilen:** bleibt ohne Links.
+- **Liste unter dem Bild:** bleibt als Textfassung erhalten.

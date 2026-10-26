@@ -3,7 +3,9 @@ Stand je Strang als Balken und Aufrufe zum Mitwirken. Grundlage ist dossier.date
 
 Beschlüsse und Anträge erscheinen als nummerierte Punkte (entschieden, beraten, offen), die Phasen des Haushalts
 2027/2028 als Balken (geplant laut 261064, abgeleitet), kommende öffentliche Sitzungen mit Hand-Symbol und der
-Frist 21 Tage vorher (GeschO §§ 26, 27). Die nummerierte Liste unter dem Bild ist die Textfassung."""
+Frist 21 Tage vorher (GeschO §§ 26, 27). Die nummerierte Liste unter dem Bild ist die Textfassung.
+Auf der Seite sind Punkte, Sitzungen und Phasen Links (Vorgang auf der Karte, Tagesordnung, Terminplan);
+das Bild zum Teilen bleibt ohne Links."""
 from datetime import date
 from html import escape
 from urllib.parse import quote
@@ -55,12 +57,24 @@ def _zeile(b):
     return OBEN + [k for k, _ in dossier.BAHNEN].index(b) * BAHN
 
 
-def svg(d):
-    """Zeitleiste mit Bahnen als SVG-Zeichenkette."""
+def _ziel(href, titel, inneres):
+    """Element mit Kurztext; mit Adresse als Link (Name für Screenreader aus dem Kurztext), sonst als Gruppe."""
+    if not href:
+        return f'<g><title>{titel}</title>{inneres}</g>'
+    return f'<a class="pb-ziel" href="{escape(href)}" aria-label="{titel}"><title>{titel}</title>{inneres}</a>'
+
+
+def svg(d, root=None):
+    """Zeitleiste mit Bahnen als SVG-Zeichenkette; mit root (Pfad zur Startseite) sind die Elemente Links."""
     heute = d["heute"]
     h_bahnen = len(dossier.BAHNEN) * BAHN
     hoehe = OBEN + h_bahnen + 66
-    out = [f'<svg class="pb-svg" viewBox="0 0 {W} {hoehe}" role="img" aria-labelledby="pb-titel pb-text" '
+    # mit Links ohne role="img" (Standardrolle graphics-document): Kinder eines Bildes wären für Screenreader
+    # nicht erreichbar
+    rolle = 'role="img" ' if root is None else ""
+    tp = d.get("terminplan")
+    tp_url = tp and root is not None and dossier._map(root, tp.get("gebiet"), tp["reference"])
+    out = [f'<svg class="pb-svg" viewBox="0 0 {W} {hoehe}" {rolle}aria-labelledby="pb-titel pb-text" '
            f'xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">',
            '<title id="pb-titel">Zeitleiste: Haushalt und Kultur in Rat, Ausschüssen und Bezirksvertretungen</title>',
            f'<desc id="pb-text">{escape(_beschreibung(d))}</desc>',
@@ -96,14 +110,16 @@ def svg(d):
     for p in d["phasen"]:
         x0, x1, y = _x(p["von"]), _x(p["bis"]), _zeile(p["bahn"])
         intern, plan = p["intern"], p["bahn"] == "plan"
-        out.append(f'<rect x="{x0:.1f}" y="{y + 9}" width="{x1 - x0:.1f}" height="{BAHN - 18}" rx="6" '
-                   + ('fill="url(#pb-schraffur)" stroke="#a9a9b8"' if intern else
-                      f'fill="#ede9fe" stroke="{LILA}"' if plan else
-                      f'fill="#ede9fe" fill-opacity="0.6" stroke="{LILA}" stroke-opacity="0.6" stroke-dasharray="4 3"')
-                   + f'><title>{escape(p["text"])} ({_datum(p["von"])}–{_datum(p["bis"])}, geplant laut 261064)</title></rect>')
-        if plan and x1 - x0 > 7 * len(p["text"]) - 10:
-            out.append(f'<text x="{(x0 + x1) / 2:.1f}" y="{y + BAHN / 2 + 4}" font-size="11" text-anchor="middle" '
+        balken = (f'<rect x="{x0:.1f}" y="{y + 9}" width="{x1 - x0:.1f}" height="{BAHN - 18}" rx="6" '
+                  + ('fill="url(#pb-schraffur)" stroke="#a9a9b8"' if intern else
+                     f'fill="#ede9fe" stroke="{LILA}"' if plan else
+                     f'fill="#ede9fe" fill-opacity="0.6" stroke="{LILA}" stroke-opacity="0.6" stroke-dasharray="4 3"')
+                  + '/>')
+        if plan and x1 - x0 > 7 * len(p["text"]) - 10:  # Beschriftung im Link, damit sie den Klick nicht abfängt
+            balken += (f'<text x="{(x0 + x1) / 2:.1f}" y="{y + BAHN / 2 + 4}" font-size="11" text-anchor="middle" '
                        f'font-weight="600" fill="{GRAU if intern else LILA}">{escape(p["text"])}</text>')
+        out.append(_ziel(tp_url, f'{escape(p["text"])} ({_datum(p["von"])}–{_datum(p["bis"])}, geplant laut 261064)',
+                         balken))
     # Sitzungen mit Frist
     zuletzt = {}
     for s in sorted(d["sitzungen"], key=lambda s: s["date"]):
@@ -120,10 +136,13 @@ def svg(d):
             out.append(f'<line x1="{xf:.1f}" y1="{yf - 6:.1f}" x2="{xf:.1f}" y2="{yf + 5:.1f}" stroke="{BERNSTEIN}" '
                        f'stroke-width="2.5"><title>Frist für Anträge und Fragen zur Sitzung {escape(s["gremium"])}: '
                        f'{_datum(s["frist"])}</title></line>')
-        out.append(f'<g><title>{escape(s["gremium"])}, {_datum(s["date"])}: öffentliche Sitzung</title>'
-                   f'<circle cx="{x:.1f}" cy="{yc:.1f}" r="10.5" fill="#fff" stroke="{BERNSTEIN}" stroke-width="2"/>'
-                   f'<use href="#pb-hand" x="{x - 7:.1f}" y="{yc - 7:.1f}" width="14" height="14" fill="none" '
-                   f'stroke="{TEXT}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>')
+        # Tagesordnung, sobald die Stadt sie veröffentlicht hat, sonst die Terminliste der Seite
+        ziel = None if root is None else s.get("web") or "#sitzungen"
+        out.append(_ziel(ziel, f'{escape(s["gremium"])}, {_datum(s["date"])}: öffentliche Sitzung'
+                         + (", Tagesordnung" if root is not None and s.get("web") else ""),
+                         f'<circle cx="{x:.1f}" cy="{yc:.1f}" r="10.5" fill="#fff" stroke="{BERNSTEIN}" stroke-width="2"/>'
+                         f'<use href="#pb-hand" x="{x - 7:.1f}" y="{yc - 7:.1f}" width="14" height="14" fill="none" '
+                         f'stroke="{TEXT}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'))
     # Beschlüsse und Anträge
     belegt = {}
     for p in d["punkte"]:
@@ -140,15 +159,16 @@ def svg(d):
         belegt.setdefault(p["bahn"], []).append((x, y + dy))
         fill, stroke, farbe = {"entschieden": (LILA, LILA, "#fff"), "beraten": (LILA_HELL, LILA, TEXT),
                                "offen": ("#fff", LILA, TEXT)}[p["art"]]
-        out.append(f'<g><title>{p["nr"]}: {escape(p["reference"])} {escape(p["name"])} – {escape(p["stand"])}'
-                   f' ({escape(p["gremium"] or "")}, {_datum(p["date"])})</title>'
-                   f'<circle cx="{x:.1f}" cy="{y + dy:.1f}" r="9" fill="{fill}" stroke="{stroke}" stroke-width="1.8"/>'
-                   f'<text x="{x:.1f}" y="{y + dy + 3.6:.1f}" font-size="10" font-weight="700" text-anchor="middle" '
-                   f'fill="{farbe}">{p["nr"]}</text></g>')
+        ziel = None if root is None else dossier._map(root, p.get("gebiet"), p["reference"]) or p.get("web")
+        out.append(_ziel(ziel, f'{p["nr"]}: {escape(p["reference"])} {escape(p["name"])} – {escape(p["stand"])}'
+                         f' ({escape(p["gremium"] or "")}, {_datum(p["date"])})',
+                         f'<circle cx="{x:.1f}" cy="{y + dy:.1f}" r="9" fill="{fill}" stroke="{stroke}" stroke-width="1.8"/>'
+                         f'<text x="{x:.1f}" y="{y + dy + 3.6:.1f}" font-size="10" font-weight="700" '
+                         f'text-anchor="middle" fill="{farbe}">{p["nr"]}</text>'))
     # heute
     xh = _x(heute)
     out.append(f'<line x1="{xh:.1f}" y1="{OBEN - 44}" x2="{xh:.1f}" y2="{OBEN + h_bahnen}" stroke="{TEXT}" '
-               f'stroke-width="2"/>')
+               f'stroke-width="2" pointer-events="none"/>')  # liegt über den Punkten
     out.append(f'<text x="{xh + 5:.1f}" y="{OBEN - 40}" font-size="12" font-weight="700" fill="{TEXT}">'
                f'Stand {_kurz(heute)}</text>')
     # Legende
@@ -308,9 +328,9 @@ def liste(d, root):
 def abschnitt(d, root):
     """HTML-Abschnitt für die Themenseite: Bild, Stand je Strang, Liste und Aufrufe."""
     return f"""    <h2>Auf einen Blick</h2>
-    <p class="meta">Wo steht das Verfahren, was ist entschieden, wo kann man sich einbringen? Lage der Punkte nach der letzten Beratung mit Ergebnis, sonst nach der nächsten (abgeleitet); Phasen geplant laut Terminplan 261064. Die Monate ab September 2026 sind breiter gezeichnet.</p>
+    <p class="meta">Wo steht das Verfahren, was ist entschieden, wo kann man sich einbringen? Lage der Punkte nach der letzten Beratung mit Ergebnis, sonst nach der nächsten (abgeleitet); Phasen geplant laut Terminplan 261064. Die Monate ab September 2026 sind breiter gezeichnet. Punkte, Sitzungen und Phasen lassen sich anklicken, auch mit der Tabulatortaste.</p>
     <div class="pb-rahmen pb-breit" tabindex="0" role="region" aria-label="Zeitleiste, waagerecht verschiebbar" data-start="{_x(d["heute"]) / W:.3f}">
-      {svg(d)}
+      {svg(d, root)}
     </div>
     <p class="meta">Bild zum Teilen (täglich aktualisiert): <a href="{root}data/export/bonn/dossiers/{BILD}.png">PNG</a> · <a href="{root}data/export/bonn/dossiers/{BILD}.svg">SVG</a></p>
 {liste(d, root)}
