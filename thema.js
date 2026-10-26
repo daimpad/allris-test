@@ -102,12 +102,12 @@ document.querySelectorAll(".pb-rahmen[data-start]").forEach((el) => {
       if (!ph) return null;
       teile.titel = ph.text;
       teile.ansage = `${ph.text}, ${datum(ph.von)} bis ${datum(ph.bis)}`;
+      const tp = daten.terminplan;
       zeile(dl, "Zeitraum", `${datum(ph.von)} bis ${datum(ph.bis)}`);
-      zeile(dl, "Grundlage", "geplant laut Terminplan in Drucksache 261064", true);
+      zeile(dl, "Grundlage", `geplant laut Terminplan${tp ? ` in Drucksache ${tp.reference}` : ""}`, true);
       if (ph.intern) zeile(dl, "Öffentlichkeit", "nicht öffentlich (Arbeit der Verwaltung)");
       teile.knoten.push(dl);
-      const tp = daten.terminplan;
-      if (tp && tp.karte) aktionen.append(link(tp.karte, "Terminplan 261064 auf der Karte"));
+      if (tp && tp.karte) aktionen.append(link(tp.karte, `Terminplan ${tp.reference} auf der Karte`));
       if (tp && tp.web) aktionen.append(link(tp.web, "Original im Ratsinformationssystem", true));
     } else {
       return null;
