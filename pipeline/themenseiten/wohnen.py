@@ -1,5 +1,5 @@
-"""Themenseite „Wohnen und Bauen“ (thema/wohnen-und-bauen/), ENTWURF: noch nicht in ALLE, erscheint erst nach
-Prüfung des Prüfbogens im Gespräch. Phase 0 und Entscheidungen: wohnen/phase0/BERICHT.md.
+"""Themenseite „Wohnen und Bauen“ (thema/wohnen-und-bauen/). Phase 0 und Entscheidungen: wohnen/phase0/BERICHT.md;
+Prüfbogen im Gespräch geprüft am 26.10.2026, danach Regeln A–C (wohnen/PRUEFUNG.md).
 
 Eigene Regeln statt der Themenzuordnung „Bauen“ (dort stehen auch Schulen, Bühnen und Sporthallen des
 Gebäudemanagements; Wohnen liegt oft beim Thema Soziales): Wörter im Titel für Bauleitplanung, „Bau-Turbo“,
@@ -15,7 +15,9 @@ PLANUNG = "Ausschuss für Planen, Bauen und Denkmalschutz"
 SOZIAL = "Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren"
 # „Bau-Turbo“ (§ 246e BauGB, Zustimmung nach § 36a) und Beschleunigung der Bauleitplanung; vor Bebauungsplänen
 TURBO = re.compile(r"Bau-?Turbo|§ ?36a|§ ?246e|Planungsturbo|Verfahrensbeschleunigung", re.I)
-PLAN = re.compile(r"Bebauungsplan|Flächennutzungsplan|Veränderungssperre|Bauleitplan|vorhabenbezogene", re.I)
+# Fluchtlinienpläne als Vorläufer der Bebauungspläne (Prüfung 26.10.2026)
+PLAN = re.compile(r"Bebauungsplan|Flächennutzungsplan|Veränderungssperre|Bauleitplan|vorhabenbezogene|"
+                  r"Fluchtlinienplan", re.I)
 # Wohnraum einschließlich Wohnungslosigkeit (Entscheidung 26.10.2026); nicht „Miet…“ allein (Fahrradmietsystem,
 # Anmietung), nicht „Wohngebiet“ (Tempo 30 u. Ä.)
 WOHNRAUM = re.compile(r"Wohnungsbau|Wohnraum|geförderte[nmrs]? Wohn|Sozialwohnung|bezahlbare[nmrs]? Wohn|VEBOWAG|"
@@ -23,11 +25,15 @@ WOHNRAUM = re.compile(r"Wohnungsbau|Wohnraum|geförderte[nmrs]? Wohn|Sozialwohnu
                       r"Mietpreis|Mietwohn|Leerstand|Zweckentfremd|Wohnungslos|Obdachlos|Housing First|Wohnungsnot|"
                       r"Wohnbau|Wohnquartier|Wohnungen|Wohnheim|Handlungskonzept Wohnen|Wohnen in Bonn", re.I)
 DENKMAL = re.compile(r"(?<!Bauen und )Denkmal", re.I)  # nicht der Name des Planungsausschusses
+# Stadtentwicklung und Städtebauförderung auch außerhalb der Ämter (Prüfung 26.10.2026: Quartiersmanagement fehlte)
+STADTENTWICKLUNG = re.compile(r"Quartiersmanagement|\bISEK\b|Integriertes? (?:städtebauliche|Stadtentwicklung)|"
+                              r"Soziale Stadt|Stadterneuerung|Städtebauförderung|Sanierungsgebiet", re.I)
 # Sammellisten nichtöffentlicher Punkte, Formalien; „Miet…“ ohne Wohnbezug; Gebäude der Stadt, die auf der
-# Kulturseite stehen (Bühnen, Beethovenhalle)
+# Kulturseite stehen (Bühnen, Beethovenhalle); Straßenbenennungen (Prüfung 26.10.2026)
 AUSSCHLUSS = re.compile(r"Tagesordnungspunkte in nichtöffentlicher Sitzung|Bestellung der Schriftführung|"
                         r"Sitzungstermine|Fahrradmiet|Anmietung|Mietzuschuss|mietzinsfrei|Wohnmobil|Bonner Bühnen|"
-                        r"Theaterliegenschaft|Beethovenhalle", re.I)
+                        r"Theaterliegenschaft|Beethovenhalle|Straßenbenennung|Umbenennung der Straße|"
+                        r"Benennung (?:einer|von|der) Straße", re.I)
 # Stadtplanungsamt (ohne Abteilung Stadtverkehr, siehe ohne_thema), Bodenmanagement, Bauordnungsamt, Planungsausschuss
 BAUEN = Zustaendig(aemter=("61 ", "62 ", "63 "), gremien=(PLANUNG,))
 
@@ -46,7 +52,8 @@ THEMA = Thema(
         ("turbo", "„Bau-Turbo“ und schnellere Planung",
          "Titel nennt den „Bau-Turbo“, § 36a oder § 246e BauGB, den „Planungsturbo“ oder eine Verfahrensbeschleunigung"),
         ("bebauungsplan", "Bebauungspläne",
-         "Titel nennt einen Bebauungsplan, den Flächennutzungsplan, eine Veränderungssperre oder die Bauleitplanung"),
+         "Titel nennt einen Bebauungsplan, den Flächennutzungsplan, eine Veränderungssperre, einen Fluchtlinienplan "
+         "oder die Bauleitplanung"),
         ("wohnraum", "Wohnraum",
          "Titel nennt Wohnungsbau, Wohnraum, geförderte oder bezahlbare Wohnungen, die VEBOWAG, Mietspiegel, "
          "Leerstand, Zweckentfremdung, das Handlungskonzept Wohnen oder Wohnungslosigkeit (auch Housing First)"),
@@ -54,7 +61,8 @@ THEMA = Thema(
          "Titel nennt Denkmalschutz, ein Denkmal oder eine Denkmalbereichssatzung (nicht Verkehr)"),
         ("weitere", "Weitere Vorlagen zu Planen und Bauen",
          "Stadtplanungsamt (ohne Verkehr), Bodenmanagement oder Bauordnungsamt federführend oder Beratung im "
-         "Ausschuss für Planen, Bauen und Denkmalschutz, ohne die Merkmale der anderen Stränge; nach Stadtbezirk"),
+         "Ausschuss für Planen, Bauen und Denkmalschutz, dazu Quartiersmanagement, ISEK und Städtebauförderung, "
+         "ohne die Merkmale der anderen Stränge und ohne Straßenbenennungen; nach Stadtbezirk"),
     ],
     regeln=[
         Regel("turbo", titel=TURBO),
@@ -62,6 +70,7 @@ THEMA = Thema(
         Regel("wohnraum", titel=WOHNRAUM),
         Regel("denkmal", titel=DENKMAL, ohne_thema="verkehr"),  # nicht Tempo 30 an einem Denkmal
         Regel("weitere", zustaendig=BAUEN, ohne_thema="verkehr"),
+        Regel("weitere", titel=STADTENTWICKLUNG),
     ],
     ausschluss=AUSSCHLUSS,
     nach_bezirk=frozenset({"weitere"}),  # je Stadtbezirk eingeklappt (Entscheidung 26.10.2026)
@@ -85,7 +94,8 @@ THEMA = Thema(
             "mit Grund); Schritte des Haushalts aus Drucksache 261064 zusammengefasst, keine Zitate",
     bild_titel="Zeitleiste: Wohnen und Bauen in Rat, Hauptausschuss, Planungs- und Sozialausschuss",
     feed_text="zu Wohnen und Bauen",
-    pruefung_text="Die Zuordnung ist noch nicht von Hand geprüft.",
+    pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 26.10.2026 im Gespräch geprüft (19 passend, 5 teilweise, "
+                  "1 unpassend; in der Gegenprobe fehlte 1 von 5), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge und Mieten:</strong> Kosten, Fördersummen und Mietpreise stehen in den Dokumenten der "
         "Vorlagen, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge.",

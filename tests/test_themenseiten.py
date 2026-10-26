@@ -289,6 +289,9 @@ class Wohnen(unittest.TestCase):
             "h": v("261907", "Fahrradmietsystem: neue Stationen"),
             "i": v("261908", "Zukunft Bonner Bühnen: Denkmalschutz"),
             "j": v("261909", "Sachstand", gremien=("Ausschuss für Planen, Bauen und Denkmalschutz",)),
+            "k": v("261910", "Aufhebung des Fluchtlinienplans B 1"),
+            "l": v("261911", "Straßenbenennung in Dransdorf", amt="63 Bauordnungsamt"),
+            "m": v("261912", "Fortführung des Quartiersmanagements in Auerberg", amt="50 Amt für Soziales und Wohnen"),
         }
         self.d = dossier.daten(self.t, cache, {}, [], "2026-10-26", {})
         self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
@@ -305,7 +308,12 @@ class Wohnen(unittest.TestCase):
         for ref in ("261904", "261906", "261907", "261908"):
             self.assertNotIn(ref, self.by, ref)
 
-    def test_entwurf_ohne_seite(self):
+    def test_regeln_nach_pruefung(self):
+        self.assertEqual(self.by["261910"][0], "bebauungsplan")  # A: Fluchtlinienplan
+        self.assertNotIn("261911", self.by)  # B: Straßenbenennung
+        self.assertEqual(self.by["261912"], ("weitere", "Titel: „Quartiersmanagements“"))  # C: Stadtentwicklung
+
+    def test_veroeffentlicht(self):
         from pipeline.themenseiten import ENTWUERFE
-        self.assertIn(self.t, ENTWUERFE)
-        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertIn(self.t.key, [t.key for t in ALLE])
+        self.assertNotIn(self.t, ENTWUERFE)
