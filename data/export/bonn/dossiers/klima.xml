@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/thema/klima</id>
+<title>RIS-Karte Bonn – Klima und Umwelt</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Klima und Umwelt (Zuordnung abgeleitet)</subtitle>
+<updated>2026-10-24T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/dossiers/klima.xml"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/thema/klima-und-umwelt/"/>
+<author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029949#vorlage</id>
+<title>Neue Vorlage 261929: 49. Satzung zur Änderung der Gebührenordnung über die Abfallentsorgung in der Bundesstadt Bonn</title>
+<updated>2026-10-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261929"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029949"/>
+<summary>Beschlussvorlage · federführend: 21 Kassen- und Steueramt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029882#vorlage</id>
+<title>Neue Vorlage 261899: Gebührensätze für das Jahr 2027 für die Straßenreinigung in der Bundesstadt Bonn.</title>
+<updated>2026-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261899"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029882"/>
+<summary>Beschlussvorlage · federführend: 21 Kassen- und Steueramt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030014#vorlage</id>
+<title>Neue Vorlage 261961: Grüner Antrag: Überprüfung und Verlegung von Mülleimern im Derletal</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:duisdorf#261961"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030014"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029806#vorlage</id>
+<title>Neue Vorlage 261798-01: Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“ hier: Dringlichkeitsentscheidung aufgrund der Ablehnung der Befreiung im Naturschutzbeirat</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dransdorf#261798-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029806"/>
+<summary>Dringlichkeitsentscheidung OB · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029513#vorlage</id>
+<title>Neue Vorlage 261783: Fällgenehmigung für zwei Eiben auf dem Grundstück Adenauer Allee [Hausnummer ausgelassen], 53113 Bonn</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261783"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029513"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029511#vorlage</id>
+<title>Neue Vorlage 261782: Fällgenehmigung für eine Italienische Pyramidenpappel auf dem Grundstück Venusbergweg [Hausnummer ausgelassen], 53115 Bonn</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:suedstadt#261782"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029511"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029510#vorlage</id>
+<title>Neue Vorlage 261781: Fällgenehmigung für eine Schwarz-Kiefer auf dem Grundstück Klosterweg [Hausnummer ausgelassen], 53117 Bonn</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:buschdorf#261781"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029510"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030011#vorlage</id>
+<title>Neue Vorlage 230255-05: Grüne Große Anfrage: Umsetzung des Schwammstadtkonzepts im Stadtbezirk Hardtberg</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:hardtberg#230255-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030011"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030009#vorlage</id>
+<title>Neue Vorlage 253946-02: Grüne Große Anfrage: Sachstand und Umsetzung des Projekts "Begegnungsort im Schatten der Bäume mitten auf dem Brüser Berg" im Rahmen des Bonner Mitmachbudgets 2025/2026</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:brueser-berg#253946-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030009"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030007#vorlage</id>
+<title>Neue Vorlage 261954: Volt-Anfrage zu Hitzeschutz für Wohnungslose</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:beuel#261954"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030007"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029850#vorlage</id>
+<title>Neue Vorlage 261555-03 ST: Optimierung der Toilettensituation im Bereich Herbert-Wehner-Platz/Haupteingang Rheinaue - Stellungnahme der Verwaltung</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:hochkreuz#261555-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029850"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029793#vorlage</id>
+<title>Neue Vorlage 261870: Fällung von 3 städtischen Bäumen im Baugenehmigungsverfahren auf dem Gelände des Wilhemine-Lübke-Hauses, Am Wesselpütz 2</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:duisdorf#261870"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029793"/>
+<summary>Beschlussvorlage · federführend: Seniorenzentren der Bundesstadt Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029743#vorlage</id>
+<title>Neue Vorlage 261862: Aufstellung des Bebauungsplan Nr. 6325-1 „Kölnstraße / Otto-Hahn-Straße“</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#261862"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029743"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029725#vorlage</id>
+<title>Neue Vorlage 261855: 211. FNP-Änderung, Kölnstraße/Otto-Hahn-Straße</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#261855"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029725"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029734#vorlage</id>
+<title>Neue Vorlage 261808-01 ST: Grüne-Große Anfrage: Europäische Woche der Abfallvermeidung</title>
+<updated>2026-10-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261808-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029734"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028978#vorlage</id>
+<title>Neue Vorlage 261568: Potenzialstudie „Natürliche CO2-Senken in der Bundesstadt Bonn“ und konkrete Umsetzungsansätze im laufenden Verwaltungsgeschäft</title>
+<updated>2026-10-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:roettgen#261568"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028978"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029906#vorlage</id>
+<title>Neue Vorlage 261876-02 ST: Stellungnahme: Geschützt Silvester feiern/Schutz in der Silvesternacht</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261876-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029906"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029895#vorlage</id>
+<title>Neue Vorlage 261876-01 AA: Grüner Änderungsantrag zu "Geschützt Silvester feiern/Schutz in der Silvesternacht" Antrag zur Vorlage 261876</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261876-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029895"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029895#beratung-2026-10-15-Ausschuss%20f%C3%BCr%20Sicherheit%2C%20Ordnung%20und%20Bev%C3%B6lkerungsschutz</id>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „abgelehnt“ – 261876-01 AA Grüner Änderungsantrag zu "Geschützt Silvester feiern/Schutz in der Silvesternacht" Antrag zur Vorlage 261876</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261876-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029895"/>
+<summary>Empfehlung am 2026-10-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029639#vorlage</id>
+<title>Neue Vorlage 261775-01 ST: FDP-Prüfauftrag: Oberirdische Zisternen als Sofortmaßnahme zur Wasserversorgung von Parks und als Löschwasserreserve</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:hochkreuz#261775-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029639"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029619#beratung-2026-10-15-Ausschuss%20f%C3%BCr%20Sicherheit%2C%20Ordnung%20und%20Bev%C3%B6lkerungsschutz</id>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „zur Kenntnis genommen“ – 261751-01 Gefahr von Wald- und Buschbränden</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261751-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029619"/>
+<summary>Kenntnisnahme am 2026-10-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029489#beratung-2026-10-15-Ausschuss%20f%C3%BCr%20Sicherheit%2C%20Ordnung%20und%20Bev%C3%B6lkerungsschutz</id>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „zur Kenntnis genommen“ – 261772 Hitzeschutz bei Feuerwehr und Rettungsdienst</title>
+<updated>2026-10-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dransdorf#261772"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029489"/>
+<summary>Kenntnisnahme am 2026-10-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029886#vorlage</id>
+<title>Neue Vorlage 261555-04 AA: BSW/SBI- Änderungsantrag: Optimierung der Toilettensituation im Bereich Herbert-Wehner-Platz/Haupteingang Rheinaue Antrag zur Vorlage 261555</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:hochkreuz#261555-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029886"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029186#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „vertagt“ – 260870-01 ST FDP - Große Anfrage: Landschaftsbaumaßnahmen auf dem Ennertsportplatz</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:beuel#260870-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029186"/>
+<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029010#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260880-01 ST CDU/SPD/FDP Kooperation-Antrag: Zusätzliche Bäume im Beueler Zentrum</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:beuel#260880-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029010"/>
+<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029877#vorlage</id>
+<title>Neue Vorlage 261569-01 AA: Änderungsantrag Linke: Veröffentlichung der Vorhabenliste: 164701 - Parkpflege- und Entwicklungskonzept Rheinaue Antrag zur Vorlage 261569 - Erweiterung des Beteiligungsverfahrens</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261569-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029877"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029820#vorlage</id>
+<title>Neue Vorlage 261876: SPD-Fraktion: Geschützt Silvester feiern/Schutz in der Silvesternacht</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261876"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029820"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029509#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 261780 Fällgenehmigung für eine Wald-Kiefer auf dem Baugrundstück Kiefernweg [Hausnummer ausgelassen], 53127  Bonn.</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:venusberg#261780"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029509"/>
+<summary>Entscheidung am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026902#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „vertagt“ – 260828 Lärmschutz "An der Josefshöhe"</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260828"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026902"/>
+<summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029805#vorlage</id>
+<title>Neue Vorlage 261807-01 ST: Stellungnahme der Verwaltung zu Grünen-Große Anfrage: Europäische Klimaschutzinitiative „eumayors“</title>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261807-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029805"/>
+<summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029823#vorlage</id>
+<title>Neue Vorlage 261877: Bürgerantrag: Antrag zur Einhaltung der Fristen bei Baumfällanträgen</title>
+<updated>2026-10-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261877"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029823"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029780#vorlage</id>
+<title>Neue Vorlage 261769-02 ST: Vertagungsbitte zur CDU-Bezirksfraktion-Große Anfrage: Unterhalt der Brücken über den Engelsbach im Melbtal unterhalb des Sport Wissenschaftliche Instituts. hier: Vertagungsbitte</title>
+<updated>2026-10-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261769-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029780"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029762#vorlage</id>
+<title>Neue Vorlage 261525-02 ST: Vertagungsbitte zur BBB-Anfrage: Schutz der Bevölkerung vor Waldbränden</title>
+<updated>2026-10-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261525-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029762"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029349#beratung-2026-10-08-Ausschuss%20f%C3%BCr%20Finanzen%2C%20Beteiligungen%20und%20Vergabe</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261701 4. Satzung zur Änderung der Satzung über das Friedhofs- und Begräbniswesen der Bundesstadt Bonn</title>
+<updated>2026-10-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#261701"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029349"/>
+<summary>Empfehlung am 2026-10-08; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029348#beratung-2026-10-08-Ausschuss%20f%C3%BCr%20Finanzen%2C%20Beteiligungen%20und%20Vergabe</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261700 Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2027</title>
+<updated>2026-10-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:graurheindorf#261700"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029348"/>
+<summary>Empfehlung am 2026-10-08; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029186#vorlage</id>
+<title>Neue Vorlage 260870-01 ST: FDP - Große Anfrage: Landschaftsbaumaßnahmen auf dem Ennertsportplatz</title>
+<updated>2026-10-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:beuel#260870-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029186"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029790#vorlage</id>
+<title>Neue Vorlage 260880-02 AA: Änderungsantrag: CDU/SPD/FDP Kooperation-Antrag: Zusätzliche Bäume im Beueler Zentrum Antrag zur Vorlage 260880</title>
+<updated>2026-10-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:beuel#260880-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029790"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029781#vorlage</id>
+<title>Neue Vorlage 261055-03 AA: FDP-Änderungsantrag: Aufforstung im FFH- und Naturschutzgebiet Ennert Antrag zur Vorlage 261055</title>
+<updated>2026-10-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261055-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029781"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029748#vorlage</id>
+<title>Neue Vorlage 261340-01: Hitzemaßnahmen in Schulen</title>
+<updated>2026-10-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:buschdorf#261340-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029748"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029638#vorlage</id>
+<title>Neue Vorlage 261829: Fällgenehmigung für einen Feld-Ahorn auf dem Baugrundstück Eltviller Str. [Hausnummer ausgelassen], 53175 Bonn im Rahmen eines Baugenehmigungsverfahrens</title>
+<updated>2026-10-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:friesdorf#261829"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029638"/>
+<summary>Dringlichkeitsentscheidung BV · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029619#vorlage</id>
+<title>Neue Vorlage 261751-01: Gefahr von Wald- und Buschbränden</title>
+<updated>2026-10-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261751-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029619"/>
+<summary>Stellungnahme der Verwaltung · federführend: 37 Feuerwehr und Rettungsdienst · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029377#beratung-2026-10-07-Naturschutzbeirat</id>
+<title>Naturschutzbeirat: „vertagt“ – 261611-01 ST Antrag: Verpachtung städtischer landwirtschaftlicher Flächen</title>
+<updated>2026-10-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261611-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029377"/>
+<summary>Kenntnisnahme am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029337#beratung-2026-10-07-Naturschutzbeirat</id>
+<title>Naturschutzbeirat: „ungeändert beschlossen - mit Protokollnotiz“ – 261695 Baugrunderkundungsarbeiten zur geplanten Seilbahnstation Rheinauen auf dem Gelände des linksrheinischen Rheinauenparks, Bereich Rheinland-Pfalz-Pavillon, Charles-de-Gaulle Straße</title>
+<updated>2026-10-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dottendorf#261695"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029337"/>
+<summary>Entscheidung am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029757#vorlage</id>
+<title>Neue Vorlage 261497-03 AA: SPD-Bezirksfraktion: Kompromisslösung für den PV-Carport in Bonn-Roleber: Private Errichtung eines 3-er PV-Carport Mehrfamilienhaus in Bonn-Holzlar/Roleber Antrag zur Vorlage 261497</title>
+<updated>2026-10-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holzlar#261497-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029757"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029509#vorlage</id>
+<title>Neue Vorlage 261780: Fällgenehmigung für eine Wald-Kiefer auf dem Baugrundstück Kiefernweg [Hausnummer ausgelassen], 53127  Bonn.</title>
+<updated>2026-10-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:venusberg#261780"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029509"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029468#vorlage</id>
+<title>Neue Vorlage 261755: CDU/SPD-Antrag: Pflege Grünfläche Kreisverkehr Konrad-Adenauer-Damm/Brüser Damm</title>
+<updated>2026-10-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:brueser-berg#261755"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029468"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029702#vorlage</id>
+<title>Neue Vorlage 261555-02: Bürgerantrag: Priorisierung und zeitnahe Umsetzung des Konzepts zur Verbesserung der Toilettensituation im Bereich Herbert-Wehner-Platz/Haupteingang Rheinaue</title>
+<updated>2026-10-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:hochkreuz#261555-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029702"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029672#vorlage</id>
+<title>Neue Vorlage 261838: Wirtschaftsplan 2027 der bonnorange AöR</title>
+<updated>2026-10-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261838"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029672"/>
+<summary>Mitteilungsvorlage · federführend: 01-4 Referat Beteiligungsmanagement · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029578#vorlage</id>
+<title>Neue Vorlage 261765-01 ST: CDU-Bezirksfraktion-Kleine Anfrage: Baumwachstum an der Erich-Böger-Straße 9,13 und 17</title>
+<updated>2026-10-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ippendorf#261765-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029578"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029448#beratung-2026-10-01-Ausschuss%20f%C3%BCr%20Chancengerechtigkeit%20und%20Integration</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „zur Kenntnis genommen“ – 261516-02 ST Stellungnahme zur Großen Anfrage der Grüne-Fraktion: Erkenntnissen über hitzebedingte gesundheitliche Risiken bei Menschen mit Migrationshintergrund und deren Einbindung in Hitzeschutzkonzepte</title>
+<updated>2026-10-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#261516-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029448"/>
+<summary>Kenntnisnahme am 2026-10-01; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029661#vorlage</id>
+<title>Neue Vorlage 261837: Große Anfrage - CDU: Anbindung LVR Klinik/Agnesstift durch einen Serviceweg</title>
+<updated>2026-09-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#261837"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029661"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029448#vorlage</id>
+<title>Neue Vorlage 261516-02 ST: Stellungnahme zur Großen Anfrage der Grüne-Fraktion: Erkenntnissen über hitzebedingte gesundheitliche Risiken bei Menschen mit Migrationshintergrund und deren Einbindung in Hitzeschutzkonzepte</title>
+<updated>2026-09-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#261516-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029448"/>
+<summary>Stellungnahme der Verwaltung · federführend: 53 Gesundheitsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029349#vorlage</id>
+<title>Neue Vorlage 261701: 4. Satzung zur Änderung der Satzung über das Friedhofs- und Begräbniswesen der Bundesstadt Bonn</title>
+<updated>2026-09-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:geislar#261701"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029349"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029348#vorlage</id>
+<title>Neue Vorlage 261700: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2027</title>
+<updated>2026-09-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:graurheindorf#261700"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029348"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029660#vorlage</id>
+<title>Neue Vorlage 261092-04 AA: BBB-Änderungsantrag zur Vorlage 261092 "Neufassung der Baumschutzsatzung (BSchS)"</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261092-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029660"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029654#vorlage</id>
+<title>Neue Vorlage 261092-03 AA: Änderungsantrag der Grünen Fraktion - Neufassung der Baumschutzsatzung (BSchS) Antrag zur Vorlage 261092</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261092-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029654"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029640#vorlage</id>
+<title>Neue Vorlage 261092-02 AA: BSW/SBI-Änderungsantrag: Neufassung der Baumschutzsatzung (BSchS) Antrag zur Vorlage 261092</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261092-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029640"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029469#vorlage</id>
+<title>Neue Vorlage 261756: CDU/SPD-Antrag: Entwässerungsgraben und Grünschnitt am Lärmschutzwall Brüser Berg</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:brueser-berg#261756"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029469"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029575#vorlage</id>
+<title>Neue Vorlage 261290-01 ST: Große Anfrage der BSW/SBI-Gruppe: Klärung des Verhältnisses von Bauplanungsrecht (§ 31 BauGB) und Baumschutzsatzung bei bauplanungsrechtlich festgesetzten Bäumen hier: Vertagungsbitte</title>
+<updated>2026-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:mehlem#261290-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029575"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029567#vorlage</id>
+<title>Neue Vorlage 261808: Grüne-Große Anfrage: Europäische Woche der Abfallvermeidung</title>
+<updated>2026-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261808"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029567"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029566#vorlage</id>
+<title>Neue Vorlage 261807: Grünen-Große Anfrage: Europäische Klimaschutzinitiative „eumayors“</title>
+<updated>2026-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261807"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029566"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029541#vorlage</id>
+<title>Neue Vorlage 261798: Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“</title>
+<updated>2026-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dransdorf#261798"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029541"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029493#vorlage</id>
+<title>Neue Vorlage 261775: FDP-Prüfauftrag: Oberirdische Zisternen als Sofortmaßnahme zur Wasserversorgung von Parks und als Löschwasserreserve</title>
+<updated>2026-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261775"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029493"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029489#vorlage</id>
+<title>Neue Vorlage 261772: Hitzeschutz bei Feuerwehr und Rettungsdienst</title>
+<updated>2026-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dransdorf#261772"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029489"/>
+<summary>Mitteilungsvorlage · federführend: 37 Feuerwehr und Rettungsdienst · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029233#beratung-2026-09-24-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 261128-01 ST Ergänzende Stellungnahme zu ISEK-Projekt: Richtlinien zum Förderprogramm "Klimagerechtes Hof- und Fassadenprogramm Innenstadt Bad Godesberg"</title>
+<updated>2026-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:bad-godesberg#261128-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029233"/>
+<summary>Kenntnisnahme am 2026-09-24; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029010#vorlage</id>
+<title>Neue Vorlage 260880-01 ST: CDU/SPD/FDP Kooperation-Antrag: Zusätzliche Bäume im Beueler Zentrum</title>
+<updated>2026-09-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:beuel#260880-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029010"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029474#vorlage</id>
+<title>Neue Vorlage 261761: CDU/SPD-Antrag: Sauberkeit im Kreuzbergpark in Lengsdorf</title>
+<updated>2026-09-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#261761"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029474"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029467#vorlage</id>
+<title>Neue Vorlage 260754-02 AA: CDU/SPD-Änderungsantrag: Antrag auf Überwachung und ordnungsrechtliche Maßnahmen bei illegaler Müllentsorgung im Bereich "Auf dem Kirchbüchel"</title>
+<updated>2026-09-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:duisdorf#260754-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029467"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029337#vorlage</id>
+<title>Neue Vorlage 261695: Baugrunderkundungsarbeiten zur geplanten Seilbahnstation Rheinauen auf dem Gelände des linksrheinischen Rheinauenparks, Bereich Rheinland-Pfalz-Pavillon, Charles-de-Gaulle Straße</title>
+<updated>2026-09-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dottendorf#261695"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029337"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029479#vorlage</id>
+<title>Neue Vorlage 261765: CDU-Bezirksfraktion-Kleine Anfrage: Baumwachstum an der Erich-Böger-Straße 9,13 und 17</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ippendorf#261765"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029479"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029470#vorlage</id>
+<title>Neue Vorlage 261757: CDU/SPD-Große Anfrage: Unbepflanzte Baumscheiben im Stadtbezirk Hardtberg</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:hardtberg#261757"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029470"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028565#vorlage</id>
+<title>Neue Vorlage 261292-01 ST: Wissenschaftlich korrekte Information über Stadttauben auf den Internetseiten der Bundesstadt Bonn</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261292-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028565"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029459#vorlage</id>
+<title>Neue Vorlage 261751: Gefahr von Wald- und Buschbränden</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261751"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029459"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029454#vorlage</id>
+<title>Neue Vorlage 261747: Grüne-Große Anfrage: Zustand der Bäume im Park Carstanjen</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf#261747"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029454"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029416#vorlage</id>
+<title>Neue Vorlage 261729: Fällgenehmigung für fünf satzungsgeschützte Bäume im Rahmen des Bauvorhabens Turmanlagen an der Nordbrücke (Gemarkung Bonn, Flur 9, Flurstück 2330)</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261729"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029416"/>
+<summary>Dringlichkeitsentscheidung BV · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029414#vorlage</id>
+<title>Neue Vorlage 261497-02 ST: Bürgerantrag: Private Errichtung eines 3-er PV-Carport Mehrfamilienhaus in Bonn-Holzlar/Roleber</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holzlar#261497-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029414"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029377#vorlage</id>
+<title>Neue Vorlage 261611-01 ST: Antrag: Verpachtung städtischer landwirtschaftlicher Flächen</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261611-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029377"/>
+<summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029233#vorlage</id>
+<title>Neue Vorlage 261128-01 ST: Ergänzende Stellungnahme zu ISEK-Projekt: Richtlinien zum Förderprogramm "Klimagerechtes Hof- und Fassadenprogramm Innenstadt Bad Godesberg"</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:bad-godesberg#261128-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029233"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028556#vorlage</id>
+<title>Neue Vorlage 260815-02 ST: GRÜNE/Volt-Antrag - Übergangslösung durch hybride Heizsysteme</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260815-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028556"/>
+<summary>Stellungnahme der Verwaltung · federführend: 01-4 Referat Beteiligungsmanagement · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029318#vorlage</id>
+<title>Neue Vorlage 261362-01 ST: Bürgerantrag: Antrag auf Erstattung von notwendigen Kosten für wirksame Lärmschutzmaßnahmen für die Eigentümer und Bewohner an der Sankt Augustiner Straße</title>
+<updated>2026-09-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261362-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029318"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029316#vorlage</id>
+<title>Neue Vorlage 261688: Überplanmäßige Ausgabe gemäß §83 (2) GO NRW für die Beseitigung hitzebedingter Schäden an vier Bonner Kunstrasenplätzen</title>
+<updated>2026-09-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:graurheindorf#261688"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029316"/>
+<summary>Beschlussvorlage · federführend: 52 Sport- und Bäderamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029431#vorlage</id>
+<title>Neue Vorlage 261616-02 AA: Volt-Änderungsantrag zu Grüner Antrag: Photovoltaik-Informationspunkt an Schulen Antrag zur Vorlage 261616</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261616-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029431"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029431#beratung-2026-09-16-Schulausschuss</id>
+<title>Schulausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 261616-02 AA Volt-Änderungsantrag zu Grüner Antrag: Photovoltaik-Informationspunkt an Schulen Antrag zur Vorlage 261616</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261616-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029431"/>
+<summary>Empfehlung am 2026-09-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029330#vorlage</id>
+<title>Neue Vorlage 261692: Einleitung des Vergabeverfahrens zur Durchführung ordnungsbehördlich angeordneter Bestattungen</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261692"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029330"/>
+<summary>Beschlussvorlage: Einleitung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029297#vorlage</id>
+<title>Neue Vorlage 261682: Sachstandsbericht zum Förderprogramm Solares Bonn</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261682"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029297"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029254#vorlage</id>
+<title>Neue Vorlage 240255-21 ST: Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes Antrag zur Vorlage 240255</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#240255-21%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029254"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029185#vorlage</id>
+<title>Neue Vorlage 242332-02: Verkauf von Ökopunkten für den 6-streifigen Ausbau der A 565 zwischen der AS BN-Endenich und dem AK BN-Nord</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:endenich#242332-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029185"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029154#vorlage</id>
+<title>Neue Vorlage 260490-01 ST: SPD-Bezirksfraktion-Antrag: Instandsetzung des wassergebundenen Weges zwischen Heinrich-Böll-Ring und Bornheimer Straße</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#260490-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029154"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029038#vorlage</id>
+<title>Neue Vorlage 261425-01 ST: CDU-Große Anfrage: Blumenkübel im Bereich des Von-Sandt-Ufers</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:hochkreuz#261425-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029038"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029353#vorlage</id>
+<title>Neue Vorlage 261705: Stellungnahme des Klimabeirats</title>
+<updated>2026-09-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261705"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029353"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029060#vorlage</id>
+<title>Neue Vorlage 261602: Dialogforum Biodiversität</title>
+<updated>2026-09-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261602"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029060"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028980#vorlage</id>
+<title>Neue Vorlage 261569: Veröffentlichung der Vorhabenliste: 164701 - Parkpflege- und Entwicklungskonzept Rheinaue</title>
+<updated>2026-09-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261569"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028980"/>
+<summary>Beschlussvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029322#vorlage</id>
+<title>Neue Vorlage 230201-06: BBB-Anfrage Baumbestand in Bonn Drucksachengruppe 230201</title>
+<updated>2026-09-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#230201-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029322"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029320#vorlage</id>
+<title>Neue Vorlage 261690: BBB-Anfrage Genehmigung privater Feuerwerke</title>
+<updated>2026-09-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261690"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029320"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028058#vorlage</id>
+<title>Neue Vorlage 261201: Zielbeschluss über die Entwicklung der Fläche "Petrusacker" im Ortsteil Buschdorf, Stadtbezirk Bonn.</title>
+<updated>2026-09-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:buschdorf#261201"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028058"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029264#vorlage</id>
+<title>Neue Vorlage 261591-01 ST: Bürgerantrag: Einrichtung eines öffentlichen Calisthenics- und Outdoor-Fitness-Platz am Bonner Rheinufer</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:mehlem#261591-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029264"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028484#beratung-2026-09-09-Ausschuss%20f%C3%BCr%20Finanzen%2C%20Beteiligungen%20und%20Vergabe</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 261338 Bilanzielle Übertragung von Grundstücken und Gebäuden von der Stadt Bonn zum SGB</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:graurheindorf#261338"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028484"/>
+<summary>Empfehlung am 2026-09-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028003#beratung-2026-09-09-Ausschuss%20f%C3%BCr%20Finanzen%2C%20Beteiligungen%20und%20Vergabe</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „zur Kenntnis genommen“ – 261182 KLAR GmbH - Jahresabschluss 2025</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261182"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028003"/>
+<summary>Kenntnisnahme am 2026-09-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024484#vorlage</id>
+<title>Neue Vorlage 253870: Aufhebung des Zielbeschlusses (DS-Nr. 201864) zur Errichtung eines Erweiterungsbaus für das Studierendenwohnheim an der Pariser Straße in Bonn-Auerberg</title>
+<updated>2026-09-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#253870"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024484"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, den früheren Beschluss für einen Erweiterungsbau des Studierendenwohnheims an der Pariser Straße aufzuheben. Da das Projekt nun ohne Bebauungsplan genehmigt wurde, ist der alte Beschluss nicht mehr nötig. Der Bau ist bereits genehmigt.</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029202#vorlage</id>
+<title>Neue Vorlage 261497-01 ST: Bürgerantrag: Private Errichtung eines 3-er PV-Carport Mehrfamilienhaus in Bonn-Holzlar/Roleber</title>
+<updated>2026-09-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:holzlar#261497-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029202"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

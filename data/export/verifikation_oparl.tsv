@@ -49,7 +49,7 @@ drucksache	feld	export	oparl_api	ergebnis
 231282	beratungen	3	3	ok
 231282	orte_stufe_a			ok
 201249	reference	201249	201249	ok
-201249	name	Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Merler Allee 93, Alfred-Bucherer-Str. 24, Lahnweg 9, Venantiusstr. 17, Haager Weg 69, Nonnstr. 20, Saarweg 15, Karl-Barth-Str. 2-4, Bergstr. 171) im Stadtbezirk Bonn	Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Merler Allee 93, Alfred-Bucherer-Str. 24, Lahnweg 9, Venantiusstr. 17, Haager Weg 69, Nonnstr. 20, Saarweg 15, Karl-Barth-Str. 2-4, Bergstr. 171) im Stadtbezirk Bonn	ok
+201249	name	Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Merler Allee [Hausnummer ausgelassen], Alfred-Bucherer-Str. [Hausnummer ausgelassen], Lahnweg [Hausnummer ausgelassen], Venantiusstr. [Hausnummer ausgelassen], Haager Weg [Hausnummer ausgelassen], Nonnstr. [Hausnummer ausgelassen], Saarweg [Hausnummer ausgelassen], Karl-Barth-Str. [Hausnummer ausgelassen], Bergstr. [Hausnummer ausgelassen]) im Stadtbezirk Bonn	Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Merler Allee [Hausnummer ausgelassen], Alfred-Bucherer-Str. [Hausnummer ausgelassen], Lahnweg [Hausnummer ausgelassen], Venantiusstr. [Hausnummer ausgelassen], Haager Weg [Hausnummer ausgelassen], Nonnstr. [Hausnummer ausgelassen], Saarweg [Hausnummer ausgelassen], Karl-Barth-Str. [Hausnummer ausgelassen], Bergstr. [Hausnummer ausgelassen]) im Stadtbezirk Bonn	ok
 201249	date	2020-07-09	2020-07-09	ok
 201249	paper_type	Mitteilungsvorlage	Mitteilungsvorlage	ok
 201249	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/222	https://www.bonn.sitzung-online.de/oparl/organizations/at/222	ok
@@ -77,7 +77,7 @@ drucksache	feld	export	oparl_api	ergebnis
 252764	beratungen	1	1	ok
 252764	orte_stufe_a			ok
 200238	reference	200238	200238	ok
-200238	name	Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Auf dem Hügel 16, Theodor-Brinkmann-Str. 34, Lambareneweg 2, Beethovenstr. 49, Sebastianstr. (Schumannhaus), Venusberg-Campus 1, Römerweg 17) im Stadtbezirk Bonn	Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Auf dem Hügel 16, Theodor-Brinkmann-Str. 34, Lambareneweg 2, Beethovenstr. 49, Sebastianstr. (Schumannhaus), Venusberg-Campus 1, Römerweg 17) im Stadtbezirk Bonn	ok
+200238	name	Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Auf dem Hügel [Hausnummer ausgelassen], Theodor-Brinkmann-Str. [Hausnummer ausgelassen], Lambareneweg [Hausnummer ausgelassen], Beethovenstr. [Hausnummer ausgelassen], Sebastianstr. (Schumannhaus), Venusberg-Campus [Hausnummer ausgelassen], Römerweg [Hausnummer ausgelassen]) im Stadtbezirk Bonn	Erteilte Fällgenehmigungen für private Bäume mit einem Stammumfang von mehr als 200 cm (hier: Auf dem Hügel [Hausnummer ausgelassen], Theodor-Brinkmann-Str. [Hausnummer ausgelassen], Lambareneweg [Hausnummer ausgelassen], Beethovenstr. [Hausnummer ausgelassen], Sebastianstr. (Schumannhaus), Venusberg-Campus [Hausnummer ausgelassen], Römerweg [Hausnummer ausgelassen]) im Stadtbezirk Bonn	ok
 200238	date	2020-02-12	2020-02-12	ok
 200238	paper_type	Mitteilungsvorlage	Mitteilungsvorlage	ok
 200238	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/222	https://www.bonn.sitzung-online.de/oparl/organizations/at/222	ok
@@ -161,7 +161,7 @@ drucksache	feld	export	oparl_api	ergebnis
 220324-02 AA	beratungen	3	3	ok
 220324-02 AA	orte_stufe_a			ok
 253492	reference	253492	253492	ok
-253492	name	Fällgenehmigung für eine Ahornblättrige Platane und drei Berg-Ahorne auf dem Baugrundstück Gerhard-Domagk-Straße 3, 53121 Bonn im Rahmen eines Baugenehmigungsverfahrens	Fällgenehmigung für eine Ahornblättrige Platane und drei Berg-Ahorne auf dem Baugrundstück Gerhard-Domagk-Straße 3, 53121 Bonn im Rahmen eines Baugenehmigungsverfahrens	ok
+253492	name	Fällgenehmigung für eine Ahornblättrige Platane und drei Berg-Ahorne auf dem Baugrundstück Gerhard-Domagk-Straße [Hausnummer ausgelassen], 53121 Bonn im Rahmen eines Baugenehmigungsverfahrens	Fällgenehmigung für eine Ahornblättrige Platane und drei Berg-Ahorne auf dem Baugrundstück Gerhard-Domagk-Straße [Hausnummer ausgelassen], 53121 Bonn im Rahmen eines Baugenehmigungsverfahrens	ok
 253492	date	2025-07-29	2025-07-29	ok
 253492	paper_type	Beschlussvorlage	Beschlussvorlage	ok
 253492	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/302	https://www.bonn.sitzung-online.de/oparl/organizations/at/302	ok
