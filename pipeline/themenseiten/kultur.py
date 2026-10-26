@@ -8,6 +8,7 @@ import re
 from datetime import date
 
 from ..dossier import Regel, Thema, Zustaendig
+from . import haushalt
 
 BUEHNEN = "260127"     # Stammnummer „Zukunft der Bonner Bühnen“
 HAUSHALT = re.compile(r"Haushaltssatzung|Haushaltssperre|haushaltswirtschaftlich|Haushaltskonsolidierung|Konsolidierung|"
@@ -58,7 +59,7 @@ THEMA = Thema(
     eingeklappt={"kultur_weitere"},  # vollständig, auf der Seite eingeklappt (Entscheidung 25.10.2026)
     punkt_straenge=("haushalt", "buehnen", "kultur_finanzen"),
     # Prozessbild: Bahnen von oben nach unten (Schlüssel, Beschriftung) und die Gremien eigener Bahnen
-    bahnen=[("plan", "Haushalt 2027/2028"), ("bv", "Bezirksvertretungen"), ("kultur", "Kulturausschuss"),
+    bahnen=[haushalt.BAHN, ("bv", "Bezirksvertretungen"), ("kultur", "Kulturausschuss"),
             ("fach", "andere Ausschüsse"), ("finanz", "Finanzausschuss"), ("rat", "Hauptausschuss, Rat")],
     bahn_gremien={"kultur": KULTUR.gremien},
     sitzungen=("Kulturausschuss", "Kulturkommission", "Ausschuss für Finanzen, Beteiligungen und Vergabe",
@@ -66,41 +67,13 @@ THEMA = Thema(
     sitzungen_je_gremium=2,  # Bezirksvertretungen: je eine (Haushaltsberatung und Einwohnerfragestunde, GeschO § 26)
     # Zeitachse: der Rückblick gestaucht, die Monate der Haushaltsberatung breiter
     achse=(date(2025, 11, 1), date(2027, 4, 1), date(2026, 9, 1), 0.42),
-    # Phasen des Haushalts 2027/2028 laut Terminplan in 261064 (geplant, abgeleitet): oben der Ablauf im Ganzen,
-    # darunter die Gremien, in denen beraten wird (Bahn, von, bis, Beschriftung, nicht öffentlich)
-    terminplan="261064",
-    phasen=[("plan", "2026-02-27", "2026-09-30", "Aufstellung in der Verwaltung", True),
-            ("plan", "2026-10-01", "2026-11-30", "Einbringung, Beratung", False),
-            ("plan", "2026-12-01", "2026-12-31", "Beschluss", False),
-            ("plan", "2027-01-01", "2027-03-31", "Genehmigung", False),
-            ("bv", "2026-10-01", "2026-11-30", "Beratung des Haushalts", False),
-            ("kultur", "2026-10-01", "2026-11-30", "Beratung des Haushalts", False),
-            ("fach", "2026-10-01", "2026-11-30", "Beratung des Haushalts", False),
-            ("finanz", "2026-11-01", "2026-11-30", "Vorberatung für den Rat", False),
-            ("rat", "2026-10-01", "2026-11-15", "Einbringung des Entwurfs", False),
-            ("rat", "2026-12-01", "2026-12-31", "Beschluss der Haushaltssatzung", False)],
-    phasen_text="Der Haushalt 2027/2028 wird laut Terminplan von Oktober bis Dezember 2026 beraten und im Dezember "
-                "im Rat beschlossen.",
-    fenster_text="Zeitraum der Haushaltsberatung",
-    # Weg des Haushalts 2027/2028: zusammengefasst aus Mitteilungsvorlage 261064 und ihrer Anlage (Terminplan),
-    # selbst formuliert, ohne Zitate (Rahmen der Stadt Bonn vom 19.10.2026)
-    schritte_titel="So entsteht der Haushalt 2027/2028",
-    schritte=[
-        ("Aufstellung in der Verwaltung", "Frühjahr und Sommer 2026",
-         "Die Ämter melden ihren Bedarf im Rahmen von Eckwerten je Amt und Dezernat; Mehrbedarf ist innerhalb des "
-         "Dezernats auszugleichen. Der Verwaltungsvorstand bespricht Härtefälle. Dieser Teil ist nicht öffentlich."),
-        ("Einbringung des Entwurfs", "Herbst 2026",
-         "Die Verwaltung legt dem Rat den Entwurf des Haushaltsplans vor; die Mitglieder der Ausschüsse erhalten die Unterlagen."),
-        ("Beratung in den Fachausschüssen und Bezirksvertretungen", "Oktober und November 2026",
-         "Jedes Fachgremium berät den Entwurf einmal, für die Kultur der Kulturausschuss. Fraktionen können "
-         "Änderungsanträge stellen."),
-        ("Ausschuss für Finanzen, Beteiligungen und Vergabe", "November 2026",
-         "Er tagt nach den Fachgremien und bereitet den Beschluss des Rates vor."),
-        ("Beschluss im Rat", "Dezember 2026",
-         "Etwa zwei Wochen nach dem Finanzausschuss beschließt der Rat die Haushaltssatzung."),
-        ("Kommunalaufsicht", "Anfang 2027",
-         "Die Satzung geht an die Bezirksregierung Köln; die Genehmigung erwartet die Verwaltung im ersten Quartal 2027."),
-    ],
+    # Haushalt 2027/2028 laut Terminplan in 261064 (themenseiten/haushalt.py)
+    terminplan=haushalt.TERMINPLAN,
+    phasen=haushalt.phasen("kultur"),
+    phasen_text=haushalt.TEXT,
+    fenster_text=haushalt.FENSTER,
+    schritte_titel=haushalt.TITEL,
+    schritte=haushalt.schritte("für die Kultur der Kulturausschuss"),
     # Vergleich: Zahl der Vorlagen im Verfahren zur Haushaltssatzung 2025/2026
     vergleich="240986",
     vergleich_text="Zum Vergleich: Zum Doppelhaushalt 2025/2026 ({ref}) gehören im Ratsinformationssystem "
