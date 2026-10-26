@@ -76,6 +76,7 @@ jobs:
           cp -r data/export _site/data/
           cp data/LICENSE-DATA.md _site/data/
           cp data/geo/*.geojson _site/data/geo/
+          SITE_URL=http://localhost:8765/ python -m pipeline seo
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -84,7 +85,7 @@ jobs:
         run: |
           npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
-      - name: Browser-Prüfung (Start, Karte, Vorgang, Prozesse, Mitmachen, mobil, Tour; WCAG 2.1 AA)
+      - name: Browser-Prüfung (Start, Karte, Vorgang, Prozesse, Mitmachen, mobil, Tour, Themenseite; WCAG 2.1 AA)
         run: |
           python -m http.server -d _site 8765 > /dev/null 2>&1 &
           node --test "tests/browser/*.test.mjs"

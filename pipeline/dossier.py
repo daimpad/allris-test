@@ -170,9 +170,10 @@ def bahn(gremium):
     return "fach"
 
 
-def _punkt(p, e):
+def _punkt(p, e, strang):
     """Lage eines Beschlusses oder Antrags im Prozessbild: letzte Beratung mit Ergebnis, sonst die nächste,
-    sonst das erste Gremium der Beratungsfolge am Tag der Vorlage."""
+    sonst das erste Gremium der Beratungsfolge am Tag der Vorlage. Dazu die Angaben des Detailfelds
+    (Strang mit Grund, Art, Amt, Beratungsfolge mit Ergebnis wörtlich aus der Quelle)."""
     lb, nb = e["letzte_beratung"], e["naechste_beratung"]
     if lb:
         gremium, datum = lb["gremium"], lb["date"] or e["date"]
@@ -182,8 +183,12 @@ def _punkt(p, e):
         gremium, datum = next((s["gremium"] for s in p["process"] if s.get("gremium")), "Rat"), e["date"]
     art = "entschieden" if e["stand"] == "entschieden" else "offen" if e["stand"] in ("offen", "ohne Beratungsfolge") \
         else "beraten"
+    beratungen = [{"gremium": s["gremium"], "date": s.get("start_date") and proc.local_day(s["start_date"]),
+                   "result": s.get("result"), "cancelled": bool(s.get("cancelled"))}
+                  for s in p["process"] if s.get("gremium")]
     return {"reference": e["reference"], "name": e["name"], "date": datum, "bahn": bahn(gremium), "gremium": gremium,
-            "art": art, "stand": e["stand"], "gebiet": e["gebiet"], "web": e["web"]}
+            "art": art, "stand": e["stand"], "gebiet": e["gebiet"], "web": e["web"], "strang": strang,
+            "grund": e["grund"], "paper_type": e["paper_type"], "amt": e["amt"], "beratungen": beratungen}
 
 
 def _frist(datum):
@@ -198,7 +203,7 @@ def daten(cache, home, meetings, today, meta):
         hit = _strang(p, verfahren)
         if hit:
             straenge[hit[0]].append({**_eintrag(p, home.get(pid), today), "grund": hit[1], "_pid": pid})
-    punkte = sorted((_punkt(cache[r["_pid"]], r) for k in PUNKT_STRAENGE for r in straenge[k]
+    punkte = sorted((_punkt(cache[r["_pid"]], r, k) for k in PUNKT_STRAENGE for r in straenge[k]
                      if r["paper_type"] in PUNKT_ARTEN), key=lambda x: (x["date"] or "", x["reference"]))
     for i, x in enumerate(punkte, 1):
         x["nr"] = i

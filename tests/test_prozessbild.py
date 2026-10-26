@@ -53,7 +53,8 @@ class Prozessbild(unittest.TestCase):
         svg = prozessbild.svg(self.d, "../../")
         self.assertNotIn('role="img"', svg)  # Kinder eines Bildes wären für Screenreader nicht erreichbar
         self.assertIn('<a class="pb-ziel" href="../../?gebiet=ortsteil:endenich#261285" aria-label="2: 261285 '
-                      'Gleichbehandlung der Kulturangebote – entschieden (Kulturausschuss, 10.06.2026)">', svg)
+                      'Gleichbehandlung der Kulturangebote – entschieden (Kulturausschuss, 10.06.2026)" data-ziel="punkt-2" '
+                      'data-strang="kultur_finanzen">', svg)
         self.assertIn('href="https://example.org/261724"', svg)  # ohne Gebiet: Original
         self.assertEqual(svg.count('href="#sitzungen"'), 2)  # ohne Tagesordnung: Terminliste der Seite
         self.assertEqual(svg.count('<a '), 3 + 2)  # ohne Terminplan 261064 bleiben die Phasen ohne Link
@@ -70,6 +71,27 @@ class Prozessbild(unittest.TestCase):
         self.assertIn('href="https://example.org/to/m1" aria-label="Ausschuss für Finanzen, Beteiligungen und '
                       'Vergabe, 26.11.2026: öffentliche Sitzung, Tagesordnung"', svg)
         self.assertEqual(svg.count('href="../../?gebiet=ohne:2026#261064"'), len(d["phasen"]))
+
+    def test_detailfeld_daten_und_schalter(self):
+        import json
+        html = prozessbild.abschnitt(self.d, "../../")
+        roh = html.split('<script type="application/json" id="pb-daten">')[1].split("</script>")[0]
+        daten = json.loads(roh)
+        p = daten["punkte"]["2"]
+        self.assertEqual((p["reference"], p["strang"], p["paper_type"]),
+                         ("261285", "Kulturförderung, Zuschüsse, Gebühren", "Beschlussvorlage"))
+        self.assertEqual(p["beratungen"], [{"gremium": "Kulturausschuss", "date": "2026-06-10",
+                                            "result": "geändert beschlossen", "cancelled": False}])
+        self.assertEqual(p["karte"], "../../?gebiet=ortsteil:endenich#261285")
+        self.assertEqual(len(daten["sitzungen"]), 2)
+        self.assertIn('data-strang="kultur_finanzen" aria-pressed="true">Kulturförderung', html)
+        self.assertNotIn('data-strang="buehnen"', html)  # Strang ohne Punkte: kein Schalter
+        self.assertIn('class="pb-filter" role="group" aria-label="Stränge im Bild ein- und ausblenden" hidden', html)
+
+    def test_detailfeld_daten_ohne_skriptende(self):
+        d = dict(self.d, punkte=[dict(self.d["punkte"][0], name="Antrag </script><script>alert(1)</script>")])
+        roh = prozessbild.detaildaten(d, "../../")
+        self.assertNotIn("</", roh)
 
     def test_aufrufe_und_balken(self):
         html = prozessbild.abschnitt(self.d, "../../")
