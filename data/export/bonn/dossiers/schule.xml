@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/thema/schule</id>
+<title>RIS-Karte Bonn – Schule und Bildung</title>
+<subtitle>Neue Vorlagen und Beratungsergebnisse: Schule und Bildung (Zuordnung abgeleitet)</subtitle>
+<updated>2026-10-24T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/dossiers/schule.xml"/>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/thema/schule-und-bildung/"/>
+<author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029894#vorlage</id>
+<title>Neue Vorlage 261832-01 ST: Rechtsanspruch schulische Ganztagsbetreuung</title>
+<updated>2026-10-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261832-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029894"/>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029002#vorlage</id>
+<title>Neue Vorlage 260743-01 ST: Bürgerantrag: Optimierung Parksituation im Bereich der Stiftsschule</title>
+<updated>2026-10-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#260743-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029002"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030056#vorlage</id>
+<title>Neue Vorlage 261986: Informationsbrief - Stadtarchiv in ehemaliger Pestalozzischule</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#261986"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030056"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030054#vorlage</id>
+<title>Neue Vorlage 261985: CDU/Grünen-Bezirksfraktion-Antrag: Prüfung alternativer Räumlichkeiten für das Schulmuseum im Ortszentrum Dottendorf</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dottendorf#261985"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030054"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029914#vorlage</id>
+<title>Neue Vorlage 253376-04: Reinigung an den städtischen Bonner Schulen</title>
+<updated>2026-10-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#253376-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029914"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030010#vorlage</id>
+<title>Neue Vorlage 253164-03: Grüne Große Anfrage: Aktueller Sachstand zur Erstellung eines Schulwegplans für die Derletalschule</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:duisdorf#253164-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030010"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029981#vorlage</id>
+<title>Neue Vorlage 261879-01 ST: Wartezeiten und Verfahren bei verspäteter Busbegleitung im Schülerspezialverkehr</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261879-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029981"/>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029963#vorlage</id>
+<title>Neue Vorlage 261776-01 ST: Einsatz und Kosten von Microsoft 365 an Bonner Schulen sowie Nutzungsgrad des landeseigenen, kostenfreien Angebots LOGINEO NRW</title>
+<updated>2026-10-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261776-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029963"/>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029960#vorlage</id>
+<title>Neue Vorlage 261777-01 ST: Stellungnahme zur Großen Anfrage: Anmeldeverfahren an den weiterführenden Schulen: Ablehnungen, Verfahrensablauf und Möglichkeit eines Zweit- und Drittwunsches</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:friesdorf#261777-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029960"/>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029958#vorlage</id>
+<title>Neue Vorlage 261932: Monitoringbericht Schulbau</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261932"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029958"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029788#vorlage</id>
+<title>Neue Vorlage 190692-10 ST: BBB-Antrag: Schulwegsicherung Friedrich-Ebert-Allee (B9) im Bereich der Stadtbahnhaltestelle Ollenhauerstraße</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:gronau#190692-10%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029788"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029718#vorlage</id>
+<title>Neue Vorlage 260956-01 ST: Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich KGS Donatusschule, Donatusstraße [Hausnummer ausgelassen]</title>
+<updated>2026-10-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf#260956-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029718"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029939#vorlage</id>
+<title>Neue Vorlage 261923: Kleine Anfrage der Grünen Ratsfraktion zur OGS-Betreuung</title>
+<updated>2026-10-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261923"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029939"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029897#vorlage</id>
+<title>Neue Vorlage 242092-09: BBB-Anfrage: Errichtung eines Förderzentrums mit dem Schwerpunkt „Geistige Entwicklung“ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße Drucksachengruppe 242092</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-09"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029897"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029884#vorlage</id>
+<title>Neue Vorlage 261901: Antrag der Grünen Ratsfraktion: Weiterentwicklung des Anmeldeverfahrens an weiterführenden Schulen</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261901"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029884"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029883#vorlage</id>
+<title>Neue Vorlage 261900: Antrag der Grünen Ratsfraktion: Elternbefragung zum Bedarf an Gesamtschulplätzen in Bonn</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261900"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029883"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029761#vorlage</id>
+<title>Neue Vorlage 260945-03: Konzept zur flexiblen und rechtssicheren Schulbuchbeschaffung gem. § 75a GO NRW</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260945-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029761"/>
+<summary>Beschlussvorlage · federführend: 40 Schulamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029834#vorlage</id>
+<title>Neue Vorlage 261879: Volt-Anfrage: Wartezeiten und Verfahren bei verspäteter Busbegleitung im Schülerspezialverkehr</title>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261879"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029834"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029775#vorlage</id>
+<title>Neue Vorlage 261748-01 ST: Kosten der OGS</title>
+<updated>2026-10-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261748-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029775"/>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029795#vorlage</id>
+<title>Neue Vorlage 261871: Kleine Anfrage der Grünen Ratsfraktion zu Schulstraßen</title>
+<updated>2026-10-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261871"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029795"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029748#vorlage</id>
+<title>Neue Vorlage 261340-01: Hitzemaßnahmen in Schulen</title>
+<updated>2026-10-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:buschdorf#261340-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029748"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029686#vorlage</id>
+<title>Neue Vorlage 261834-01 ST: Mauer zwischen der Till-Eulenspiegel-Schule und Gärten von Privatgrundstücken an der Reuterstraße - Stellungnahme der Verwaltung</title>
+<updated>2026-10-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:gronau#261834-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029686"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029628#vorlage</id>
+<title>Neue Vorlage 261703-01 ST: Stellungnahme zur Überprüfung von Förderstrukturen, Kooperationen und Betreuungssituationen bei russischsprachigen Bildungs- und Kulturorganisationen im Stadtgebiet</title>
+<updated>2026-09-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261703-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029628"/>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029655#vorlage</id>
+<title>Neue Vorlage 261834: Kleine Anfrage - Linke: Mauer zwischen der Till-Eulenspiegel-Schule und Gärten von Privatgrundstücken an der Reuterstraße</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:gronau#261834"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029655"/>
+<summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029650#vorlage</id>
+<title>Neue Vorlage 261832: Große Anfrage - Linke: Rechtsanspruch schulische Ganztagsbetreuung</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261832"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029650"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029543#vorlage</id>
+<title>Neue Vorlage 242092-08 AA: BBB-Änderungsantrag zur Vorlage 242092-05 "Errichtung eines Förderzentrums mit dem Schwerpunkt `Geistige Entwicklung´ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße</title>
+<updated>2026-09-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-08%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029543"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029500#vorlage</id>
+<title>Neue Vorlage 261777: Volt-Gruppe-Große Anfrage: Anmeldeverfahren an den weiterführenden Schulen: Ablehnungen, Verfahrensablauf und Möglichkeit eines Zweit- und Drittwunsches</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261777"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029500"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029499#vorlage</id>
+<title>Neue Vorlage 261776: Volt-Anfrage: Einsatz und Kosten von Microsoft 365 an Bonner Schulen sowie Nutzungsgrad des landeseigenen, kostenfreien Angebots LOGINEO NRW</title>
+<updated>2026-09-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261776"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029499"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029455#vorlage</id>
+<title>Neue Vorlage 261748: BBB-Anfrage Kosten der OGS</title>
+<updated>2026-09-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261748"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029455"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029432#vorlage</id>
+<title>Neue Vorlage 242092-07 AA: BBB-Änderungsantrag zur Vorlage 242092 "Errichtung eines Förderzentrums mit dem Schwerpunkt ´Geistige Entwicklung´und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße"</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-07%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029432"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029432#beratung-2026-09-16-Schulausschuss</id>
+<title>Schulausschuss: „abgelehnt“ – 242092-07 AA BBB-Änderungsantrag zur Vorlage 242092 "Errichtung eines Förderzentrums mit dem Schwerpunkt ´Geistige Entwicklung´und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße"</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-07%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029432"/>
+<summary>Empfehlung am 2026-09-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029431#vorlage</id>
+<title>Neue Vorlage 261616-02 AA: Volt-Änderungsantrag zu Grüner Antrag: Photovoltaik-Informationspunkt an Schulen Antrag zur Vorlage 261616</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261616-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029431"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029431#beratung-2026-09-16-Schulausschuss</id>
+<title>Schulausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 261616-02 AA Volt-Änderungsantrag zu Grüner Antrag: Photovoltaik-Informationspunkt an Schulen Antrag zur Vorlage 261616</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261616-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029431"/>
+<summary>Empfehlung am 2026-09-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029425#vorlage</id>
+<title>Neue Vorlage 261735: Bürgerantrag: Gerechte und wohnortnahe Schulplatzvergabe an weiterführenden Schulen in Bonn</title>
+<updated>2026-09-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261735"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029425"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028792#beratung-2026-09-08-Betriebsausschuss%20SGB</id>
+<title>Betriebsausschuss SGB: „geändert beschlossen“ – 242092-05 Errichtung eines Förderzentrums mit dem Schwerpunkt „Geistige Entwicklung“ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße; hier: Entwurfsplanung und Kostenberechnung</title>
+<updated>2026-09-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028792"/>
+<summary>Empfehlung am 2026-09-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028194#beratung-2026-09-08-Betriebsausschuss%20SGB</id>
+<title>Betriebsausschuss SGB: „zur Kenntnis genommen“ – 261260 Monitoringbericht Schulbau</title>
+<updated>2026-09-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261260"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028194"/>
+<summary>Kenntnisnahme am 2026-09-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029191#vorlage</id>
+<title>Neue Vorlage 261616-01 ST: Stellungnahme zum Grünen-Antrag: Photovoltaik-Informationspunkt an Schulen</title>
+<updated>2026-09-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261616-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029191"/>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028228#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Chancengerechtigkeit%20und%20Integration</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „zur Kenntnis genommen“ – 261004-01 ST Erfolge der Schülerinnen und Schüler im Schuljahr 2024/2025 und herkunftssprachlicher Unterricht an Bonner Schulen</title>
+<updated>2026-09-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261004-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028228"/>
+<summary>Kenntnisnahme am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027654#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Chancengerechtigkeit%20und%20Integration</id>
+<title>Ausschuss für Chancengerechtigkeit und Integration: „zur Kenntnis genommen“ – 261004 Erfolge der Schülerinnen und Schüler im Schuljahr 2024/2025 und herkunftssprachlicher Unterricht an Bonner Schulen</title>
+<updated>2026-09-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261004"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027654"/>
+<summary>Kenntnisnahme am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029203#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 242092-06 AA SPD-Bezirksfraktion: Errichtung eines Förderzentrums mit dem Schwerpunkt „Geistige Entwicklung“ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße Antrag zur Vorlage 242092</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029203"/>
+<summary>Anregung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029169#beratung-2026-09-02-Sportausschuss</id>
+<title>Sportausschuss: „ungeändert beschlossen“ – 261512-01 AA Grüner Änderungsantrag: Fortführung des Projektes „Sport- und Bewegungsförderung an Grundschulen“ im Schuljahr 2026/2027 Antrag zur Vorlage 261512</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261512-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029169"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029127#vorlage</id>
+<title>Neue Vorlage 261605-01 ST: Stellungnahme zum Dringlichkeitsantrag: Gesperrte Basketballkörbe auf Bonner Schulhöfen</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261605-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029127"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029127#beratung-2026-09-02-Sportausschuss</id>
+<title>Sportausschuss: „zur Kenntnis genommen“ – 261605-01 ST Stellungnahme zum Dringlichkeitsantrag: Gesperrte Basketballkörbe auf Bonner Schulhöfen</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261605-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029127"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029070#beratung-2026-09-02-Sportausschuss</id>
+<title>Sportausschuss: „erledigt durch Stellungnahme der Verwaltung“ – 261605 Grüne-Fraktion-Dringlichkeitsantrag: Gesperrte Basketballkörbe auf Bonner Schulhöfen</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261605"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029070"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028863#beratung-2026-09-02-Sportausschuss</id>
+<title>Sportausschuss: „geändert beschlossen“ – 261512 Fortführung des Projektes „Sport- und Bewegungsförderung an Grundschulen“ im Schuljahr 2026/2027</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261512"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028863"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028838#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 220380-04 ST ST zu CDU-Große Anfrage: Verbesserung der Schulwege an der Kreuzung Hochkreuzallee / Klufterstraße / Friesdorfer Straße, DS 220380-03</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:friesdorf#220380-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028838"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028792#beratung-2026-09-02-Sportausschuss</id>
+<title>Sportausschuss: „ungeändert beschlossen“ – 242092-05 Errichtung eines Förderzentrums mit dem Schwerpunkt „Geistige Entwicklung“ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße; hier: Entwurfsplanung und Kostenberechnung</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028792"/>
+<summary>Empfehlung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028792#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 242092-05 Errichtung eines Förderzentrums mit dem Schwerpunkt „Geistige Entwicklung“ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße; hier: Entwurfsplanung und Kostenberechnung</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028792"/>
+<summary>Empfehlung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028548#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 220380-03 CDU-Große Anfrage: Verbesserung der Schulwege an der Kreuzung Hochkreuzallee / Klufterstraße / Friesdorfer Straße</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:friesdorf#220380-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028548"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028098#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 252756-04 ST CDU-Antrag: Umsetzung aller Punkte zur Erhöhung der Verkehrssicherheit im Umfeld der Elisabeth-Selbert-Gesamtschule, s. DS 252756</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf#252756-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028098"/>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027801#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 252756-03 CDU-Antrag: Umsetzung aller Punkte zur Erhöhung der Verkehrssicherheit im Umfeld der Elisabeth-Selbert-Gesamtschule, s. DS 252756</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf#252756-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027801"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027513#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 260956 Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich KGS Donatusschule, Donatusstraße [Hausnummer ausgelassen]</title>
+<updated>2026-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf#260956"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027513"/>
+<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029203#vorlage</id>
+<title>Neue Vorlage 242092-06 AA: SPD-Bezirksfraktion: Errichtung eines Förderzentrums mit dem Schwerpunkt „Geistige Entwicklung“ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße Antrag zur Vorlage 242092</title>
+<updated>2026-09-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029203"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029034#vorlage</id>
+<title>Neue Vorlage 261593: Monitoringbericht Schulbau</title>
+<updated>2026-09-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261593"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029034"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029169#vorlage</id>
+<title>Neue Vorlage 261512-01 AA: Grüner Änderungsantrag: Fortführung des Projektes „Sport- und Bewegungsförderung an Grundschulen“ im Schuljahr 2026/2027 Antrag zur Vorlage 261512</title>
+<updated>2026-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261512-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029169"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029148#vorlage</id>
+<title>Neue Vorlage 261630: Informationsbrief -  Informationsveranstaltung Bauvorhaben "Neubau Förderschule und Dreifeldsporthalle Rölsdorfstraße"</title>
+<updated>2026-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261630"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029148"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028838#vorlage</id>
+<title>Neue Vorlage 220380-04 ST: ST zu CDU-Große Anfrage: Verbesserung der Schulwege an der Kreuzung Hochkreuzallee / Klufterstraße / Friesdorfer Straße, DS 220380-03</title>
+<updated>2026-08-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:friesdorf#220380-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028838"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029095#vorlage</id>
+<title>Neue Vorlage 261616: Grüner Antrag: Photovoltaik-Informationspunkt an Schulen</title>
+<updated>2026-08-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261616"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029095"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029070#vorlage</id>
+<title>Neue Vorlage 261605: Grüne-Fraktion-Dringlichkeitsantrag: Gesperrte Basketballkörbe auf Bonner Schulhöfen</title>
+<updated>2026-08-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261605"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029070"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028457#vorlage</id>
+<title>Neue Vorlage 260516-02: Aktueller Stand zum Thema: ABC-Klassen</title>
+<updated>2026-08-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260516-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028457"/>
+<summary>Mitteilungsvorlage · federführend: 40 Schulamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028863#vorlage</id>
+<title>Neue Vorlage 261512: Fortführung des Projektes „Sport- und Bewegungsförderung an Grundschulen“ im Schuljahr 2026/2027</title>
+<updated>2026-08-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261512"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028863"/>
+<summary>Beschlussvorlage · federführend: 52 Sport- und Bäderamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028792#vorlage</id>
+<title>Neue Vorlage 242092-05: Errichtung eines Förderzentrums mit dem Schwerpunkt „Geistige Entwicklung“ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße; hier: Entwurfsplanung und Kostenberechnung</title>
+<updated>2026-08-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028792"/>
+<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028628#vorlage</id>
+<title>Neue Vorlage 253682-05: BBB-Antrag: Unterbringung Stadtmuseum in der alten Münsterschule, Windeckstraße 1; Drucksachenfolge 253682</title>
+<updated>2026-07-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#253682-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028628"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028601#vorlage</id>
+<title>Neue Vorlage 261387: Städtepartnerschaft Bonn - Oxford; Zuschuss für das Carl-von-Ossietzky Gymnasium (CvO)</title>
+<updated>2026-07-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ueckesdorf#261387"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028601"/>
+<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028566#vorlage</id>
+<title>Neue Vorlage 261367: Informationsbrief - Abbrucharbeiten der ehemaligen Realschule Beuel</title>
+<updated>2026-07-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:beuel#261367"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028566"/>
+<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028278#beratung-2026-07-16-Ausschuss%20f%C3%BCr%20Sicherheit%2C%20Ordnung%20und%20Bev%C3%B6lkerungsschutz</id>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „zur Kenntnis genommen“ – 260891-01 ST Antrag der Grünen-Fraktion: Koordinierte Maßnahmen zur Prävention und Einordnung wiederholter exhibitionistischer Vorfälle im Umfeld von Schulen und Schulwegen</title>
+<updated>2026-07-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dottendorf#260891-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028278"/>
+<summary>Kenntnisnahme am 2026-07-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027357#beratung-2026-07-16-Ausschuss%20f%C3%BCr%20Sicherheit%2C%20Ordnung%20und%20Bev%C3%B6lkerungsschutz</id>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „geändert beschlossen“ – 260891 Antrag der Grünen-Fraktion: Koordinierte Maßnahmen zur Prävention und Einordnung wiederholter exhibitionistischer Vorfälle im Umfeld von Schulen und Schulwegen</title>
+<updated>2026-07-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dottendorf#260891"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027357"/>
+<summary>Entscheidung am 2026-07-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028548#vorlage</id>
+<title>Neue Vorlage 220380-03: CDU-Große Anfrage: Verbesserung der Schulwege an der Kreuzung Hochkreuzallee / Klufterstraße / Friesdorfer Straße</title>
+<updated>2026-07-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:friesdorf#220380-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028548"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028491#beratung-2026-07-13-Rat</id>
+<title>Rat: „ungeändert beschlossen“ – 261340 Interfraktioneller Dringlichkeitsantrag: Hitzemaßnahmen in Schulen</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261340"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028491"/>
+<summary>Entscheidung am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028488#beratung-2026-07-13-Rat</id>
+<title>Rat: „nicht abgestimmt“ – 261238-02 AA Änderungsantrag der Kooperation: Antrag-Grüne: Umsetzung des Bund-Länder-Startchancen-Programms für bessere Bildungschancen und mehr Bildungsgerechtigkeit an Bonner Schulen mit hohem Sozialindex Antrag zur Vorlage 261238</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261238-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028488"/>
+<summary>Entscheidung am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028431#beratung-2026-07-13-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 261103-05 ST Kooperation CDU/SPD/FDP: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028431"/>
+<summary>Kenntnisnahme am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028315#beratung-2026-07-13-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 261238-01 ST Umsetzung des Bund-Länder-Startchancen-Programms für bessere Bildungschancen und mehr Bildungsgerechtigkeit an Bonner Schulen mit hohem Sozialindex</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261238-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028315"/>
+<summary>Kenntnisnahme am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028296#beratung-2026-07-13-Rat</id>
+<title>Rat: „geändert beschlossen“ – 261103-04 AA BBB-Änderungsantrag Finanzierung 19 € Schüler*innen [sic] Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen [sic] in den Sommerferien Drucksachengruppen 261103 und 253056</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028296"/>
+<summary>Entscheidung am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028293#beratung-2026-07-13-Rat</id>
+<title>Rat: „abgelehnt“ – 261103-03 AA Änderungsantrag Linke: Kooperation CDU/SPD/FDP: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien Antrag zur Vorlage 261103</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028293"/>
+<summary>Entscheidung am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028287#beratung-2026-07-13-Rat</id>
+<title>Rat: „abgelehnt“ – 261103-02 AA Änderungsantrag GRÜNE-Fraktion - Kooperation CDU/SPD/FDP: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien Antrag zur Vorlage 261103</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028287"/>
+<summary>Entscheidung am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028229#beratung-2026-07-13-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 261103-01 ST Vertagungsbitte zum Antrag: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028229"/>
+<summary>Kenntnisnahme am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028139#beratung-2026-07-13-Rat</id>
+<title>Rat: „geändert beschlossen“ – 261238 Antrag-Grüne: Umsetzung des Bund-Länder-Startchancen-Programms für bessere Bildungschancen und mehr Bildungsgerechtigkeit an Bonner Schulen mit hohem Sozialindex</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261238"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028139"/>
+<summary>Entscheidung am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027854#beratung-2026-07-13-Rat</id>
+<title>Rat: „geändert beschlossen“ – 261103 Kooperation CDU/SPD/FDP: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien</title>
+<updated>2026-07-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027854"/>
+<summary>Entscheidung am 2026-07-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028431#vorlage</id>
+<title>Neue Vorlage 261103-05 ST: Kooperation CDU/SPD/FDP: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028431"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027916#beratung-2026-07-09-Rat</id>
+<title>Rat: „geändert beschlossen“ – 261137 Wahl von Mitgliedern in den Vorstand der Hoesch-Stiftung</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261137"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027916"/>
+<summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025763#beratung-2026-07-09-Rat</id>
+<title>Rat: „geändert beschlossen“ – 260400 Zuständigkeitsordnung der Ausschüsse des Rates der Bundesstadt Bonn</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260400"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025763"/>
+<summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025703#beratung-2026-07-09-Rat</id>
+<title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 190692-09 ST Stellungnahme zum BBB-Antrag: Schulwegsicherung Friedrich-Ebert-Allee (B9) im Bereich der Stadtbahnhaltestelle Ollenhauerstraße</title>
+<updated>2026-07-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:gronau#190692-09%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025703"/>
+<summary>Kenntnisnahme am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028491#vorlage</id>
+<title>Neue Vorlage 261340: Interfraktioneller Dringlichkeitsantrag: Hitzemaßnahmen in Schulen</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261340"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028491"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028491#beratung-2026-07-08-Schulausschuss</id>
+<title>Schulausschuss: „ungeändert beschlossen“ – 261340 Interfraktioneller Dringlichkeitsantrag: Hitzemaßnahmen in Schulen</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261340"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028491"/>
+<summary>Empfehlung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028488#vorlage</id>
+<title>Neue Vorlage 261238-02 AA: Änderungsantrag der Kooperation: Antrag-Grüne: Umsetzung des Bund-Länder-Startchancen-Programms für bessere Bildungschancen und mehr Bildungsgerechtigkeit an Bonner Schulen mit hohem Sozialindex Antrag zur Vorlage 261238</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261238-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028488"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028488#beratung-2026-07-08-Schulausschuss</id>
+<title>Schulausschuss: „ungeändert beschlossen“ – 261238-02 AA Änderungsantrag der Kooperation: Antrag-Grüne: Umsetzung des Bund-Länder-Startchancen-Programms für bessere Bildungschancen und mehr Bildungsgerechtigkeit an Bonner Schulen mit hohem Sozialindex Antrag zur Vorlage 261238</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261238-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028488"/>
+<summary>Empfehlung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028315#beratung-2026-07-08-Schulausschuss</id>
+<title>Schulausschuss: „zur Kenntnis genommen“ – 261238-01 ST Umsetzung des Bund-Länder-Startchancen-Programms für bessere Bildungschancen und mehr Bildungsgerechtigkeit an Bonner Schulen mit hohem Sozialindex</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261238-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028315"/>
+<summary>Kenntnisnahme am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028194#beratung-2026-07-08-Schulausschuss</id>
+<title>Schulausschuss: „zur Kenntnis genommen - mit Protokollnotiz“ – 261260 Monitoringbericht Schulbau</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261260"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028194"/>
+<summary>Kenntnisnahme am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028139#beratung-2026-07-08-Schulausschuss</id>
+<title>Schulausschuss: „geändert beschlossen“ – 261238 Antrag-Grüne: Umsetzung des Bund-Länder-Startchancen-Programms für bessere Bildungschancen und mehr Bildungsgerechtigkeit an Bonner Schulen mit hohem Sozialindex</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261238"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028139"/>
+<summary>Empfehlung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028032#beratung-2026-07-08-Schulausschuss</id>
+<title>Schulausschuss: „zur Kenntnis genommen“ – 261189 Entwicklung der Inklusionsassistenz in Bonn</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261189"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028032"/>
+<summary>Kenntnisnahme am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027947#beratung-2026-07-08-Schulausschuss</id>
+<title>Schulausschuss: „ungeändert beschlossen“ – 261149 Namensänderung der „Abendrealschule Bonn – Weiterbildungskolleg der Bundesstadt Bonn“ in „Tages- und Abendrealschule Bonn – Weiterbildungskolleg der Bundesstadt Bonn“</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dottendorf#261149"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027947"/>
+<summary>Empfehlung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027821#beratung-2026-07-08-Schulausschuss</id>
+<title>Schulausschuss: „ungeändert beschlossen“ – 261081 Förderung des „Be Cool - Sozialkompetenztrainings“ von OLDERS Consult an der Elisabeth-Selbert-Gesamtschule gemäß den Richtlinien zur Förderung von Gewaltprävention</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf#261081"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027821"/>
+<summary>Empfehlung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025829#beratung-2026-07-08-Schulausschuss</id>
+<title>Schulausschuss: „ungeändert beschlossen“ – 260342 Schattenplätze für Schulhöfe</title>
+<updated>2026-07-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260342"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025829"/>
+<summary>Empfehlung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028296#beratung-2026-07-07-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „abgelehnt“ – 261103-04 AA BBB-Änderungsantrag Finanzierung 19 € Schüler*innen [sic] Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen [sic] in den Sommerferien Drucksachengruppen 261103 und 253056</title>
+<updated>2026-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028296"/>
+<summary>Empfehlung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028293#beratung-2026-07-07-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „abgelehnt“ – 261103-03 AA Änderungsantrag Linke: Kooperation CDU/SPD/FDP: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien Antrag zur Vorlage 261103</title>
+<updated>2026-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028293"/>
+<summary>Empfehlung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028287#beratung-2026-07-07-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „abgelehnt“ – 261103-02 AA Änderungsantrag GRÜNE-Fraktion - Kooperation CDU/SPD/FDP: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien Antrag zur Vorlage 261103</title>
+<updated>2026-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028287"/>
+<summary>Empfehlung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028229#beratung-2026-07-07-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „zur Kenntnis genommen“ – 261103-01 ST Vertagungsbitte zum Antrag: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien</title>
+<updated>2026-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028229"/>
+<summary>Kenntnisnahme am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028112#beratung-2026-07-07-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 261234 Grüne Große Anfrage: Absperrung des Bolzplatzes an der Kreuzbergschule</title>
+<updated>2026-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#261234"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028112"/>
+<summary>Kenntnisnahme am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028032#beratung-2026-07-07-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „zur Kenntnis genommen“ – 261189 Entwicklung der Inklusionsassistenz in Bonn</title>
+<updated>2026-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261189"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028032"/>
+<summary>Kenntnisnahme am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027854#beratung-2026-07-07-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „ungeändert beschlossen“ – 261103 Kooperation CDU/SPD/FDP: Finanzierung 19 € Schüler*innen Ticket, Finanzierung Sozialticket, Finanzierung kostenfreier Eintritt für Schüler*innen in den Sommerferien</title>
+<updated>2026-07-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261103"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027854"/>
+<summary>Empfehlung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+</feed>
