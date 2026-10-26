@@ -10,6 +10,7 @@ import sqlite3
 from datetime import date, datetime, timezone
 
 from . import chat, config, dossier, flaechen, prozessbild, gebietszahlen, glossar, maske, plans, process as proc, prozessarten, publish, soll, topics
+from .themenseiten import ALLE as THEMENSEITEN
 
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
@@ -272,19 +273,20 @@ def export_all():
     # Reiter „Prozesse“: Vorgänge je Verfahren mit Beispielen, Gremien mit Sitzungen und Zuständigkeit
     _dump(out / "prozessarten.json", prozessarten.site_data(db))
 
-    # Themenseite „Kultur und Haushalt“: Vorlagen in Strängen, Sitzungen, Weg des Haushalts (dossier.py)
+    # Themenseiten (pipeline/themenseiten/): Vorlagen in Strängen, Sitzungen, Phasen laut Terminplan (dossier.py)
     heute = proc.local_day(stand) if stand else datetime.now(timezone.utc).date().isoformat()
-    kultur = dossier.daten(cache, home, meetings, heute, _meta(db, True))
-    _dump(out / "dossiers" / "kultur.json", kultur)
-    # Aufrufe der Themenseite: Kalender mit den Sitzungen der beteiligten Gremien, Feed mit den Vorlagen der Stränge
-    publish.write_calendar(out / "dossiers" / "kultur.ics",
-                           [m for m in meetings if m["gremium"] in dossier.SITZUNGEN
-                            or m["gremium"].startswith("Bezirksvertretung")], date.fromisoformat(heute))
-    prozessbild.schreibe_bild(kultur, out / "dossiers", f"{config.SITE_URL}{dossier.PFAD}")
-    refs = {r["reference"] for s in kultur["straenge"] for r in s["vorlagen"]}
-    publish.write_topic_feed(out / "dossiers" / "kultur.xml", "kultur",
-                             "Kultur und Haushalt", [(pid, p) for pid, p in cache.items() if p["reference"] in refs],
-                             home, f"{config.SITE_URL}{dossier.PFAD}")
+    for t in THEMENSEITEN:
+        thema = dossier.daten(t, cache, home, meetings, heute, _meta(db, True))
+        _dump(out / "dossiers" / f"{t.key}.json", thema)
+        # Aufrufe: Kalender mit den Sitzungen der beteiligten Gremien, Feed mit den Vorlagen der Stränge, Bild
+        publish.write_calendar(out / "dossiers" / f"{t.key}.ics",
+                               [m for m in meetings if dossier.sitzung_im_thema(t, m["gremium"])],
+                               date.fromisoformat(heute))
+        prozessbild.schreibe_bild(t, thema, out / "dossiers", f"{config.SITE_URL}{t.pfad}")
+        refs = {r["reference"] for s in thema["straenge"] for r in s["vorlagen"]}
+        publish.write_topic_feed(out / "dossiers" / f"{t.key}.xml", t.key,
+                                 t.titel, [(pid, p) for pid, p in cache.items() if p["reference"] in refs],
+                                 home, f"{config.SITE_URL}{t.pfad}")
 
     # Vereinfachte Flächen für die Seite (Navigation, Umrisse, Bebauungspläne), komprimierbar als .json
     flaechen.write(out)
