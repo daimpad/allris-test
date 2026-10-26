@@ -317,3 +317,48 @@ class Wohnen(unittest.TestCase):
         from pipeline.themenseiten import ENTWUERFE
         self.assertIn(self.t.key, [t.key for t in ALLE])
         self.assertNotIn(self.t, ENTWUERFE)
+
+
+class Klima(unittest.TestCase):
+    """Regelentwurf der Themenseite Klima und Umwelt (themenseiten/klima.py, Entwurf): Titelregeln ohne Verkehr,
+    Umweltamt und Umweltausschuss, Sondervermögen kein Klimaschutz."""
+
+    def setUp(self):
+        from pipeline.themenseiten import klima
+
+        def v(ref, name, amt="01-2 Ratsbüro", gremien=("Bezirksvertretung Bonn",), themen=()):
+            p = vorlage(ref, name, amt=amt, gremien=gremien)
+            p["themes"] = [{"theme": t, "method": "stichwort", "evidence": t} for t in themen]
+            p["locations"] = []
+            return p
+        self.t = klima.THEMA
+        cache = {
+            "a": v("261900", "Fortschreibung Klimaplan"),
+            "b": v("261901", "Hitzeschutz in Seniorenheimen"),
+            "c": v("261902", "Neufassung der Baumschutzsatzung"),
+            "d": v("261903", "Mehrweg statt Einweg: Verpackungssteuer"),
+            "e": v("261904", "Gebührenkalkulation des Friedhofswesens", amt="67 Amt für Umwelt und Stadtgrün"),
+            "f": v("261905", "Regionales Fahrradmietsystem nach Maßgabe des Klimasteckbriefes", themen=("verkehr",)),
+            "g": v("261906", "Sondervermögen „Infrastruktur und Klimaneutralität“"),
+            "h": v("261907", "Baumaßnahme an der Schule"),
+            "i": v("261908", "Rasenmähroboter", gremien=("Ausschuss für Umwelt, Klima und Lokale Agenda",)),
+        }
+        self.d = dossier.daten(self.t, cache, {}, [], "2026-10-26", {})
+        self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_straenge(self):
+        self.assertEqual(self.by["261900"][0], "klimaschutz")
+        self.assertEqual(self.by["261901"][0], "anpassung")
+        self.assertEqual(self.by["261902"][0], "gruen")
+        self.assertEqual(self.by["261903"][0], "abfall")
+        self.assertEqual(self.by["261904"], ("weitere", "federführend: 67 Amt für Umwelt und Stadtgrün"))
+        self.assertEqual(self.by["261908"], ("weitere", "Beratung im Ausschuss für Umwelt, Klima und Lokale Agenda"))
+
+    def test_ohne_verkehr_und_fehltreffer(self):
+        for ref in ("261905", "261906", "261907"):
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_entwurf_ohne_seite(self):
+        from pipeline.themenseiten import ENTWUERFE
+        self.assertIn(self.t, ENTWUERFE)
+        self.assertNotIn(self.t.key, [t.key for t in ALLE])
