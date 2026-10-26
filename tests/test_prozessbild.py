@@ -49,6 +49,28 @@ class Prozessbild(unittest.TestCase):
         self.assertNotIn("zur Sitzung Bezirksvertretung Bad Godesberg", svg)  # Frist 14.10. schon vorbei
         self.assertIn("3 Beschlüsse und Anträge: 1 entschieden, 0 beraten", svg)
 
+    def test_links_nur_auf_der_seite(self):
+        svg = prozessbild.svg(self.d, "../../")
+        self.assertNotIn('role="img"', svg)  # Kinder eines Bildes wären für Screenreader nicht erreichbar
+        self.assertIn('<a class="pb-ziel" href="../../?gebiet=ortsteil:endenich#261285" aria-label="2: 261285 '
+                      'Gleichbehandlung der Kulturangebote – entschieden (Kulturausschuss, 10.06.2026)">', svg)
+        self.assertIn('href="https://example.org/261724"', svg)  # ohne Gebiet: Original
+        self.assertEqual(svg.count('href="#sitzungen"'), 2)  # ohne Tagesordnung: Terminliste der Seite
+        self.assertEqual(svg.count('<a '), 3 + 2)  # ohne Terminplan 261064 bleiben die Phasen ohne Link
+        ohne = prozessbild.svg(self.d)
+        self.assertNotIn("<a ", ohne)
+        self.assertIn('role="img"', ohne)
+        self.assertNotIn("<a ", prozessbild.bild(self.d, "https://example.org/"))
+
+    def test_sitzung_mit_tagesordnung_und_terminplan(self):
+        meetings = [dict(MEETINGS[0], web="https://example.org/to/m1")]
+        cache = dict(CACHE, h=vorlage("261064", "Rahmenterminplan Haushalt 2027/2028", amt="20 Stadtkämmerei"))
+        d = dossier.daten(cache, {"h": "ohne:2026"}, meetings, "2026-10-18", {})
+        svg = prozessbild.svg(d, "../../")
+        self.assertIn('href="https://example.org/to/m1" aria-label="Ausschuss für Finanzen, Beteiligungen und '
+                      'Vergabe, 26.11.2026: öffentliche Sitzung, Tagesordnung"', svg)
+        self.assertEqual(svg.count('href="../../?gebiet=ohne:2026#261064"'), len(d["phasen"]))
+
     def test_aufrufe_und_balken(self):
         html = prozessbild.abschnitt(self.d, "../../")
         self.assertIn("Nächste offene Frist: 05.11.2026 für Ausschuss für Finanzen", html)
