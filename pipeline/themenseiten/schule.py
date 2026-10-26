@@ -100,4 +100,6 @@ THEMA = Thema(
     # Gegenprobe: Titel ohne Schulwort, die Schulen betreffen könnten (Sport- und Turnhallen, Kinder und Jugendliche)
     kandidat=re.compile(r"Sporthalle|Turnhalle|Unterricht|Klasse|Lehrer|Abitur|Bildungszugang|Kindern und Jugendlichen",
                         re.I),
+    farben=("#b45309", "#d97706", "#f59e0b"),  # Übersicht thema/: Schrift, Verlauf
+    symbol='<path d="M2 9 12 4l10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v5"/>',
 )

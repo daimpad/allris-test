@@ -110,4 +110,6 @@ THEMA = Thema(
     stichprobe_ohne=5,
     kandidat=re.compile(r"Wohn|Bauvor|Bauantrag|Baugenehmigung|Grundstück|Quartier|Städtebau|Stadtentwicklung|"
                         r"Rahmenplan|Nachverdichtung|Baulücke|Erhaltungssatzung|Gestaltungssatzung|Neubaugebiet", re.I),
+    farben=("#be123c", "#e11d48", "#fb7185"),  # Übersicht thema/: Schrift, Verlauf
+    symbol='<path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/>',
 )

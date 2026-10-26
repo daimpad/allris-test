@@ -110,4 +110,7 @@ THEMA = Thema(
     stichprobe_ohne=6,
     kandidat=re.compile(r"Verkehr|Mobilität|Straße|Radweg|Fahrrad|Gehweg|\bBus|Bahn|Haltestelle|Parken|Parkpl|Ampel|"
                         r"Kreuzung|Tempo", re.I),
+    farben=("#1d4ed8", "#2563eb", "#0891b2"),  # Übersicht thema/: Schrift, Verlauf
+    symbol='<circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/>'
+           '<path d="M5.5 17 9.5 9h6l3 8M9.5 9l3 8h-7M13.5 6H17"/>',
 )

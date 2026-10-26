@@ -91,6 +91,8 @@ class Thema:
     ausschluss: re.Pattern = None  # Titel, die zu keinem Strang gehören (vor allen Regeln)
     punkt_gremien: tuple = ()  # Punkte im Bild nur mit Beratung in diesen Gremien (leer: alle)
     nach_bezirk: frozenset = frozenset()  # Stränge, deren Vorlagen nach Stadtbezirk gegliedert erscheinen
+    farben: tuple = ("#6d28d9", "#7c3aed", "#a78bfa")  # Übersicht thema/: Schrift, Verlauf von, Verlauf bis
+    symbol: str = ""          # Übersicht thema/: Linien-Symbol (SVG-Inhalt, viewBox 0 0 24 24)
 
     @property
     def stichprobe_pfad(self):
@@ -449,26 +451,72 @@ def write(t, site, site_url, page):
 UEBERSICHT = "thema/"
 
 
+HAND = ('<path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12M11 11V4.5a1.5 1.5 0 0 1 3 0V12M14 11.5V6a1.5 1.5 0 0 1 3 0v8a7 7 0 '
+        '0 1-7 7h-.5a6 6 0 0 1-5.1-2.8L3.3 15a1.5 1.5 0 0 1 2.4-1.8L8 15.5"/>')
+WOCHENTAG = ("Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa.", "So.")
+
+
+def _svg(inhalt, klasse):
+    return (f'<svg class="{klasse}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
+            f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">{inhalt}</svg>')
+
+
+def _kachel(t, d):
+    """Kachel der Übersicht: Symbol und Farbverlauf, Zahl der Vorlagen, Stränge mit Zahl, nächste Sitzung des
+    Fachausschusses (erstes Gremium in t.sitzungen) mit Frist."""
+    n = sum(len(s["vorlagen"]) for s in d["straenge"])
+    ink, von, bis = t.farben
+    straenge = "".join(f'<li>{escape(s["titel"])} <span class="kachel-n">{len(s["vorlagen"])}</span></li>'
+                       for s in d["straenge"])
+    heute = d.get("heute") or ""
+    sitzung = next((m for m in d.get("sitzungen") or [] if m.get("gremium") == t.sitzungen[0]
+                    and (m.get("date") or "") >= heute), None)
+    if sitzung:
+        tag = WOCHENTAG[date.fromisoformat(sitzung["date"]).weekday()]
+        frist = (f' · Anregungen bis {_date(sitzung["frist"])}' if (sitzung.get("frist") or "") >= heute
+                 and sitzung.get("frist") else "")  # abgelaufene Fristen nicht zeigen
+        termin = (f'<p class="kachel-sitzung">{_svg(HAND, "kachel-hand")}<span>Nächste Sitzung: {escape(t.sitzungen[0])}, '
+                  f'<time datetime="{sitzung["date"]}">{tag} {_date(sitzung["date"])}</time>{frist}</span></p>')
+    else:
+        termin = f'<p class="kachel-sitzung kachel-leise">{_svg(HAND, "kachel-hand")}<span>Noch keine Sitzung des ' \
+                 f'{escape(t.sitzungen[0])} angekündigt</span></p>'
+    return (f'      <li class="kachel" style="--k-ink:{ink};--k-von:{von};--k-bis:{bis}">\n'
+            f'        <div class="kachel-kopf">{_svg(t.symbol, "kachel-symbol")}</div>\n'
+            f'        <div class="kachel-inhalt">\n'
+            f'          <h2><a href="../{t.pfad}">{escape(t.titel)}</a></h2>\n'
+            f'          <p class="kachel-zahl"><strong>{n}</strong> Vorlagen in {len(d["straenge"])} Strängen</p>\n'
+            f'          <ul class="kachel-straenge" aria-label="Stränge">{straenge}</ul>\n'
+            f'          {termin}\n'
+            f'        </div>\n'
+            f'      </li>')
+
+
 def uebersicht(themen, site, site_url, page):
-    """Übersicht thema/ über die geschriebenen Themenseiten (Titel, Zahl der Vorlagen, Beschreibung); gibt den Pfad
-    für die Sitemap zurück, ohne Themenseiten keinen."""
-    eintraege = []
+    """Übersicht thema/ über die geschriebenen Themenseiten als Kacheln (Symbol, Farbe, Zahlen, Stränge, nächste
+    Sitzung); gibt den Pfad für die Sitemap zurück, ohne Themenseiten keinen."""
+    kacheln, refs, stand = [], set(), ""
     for t in themen:
         src = site / "data" / "export" / "bonn" / "dossiers" / f"{t.key}.json"
         if not (site / t.pfad / "index.html").exists() or not src.exists():
             continue
         d = json.loads(src.read_text(encoding="utf-8"))
-        n = sum(len(s["vorlagen"]) for s in d["straenge"])
-        straenge = ", ".join(s["titel"] for s in d["straenge"])
-        eintraege.append(f'      <li><a href="../{t.pfad}"><strong>{escape(t.titel)}</strong></a> ({n} Vorlagen)<br>'
-                         f'<small>Stränge: {escape(straenge)}</small></li>')
-    if not eintraege:
+        kacheln.append(_kachel(t, d))
+        refs |= {r["reference"] for s in d["straenge"] for r in s["vorlagen"]}
+        stand = max(stand, d.get("heute") or "")
+    if not kacheln:
         return []
-    body = f"""    <h1>Themen</h1>
+    body = f"""    <div class="themen-kopf">
+    <h1>Themen</h1>
     <p class="lead">Themenseiten ordnen Vorlagen aus dem Ratsinformationssystem der Stadt Bonn nach Strängen und zeigen, wo ein Verfahren steht, was entschieden ist und wo man sich einbringen kann.</p>
-    <p class="meta">Die Zuordnung folgt festen Regeln je Thema (abgeleitet, je Vorlage mit Grund) und wurde an einer Stichprobe von Hand geprüft. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
-    <ul>
-{chr(10).join(eintraege)}
+    <ul class="themen-zahlen" aria-label="Auf einen Blick">
+      <li><strong>{len(refs)}</strong> Vorlagen seit Beginn der Wahlperiode</li>
+      <li><strong>{len(kacheln)}</strong> Themen</li>
+      <li>Stand <strong>{_date(stand)}</strong></li>
+    </ul>
+    <p class="meta">Die Zuordnung ist abgeleitet: feste Regeln je Thema, je Vorlage mit Grund, an einer Stichprobe von Hand geprüft. Eine Vorlage kann auf mehreren Themenseiten stehen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
+    </div>
+    <ul class="kacheln">
+{chr(10).join(kacheln)}
     </ul>
     <p><a href="../">Zur Karte</a></p>"""
     out = site / UEBERSICHT / "index.html"

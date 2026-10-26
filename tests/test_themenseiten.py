@@ -202,8 +202,9 @@ class Verkehr(unittest.TestCase):
             dossier.write(self.t, site, "https://example.org/", gebietsseiten._page)
             self.assertEqual(dossier.uebersicht(ALLE, site, "https://example.org/", gebietsseiten._page), ["thema/"])
             html = (site / "thema" / "index.html").read_text()
-        self.assertIn('<a href="../thema/verkehr-und-mobilitaet/"><strong>Verkehr und Mobilität</strong></a> (8 Vorlagen)',
-                      html)
+        self.assertIn('<h2><a href="../thema/verkehr-und-mobilitaet/">Verkehr und Mobilität</a></h2>', html)
+        self.assertIn('<p class="kachel-zahl"><strong>8</strong> Vorlagen in 5 Strängen</p>', html)
+        self.assertIn('class="kachel-symbol"', html)
         self.assertNotIn("kultur-und-haushalt", html)  # ohne Daten keine Zeile
 
 

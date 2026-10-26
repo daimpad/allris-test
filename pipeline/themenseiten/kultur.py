@@ -98,4 +98,6 @@ THEMA = Thema(
     stichprobe_ohne=8,
     kandidat=re.compile(r"Kultur|Theater|Museum|Bibliothek|Oper\b|Musik(?!erviertel)|Kunst(?!rasen)|Beethoven|Bühne|"
                         r"Festival|Konzert|Orchester", re.I),
+    farben=("#6d28d9", "#7c3aed", "#db2777"),  # Übersicht thema/: Schrift, Verlauf
+    symbol='<path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
 )
