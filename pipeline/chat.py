@@ -6,7 +6,7 @@
                       Methode und Konfidenz; Straßenebene ohne Hausnummern
 - gremien.json        Gremien und Verwaltungsbereiche mit Zählungen und Thema (abgeleitet)
 - datenstand.json     Abrufzeitpunkte, Lizenzen, Umfang, Verortungsquote, bekannte Lücken
-- einwohner.json      Drucksachen aus der Einwohnerschaft (Bürgeranträge, Anregungen und Beschwerden, Einwohnerfragen)
+- einwohner.json      Drucksachen, deren Titel ohne Hausnummer erscheinen (Einwohnerschaft; Bauordnung und Naturschutz)
                       samt allen Vorlagen desselben Vorgangs; der Assistent lässt in ihren Titeln und Fundstellen
                       Hausnummern aus (site/chat/tools.js)
 
@@ -140,17 +140,18 @@ def _dump(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
 
 
-def einwohner(papers):
+def einwohner(papers, auch=None):
     """Drucksachen von Vorlagen aus der Einwohnerschaft und aller Vorlagen, die mit ihnen über- oder untergeordnet
     verbunden sind (auch über mehrere Stufen): Stellungnahmen und Mitteilungen zu einem Bürgerantrag nennen oft
-    dieselbe Anschrift, tragen aber weder die Art noch das Wort im Titel (Code-Prüfung 23.10.2026)."""
+    dieselbe Anschrift, tragen aber weder die Art noch das Wort im Titel (Code-Prüfung 23.10.2026).
+    auch: weitere Ausgangsvorlagen (maske.privat: Bauordnung und Naturschutz, nur zum Ausblenden der Hausnummer)."""
     nachbarn = defaultdict(set)
     for p in papers:
         for r in p["superordinated"] + p["subordinated"]:
             nachbarn[p["reference"]].add(r["reference"])
             nachbarn[r["reference"]].add(p["reference"])
     offen = [p["reference"] for p in papers
-             if p["paper_type"] in EINWOHNER or EINWOHNER_TITEL.search(p["name"] or "")]
+             if p["paper_type"] in EINWOHNER or EINWOHNER_TITEL.search(p["name"] or "") or (auch and auch(p))]
     gesehen = set(offen)
     while offen:
         for n in nachbarn[offen.pop()]:
@@ -170,5 +171,7 @@ def write_chat(out, db, cache, meetings, sources, meta):
     _dump(out / "orte.json", {"meta": meta, "places": places(papers)})
     _dump(out / "gremien.json", {"meta": meta, "organizations": organizations(db, papers, meetings)})
     _dump(out / "datenstand.json", data_status(sources, papers, meetings))
-    _dump(out / "einwohner.json", {"meta": meta, "drucksachen": einwohner(papers)})
+    # Drucksachen, deren Titel ohne Hausnummer erscheinen (Einwohnerschaft, Bauordnung und Naturschutz; maske.py)
+    from . import maske   # hier, weil maske chat importiert
+    _dump(out / "einwohner.json", {"meta": meta, "drucksachen": einwohner(papers, auch=maske.privat)})
     return len(shards)

@@ -51,3 +51,33 @@ class Maske(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class BauordnungUndNaturschutz(unittest.TestCase):
+    """Erweiterung 26.10.2026: Titel aus Bauordnungsamt und Unterer Naturschutzbehörde ohne Hausnummer."""
+
+    def test_federfuehrung(self):
+        self.assertTrue(maske.privat({"amt_name": "63-1 Allgemeine Verwaltungs- und Beitragsangelegenheiten"}))
+        self.assertTrue(maske.privat({"amt": "67 Amt für Umwelt und Stadtgrün",
+                                      "responsibility": [{"kind": "federfuehrend", "name": "67-6 Untere Naturschutzbehörde"}]}))
+        self.assertTrue(maske.privat({"amt_name": "56-3 Untere Naturschutzbehörde"}))
+        self.assertFalse(maske.privat({"amt_name": "61 Stadtplanungsamt"}))
+        self.assertFalse(maske.privat({"amt_name": "630 Sonstiges"}))
+        self.assertFalse(maske.privat({"amt": "67 Amt für Umwelt und Stadtgrün",
+                                       "responsibility": [{"kind": "fachlich", "name": "67-6 Untere Naturschutzbehörde"}]}))
+
+    def test_aus_db_mit_amt(self):
+        db = sqlite3.connect(":memory:")
+        db.executescript("""CREATE TABLE organization (id TEXT, name TEXT);
+            CREATE TABLE paper (id TEXT, reference TEXT, paper_type TEXT, name TEXT, under_direction_of TEXT);
+            CREATE TABLE paper_relation (parent_id TEXT, child_id TEXT);
+            INSERT INTO organization VALUES ('o1', '63-1 Allgemeine Verwaltung'), ('o2', '61 Stadtplanungsamt');
+            INSERT INTO paper VALUES ('a', '261900', 'Beschlussvorlage', 'Grundstück in Bonn, Reichsstraße 5 - Anbau', 'o1'),
+              ('b', '261900-01 ST', 'Stellungnahme der Verwaltung', 'Anfrage Reichsstraße 5', 'o2'),
+              ('c', '261901', 'Beschlussvorlage', 'Sanierung Reichsstraße 5', 'o2');
+            INSERT INTO paper_relation VALUES ('a', 'b');""")
+        m = maske.aus_db(db, STRASSEN)
+        self.assertEqual(m("Grundstück in Bonn, Reichsstraße 5 - Anbau", "261900"),
+                         "Grundstück in Bonn, Reichsstraße [Hausnummer ausgelassen] - Anbau")
+        self.assertEqual(m("Anfrage Reichsstraße 5", "261900-01 ST"), "Anfrage Reichsstraße [Hausnummer ausgelassen]")
+        self.assertEqual(m("Sanierung Reichsstraße 5", "261901"), "Sanierung Reichsstraße 5")
