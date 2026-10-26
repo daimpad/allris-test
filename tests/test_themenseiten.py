@@ -205,3 +205,47 @@ class Verkehr(unittest.TestCase):
         self.assertIn('<a href="../thema/verkehr-und-mobilitaet/"><strong>Verkehr und Mobilität</strong></a> (8 Vorlagen)',
                       html)
         self.assertNotIn("kultur-und-haushalt", html)  # ohne Daten keine Zeile
+
+
+class Schule(unittest.TestCase):
+    """Regelentwurf der Themenseite Schule und Bildung (themenseiten/schule.py, Entwurf): Bedingung im Titel
+    (Schulwort und Merkmal des Strangs), Schulamt und Schulausschuss, Ausschluss von Kitas und Sammellisten."""
+
+    def setUp(self):
+        from pipeline.themenseiten import schule
+
+        def v(ref, name, amt="85 Städtisches Gebäudemanagement", gremien=("Bezirksvertretung Bonn",)):
+            p = vorlage(ref, name, amt=amt, gremien=gremien)
+            p["themes"], p["locations"] = [], []
+            return p
+        self.t = schule.THEMA
+        cache = {
+            "a": v("261900", "Querungshilfe vor der Grundschule Endenich"),
+            "b": v("261901", "Sanierung der Toiletten am Beethoven-Gymnasium"),
+            "c": v("261902", "Erhöhung der Zügigkeit der Gesamtschule Beuel"),
+            "d": v("261903", "Schulbuchbeschaffung", amt="40 Schulamt"),
+            "e": v("261904", "Anfrage: ABC-Klassen", amt="01 Ratsbüro", gremien=("Schulausschuss",)),
+            "f": v("261905", "Sanierung des Rathauses"),
+            "g": v("261906", "Neubau der Kita an der Schulstraße"),
+            "h": v("261907", "Tagesordnungspunkte in nichtöffentlicher Sitzung", amt="40 Schulamt"),
+            "i": v("261908", "Neubau der Musikschule"),
+            "j": v("261909", "Abbau von Altschulden"),
+        }
+        self.d = dossier.daten(self.t, cache, {}, [], "2026-10-26", {})
+        self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_straenge(self):
+        self.assertEqual(self.by["261900"], ("schulweg", "Titel: „Querungshilfe“ und „Grundschule“"))
+        self.assertEqual(self.by["261901"][0], "bau")
+        self.assertEqual(self.by["261902"][0], "plaetze")
+        self.assertEqual(self.by["261903"], ("weitere", "federführend: 40 Schulamt"))
+        self.assertEqual(self.by["261904"], ("weitere", "Beratung im Schulausschuss"))
+
+    def test_ohne_schulwort_und_ausschluss(self):
+        for ref in ("261905", "261906", "261907", "261908", "261909"):
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_entwurf_ohne_seite(self):
+        from pipeline.themenseiten import ENTWUERFE
+        self.assertIn(self.t, ENTWUERFE)
+        self.assertNotIn(self.t, ALLE)

@@ -39,7 +39,8 @@ class Regel:
       mit nur_stammvorlage zählt nur der Titel der Stammvorlage (nicht z. B. ein einzelner Änderungsantrag)
     - titel: Wort im Titel; mit zustaendig oder thema zusätzlich dazu, sonst allein
     - zustaendig: Amt, Stelle oder Gremium; ohne Treffer im Titel gilt der Strang sonst
-    - thema: Schlüssel der Themenzuordnung (topics.py, abgeleitet); wie zustaendig"""
+    - thema: Schlüssel der Themenzuordnung (topics.py, abgeleitet); wie zustaendig
+    - bedingung: ein zweites Merkmal, das der Titel zusätzlich nennen muss (z. B. ein Wort für Schule)"""
     strang: str
     stammnummer: str = None
     verfahren_titel: re.Pattern = None
@@ -48,6 +49,7 @@ class Regel:
     zustaendig: Zustaendig = None
     thema: str = None
     sonst: str = None
+    bedingung: re.Pattern = None
 
 
 @dataclass(frozen=True)
@@ -157,6 +159,9 @@ def zuordnen(t, p, verfahren=None):
     for r in t.regeln:
         if r.stammnummer or r.verfahren_titel:
             continue
+        mb = r.bedingung and r.bedingung.search(name)
+        if r.bedingung and not mb:
+            continue
         if r.zustaendig or r.thema:
             grund = _zustaendig(r.zustaendig, p) if r.zustaendig else _thema(r.thema, p)
             if not grund:
@@ -171,7 +176,8 @@ def zuordnen(t, p, verfahren=None):
             continue
         m = r.titel and r.titel.search(name)
         if m:
-            return r.strang, f"Titel: „{_wort(m)}“"
+            woerter = [_wort(m)] + ([_wort(mb)] if mb and _wort(mb) != _wort(m) else [])
+            return r.strang, "Titel: " + " und ".join(f"„{w}“" for w in woerter)
     return None
 
 
@@ -506,7 +512,8 @@ def stichprobe(t, src=None, out=None, seed=2026, db_path=None):
     m = maske.aus_db(db)
     ohne = [list(r) for r in db.execute("SELECT reference, date, paper_type, name, web FROM paper WHERE date >= ? "
                                         "ORDER BY reference", (t.seit,))
-            if t.kandidat and r[0] not in drin and t.kandidat.search(r[3] or "")]
+            if t.kandidat and r[0] not in drin and t.kandidat.search(r[3] or "")
+            and not (t.ausschluss and t.ausschluss.search(r[3] or ""))]  # Ausgeschlossenes ist entschieden
     je_verfahren = {}  # eine Vorlage je Verfahren (Stammnummer), damit die Gegenprobe breiter streut
     for r in ohne:
         je_verfahren.setdefault(_stamm(r[0]), r)
