@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 
 from pipeline import dossier, gebietsseiten
+from pipeline.themenseiten.kultur import THEMA as K
 
 
 def vorlage(ref, name, amt=None, date="2026-06-01", gremien=(), result=None):
@@ -40,7 +41,7 @@ MEETINGS = [
 
 class Straenge(unittest.TestCase):
     def setUp(self):
-        self.d = dossier.daten(CACHE, {"a": "ohne:2026", "d": "ortsteil:endenich"}, MEETINGS, "2026-10-25", {})
+        self.d = dossier.daten(K, CACHE, {"a": "ohne:2026", "d": "ortsteil:endenich"}, MEETINGS, "2026-10-25", {})
         self.by = {s["key"]: [r["reference"] for r in s["vorlagen"]] for s in self.d["straenge"]}
 
     def test_zuordnung(self):
@@ -88,7 +89,7 @@ class RegelnNachPruefung(unittest.TestCase):
             "i": vorlage("261861", "Grünen-Antrag: Zukunft des Schauspiels", amt="01-2 Ratsbüro",
                          gremien=("Kulturausschuss",)),
         }
-        self.d = dossier.daten(cache, {}, [], "2026-10-25", {})
+        self.d = dossier.daten(K, cache, {}, [], "2026-10-25", {})
         self.rows = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
 
     def test_buehnen_ganzes_verfahren(self):
@@ -107,21 +108,21 @@ class RegelnNachPruefung(unittest.TestCase):
     def test_weitere_eingeklappt(self):
         weitere = next(s for s in self.d["straenge"] if s["key"] == "kultur_weitere")
         self.assertTrue(weitere["eingeklappt"])
-        html = dossier.body(self.d, "../../")
+        html = dossier.body(K, self.d, "../../")
         self.assertIn("<details>\n      <summary>Alle 1 Vorlagen anzeigen</summary>", html)
         self.assertEqual(html.count("<details>"), 1)
 
 
 class Seite(unittest.TestCase):
     def test_seite_und_sitemap_pfad(self):
-        d = dossier.daten(CACHE, {"d": "ortsteil:endenich"}, MEETINGS, "2026-10-25", {})
+        d = dossier.daten(K, CACHE, {"d": "ortsteil:endenich"}, MEETINGS, "2026-10-25", {})
         with tempfile.TemporaryDirectory() as tmp:
             site = Path(tmp)
             src = site / "data" / "export" / "bonn" / "dossiers" / "kultur.json"
             src.parent.mkdir(parents=True)
             src.write_text(json.dumps(d))
-            self.assertEqual(dossier.write(site, "https://example.org/", gebietsseiten._page), [dossier.PFAD])
-            html = (site / dossier.PFAD / "index.html").read_text()
+            self.assertEqual(dossier.write(K, site, "https://example.org/", gebietsseiten._page), [K.pfad])
+            html = (site / K.pfad / "index.html").read_text()
         self.assertIn('<link rel="canonical" href="https://example.org/thema/kultur-und-haushalt/">', html)
         self.assertIn('href="../../?gebiet=ortsteil:endenich#261285"', html)
         self.assertIn("Kulturausschuss 10.06.2026: beschlossen", html)
@@ -131,12 +132,12 @@ class Seite(unittest.TestCase):
 
     def test_ohne_daten_keine_seite(self):
         with tempfile.TemporaryDirectory() as tmp:
-            self.assertEqual(dossier.write(Path(tmp), "https://example.org/", gebietsseiten._page), [])
+            self.assertEqual(dossier.write(K, Path(tmp), "https://example.org/", gebietsseiten._page), [])
 
 
 class Stichprobe(unittest.TestCase):
     def test_zuordnung_und_gegenprobe_einmalig(self):
-        d = dossier.daten(CACHE, {}, MEETINGS, "2026-10-25", {})
+        d = dossier.daten(K, CACHE, {}, MEETINGS, "2026-10-25", {})
         with tempfile.TemporaryDirectory() as tmp:
             tmp = Path(tmp)
             (tmp / "kultur.json").write_text(json.dumps(d))
@@ -149,14 +150,14 @@ class Stichprobe(unittest.TestCase):
             db.commit()
             db.close()
             out = tmp / "stichprobe.tsv"
-            dossier.stichprobe(tmp / "kultur.json", out, db_path=tmp / "db.sqlite")
+            dossier.stichprobe(K, tmp / "kultur.json", out, db_path=tmp / "db.sqlite")
             with out.open(encoding="utf-8") as f:
                 rows = list(csv.reader(f, delimiter="\t"))
             ohne = [r[1] for r in rows[1:] if r[6] == "nicht zugeordnet"]
             self.assertEqual(ohne, ["261900"])  # eine Vorlage je Verfahren, kein Kunstrasen, nichts Zugeordnetes
             self.assertEqual(len(rows) - 1, 6 + 1)  # alle 6 zugeordneten (je Strang höchstens die Sollzahl) + 1
             out.write_text("geprüft")
-            dossier.stichprobe(tmp / "kultur.json", out, db_path=tmp / "db.sqlite")
+            dossier.stichprobe(K, tmp / "kultur.json", out, db_path=tmp / "db.sqlite")
             self.assertEqual(out.read_text(), "geprüft")
 
 

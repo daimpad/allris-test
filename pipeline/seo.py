@@ -8,6 +8,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 from . import config, dossier, gebietsseiten
+from .themenseiten import ALLE as THEMENSEITEN
 
 DEFAULT_URL = "https://daimpad.github.io/allris-test/"  # Platzhalter in site/, wird durch SITE_URL ersetzt
 PAGES = ("index.html", "404.html", "datenschutz.html")
@@ -36,6 +37,6 @@ def write(site=Path("_site"), site_url=None):
             page.write_text(page.read_text(encoding="utf-8").replace(DEFAULT_URL, site_url), encoding="utf-8")
     (site / "robots.txt").write_text(robots(site_url), encoding="utf-8")
     areas = gebietsseiten.write(site, site_url)
-    themen = dossier.write(site, site_url, gebietsseiten._page)
+    themen = [pfad for t in THEMENSEITEN for pfad in dossier.write(t, site, site_url, gebietsseiten._page)]
     (site / "sitemap.xml").write_text(sitemap(site_url, [*themen, *areas]), encoding="utf-8")
     print(f"robots.txt, sitemap.xml und Adressen für {site_url}")
