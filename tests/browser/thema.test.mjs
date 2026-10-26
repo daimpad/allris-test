@@ -105,3 +105,20 @@ test("Themenseite Verkehr: Stränge nach Stadtbezirk, Übersicht thema/, ohne Ve
   assert.deepEqual(page.errors, []);
   await page.close();
 });
+
+test("Themenseite Schule: Stränge, Detailfeld, ohne Verstöße", async () => {
+  const page = await browser.newPage({ viewport: { width: 390, height: 900 }, bypassCSP: true });
+  page.errors = [];
+  page.on("pageerror", (e) => page.errors.push(String(e)));
+  await page.goto(SITE + "thema/schule-und-bildung/", { waitUntil: "networkidle" });
+  for (const k of ["schulweg", "bau", "plaetze", "weitere"]) {
+    assert.ok(await page.locator(`.pb-schalter[data-strang='${k}']`).count(), "Schalter " + k);
+  }
+  await page.locator("a.pb-ziel[data-ziel^='punkt-']").first().click();
+  assert.equal(await page.locator("#pb-detail").isHidden(), false);
+  assert.deepEqual(await axe(page), []);
+  await page.goto(SITE + "thema/", { waitUntil: "networkidle" });
+  assert.equal(await page.locator("a[href='../thema/schule-und-bildung/']").count(), 1);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
