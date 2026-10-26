@@ -116,3 +116,63 @@ class ThemaOhnePhasen(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class VerkehrEntwurf(unittest.TestCase):
+    """Regeln des Entwurfs Verkehr und Mobilität (themenseiten/verkehr.py) und die Erweiterungen dafür:
+    Regel nach Thema, Ausschluss, ganzes Verfahren nur über die Stammvorlage, Punkte nur aus bestimmten Gremien,
+    Gliederung nach Stadtbezirk."""
+
+    def setUp(self):
+        from pipeline.themenseiten import verkehr
+
+        def v(ref, name, gremien=("Ausschuss für Mobilität und Verkehr",), bezirk=None, thema=True, art="Antrag"):
+            p = vorlage(ref, name, amt="61 Stadtplanungsamt", gremien=gremien)
+            p["paper_type"] = art
+            p["themes"] = [{"theme": "verkehr", "method": "amt", "evidence": "61-3 Stadtverkehr"}] if thema else []
+            p["locations"] = [{"stadtbezirk": bezirk}] if bezirk else []
+            return p
+        self.t = verkehr.THEMA
+        cache = {
+            "a": v("261900", "Neuer Radweg an der Hauptstraße", bezirk="Beuel"),
+            "b": v("261901", "Gehwegparken in der Lindenstraße", gremien=("Bezirksvertretung Beuel",), bezirk="Beuel"),
+            "c": v("261902", "Fahrradparkhaus am Bahnhof"),
+            "d": v("261903", "Pflegearbeiten im Verkehrsgrün"),
+            "e": v("261904", "Fortschreibung des Nahverkehrsplans", art="Beschlussvorlage"),
+            "f": v("261904-01 AA", "Ergänzungsantrag: Ersatzverkehr während der Sperrung der Nordbrücke"),
+            "g": v("261905", "Sperrung der Nordbrücke: Maßnahmen", thema=False, art="Beschlussvorlage"),
+            "h": v("261905-01 ST", "Stellungnahme der Verwaltung", thema=False, art="Stellungnahme der Verwaltung"),
+            "i": v("261906", "Beleuchtung am Wasserland", gremien=("Bezirksvertretung Bonn",), bezirk="Bonn"),
+        }
+        self.d = dossier.daten(self.t, cache, {}, [], "2026-10-26", {})
+        self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_straenge(self):
+        self.assertEqual(self.by["261900"], ("rad_fuss", "Thema „Verkehr und Mobilität“ (61-3 Stadtverkehr); "
+                                             "Titel: „Radweg“"))
+        self.assertEqual(self.by["261901"][0], "parken")  # Gehwegparken: Parken vor Rad und Fuß
+        self.assertEqual(self.by["261902"][0], "bus_bahn")  # „Bahnhof“; Fahrradparkhaus zählt nicht als Parken
+        self.assertNotIn("261903", self.by)  # Verkehrsgrün ausgeschlossen
+        self.assertEqual(self.by["261904"][0], "bus_bahn")  # Änderungsantrag zieht das Verfahren nicht mit
+        self.assertEqual(self.by["261904-01 AA"], ("nordbruecke", "Titel: „Nordbrücke“"))
+        self.assertEqual(self.by["261905-01 ST"], ("nordbruecke", "Verfahren 261905; Titel: „Nordbrücke“"))
+        self.assertEqual(self.by["261906"][0], "weitere")
+
+    def test_punkte_nur_aus_rat_und_mobilitaetsausschuss(self):
+        refs = {p["reference"] for p in self.d["punkte"]}
+        self.assertIn("261900", refs)
+        self.assertNotIn("261901", refs)  # nur in der Bezirksvertretung beraten
+        self.assertEqual({p["bahn"] for p in self.d["punkte"] if p["reference"] == "261900"}, {"mobil"})
+
+    def test_weitere_nach_stadtbezirk(self):
+        weitere = next(s for s in self.d["straenge"] if s["key"] == "weitere")
+        self.assertEqual([r["bezirk"] for r in weitere["vorlagen"]], ["Bonn"])
+        self.assertNotIn("bezirk", next(s for s in self.d["straenge"] if s["key"] == "rad_fuss")["vorlagen"][0])
+        html = dossier.body(self.t, self.d, "../../")
+        self.assertIn("<summary>Bonn (1)</summary>", html)
+        self.assertIn("Terminplan 261064", html)  # Haushaltsbahn wie bei Kultur
+
+    def test_entwurf_nicht_veroeffentlicht(self):
+        from pipeline.themenseiten import ENTWUERFE
+        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertIn(self.t.key, [t.key for t in ENTWUERFE])

@@ -35,14 +35,18 @@ class Regel:
     nur Vorlagen ab Beginn des Zeitraums: Verfahren, deren Titel passt (ganzes Verfahren), danach die übrigen
     Regeln in ihrer Reihenfolge; die erste passende gilt.
     - stammnummer: Drucksache und ihre Folgevorlagen
-    - verfahren_titel: ein Titel im Verfahren passt, das ganze Verfahren (Stammnummer) gehört zum Strang
-    - titel: Wort im Titel; mit zustaendig zusätzlich zur Zuständigkeit, sonst allein
-    - zustaendig: Amt, Stelle oder Gremium; ohne Treffer im Titel gilt der Strang sonst"""
+    - verfahren_titel: ein Titel im Verfahren passt, das ganze Verfahren (Stammnummer) gehört zum Strang;
+      mit nur_stammvorlage zählt nur der Titel der Stammvorlage (nicht z. B. ein einzelner Änderungsantrag)
+    - titel: Wort im Titel; mit zustaendig oder thema zusätzlich dazu, sonst allein
+    - zustaendig: Amt, Stelle oder Gremium; ohne Treffer im Titel gilt der Strang sonst
+    - thema: Schlüssel der Themenzuordnung (topics.py, abgeleitet); wie zustaendig"""
     strang: str
     stammnummer: str = None
     verfahren_titel: re.Pattern = None
+    nur_stammvorlage: bool = False
     titel: re.Pattern = None
     zustaendig: Zustaendig = None
+    thema: str = None
     sonst: str = None
 
 
@@ -80,6 +84,9 @@ class Thema:
     stichprobe_je_strang: dict = field(default_factory=dict)
     stichprobe_ohne: int = 0
     kandidat: re.Pattern = None  # Gegenprobe: Wörter im Titel nicht zugeordneter Vorlagen
+    ausschluss: re.Pattern = None  # Titel, die zu keinem Strang gehören (vor allen Regeln)
+    punkt_gremien: tuple = ()  # Punkte im Bild nur mit Beratung in diesen Gremien (leer: alle)
+    nach_bezirk: frozenset = frozenset()  # Stränge, deren Vorlagen nach Stadtbezirk gegliedert erscheinen
 
     @property
     def stichprobe_pfad(self):
@@ -108,6 +115,8 @@ def _verfahren(t, cache):
         if (p.get("date") or "") < t.seit:
             continue
         for r in regeln:
+            if r.nur_stammvorlage and p["reference"] != _stamm(p["reference"]):
+                continue
             m = r.verfahren_titel.search(p.get("name") or "")
             if m and _stamm(p["reference"]) not in out:
                 out[_stamm(p["reference"])] = (r.strang, f"Verfahren {_stamm(p['reference'])}; Titel: „{_wort(m)}“")
@@ -124,9 +133,20 @@ def _zustaendig(z, p):
     return None
 
 
+def _thema(key, p):
+    from . import topics
+    hit = next((x for x in p.get("themes") or [] if x.get("theme") == key), None)
+    if not hit:
+        return None
+    label = dict(topics.THEMES).get(key, key)
+    return f"Thema „{label}“ ({hit.get('evidence')})" if hit.get("evidence") else f"Thema „{label}“"
+
+
 def zuordnen(t, p, verfahren=None):
     """(Strang, Grund) einer Vorlage oder None; jede Vorlage gehört zu höchstens einem Strang."""
     name = p.get("name") or ""
+    if t.ausschluss and t.ausschluss.search(name):
+        return None
     for r in t.regeln:
         if r.stammnummer and _stamm(p["reference"]) == r.stammnummer:
             return r.strang, f"Folgevorlage zu {r.stammnummer}" if p["reference"] != r.stammnummer else "Stammvorlage"
@@ -137,8 +157,8 @@ def zuordnen(t, p, verfahren=None):
     for r in t.regeln:
         if r.stammnummer or r.verfahren_titel:
             continue
-        if r.zustaendig:
-            grund = _zustaendig(r.zustaendig, p)
+        if r.zustaendig or r.thema:
+            grund = _zustaendig(r.zustaendig, p) if r.zustaendig else _thema(r.thema, p)
             if not grund:
                 continue
             m = r.titel and r.titel.search(name)
@@ -209,6 +229,14 @@ def _frist(datum):
     return (date.fromisoformat(datum) - timedelta(days=FRIST_TAGE)).isoformat()
 
 
+def bezirk(p):
+    """Stadtbezirk einer Vorlage für die Gliederung (aus den Ortsbezügen, abgeleitet)."""
+    bezirke = {x.get("stadtbezirk") for x in p.get("locations") or [] if x.get("stadtbezirk")}
+    if len(bezirke) == 1:
+        return bezirke.pop()
+    return "mehrere Stadtbezirke" if bezirke else "ohne Ortsbezug"
+
+
 def sitzung_im_thema(t, gremium):
     """Sitzungen der Themenseite: die Gremien des Themas und alle Bezirksvertretungen (Kalender, Liste)."""
     return gremium in t.sitzungen or gremium.startswith("Bezirksvertretung")
@@ -221,9 +249,14 @@ def daten(t, cache, home, meetings, today, meta):
     for pid, p in cache.items():
         hit = zuordnen(t, p, verfahren)
         if hit:
-            straenge[hit[0]].append({**_eintrag(p, home.get(pid), today), "grund": hit[1], "_pid": pid})
+            eintrag = {**_eintrag(p, home.get(pid), today), "grund": hit[1], "_pid": pid}
+            if hit[0] in t.nach_bezirk:
+                eintrag["bezirk"] = bezirk(p)
+            straenge[hit[0]].append(eintrag)
+    im_bild = lambda p: not t.punkt_gremien or any(s.get("gremium") in t.punkt_gremien for s in p["process"])
     punkte = sorted((_punkt(t, cache[r["_pid"]], r, k) for k in t.punkt_straenge for r in straenge[k]
-                     if r["paper_type"] in PUNKT_ARTEN), key=lambda x: (x["date"] or "", x["reference"]))
+                     if r["paper_type"] in PUNKT_ARTEN and im_bild(cache[r["_pid"]])),
+                    key=lambda x: (x["date"] or "", x["reference"]))
     for i, x in enumerate(punkte, 1):
         x["nr"] = i
     for rows in straenge.values():
@@ -289,6 +322,26 @@ def _row(root, r):
             + "</td></tr>")
 
 
+def _tabelle(rows):
+    return f"""    <table>
+      <thead><tr><th scope="col">Datum</th><th scope="col">Drucksache</th><th scope="col">Titel</th><th scope="col">Stand</th></tr></thead>
+      <tbody>
+{rows}
+      </tbody>
+    </table>"""
+
+
+def _nach_bezirk(root, vorlagen):
+    """Vorlagen je Stadtbezirk, jeder Abschnitt eingeklappt; zuletzt mehrere Stadtbezirke und ohne Ortsbezug."""
+    gruppen = {}
+    for r in vorlagen:
+        gruppen.setdefault(r["bezirk"], []).append(r)
+    folge = sorted(gruppen, key=lambda b: (b in ("mehrere Stadtbezirke", "ohne Ortsbezug"), b == "ohne Ortsbezug", b))
+    teile = [f"    <details>\n      <summary>{escape(b)} ({len(gruppen[b])})</summary>\n"
+             + _tabelle("\n".join(_row(root, r) for r in gruppen[b])) + "\n    </details>" for b in folge]
+    return "    <p class=\"meta\">Nach Stadtbezirk (aus den Ortsbezügen, abgeleitet).</p>\n" + "\n".join(teile)
+
+
 def _schritte(t, d, root):
     """Abschnitt zum Weg eines Verfahrens laut Terminplan (nur mit Schritten)."""
     if not d["haushalt_schritte"]:
@@ -319,13 +372,10 @@ def body(t, d, root):
     straenge = []
     for s in d["straenge"]:
         rows = "\n".join(_row(root, r) for r in s["vorlagen"])
-        tabelle = (f"""    <table>
-      <thead><tr><th scope="col">Datum</th><th scope="col">Drucksache</th><th scope="col">Titel</th><th scope="col">Stand</th></tr></thead>
-      <tbody>
-{rows}
-      </tbody>
-    </table>""" if rows else "    <p>Keine Vorlagen.</p>")
-        if rows and s.get("eingeklappt"):
+        tabelle = _tabelle(rows) if rows else "    <p>Keine Vorlagen.</p>"
+        if rows and any("bezirk" in r for r in s["vorlagen"]):
+            tabelle = _nach_bezirk(root, s["vorlagen"])
+        elif rows and s.get("eingeklappt"):
             tabelle = (f"    <details>\n      <summary>Alle {len(s['vorlagen'])} Vorlagen anzeigen</summary>\n"
                        f"{tabelle}\n    </details>")
         straenge.append(f"""    <h3 id="{s['key']}">{escape(s['titel'])} ({len(s['vorlagen'])})</h3>
@@ -388,6 +438,22 @@ def write(t, site, site_url, page):
 
 # --- Stichprobe zur Prüfung von Hand --------------------------------------------------------------------
 
+def entwurf(t, db_path=None):
+    """Daten eines Themas direkt aus der Datenbank (für den Prüfbogen eines Themas, das noch nicht in ALLE steht
+    und deshalb nicht exportiert wird; ohne Gebiete und Sitzungen)."""
+    from .export import _paper_detail
+    db = sqlite3.connect(db_path or config.DB)
+    db.row_factory = sqlite3.Row
+    cache = {pid: _paper_detail(db, pid) for (pid,) in db.execute("SELECT id FROM paper WHERE date >= ?", (t.seit,))}
+    for r in t.regeln:  # Stammnummern gelten auch vor Beginn des Zeitraums
+        if r.stammnummer:
+            for (pid,) in db.execute("SELECT id FROM paper WHERE reference = ? OR reference LIKE ? OR reference LIKE ?",
+                                     (r.stammnummer, f"{r.stammnummer}-%", f"{r.stammnummer} %")):
+                cache.setdefault(pid, _paper_detail(db, pid))
+    db.close()
+    return daten(t, cache, {}, [], date.today().isoformat(), {})
+
+
 def stichprobe(t, src=None, out=None, seed=2026, db_path=None):
     """Prüfbogen: je Strang einige zugeordnete Vorlagen (passt die Zuordnung?) und nicht zugeordnete Vorlagen mit
     passenden Wörtern im Titel (fehlen sie?). Wird nur einmal gezogen; eine vorhandene Datei bleibt unverändert."""
@@ -395,7 +461,8 @@ def stichprobe(t, src=None, out=None, seed=2026, db_path=None):
     if out.exists():
         print(f"Stichprobe vorhanden, unverändert: {out}")
         return
-    d = json.loads((src or config.EXPORT / "bonn" / "dossiers" / f"{t.key}.json").read_text(encoding="utf-8"))
+    src = src or config.EXPORT / "bonn" / "dossiers" / f"{t.key}.json"
+    d = json.loads(src.read_text(encoding="utf-8")) if src.exists() else entwurf(t, db_path)
     rnd = random.Random(seed)
     rows = []
     for s in d["straenge"]:
