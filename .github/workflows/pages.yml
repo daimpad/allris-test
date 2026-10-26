@@ -125,18 +125,13 @@ jobs:
         run: python -m pipeline fetch-lite
         continue-on-error: true
 
-      # Sprachmodell (Mistral, gekennzeichnet): Bestand im Branch kurzfassungen; neue Kurzfassungen und Orte der
-      # Stufe C nur mit dem Secret MISTRAL_API_KEY (Kurzfassungen bis 500 je Lauf; Stufe C seit 22.10.2026 ohne neue Anfragen). Auf der Seite erst nach Freigabe
-      # (kurzfassung.FREIGEGEBEN, stufe_c.FREIGEGEBEN). Gesichert wird der Branch nach der Aufbereitung.
-      # 500 je täglichem Lauf (Auftraggeber, 21.10.2026); Fassung 6 brauchte mit dem Gegenlesen zwei Anfragen (300),
-      # seit Fassung 7 wieder eine; nach einem Merge nur 50, damit mehrere Merges am Tag die Anfragen nicht
-      # vervielfachen
-      - name: Kurzfassungen (Mistral; täglich höchstens 500, nach einem Merge 50)
+      # Sprachmodell (Mistral, gekennzeichnet): Bestand im Branch kurzfassungen; auf der Seite erst nach Freigabe
+      # (kurzfassung.FREIGEGEBEN, stufe_c.FREIGEGEBEN). Neue Kurzfassungen entstehen seit 26.10.2026 erst nach dem
+      # Veröffentlichen (Job kurzfassungen); die Seite erscheint so etwa 20 Minuten früher, neue Kurzfassungen erst mit
+      # dem nächsten Lauf (Entscheidung des Auftraggebers).
+      - name: Bestand der Kurzfassungen (Branch kurzfassungen)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
-          KURZFASSUNGEN: _kurzfassungen
-          KURZFASSUNG_MAX: ${{ github.event_name == 'push' && '50' || '500' }}
         run: |
           url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
           # Exit-Code 2: Branch fehlt; jeder andere Fehler (Netz) bricht ab, statt mit leerem Bestand weiterzumachen
@@ -147,8 +142,6 @@ jobs:
           else
             git init -q -b kurzfassungen _kurzfassungen
           fi
-          python -m pipeline kurzfassungen
-        timeout-minutes: 120
         continue-on-error: true
 
       - name: Aufbereiten, Geokodierung, Export
@@ -168,7 +161,7 @@ jobs:
           python -m pipeline check
           python -m pipeline soll
 
-      - name: Ergebnisse des Sprachmodells sichern (Branch kurzfassungen)
+      - name: Ergebnisse der Stufe C sichern (Branch kurzfassungen)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -179,7 +172,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then echo "unverändert"; exit 0; fi
-          git commit -q -m "Kurzfassungen und Orte der Stufe C $(date -u +%F)"
+          git commit -q -m "Orte der Stufe C (Audit) $(date -u +%F)"
           git push -q "$url" HEAD:kurzfassungen
         continue-on-error: true
 
@@ -268,3 +261,69 @@ jobs:
       - name: Auf GitHub Pages veröffentlichen
         id: deployment
         uses: actions/deploy-pages@v5
+
+  # Neue Kurzfassungen (Mistral; täglich höchstens 500, nach einem Merge 50) nach dem Veröffentlichen, damit die Seite
+  # nicht auf das Sprachmodell wartet; sie erscheinen mit dem nächsten Lauf. Rohdaten und Volltexte aus dem Zwischen-
+  # speicher dieses Laufs. 500 je täglichem Lauf (Auftraggeber, 21.10.2026); nach einem Merge nur 50, damit mehrere
+  # Merges am Tag die Anfragen nicht vervielfachen.
+  kurzfassungen:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Abhängigkeiten
+        run: pip install -r requirements.txt
+
+      - name: Rohdaten dieses Laufs
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/raw/papers.jsonl
+            data/raw/consultations_lite.jsonl
+            data/raw/organizations.json
+            data/raw/verwaltungsbereiche.json
+            data/raw/STAND.json
+            data/raw/meetings.json
+            data/raw/legislative_terms.json
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
+      - name: Volltexte dieses Laufs
+        uses: actions/cache/restore@v4
+        with:
+          path: data/raw/texte.jsonl
+          key: texte-${{ github.run_id }}
+          restore-keys: texte-
+
+      - name: Kurzfassungen erzeugen und sichern (Branch kurzfassungen)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          KURZFASSUNGEN: _kurzfassungen
+          KURZFASSUNG_MAX: ${{ github.event_name == 'push' && '50' || '500' }}
+        run: |
+          url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          rc=0; git ls-remote --exit-code --heads "$url" kurzfassungen > /dev/null || rc=$?
+          if [ "$rc" -ne 0 ] && [ "$rc" -ne 2 ]; then echo "Abfrage des Branches kurzfassungen gescheitert ($rc)"; exit 1; fi
+          if [ "$rc" -eq 0 ]; then
+            git clone -q --depth 1 --branch kurzfassungen "$url" _kurzfassungen
+          else
+            git init -q -b kurzfassungen _kurzfassungen
+          fi
+          # Auch nach einem Fehler (Kontoausfall, Netz) sichern, was bis dahin entstanden ist
+          rc_k=0; python -m pipeline kurzfassungen || rc_k=$?
+          [ "$rc_k" -eq 0 ] || echo "::warning::Kurzfassungen mit Fehler beendet ($rc_k)"
+          cd _kurzfassungen
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "unverändert"; exit 0; fi
+          git commit -q -m "Kurzfassungen $(date -u +%F)"
+          git push -q "$url" HEAD:kurzfassungen
+        timeout-minutes: 120

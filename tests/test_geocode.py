@@ -1,6 +1,7 @@
+import re
 import unittest
 
-from pipeline.geocode import Gazetteer, plan_numbers
+from pipeline.geocode import Gazetteer, _alternation, _boundary, _street_pattern, plan_numbers
 
 
 def way(name, lon, lat, d=0.002):
@@ -104,6 +105,32 @@ class GeocodeTest(unittest.TestCase):
         self.assertEqual(plan_numbers("Bebauungsplan Nr. 6522-3 Kaiser-Karl-Ring")[0][0], "6522-3")
         self.assertEqual(plan_numbers("Anhörung zum Bebauungsplanverfahren Nr. 6421-1")[0][0], "6421-1")
         self.assertEqual(plan_numbers("Öffentlichkeitsbeteiligung zum Bebauungsplanverfahrens Nr. 6421-1")[0][0], "6421-1")
+
+
+
+class AlternationTest(unittest.TestCase):
+    """Schnelle Form (Wortgrenzen einmal um die Liste) findet dasselbe wie die frühere Form (Grenzen je Name)."""
+
+    @staticmethod
+    def alt_frueher(names, pattern=re.escape, hyphen_before=False):
+        names = sorted(set(names), key=len, reverse=True)
+        return re.compile("|".join(_boundary(pattern(n), hyphen_before) for n in names))
+
+    def test_gleiche_treffer(self):
+        faelle = [
+            (["Am Hof", "Am Hofgarten", "Hofgarten"], False,
+             ["Am Hofgarten 3 und Am Hof", "Am Hofgartenweg", "Hofgarten-Fest am Hofgarten", "XAm Hof"]),
+            (["Bonn", "Bonn-Beuel", "Beuel"], True,
+             ["Bonn-Beuelerin in Bonn", "Bonn-Beuel und Beuel-Ost", "Bonner Beuel"]),
+            (["Reichsstraße", "Endenicher Straße", "Straße"], False,
+             ["Reichsstr. 5, Endenicher Strasse und Reichsstraßen", "Straßenfest in der Reichsstraße"]),
+        ]
+        for names, bindestrich, texte in faelle:
+            muster = _street_pattern if not bindestrich else re.escape
+            neu = _alternation(names, muster, bindestrich)
+            alt = self.alt_frueher(names, muster, bindestrich)
+            for t in texte:
+                self.assertEqual([m.span() for m in neu.finditer(t)], [m.span() for m in alt.finditer(t)], t)
 
 
 if __name__ == "__main__":
