@@ -133,6 +133,8 @@ test("Themenseite Klima: Stränge, Verweise auf die Karte, ohne Verstöße", asy
   for (const k of ["klimaschutz", "anpassung", "gruen", "abfall", "weitere"]) {
     assert.ok(await page.locator(`.pb-schalter[data-strang='${k}']`).count(), "Schalter " + k);
   }
+  assert.equal(await page.locator(".thema-kopf .kachel-symbol").count(), 1, "Symbol im Kopf");
+  assert.equal(await page.locator(".thema-kopf a.thema-alle[href='../../thema/']").count(), 1, "Link Alle Themen");
   assert.equal(await page.locator("a[href='../../?flaechen=kontext-hitze']").count(), 1);
   assert.equal(await page.locator("a[href='../../?ebenen=uesg']").count(), 1);
   await page.locator("a.pb-ziel[data-ziel^='punkt-']").first().click();
