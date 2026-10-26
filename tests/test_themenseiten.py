@@ -118,8 +118,8 @@ if __name__ == "__main__":
     unittest.main()
 
 
-class VerkehrEntwurf(unittest.TestCase):
-    """Regeln des Entwurfs Verkehr und Mobilität (themenseiten/verkehr.py) und die Erweiterungen dafür:
+class Verkehr(unittest.TestCase):
+    """Regeln der Themenseite Verkehr und Mobilität (themenseiten/verkehr.py) und die Erweiterungen dafür:
     Regel nach Thema, Ausschluss, ganzes Verfahren nur über die Stammvorlage, Punkte nur aus bestimmten Gremien,
     Gliederung nach Stadtbezirk."""
 
@@ -172,7 +172,36 @@ class VerkehrEntwurf(unittest.TestCase):
         self.assertIn("<summary>Bonn (1)</summary>", html)
         self.assertIn("Terminplan 261064", html)  # Haushaltsbahn wie bei Kultur
 
-    def test_entwurf_nicht_veroeffentlicht(self):
-        from pipeline.themenseiten import ENTWUERFE
-        self.assertNotIn(self.t.key, [t.key for t in ALLE])
-        self.assertIn(self.t.key, [t.key for t in ENTWUERFE])
+    def test_regeln_nach_pruefung(self):
+        """Prüfung im Gespräch 26.10.2026 (verkehr/PRUEFUNG.md): Änderungen A bis E."""
+        from pipeline.themenseiten import verkehr
+        t = verkehr.THEMA
+
+        def zu(name, thema=True):
+            p = vorlage("262000", name)
+            p["themes"] = [{"theme": "verkehr", "evidence": "61-3 Stadtverkehr"}] if thema else []
+            return (dossier.zuordnen(t, p) or (None,))[0]
+        self.assertEqual(zu("Übernahme der Parkplätze am Bahnhof"), "parken")  # A
+        self.assertEqual(zu("Fahrrad- und Lastenradstellplätze an der Kita"), "rad_fuss")  # B
+        self.assertEqual(zu("Stellplätze für Pkw"), "parken")
+        self.assertEqual(zu("Prüfung der Park- und Verkehrssituation"), "parken")  # C
+        self.assertIsNone(zu("Leerung der Altglascontainer an der Bushaltestelle"))  # D
+        self.assertIsNone(zu("Abwasserbeseitigungskonzept 2024-2029"))
+        self.assertEqual(zu("Überholverbot für einspurige Fahrzeuge", thema=False), "rad_fuss")  # E
+        self.assertEqual(zu("Lärmschutzmaßnahmen Autobahn", thema=False), "weitere")
+        self.assertIsNone(zu("Kita-Neubau in der Riemannstraße", thema=False))
+
+    def test_veroeffentlicht_mit_uebersicht(self):
+        self.assertIn(self.t.key, [t.key for t in ALLE])
+        with tempfile.TemporaryDirectory() as tmp:
+            site = Path(tmp)
+            src = site / "data" / "export" / "bonn" / "dossiers" / "verkehr.json"
+            src.parent.mkdir(parents=True)
+            src.write_text(json.dumps(self.d))
+            self.assertEqual(dossier.uebersicht(ALLE, site, "https://example.org/", gebietsseiten._page), [])
+            dossier.write(self.t, site, "https://example.org/", gebietsseiten._page)
+            self.assertEqual(dossier.uebersicht(ALLE, site, "https://example.org/", gebietsseiten._page), ["thema/"])
+            html = (site / "thema" / "index.html").read_text()
+        self.assertIn('<a href="../thema/verkehr-und-mobilitaet/"><strong>Verkehr und Mobilität</strong></a> (8 Vorlagen)',
+                      html)
+        self.assertNotIn("kultur-und-haushalt", html)  # ohne Daten keine Zeile

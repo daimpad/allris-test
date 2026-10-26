@@ -436,6 +436,39 @@ def write(t, site, site_url, page):
     return [t.pfad]
 
 
+UEBERSICHT = "thema/"
+
+
+def uebersicht(themen, site, site_url, page):
+    """Übersicht thema/ über die geschriebenen Themenseiten (Titel, Zahl der Vorlagen, Beschreibung); gibt den Pfad
+    für die Sitemap zurück, ohne Themenseiten keinen."""
+    eintraege = []
+    for t in themen:
+        src = site / "data" / "export" / "bonn" / "dossiers" / f"{t.key}.json"
+        if not (site / t.pfad / "index.html").exists() or not src.exists():
+            continue
+        d = json.loads(src.read_text(encoding="utf-8"))
+        n = sum(len(s["vorlagen"]) for s in d["straenge"])
+        straenge = ", ".join(s["titel"] for s in d["straenge"])
+        eintraege.append(f'      <li><a href="../{t.pfad}"><strong>{escape(t.titel)}</strong></a> ({n} Vorlagen)<br>'
+                         f'<small>Stränge: {escape(straenge)}</small></li>')
+    if not eintraege:
+        return []
+    body = f"""    <h1>Themen</h1>
+    <p class="lead">Themenseiten ordnen Vorlagen aus dem Ratsinformationssystem der Stadt Bonn nach Strängen und zeigen, wo ein Verfahren steht, was entschieden ist und wo man sich einbringen kann.</p>
+    <p class="meta">Die Zuordnung folgt festen Regeln je Thema (abgeleitet, je Vorlage mit Grund) und wurde an einer Stichprobe von Hand geprüft. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
+    <ul>
+{chr(10).join(eintraege)}
+    </ul>
+    <p><a href="../">Zur Karte</a></p>"""
+    out = site / UEBERSICHT / "index.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(page(site_url, UEBERSICHT, "Themen – RIS-Karte Bonn",
+                        "Themenseiten der RIS-Karte Bonn: Vorlagen und Verfahren je Thema mit Prozessbild, Sitzungen und "
+                        "Wegen zum Mitwirken.", body, "../"), encoding="utf-8")
+    return [UEBERSICHT]
+
+
 # --- Stichprobe zur Prüfung von Hand --------------------------------------------------------------------
 
 def entwurf(t, db_path=None):
