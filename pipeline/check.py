@@ -113,12 +113,12 @@ def check():
     print("\nDatenschutz")
     print("Orte mit Hausnummer in Straße oder Beschreibung:", len(with_number), with_number[:5])
     offen = titel_mit_hausnummer(maske.aus_db(db))
-    print("Titel aus der Einwohnerschaft mit Hausnummer in Suche und GeoJSON:", len(offen), offen[:5])
+    print("Titel aus Einwohnerschaft, Bauordnung und Naturschutz mit Hausnummer in Suche und GeoJSON:", len(offen), offen[:5])
     db.close()
     if with_number:
         raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Ortsangaben (CLAUDE.md 5.2).")
     if offen:
-        raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Titeln aus der Einwohnerschaft (maske.py).")
+        raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Titeln aus Einwohnerschaft, Bauordnung oder Naturschutz (maske.py).")
 
     print("\nKontextdaten je Ortsteil")
     if befunde := kontext.pruefen():
