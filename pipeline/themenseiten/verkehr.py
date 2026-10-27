@@ -3,7 +3,7 @@ verkehr/phase0/BERICHT.md; Prüfbogen im Gespräch geprüft am 26.10.2026, danac
 
 Grundlage ist die abgeleitete Themenzuordnung „Verkehr und Mobilität“ (topics.py: Amt 61-3 Stadtverkehr und 66,
 Ausschuss für Mobilität und Verkehr, Stichwörter). Stränge nach Wörtern im Titel, die Sperrung der Nordbrücke als
-ganzes Verfahren; alle übrigen Vorlagen des Themas nach Stadtbezirk. Keine Bewertung, keine Beträge, keine Zitate."""
+ganzes Verfahren; alle übrigen Vorlagen des Themas nach Stadtbezirk. Keine Bewertung, keine Beträge je Vorlage, keine Zitate."""
 import re
 from datetime import date
 
@@ -98,7 +98,7 @@ THEMA = Thema(
                   "5 unpassend; in der Gegenprobe fehlten 3 von 6), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten von Maßnahmen stehen in den Dokumenten der Vorlagen und im Haushaltsplan "
-        "der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge.",
+        "der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je Vorlage; Beträge je Produktbereich stehen im Abschnitt „Haushalt“.",
         "<strong>Örtliche Vorgänge</strong> stehen nach Stadtbezirk, ohne Hausnummern; einzelne Straßen und Orte "
         "zeigt die Karte.",
         "<strong>Nichtöffentliche Beratungen</strong> und Vorlagen außerhalb der Themenzuordnung fehlen, außer zur "
@@ -113,4 +113,5 @@ THEMA = Thema(
     farben=("#1d4ed8", "#2563eb", "#0891b2"),  # Übersicht thema/: Schrift, Verlauf
     symbol='<circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/>'
            '<path d="M5.5 17 9.5 9h6l3 8M9.5 9l3 8h-7M13.5 6H17"/>',
+    produktbereich="12",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
 )

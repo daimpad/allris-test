@@ -1,7 +1,7 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-besetzung|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-besetzung|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|wahlen-rohdaten|haushalt-ausschnitt|haushalt-pruefbogen|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|all}"""
 import sys
 
-from . import anliegen, baustellen, besetzung, build, check, dossier, export, fetch, geocode, kandidaten, kontext, kurzfassung, seo, soll, stufe_c, verify
+from . import anliegen, baustellen, besetzung, build, check, dossier, export, fetch, geocode, kandidaten, kontext, haushaltsplan, kurzfassung, seo, soll, stufe_c, verify, wahlen
 from .themenseiten import klima, kultur, schule, verkehr, wohnen
 
 STEPS = {
@@ -30,6 +30,9 @@ STEPS = {
     "baustellen-seite": kandidaten.write_site,
     "kurzfassungen": kurzfassung.erzeugen,  # Kurzfassungen mit Mistral (Secret MISTRAL_API_KEY), Branch kurzfassungen
     "stufe-c": stufe_c.schritt,  # Stufe C (Sprachmodell, nach build, vor export): Anfragen, Gegenprüfung, Audit
+    "haushalt-ausschnitt": haushaltsplan.ausschnitt,  # einmalig, lokal (pdftotext): Beträge je Produktbereich aus den PDFs
+    "haushalt-pruefbogen": haushaltsplan.pruefbogen,  # einmalig: Prüfbogen der Werte der Themenseiten
+    "wahlen-rohdaten": wahlen.rohdaten,  # auf Knopfdruck (quellen.yml): Quelldateien der Wahl 2025 in den Branch quellen
     "kontext-ausschnitte": kontext.ausschnitte,  # einmalig: Ausschnitte für Bonn (Zensus, Bodenrichtwerte, Klima, ...)
     "fetch-haltestellen": kontext.fetch_haltestellen,  # monatlich: Haltestellen (VRS-GTFS)
     "kontext": kontext.write,  # Kontextdaten je Ortsteil (nach export)

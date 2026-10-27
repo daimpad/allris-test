@@ -4,7 +4,7 @@
 
 **Frage:** Lässt sich die aktuelle Besetzung der Gremien und die Sitzverteilung nach Fraktion quellentreu und datenschutzgerecht zeigen?
 
-**Datenstand:** OParl-API Bonn, `bodies/1/persons` (26 Seiten) und `bodies/1/memberships` (101 Seiten), abgerufen 27.10.2026 13:00 UTC; OParl-Lite GraphQL am selben Tag; Organisationen aus `data/raw/organizations.json` (18.10.2026); Stichtag „aktiv“: 27.10.2026. Skripte in `skripte/`, Ergebnis je Gremium in `besetzung_ergebnis.json`.
+**Datenstand:** OParl-API Bonn, `bodies/1/persons` (26 Seiten) und `bodies/1/memberships` (101 Seiten), abgerufen 27.10.2026 13:00 UTC; OParl-Lite GraphQL am selben Tag; Organisationen aus `data/raw/organizations.json` (18.10.2026); Stichtag „aktiv“: 27.10.2026. Skripte und Ergebnis je Gremium im Arbeitsordner der Prüfung (nicht im Repository).
 
 ## Ergebnis: Besetzung von Rat, Hauptausschuss und Bezirksvertretungen vollständig ableitbar, in Fachausschüssen nur teilweise
 - **Umfang:** 2.582 Personen, 10.041 Mitgliedschaften (seit 1971). Aktiv am Stichtag: 1.579 Mitgliedschaften von 666 Personen; alle 27 laufenden Ratsgremien und Bezirksvertretungen haben aktive Mitglieder.

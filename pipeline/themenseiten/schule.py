@@ -3,7 +3,7 @@ Prüfbogen im Gespräch geprüft am 26.10.2026, danach Regeln A–C (schule/PRUE
 
 Eigene Regeln statt der vorhandenen Themenzuordnung (dort trifft „Bildung“ auch die Bildung von Ausschüssen):
 Schulamt, Schulausschuss und Wörter für Schulen im Titel. Nur Schulen, ohne Kitas, Musikschule und Weiterbildung
-(Entscheidung 26.10.2026). Keine Bewertung, keine Beträge, keine Zitate."""
+(Entscheidung 26.10.2026). Keine Bewertung, keine Beträge je Vorlage, keine Zitate."""
 import re
 from datetime import date
 
@@ -90,7 +90,7 @@ THEMA = Thema(
                   "3 unpassend; in der Gegenprobe fehlte keine von 6), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten von Schulbau und Sanierung stehen in den Dokumenten der Vorlagen und im "
-        "Haushaltsplan der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge.",
+        "Haushaltsplan der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je Vorlage; Beträge je Produktbereich stehen im Abschnitt „Haushalt“.",
         "<strong>Kitas und Weiterbildung</strong> gehören nicht zu dieser Seite.",
         "<strong>Nichtöffentliche Beratungen</strong> (etwa Sammellisten des Schulausschusses) und Vorlagen, deren "
         "Titel keine Schule nennt und die weder das Schulamt noch der Schulausschuss behandelt, fehlen.",
@@ -102,4 +102,5 @@ THEMA = Thema(
                         re.I),
     farben=("#b45309", "#d97706", "#f59e0b"),  # Übersicht thema/: Schrift, Verlauf
     symbol='<path d="M2 9 12 4l10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v5"/>',
+    produktbereich="03",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
 )

@@ -1,5 +1,6 @@
 """Allgemeine Themenseiten (pipeline/themenseiten/, dossier.py, prozessbild.py): Die Kulturseite bleibt nach dem
-Umbau Zeichen für Zeichen gleich (Referenz in tests/referenz/, erzeugt vor dem Umbau am 26.10.2026); dazu die
+Umbau Zeichen für Zeichen gleich (Referenz in tests/referenz/, erzeugt vor dem Umbau am 26.10.2026; am 27.10.2026 um
+den Abschnitt „Haushalt im Produktbereich“ ergänzt); dazu die
 Regeln der Zuordnung und ein Thema ohne Phasen."""
 import json
 import re

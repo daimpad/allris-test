@@ -2,7 +2,7 @@
 und der Kulturförderung zusammenhängen. Anlass und Prüfung: kultur/phase0/BERICHT.md, kultur/PRUEFUNG.md.
 
 Die Zuordnung der Vorlagen zu den Strängen ist abgeleitet: feste Regeln aus Amt, Gremium, Titel und
-Drucksachennummer (REGELN), je Vorlage mit Grund. Keine Bewertung, keine Beträge, keine Zitate aus den
+Drucksachennummer (REGELN), je Vorlage mit Grund. Keine Bewertung, keine Beträge je Vorlage, keine Zitate aus den
 Dokumenten; der Weg des Haushalts ist aus Mitteilungsvorlage 261064 zusammengefasst."""
 import re
 from datetime import date
@@ -87,7 +87,7 @@ THEMA = Thema(
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Zahlen je Einrichtung stehen in den Dokumenten der Vorlagen und im Haushaltsplan "
         "der Stadt (Produktbereich 1.04 Kultur und Wissenschaft, auf bonn.de), nicht in den Daten des "
-        "Ratsinformationssystems. Die Seite übernimmt keine Beträge.",
+        "Ratsinformationssystems. Die Seite übernimmt keine Beträge je Vorlage; Beträge je Produktbereich stehen im Abschnitt „Haushalt“.",
         "<strong>Vorbereitung in der Verwaltung:</strong> Eckwerte, Aufgabenkritik und Beratungen des "
         "Verwaltungsvorstands sind nicht öffentlich.",
         "<strong>Nichtöffentliche Beratungen</strong> und Vorlagen, deren Titel keines der Merkmale nennt, fehlen.",
@@ -100,4 +100,5 @@ THEMA = Thema(
                         r"Festival|Konzert|Orchester", re.I),
     farben=("#6d28d9", "#7c3aed", "#db2777"),  # Übersicht thema/: Schrift, Verlauf
     symbol='<path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
+    produktbereich="04",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
 )

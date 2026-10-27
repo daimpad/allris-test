@@ -1,0 +1,278 @@
+{
+ "abruf": "2026-10-27",
+ "ausgaben": {
+  "2023/2024": {
+   "seite": "https://www.bonn.de/service-bieten/aktuelles-zahlen-fakten/haushaltsplan-2023-2024.php",
+   "spalten": [
+    "Ergebnis 2020",
+    "Ergebnis 2021",
+    "Ansatz 2022",
+    "Ansatz 2023",
+    "Ansatz 2024",
+    "Planung 2025",
+    "Planung 2026",
+    "Planung 2027"
+   ],
+   "pruefsumme_abweichung_euro": {
+    "10": [
+     6,
+     0,
+     -1,
+     0,
+     -1,
+     2,
+     -2,
+     1
+    ],
+    "17": [
+     -1,
+     -1,
+     2,
+     -5,
+     4,
+     1,
+     5,
+     3
+    ],
+    "18": [
+     7,
+     1,
+     -3,
+     5,
+     -5,
+     1,
+     -7,
+     -2
+    ]
+   },
+   "dateien": {
+    "gesamt": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/gepp.pdf",
+     "sha256": "895ddf34f6953b86e27da77ad4651dff264c600820dd7ae9600a59f547286455"
+    },
+    "01": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb01.pdf",
+     "sha256": "10ba3db7f23bdb4cdeacd51b230e96f080b5d08e677d9bd76ff596ddbff869e7",
+     "name": "Innere Verwaltung"
+    },
+    "02": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb02.pdf",
+     "sha256": "46de0a73ceb28fb96d2f3cad25db454bdbfbaa17ded3478757e86a81808b7ef4",
+     "name": "Sicherheit und Ordnung"
+    },
+    "03": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb03.pdf",
+     "sha256": "65b6f7ce3b1f38d8dd2fa2a0c7beed3e9e999317212d313e7d335d15b715c33c",
+     "name": "Schulträgeraufgaben"
+    },
+    "04": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb04.pdf",
+     "sha256": "bc05aa814919b855253c3a991243ce139976aeb8bd81579aa15b61b8dc990744",
+     "name": "Kultur und Wissenschaft"
+    },
+    "05": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb05.pdf",
+     "sha256": "ca38f4008f8205ec406a94efd75c7aa024e46945bd93e0f9e45edc89a0ebeeca",
+     "name": "Soziale Leistungen"
+    },
+    "06": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb06.pdf",
+     "sha256": "14f63697496a9274b6d0595ccec2eb2eb6c5bd69d89e68a9970d9984f8eb408e",
+     "name": "Kinder-, Jugend- und Familienhilfe"
+    },
+    "07": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb07.pdf",
+     "sha256": "ce8f5f3fb62aacc52339fb1a45af887fad9bb8500e4367a3f4d7a11ad115566d",
+     "name": "Gesundheitsdienste"
+    },
+    "08": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb08.pdf",
+     "sha256": "0c05213d6e9697371e72bc9c27e70105e93921f34207f1453b89f6714bf52910",
+     "name": "Sportförderung"
+    },
+    "09": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb09.pdf",
+     "sha256": "7826b1443e2047d759ab9415e6dc0b45991104e14544cb57f5c599f6db904dcf",
+     "name": "Raumplanung, Stadtentw., Geoinfo"
+    },
+    "10": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb10.pdf",
+     "sha256": "4a92bbb7f3527bb58358062ad657488eca11946df3ced0449926b473df607a90",
+     "name": "Bauen und Wohnen"
+    },
+    "11": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb11.pdf",
+     "sha256": "bdaef859be709ce6e08a007b2f798b8c2e43d0c143d4f24f3d9accd85db81397",
+     "name": "Ver- und Entsorgung"
+    },
+    "12": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb12.pdf",
+     "sha256": "2e2ed8fde59f24cdb8d4d279b23d5770fde7537c0bf5956f81e55ce8aaf6bc63",
+     "name": "Verkehrsflächen und -anlagen, ÖPNV"
+    },
+    "13": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb13.pdf",
+     "sha256": "65e83d2f8d11ed0e990dc52c1a6915679f75a14e0aa04fbecf5419fc8dd8cbf1",
+     "name": "Natur- und Landschaftspflege"
+    },
+    "14": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb14.pdf",
+     "sha256": "b924854a115561886ad40fdbabb68c6fab12d5e568c0ca1efb4594c37d7d0950",
+     "name": "Umweltschutz"
+    },
+    "15": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb15.pdf",
+     "sha256": "b0a3886fcb51a49386c1a22512c73cc9141482d42d1567b11b9c16cef89a7e10",
+     "name": "Wirtschaft und Tourismus"
+    },
+    "16": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb16.pdf",
+     "sha256": "b8574b12b5379ecdfb62a05c60a9df5f0833437476a06d8d2eac91aa87c3633f",
+     "name": "Allgemeine Finanzwirtschaft"
+    },
+    "17": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb17.pdf",
+     "sha256": "bc97fc9f932a6108fc74504794aadbc367ab2181348dd6312d50a209109e7009",
+     "name": "Stiftungen"
+    }
+   }
+  },
+  "2025/2026": {
+   "seite": "https://www.bonn.de/service-bieten/aktuelles-zahlen-fakten/haushaltsplan-2025-2026.php",
+   "spalten": [
+    "Ergebnis 2022",
+    "Ergebnis 2023",
+    "Ansatz 2024",
+    "Ansatz 2025",
+    "Ansatz 2026",
+    "Planung 2027",
+    "Planung 2028",
+    "Planung 2029"
+   ],
+   "pruefsumme_abweichung_euro": {
+    "10": [
+     3,
+     0,
+     -1,
+     -2,
+     0,
+     -5,
+     1,
+     -4
+    ],
+    "17": [
+     0,
+     3,
+     4,
+     -3,
+     1,
+     4,
+     2,
+     -3
+    ],
+    "18": [
+     3,
+     -3,
+     -5,
+     1,
+     -1,
+     -9,
+     -1,
+     -1
+    ]
+   },
+   "dateien": {
+    "gesamt": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/gepp.pdf",
+     "sha256": "12d8b19541ebb13bb85e967c7f8299ca80469de149aabdbd3e0a395d985c1d76"
+    },
+    "01": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB01.pdf",
+     "sha256": "d82e8891ae66d69e10240ed13954bd0ec475a280d9adcdb5035b9a8d3ab4840e",
+     "name": "Innere Verwaltung"
+    },
+    "02": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB02.pdf",
+     "sha256": "de7ac5aede03bb1485bc2bd4d7bf5a77b50e23ac645d19d315fdff3a1480c3b8",
+     "name": "Sicherheit und Ordnung"
+    },
+    "03": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB03.pdf",
+     "sha256": "aa1a54b8d7569eea3f0d2648687ebe8dfe8c1d9bd86288be1805c898ddef35fc",
+     "name": "Schulträgeraufgaben"
+    },
+    "04": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB04.pdf",
+     "sha256": "834a66c5b5bc0c85b3bbb6ddb01c6104d01442a47cda5e9a031aaed7196440fb",
+     "name": "Kultur und Wissenschaft"
+    },
+    "05": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB05.pdf",
+     "sha256": "4c68c8a347da54b93c60f59a20b0954f8040f0e24e68b2137852b860404c010b",
+     "name": "Soziale Leistungen"
+    },
+    "06": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB06.pdf",
+     "sha256": "6fee2127586ae9e3e6d76ea233a3638d38998dd3bbce6a8d36c03579069519ba",
+     "name": "Kinder-, Jugend- und Familienhilfe"
+    },
+    "07": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB07.pdf",
+     "sha256": "41161a187a424f17cd36962e917da2da63c3c274fc3d7dbb9a7b37df38ceae2e",
+     "name": "Gesundheitsdienste"
+    },
+    "08": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB08.pdf",
+     "sha256": "a1f0102e63acc8532aa1f1ece99272332cf6bb272e74b6a534ba646745c2ad8e",
+     "name": "Sportförderung"
+    },
+    "09": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB09.pdf",
+     "sha256": "ab3588a4090f883bef06aeccb17c6b407255e950709b14d7a46111f21e9cc078",
+     "name": "Raumplanung, Stadtentw., Geoinfo"
+    },
+    "10": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB10.pdf",
+     "sha256": "015f6cf11960cb415ce761d3fa666656828468fb8cbeafe4503fb64ee2c191fe",
+     "name": "Bauen und Wohnen"
+    },
+    "11": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB11.pdf",
+     "sha256": "cde2e45cb72f60d9993c4111486fae5313ebcb307dbdc98b52eb3c2fde245584",
+     "name": "Ver- und Entsorgung"
+    },
+    "12": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB12.pdf",
+     "sha256": "5987d6f2244a9ed1e6ef1e54434b007f74fa8e642e34fc0c630d627fabf63ac3",
+     "name": "Verkehrsflächen und -anlagen, ÖPNV"
+    },
+    "13": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB13.pdf",
+     "sha256": "636657270cac0eef190a11fa7dc09bb27e4372e4bb811eb9a2b03ad48a895ca0",
+     "name": "Natur- und Landschaftspflege"
+    },
+    "14": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB14.pdf",
+     "sha256": "986005297757f4c42ec19f173f1de48bd84f00a3d73c0b1e249f92a50befa48e",
+     "name": "Umweltschutz"
+    },
+    "15": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB15.pdf",
+     "sha256": "d236527707028976d3094f6cf632cd88b51e39492c379cf8b91dd0314818f332",
+     "name": "Wirtschaft und Tourismus"
+    },
+    "16": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB16.pdf",
+     "sha256": "25431c71f8a976c33a51d2eb52f802892fd2ff8f5cd9ca8d2c00f2fbe264602b",
+     "name": "Allgemeine Finanzwirtschaft"
+    },
+    "17": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB17.pdf",
+     "sha256": "ffe189b9e6d29f71cb876c2f1ca41e687901d624c12f08926e25ca4bc92e38f8",
+     "name": "Stiftungen"
+    }
+   }
+  }
+ },
+ "lizenz": "Keine Lizenzangabe der Stadt Bonn; Haushaltsplan als Teil der Haushaltssatzung, amtliches Werk nach § 5 UrhG (Einschätzung)"
+}

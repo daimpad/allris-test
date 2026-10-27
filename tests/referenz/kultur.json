@@ -1,4 +1,82 @@
 {
+ "haushalt_betraege": {
+  "abruf": "2026-10-27",
+  "ausgaben": {
+   "2023/2024": {
+    "dateien": {
+     "04": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb04.pdf"
+    },
+    "seite": "https://www.bonn.de/service-bieten/aktuelles-zahlen-fakten/haushaltsplan-2023-2024.php"
+   },
+   "2025/2026": {
+    "dateien": {
+     "04": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB04.pdf"
+    },
+    "seite": "https://www.bonn.de/service-bieten/aktuelles-zahlen-fakten/haushaltsplan-2025-2026.php"
+   }
+  },
+  "jahre": [
+   {
+    "ist": {
+     "ausgabe": "2025/2026",
+     "betrag": 77134449,
+     "datei": "PB04.pdf",
+     "seite": 1
+    },
+    "jahr": 2022,
+    "plan": null
+   },
+   {
+    "ist": {
+     "ausgabe": "2025/2026",
+     "betrag": 80227924,
+     "datei": "PB04.pdf",
+     "seite": 1
+    },
+    "jahr": 2023,
+    "plan": {
+     "ausgabe": "2023/2024",
+     "betrag": 82220997,
+     "datei": "pb04.pdf",
+     "seite": 1
+    }
+   },
+   {
+    "ist": null,
+    "jahr": 2024,
+    "plan": {
+     "ausgabe": "2023/2024",
+     "betrag": 80209896,
+     "datei": "pb04.pdf",
+     "seite": 1
+    }
+   },
+   {
+    "ist": null,
+    "jahr": 2025,
+    "plan": {
+     "ausgabe": "2025/2026",
+     "betrag": 89240729,
+     "datei": "PB04.pdf",
+     "seite": 1
+    }
+   },
+   {
+    "ist": null,
+    "jahr": 2026,
+    "plan": {
+     "ausgabe": "2025/2026",
+     "betrag": 92787001,
+     "datei": "PB04.pdf",
+     "seite": 1
+    }
+   }
+  ],
+  "lizenz": "Keine Lizenzangabe der Stadt Bonn; Haushaltsplan als Teil der Haushaltssatzung, amtliches Werk nach § 5 UrhG (Einschätzung)",
+  "name": "Kultur und Wissenschaft",
+  "produktbereich": "04",
+  "zeile": "Ordentliche Aufwendungen (Zeile 17 des Teilergebnisplans)"
+ },
  "haushalt_schritte": [
   {
    "text": "Die Ämter melden ihren Bedarf im Rahmen von Eckwerten je Amt und Dezernat; Mehrbedarf ist innerhalb des Dezernats auszugleichen. Der Verwaltungsvorstand bespricht Härtefälle. Dieser Teil ist nicht öffentlich.",
