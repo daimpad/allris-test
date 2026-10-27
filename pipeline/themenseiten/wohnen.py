@@ -4,7 +4,7 @@ Prüfbogen im Gespräch geprüft am 26.10.2026, danach Regeln A–C (wohnen/PRUE
 Eigene Regeln statt der Themenzuordnung „Bauen“ (dort stehen auch Schulen, Bühnen und Sporthallen des
 Gebäudemanagements; Wohnen liegt oft beim Thema Soziales): Wörter im Titel für Bauleitplanung, „Bau-Turbo“,
 Wohnraum und Denkmalschutz, übrige Vorlagen aus Stadtplanungsamt, Bodenmanagement, Bauordnungsamt und
-Planungsausschuss nach Stadtbezirk (Entscheidung 26.10.2026). Keine Bewertung, keine Beträge, keine Zitate."""
+Planungsausschuss nach Stadtbezirk (Entscheidung 26.10.2026). Keine Bewertung, keine Beträge je Vorlage, keine Zitate."""
 import re
 from datetime import date
 
@@ -98,7 +98,7 @@ THEMA = Thema(
                   "1 unpassend; in der Gegenprobe fehlte 1 von 5), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge und Mieten:</strong> Kosten, Fördersummen und Mietpreise stehen in den Dokumenten der "
-        "Vorlagen, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge.",
+        "Vorlagen, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je Vorlage; Beträge je Produktbereich stehen im Abschnitt „Haushalt“.",
         "<strong>Bebauungspläne auf der Karte:</strong> Geltungsbereich und Planchronik rechtskräftiger Pläne zeigt "
         "die Ebene „Bebauungspläne“ der <a href=\"../../?plaene=1\">Karte</a>.",
         "<strong>Gebäude der Stadt</strong> (Schulen, Bühnen, Sporthallen) und Vorlagen zum Verkehr stehen auf den "
@@ -112,4 +112,5 @@ THEMA = Thema(
                         r"Rahmenplan|Nachverdichtung|Baulücke|Erhaltungssatzung|Gestaltungssatzung|Neubaugebiet", re.I),
     farben=("#be123c", "#e11d48", "#fb7185"),  # Übersicht thema/: Schrift, Verlauf
     symbol='<path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/>',
+    produktbereich="10",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
 )

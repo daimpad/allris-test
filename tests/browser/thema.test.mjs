@@ -167,3 +167,19 @@ test("Themenseite Schule: Stränge, Detailfeld, ohne Verstöße", async () => {
   assert.deepEqual(page.errors, []);
   await page.close();
 });
+
+test("Themenseiten: Haushalt im Produktbereich, Ist und Plan getrennt, auch auf dem Telefon als Tabelle", async () => {
+  const page = await browser.newPage({ viewport: { width: 390, height: 900 }, bypassCSP: true });
+  for (const [pfad, pb] of [["kultur-und-haushalt", "04"], ["verkehr-und-mobilitaet", "12"], ["schule-und-bildung", "03"],
+    ["wohnen-und-bauen", "10"], ["klima-und-umwelt", "13"]]) {
+    await page.goto(SITE + `thema/${pfad}/`, { waitUntil: "networkidle" });
+    assert.match(await page.locator("#haushalt-produktbereich").textContent(), new RegExp(`Produktbereich ${pb} `));
+    const tabelle = page.locator("table.haushalt");
+    assert.match(await tabelle.locator("thead").textContent(), /Ergebnis \(Ist\).*Ansatz \(Plan\)/s);
+    assert.ok(await tabelle.locator("tbody tr").count() >= 5, pfad);
+    assert.equal(await tabelle.locator("thead").isVisible(), true, "Kopf auch mobil sichtbar");
+    assert.doesNotMatch(await tabelle.textContent(), /2027|2028|2029/, "keine Finanzplanung");
+  }
+  assert.deepEqual(await axe(page), []);
+  await page.close();
+});

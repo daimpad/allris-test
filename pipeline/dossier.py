@@ -2,7 +2,8 @@
 Wegen zum Mitwirken. Die Beschreibung je Thema (Regeln, Bahnen, Texte) steht in pipeline/themenseiten/.
 
 Die Zuordnung der Vorlagen zu den Strängen ist abgeleitet: feste Regeln aus Amt, Gremium, Titel und
-Drucksachennummer, je Vorlage mit Grund. Keine Bewertung, keine Beträge, keine Zitate aus den Dokumenten.
+Drucksachennummer, je Vorlage mit Grund. Keine Bewertung, keine Zitate aus den Dokumenten; Beträge nur je Produktbereich
+aus den Haushaltsplänen (pipeline/haushaltsplan.py), nicht je Vorlage.
 Ausgabe: export/bonn/dossiers/<key>.json (export_all) und die statische Seite (seo-Schritt)."""
 import csv
 import json
@@ -14,7 +15,7 @@ from datetime import date, timedelta
 from html import escape
 from urllib.parse import quote
 
-from . import config, maske, process as proc
+from . import config, haushaltsplan, maske, process as proc
 
 FRIST_TAGE = 21  # Anträge, Bürgeranträge und Einwohnerfragen spätestens 21 Tage vor der Sitzung (GeschO §§ 26, 27)
 PUNKT_ARTEN = ("Beschlussvorlage", "Antrag", "Dringlichkeitsantrag")  # Punkte: Beschlüsse und Anträge
@@ -93,6 +94,7 @@ class Thema:
     nach_bezirk: frozenset = frozenset()  # Stränge, deren Vorlagen nach Stadtbezirk gegliedert erscheinen
     farben: tuple = ("#6d28d9", "#7c3aed", "#a78bfa")  # Übersicht thema/: Schrift, Verlauf von, Verlauf bis
     symbol: str = ""          # Übersicht thema/: Linien-Symbol (SVG-Inhalt, viewBox 0 0 24 24)
+    produktbereich: str = None  # Haushalt: Produktbereich mit Ist und Plan (Entscheidung 27.10.2026: je Thema einer)
 
     @property
     def stichprobe_pfad(self):
@@ -287,7 +289,9 @@ def daten(t, cache, home, meetings, today, meta):
     by_ref = {p["reference"]: (pid, p) for pid, p in cache.items()}
     plan = t.terminplan and by_ref.get(t.terminplan)
     vergleich = t.vergleich and by_ref.get(t.vergleich)
+    betraege = _betraege(t.produktbereich)
     return {
+        **({"haushalt_betraege": betraege} if betraege else {}),
         "meta": {**meta, "seit": t.seit, "hinweis": t.hinweis},
         "straenge": [{"key": k, "titel": ti, "regel": r, "eingeklappt": k in t.eingeklappt, "vorlagen": straenge[k]}
                      for k, ti, r in t.straenge],
@@ -296,12 +300,32 @@ def daten(t, cache, home, meetings, today, meta):
         "punkte": punkte,
         "phasen": [{"bahn": b, "von": v, "bis": bis, "text": x, "intern": i} for b, v, bis, x, i in t.phasen],
         "haushalt_schritte": [{"titel": ti, "zeit": z, "text": x} for ti, z, x in t.schritte],
+
         "terminplan": plan and {"reference": t.terminplan, "web": plan[1].get("web"), "gebiet": home.get(plan[0])},
         "vergleich": vergleich and {
             "reference": t.vergleich, "name": vergleich[1].get("name"), "web": vergleich[1].get("web"),
             "gebiet": home.get(vergleich[0]),
             "vorlagen": sum(1 for r in by_ref if _stamm(r) == t.vergleich)},
     }
+
+
+def _betraege(pb):
+    """Ordentliche Aufwendungen eines Produktbereichs (Zeile 17): Ergebnis (Ist) und Ansatz des Haushaltsjahres (Plan),
+    je Jahr mit Ausgabe, Datei und Seite; ohne Finanzplanung ab 2027. None ohne Produktbereich oder ohne Daten."""
+    if not pb or not haushaltsplan.FREIGEGEBEN:
+        return None
+    rows = haushaltsplan.lesen()
+    reihe = haushaltsplan.reihe(pb, rows)
+    if not reihe:
+        return None
+    stand = json.loads(haushaltsplan.STAND.read_text(encoding="utf-8"))
+    name = next(r["name"] for r in rows if r["produktbereich"] == pb)
+    wert = lambda x: x and {"betrag": x[0], "ausgabe": x[1]["ausgabe"], "datei": x[1]["datei"], "seite": int(x[1]["seite"])}
+    return {"produktbereich": pb, "name": name, "zeile": "Ordentliche Aufwendungen (Zeile 17 des Teilergebnisplans)",
+            "jahre": [{"jahr": j, "ist": wert(i), "plan": wert(p)} for j, i, p in reihe if j >= haushaltsplan.AB_JAHR],
+            "ausgaben": {a: {"seite": v["seite"], "dateien": {k: d["url"] for k, d in v["dateien"].items() if k == pb}}
+                         for a, v in stand["ausgaben"].items()},
+            "abruf": stand["abruf"], "lizenz": stand["lizenz"]}
 
 
 # --- Seite --------------------------------------------------------------------------------------------
@@ -371,6 +395,33 @@ def _schritte(t, d, root):
 """
 
 
+def _mio(x):
+    return f"{x / 1e6:,.1f}".replace(",", " ").replace(".", ",").replace(" ", ".") + " Mio. €" if x is not None else "–"
+
+
+def _haushalt(d):
+    """Abschnitt „Haushalt im Produktbereich“: Ist und Plan getrennt, nominal, mit Fundstelle."""
+    h = d.get("haushalt_betraege")
+    if not h:
+        return ""
+    def zelle(x):
+        return f'{_mio(x["betrag"])} <small>(Haushaltsplan {x["ausgabe"]}, S. {x["seite"]})</small>' if x else "–"
+    quellen = ", ".join(f'<a href="{escape(v["dateien"][h["produktbereich"]])}">Teilergebnisplan im Haushaltsplan {escape(a)}</a>'
+                        for a, v in sorted(h["ausgaben"].items()) if h["produktbereich"] in v["dateien"])
+    rows = "\n".join(f'        <tr><th scope="row">{j["jahr"]}</th><td>{zelle(j["ist"])}</td><td>{zelle(j["plan"])}</td></tr>'
+                     for j in h["jahre"])
+    return f"""    <h2 id="haushalt-produktbereich">Haushalt im Produktbereich {escape(h["produktbereich"])} {escape(h["name"])}</h2>
+    <p>{escape(h["zeile"])}, in Mio. € ohne Preisbereinigung. Ergebnis heißt tatsächlich angefallen (Ist), Ansatz heißt geplant (Plan); beide weichen oft voneinander ab.</p>
+    <table class="haushalt">
+      <thead><tr><th scope="col">Jahr</th><th scope="col">Ergebnis (Ist)</th><th scope="col">Ansatz (Plan)</th></tr></thead>
+      <tbody>
+{rows}
+      </tbody>
+    </table>
+    <p class="meta">Ausgelesen aus den Haushaltsplänen der Stadt Bonn (PDF: {quellen}; Abruf {_date(h["abruf"])}); die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan. Der Produktbereich deckt sich nicht genau mit dem Thema dieser Seite; interne Leistungen und Umgliederungen verschieben Beträge. Die Finanzplanung ab 2027 ist nicht übernommen; der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht. Zu einzelnen Vorlagen nennt die Seite keine Beträge.</p>
+"""
+
+
 def body(t, d, root):
     from . import prozessbild
     vg = d.get("vergleich")
@@ -403,7 +454,7 @@ def body(t, d, root):
     <p class="lead">{escape(t.lead.format(seit=_date(d["meta"]["seit"])))}</p>
     <p class="meta">Die Seite beschreibt Verfahren; sie bewertet keine Entscheidungen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
 {prozessbild.abschnitt(t, d, root)}
-{_schritte(t, d, root)}{vergleich}    <h2 id="sitzungen">Nächste Sitzungen</h2>
+{_schritte(t, d, root)}{_haushalt(d)}{vergleich}    <h2 id="sitzungen">Nächste Sitzungen</h2>
     <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher. Die Frist (21 Tage vorher, GeschO §§ 26, 27) ist berechnet.</p>
     <ul>
 {sitzungen}

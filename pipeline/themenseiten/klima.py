@@ -4,7 +4,7 @@ Prüfbogen im Gespräch geprüft am 26.10.2026, danach Regeln A–E (klima/PRUEF
 Eigene Regeln (Entscheidung 26.10.2026): Wörter im Titel für Klimaschutz und Energie, Klimaanpassung, Grün und
 Natur, Abfall und Sauberkeit; übrige Vorlagen aus Umweltamt, Umweltausschuss und Naturschutzbeirat nach Stadtbezirk
 (darunter Lärm, Luft und Friedhöfe). Vorlagen zum Verkehr bleiben auf der Verkehrsseite, auch Maßnahmen des
-Klimaplans. Keine Bewertung, keine Beträge, keine Zitate."""
+Klimaplans. Keine Bewertung, keine Beträge je Vorlage, keine Zitate."""
 import re
 from datetime import date
 
@@ -102,7 +102,7 @@ THEMA = Thema(
                   "2 unpassend; in der Gegenprobe fehlten 2 von 5), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten und Fördersummen stehen in den Dokumenten der Vorlagen und im Haushaltsplan "
-        "der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge.",
+        "der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je Vorlage; Beträge je Produktbereich stehen im Abschnitt „Haushalt“.",
         "<strong>Hitze und Überschwemmung auf der Karte:</strong> Den Anteil der Einwohner in Flächen mit dringendem "
         "Handlungsbedarf bei Hitze zeigt die <a href=\"../../?flaechen=kontext-hitze\">Karte</a> je Gebiet, die "
         "Überschwemmungsgebiete die <a href=\"../../?ebenen=uesg\">Ebene Überschwemmungsgebiete</a>.",
@@ -118,4 +118,5 @@ THEMA = Thema(
                         r"Lärm|Luftqualität|\bTier|Nachhaltig|Lokale Agenda|Ressourcen", re.I),
     farben=("#047857", "#059669", "#84cc16"),  # Übersicht thema/: Schrift, Verlauf
     symbol='<path d="M5 19C5 10 11 5 20 4c-1 9-6 15-15 15z"/><path d="M5 19 13 11"/>',
+    produktbereich="13",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
 )
