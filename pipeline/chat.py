@@ -15,8 +15,9 @@ datenstand.json."""
 import json
 import re
 from collections import Counter, defaultdict
+from datetime import date
 
-from . import topics
+from . import config, topics
 
 PAPER_FIELDS = ("reference", "name", "paper_type", "date", "amt", "web", "main_file", "source_object", "stand",
                 "parties", "plans")
@@ -84,8 +85,9 @@ def places(papers):
     return out
 
 
-def organizations(db, papers, meetings):
-    """Gremien und Verwaltungsbereiche der OParl-API mit Zählungen aus den Vorlagen."""
+def organizations(db, papers, meetings, besetzt=None):
+    """Gremien und Verwaltungsbereiche der OParl-API mit Zählungen aus den Vorlagen; laufende Gremien mit Besetzung
+    (Vorsitz, Sitze nach Fraktion, abgeleitet; pipeline/besetzung.py), ohne weitere Namen."""
     led = Counter()
     for p in papers:
         for r in p["responsibility"]:
@@ -115,6 +117,14 @@ def organizations(db, papers, meetings):
             d["deciding"] = deciding[o["name"]]
             d["meetings"] = held[o["name"]]
             d["theme"] = topics._gremium_theme(o["name"])
+            b = (besetzt or {}).get("/".join(o["id"].split("/")[-2:])) if not o["end_date"] else None
+            if b:
+                d["besetzung"] = {
+                    "mitglieder": b["sitze_gesamt"], "sitze": b["sitze"], "ohne_fraktion": b["ohne_fraktion"],
+                    "sachkundig": b["sachkundig"], "stellvertretungen": b["stellvertretend"], "beratend": len(b["beratend"]),
+                    "vorsitz": sorted(({"name": e["name"], "rolle": e["rolle"], "fraktion": e["fraktion"]}
+                                       for e in b["ordentlich"] if e["vorsitz"]),
+                                      key=lambda v: (v["rolle"] != "Vorsitz", v["rolle"]))}
         out.append(d)
     return out
 
@@ -169,7 +179,10 @@ def write_chat(out, db, cache, meetings, sources, meta):
     for key, items in shards.items():
         _dump(out / "vorlagen" / f"{key}.json", {"meta": meta, "papers": items})
     _dump(out / "orte.json", {"meta": meta, "places": places(papers)})
-    _dump(out / "gremien.json", {"meta": meta, "organizations": organizations(db, papers, meetings)})
+    from . import besetzung, prozessarten   # hier, weil prozessarten über maske chat importiert
+    terms = json.loads(config.LEGISLATIVE_TERMS.read_text()) if config.LEGISLATIVE_TERMS.exists() else []
+    besetzt = besetzung.gremien(prozessarten._term_start(terms, date.today().isoformat()))[0]
+    _dump(out / "gremien.json", {"meta": meta, "organizations": organizations(db, papers, meetings, besetzt)})
     _dump(out / "datenstand.json", data_status(sources, papers, meetings))
     # Drucksachen, deren Titel ohne Hausnummer erscheinen (Einwohnerschaft, Bauordnung und Naturschutz; maske.py)
     from . import maske   # hier, weil maske chat importiert
