@@ -2080,10 +2080,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "6.15.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
     }
    ],
    "superordinated": [
@@ -2113,7 +2113,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028561",
-   "stand": "offen",
+   "stand": "in Beratung",
    "themes": [
     {
      "theme": "bauen",
@@ -2179,8 +2179,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "6.15.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     }
    ],
    "soll": {
@@ -2726,10 +2728,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "7.4",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
     }
    ],
    "superordinated": [],
@@ -2752,7 +2754,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028987",
-   "stand": "offen",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "bauen",
@@ -2798,8 +2800,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "7.4",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     }
    ],
    "soll": {
@@ -3846,8 +3850,8 @@
      "meeting": "Sitzung des Ausschusses für Planen, Bauen und Denkmalschutz",
      "start_date": "2026-07-14T16:00:00.000Z",
      "cancelled": 0,
-     "number": "6.11",
-     "result": "vertagt",
+     "number": "6.15",
+     "result": "geändert beschlossen",
      "public": 1,
      "status": "beraten"
     }
@@ -3941,11 +3945,10 @@
      "date": "2026-07-14",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
-     "number": "6.11",
-     "result": "vertagt",
+     "number": "6.15",
+     "result": "geändert beschlossen",
      "stand": "beraten",
-     "result_source": "oparl-lite",
-     "schleife": true
+     "result_source": "oparl-lite"
     },
     {
      "typ": "folgevorlage",
@@ -4321,7 +4324,7 @@
      "meeting": "Sitzung des Ausschusses für Planen, Bauen und Denkmalschutz",
      "start_date": "2026-07-14T16:00:00.000Z",
      "cancelled": 0,
-     "number": "1.9",
+     "number": "1.7",
      "result": "vertagt",
      "public": 1,
      "status": "beraten"
@@ -4458,7 +4461,7 @@
      "date": "2026-07-14",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
-     "number": "1.9",
+     "number": "1.7",
      "result": "vertagt",
      "stand": "beraten",
      "result_source": "oparl-lite",
@@ -81177,6 +81180,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Fraktionen von Grünen, SPD und Linke beantragen Änderungen für den Bereich Propsthof/WestSide. Sie fordern mehr Bäume an der Allee, eine sichere Querungshilfe und barrierefreie Bushaltestellen für die Linien 631 und 632. Zudem soll die Verwaltung prüfen, wie der ÖPNV im Baugebiet mit fast tausend Wohnungen verbessert werden kann.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-27"
    }
   },
   {
