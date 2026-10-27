@@ -1,9 +1,12 @@
-# Quelldateien, die aus der Arbeitsumgebung nicht erreichbar sind (wahlen.bonn.de, stadtplan.bonn.de), auf Knopfdruck
-# abrufen und unverändert mit Abrufstand im Branch `quellen` ablegen. Daraus entstehen nach Prüfung feste Ausschnitte
-# im Repository (z. B. data/kontext/). Kein Einfluss auf die veröffentlichte Seite.
-name: Quellen abrufen (auf Knopfdruck)
+# Quelldateien, die aus der Arbeitsumgebung nicht erreichbar sind (wahlen.bonn.de, stadtplan.bonn.de), abrufen und
+# unverändert mit Abrufstand im Branch `quellen` ablegen. Daraus entstehen nach Prüfung feste Ausschnitte im
+# Repository (z. B. data/kontext/). Kein Einfluss auf die veröffentlichte Seite. Seit 22.10.2026 antworten beide Dienste
+# nicht; der Lauf wiederholt sich deshalb montags (Entscheidung 27.10.2026), bis die Dateien vorliegen.
+name: Quellen abrufen (montags und auf Knopfdruck)
 
 on:
+  schedule:
+    - cron: "41 6 * * 1"
   workflow_dispatch:
 
 permissions:
