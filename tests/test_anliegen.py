@@ -101,5 +101,37 @@ class Archiv(unittest.TestCase):
                                  fetcher=fetcher({}, fail={f"2026-{m:02d}" for m in range(6, 11)}), ortsteile=Orte())
 
 
+
+class Seite(unittest.TestCase):
+    def test_zaehlt_90_tage_rundet_kleine_werte_und_meldet_beginn(self):
+        with tempfile.TemporaryDirectory() as d:
+            st = {}
+            for i in range(4):
+                st[f"{i}-2026"] = {**anliegen.normalize(meldung(f"{i}-2026", tag="2026-10-20"), Orte()),
+                                   "erstmals_gesehen": "2026-10-28", "zuletzt_gesehen": "2026-10-28"}
+            st["9-2026"] = {**anliegen.normalize(meldung("9-2026", tag="2026-10-20", code="3.6"), Orte()),
+                            "erstmals_gesehen": "2026-10-28", "zuletzt_gesehen": "2026-10-28"}
+            st["1-2025"] = {**anliegen.normalize(meldung("1-2025", tag="2025-01-05"), Orte()),   # außerhalb der 90 Tage
+                            "erstmals_gesehen": "2026-10-28", "zuletzt_gesehen": "2026-10-28"}
+            (Path(d) / "anliegen").mkdir()
+            anliegen.write_state(Path(d) / "anliegen" / "meldungen.tsv", st)
+            (Path(d) / "anliegen" / "STAND.json").write_text('{"abruf": "2026-10-28T05:30:00+00:00", "archiv_beginn": "2026-10-28"}')
+            out = Path(d) / "anliegen.json"
+            doc = anliegen.seite(d, out)
+            self.assertEqual(doc["ortsteile"]["Endenich"], {"Abfall": 4, "Stadtbild und Grün": "unter 3",
+                                                           "Straßen und Verkehr": "unter 3", "gesamt": 5})
+            self.assertEqual((doc["meta"]["von"], doc["meta"]["bis"]), ("2026-07-31", "2026-10-28"))
+            self.assertEqual(doc["meta"]["unvollstaendig_vor"], "2026-10-28")
+            self.assertNotIn("9-2026", out.read_text(encoding="utf-8"))
+            self.assertEqual(anliegen.pruefen(out), [])
+
+    def test_ohne_archiv_keine_datei(self):
+        with tempfile.TemporaryDirectory() as d:
+            out = Path(d) / "anliegen.json"
+            out.write_text("{}")
+            self.assertIsNone(anliegen.seite(Path(d) / "fehlt", out))
+            self.assertFalse(out.exists())
+
+
 if __name__ == "__main__":
     unittest.main()

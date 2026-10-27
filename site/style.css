@@ -419,6 +419,10 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .kontext-table td { text-align: right; font-variant-numeric: tabular-nums; }
 .kontext .acc { margin-top: 8px; }
 .kontext .acc ul + ul { margin-top: 6px; }
+/* Mängelmelder im Steckbrief: eigener Abschnitt, getrennt von den Kennzahlen */
+.kontext .anliegen { margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--border-alt); }
+.kontext .anliegen h4 { margin: 0 0 4px; font-size: 13px; font-weight: 600; }
+.kontext .anliegen .hint:last-child { margin: 6px 0 0; }
 /* Suchraum, Themen */
 .scope { display: flex; gap: 0; border: 1px solid var(--border-alt); border-radius: 999px; padding: 3px; margin: 0 0 4px; background: var(--surface); }
 .scope label { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 10px; border-radius: 999px; font-size: 13px; cursor: pointer; }

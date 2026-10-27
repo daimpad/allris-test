@@ -176,3 +176,73 @@ def archive(base=None, now=None, fetcher=fetch_month, ortsteile=None):
     if not ok:
         raise SystemExit("Mängelmelder: kein Monat abrufbar")
     return rows
+
+
+# --- Seite: Zahlen je Ortsteil für den Steckbrief (Schritt `anliegen-seite`, im Workflow nach dem Auschecken des
+# Branches archiv). Nur Zählungen; Werte unter UNTER gerundet als „unter 3“, kein Link auf einzelne Meldungen.
+SEITE_DATEI = "anliegen.json"
+TAGE = 90
+UNTER = 3
+GRUPPEN_FOLGE = ("Abfall", "Stadtbild und Grün", "Straßen und Verkehr")
+
+
+def _zaehlen(meldungen):
+    z = {g: 0 for g in GRUPPEN_FOLGE}
+    for m in meldungen:
+        if m.get("gruppe") in z:
+            z[m["gruppe"]] += 1
+    z["gesamt"] = sum(z.values())
+    return {k: (v if v >= UNTER else "unter 3") for k, v in z.items()}
+
+
+def seite(base=None, out=None, heute=None):
+    """export/bonn/anliegen.json aus dem Archiv: Meldungen der letzten TAGE Tage je Ortsteil, Stadtbezirk und ganz Bonn,
+    nach Gruppe. Ohne Archiv wird nichts geschrieben (der Steckbrief zeigt dann keine Meldungen)."""
+    base = Path(base or config.BAUSTELLEN_ARCHIV) / "anliegen"
+    out = Path(out or config.EXPORT / "bonn" / SEITE_DATEI)
+    state_file, stand_file = base / "meldungen.tsv", base / "STAND.json"
+    if not state_file.exists() or not stand_file.exists():
+        out.unlink(missing_ok=True)
+        print("Mängelmelder: kein Archiv – übersprungen.")
+        return None
+    stand = json.loads(stand_file.read_text(encoding="utf-8"))
+    bis = heute or date.fromisoformat(stand["abruf"][:10])
+    von = bis - timedelta(days=TAGE - 1)
+    sel = [m for m in read_state(state_file).values() if von.isoformat() <= m["tag"] <= bis.isoformat() and m.get("ortsteil")]
+    ots, bez = {}, {}
+    for m in sel:
+        ots.setdefault(m["ortsteil"], []).append(m)
+        bez.setdefault(m["stadtbezirk"], []).append(m)
+    beginn = stand.get("archiv_beginn")
+    doc = {"meta": {"titel": "Anliegen- und Mängelmelder der Stadt Bonn", "url": "https://anliegen.bonn.de",
+                    "lizenz": LICENSE, "abruf": stand["abruf"][:10], "archiv_beginn": beginn,
+                    "von": von.isoformat(), "bis": bis.isoformat(), "tage": TAGE, "gruppen": list(GRUPPEN_FOLGE),
+                    "unvollstaendig_vor": beginn if beginn and beginn > von.isoformat() else None,
+                    "hinweis": "Hinweise der Einwohnerschaft an die Verwaltung, keine Ratsvorlagen. Die Zahl hängt davon ab, "
+                               "wer meldet und was veröffentlicht wird; sie ist kein Maß für den Zustand eines Gebiets."},
+           "bonn": _zaehlen(sel),
+           "bezirke": {n: _zaehlen(v) for n, v in sorted(bez.items())},
+           "ortsteile": {n: _zaehlen(v) for n, v in sorted(ots.items())}}
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n", encoding="utf-8")
+    if befunde := pruefen(out):   # hier statt in `check`: das Archiv liegt erst nach der Aufbereitung vor
+        out.unlink()
+        raise SystemExit(f"Prüfung fehlgeschlagen: Mängelmelder ({'; '.join(befunde)}).")
+    print(f"Mängelmelder: {len(sel)} Meldungen vom {von:%d.%m.%Y} bis {bis:%d.%m.%Y} in {len(ots)} Ortsteilen → {out}")
+    return doc
+
+
+def pruefen(path=None):
+    """Prüfung (Teil von `check`): nur Zählungen je Gruppe, kleine Werte als „unter 3“, keine weiteren Felder."""
+    path = Path(path or config.EXPORT / "bonn" / SEITE_DATEI)
+    if not path.exists():
+        return []
+    doc, befunde = json.loads(path.read_text(encoding="utf-8")), []
+    erlaubt = set(GRUPPEN_FOLGE) | {"gesamt"}
+    gebiete = [("Bonn", doc["bonn"])] + list(doc["bezirke"].items()) + list(doc["ortsteile"].items())
+    for name, z in gebiete:
+        if set(z) - erlaubt:
+            befunde.append(f"Mängelmelder {name}: unerwartete Felder {sorted(set(z) - erlaubt)}")
+        if any(not (v == "unter 3" or (isinstance(v, int) and v >= UNTER)) for v in z.values()):
+            befunde.append(f"Mängelmelder {name}: Wert unter {UNTER} nicht gerundet")
+    return befunde
