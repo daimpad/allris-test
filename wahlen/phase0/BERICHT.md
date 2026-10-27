@@ -1,0 +1,43 @@
+# Wahlen 2025 – Phase 0: Prüfung des Materials (27.10.2026)
+
+**Anlass:** Prüfauftrag zur Kommunalwahl, den Wahlen der Bezirksvertretungen und des Integrationsrats vom 14.09.2025 (Stichwahl Oberbürgermeister 28.09.2025) und zu den Wahl- und Stimmbezirken als möglichen Kontextdaten (`kontext/`).
+
+**Frage:** Welche Daten gibt es, passen die Bezirke zu den 51 Ortsteilen, lassen sich Wahlbeteiligung je Ortsteil und Direktmandate je Wahlbezirk belegen?
+
+**Datenstand:** Abruf 27.10.2026. Erreichbar waren die Metadaten (opendata.bonn.de, open.nrw), die Ergebnisse nach Stimmbezirken bei IT.NRW (`wahlergebnisse.nrw/kommunalwahlen/2025/KW25_Stimmbezirke.csv`, endgültig, nur Ratswahl), Heft 3 (PDF), das Straßenverzeichnis zur Kommunalwahl 2020 (opendata.bonn.de) und die OParl-Personen. **Nicht erreichbar:** die CSV-Dateien der Stadt (Verweis auf `wahlen.bonn.de/wahlen/KW2025/05314000/praesentation/opendata.html`, Verbindung bricht ab) und die Flächen 2025 (`stadtplan.bonn.de/geojson?OD=4873` Wahlbezirke, `OD=4874` Stimmbezirke). stadtplan.bonn.de liefert von hier aus `{}`, auch für die Ortsteile (`Thema=21247`), wie schon am 24.10.2026 (`kontext/QUELLEN.md`). Der Abruf muss also im Workflow erfolgen, der den Dienst sonst nutzt. Die Inhalte der städtischen Dateien sind deshalb nicht geprüft.
+
+## Ergebnis
+- **Dateien und Ebenen:** Der Datensatz der Stadt enthält zwei Einträge („Wahlergebnisse“, „Stichwahl OB“). Beide verweisen auf die Seite mit offenen Daten von votemanager (dort üblich: je Wahl Rat, OB, Bezirksvertretungen und Integrationsrat nach Stimmbezirk). Die Datei von IT.NRW hat 17.169 Zeilen für NRW, davon 242 für Bonn: **177 Urnenstimmbezirke und 65 Briefwahlbezirke**. Felder: Wahlberechtigte ohne und mit Sperrvermerk „W“ (A1, A2), insgesamt (A), Wähler (B), davon mit Wahlschein (B1), ungültig (C), gültig (D), Stimmen je Partei (D01–D34; WGR 1 = BBB, WGR2 = Rhein.Grün, WGR 3 = SBI). Namen von Bewerber:innen stehen nicht darin.
+- **Summen geprüft:** 247.052 Wahlberechtigte, 160.220 Wähler (**64,9 %**), davon 65.875 per Brief (41,1 %), 159.458 gültige Stimmen. Die Summen gleichen Heft 3 und `KW25_parla_insgesamt_stimmen.txt`. Rat: 66 Sitze, davon 33 aus Wahlbezirken und 33 aus Listen. OB: 1. Wahlgang 64,8 %, Stichwahl 56,0 %. Bezirksvertretungen gibt es bei IT.NRW nur je Stadtbezirk (z. B. Bonn 64,8 %, Hardtberg 59,2 %), den Integrationsrat gar nicht.
+- **Briefwahl:** Jeder der 33 Wahlbezirke hat ein bis zwei Briefwahlbezirke (Nummer `010 A` gehört zu Wahlbezirk 1). Die Stimmbezirke im Wahlbezirk sind die Nummern 11–16 zu 1, 431–436 zu 43. **Damit ist die Wahlbeteiligung je Wahlbezirk einschließlich Briefwahl exakt:** 40,4 % (WB 7) bis 76,7 % (WB 16), Median 65,1 %. Je Stimmbezirk gilt sie nur für die Urne. Eine Schätzung ist möglich: die Briefwähler des Wahlbezirks im Verhältnis des Sperrvermerks „W“ verteilen. Der Rücklauf liegt je Wahlbezirk bei 0,89–0,93; geschätzt 20,8 % bis 80,3 %, Median 67,6 %.
+- **Direktmandate:** Die stärkste Partei je Wahlbezirk (Urne + Brief) ergibt **CDU 20, GRÜNE 13**. Das ist genau die Zahl der Sitze aus Wahlbezirken in Heft 3. Die Namen der Gewählten fehlen in allen erreichbaren Quellen. Sie stehen vermutlich bei votemanager oder in der Bekanntmachung des Wahlergebnisses.
+- **OParl:** 2.582 Personen, davon 72 mit Mitgliedschaft im Rat (`organizations/gr/1`) ab 10/2025 (69 „Stadtverordnete/r“; Nachrücker eingeschlossen). Es gibt kein Feld zu Wahlbezirk, Liste oder Direktmandat, und `onBehalfOf` ist nicht gesetzt. Eine Verbindung ginge nur über den Namen und mit Prüfung von Hand.
+- **Passung zu Ortsteilen** (Flächen 2025 nicht erreichbar; ersatzweise Straßenverzeichnis 2020 × `data/geo/hausnummern_bonn.json`, 58.616 von 58.965 Adressen = 99,4 % zugeordnet, Gewicht = Adressen). Die Nummern der Stimmbezirke 2020 und 2025 sind gleich (177/177); ob sich die Grenzen geändert haben, ist offen.
+
+  | Ebene | Anzahl | ≥ 95 % der Adressen in einem Ortsteil | Median Hauptanteil |
+  |---|---|---|---|
+  | Stimmbezirke (2020 als Gruppen je Wahllokal) | 163 | 111 | 1,00 |
+  | Wahlbezirke | 33 | 4 | 0,66 |
+
+  Wahlbezirke schneiden Ortsteile meist, Stimmbezirke passen überwiegend. **Wahlbeteiligung je Ortsteil (Schätzung, anteilig nach Adressen):** 39,7 % bis 77,6 %, Median 68,2 %. Die Summe der Wahlberechtigten geht auf (247.052). Zuordnung nach Mehrheit und anteilige Zuordnung weichen im Median um 0,2 Prozentpunkte ab, höchstens um 3,2 (Muffendorf; ≤ 1 Pp bei 41 von 48). **Ohne eigenen Stimmbezirk:** Beuel-Ost, Hoholz, Hardthöhe (dort 37 Wahlberechtigte). Ihr Wert wäre nur der Wert der Nachbarn. Weitere Abweichungen bei der Mehrheitszuordnung: Pennenfeld, Godesberg-Nord, Ramersdorf (über 40 % fremde oder fehlende Adressen).
+- **Fehler insgesamt:** Die Verteilung der Briefwahl macht etwa ±1–1,5 Pp aus (29 % Sperrvermerk × Schwankung des Rücklaufs). Die Zuordnung zum Ortsteil macht 0–3 Pp aus. Dazu kommt, dass Adressen nicht Wahlberechtigte sind; mit den Zensus-Gitterzellen und den Flächen 2025 wäre das besser. Sinnvoll sind ganze Prozent, kein Wert für die drei Ortsteile ohne Stimmbezirk.
+
+## Grenzen
+- **Lizenz:** Die Stadtseite nennt dl-de/zero-2.0, open.nrw nennt CC0 (beide ohne Namensnennung). IT.NRW nennt keine offene Lizenz („Texte und Daten urheberrechtlich geschützt“). Primärquelle bleibt daher die Stadt, IT.NRW dient nur der Gegenprüfung. Das Straßenverzeichnis 2020 trägt „other-closed“.
+- **Datenschutz:** Der kleinste Urnenbezirk hat 157 Wähler (SB 53), der kleinste Briefwahlbezirk 678; in 144 Zellen hat eine Partei 1–2 Stimmen. Das sind amtlich veröffentlichte Ergebnisse, die Bezirksgrößen wahren das Wahlgeheimnis. Für die Seite reicht trotzdem die Wahlbeteiligung, ohne Parteistimmen je Stimmbezirk. **Auffällig:** Das Straßenverzeichnis 2020 enthält ab Spalte 19 Namen und Telefonnummern (teils privat) von Wahlvorständen. Diese Spalten nicht übernehmen; ob die Stadt darauf hingewiesen wird, entscheidet der Auftraggeber.
+- **Aktualität:** ein Stichtag (14.09.2025), nächste Kommunalwahl 2030. Wahlberechtigte sind nicht Einwohner (Deutsche und Unionsbürger:innen ab 16).
+- **Neutralität:** Wahlbeteiligung wäre Einordnung, keine Wertung, und ohne Rangfolge der Ortsteile wie die übrigen Kontextdaten. Karten nach „stärkster Partei“ oder Stimmenanteilen je Gebiet laden zur Bewertung ein; Ergebnisse höchstens stadtweit und wörtlich aus der Quelle.
+- **Nicht geprüft:** Bezirksvertretungen und Integrationsrat nach Stimmbezirk, Format der städtischen CSV, Flächen 2025, Namen der Direktgewählten.
+
+## Optionen zur Entscheidung
+1. **Wahlbeteiligung als Kennzahl je Ortsteil** (`kontext.json`, Steckbrief, Flächenfärbung; Vergleich Stadtbezirk und Bonn). Methode: Stimmbezirke 2025 anteilig nach Zensus-Einwohnern oder Adressen, Briefwahl nach Sperrvermerk „W“; abgeleitet, ganze Prozent, drei Ortsteile ohne Wert. Aufwand etwa 1 Tag. Voraussetzung: Ausschnitt der Flächen 2025 und der städtischen CSV einmalig im Workflow laden (`kontext-ausschnitte`). Grenze: Schätzfehler bis etwa 3 Pp, ein Stichtag.
+2. **Ebene Wahlbezirke auf der Karte** (33 Flächen, zuschaltbar wie `ebenen=`). Die Beteiligung ist dort amtlich und exakt (keine Schätzung), außerdem gibt es Nummer und Name. Aufwand etwa 0,5–1 Tag. Grenze: Die Wahlbezirke passen nicht zu den Ortsteilen (4 von 33 rein), und das Bild neben den Ortsteilflächen ist zweierlei.
+3. **„Wer vertritt meinen Wahlbezirk?“** Wahlbezirk aus Adresse oder Karte, direkt gewähltes Ratsmitglied mit Link zur OParl-Person, Hinweis auf die 33 Listenmandate und den Integrationsrat. Aufwand 1–2 Tage einschließlich Prüfung der 33 Namen von Hand. Voraussetzung: Namen aus votemanager oder der Bekanntmachung. Grenze: Rückt jemand nach, kommt die Person von der Reserveliste, nicht aus dem Wahlbezirk; das muss gepflegt werden.
+4. **Nur stadtweite Fakten** (Sitzverteilung, Beteiligung Rat und OB, Quelle) im Dialog „Über“ und im Assistenten. Aufwand unter 0,5 Tagen, ohne räumliche Ableitung.
+
+Skripte und Zwischenergebnisse (im Arbeitsordner der Prüfung, nicht im Repository): `skripte/analyse_ergebnisse.py`, `skripte/zuordnung_2020.py`, `skripte/ortsteil_beteiligung.py`, `skripte/oparl_rat.py`; Ausgaben `ergebnisse.txt`, `zuordnung.txt`, `ortsteil_beteiligung.txt`.
+
+## Entscheidungen (27.10.2026)
+- Wahlbeteiligung der Ratswahl 2025 als Kennzahl je Ortsteil in den Kontextdaten (geschätzt, abgeleitet, ganze Prozent, ohne Rangfolge); keine Ergebnisse der Parteien je Gebiet. Ortsteile ohne eigenen Stimmbezirk bleiben ohne Wert.
+- Abruf der städtischen Dateien und Flächen 2025 im Workflow `quellen.yml` (Branch `quellen`), danach fester Ausschnitt in `data/kontext/`.
+- Spalten mit Namen und Telefonnummern von Wahlvorständen werden nicht übernommen.
