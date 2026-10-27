@@ -158,6 +158,31 @@ def fraktion(person, by_id, bezirk=None):
     return None, ("mehrere Fraktionen" if kand else None)
 
 
+def zusammenfassen(sitze, einzel):
+    """Sitze nach Fraktion; ein Einzelmandat derselben Partei wie eine Fraktion oder Gruppe im selben Gremium (z. B.
+    „AfD“ neben „AfD-Fraktion“) erscheint mit ihr zusammen (Entscheidung 27.10.2026), die Teile bleiben unter `aus`.
+    Gruppen aus mehreren Parteien („BSW/SBI-Gruppe“) nehmen kein Einzelmandat auf."""
+    gruppen = {}
+    for name, n in sitze.items():
+        ziel = name
+        if name in einzel:
+            partner = [k for k in sitze if k != name and k not in einzel and re.match(rf"{re.escape(name)}[- ]", k)]
+            if len(partner) == 1:
+                ziel = partner[0]
+        gruppen.setdefault(ziel, []).append((name, n))
+    out = []
+    for ziel, teile in gruppen.items():
+        n = sum(x for _, x in teile)
+        if len(teile) == 1:
+            out.append({"fraktion": ziel, "n": n})
+            continue
+        partei = next(t for t, _ in teile if t != ziel)
+        out.append({"fraktion": partei, "n": n,
+                    "aus": [{"fraktion": t if t == ziel else f"Einzelmandat {t}", "n": x}
+                            for t, x in sorted(teile, key=lambda t: (t[0] != ziel, -t[1]))]})
+    return sorted(out, key=lambda x: (-x["n"], x["fraktion"]))
+
+
 def gremien(term_start, heute=None, path=None, orgs=None):
     """Besetzung je Gremium (Schlüssel: kurze OParl-ID) für prozessarten.json; Audit der ausgelassenen Einträge."""
     path = path or config.BESETZUNG
@@ -200,12 +225,13 @@ def gremien(term_start, heute=None, path=None, orgs=None):
         if hinweis:
             eintrag["fraktion_hinweis"] = hinweis
         (b["ordentlich"] if ORDENTLICH.match(rolle) else b["beratend"]).append(eintrag)
+    einzel = {_fraktion_name(o) for o in orgs.values() if o.get("classification") == "Einzelmandate"}
     for gid, b in out.items():
         sitze = {}
         for e in b["ordentlich"]:
             if e["fraktion"]:
                 sitze[e["fraktion"]] = sitze.get(e["fraktion"], 0) + 1
-        b["sitze"] = [{"fraktion": k, "n": n} for k, n in sorted(sitze.items(), key=lambda x: (-x[1], x[0]))]
+        b["sitze"] = zusammenfassen(sitze, einzel)
         b["ohne_fraktion"] = sum(1 for e in b["ordentlich"] if not e["fraktion"])
         b["sachkundig"] = sum(1 for e in b["ordentlich"] if e["sachkundig"])
         b["sitze_gesamt"] = len(b["ordentlich"])

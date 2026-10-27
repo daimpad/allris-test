@@ -83,6 +83,18 @@ class Gremien(unittest.TestCase):
         self.assertEqual(audit, [["Kulturausschuss", "Mitglied (Stv.)", "2019-01-01", "Beginn vor der Wahlperiode"]])
         self.assertNotIn("at/1", out)
 
+    def test_einzelmandat_mit_fraktion_derselben_partei(self):
+        einzel = {"AfD", "Die PARTEI", "BSW"}
+        sitze = besetzung.zusammenfassen({"AfD-Fraktion": 3, "AfD": 1, "Die PARTEI": 1, "CDU-Fraktion": 21, "BSW/SBI-Gruppe": 2}, einzel)
+        self.assertEqual(sitze[1], {"fraktion": "AfD", "n": 4,
+                                    "aus": [{"fraktion": "AfD-Fraktion", "n": 3}, {"fraktion": "Einzelmandat AfD", "n": 1}]})
+        self.assertIn({"fraktion": "Die PARTEI", "n": 1}, sitze)       # ohne Fraktion derselben Partei: bleibt allein
+        self.assertEqual(besetzung.zusammenfassen({"AfD": 1}, einzel), [{"fraktion": "AfD", "n": 1}])
+        self.assertEqual(sum(x["n"] for x in sitze), 28)
+        # „BSW“ neben „BSW/SBI-Gruppe“: Gruppe aus zwei Parteien, bleibt getrennt
+        self.assertEqual(besetzung.zusammenfassen({"BSW/SBI-Gruppe": 2, "BSW": 1}, einzel),
+                         [{"fraktion": "BSW/SBI-Gruppe", "n": 2}, {"fraktion": "BSW", "n": 1}])
+
     def test_kurze_id_mit_art(self):
         self.assertEqual(besetzung._kurz(O + "gr/45"), "gr/45")
         self.assertEqual(besetzung._kurz(O + "at/1"), "at/1")
