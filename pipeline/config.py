@@ -14,6 +14,7 @@ VERWALTUNGSBEREICHE = RAW / "verwaltungsbereiche.json"
 CONSULTATIONS_LITE = RAW / "consultations_lite.jsonl"
 MEETINGS = RAW / "meetings.json"
 LEGISLATIVE_TERMS = RAW / "legislative_terms.json"
+BESETZUNG = RAW / "besetzung.json"   # Auszug laufender Mitgliedschaften ohne Kontaktdaten (pipeline/besetzung.py)
 OSM_STREETS = RAW / "osm_streets.json"
 # Volltexte der Hauptdokumente (aus OParl-Lite, dort aus den PDFs der Stadt extrahiert): nur zur Verarbeitung,
 # lokal und im Zwischenspeicher des Workflows; nie im Repository, auf der Seite oder im Datenpaket

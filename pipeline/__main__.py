@@ -1,13 +1,14 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-besetzung|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|all}"""
 import sys
 
-from . import anliegen, baustellen, build, check, dossier, export, fetch, geocode, kandidaten, kontext, kurzfassung, seo, soll, stufe_c, verify
+from . import anliegen, baustellen, besetzung, build, check, dossier, export, fetch, geocode, kandidaten, kontext, kurzfassung, seo, soll, stufe_c, verify
 from .themenseiten import klima, kultur, schule, verkehr, wohnen
 
 STEPS = {
     "fetch": fetch.fetch_all,
     "fetch-papers": fetch.fetch_papers,
     "fetch-organizations": fetch.fetch_organizations,
+    "fetch-besetzung": besetzung.fetch,  # laufende Mitgliedschaften (Auszug ohne Kontaktdaten), nach fetch-organizations
     "fetch-lite": fetch.fetch_consultations_lite,
     "fetch-meetings": fetch.fetch_meetings,
     "fetch-plans": fetch.fetch_plans,

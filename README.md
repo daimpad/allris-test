@@ -83,7 +83,7 @@ Gespeichert werden nur die Ergebnisse des Modells, nie Text der Dokumente (Branc
 
 | Quelle | Inhalt | Lizenz |
 |---|---|---|
-| [OParl-API der Stadt Bonn](https://www.bonn.sitzung-online.de/oparl/bodies/1) (Ratsinformationssystem) | Vorlagen, Beratungen, Gremien, Ämter, Orte | CC0 1.0 (ohne PDFs) |
+| [OParl-API der Stadt Bonn](https://www.bonn.sitzung-online.de/oparl/bodies/1) (Ratsinformationssystem) | Vorlagen, Beratungen, Gremien und ihre Besetzung (ohne Kontaktdaten), Ämter, Orte | CC0 1.0 (ohne PDFs) |
 | [OParl-Lite Bonn](https://oparl.bonn.machdenstaat.de/) (machdenstaat) | Sitzung, Tagesordnungspunkt und Ergebnis je Beratung | CC BY 4.0 |
 | Stadt Bonn, [Ortsteile und Stadtbezirke](https://opendata.bonn.de/dataset/flächen-der-ortsteile) | Flächen | CC0 1.0 |
 | Stadt Bonn, [Lage der Bebauungspläne](https://opendata.bonn.de/dataset/lage-der-bebauungspläne) | 1.128 rechtskräftige Pläne mit Plan und Begründung | CC0 1.0 |
