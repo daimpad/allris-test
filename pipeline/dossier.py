@@ -490,6 +490,11 @@ def body(t, d, root):
     <p class="meta">Regel (abgeleitet): {escape(s['regel'].rstrip('.'))}.</p>
 """ + tabelle)
     inhalt = " · ".join(f'<a href="#{s["key"]}">{escape(s["titel"])}</a>' for s in d["straenge"])
+    h, a = d.get("haushalt_betraege"), d.get("fachausschuss")
+    ziele = ([("haushalt-produktbereich", f'Haushalt (Produktbereich {escape(h["produktbereich"])})')] if h else []) \
+        + ([("fachausschuss", "Wer berät mit")] if a else []) \
+        + [("sitzungen", "Nächste Sitzungen"), ("mitwirken", "Mitwirken"), ("vorlagen", "Vorlagen nach Strang")]
+    sprung = " · ".join(f'<a href="#{k}">{x}</a>' for k, x in ziele)
     nicht = "\n".join(f"      <li>{x}</li>" for x in t.nicht_gezeigt)
     ink, von, bis = t.farben  # Kopf wie die Kachel der Übersicht thema/ (Symbol und Farbverlauf)
     return f"""    <div class="thema-kopf" style="--k-ink:{ink};--k-von:{von};--k-bis:{bis}">
@@ -498,20 +503,21 @@ def body(t, d, root):
     </div>
     <p class="lead">{escape(t.lead.format(seit=_date(d["meta"]["seit"])))}</p>
     <p class="meta">Die Seite beschreibt Verfahren; sie bewertet keine Entscheidungen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
+    <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> {sprung}</nav>
 {prozessbild.abschnitt(t, d, root)}
 {_schritte(t, d, root)}{_haushalt(d)}{vergleich}{_ausschuss(d, root)}    <h2 id="sitzungen">Nächste Sitzungen</h2>
     <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher. Die Frist (21 Tage vorher, GeschO §§ 26, 27) ist berechnet.</p>
     <ul>
 {sitzungen}
     </ul>
-    <h2>Mitwirken</h2>
+    <h2 id="mitwirken">Mitwirken</h2>
     <ul>
       <li><strong>Sitzungen besuchen:</strong> Rat und Ausschüsse tagen in der Regel öffentlich (§ 48 GO NRW).</li>
       <li><strong>Einwohnerfragestunde:</strong> In den Bezirksvertretungen können Einwohnerinnen und Einwohner bis zu zwei Fragen stellen, eingereicht spätestens 21 Tage vor der Sitzung (GeschO § 26).</li>
       <li><strong>Anregungen und Beschwerden (§ 24 GO NRW):</strong> Jede Person kann sich schriftlich an den Rat oder eine Bezirksvertretung wenden. <a href="https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php">Bürgerantrag bei der Stadt Bonn</a></li>
       <li><a href="{root}?mitmachen=1">Alle Wege, Fristen und Sitzungen je Stadtbezirk auf der Karte</a></li>
     </ul>
-    <h2>Vorlagen nach Strang</h2>
+    <h2 id="vorlagen">Vorlagen nach Strang</h2>
     <p>{inhalt}</p>
     <p class="meta">Jede Vorlage steht in höchstens einem Strang. Die Zuordnung folgt festen Regeln (Amt, Gremium, Wörter im Titel, Drucksachennummer); der Grund steht je Vorlage dabei. {t.pruefung_text} Der Stand ist aus der Beratungsfolge abgeleitet, Ergebnisse stehen wörtlich wie in der Quelle.</p>
 {chr(10).join(straenge)}
@@ -563,7 +569,7 @@ def _svg(inhalt, klasse):
 
 def _kachel(t, d):
     """Kachel der Übersicht: Symbol und Farbverlauf, Zahl der Vorlagen, Stränge mit Zahl, nächste Sitzung des
-    Fachausschusses (erstes Gremium in t.sitzungen) mit Frist."""
+    Fachausschusses (erstes Gremium in t.sitzungen) mit Frist; Hinweis auf den Abschnitt „Haushalt“ der Seite."""
     n = sum(len(s["vorlagen"]) for s in d["straenge"])
     ink, von, bis = t.farben
     straenge = "".join(f'<li>{escape(s["titel"])} <span class="kachel-n">{len(s["vorlagen"])}</span></li>'
@@ -580,13 +586,17 @@ def _kachel(t, d):
     else:
         termin = f'<p class="kachel-sitzung kachel-leise">{_svg(HAND, "kachel-hand")}<span>Noch keine Sitzung des ' \
                  f'{escape(t.sitzungen[0])} angekündigt</span></p>'
+    h = d.get("haushalt_betraege")
+    haushalt = (f'          <p class="kachel-haushalt">Mit Haushalt im Produktbereich {escape(h["produktbereich"])} '
+                f'{escape(h["name"])}</p>\n' if h else "")
     return (f'      <li class="kachel" style="--k-ink:{ink};--k-von:{von};--k-bis:{bis}">\n'
             f'        <div class="kachel-kopf">{_svg(t.symbol, "kachel-symbol")}</div>\n'
             f'        <div class="kachel-inhalt">\n'
             f'          <h2><a href="../{t.pfad}">{escape(t.titel)}</a></h2>\n'
             f'          <p class="kachel-zahl"><strong>{n}</strong> Vorlagen in {len(d["straenge"])} Strängen</p>\n'
             f'          <ul class="kachel-straenge" aria-label="Stränge">{straenge}</ul>\n'
-            f'          {termin}\n'
+            + haushalt
+            + f'          {termin}\n'
             f'        </div>\n'
             f'      </li>')
 
@@ -607,7 +617,7 @@ def uebersicht(themen, site, site_url, page):
         return []
     body = f"""    <div class="themen-kopf">
     <h1>Themen</h1>
-    <p class="lead">Themenseiten ordnen Vorlagen aus dem Ratsinformationssystem der Stadt Bonn nach Strängen und zeigen, wo ein Verfahren steht, was entschieden ist und wo man sich einbringen kann.</p>
+    <p class="lead">Themenseiten ordnen Vorlagen aus dem Ratsinformationssystem der Stadt Bonn nach Strängen und zeigen, wo ein Verfahren steht, was entschieden ist und wo man sich einbringen kann. Jede Seite nennt dazu die Aufwendungen des passenden Produktbereichs aus den Haushaltsplänen der Stadt (Abschnitt „Haushalt“).</p>
     <ul class="themen-zahlen" aria-label="Auf einen Blick">
       <li><strong>{len(refs)}</strong> Vorlagen seit Beginn der Wahlperiode</li>
       <li><strong>{len(kacheln)}</strong> Themen</li>

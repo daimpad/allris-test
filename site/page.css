@@ -156,6 +156,7 @@ body:has(.kacheln) .page { background: transparent; box-shadow: none; padding: 8
 .kachel-n { display: inline-block; min-width: 24px; margin-left: 2px; padding: 0 6px; border-radius: 999px; text-align: center; background: #fff; color: var(--text); font-variant-numeric: tabular-nums; }
 .kachel-sitzung { display: flex; gap: 8px; align-items: flex-start; margin: auto 0 0; padding-top: 10px; border-top: 1px solid var(--line); font-size: 14px; color: var(--text); }
 .kachel-leise { color: var(--muted); }
+.kachel-haushalt { margin: 0; font-size: 14px; color: var(--muted); }
 .kachel-hand { flex: none; width: 20px; height: 20px; color: var(--k-ink); margin-top: 1px; }
 @media (prefers-reduced-motion: reduce) {
   .kachel, .kachel-symbol { transition: none; }
@@ -168,6 +169,8 @@ body:has(.kacheln) .page { background: transparent; box-shadow: none; padding: 8
 /* Kopf der Themenseiten: Symbol und Farbverlauf wie die Kachel der Übersicht */
 .thema-kopf { margin: -16px -28px 0; }
 .thema-band { border-radius: 20px 20px 0 0; justify-content: space-between; gap: 12px; }
+.thema-sprung { margin: 0 0 8px; font-size: 15px; line-height: 1.7; }
+.thema-sprung span { color: var(--muted); margin-right: 4px; }
 .thema-alle { position: relative; z-index: 1; align-self: flex-start; margin-top: 16px; padding: 5px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.92); color: var(--k-ink); font-size: 14px; font-weight: 600; text-decoration: none; }
 .thema-alle:hover { background: #fff; text-decoration: underline; }
 .thema-kopf h1 { margin: 18px 28px 6px; padding-bottom: 8px; border-bottom: 3px solid var(--k-von); display: inline-block; }
