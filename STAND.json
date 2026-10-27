@@ -2,25 +2,31 @@
  "geplant_1_jahr": {
   "abruf": "2026-10-21T05:32:33+00:00",
   "anzahl": 46,
-  "erfolg": true,
+  "erfolg": false,
+  "fehler": "Thema 14698: 10 Versuche ohne gültige Antwort (unvollständige Antwort (None erwartet, 0 erhalten))",
   "inhalt": "0f26418124031d71",
   "thema": 14698,
+  "versuch": "2026-10-27T13:38:41+00:00",
   "versuche": 1
  },
  "geplant_30_tage": {
   "abruf": "2026-10-21T05:32:33+00:00",
   "anzahl": 46,
-  "erfolg": true,
+  "erfolg": false,
+  "fehler": "Thema 14755: 10 Versuche ohne gültige Antwort (unvollständige Antwort (None erwartet, 0 erhalten))",
   "inhalt": "11c062e9ebb89b7b",
   "thema": 14755,
+  "versuch": "2026-10-27T13:38:41+00:00",
   "versuche": 1
  },
  "tagesaktuell": {
   "abruf": "2026-10-21T05:32:33+00:00",
   "anzahl": 7,
-  "erfolg": true,
+  "erfolg": false,
+  "fehler": "Thema 14403: 10 Versuche ohne gültige Antwort (The read operation timed out)",
   "inhalt": "d06c071bad4a7280",
   "thema": 14403,
+  "versuch": "2026-10-27T13:38:41+00:00",
   "versuche": 1
  }
 }
