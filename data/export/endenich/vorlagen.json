@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 665,
+  "count": 664,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -3671,14 +3671,7 @@
      "status": "offen"
     }
    ],
-   "superordinated": [
-    {
-     "reference": "261146",
-     "paper_type": "Kleine Anfrage",
-     "name": "Kleine Anfrage der CDU-Bezirksfraktion: Umsetzungsstand der Projekte Endenicher Burg und Sportanlagen Endenicher Park",
-     "date": "2026-06-09"
-    }
-   ],
+   "superordinated": [],
    "subordinated": [],
    "locations": [
     {
@@ -3765,9 +3758,9 @@
     }
    ],
    "soll": {
-    "verfahren": "kleine-anfrage",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Kleine Anfrage“",
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "mittel",
+    "grund": "kein eigenes Verfahren für „Stellungnahme der Verwaltung“",
     "passung": "passt",
     "ist": [
      "bv",
@@ -3967,180 +3960,6 @@
     "passung": "passt",
     "ist": [
      "aus",
-     "rat"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "261146",
-   "name": "Kleine Anfrage der CDU-Bezirksfraktion: Umsetzungsstand der Projekte Endenicher Burg und Sportanlagen Endenicher Park",
-   "paper_type": "Kleine Anfrage",
-   "date": "2026-06-09",
-   "amt": "01-2 Ratsbüro",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027944",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3157171&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "01-2 Ratsbüro",
-     "name": "01-2 Ratsbüro"
-    },
-    {
-     "kind": "fachlich",
-     "method": "stellungnahme",
-     "evidence": "261146-01 ST",
-     "derived": 1,
-     "label": "85 Städtisches Gebäudemanagement Bonn",
-     "name": "85-St Stabsstelle strategische Unternehmenssteuerung"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "CDU-Bezirksfraktion Bonn",
-     "actor_type": "Bezirksfraktion",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/297",
-     "method": "title",
-     "evidence": "Kleine Anfrage der CDU-Bezirksfraktion",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Rat",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    },
-    {
-     "position": 1,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [
-    {
-     "reference": "261146-01 ST",
-     "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Umsetzungsstand der Projekte Endenicher Burg und Sportanlagen Endenicher Park - Stellungnahme der Verwaltung",
-     "date": "2026-06-24"
-    }
-   ],
-   "locations": [
-    {
-     "level": "ortsteil",
-     "name": "Endenich",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.070351,
-     "lat": 50.725238,
-     "stage": "B",
-     "method": "ortsteil_adjektiv",
-     "confidence": "mittel",
-     "evidence": "Endenicher",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027944",
-     "source": "geo-bonn"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027944",
-   "stand": "offen",
-   "themes": [
-    {
-     "theme": "bauen",
-     "method": "amt",
-     "evidence": "85 Städtisches Gebäudemanagement Bonn",
-     "confidence": "mittel"
-    },
-    {
-     "theme": "kultur",
-     "method": "stichwort",
-     "evidence": "sport",
-     "confidence": "niedrig"
-    }
-   ],
-   "parties": [
-    "CDU"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Kleine Anfrage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027944",
-     "actors": [
-      "CDU-Bezirksfraktion Bonn"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2026-06-09",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027944",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Rat",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "date": "2026-06-24",
-     "source": "oparl-bonn",
-     "reference": "261146-01 ST",
-     "title": "Umsetzungsstand der Projekte Endenicher Burg und Sportanlagen Endenicher Park - Stellungnahme der Verwaltung"
-    }
-   ],
-   "soll": {
-    "verfahren": "kleine-anfrage",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Kleine Anfrage“",
-    "passung": "passt",
-    "ist": [
-     "bv",
      "rat"
     ],
     "abweichung": []
