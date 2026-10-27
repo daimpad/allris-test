@@ -8908,6 +8908,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241584-03	nur in Anlagen genannt, nicht verortet						
 241588	Titel ohne gemeinsamen Ort, nicht verortet						
 241592	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+241596	Titel ohne gemeinsamen Ort, nicht verortet						
 241597	Titel ohne gemeinsamen Ort, nicht verortet						
 241598	Titel ohne gemeinsamen Ort, nicht verortet						
 241599	verortet	Hauptteil	volltext_ortsteil_name	Muffendorf	Muffendorf	niedrig	1
@@ -9404,7 +9405,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242149-01 ST	kein Ort						
 242149-02 ST	kein Ort						
 242149-03	kein Ort						
-242151	kein Ort						
 242153	Titel ohne gemeinsamen Ort, nicht verortet						
 242155	Titel ohne gemeinsamen Ort, nicht verortet						
 242157	kein Ort						
@@ -11618,6 +11618,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260302	Titel ohne gemeinsamen Ort, nicht verortet						
 260303	kein Ort						
 260305	kein Ort						
+260305-01 ST	kein Ort						
 260306	kein Ort						
 260307	kein Ort						
 260308	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
@@ -13226,6 +13227,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261848	verortet	Hauptteil	volltext_strasse+hausnummer	Windeckstraße	Bonn-Zentrum	niedrig	1
 261849	kein Ort						
 261849-01 AA	kein Ort						
+261849-02 AA	kein Ort						
 261851	nur in Anlagen genannt, nicht verortet						
 261853	kein Ort						
 261861	kein Ort						
@@ -13280,3 +13282,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261995	kein Ort						
 262001	kein Ort						
 262004	Titel ohne gemeinsamen Ort, nicht verortet						
+262012	verortet	Hauptteil	volltext_ortsteil_adjektiv	Friesdorf	Friesdorf	niedrig	1
+262012	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
+262013	kein Ort						
+262014	kein Ort						
