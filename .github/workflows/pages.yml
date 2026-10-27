@@ -46,6 +46,7 @@ jobs:
             data/raw/STAND.json
             data/raw/meetings.json
             data/raw/legislative_terms.json
+            data/raw/besetzung.json
           key: raw-${{ github.run_id }}
           restore-keys: raw-
 
@@ -71,6 +72,11 @@ jobs:
 
       - name: Abruf OParl-API Stadt Bonn (Gremien, Ämter)
         run: python -m pipeline fetch-organizations
+        continue-on-error: true
+
+      # Laufende Mitgliedschaften (Auszug ohne Kontaktdaten) für die Besetzung der Gremien; nach den Organisationen
+      - name: Abruf OParl-API Stadt Bonn (Besetzung der Gremien)
+        run: python -m pipeline fetch-besetzung
         continue-on-error: true
 
       - name: Abruf OParl-API Stadt Bonn (Sitzungen, Wahlperioden)

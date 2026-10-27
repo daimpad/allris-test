@@ -12,7 +12,7 @@ import json
 import re
 import unicodedata
 
-from . import actors, config, maske, soll
+from . import actors, besetzung, config, maske, soll
 
 # Gremienarten der OParl-API, die Entscheidungen treffen oder beraten (ohne Fraktionen, Gruppen und interne Gremien)
 ARTEN = {"Rat": "rat", "Ratsgremien": "ausschuss", "Bezirksvertretungen": "bezirksvertretung",
@@ -81,7 +81,7 @@ def verfahren(rows, titles):
     return out
 
 
-def gremien(db, meetings, zusto, today, term_start):
+def gremien(db, meetings, zusto, today, term_start, besetzt=None):
     """Gremien mit Art, Zahl der Beratungen und Vorlagen, letzter und nächster Sitzung, Abschnitt der Zuständigkeitsordnung."""
     stats = {oid: (n, k, last) for oid, n, k, last in db.execute(
         "SELECT c.organization_id, COUNT(*), COUNT(DISTINCT c.paper_id), MAX(substr(m.start_date, 1, 10)) "
@@ -107,6 +107,8 @@ def gremien(db, meetings, zusto, today, term_start):
         key = name if name in zusto else ZUSTO_ALIAS.get(name)
         g = {"id": oid.rsplit("/", 1)[-1], "name": name, "art": a, "aktuell": aktuell, "beratungen": n, "vorlagen": k,
              "letzte": last, "naechste": nxt, "aufgeloest": end if ended else None, "web": web}
+        if aktuell and (besetzt or {}).get(besetzung._kurz(oid)):
+            g["besetzung"] = besetzt[besetzung._kurz(oid)]   # Mitglieder, Sitze nach Fraktion (abgeleitet)
         if key in zusto:
             g["zusto"] = key
             if key != name:
@@ -215,15 +217,22 @@ def site_data(db, today=None):
     terms = json.loads(config.LEGISLATIVE_TERMS.read_text()) if config.LEGISLATIVE_TERMS.exists() else []
     term_start = _term_start(terms, today)
     zusto = soll.site_data()["zusto"]
+    besetzt, audit = besetzung.gremien(term_start, today)
+    besetzung.write_audit(audit)
     return {
         "meta": {"quellen": "OParl-API der Stadt Bonn (CC0): Gremien, Beratungen, Sitzungen; Zuordnung der Vorgänge "
                             "zu Verfahren abgeleitet (Soll-Modell nach „Bonn entscheidet“, MIT)",
                  "wahlperiode_seit": term_start,
                  "hinweis": "Zahlen je Verfahren beruhen auf der abgeleiteten Zuordnung; Sicherheit „hoch“ separat ausgewiesen.",
                  "aemter_hinweis": "Ämter und Federführung aus der OParl-API (underDirectionOf); die Gruppen folgen der "
-                                   "Amtsnummer (abgeleitet), da die Quelle keine Zuordnung zu Dezernaten enthält."},
+                                   "Amtsnummer (abgeleitet), da die Quelle keine Zuordnung zu Dezernaten enthält.",
+                 "besetzung_hinweis": "Laufende Mitgliedschaften laut OParl-API der Stadt Bonn (CC0), ohne Kontaktdaten. "
+                                      "Die Fraktion ist abgeleitet aus der Mitgliedschaft in einer Fraktion des Rates bzw. "
+                                      "der Bezirksfraktion; die Quelle nennt nicht, für wen jemand im Gremium sitzt. "
+                                      "Sachkundige Bürger:innen gehören meist keiner Fraktion an. Ohne Namen: "
+                                      "Stellvertretungen, Verwaltung, Beiräte mit Jugendmitgliedern."},
         "verfahren": verfahren(rows, titles),
-        "gremien": gremien(db, meetings, zusto, today, term_start),
+        "gremien": gremien(db, meetings, zusto, today, term_start, besetzt),
         "amt_gruppen": [{"id": k, "label": v} for k, v in AMT_GRUPPEN],
         "aemter": aemter(db, today),
     }

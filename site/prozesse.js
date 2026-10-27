@@ -125,6 +125,31 @@ function zustaendig(g) {
   if (rules.length) return `<h4>Zuständigkeit nach Regelwerk</h4><dl class="pz-zust">${rules.map((z) => `<dt>${esc(z.frage)}</dt><dd>${esc(z.antwort)}${beleg(z) ? ` <span class="hint">(${beleg(z)})</span>` : ""}</dd>`).join("")}</dl>`;
   return `<p class="hint">Für dieses Gremium enthält das Regelwerk der RIS-Karte keinen eigenen Abschnitt.</p>`;
 }
+// Besetzung (prozessarten.json, pipeline/besetzung.py): laufende Mitgliedschaften ohne Kontaktdaten; Fraktion abgeleitet
+function besetzung(g) {
+  const b = g.besetzung;
+  if (!b) return "";
+  const person = (e) => (e.web ? `<a href="${href(e.web)}" target="_blank" rel="noopener">${esc(e.name)}<span class="visually-hidden"> (Personenseite im Ratsinformationssystem, neuer Tab)</span></a>` : esc(e.name));
+  const fr = (e) => (e.fraktion ? esc(e.fraktion) : `<span class="hint">${e.fraktion_hinweis ? esc(e.fraktion_hinweis) : "ohne Angabe"}</span>`);
+  const sitze = b.sitze.map((x) => `<li><span>${esc(x.fraktion)}</span><span class="pz-n">${num(x.n)}</span></li>`).join("");
+  const ohne = b.ohne_fraktion ? `<li><span>ohne Angabe einer Fraktion${b.sachkundig ? ` (darunter ${num(b.sachkundig)} sachkundige Bürger:innen und Einwohner:innen)` : ""}</span><span class="pz-n">${num(b.ohne_fraktion)}</span></li>` : "";
+  const zeilen = b.ordentlich.map((e) => `<tr><th scope="row">${person(e)}</th><td>${esc(e.rolle)}</td><td>${fr(e)}</td></tr>`).join("");
+  const bv = g.art === "bezirksvertretung";
+  const beratend = b.beratend.length ? `<details class="pz-more"><summary>Beratende Mitglieder (${num(b.beratend.length)})</summary>
+      ${bv ? '<p class="hint">Ratsmitglieder aus dem Stadtbezirk nehmen mit beratender Stimme teil, ohne Stimmrecht (§ 36 Abs. 6 GO NRW).</p>' : ""}
+      <ul class="pz-recht">${b.beratend.map((e) => `<li>${person(e)} · ${esc(e.rolle)}${e.fraktion ? ` · ${esc(e.fraktion)}` : ""}</li>`).join("")}</ul></details>` : "";
+  const rest = [b.stellvertretend ? `${num(b.stellvertretend)} Stellvertretungen` : "", b.ohne_namen ? `${num(b.ohne_namen)} Einträge ohne Namen (${esc((b.ohne_namen_grund || []).join(", "))})` : ""].filter(Boolean).join(" · ");
+  return `<h4>Besetzung <span class="derived">Fraktion abgeleitet</span></h4>
+    <p>${num(b.sitze_gesamt)} Mitglieder${b.sitze.length ? ", nach Fraktion:" : ""}</p>
+    ${b.sitze.length || ohne ? `<ul class="pz-sitze">${sitze}${ohne}</ul>` : ""}
+    ${zeilen ? `<details class="pz-more"><summary>Mitglieder mit Namen (${num(b.ordentlich.length)})</summary>
+      <table class="kontext-table pz-mitglieder"><thead><tr><th scope="col">Name</th><th scope="col">Rolle laut Quelle</th><th scope="col">Fraktion</th></tr></thead>
+      <tbody>${zeilen}</tbody></table></details>` : ""}
+    ${beratend}
+    ${rest ? `<p class="hint">Außerdem: ${rest}.</p>` : ""}
+    ${b.ordentlich.some((e) => e.rolle === "Mitglied (Stv.)") ? '<p class="hint">„Mitglied (Stv.)“ bezeichnet laut Quelle Stadtverordnete als Mitglied des Gremiums, keine Stellvertretung (Deutung abgeleitet).</p>' : ""}
+    <p class="hint">${esc(data.meta.besetzung_hinweis || "")}</p>`;
+}
 function gremiumBody(g) {
   return `<p><span class="pz-art">${esc(ART[g.art] || g.art)}</span>${g.aktuell ? "" : ' <span class="derived">nicht in der laufenden Wahlperiode</span>'}</p>
     <ul class="pz-facts">
@@ -133,6 +158,7 @@ function gremiumBody(g) {
       ${g.naechste ? `<li>Nächste Sitzung: ${g.naechste.web ? `<a href="${href(g.naechste.web)}" target="_blank" rel="noopener">${deDate(g.naechste.datum)}<span class="visually-hidden"> (Tagesordnung, neuer Tab)</span></a>` : deDate(g.naechste.datum)}</li>` : ""}
       ${g.aufgeloest ? `<li>Aufgelöst: ${deDate(g.aufgeloest)}</li>` : ""}
     </ul>
+    ${besetzung(g)}
     ${zustaendig(g)}
     <p class="pz-actions">${g.vorlagen ? `<button type="button" class="btn btn-soft pz-filter" data-name="${esc(g.name)}">Vorlagen dieses Gremiums in der Liste</button>` : ""}
       ${g.web ? `<a class="btn btn-ghost" href="${href(g.web)}" target="_blank" rel="noopener">Im Ratsinformationssystem<span class="visually-hidden"> (neuer Tab)</span></a>` : ""}</p>

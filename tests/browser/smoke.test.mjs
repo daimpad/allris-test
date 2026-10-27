@@ -206,6 +206,20 @@ test("Prozesse: Verfahren, Gremien und Ämter", async () => {
   }
 });
 
+test("Prozesse: Besetzung eines Gremiums, Fraktion abgeleitet, ohne Kontaktdaten", async () => {
+  const page = await open("?prozesse=gremien&ansicht=liste");
+  const rat = page.locator('details.pz-item[data-gremium="1"]');
+  await rat.locator("> summary").click();
+  const text = await rat.textContent();
+  assert.match(text, /Besetzung.*Fraktion abgeleitet.*Mitglieder, nach Fraktion/s);
+  assert.doesNotMatch(text, /@|Telefon/);
+  await rat.locator(".pz-more summary", { hasText: "Mitglieder mit Namen" }).click();
+  assert.ok(await rat.locator(".pz-mitglieder tbody tr").count() > 30);
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
 test("Mitmachen in Bonn: Stadtbezirk wechseln", async () => {
   const page = await open("?mitmachen=1&bezirk=Beuel");
   await page.waitForFunction(() => /Wege, sich einzubringen/.test(document.querySelector("#bt-body").textContent));

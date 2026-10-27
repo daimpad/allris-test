@@ -3,7 +3,7 @@ import json
 import re
 import sqlite3
 
-from . import actors, config, kontext, maske
+from . import actors, besetzung, config, kontext, maske
 
 # Werte aus phase0/BERICHT_phase0.md (Abruf 17.10.2026)
 PHASE0 = {
@@ -119,6 +119,19 @@ def check():
         raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Ortsangaben (CLAUDE.md 5.2).")
     if offen:
         raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Titeln aus Einwohnerschaft, Bauordnung oder Naturschutz (maske.py).")
+
+    print("\nBesetzung der Gremien")
+    if config.BESETZUNG.exists():
+        doc = json.loads(config.BESETZUNG.read_text())
+        befunde = besetzung.pruefen_auszug(doc)
+        pz = config.EXPORT / "bonn" / "prozessarten.json"
+        if pz.exists():
+            befunde += [f"prozessarten.json: {b}" for b in besetzung.pruefen_auszug(
+                {"mitgliedschaften": [], **{"rest": json.loads(pz.read_text())}})]
+        print(f"{len(doc['mitgliedschaften'])} laufende Mitgliedschaften, {len(doc['personen'])} Personen namentlich; "
+              f"Befunde: {befunde or 'keine'}")
+        if befunde:
+            raise SystemExit(f"Prüfung fehlgeschlagen: Besetzung ({'; '.join(befunde)}).")
 
     print("\nKontextdaten je Ortsteil")
     if befunde := kontext.pruefen():

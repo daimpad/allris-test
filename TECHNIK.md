@@ -223,6 +223,11 @@ Die Zahlen gibt `python -m pipeline check` aus.
 - Zuordnung und Abgleich zählen nur den Hauptweg eines Vorgangs: ohne spätere Anfragen, Einwohnerfragen und Mitteilungen anderer Art; Stellungnahmen und Änderungsanträge gehören zur vorausgehenden Vorlage.
 - Passung je Vorgang: `passt`, `weicht ab` (Befund), `nur Beirat` (Beiräte bildet das Modell nicht ab), `ohne Beratung`, `ohne Soll`. Stichprobe zur Prüfung von Hand: `data/export/soll/stichprobe_soll.tsv` (`soll/phase4/stichprobe.mjs`, wird nie überschrieben) mit KI-Vorprüfung `vorpruefung_soll.tsv`; Bericht `soll/PHASE4.md`.
 
+## Besetzung der Gremien
+
+- `fetch-besetzung` (`pipeline/besetzung.py`, täglich nach `fetch-organizations`): Liste `persons` der OParl-API mit eingebetteten Mitgliedschaften; Auszug der laufenden Mitgliedschaften in `data/raw/besetzung.json` ohne Kontaktdaten, Anrede und Geschlecht. Namen nur für Mitglieder und beratende Mitglieder von Rat, Ausschüssen, Bezirksvertretungen und Beiräten; ohne Namen: Stellvertretungen (gezählt), Verwaltung, Beiräte mit Jugendmitgliedern. Prüfung beim Abruf und in `check` (keine Kontaktfelder, keine E-Mail-Adressen, keine Namen bei Stellvertretungen).
+- `export` ergänzt in `prozessarten.json` je laufendem Gremium `besetzung`: Mitglieder mit Rolle laut Quelle und Fraktion (abgeleitet: Fraktion, Gruppe oder Einzelmandat im Rat; in Bezirksvertretungen die Bezirksfraktion des Stadtbezirks), Sitze nach Fraktion, beratende Mitglieder (Ratsmitglieder in Bezirksvertretungen, § 36 Abs. 6 GO NRW), Zahl der Stellvertretungen. Mitgliedschaften mit Beginn vor der Wahlperiode oder in beendeten Gremien entfallen (Audit `audit_besetzung.tsv`). Phase 0: `gremien/phase0/BERICHT.md`.
+
 ## Baustellen
 
 - `baustellen.yml` ruft täglich um 05:23 UTC die Feeds 14403, 14698 und 14755 ab (bis zu 10 Versuche, Prüfung gegen `numberMatched`) und schreibt in den Branch `archiv`: `baustellen.json` (Zustand je Baustelle), `protokoll.tsv` (neu, geändert, entfallen), Momentaufnahmen bei Änderungen, `STAND.json`. Eine Baustelle gilt nur bei vollständigem Abruf aller Feeds als entfallen.

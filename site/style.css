@@ -357,6 +357,12 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .pz-meta { font-size: 12px; color: var(--text-muted); font-weight: 400; }
 .pz-zust dt { font-weight: 600; margin-top: 8px; } .pz-zust dd { margin: 2px 0 0; line-height: 1.45; }
 .pz-facts { padding-left: 18px; margin: 6px 0; } .pz-facts li { margin: 2px 0; }
+/* Besetzung eines Gremiums: Sitze nach Fraktion (abgeleitet), Mitglieder in einer Tabelle */
+.pz-sitze { list-style: none; padding: 0; margin: 4px 0 8px; max-width: 520px; }
+.pz-sitze li { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px solid var(--border-alt); }
+.pz-sitze .pz-n, .pz-mitglieder td:last-child { font-variant-numeric: tabular-nums; }
+.kontext-table.pz-mitglieder td, .kontext-table.pz-mitglieder thead th { text-align: left; }
+.kontext-table.pz-mitglieder th:first-child { width: 34%; }
 .pz-art { font-size: 12px; font-weight: 600; color: var(--accent-ink); background: rgba(124, 58, 237, 0.1); border-radius: 999px; padding: 2px 9px; }
 .pz-actions { display: flex; flex-wrap: wrap; gap: 6px; }
 .pz-filterbar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: end; margin: 8px 0; }
