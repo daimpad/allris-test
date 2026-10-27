@@ -122,9 +122,13 @@ test("Zahlen zum Gebiet: Flächen nach Kontextdaten, Steckbrief im Ortsteil", as
   await page.waitForFunction(() => document.querySelector("#nav-c0"));
   await page.locator('.toggle[data-panel="panel-list"]').click();
   await page.locator("#kontext-box > summary").click();
-  const head = await page.locator("#kontext-box thead").textContent();
+  const head = await page.locator("#kontext-box > table thead").textContent();
   assert.match(head, /Endenich.*Stadtbezirk Bonn/s);
-  assert.match(await page.locator("#kontext-box tbody tr").first().textContent(), /Einwohner/);
+  assert.match(await page.locator("#kontext-box > table tbody tr").first().textContent(), /Einwohner/);
+  // Mängelmelder nur mit Archiv (anliegen.json): eigener Abschnitt, als Meldungen der Einwohnerschaft gekennzeichnet
+  const an = await fetch(SITE + "data/export/bonn/anliegen.json");
+  assert.equal(await page.locator("#kontext-box .anliegen").count(), an.ok ? 1 : 0);
+  if (an.ok) assert.match(await page.locator("#kontext-box .anliegen").textContent(), /keine Ratsvorlagen.*Zusammen/s);
   assert.deepEqual(await axe(page), []);
   // Vorgang in genau einem Ortsteil: Kennzahlen passend zum Thema, als Einordnung gekennzeichnet
   const ende = (await (await fetch(SITE + "data/export/bonn/ortsteile/endenich.json")).json()).papers;

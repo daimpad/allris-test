@@ -68,7 +68,7 @@
     .toLocaleDateString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", year: "numeric" }) : "";
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
-  let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null, kontext = null;
+  let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null, kontext = null, anliegen = null;
   let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, detailSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, planOn = false, allPlans = null, shownPlan = null;
   let bau = null, bauOn = false, bauLayer = null, shownSite = null, bauByRef = new Map();
   let kxOn = new Set(), kxData = {}, kxLayers = {}, brwBr = null;  // zuschaltbare Flächen (Überschwemmung, Bodenrichtwerte)
@@ -609,8 +609,25 @@
       <p class="hint">Zur Einordnung der Vorlagen, kein Urteil über das Gebiet. Alle Werte sind auf ${area.kind === "ortsteil" ? "Ortsteile" : "Stadtbezirke"} umgerechnet; Stichtage verschieden.${klein ? ` Unter ${de(kontext.meta.mindest_einwohner)} Einwohnern keine Anteile und Mittelwerte.` : ""}</p>
       <table class="kontext-table"><thead><tr><th scope="col">Kennzahl</th><th scope="col">${esc(area.name)}</th><th scope="col">${esc(cmpName)}</th></tr></thead>
       <tbody>${rows}</tbody></table>
+      ${anliegenSteckbrief(bez)}
       <details class="acc"><summary>Quellen und Methode</summary><div><ul>${quellen}</ul><ul>${methoden}</ul></div></details>`;
     box.hidden = false;
+  }
+  // Mängelmelder (anliegen.json, pipeline/anliegen.py): Meldungen der Einwohnerschaft der letzten 90 Tage nach den
+  // Gruppen der Stadt, getrennt von den Kennzahlen und den Vorlagen; kleine Werte als „unter 3“, keine Einzelmeldungen
+  function anliegenSteckbrief(bez) {
+    if (!anliegen) return "";
+    const own = (area.kind === "ortsteil" ? anliegen.ortsteile : anliegen.bezirke)[area.name] || null;   // fehlt: keine Meldung
+    const cmp = bez ? anliegen.bezirke[bez] : anliegen.bonn, cmpName = bez ? `Stadtbezirk ${bez}` : "ganz Bonn";
+    const m = anliegen.meta, num = (v) => (v == null ? "unter 3" : typeof v === "number" ? de(v) : esc(v));
+    const rows = [...m.gruppen, "gesamt"].map((g) => `<tr><th scope="row">${g === "gesamt" ? "Zusammen" : esc(g)}</th>
+      <td>${num((own || {})[g])}</td><td>${num((cmp || {})[g])}</td></tr>`).join("");
+    const teil = m.unvollstaendig_vor ? ` Aufgezeichnet seit ${fmtDate(m.unvollstaendig_vor)}; frühere Meldungen nur, soweit sie an diesem Tag noch öffentlich waren.` : "";
+    return `<section class="anliegen" aria-labelledby="anliegen-h"><h4 id="anliegen-h">Meldungen im Mängelmelder</h4>
+      <p class="hint">${esc(m.hinweis)} Gezählt: ${fmtDate(m.von)} bis ${fmtDate(m.bis)} (${m.tage} Tage).${teil}</p>
+      <table class="kontext-table"><thead><tr><th scope="col">Gruppe der Stadt</th><th scope="col">${esc(area.name)}</th><th scope="col">${esc(cmpName)}</th></tr></thead>
+      <tbody>${rows}</tbody></table>
+      <p class="hint">Quelle: <a href="${safeUrl(m.url)}">${esc(m.titel)}</a> – ${esc(m.lizenz.replace(/\s*\(.*\)$/, ""))}, Abruf ${fmtDate(m.abruf)}; nur Kategorie, Tag, Ortsteil und Status übernommen.</p></section>`;
   }
   // Vorgang: zwei bis drei Kennzahlen passend zum (abgeleiteten) Thema, nur bei genau einem Ortsteil (eigene Ortsbezüge)
   const KONTEXT_THEMA = { bauen: ["bodenrichtwert", "miete"], soziales: ["miete", "ab_65", "unter_18"],
@@ -1918,10 +1935,11 @@
     const json = (url) => fetch(url).then((r) => (r.ok ? r.json() : null)).catch(() => null);
     const shapes = Promise.all([loadGeo("ortsteil"), loadGeo("bezirk")]);
     // Baustellen mit möglichen Umsetzungen (nur Konfidenz hoch); ohne Datei bleibt die Funktion ausgeblendet
-    const [g, idx, z, bs, kx] = await Promise.all([json(GLOSSAR_URL), json(BONN + "index.json"), json(BONN + "zeit.json"),
-      json(BONN + "baustellen.json"), json(BONN + "kontext.json")]);
+    const [g, idx, z, bs, kx, an] = await Promise.all([json(GLOSSAR_URL), json(BONN + "index.json"), json(BONN + "zeit.json"),
+      json(BONN + "baustellen.json"), json(BONN + "kontext.json"), json(BONN + "anliegen.json")]);
     index = idx;
     kontext = index && kx && kx.ortsteile ? kx : null;
+    anliegen = kontext && an && an.ortsteile ? an : null;
     zeit = index ? z : null;
     bau = index && bs && bs.baustellen.length ? bs : null;
     for (const b of bau ? bau.baustellen : []) for (const c of b.kandidaten) {

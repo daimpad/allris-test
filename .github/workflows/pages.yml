@@ -194,6 +194,14 @@ jobs:
           BAUSTELLEN_ARCHIV: _archiv
         continue-on-error: true
 
+      # Mängelmelder: Zahlen der letzten 90 Tage je Ortsteil aus dem Archiv (Ordner anliegen/); ohne Archiv keine Datei,
+      # der Steckbrief zeigt dann keine Meldungen
+      - name: Mängelmelder je Ortsteil
+        run: python -m pipeline anliegen-seite
+        env:
+          BAUSTELLEN_ARCHIV: _archiv
+        continue-on-error: true
+
       - name: Verifikation gegen die OParl-API
         run: python -m pipeline verify
         continue-on-error: true
