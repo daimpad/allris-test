@@ -183,3 +183,21 @@ test("Themenseiten: Haushalt im Produktbereich, Ist und Plan getrennt, auch auf 
   assert.deepEqual(await axe(page), []);
   await page.close();
 });
+
+test("Themenseiten: Wer berät mit (Fachausschuss, Fraktion abgeleitet), Link in den Reiter „Prozesse“", async () => {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, bypassCSP: true });
+  page.errors = [];
+  page.on("pageerror", (e) => page.errors.push(String(e)));
+  await page.goto(SITE + "thema/verkehr-und-mobilitaet/", { waitUntil: "networkidle" });
+  const h = page.locator("#fachausschuss");
+  assert.match(await h.textContent(), /Ausschuss für Mobilität und Verkehr/);
+  const text = await page.locator("#fachausschuss + p").textContent();
+  assert.match(text, /\d+ Mitglieder.*abgeleitet/s);
+  const link = page.locator("a[href*='prozesse=gremien']");
+  assert.equal(await link.count(), 1);
+  await link.click();
+  await page.waitForFunction(() => !document.querySelector("#panel-prozesse")?.hidden && /Besetzung/.test(document.querySelector("#panel-prozesse").textContent));
+  assert.deepEqual(await axe(page), []);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});

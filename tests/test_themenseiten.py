@@ -1,6 +1,6 @@
 """Allgemeine Themenseiten (pipeline/themenseiten/, dossier.py, prozessbild.py): Die Kulturseite bleibt nach dem
 Umbau Zeichen für Zeichen gleich (Referenz in tests/referenz/, erzeugt vor dem Umbau am 26.10.2026; am 27.10.2026 um
-den Abschnitt „Haushalt im Produktbereich“ ergänzt); dazu die
+die Abschnitte „Haushalt im Produktbereich“ und „Wer berät mit“ ergänzt); dazu die
 Regeln der Zuordnung und ein Thema ohne Phasen."""
 import json
 import re
@@ -17,7 +17,21 @@ from tests.test_prozessbild import CACHE, MEETINGS
 REFERENZ = Path(__file__).parent / "referenz"
 
 
+# Besetzung des Fachausschusses fest vorgegeben (die Datei data/raw/besetzung.json ändert sich mit jedem Abruf)
+AUSSCHUSS = {"name": "Kulturausschuss", "id": "17", "mitglieder": 21, "ohne_fraktion": 9, "sachkundig": 9, "stichtag": "2026-10-27",
+             "vorsitz": [{"name": "Anna Beispiel", "rolle": "Vorsitz", "fraktion": "Beispiel-Fraktion"}],
+             "sitze": [{"fraktion": "Beispiel-Fraktion", "n": 7}, {"fraktion": "Andere Fraktion", "n": 5}]}
+
+
 def _kultur_daten():
+    alt, dossier.fachausschuss = dossier.fachausschuss, lambda t, **kw: AUSSCHUSS
+    try:
+        return _kultur_daten_ohne()
+    finally:
+        dossier.fachausschuss = alt
+
+
+def _kultur_daten_ohne():
     cache = dict(CACHE, h=vorlage("261064", "Rahmenterminplan Haushalt 2027/2028", amt="20 Stadtkämmerei"),
                  v=vorlage("240986", "Einbringung der Haushaltssatzung 2025/2026", date="2024-09-01"))
     meetings = MEETINGS + [dict(MEETINGS[0], date="2026-12-10", gremium="Rat", source_object="m9",

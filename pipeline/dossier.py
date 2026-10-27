@@ -15,7 +15,7 @@ from datetime import date, timedelta
 from html import escape
 from urllib.parse import quote
 
-from . import config, haushaltsplan, maske, process as proc
+from . import besetzung, config, haushaltsplan, maske, process as proc
 
 FRIST_TAGE = 21  # Anträge, Bürgeranträge und Einwohnerfragen spätestens 21 Tage vor der Sitzung (GeschO §§ 26, 27)
 PUNKT_ARTEN = ("Beschlussvorlage", "Antrag", "Dringlichkeitsantrag")  # Punkte: Beschlüsse und Anträge
@@ -95,6 +95,7 @@ class Thema:
     farben: tuple = ("#6d28d9", "#7c3aed", "#a78bfa")  # Übersicht thema/: Schrift, Verlauf von, Verlauf bis
     symbol: str = ""          # Übersicht thema/: Linien-Symbol (SVG-Inhalt, viewBox 0 0 24 24)
     produktbereich: str = None  # Haushalt: Produktbereich mit Ist und Plan (Entscheidung 27.10.2026: je Thema einer)
+    fachausschuss: str = None   # Kasten „Wer berät mit“: Besetzung des Fachausschusses (Fraktion abgeleitet)
 
     @property
     def stichprobe_pfad(self):
@@ -290,8 +291,10 @@ def daten(t, cache, home, meetings, today, meta):
     plan = t.terminplan and by_ref.get(t.terminplan)
     vergleich = t.vergleich and by_ref.get(t.vergleich)
     betraege = _betraege(t.produktbereich)
+    ausschuss = fachausschuss(t)
     return {
         **({"haushalt_betraege": betraege} if betraege else {}),
+        **({"fachausschuss": ausschuss} if ausschuss else {}),
         "meta": {**meta, "seit": t.seit, "hinweis": t.hinweis},
         "straenge": [{"key": k, "titel": ti, "regel": r, "eingeklappt": k in t.eingeklappt, "vorlagen": straenge[k]}
                      for k, ti, r in t.straenge],
@@ -307,6 +310,26 @@ def daten(t, cache, home, meetings, today, meta):
             "gebiet": home.get(vergleich[0]),
             "vorlagen": sum(1 for r in by_ref if _stamm(r) == t.vergleich)},
     }
+
+
+def fachausschuss(t, orgs=None, path=None):
+    """Besetzung des Fachausschusses eines Themas (pipeline/besetzung.py): Vorsitz, Sitze nach Fraktion (abgeleitet),
+    ohne Fraktion, sachkundige Bürger:innen; keine weiteren Namen. None ohne Auszug oder ohne Ausschuss."""
+    if not t.fachausschuss or not config.ORGANIZATIONS.exists():
+        return None
+    orgs = orgs or {o["id"]: o for o in json.loads(config.ORGANIZATIONS.read_text())}
+    ids = [besetzung._kurz(k) for k, o in orgs.items() if o.get("name") == t.fachausschuss and not o.get("endDate")]
+    if len(ids) != 1:
+        return None
+    b = besetzung.gremien(t.seit, path=path, orgs=orgs)[0].get(ids[0])
+    if not b:
+        return None
+    return {"name": t.fachausschuss, "id": ids[0].rsplit("/", 1)[-1], "mitglieder": b["sitze_gesamt"],
+            "vorsitz": sorted(({"name": e["name"], "rolle": e["rolle"], "fraktion": e["fraktion"]}
+                               for e in b["ordentlich"] if e["vorsitz"]),
+                              key=lambda v: (v["rolle"] != "Vorsitz", v["rolle"])),   # Vorsitz, 1., 2. Stellvertretung
+            "sitze": b["sitze"], "ohne_fraktion": b["ohne_fraktion"], "sachkundig": b["sachkundig"],
+            "stichtag": json.loads((path or config.BESETZUNG).read_text(encoding="utf-8"))["meta"]["stichtag"]}
 
 
 def _betraege(pb):
@@ -422,6 +445,26 @@ def _haushalt(d):
 """
 
 
+def _ausschuss(d, root):
+    """Kasten „Wer berät mit“: Vorsitz und Sitze des Fachausschusses, Fraktion abgeleitet."""
+    a = d.get("fachausschuss")
+    if not a:
+        return ""
+    sitze = "\n".join(f'      <li>{escape(x["fraktion"])}: {x["n"]}</li>' for x in a["sitze"])
+    ohne = (f'\n      <li>ohne Angabe einer Fraktion: {a["ohne_fraktion"]}'
+            + (f' (darunter {a["sachkundig"]} sachkundige Bürger:innen und Einwohner:innen)' if a["sachkundig"] else "") + "</li>"
+            if a["ohne_fraktion"] else "")
+    vorsitz = "; ".join(f'{escape(v["rolle"])}: {escape(v["name"])}' + (f' ({escape(v["fraktion"])})' if v["fraktion"] else "")
+                        for v in a["vorsitz"])
+    return f"""    <h2 id="fachausschuss">Wer berät mit: {escape(a["name"])}</h2>
+    <p>{a["mitglieder"]} Mitglieder{f". {vorsitz}" if vorsitz else ""}. Sitze nach Fraktion <span class="meta">(abgeleitet aus der Mitgliedschaft in einer Fraktion; die Quelle nennt nicht, für wen jemand im Ausschuss sitzt)</span>:</p>
+    <ul>
+{sitze}{ohne}
+    </ul>
+    <p class="meta">Laufende Mitgliedschaften laut OParl-API der Stadt Bonn (CC0), Stand {_date(a["stichtag"])}. <a href="{root}?prozesse=gremien&amp;gremium={escape(a["id"])}">Alle Mitglieder mit Namen im Reiter „Prozesse“</a></p>
+"""
+
+
 def body(t, d, root):
     from . import prozessbild
     vg = d.get("vergleich")
@@ -454,7 +497,7 @@ def body(t, d, root):
     <p class="lead">{escape(t.lead.format(seit=_date(d["meta"]["seit"])))}</p>
     <p class="meta">Die Seite beschreibt Verfahren; sie bewertet keine Entscheidungen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
 {prozessbild.abschnitt(t, d, root)}
-{_schritte(t, d, root)}{_haushalt(d)}{vergleich}    <h2 id="sitzungen">Nächste Sitzungen</h2>
+{_schritte(t, d, root)}{_haushalt(d)}{vergleich}{_ausschuss(d, root)}    <h2 id="sitzungen">Nächste Sitzungen</h2>
     <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher. Die Frist (21 Tage vorher, GeschO §§ 26, 27) ist berechnet.</p>
     <ul>
 {sitzungen}

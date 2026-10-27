@@ -47,7 +47,8 @@ const VORLAGE = {
 };
 const GREMIEN = {
   organizations: [
-    { name: "Bezirksvertretung Bonn", short_name: "BV Bonn", type: "Gremium", classification: "Bezirksvertretungen", end_date: null, web: null, source_object: "o/gr/2", consultations: 50, deciding: 20, meetings: 3, theme: null },
+    { name: "Bezirksvertretung Bonn", short_name: "BV Bonn", type: "Gremium", classification: "Bezirksvertretungen", end_date: null, web: null, source_object: "o/gr/2", consultations: 50, deciding: 20, meetings: 3, theme: null,
+      besetzung: { mitglieder: 19, sitze: [{ fraktion: "Grüne", n: 6 }], ohne_fraktion: 2, sachkundig: 0, stellvertretungen: 0, beratend: 16, vorsitz: [{ name: "A. Beispiel", rolle: "Bezirksbürgermeister/in", fraktion: "Grüne" }] } },
     { name: "61-3 Stadtverkehr", short_name: "61-3", type: "Verwaltungsbereich", classification: "61 Stadtplanungsamt", end_date: null, web: null, source_object: "o/at/227", amt: "61 Stadtplanungsamt", papers_led: 900, theme: "bauen" },
     { name: "61 Stadtplanungsamt", short_name: "61", type: "Verwaltungsbereich", classification: "61 Stadtplanungsamt", end_date: null, web: null, source_object: "o/at/30", amt: "61 Stadtplanungsamt", papers_led: 100, theme: "bauen" },
   ],
@@ -268,6 +269,9 @@ test("hole_gremium_oder_amt: Amtsnummer bevorzugt das Amt selbst", async () => {
   const g = await t.run("hole_gremium_oder_amt", { name: "BV Bonn" });
   assert.equal(g.treffer.naechste_sitzung, "2026-11-24");
   assert.equal(g.treffer.letzte_sitzung, "2026-09-15");
+  assert.equal(g.treffer.besetzung.mitglieder, 19);
+  assert.equal(g.treffer.besetzung.status, "Fraktion abgeleitet");
+  assert.equal(a.treffer.besetzung, undefined);
 });
 
 test("erklaere_begriff und datenstand", async () => {

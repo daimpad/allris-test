@@ -114,4 +114,5 @@ THEMA = Thema(
     symbol='<circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/>'
            '<path d="M5.5 17 9.5 9h6l3 8M9.5 9l3 8h-7M13.5 6H17"/>',
     produktbereich="12",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
+    fachausschuss=MOBIL[0],  # Kasten „Wer berät mit“ (Besetzung, Fraktion abgeleitet)
 )

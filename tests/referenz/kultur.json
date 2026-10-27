@@ -1,4 +1,29 @@
 {
+ "fachausschuss": {
+  "id": "17",
+  "mitglieder": 21,
+  "name": "Kulturausschuss",
+  "ohne_fraktion": 9,
+  "sachkundig": 9,
+  "sitze": [
+   {
+    "fraktion": "Beispiel-Fraktion",
+    "n": 7
+   },
+   {
+    "fraktion": "Andere Fraktion",
+    "n": 5
+   }
+  ],
+  "stichtag": "2026-10-27",
+  "vorsitz": [
+   {
+    "fraktion": "Beispiel-Fraktion",
+    "name": "Anna Beispiel",
+    "rolle": "Vorsitz"
+   }
+  ]
+ },
  "haushalt_betraege": {
   "abruf": "2026-10-27",
   "ausgaben": {

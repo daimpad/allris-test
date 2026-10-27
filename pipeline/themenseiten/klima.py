@@ -119,4 +119,5 @@ THEMA = Thema(
     farben=("#047857", "#059669", "#84cc16"),  # Übersicht thema/: Schrift, Verlauf
     symbol='<path d="M5 19C5 10 11 5 20 4c-1 9-6 15-15 15z"/><path d="M5 19 13 11"/>',
     produktbereich="13",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
+    fachausschuss=UMWELT,  # Kasten „Wer berät mit“ (Besetzung, Fraktion abgeleitet)
 )
