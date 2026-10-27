@@ -30,6 +30,19 @@
   "titel": "Überschwemmungsgebiete NRW (festgesetzt und vorläufig gesichert)",
   "url": "https://www.opengeodata.nrw.de/produkte/umwelt_klima/wasser/hochwasser/uesg/"
  },
+ "wahl2025": {
+  "abgerufen": "2026-10-27",
+  "adressen_ohne_nummer": 136,
+  "adressen_ohne_strasse": 213,
+  "adressen_zugeordnet": 58616,
+  "briefwahlbezirke": 65,
+  "lizenz": "amtliches Wahlergebnis (bei der Stadt Bonn CC0, derzeit nicht erreichbar; IT.NRW ohne Lizenzangabe); Straßenverzeichnis 2020 CC0",
+  "stand": "2025-09-14",
+  "stimmbezirke": 177,
+  "titel": "Kommunalwahl 2025, Ratswahl nach Stimmbezirken (amtliches Endergebnis, IT.NRW; Zuordnung zum Ortsteil über das Straßenverzeichnis zur Kommunalwahl 2020 der Stadt Bonn)",
+  "uebergang": "Übergang, bis die Dateien der Stadt (wahlen.bonn.de, Flächen der Stimmbezirke 2025) wieder erreichbar sind",
+  "url": "https://www.wahlergebnisse.nrw/kommunalwahlen/2025/"
+ },
  "zensus": {
   "abgerufen": "2026-10-24",
   "lizenz": "dl-de/by-2.0, © Statistisches Bundesamt (Destatis), Zensus 2022",

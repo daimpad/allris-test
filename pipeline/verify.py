@@ -117,8 +117,9 @@ Inhalt
 - bonn/vorlagen.geojson: alle verorteten Vorlagen (ein Punkt je Vorlage und Straße)
 - bonn/termine.ics: Sitzungskalender (iCalendar); bonn/dcat.jsonld: Beschreibung nach DCAT-AP
 - bonn/kontext.json: Kontextdaten je Ortsteil, Stadtbezirk und ganz Bonn (Zensus 2022, Bodenrichtwerte,
-  Haltestellen, Kitas, Hitze, Überschwemmungsgebiete; abgeleitet, je Kennzahl mit Quelle, Lizenz und Stand);
-  audit_kontext.tsv: Umrechnung je Gebiet; kontext/STAND.json: Quellen der Ausschnitte
+  Haltestellen, Kitas, Hitze, Überschwemmungsgebiete, Wahlbeteiligung 2025; abgeleitet, je Kennzahl mit Quelle,
+  Lizenz und Stand); audit_kontext.tsv: Umrechnung je Gebiet; audit_wahlbeteiligung.tsv: Schätzung je Stimmbezirk
+  und Ortsteil; kontext/STAND.json: Quellen der Ausschnitte
 - glossar.json: Ergebnistexte, Evidenzstatus, Stände und Begriffe mit Fundstelle
 - (nicht im Paket: Atom-Feeds unter bonn/feeds/ und Daten des Ratsassistenten unter bonn/chat/ auf
   der Seite; sie wiederholen die Gebietsdateien)
