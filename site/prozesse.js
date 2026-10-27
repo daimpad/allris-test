@@ -131,7 +131,8 @@ function besetzung(g) {
   if (!b) return "";
   const person = (e) => (e.web ? `<a href="${href(e.web)}" target="_blank" rel="noopener">${esc(e.name)}<span class="visually-hidden"> (Personenseite im Ratsinformationssystem, neuer Tab)</span></a>` : esc(e.name));
   const fr = (e) => (e.fraktion ? esc(e.fraktion) : `<span class="hint">${e.fraktion_hinweis ? esc(e.fraktion_hinweis) : "ohne Angabe"}</span>`);
-  const sitze = b.sitze.map((x) => `<li><span>${esc(x.fraktion)}</span><span class="pz-n">${num(x.n)}</span></li>`).join("");
+  const teile = (x) => x.aus ? ` <small class="pz-teile">(${x.aus.map((t) => `${esc(t.fraktion)} ${num(t.n)}`).join(", ")})</small>` : "";
+  const sitze = b.sitze.map((x) => `<li><span>${esc(x.fraktion)}${teile(x)}</span><span class="pz-n">${num(x.n)}</span></li>`).join("");
   const ohne = b.ohne_fraktion ? `<li><span>ohne Angabe einer Fraktion${b.sachkundig ? ` (darunter ${num(b.sachkundig)} sachkundige Bürger:innen und Einwohner:innen)` : ""}</span><span class="pz-n">${num(b.ohne_fraktion)}</span></li>` : "";
   const zeilen = b.ordentlich.map((e) => `<tr><th scope="row">${person(e)}</th><td>${esc(e.rolle)}</td><td>${fr(e)}</td></tr>`).join("");
   const bv = g.art === "bezirksvertretung";

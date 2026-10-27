@@ -450,7 +450,9 @@ def _ausschuss(d, root):
     a = d.get("fachausschuss")
     if not a:
         return ""
-    sitze = "\n".join(f'      <li>{escape(x["fraktion"])}: {x["n"]}</li>' for x in a["sitze"])
+    def teile(x):
+        return " (" + ", ".join(f'{escape(t["fraktion"])} {t["n"]}' for t in x["aus"]) + ")" if x.get("aus") else ""
+    sitze = "\n".join(f'      <li>{escape(x["fraktion"])}: {x["n"]}{teile(x)}</li>' for x in a["sitze"])
     ohne = (f'\n      <li>ohne Angabe einer Fraktion: {a["ohne_fraktion"]}'
             + (f' (darunter {a["sachkundig"]} sachkundige Bürger:innen und Einwohner:innen)' if a["sachkundig"] else "") + "</li>"
             if a["ohne_fraktion"] else "")

@@ -361,6 +361,7 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .pz-sitze { list-style: none; padding: 0; margin: 4px 0 8px; max-width: 520px; }
 .pz-sitze li { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px solid var(--border-alt); }
 .pz-sitze .pz-n, .pz-mitglieder td:last-child { font-variant-numeric: tabular-nums; }
+.pz-teile { color: var(--text-muted); }
 .kontext-table.pz-mitglieder td, .kontext-table.pz-mitglieder thead th { text-align: left; }
 .kontext-table.pz-mitglieder th:first-child { width: 34%; }
 .pz-art { font-size: 12px; font-weight: 600; color: var(--accent-ink); background: rgba(124, 58, 237, 0.1); border-radius: 999px; padding: 2px 9px; }
