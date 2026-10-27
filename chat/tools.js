@@ -86,7 +86,7 @@ export const TOOLS = [
   },
   {
     name: "hole_gremium_oder_amt",
-    description: "Angaben zu einem Gremium (Beratungen, Sitzungen, nächste Sitzung) oder einem Amt bzw. Verwaltungsbereich (federführende Vorlagen). Zuständigkeiten nach Regelwerk sind nicht formalisiert.",
+    description: "Angaben zu einem Gremium (Beratungen, Sitzungen, nächste Sitzung; bei laufenden Gremien die Besetzung: Mitglieder, Vorsitz, Sitze nach Fraktion, abgeleitet) oder einem Amt bzw. Verwaltungsbereich (federführende Vorlagen). Zuständigkeiten nach Regelwerk sind nicht formalisiert.",
     parameters: { type: "object", additionalProperties: false, required: ["name"], properties: { name: { type: "string", description: "Name, Kurzname oder Amtsnummer" } } },
   },
   {
@@ -479,6 +479,8 @@ export function createTools({ load, today: fest = null } = {}) {
           Object.assign(d, { beratungen: o.consultations, davon_entscheidend: o.deciding, sitzungen: o.meetings,
             letzte_sitzung: ms.filter((m) => m.date < today()).at(-1)?.date ?? null,
             naechste_sitzung: ms.find((m) => m.date >= today())?.date ?? null });
+          if (o.besetzung) d.besetzung = { ...o.besetzung, status: "Fraktion abgeleitet",
+            hinweis: "Fraktion aus der Mitgliedschaft in einer Fraktion des Rates bzw. der Bezirksfraktion; die Quelle nennt nicht, für wen jemand im Gremium sitzt. Sachkundige Bürger:innen gehören meist keiner Fraktion an. Alle Mitglieder mit Namen im Reiter „Prozesse“." };
         } else {
           Object.assign(d, { amt: o.amt, federfuehrende_vorlagen: o.papers_led });
           if (o.name === o.amt) d.federfuehrende_vorlagen_amt_gesamt = orgs.filter((x) => x.amt === o.amt).reduce((n, x) => n + x.papers_led, 0);

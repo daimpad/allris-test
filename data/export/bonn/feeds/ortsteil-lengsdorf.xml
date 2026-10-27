@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-lengsdorf</id>
 <title>RIS-Karte Bonn – Lengsdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Lengsdorf</subtitle>
-<updated>2026-10-26T00:00:00Z</updated>
+<updated>2026-10-27T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-lengsdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030029#vorlage</id>
+<title>Neue Vorlage 260681-01: Fahnenmasten im Stadtbezirk</title>
+<updated>2026-10-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#260681-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030029"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030044#vorlage</id>
 <title>Neue Vorlage 261979: CDU/SPD-Antrag: Fehlende Flächenmarkierung im Straßenbereich "Villemombler Straße / Ecke Im Hohnderfeld" in 53127 Bonn- Lengsdorf</title>
@@ -798,14 +806,6 @@
 <updated>2025-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#253331-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024198"/>
-<summary>Entscheidung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024197#beratung-2025-09-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 240581-18 AA CDU-Änderungsantrag: Beschlussvorlage "Regionales Fahrradmietsystem" Antrag zur Vorlage 240581-17</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#240581-18%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024197"/>
 <summary>Entscheidung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>
