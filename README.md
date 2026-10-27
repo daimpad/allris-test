@@ -95,6 +95,7 @@ Gespeichert werden nur die Ergebnisse des Modells, nie Text der Dokumente (Branc
 | [BORIS NRW](https://www.opengeodata.nrw.de/produkte/infrastruktur_bauen_wohnen/boris/BRW/) | Bodenrichtwerte Wohnbauland | dl-de/zero-2.0 |
 | Land NRW, [Klimaanalyse 2026](https://www.opengeodata.nrw.de/produkte/umwelt_klima/klima/klimaanalyse/), [Überschwemmungsgebiete](https://www.opengeodata.nrw.de/produkte/umwelt_klima/wasser/hochwasser/uesg/), [Kitas](https://www.opengeodata.nrw.de/produkte/bildung_wissenschaft/kitas/) | Hitze (Planungshinweiskarte), Überschwemmungsgebiete, Kindertageseinrichtungen | dl-de/zero-2.0; Kitas dl-de/by-2.0 |
 | [VRS-Fahrplandaten (GTFS)](https://www.vrs.de/fuer-unternehmen/open-data-service) | Haltestellen | dl-de/zero-2.0 |
+| Kommunalwahl 2025, Ratswahl nach Stimmbezirken ([IT.NRW](https://www.wahlergebnisse.nrw/kommunalwahlen/2025/), als Übergang, solange die Dateien der Stadt nicht erreichbar sind); Stadt Bonn, [Straßenverzeichnis zur Kommunalwahl 2020](https://opendata.bonn.de/dataset/kommunalwahl-und-integrationsratswahl-2020-wahlbezirke-und-stimmbezirke) | Wahlbeteiligung je Ortsteil (geschätzt) und Stadtbezirk, ganz Bonn amtlich; ohne Stimmen der Parteien | amtliches Wahlergebnis (bei der Stadt CC0); Straßenverzeichnis CC0 1.0 |
 | OpenStreetMap | Straßenverzeichnis, Kartenhintergrund | ODbL 1.0, © OpenStreetMap-Mitwirkende |
 
 Die Daten werden täglich neu abgerufen. Lizenzen je Datei: [`data/LICENSE-DATA.md`](data/LICENSE-DATA.md). Der Code steht unter MIT-Lizenz ([`LICENSE`](LICENSE)).

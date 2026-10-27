@@ -557,7 +557,8 @@
   // Kontextdaten je Ortsteil (kontext.json, pipeline/kontext.py): Einordnung, kein Urteil; alle Werte abgeleitet.
   // Gefärbt werden nur Anteile und Mittelwerte – Zahlen wie Kitas oder Haltestellen bilden vor allem die Größe ab.
   const KONTEXT_FARBE = { unter_18: "Anteil unter 18 Jahren", ab_65: "Anteil ab 65 Jahren", miete: "Nettokaltmiete (Zensus 2022)",
-    bodenrichtwert: "Bodenrichtwert Wohnbauland", hitze: "Hitze: dringender Handlungsbedarf", ueberschwemmung: "Im Überschwemmungsgebiet" };
+    bodenrichtwert: "Bodenrichtwert Wohnbauland", hitze: "Hitze: dringender Handlungsbedarf", ueberschwemmung: "Im Überschwemmungsgebiet",
+    wahlbeteiligung: "Wahlbeteiligung Ratswahl 2025" };
   const KONTEXT_STEP = { miete: 0.1, bodenrichtwert: 10 };
   const kKey = (m) => (m || "").startsWith("kontext-") ? m.slice(8) : null;
   function kFmt(key, v) {
@@ -580,9 +581,13 @@
   // (Misch- und Kerngebiete ohne Zone für Wohnbauland; Schwelle aus kontext.json)
   function kCell(key, o) {
     const v = kFmt(key, o[key]), cov = o.bodenrichtwert_abdeckung, ab = kontext.meta.bodenrichtwert_hinweis_ohne_zone;
+    const ohne = kontext.meta.kennzahlen[key]?.ohne_wert;
+    if (o[key] == null && ohne && o.einwohner >= kontext.meta.mindest_einwohner) return `${v}<br><span class="kontext-note">${esc(ohne)}</span>`;
     if (key !== "bodenrichtwert" || o[key] == null || cov == null || ab == null || 100 - cov < ab) return v;
     return `${v}<br><span class="kontext-note">gilt für ${Math.round(cov)} % der Einwohner, die übrigen wohnen außerhalb von Zonen für Wohnbauland</span>`;
   }
+  // fehlender Wert: Grund laut kontext.json (z. B. „ohne eigenen Stimmbezirk“), sonst die Mindestgröße
+  const kOhne = (key) => `keine Angabe (${esc(kontext.meta.kennzahlen[key]?.ohne_wert || `unter ${de(kontext.meta.mindest_einwohner)} Einwohnern`)})`;
   // „8,30 bis unter 8,90 €/m²“: die Einheit nur einmal
   const kNum = (key, v) => kFmt(key, v).replace(/\s?(%|€\/m²)$/, "");
   const kRanges = (br, key) => [0, ...br].map((lo, k) => (k === 0 ? `unter ${kFmt(key, br[0])}` : k === br.length ? `ab ${kFmt(key, lo)}`
@@ -603,7 +608,7 @@
     const rows = (kontext.meta.reihenfolge || Object.keys(kontext.meta.kennzahlen)).map((k) => `<tr><th scope="row">${esc(kontext.meta.kennzahlen[k].titel)}</th>
       <td>${kCell(k, own)}</td><td>${kCell(k, cmp)}</td></tr>`).join("");
     const quellen = Object.values(kontext.meta.quellen).map((q) => `<li>${safeUrl(q.url) ? `<a href="${safeUrl(q.url)}">${esc(q.titel)}</a>` : esc(q.titel)}
-      – ${esc(q.lizenz)}${q.stand ? `, Stand ${esc(q.stand.length === 10 ? fmtDate(q.stand) : q.stand)}` : ""}</li>`).join("");
+      – ${esc(q.lizenz)}${q.stand ? `, Stand ${esc(q.stand.length === 10 ? fmtDate(q.stand) : q.stand)}` : ""}${q.uebergang ? ` (${esc(q.uebergang)})` : ""}</li>`).join("");
     const methoden = (kontext.meta.reihenfolge || Object.keys(kontext.meta.kennzahlen)).map((k) => kontext.meta.kennzahlen[k]).map((d) => `<li><strong>${esc(d.titel)}:</strong> ${esc(d.methode)}</li>`).join("");
     box.innerHTML = `<summary>Zahlen zu ${esc(area.name)}<span class="derived">abgeleitet</span></summary>
       <p class="hint">Zur Einordnung der Vorlagen, kein Urteil über das Gebiet. Alle Werte sind auf ${area.kind === "ortsteil" ? "Ortsteile" : "Stadtbezirke"} umgerechnet; Stichtage verschieden.${klein ? ` Unter ${de(kontext.meta.mindest_einwohner)} Einwohnern keine Anteile und Mittelwerte.` : ""}</p>
@@ -685,7 +690,7 @@
     const kk = kKey(navMetric);
     if (kk) {
       const v = kValue(info, kk), d = kQuelle(kk), b = scope === "ot" ? kontext.bezirke[info.stadtbezirk] : null;
-      if (v == null) return `${esc(d.titel)}: <span class="nav-dim">keine Angabe (unter ${de(kontext.meta.mindest_einwohner)} Einwohnern)</span>`;
+      if (v == null) return `${esc(d.titel)}: <span class="nav-dim">${kOhne(kk)}</span>`;
       return `<span class="nav-big">${kFmt(kk, v)}</span> ${esc(d.titel)}
         <br><span class="nav-dim">${b ? `Stadtbezirk ${esc(info.stadtbezirk)} ${kFmt(kk, b[kk])} · ` : ""}ganz Bonn ${kFmt(kk, kontext.bonn[kk])} · Stand ${esc(d.stand)} · abgeleitet</span>`;
     }
@@ -851,9 +856,9 @@
       navLegend.querySelector("summary").textContent = kk ? kd.titel : navMetric ? `Anteil: ${THEMES[navMetric]}` : "Vorlagen der letzten 12 Monate";
       navLegend.querySelector(".nav-legend-body").innerHTML = kk
         ? `<ol class="nav-ramp">${kRanges(br, kk).map((r, k) => `<li><span class="nav-sw nav-sw${k}" aria-hidden="true"></span>${r}</li>`).join("")}
-            <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>keine Angabe (unter ${de(kontext.meta.mindest_einwohner)} Einwohnern)</li></ol>
+            <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>${kOhne(kk)}</li></ol>
           <p>Je ${far ? "Stadtbezirk" : "Ortsteil"}, Stufen nach den Werten der Ortsteile; ganz Bonn ${kFmt(kk, kontext.bonn[kk])}. ${esc(kd.methode)}.
-            Quelle: ${esc(kd.q.titel || "")} (${esc(kd.q.lizenz || "")}), Stand ${esc(kd.stand)}. <span class="derived">abgeleitet</span> Zur Einordnung, kein Urteil über das Gebiet.</p>`
+            Quelle: ${esc(kd.q.titel || "")} (${esc(kd.q.lizenz || "")}), Stand ${esc(kd.stand)}${kd.q.uebergang ? `; ${esc(kd.q.uebergang)}` : ""}. <span class="derived">abgeleitet</span> Zur Einordnung, kein Urteil über das Gebiet.</p>`
         : navMetric
         ? `<ol class="nav-ramp">${shareRanges(br).map((r, k) => `<li><span class="nav-sw nav-sw${k}" aria-hidden="true"></span>${r}</li>`).join("")}
             <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>zu wenige Vorlagen (unter ${de(z.themen_min || 20)})</li></ol>

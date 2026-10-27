@@ -46,6 +46,18 @@ class Kennzahlen(unittest.TestCase):
         self.assertEqual(self.doc["meta"]["reihenfolge"], list(kontext.KENNZAHLEN))
         self.assertEqual(self.doc["meta"]["reihenfolge"][0], "einwohner")
 
+    def test_wahlbeteiligung(self):
+        # ganz Bonn amtlich (Heft 3: 160.220 von 247.052); Ortsteile geschätzt in ganzen Prozent
+        self.assertEqual(self.doc["bonn"]["wahlbeteiligung"], 64.9)
+        ohne = sorted(n for n, v in self.doc["ortsteile"].items() if v.get("wahlbeteiligung") is None)
+        self.assertEqual(ohne, ["Beuel-Ost", "Hardthöhe", "Hoholz"])   # ohne eigenen Stimmbezirk (wahlen/phase0)
+        werte = [v["wahlbeteiligung"] for v in self.doc["ortsteile"].values() if v.get("wahlbeteiligung") is not None]
+        self.assertTrue(all(isinstance(w, int) and 35 <= w <= 85 for w in werte))
+        self.assertEqual(set(self.doc["bezirke"]), {n for n, v in self.doc["bezirke"].items() if v.get("wahlbeteiligung")})
+        self.assertEqual(self.doc["meta"]["kennzahlen"]["wahlbeteiligung"]["ohne_wert"], "ohne eigenen Stimmbezirk")
+        self.assertIn("uebergang", self.doc["meta"]["quellen"]["wahl2025"])
+        self.assertEqual(kontext.pruefen(self.path), [])
+
     def test_kleine_ortsteile_ohne_anteile(self):
         hardthoehe = self.doc["ortsteile"]["Hardthöhe"]
         self.assertLess(hardthoehe["einwohner"], kontext.MIN_EINWOHNER)

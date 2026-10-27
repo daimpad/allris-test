@@ -7,15 +7,21 @@ täglichen Workflow dagegen ist stadtplan.bonn.de erreichbar. Der Schritt `wahle
 (Ordner wahlen2025/). Daraus entsteht nach Prüfung ein fester Ausschnitt in data/kontext/ (Entscheidung 27.10.2026:
 Wahlbeteiligung je Ortsteil als Kennzahl der Kontextdaten, ohne Ergebnisse der Parteien je Gebiet).
 
+Übergang (Entscheidung 27.10.2026, wahlen/PHASE1.md): `wahlen-ausschnitt` legt Wahlberechtigte und Wähler je Stimmbezirk
+von IT.NRW und die Zuordnung zum Ortsteil über das Straßenverzeichnis 2020 in data/kontext/ ab.
+
 Lizenz laut opendata.bonn.de: CC0 (Datensätze „Kommunalwahl und Integrationsratswahl 2025 Wahlergebnisse“ und
 „Wahl- und Stimmbezirke“); die Stadtseite nennt dl-de/zero-2.0."""
+import csv
 import hashlib
 import html
+import io
 import json
 import re
 import time
 import urllib.parse
 import urllib.request
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -113,3 +119,129 @@ def rohdaten(ziel=None):
         print("  Fehler:", f["url"], f["fehler"][:200])
     if not n:
         raise SystemExit("Wahlen 2025: keine Datei abrufbar")
+
+
+# --- Ausschnitt als Übergang (Entscheidung 27.10.2026) ------------------------------------------------------------
+# Solange wahlen.bonn.de und stadtplan.bonn.de nicht antworten: Wahlberechtigte und Wähler der Ratswahl nach
+# Stimmbezirk aus der Datei von IT.NRW (dieselben amtlichen Ergebnisse wie bei der Stadt; Summen gleich Heft 3), die
+# Zuordnung Stimmbezirk → Ortsteil über das Straßenverzeichnis zur Kommunalwahl 2020 der Stadt (CC0) und die
+# Hausnummern (data/geo/hausnummern_bonn.json), gewichtet nach Adressen. Ohne Stimmen der Parteien. Aus dem
+# Straßenverzeichnis werden nur Straße, Hausnummernbereich und Stimmbezirk gelesen (ab Spalte 19 stehen Namen und
+# Telefonnummern von Wahlvorständen). Sobald die Dateien der Stadt vorliegen, werden Zahlen und Flächen 2025
+# gegengeprüft und die Quelle getauscht (wahlen/PHASE1.md).
+ITNRW = "https://www.wahlergebnisse.nrw/kommunalwahlen/2025/KW25_Stimmbezirke.csv"
+STRASSEN_2020 = ("https://opendata.bonn.de/sites/default/files/"
+                 "05314000%2013.09.2020%20Kommunalwahlen%20-%20Integrationsratswahl%20Strassen.csv")
+GKZ_BONN = "314000"
+STIMMBEZIRKE = config.ROOT / "data" / "kontext" / "wahl2025_stimmbezirke.tsv"
+ZUORDNUNG = config.ROOT / "data" / "kontext" / "wahl2025_zuordnung.tsv"
+WAHL_QUELLE = {
+    "titel": "Kommunalwahl 2025, Ratswahl nach Stimmbezirken (amtliches Endergebnis, IT.NRW; Zuordnung zum Ortsteil "
+             "über das Straßenverzeichnis zur Kommunalwahl 2020 der Stadt Bonn)",
+    "url": "https://www.wahlergebnisse.nrw/kommunalwahlen/2025/",
+    "lizenz": "amtliches Wahlergebnis (bei der Stadt Bonn CC0, derzeit nicht erreichbar; IT.NRW ohne Lizenzangabe); "
+              "Straßenverzeichnis 2020 CC0",
+    "stand": "2025-09-14",
+    "uebergang": "Übergang, bis die Dateien der Stadt (wahlen.bonn.de, Flächen der Stimmbezirke 2025) wieder erreichbar sind",
+}
+
+
+def _norm_strasse(s):
+    s = s.strip()
+    s = re.sub(r"([Ss])tr\.(?=$|[ -])", r"\1traße", s)
+    return s
+
+
+def _nummer(x):
+    m = re.match(r"(\d+)", x)
+    return int(m.group(1)) if m else None
+
+
+def zuordnung(strassen_csv, hausnummern):
+    """{Stimmbezirk-Gruppe des Straßenverzeichnisses (z. B. „11“ oder „11/12“): {Ortsteil: Adressen}} und
+    (zugeordnet, ohne Straße, ohne Nummer). Nur die Spalten Straße, Hausnummernbereich, gerade/ungerade, Stimmbezirk."""
+    regeln = defaultdict(list)
+    for r in list(csv.reader(io.StringIO(strassen_csv), delimiter=";"))[1:]:
+        if len(r) < 9 or not r[0].strip():
+            continue
+        von = int(r[3]) if r[3].strip().isdigit() else None
+        bis = int(r[5]) if r[5].strip().isdigit() else None
+        regeln[_norm_strasse(r[0])].append((von, bis, r[7].strip(), r[8].strip()))
+    out = defaultdict(lambda: defaultdict(int))
+    treffer = ohne_str = ohne_nr = 0
+    for strasse, ots in hausnummern.items():
+        rg = regeln.get(strasse)
+        for ot, nrs in ots.items():
+            for x in nrs:
+                if not rg:
+                    ohne_str += 1
+                    continue
+                k, sb = _nummer(x), None
+                for von, bis, gu, nr in rg:
+                    if von is None and bis is None:
+                        sb = nr
+                        break
+                    if k is None or not ((von or 0) <= k <= (bis or 10 ** 6)):
+                        continue
+                    if (gu == "ger." and k % 2) or (gu == "ung." and not k % 2):
+                        continue
+                    sb = nr
+                    break
+                if sb is None:
+                    ohne_nr += 1
+                    continue
+                treffer += 1
+                out[sb][ot] += 1
+    return out, (treffer, ohne_str, ohne_nr)
+
+
+def stimmbezirke(itnrw_csv):
+    """Zeilen der Ratswahl in Bonn: Stimmbezirk, Art (Urne/Brief), Wahlbezirk, Wahlberechtigte (A), davon mit
+    Sperrvermerk „W“ (A2), Wähler (B). Ohne Stimmen der Parteien."""
+    rows = list(csv.reader(io.StringIO(itnrw_csv), delimiter=";"))
+    codes = next(r for r in rows if r[:4] == ["KRS", "GKZ_Gemeinde", "Gemeindenname", "Nr"])
+    ix = {c: i for i, c in enumerate(codes) if c}
+    out = []
+    for r in rows:
+        if len(r) <= ix["B"] or r[ix["GKZ_Gemeinde"]] != GKZ_BONN:
+            continue
+        nr, art = r[ix["Nr"]].strip(), r[ix["Briefwahl"]].strip()
+        out.append({"stimmbezirk": nr, "art": art, "wahlbezirk": int(nr.split()[0]) // 10,
+                    "wahlberechtigte": int(r[ix["A"]] or 0), "sperrvermerk_w": int(r[ix["A2"]] or 0),
+                    "waehler": int(r[ix["B"]] or 0)})
+    return out
+
+
+def ausschnitt():
+    """Pipeline-Schritt `wahlen-ausschnitt` (einmalig, lokal): data/kontext/wahl2025_stimmbezirke.tsv und
+    wahl2025_zuordnung.tsv, Vermerk in data/kontext/STAND.json."""
+    sb = stimmbezirke(_laden(ITNRW)[0].decode("utf-8-sig"))
+    urne = [r for r in sb if r["art"] == "Urne"]
+    if len(urne) < 150 or not any(r["art"] == "Brief" for r in sb):
+        raise SystemExit(f"Wahlen 2025: nur {len(urne)} Urnenstimmbezirke für Bonn – Datei unvollständig")
+    hn = json.loads(config.HAUSNUMMERN.read_text(encoding="utf-8"))["strassen"]
+    zu, (treffer, ohne_str, ohne_nr) = zuordnung(_laden(STRASSEN_2020)[0].decode("latin-1"), hn)
+    nummern = {int(r["stimmbezirk"]) for r in urne}
+    gruppen = {int(t) for g in zu for t in g.split("/")}
+    if nummern - gruppen:
+        raise SystemExit(f"Wahlen 2025: Stimmbezirke ohne Adressen im Straßenverzeichnis 2020: {sorted(nummern - gruppen)}")
+    with open(STIMMBEZIRKE, "w", newline="", encoding="utf-8") as f:
+        wr = csv.DictWriter(f, fieldnames=list(sb[0]), delimiter="\t", lineterminator="\n")
+        wr.writeheader()
+        wr.writerows(sb)
+    with open(ZUORDNUNG, "w", newline="", encoding="utf-8") as f:
+        wr = csv.writer(f, delimiter="\t", lineterminator="\n")
+        wr.writerow(["stimmbezirke", "ortsteil", "adressen"])
+        for g in sorted(zu, key=lambda g: [int(t) for t in g.split("/")]):
+            for ot, n in sorted(zu[g].items()):
+                wr.writerow([g, ot, n])
+    stand_path = config.ROOT / "data" / "kontext" / "STAND.json"
+    stand = json.loads(stand_path.read_text()) if stand_path.exists() else {}
+    stand["wahl2025"] = {**WAHL_QUELLE, "abgerufen": datetime.now(timezone.utc).date().isoformat(),
+                         "stimmbezirke": len(urne), "briefwahlbezirke": len(sb) - len(urne),
+                         "adressen_zugeordnet": treffer, "adressen_ohne_strasse": ohne_str, "adressen_ohne_nummer": ohne_nr}
+    stand_path.write_text(json.dumps(stand, ensure_ascii=False, indent=1, sort_keys=True) + "\n")
+    alle = treffer + ohne_str + ohne_nr
+    print(f"Wahlen 2025: {len(urne)} Urnen- und {len(sb) - len(urne)} Briefwahlbezirke, "
+          f"Wahlberechtigte {sum(r['wahlberechtigte'] for r in sb)}, Wähler {sum(r['waehler'] for r in sb)}; "
+          f"Adressen zugeordnet {treffer} von {alle} ({100 * treffer / alle:.1f} %) → {STIMMBEZIRKE.name}, {ZUORDNUNG.name}")

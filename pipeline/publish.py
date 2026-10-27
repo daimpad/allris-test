@@ -276,7 +276,8 @@ def write_dcat(path, data_start, modified, kurzfassungen=False):
           + ([dist("Kontextdaten je Ortsteil (JSON)", "bonn/kontext.json", "application/json", "dl-de-by",
                    "Kennzahlen je Ortsteil, Stadtbezirk und ganz Bonn zur Einordnung von Vorlagen: Einwohner und Altersanteile "
                    "und Nettokaltmiete (Zensus 2022, © Destatis), Bodenrichtwert Wohnbauland (BORIS NRW), Haltestellen (VRS), "
-                   "Kitas (Land NRW), Hitze (Klimaanalyse NRW), Überschwemmungsgebiete (Land NRW); auf Ortsteile umgerechnet "
+                   "Kitas (Land NRW), Hitze (Klimaanalyse NRW), Überschwemmungsgebiete (Land NRW), Wahlbeteiligung der Ratswahl 2025 "
+                   "(geschätzt; IT.NRW, Zuordnung über das Straßenverzeichnis 2020 der Stadt); auf Ortsteile umgerechnet "
                    "(abgeleitet), je Kennzahl mit Quelle, Lizenz und Stand.")]
              if (config.ROOT / "data" / "kontext" / "STAND.json").exists() else []),
     }

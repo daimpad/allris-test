@@ -37,8 +37,10 @@ HALT_STAND = KONTEXT / "haltestellen_stand.json"   # eigene Datei: monatlich im 
 ZENSUS, BRW, KLIMA, UESG, KITAS, HALT = (KONTEXT / n for n in (
     "zensus_bonn.tsv", "bodenrichtwerte_bonn.geojson", "klima_bonn.geojson", "ueberschwemmung_bonn.geojson",
     "kitas_bonn.tsv", "haltestellen_bonn.tsv"))
+WAHL_SB, WAHL_ZU = KONTEXT / "wahl2025_stimmbezirke.tsv", KONTEXT / "wahl2025_zuordnung.tsv"   # pipeline/wahlen.py
 OUT = "kontext.json"
 AUDIT = "audit_kontext.tsv"
+AUDIT_WAHL = "audit_wahlbeteiligung.tsv"
 MIN_EINWOHNER = 100          # darunter keine Anteile und Mittelwerte (Hardthöhe: 20 Einwohner)
 # Bodenrichtwert: Hinweis, wenn mindestens so viele Prozent der Einwohner in keiner Zone für Wohnbauland wohnen
 # (Misch- und Kerngebiete; Entscheidung des Auftraggebers 24.10.2026)
@@ -88,8 +90,15 @@ KENNZAHLEN = {
               "Einwohner laut Karte in Flächen der Handlungspriorität 1–2, anteilig nach Fläche"),
     "ueberschwemmung": ("Anteil der Einwohner im Überschwemmungsgebiet", "%", "ueberschwemmung",
                         "Einwohner in Zellen, deren Mittelpunkt im Überschwemmungsgebiet liegt"),
+    "wahlbeteiligung": ("Wahlbeteiligung Ratswahl 2025 (geschätzt)", "%", "wahl2025",
+                        "Wähler je Stimmbezirk an der Urne, dazu die Briefwähler des Wahlbezirks im Verhältnis der "
+                        "Wahlberechtigten mit Sperrvermerk „W“ (Briefwahlschein); Stimmbezirke anteilig nach Adressen "
+                        "auf Ortsteile verteilt (Straßenverzeichnis 2020); geschätzt, Abweichung bis etwa 3 Prozentpunkte; "
+                        "ganz Bonn amtlich; kein Wert für Ortsteile ohne eigenen Stimmbezirk"),
 }
-ANTEILE = {"unter_18", "ab_65", "miete", "bodenrichtwert", "bodenrichtwert_abdeckung", "hitze", "ueberschwemmung"}   # erst ab MIN_EINWOHNER
+OHNE_WERT = {"wahlbeteiligung": "ohne eigenen Stimmbezirk"}   # Grund, wenn ein Ortsteil keinen Wert hat (sonst Mindestgröße)
+ANTEILE = {"unter_18", "ab_65", "miete", "bodenrichtwert", "bodenrichtwert_abdeckung", "hitze", "ueberschwemmung",
+           "wahlbeteiligung"}   # erst ab MIN_EINWOHNER
 
 
 def _num(s):
@@ -362,6 +371,49 @@ def _wmedian(paare):
     return None
 
 
+def wahlbeteiligung():
+    """Wahlbeteiligung der Ratswahl 2025 (wahlen/phase0/BERICHT.md): je Urnenstimmbezirk die Wähler an der Urne und die
+    Briefwähler des Wahlbezirks im Verhältnis des Sperrvermerks „W“; je Gruppe des Straßenverzeichnisses anteilig nach
+    Adressen auf Ortsteile verteilt. ({Ortsteil: [Wahlberechtigte, Wähler]}, Ortsteile mit eigenem Stimmbezirk
+    (Hauptanteil der Adressen), Bonn [Wahlberechtigte, Wähler] amtlich, Audit-Zeilen je Gruppe) oder None ohne Ausschnitt."""
+    if not (WAHL_SB.exists() and WAHL_ZU.exists()):
+        return None
+    with open(WAHL_SB, encoding="utf-8") as f:
+        rows = list(csv.DictReader(f, delimiter="\t"))
+    brief, sperr = defaultdict(int), defaultdict(int)
+    for r in rows:
+        if r["art"] == "Brief":
+            brief[r["wahlbezirk"]] += int(r["waehler"])
+        else:
+            sperr[r["wahlbezirk"]] += int(r["sperrvermerk_w"])
+    sb = {int(r["stimmbezirk"]): (int(r["wahlberechtigte"]), int(r["waehler"]),
+                                  int(r["sperrvermerk_w"]) * brief[r["wahlbezirk"]] / sperr[r["wahlbezirk"]] if sperr[r["wahlbezirk"]] else 0)
+          for r in rows if r["art"] == "Urne"}
+    zu = defaultdict(dict)
+    with open(WAHL_ZU, encoding="utf-8") as f:
+        for r in csv.DictReader(f, delimiter="\t"):
+            zu[r["stimmbezirke"]][r["ortsteil"]] = int(r["adressen"])
+    ot, eigen, audit, gesehen = defaultdict(lambda: [0.0, 0.0]), set(), [], set()
+    for g, d in sorted(zu.items(), key=lambda x: [int(t) for t in x[0].split("/")]):
+        teile = [int(t) for t in g.split("/")]
+        gesehen |= set(teile)
+        a = sum(sb[t][0] for t in teile)
+        urne = sum(sb[t][1] for t in teile)
+        b = sum(sb[t][2] for t in teile)
+        n = sum(d.values())
+        haupt = max(d, key=lambda k: (d[k], k))
+        eigen.add(haupt)
+        for name, c in d.items():
+            ot[name][0] += a * c / n
+            ot[name][1] += (urne + b) * c / n
+        audit.append([g, a, urne, round(b), round(100 * (urne + b) / a, 1) if a else "", haupt, round(d[haupt] / n, 2),
+                      "; ".join(f"{k} {v}" for k, v in sorted(d.items()) if k != haupt)])
+    if set(sb) - gesehen:
+        raise RuntimeError(f"Wahlbeteiligung: Stimmbezirke ohne Zuordnung {sorted(set(sb) - gesehen)}")
+    bonn = [sum(int(r["wahlberechtigte"]) for r in rows), sum(int(r["waehler"]) for r in rows)]
+    return ot, eigen, bonn, audit
+
+
 def kennzahlen():
     """Kennzahlen je Ortsteil, Stadtbezirk und ganz Bonn aus den Ausschnitten: ({Gebiet: Werte}, Audit-Zeilen)."""
     ots, finde = _gebiete()
@@ -436,6 +488,13 @@ def kennzahlen():
                 if fl["properties"]["prioritaet"] in DRINGEND:
                     acc[gb]["klima_dringend"] += ew
 
+    wahl = wahlbeteiligung()
+    if wahl:
+        for name, (a, w) in wahl[0].items():
+            if name in bezirk:
+                for g in gebiete(name)[:2]:   # Ortsteil und Stadtbezirk; ganz Bonn amtlich (unten)
+                    acc[g]["wahl_a"] += a
+                    acc[g]["wahl_w"] += w
     werte, audit = {}, []
     for g, a in sorted(acc.items()):
         e = int(a["einwohner"])
@@ -449,13 +508,17 @@ def kennzahlen():
             v["bodenrichtwert_abdeckung"] = round(100 - 100 * a["brw_ohne_zone"] / e, 1)   # Anteil der Einwohner in einer Zone
             v["hitze"] = round(100 * a["klima_dringend"] / a["klima_ew"], 1) if a["klima_ew"] else None
             v["ueberschwemmung"] = round(100 * a["ueberschwemmung"] / e, 1)
+            if wahl and g[0] == "bonn":
+                v["wahlbeteiligung"] = round(100 * wahl[2][1] / wahl[2][0], 1)
+            elif wahl and a["wahl_a"] and (g[0] == "bezirk" or g[1] in wahl[1]):
+                v["wahlbeteiligung"] = round(100 * a["wahl_w"] / a["wahl_a"])   # geschätzt: ganze Prozent
         werte[g] = v
         geheim = max(a["unter_18_geheim"], a["ab_65_geheim"])
         audit.append([g[0], g[1], e, round(100 * geheim / e, 1) if e else "", int(a["wohnungen"]),
                       round(100 * a["brw_ohne_zone"] / e, 1) if e else "", round(100 * a["brw_ueberlagert"] / e, 1) if e else "",
                       round(a["klima_ew"]),
                       "ja" if e < MIN_EINWOHNER else ""])
-    return werte, audit
+    return werte, audit, (wahl[3] if wahl else None)
 
 
 # Zuschaltbare Flächen der Karte (nur beim Einschalten geladen): Überschwemmungsgebiete je Art, Bodenrichtwertzonen.
@@ -488,15 +551,17 @@ def write():
     if not all(p.exists() for p in (ZENSUS, BRW, KLIMA, UESG, KITAS, HALT, STAND, HALT_STAND)):
         print("Kontextdaten: Ausschnitte fehlen (python -m pipeline kontext-ausschnitte) – übersprungen.")
         return
-    werte, audit = kennzahlen()
+    werte, audit, audit_wahl = kennzahlen()
     zuordnung = {n: b for n, b, _ in _gebiete()[0]}
     stand = {**json.loads(STAND.read_text()), "haltestellen": json.loads(HALT_STAND.read_text())}
     meta = {"hinweis": "Einordnung, kein Urteil. Alle Werte sind auf Ortsteile umgerechnet (abgeleitet).",
             "mindest_einwohner": MIN_EINWOHNER,
             "bodenrichtwert_hinweis_ohne_zone": BRW_HINWEIS_OHNE_ZONE,
-            "reihenfolge": list(KENNZAHLEN),   # Reihenfolge für Steckbrief und Assistent (die Schlüssel werden sortiert)
-            "quellen": {k: {f: stand[k].get(f) for f in ("titel", "url", "lizenz", "stand")} for k in sorted(stand)},
-            "kennzahlen": {k: {"titel": t, "einheit": u, "quelle": q, "methode": m} for k, (t, u, q, m) in KENNZAHLEN.items()}}
+            "reihenfolge": [k for k in KENNZAHLEN if k != "wahlbeteiligung" or audit_wahl],   # Reihenfolge für Steckbrief und Assistent (die Schlüssel werden sortiert)
+            "quellen": {k: {f: stand[k].get(f) for f in ("titel", "url", "lizenz", "stand", "uebergang") if f != "uebergang" or stand[k].get(f)}
+                        for k in sorted(stand)},
+            "kennzahlen": {k: {"titel": t, "einheit": u, "quelle": q, "methode": m, **({"ohne_wert": OHNE_WERT[k]} if k in OHNE_WERT else {})}
+                           for k, (t, u, q, m) in KENNZAHLEN.items() if k != "wahlbeteiligung" or audit_wahl}}
     doc = {"meta": meta,
            "bonn": werte[("bonn", "Bonn")],
            "bezirke": {n: v for (art, n), v in werte.items() if art == "bezirk"},
@@ -511,12 +576,20 @@ def write():
         wr.writerow(["ebene", "gebiet", "einwohner", "alter_geheim_prozent", "wohnungen_mit_miete",
                      "bodenrichtwert_ohne_zone_prozent", "bodenrichtwert_zonen_ueberlagert_prozent", "einwohner_laut_klimakarte", "unter_mindestgroesse"])
         wr.writerows(audit)
+    if audit_wahl:
+        with open(config.EXPORT / AUDIT_WAHL, "w", newline="", encoding="utf-8") as f:
+            wr = csv.writer(f, delimiter="\t", lineterminator="\n")
+            wr.writerow(["stimmbezirke", "wahlberechtigte", "waehler_urne", "briefwaehler_geschaetzt", "beteiligung_geschaetzt_prozent",
+                         "hauptortsteil", "anteil_adressen_hauptortsteil", "weitere_ortsteile_adressen"])
+            wr.writerows(audit_wahl)
     print(f"Kontextdaten: {len(doc['ortsteile'])} Ortsteile, {len(doc['bezirke'])} Stadtbezirke, "
           f"Bonn {doc['bonn']['einwohner']} Einwohner → {out}")
 
 
 # Bevölkerung Bonn am 31.12.2022 auf Basis des Zensus 2022 (IT.NRW, Kommunalprofil Bonn, Stand 15.01.2026)
 AMTLICH_EINWOHNER = 322221
+# Wahlbeteiligung der Ratswahl 2025 in Bonn laut Heft 3 der Stadt (160.220 von 247.052 Wahlberechtigten)
+AMTLICH_WAHLBETEILIGUNG = 64.9
 
 
 def pruefen(path=None):
@@ -535,7 +608,12 @@ def pruefen(path=None):
         q = doc["meta"]["quellen"].get(d["quelle"]) or {}
         if not q.get("lizenz") or not q.get("stand"):
             befunde.append(f"Kennzahl {k}: Quelle {d['quelle']} ohne Lizenz oder Stand")
+    wb = doc["bonn"].get("wahlbeteiligung")
+    if wb is not None and wb != AMTLICH_WAHLBETEILIGUNG:
+        befunde.append(f"Wahlbeteiligung Bonn {wb} % weicht vom amtlichen Wert {AMTLICH_WAHLBETEILIGUNG} % ab")
     for n, v in doc["ortsteile"].items():
+        if v.get("wahlbeteiligung") is not None and not 20 <= v["wahlbeteiligung"] <= 95:
+            befunde.append(f"{n}: Wahlbeteiligung {v['wahlbeteiligung']} % außerhalb des plausiblen Bereichs")
         if v["einwohner"] < doc["meta"]["mindest_einwohner"] and ANTEILE & set(v):
             befunde.append(f"{n}: Anteile trotz {v['einwohner']} Einwohnern")
     print(f"Kontextdaten: Einwohner Bonn {ew} (amtlich 31.12.2022: {AMTLICH_EINWOHNER}), "

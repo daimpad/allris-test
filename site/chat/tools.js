@@ -21,7 +21,7 @@ const SUFFIX = String.raw`[\p{L}.-]*(?:straße|strasse|str\.|weg|platz|gasse|all
 export const OHNE_NR = "[Hausnummer ausgelassen]";
 const STAENDE = ["entschieden", "beraten, ohne Entscheidung", "in Beratung", "offen", "ohne Beratungsfolge"];
 const THEMEN = ["verkehr", "bauen", "umwelt", "bildung", "kinder", "soziales", "kultur", "wirtschaft", "sicherheit", "beteiligung"];
-const KENNZAHLEN = ["einwohner", "unter_18", "ab_65", "miete", "bodenrichtwert", "haltestellen", "kitas", "kita_plaetze_u3", "kita_plaetze_ue3", "hitze", "ueberschwemmung"];
+const KENNZAHLEN = ["einwohner", "unter_18", "ab_65", "miete", "bodenrichtwert", "haltestellen", "kitas", "kita_plaetze_u3", "kita_plaetze_ue3", "hitze", "ueberschwemmung", "wahlbeteiligung"];
 const GANZ_BONN = new Set(["ganz bonn", "stadt bonn", "bundesstadt bonn", "bonn gesamt", "gesamte stadt", "gesamtstadt"]);
 const DATUM = { type: "string", description: "Datum als JJJJ, JJJJ-MM oder JJJJ-MM-TT" };
 const SEITE = { type: "integer", minimum: 1, description: "Ergebnisseite (je 10 Treffer), Standard 1" };
@@ -125,7 +125,7 @@ export const TOOLS = [
   },
   {
     name: "hole_kontext",
-    description: "Zahlen zu einem Ortsteil, Stadtbezirk oder ganz Bonn zur Einordnung: Einwohner, Altersanteile, Nettokaltmiete (Zensus 2022), Bodenrichtwert Wohnbauland, Haltestellen, Kitas, Hitzebelastung, Überschwemmungsgebiet; je Wert Quelle, Lizenz, Stand und Methode, dazu der Vergleichswert des Stadtbezirks bzw. von ganz Bonn. Alle Werte abgeleitet (auf Gebiete umgerechnet); kein Beleg für eine Vorlage.",
+    description: "Zahlen zu einem Ortsteil, Stadtbezirk oder ganz Bonn zur Einordnung: Einwohner, Altersanteile, Nettokaltmiete (Zensus 2022), Bodenrichtwert Wohnbauland, Haltestellen, Kitas, Hitzebelastung, Überschwemmungsgebiet, Wahlbeteiligung der Ratswahl 2025 (geschätzt); je Wert Quelle, Lizenz, Stand und Methode, dazu der Vergleichswert des Stadtbezirks bzw. von ganz Bonn. Alle Werte abgeleitet (auf Gebiete umgerechnet); kein Beleg für eine Vorlage.",
     parameters: {
       type: "object", additionalProperties: false, required: ["gebiet"],
       properties: {
@@ -588,7 +588,9 @@ export function createTools({ load, today: fest = null } = {}) {
       const kennzahlen = keys.map((k) => {
         const m = d.meta.kennzahlen[k], q = d.meta.quellen[m.quelle] || {};
         const o = { kennzahl: m.titel, wert: werte[k] ?? null, einheit: m.einheit, ...(vergleich ? { vergleich: vergleich[k] ?? null } : {}),
-          quelle: q.titel, lizenz: q.lizenz, stand: q.stand, link: q.url, methode: m.methode };
+          quelle: q.titel, lizenz: q.lizenz, stand: q.stand, link: q.url, methode: m.methode,
+          ...(q.uebergang ? { uebergang: q.uebergang } : {}),
+          ...(werte[k] == null && m.ohne_wert && !(ebene === "ortsteil" && werte.einwohner < d.meta.mindest_einwohner) ? { ohne_wert: m.ohne_wert } : {}) };
         // Bodenrichtwert: Anteil der Einwohner in einer Zone für Wohnbauland; Hinweis, wenn viele außerhalb wohnen
         const cov = werte.bodenrichtwert_abdeckung, ab = d.meta.bodenrichtwert_hinweis_ohne_zone;
         if (k === "bodenrichtwert" && cov != null) {
