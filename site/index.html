@@ -225,7 +225,7 @@
           <span class="card-text">Für Open-Data-Portale; mit Lizenzen je Datei.</span></a>
       </div>
       <p class="mega-links"><button type="button" class="btn btn-soft" data-about="pruefung"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Wie verlässlich sind die Angaben?</button>
-        <button type="button" class="btn btn-soft" data-about="version"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Version 1.0: Was ist neu?</button></p>
+        <button type="button" class="btn btn-soft" data-neu><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Version 1.0: Was ist neu?</button></p>
     </section>
   </header>
 
@@ -464,11 +464,8 @@
         <dt>ohne Beratungsfolge</dt><dd>Für die Vorlage ist keine Beratung in einem Gremium vorgesehen oder erfasst.</dd>
       </dl>
 
-      <h3>Wie sicher sind die Angaben?</h3>
-      <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Einige sind erschlossen, etwa der Ort aus dem Titel einer Vorlage oder das Datum einer Sitzung. Hat eine Vorlage keinen Ort im Titel, wird auch der Text ihres Dokuments ausgewertet; gezeigt wird dann nur der erkannte Ort, kein Textauszug. Die Suche kann auf Wunsch auch im Text der Dokumente suchen (über OParl-Lite, erst nach einem Klick). Sie sind als „abgeleitet“ gekennzeichnet. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt oder eindeutig erkannter Bebauungsplan mit Geltungsbereich), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt. Wie gut das gelingt, zeigen Stichproben (nächster Abschnitt).</p>
-
-      <h3 id="about-pruefung" tabindex="-1">Wie verlässlich sind die Angaben?</h3>
-      <p>Abgeleitete Angaben werden in Stichproben von Hand geprüft (richtig / teilweise / falsch):</p>
+      <h3 id="about-pruefung" tabindex="-1">Wie sicher sind die Angaben?</h3>
+      <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Erschlossene Angaben – etwa der Ort aus dem Titel oder dem Text eines Dokuments, das Datum einer Sitzung oder das Thema – sind als „abgeleitet“ gekennzeichnet; aus Dokumenten zeigt die Karte nur den erkannten Ort, keinen Textauszug. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt oder eindeutig erkannter Bebauungsplan mit Geltungsbereich), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt. Abgeleitete Angaben werden in Stichproben von Hand geprüft (richtig / teilweise / falsch):</p>
       <ul>
         <li>Ort aus dem Titel, Endenich (50 Vorlagen, 20.10.2026): 41 / 4 / 5; danach zwei Regeln verbessert</li>
         <li>Gebäude und Anlagen im Titel (30 Vorlagen, 22.10.2026): 24 / 6 / 0</li>
@@ -481,10 +478,16 @@
       <p>„Teilweise“ heißt: im Kern richtig, eine Einzelheit ungenau. Ein Teil der Urteile sind Vorschläge, denen der Auftraggeber im Gespräch nicht widersprochen hat. Die Prüfbögen stehen im Datenpaket und im <a href="https://github.com/daimpad/allris-test/blob/main/ABNAHME.md">Projekt auf GitHub</a>.</p>
 
       <h3>Nach Themen und Parteien suchen</h3>
-      <p>In der Liste lassen sich Vorlagen nach Thema (zum Beispiel Verkehr, Bauen, Umwelt) und nach Partei oder Fraktion filtern – im gewählten Gebiet oder in ganz Bonn. Die Themen sind aus dem zuständigen Amt, dem beratenden Ausschuss und Stichworten im Titel abgeleitet; bei jeder Vorlage steht, worauf die Zuordnung beruht. Parteien stammen aus den Einreichenden eines Antrags; auf Wunsch erscheinen auch die Antworten der Verwaltung darauf.</p>
+      <p>In der Liste lassen sich Vorlagen nach Thema (zum Beispiel Verkehr, Bauen, Umwelt) und nach Partei oder Fraktion filtern – im gewählten Gebiet oder in ganz Bonn. Die Themen sind aus dem zuständigen Amt, dem beratenden Ausschuss und Stichworten im Titel abgeleitet; bei jeder Vorlage steht, worauf die Zuordnung beruht. Parteien stammen aus den Einreichenden eines Antrags; auf Wunsch erscheinen auch die Antworten der Verwaltung darauf. Die Suche kann auch im Text der Dokumente suchen (über OParl-Lite, erst nach einem Klick).</p>
 
-      <h3 id="about-themen" tabindex="-1">Themenseiten</h3>
-      <p>Unter <a href="thema/">Themenseiten</a> (Menü „Auswertung“) ordnen fünf Seiten die Vorlagen seit Beginn der Wahlperiode nach Strängen: Kultur und Haushalt, Verkehr und Mobilität, Schule und Bildung, Wohnen und Bauen sowie Klima und Umwelt. Jede Seite zeigt auf einen Blick, wo ein Verfahren steht und wann darüber beraten wird, mit den nächsten Sitzungen und Fristen, einem Kalender und einem Feed. Die Zuordnung folgt festen Regeln je Thema; bei jeder Vorlage steht, worauf sie beruht. Eine Vorlage kann auf mehreren Themenseiten stehen. Beträge nennen die Seiten nur je Produktbereich aus den Haushaltsplänen der Stadt (Abschnitt „Haushalt“, Ist und Plan getrennt), nicht je Vorlage; Bewertungen enthalten sie nicht.</p>
+      <h3 id="about-seiten" tabindex="-1">Weitere Seiten</h3>
+      <ul>
+        <li><a href="thema/">Themenseiten</a>: fünf Themen (Kultur und Haushalt, Verkehr und Mobilität, Schule und Bildung, Wohnen und Bauen, Klima und Umwelt) mit Prozessbild, nächsten Sitzungen und Haushalt im Produktbereich; die Zuordnung folgt festen Regeln, bei jeder Vorlage steht der Grund.</li>
+        <li><a href="haushalt/">Haushalt auf einen Blick</a>: Aufwendungen der 17 Produktbereiche, Plan und Ist aus den Haushaltsplänen, nominal und ohne Bewertung.</li>
+        <li>Reiter „Prozesse“: Verfahren mit Schritten und Fristen, Gremien mit Zuständigkeit und Besetzung, Ämter.</li>
+        <li>Zahlen zum Gebiet: in der Liste unter „Zahlen zu …“ und als Flächenfarbe auf der Karte (abgeleitet, zur Einordnung).</li>
+        <li><a href="gebiete/">Vorlagen nach Gebiet</a>: eine Übersichtsseite je Ortsteil und Stadtbezirk.</li>
+      </ul>
 
       <h3>Ebenen und Legenden</h3>
       <p>Unter „Ebenen“ auf der Karte lassen sich die Geltungsbereiche der Bebauungspläne, gemeldete Baustellen, Überschwemmungsgebiete und Bodenrichtwerte einblenden, die Punkte nach Thema färben und der Kartenhintergrund farbig zeigen. Die Legenden oben links sind eingeklappt und öffnen sich mit einem Klick; in der obersten wählen Sie, wonach die Flächen gefärbt werden. Darunter stehen Quellen, Lizenzen und Datenstand. Der Ratsassistent beantwortet Fragen zu den Vorlagen; Sie brauchen dafür einen eigenen Schlüssel eines KI-Anbieters.</p>
@@ -496,9 +499,26 @@
       <p>Sie ersetzt nicht das Original: Maßgeblich ist immer das Dokument im Ratsinformationssystem, zu dem jede Vorlage verlinkt. Nichtöffentliche Beratungen, die Arbeit innerhalb der Verwaltung und die Umsetzung von Beschlüssen sind von außen nicht einsehbar. Gemeldete Baustellen der Stadt können ein Hinweis auf die Umsetzung sein („Mögliche Umsetzung“), sind aber kein Beleg.</p>
 
       <h3 id="about-mitwirken" tabindex="-1">Selbst mitwirken</h3>
-      <p>Bei jedem Vorgang zeigt der Abschnitt „Selbst mitwirken“, welche Wege in seinem Stand offen sind, mit Frist und Rechtsgrundlage. Sitzungen des Rates und der Bezirksvertretungen sind in der Regel öffentlich. Mit einem Bürgerantrag (§ 24 Gemeindeordnung NRW) können Sie Anregungen und Beschwerden selbst einbringen. Wie das geht, erklärt die <a href="https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php" target="_blank" rel="noopener">Seite der Stadt Bonn zum Bürgerantrag</a>.</p>
+      <p>Welche Wege bei einem Vorgang offen sind, zeigt dort der Abschnitt „Selbst mitwirken“; alle Wege je Stadtbezirk stehen unter „Mitmachen“ → „Alle Wege im Überblick“.</p>
 
-      <h3 id="about-version" tabindex="-1">Version 1.0 (22.10.2026)</h3>
+      <h3>Wer steckt dahinter?</h3>
+      <p>Die RIS-Karte hat <a href="https://paderta.com/" target="_blank" rel="noopener">Damian Paderta<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a> im Rahmen des Hackathons „Hack den Stadtrat“ erstellt; Hintergründe stehen im Blogbeitrag <a href="https://paderta.com/ris-karte-bonn-ratsinformationsdaten-der-stadt-bonn-im-ueberblick/" target="_blank" rel="noopener">„RIS-Karte Bonn – Ratsinformationsdaten der Stadt Bonn im Überblick“<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a>. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Das Modell der Verfahren nach Regelwerk (Abschnitt „Nach Regelwerk (Soll)“ und Hinweise unter „Selbst mitwirken“) stammt aus dem Projekt <a href="https://github.com/anster2025/bonn-entscheidet" target="_blank" rel="noopener">„Bonn entscheidet“<span class="visually-hidden"> (GitHub, neuer Tab)</span></a> von <a href="https://github.com/anster2025" target="_blank" rel="noopener">Thomas (anster2025)<span class="visually-hidden"> (GitHub, neuer Tab)</span></a>, MIT-Lizenz; die RIS-Karte hat es um eigene, belegte Schritte ergänzt. Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
+
+      <h3 id="about-impressum" tabindex="-1">Kontakt, Impressum und Datenschutz</h3>
+      <p>Schrift und Programmbibliotheken kommen vom Server dieser Seite. Nur die Kartenkacheln lädt Ihr Browser von OpenStreetMap (tile.openstreetmap.org); die Suche im Text der Dokumente fragt erst nach einem Klick OParl-Lite (oparl.bonn.machdenstaat.de) ab. Der Ratsassistent sendet Fragen erst, wenn Sie ihn einrichten, und nur an den gewählten Anbieter.</p>
+      <p>Kontakt: <a href="mailto:contact@nozilla.de">contact@nozilla.de</a><br>
+        <a href="https://nozilla.de/impressum/" target="_blank" rel="noopener">Impressum<span class="visually-hidden"> (nozilla.de, neuer Tab)</span></a> · <a href="datenschutz.html">Datenschutz</a></p>
+      <p><button type="button" class="btn btn-soft" data-neu><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Was ist neu?</button></p>
+    </div>
+  </dialog>
+
+  <dialog id="neu" class="glass" aria-labelledby="neu-heading">
+    <div class="panel-head">
+      <h2 id="neu-heading">Was ist neu?</h2>
+      <button type="button" class="icon-btn" data-close-dialog aria-label="Schließen">×</button>
+    </div>
+    <div class="about-body">
+      <h3>Version 1.0 (22.10.2026)</h3>
       <p>Neu seit der ersten Fassung:</p>
       <ul>
         <li>Kurzfassungen: Zu vielen Vorlagen steht eine kurze Zusammenfassung, mit einem Sprachmodell erstellt und als solche gekennzeichnet.</li>
@@ -518,14 +538,6 @@
         <li>Zahlen zu den Ortsteilen (Einwohner, Altersgruppen, Bodenrichtwerte, Haltestellen, Kitas, Hitze, Überschwemmung) als Flächenfarbe und im Vorgang.</li>
         <li>Datenschutz: Hausnummern auch in Titeln zu Bauanträgen und Fällgenehmigungen ausgelassen.</li>
       </ul>
-
-      <h3>Wer steckt dahinter?</h3>
-      <p>Die RIS-Karte hat <a href="https://paderta.com/" target="_blank" rel="noopener">Damian Paderta<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a> im Rahmen des Hackathons „Hack den Stadtrat“ erstellt; Hintergründe stehen im Blogbeitrag <a href="https://paderta.com/ris-karte-bonn-ratsinformationsdaten-der-stadt-bonn-im-ueberblick/" target="_blank" rel="noopener">„RIS-Karte Bonn – Ratsinformationsdaten der Stadt Bonn im Überblick“<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a>. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Das Modell der Verfahren nach Regelwerk (Abschnitt „Nach Regelwerk (Soll)“ und Hinweise unter „Selbst mitwirken“) stammt aus dem Projekt <a href="https://github.com/anster2025/bonn-entscheidet" target="_blank" rel="noopener">„Bonn entscheidet“<span class="visually-hidden"> (GitHub, neuer Tab)</span></a> von <a href="https://github.com/anster2025" target="_blank" rel="noopener">Thomas (anster2025)<span class="visually-hidden"> (GitHub, neuer Tab)</span></a>, MIT-Lizenz; die RIS-Karte hat es um eigene, belegte Schritte ergänzt. Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
-
-      <h3 id="about-impressum" tabindex="-1">Kontakt, Impressum und Datenschutz</h3>
-      <p>Schrift und Programmbibliotheken kommen vom Server dieser Seite. Nur die Kartenkacheln lädt Ihr Browser von OpenStreetMap (tile.openstreetmap.org); die Suche im Text der Dokumente fragt erst nach einem Klick OParl-Lite (oparl.bonn.machdenstaat.de) ab. Der Ratsassistent sendet Fragen erst, wenn Sie ihn einrichten, und nur an den gewählten Anbieter.</p>
-      <p>Kontakt: <a href="mailto:contact@nozilla.de">contact@nozilla.de</a><br>
-        <a href="https://nozilla.de/impressum/" target="_blank" rel="noopener">Impressum<span class="visually-hidden"> (nozilla.de, neuer Tab)</span></a> · <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </dialog>
 

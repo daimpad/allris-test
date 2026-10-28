@@ -148,7 +148,7 @@
     if (s) { setPanel(s.dataset.show, true); focusPanel(s.dataset.show); }
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key !== "Escape" || $("#about").open) return;
+    if (e.key !== "Escape" || $("#about").open || $("#neu").open) return;
     if (openMegaId) return closeMega(true);
     const overlay = OVERLAYS.find((id) => !document.getElementById(id).hidden);
     if (overlay) return closePanel(overlay);
@@ -248,6 +248,12 @@
     const h = document.getElementById("about-" + b.dataset.about);
     if (h) { h.scrollIntoView({ block: "start" }); h.focus(); }
   });
+  // „Was ist neu?“ in einem eigenen Fenster (aus „Über“ und dem Menü „Daten“)
+  document.addEventListener("click", (e) => {
+    if (e.target.closest("[data-neu]")) { closeMega(); if ($("#about").open) $("#about").close(); $("#neu").showModal(); }
+    if (e.target.closest("[data-close-dialog]")) e.target.closest("dialog").close();
+  });
+  $("#neu").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
 
   // --- Gebiet ----------------------------------------------------------------------------------------
   function parseArea(value) {
