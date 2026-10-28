@@ -451,7 +451,12 @@ body.detail-closed #timeline-wrap { right: 16px; }
 /* Kartenhintergrund grau (Standard) oder farbig; der Filter wirkt nur auf die Kacheln */
 #map.map-gray .leaflet-tile-pane { filter: grayscale(1) contrast(.9) brightness(1.08); }
 .map-style { font: 500 13px/1 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); cursor: pointer; }
-.map-legend { font: 400 12.5px/1.4 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); max-width: 260px; }
+.map-legend { font: 400 12.5px/1.4 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); }
+/* Legenden übereinander oben links (Flächen, Punkte, Quellen), alle eingeklappt; zusammen höchstens so hoch wie die Karte */
+.map-stack { display: flex; flex-direction: column; gap: 8px; width: 260px; margin-top: 96px !important; max-height: calc(100vh - 120px); overflow-y: auto; overscroll-behavior: contain; }
+.map-stack > details { flex: none; }   /* nicht zusammendrücken: der Stapel rollt als Ganzes */
+.map-sources p { margin: 6px 0 0; font-size: 12px; color: var(--text-muted); }
+.map-sources p:first-of-type { color: var(--text); }
 .map-legend summary { cursor: pointer; font-weight: 600; }
 /* mit zugeschalteten Ebenen wird die Legende lang: höchstens 45 % der Fensterhöhe, Titel bleibt sichtbar */
 .map-legend[open] { max-height: 45vh; overflow-y: auto; overscroll-behavior: contain; }
@@ -460,8 +465,11 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .map-legend li { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
 .map-legend .swatch { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(15, 15, 20, 0.25); flex: none; }
 .map-legend .hint { margin: 6px 0 0; }
-.map-style.map-menu { display: none; }
-.map-style.map-menu[aria-expanded="true"] { background: var(--accent-fill); color: #fff; border-color: transparent; }
+/* „Ebenen“: deutliche Schaltfläche; die Ebenen darunter erst nach dem Öffnen (alle Breiten) */
+.map-style.map-menu { font: 600 15px/1 var(--font-body); padding: 12px 20px; min-height: 44px; background: var(--accent-ink); color: #fff; border-color: transparent; border-radius: 14px; box-shadow: 0 6px 18px rgba(109, 40, 217, 0.35); }
+.map-style.map-menu[aria-expanded="true"] { background: var(--accent-fill); }
+.map-menu-n { display: inline-block; min-width: 20px; margin-left: 6px; padding: 2px 6px; border-radius: 999px; background: #fff; color: var(--accent-ink); font-size: 12px; text-align: center; }
+.leaflet-container:not(.map-menu-open) .leaflet-right .map-style:not(.map-menu):not(.map-whole) { display: none; }
 .map-style[aria-pressed="true"] { background: var(--accent-fill); color: #fff; border-color: transparent; }
 
 /* Kartensteuerung und Namensnennung neben den Flächen, nicht darunter */
@@ -683,8 +691,6 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
   body.list-open .leaflet-left, body.chat-open .leaflet-left { left: 0; }
   .step .jump { display: none; }
   .map-style { min-height: 44px; }
-  .map-style.map-menu { display: block; }
-  .leaflet-container:not(.map-menu-open) .leaflet-right .map-style:not(.map-menu) { display: none; }
   .tl-btn, .tl-chip, .icon-btn, .chip { min-width: 44px; min-height: 44px; }
   .bar { grid-template-columns: 1fr 80px 40px; }
   .tour-card { width: calc(100vw - 20px); max-height: 46vh; }
@@ -703,7 +709,7 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .nav-dim { color: var(--text-muted); font-size: 12px; }
 .leaflet-tooltip.nav-label .nav-n { display: block; text-align: center; font-size: 11px; font-weight: 700; opacity: 0.85; }
 .leaflet-tooltip.nav-label-bz .nav-n { font-size: 13px; }
-.nav-legend { margin-top: 96px !important; padding: 8px 12px; border-radius: 14px; width: 232px; font: 12px/1.35 var(--font-body); color: var(--text);
+.nav-legend { padding: 8px 12px; border-radius: 14px; font: 12px/1.35 var(--font-body); color: var(--text);
   background: var(--surface-strong); border: 1px solid var(--border-alt); box-shadow: var(--shadow); }
 .nav-legend summary { cursor: pointer; font-weight: 600; }
 .nav-legend p { margin: 6px 0 2px; color: var(--text-muted); font-size: 11px; }
@@ -716,7 +722,7 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .nav-metric { display: grid; gap: 3px; margin: 8px 0 2px; font-size: 11px; color: var(--text-muted); }
 .nav-metric select { font: inherit; font-size: 12px; color: var(--text); padding: 4px 6px; border-radius: 8px;
   border: 1px solid var(--border-alt); background: var(--surface); width: 100%; box-sizing: border-box; min-width: 0; }
-@media (max-width: 900px) { .nav-legend { margin-top: 70px !important; width: auto; max-width: 232px; } }
+@media (max-width: 900px) { .map-stack { margin-top: 70px !important; width: 232px; max-height: calc(100vh - 270px); } }
 
 /* Mitmachen in Bonn (site/beteiligung.js) */
 #bt-body h3 { font-size: 15px; margin: 16px 0 8px; }
