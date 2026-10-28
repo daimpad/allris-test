@@ -34,7 +34,7 @@ def write(site=Path("_site"), site_url=None):
     for name in PAGES:
         page = site / name
         if page.exists():
-            page.write_text(page.read_text(encoding="utf-8").replace(DEFAULT_URL, site_url), encoding="utf-8")
+            page.write_text(gebietsseiten.neuer_tab(page.read_text(encoding="utf-8").replace(DEFAULT_URL, site_url)), encoding="utf-8")
     (site / "robots.txt").write_text(robots(site_url), encoding="utf-8")
     areas = gebietsseiten.write(site, site_url)
     themen = [pfad for t in THEMENSEITEN for pfad in dossier.write(t, site, site_url, gebietsseiten._page)]
