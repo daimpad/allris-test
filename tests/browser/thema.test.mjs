@@ -247,14 +247,15 @@ test("Haushalt: Klick führt zu den Produktgruppen und weiter zu den Aufwandsart
     assert.match((await treemaps(page, true))[0], /^Ist 2023: Produktgruppen im Produktbereich 04/);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     assert.deepEqual(await axe(page), []);
-    // Ebene 3: Aufwandsarten der Produktgruppe, ohne Treemap
+    // Ebene 3: Aufwandsarten der Produktgruppe als Kacheln (site/haushalt.js zeichnet sie aus den Balken)
     await page.locator(`#zoom-04 .hh-v2 .hh-${format} a[href="#pg-1-04-07"]`).click();
     assert.deepEqual(await ebenen(page), ["pg-1-04-07"]);
     assert.equal(await page.locator("#pg-1-04-07 h2").textContent(), "Produktgruppe 1.04.07 Stadtarchiv");
     assert.match(await page.locator("#pg-1-04-07 .hh-pfad").textContent(), /^Alle Produktbereiche › 04 Kultur und Wissenschaft › 1\.04\.07 Stadtarchiv$/);
     assert.match(await page.locator("#pg-1-04-07").textContent(), /Name in Haushaltsplan 2023\/2024: Z\. f\. Stadtgesch\. u\. Erinnerungskulturen/);
-    assert.deepEqual(await treemaps(page), []);
-    assert.equal(await page.locator("#pg-1-04-07 .hh-balken.hh-v2").isVisible(), true, "Balken der gewählten Ansicht");
+    assert.deepEqual(await treemaps(page, true), ["Ist 2023: Aufwandsarten der Produktgruppe 1.04.07 Stadtarchiv"]);
+    assert.equal(await page.locator(`#pg-1-04-07 .hh-v2 .hh-${format} rect`).count(), 5, "Transfers leer: fünf Kacheln");
+    assert.equal(await page.locator("#pg-1-04-07 .hh-balken").filter({ visible: true }).count(), 0, "Balken nur ohne Skript");
     assert.equal(await page.locator("#pg-1-04-07 tbody tr").count(), 7);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     assert.deepEqual(await axe(page), []);
@@ -267,6 +268,43 @@ test("Haushalt: Klick führt zu den Produktgruppen und weiter zu den Aufwandsart
     assert.deepEqual(page.errors, []);
     await page.close();
   }
+});
+
+test("Haushalt: Zoom beim Wechsel der Ebene, ohne Bewegung bei reduzierter Bewegung, ohne Skript Balken", async () => {
+  const zoom = (page) => page.locator(".hh-wahl").getAttribute("data-zoom");
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, bypassCSP: true });
+  await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
+  await page.locator('.hh-haupt .hh-v0 .hh-breit a[href="#zoom-04"]').click();
+  assert.equal(await zoom(page), "hinein", "Kachel wächst");
+  await page.goBack();   // heraus, auch mit dem Zurück des Browsers
+  assert.deepEqual(await ebenen(page), []);
+  assert.equal(await zoom(page), "heraus", "zurück auf die Kachel");
+  await page.close();
+  const ruhig = await browser.newPage({ viewport: { width: 1440, height: 900 }, bypassCSP: true, reducedMotion: "reduce" });
+  await ruhig.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
+  await ruhig.locator('.hh-haupt .hh-v0 .hh-breit a[href="#zoom-04"]').click();
+  assert.deepEqual(await ebenen(ruhig), ["zoom-04"]);
+  assert.equal(await zoom(ruhig), null, "ohne Animation");
+  await ruhig.close();
+  const ohne = await browser.newPage({ viewport: { width: 1440, height: 900 }, javaScriptEnabled: false });
+  await ohne.goto(SITE + "haushalt/#pg-1-04-07");
+  assert.equal(await ohne.locator("#pg-1-04-07 .hh-balken.hh-v0").isVisible(), true, "ohne Skript: Balken");
+  assert.equal(await ohne.locator("#pg-1-04-07 svg").count(), 0);
+  await ohne.close();
+});
+
+test("Haushalt: Begriffe, Grenzen und Quellen in zugeklappten Akkordeons", async () => {
+  const page = await browser.newPage({ viewport: { width: 390, height: 900 }, bypassCSP: true });
+  await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
+  const mehr = page.locator("details.hh-mehr");
+  assert.deepEqual(await mehr.locator("summary").allTextContents(), ["So lesen Sie die Zahlen", "Was diese Seite nicht zeigt", "Quellen, Prüfung und Lizenz"]);
+  assert.deepEqual(await mehr.evaluateAll((ds) => ds.map((d) => d.open)), [false, false, false]);
+  await page.locator("#lesen summary").focus();
+  await page.keyboard.press("Enter");
+  assert.match(await page.locator("#lesen").textContent(), /Kontenarten, keine Aufgaben/);
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 390);
+  assert.deepEqual(await axe(page), []);
+  await page.close();
 });
 
 test("Haushalt: negative und leere Werte ohne Fläche und Balkenstück, 0 € nur in der Tabelle, Tastatur", async () => {

@@ -123,8 +123,8 @@ class Ebenen(unittest.TestCase):
         self.assertIn("1.04.13 Internationale Wissenschaft", z)
         self.assertIn("Name in Haushaltsplan 2023/2024: Z. f. Stadtgesch. u. Erinnerungskulturen", z)
         self.assertIn("Name in Haushaltsplan 2023/2024: Stadtmuseum", z)
-        self.assertIn("Produktgruppen mit 0 € in einer Ansicht stehen nur in der Tabelle.", z)
-        self.assertIn("Kontenarten, keine Aufgaben", z)
+        self.assertIn("Begriffe oben unter „So lesen Sie die Zahlen“.", z)
+        self.assertNotIn("Kontenarten", z)   # Erklärung einmal im Akkordeon, nicht in jedem Abschnitt
         self.assertNotIn("2027", z)   # keine Finanzplanung
 
     def test_ebene_3_aufwandsarten_der_produktgruppe(self):
@@ -133,8 +133,11 @@ class Ebenen(unittest.TestCase):
                       '<span aria-current="location">1.04.07 Stadtarchiv</span>', g)
         self.assertIn(">Produktgruppe 1.04.07 Stadtarchiv</h2>", g)
         self.assertIn("Amt 41-2 · Name in Haushaltsplan 2023/2024: Z. f. Stadtgesch. u. Erinnerungskulturen", g)
-        self.assertNotIn("<svg", g)   # keine Treemap auf Ebene 3
+        self.assertNotIn("<svg", g)   # keine Treemap im HTML; die Kacheln zeichnet site/haushalt.js aus den Balken
         self.assertEqual(g.count('hh-balken" aria-hidden="true"'), 3)
+        self.assertIn('<i class="hh-f11" style="width:', g)
+        self.assertEqual(len(re.findall(r'<i class="hh-f\d\d" style="width:[\d.]+%" data-b="\d+"></i>', g)), 15)
+        self.assertNotIn("Kontenarten", g)
         self.assertEqual(re.findall(r'<tr class="hh-z(\d\d)">', g), ["11", "12", "13", "14", "15", "16"])
         self.assertIn('PB04.pdf#page=29">Haushaltsplan 2025/2026, PB04.pdf, S. 29</a>', g)
         self.assertNotIn("verantwortlich", g)
@@ -151,6 +154,15 @@ class Ebenen(unittest.TestCase):
         self.assertIn("<td>−86.000 €<br><small>negativ, ohne Fläche</small></td>", g)
         self.assertNotIn("hh-f15", re.search(r'<div class="hh-ansicht hh-v2 hh-balken"[^>]*>(.*?)</div>', g).group(1))
         self.assertIn("Negativ sind: Transferaufwendungen im Ist 2023 (−86.000 €)", g)
+
+    def test_erklaerungen_einmal_im_akkordeon(self):
+        oben = self.html.split('<div class="hh-wahl"')[0]
+        self.assertIn('<details class="hh-mehr" id="lesen">', oben)
+        self.assertNotIn("<details open", self.html)   # alle Akkordeons zugeklappt
+        self.assertEqual(self.html.count("Kontenarten, keine Aufgaben"), 1)
+        self.assertIn("<summary>Was diese Seite nicht zeigt</summary>", self.html)
+        self.assertIn("<summary>Quellen, Prüfung und Lizenz</summary>", self.html)
+        self.assertIn('<script src="../haushalt.js" defer></script>', hs.stil(self.d))
 
     def test_leere_zeilen(self):
         z = abschnitt(self.html, "zoom-16")

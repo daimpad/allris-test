@@ -60,3 +60,16 @@
   - Ansichtswechsel auf jeder Ebene;
   - Tastatur, 1440 und 390 px ohne waagerechtes Scrollen;
   - axe ohne Verstöße.
+
+## Nachtrag: Zoom, Kacheln bis Ebene 3, Akkordeons (28.10.2026)
+- **Entscheidungen des Auftraggebers:** Ein Klick auf eine Kachel zoomt in ihre Unterteilung, auch Ebene 3 als Kacheln. Erklärungen stehen einmal in Akkordeons statt in jedem Abschnitt.
+- **Skript `site/haushalt.js`:**
+  - Beim Wechsel der Ebene wächst die angeklickte Kachel auf die ganze Fläche; heraus schrumpft die Ebene auf die Kachel zurück, auch mit dem Zurück des Browsers.
+  - Die Lage der Kachel kommt aus ihrem Rechteck im SVG der übergeordneten Ebene.
+  - Ebene 3 zeichnet das Skript als Kacheln aus den Beträgen der Balken (`data-b`). Die Schrift ist auf dunklen Flächen weiß; dafür ist Blau (Personal) leicht abgedunkelt (`#3a77b3`, Kontrast 4,7).
+  - Ohne Skript gilt der Sprung über `:target` mit Balken. Bei reduzierter Bewegung wechselt die Ebene ohne Animation.
+- **Akkordeons, zugeklappt:**
+  - „So lesen Sie die Zahlen“ steht oben (Betrag, Plan und Ist, Ebenen, Aufwandsarten, „leer“ und 0 €, negative Werte, Farben).
+  - „Was diese Seite nicht zeigt“ und „Quellen, Prüfung und Lizenz“ stehen unten.
+  - Die Abschnitte der Ebene 2 verweisen nur noch auf die Begriffe; die Ebenen 2 und 3 nennen weiter ihre negativen Werte und Fundstellen.
+- **Größe:** 799 KB (gepackt 74 KB), Skript 10 KB.
