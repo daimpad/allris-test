@@ -73,3 +73,8 @@
   - „Was diese Seite nicht zeigt“ und „Quellen, Prüfung und Lizenz“ stehen unten.
   - Die Abschnitte der Ebene 2 verweisen nur noch auf die Begriffe; die Ebenen 2 und 3 nennen weiter ihre negativen Werte und Fundstellen.
 - **Größe:** 799 KB (gepackt 74 KB), Skript 10 KB.
+
+## Nachtrag: Farben nach Anteil (28.10.2026)
+- **Anlass:** Die Treemap färbte nur die fünf Produktbereiche mit Themenseite (in deren Themenfarben); die Farbe zeigte weder Betrag noch Ordnung.
+- **Entscheidung des Auftraggebers:** eine Farbe in fünf Helligkeitsstufen nach dem Anteil an der Ebene darüber (Ebene 1: Summe der Ansicht, Ebene 2: Produktbereich): unter 2 %, 2 bis 5 %, 5 bis 10 %, 10 bis 20 %, ab 20 %; je dunkler, desto größer. Eine bunte Palette mit 17 Farben ist nicht sicher unterscheidbar. Ebene 3 behält die festen Farben der Aufwandsarten (Identität, passend zur Tabelle).
+- **Umsetzung:** `haushaltsseite.STUFEN`, Klassen `s1` … `s5` an den Flächen, Legende unter jeder Treemap, Begriffe unter „So lesen Sie die Zahlen“; Lila von `#ede9fe` bis `#5b21b6`, Schrift dunkel auf den Stufen 1 bis 3 (Kontrast 5,1 bis 11,7), weiß auf 4 und 5 (5,7 und 9,0). Die Themenseiten stehen weiter in der Tabelle und unter „So lesen Sie die Zahlen“.
