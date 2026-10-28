@@ -12,6 +12,7 @@ from xml.sax.saxutils import escape, quoteattr
 from . import config
 
 FEED_LIMIT = 100
+GANZ_BONN = "ganz-bonn"   # Feed über alle Gebiete (Seite rss/, Entscheidung des Auftraggebers 28.10.2026)
 RIGHTS = ("Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite "
           "Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.")
 LICENCE = {  # EU-Vokabular für Lizenzen (DCAT-AP)
@@ -84,24 +85,31 @@ def has_paper_feed(p, since):
     return (p["date"] or "") >= since or p["stand"] in OPEN
 
 
+def feed_url(name):
+    return f"{config.SITE_URL}data/export/bonn/feeds/{name}.xml"
+
+
 def write_feeds(out, areas, cache, names, home, slug, since):
-    """Je Gebiet die letzten Ereignisse, je Vorlage (siehe has_paper_feed) alle Ereignisse."""
+    """Je Gebiet die letzten Ereignisse, dazu ein Feed über ganz Bonn (alle Vorlagen, jede einmal; die Einträge
+    verweisen auf das Gebiet der Vorlage und tragen dieselben IDs wie in den Gebietsfeeds); je Vorlage (siehe
+    has_paper_feed) alle Ereignisse."""
     base = f"{config.SITE_URL}data/export/bonn/feeds/"
     out.mkdir(parents=True, exist_ok=True)
     for key, ids in areas.items():
-        if key == "gesamt":
-            continue
+        ganz = key == "gesamt"
         entries = []
         for pid in ids:
             p = cache[pid]
             for e in events(p):
-                entries.append({**e, "link": site_link(key, p["reference"]), "original": p["web"]})
+                entries.append({**e, "link": site_link(home.get(pid, key) if ganz else key, p["reference"]),
+                                "original": p["web"]})
         entries = sorted(entries, key=lambda e: (e["date"], e["id"]), reverse=True)[:FEED_LIMIT]
-        name = key.replace(":", "-")
+        name = GANZ_BONN if ganz else key.replace(":", "-")
+        wo = "ganz Bonn" if ganz else names[key]
         (out / f"{name}.xml").write_text(_atom(
-            f"tag:allris-bonn,2026:feed/{name}", f"RIS-Karte Bonn – {names[key]}",
-            f"Neue Vorlagen und Beratungsergebnisse: {names[key]}", f"{base}{name}.xml",
-            site_link(key), entries))
+            f"tag:allris-bonn,2026:feed/{name}", f"RIS-Karte Bonn – {wo}",
+            f"Neue Vorlagen und Beratungsergebnisse: {wo}", f"{base}{name}.xml",
+            site_link("bonn:ganz" if ganz else key), entries))
     vdir = out / "vorlagen"
     vdir.mkdir(parents=True, exist_ok=True)
     for pid, p in cache.items():

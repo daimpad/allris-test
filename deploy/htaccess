@@ -7,16 +7,18 @@ AddType application/geo+json .geojson
 AddType text/tab-separated-values .tsv
 AddType application/manifest+json .webmanifest
 AddType image/svg+xml .svg
-AddCharset utf-8 .json .geojson .tsv .md .js .css
+AddType application/xml .xml
+AddCharset utf-8 .json .geojson .tsv .md .js .css .xml .ics
 
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json application/geo+json text/tab-separated-values text/markdown
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json application/geo+json text/tab-separated-values text/markdown application/xml text/calendar
 </IfModule>
 
 # Daten werden täglich neu erzeugt
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType application/json "access plus 1 hour"
+  ExpiresByType application/xml "access plus 1 hour"
   ExpiresByType application/geo+json "access plus 1 day"
   ExpiresByType image/png "access plus 1 week"
   ExpiresByType image/svg+xml "access plus 1 week"
@@ -35,6 +37,11 @@ AddCharset utf-8 .json .geojson .tsv .md .js .css
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=31536000"
+  # Offene Daten und Feeds: Abruf auch aus dem Browser anderer Websites (nur lesend, ohne Cookies; wie GitHub Pages;
+  # Entscheidung des Auftraggebers 28.10.2026, Seite rss/)
+  <FilesMatch "\.(xml|json|geojson|ics|tsv|jsonld)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
 </IfModule>
 
 RedirectMatch 404 /\.git

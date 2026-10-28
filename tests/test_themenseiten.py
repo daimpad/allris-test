@@ -1,7 +1,7 @@
 """Allgemeine Themenseiten (pipeline/themenseiten/, dossier.py, prozessbild.py): Die Kulturseite bleibt nach dem
 Umbau Zeichen für Zeichen gleich (Referenz in tests/referenz/, erzeugt vor dem Umbau am 26.10.2026; am 27.10.2026 um
 die Abschnitte „Haushalt im Produktbereich“ und „Wer berät mit“ sowie die Sprungleiste und den Link auf haushalt/ ergänzt,
-am 28.10.2026 um target="_blank" an externen Links); dazu die
+am 28.10.2026 um target="_blank" an externen Links, die Feed-Erkennung im Kopf und den Link auf rss/); dazu die
 Regeln der Zuordnung und ein Thema ohne Phasen."""
 import json
 import re

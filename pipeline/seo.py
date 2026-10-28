@@ -7,7 +7,7 @@ Ohne Zeitstempel (kein lastmod), damit sich der Branch deploy nur bei Inhaltsän
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from . import config, dossier, gebietsseiten, haushaltsseite
+from . import config, dossier, gebietsseiten, haushaltsseite, rssseite
 from .themenseiten import ALLE as THEMENSEITEN
 
 DEFAULT_URL = "https://daimpad.github.io/allris-test/"  # Platzhalter in site/, wird durch SITE_URL ersetzt
@@ -40,5 +40,6 @@ def write(site=Path("_site"), site_url=None):
     themen = [pfad for t in THEMENSEITEN for pfad in dossier.write(t, site, site_url, gebietsseiten._page)]
     themen = dossier.uebersicht(THEMENSEITEN, site, site_url, gebietsseiten._page) + themen
     themen += haushaltsseite.write(site, site_url, gebietsseiten._page)
+    themen += rssseite.write(site, site_url, gebietsseiten._page)
     (site / "sitemap.xml").write_text(sitemap(site_url, [*themen, *areas]), encoding="utf-8")
     print(f"robots.txt, sitemap.xml und Adressen für {site_url}")

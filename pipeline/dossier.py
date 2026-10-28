@@ -550,6 +550,9 @@ def write(t, site, site_url, page):
             ("og:image:alt", t.bild_titel)))
         head += '\n  <meta name="twitter:card" content="summary_large_image">'
     root = "../" * t.pfad.rstrip("/").count("/") + "../"
+    # Feed-Erkennung: Feed der Themenseite (der Feed über ganz Bonn kommt aus dem Seitenrahmen)
+    head += (f'\n  <link rel="alternate" type="application/atom+xml" title="{escape("RIS-Karte Bonn – " + t.titel)}" '
+             f'href="{root}data/export/bonn/dossiers/{t.key}.xml">')
     out.write_text(page(site_url, t.pfad, titel, text, body(t, d, root), root, head), encoding="utf-8")
     print(f"Themenseite {t.titel}: {n} Vorlagen")
     return [t.pfad]

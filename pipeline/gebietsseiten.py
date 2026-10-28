@@ -30,6 +30,12 @@ def neuer_tab(html):
     return _EXTERN.sub(lambda m: f'<a {m.group(1)} target="_blank"' + ("" if " rel=" in m.group(0) else ' rel="noopener"') + ">", html)
 
 
+def feed_head(datei, titel, root):
+    """Verweis für die automatische Feed-Erkennung im Kopf (zusätzlich zum Feed über ganz Bonn, den _page setzt)."""
+    return (f'\n  <link rel="alternate" type="application/atom+xml" title="{escape(titel)}" '
+            f'href="{root}data/export/bonn/{datei}">')
+
+
 def _page(site_url, path, title, description, body, root, head=""):
     return neuer_tab(f"""<!doctype html>
 <html lang="de">
@@ -43,6 +49,7 @@ def _page(site_url, path, title, description, body, root, head=""):
   <link rel="icon" href="{root}favicon.ico" sizes="32x32">
   <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{root}page.css">{head}
+  <link rel="alternate" type="application/atom+xml" title="RIS-Karte Bonn – ganz Bonn" href="{root}data/export/bonn/feeds/ganz-bonn.xml">
 </head>
 <body>
   <header class="page-head">
@@ -53,7 +60,7 @@ def _page(site_url, path, title, description, body, root, head=""):
 {body}
   </main>
   <footer class="page-foot">
-    <a href="{root}gebiete/">Alle Gebiete</a> · <a href="https://nozilla.de/impressum/">Impressum</a> · <a href="{root}datenschutz.html">Datenschutz</a> · <a href="mailto:contact@nozilla.de">Kontakt</a>
+    <a href="{root}gebiete/">Alle Gebiete</a> · <a href="{root}rss/">Abonnieren (RSS)</a> · <a href="https://nozilla.de/impressum/">Impressum</a> · <a href="{root}datenschutz.html">Datenschutz</a> · <a href="mailto:contact@nozilla.de">Kontakt</a>
   </footer>
 </body>
 </html>
@@ -116,7 +123,8 @@ def write(site, site_url):
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(_page(site_url, path, f"Ratsvorlagen in {o['name']} – RIS-Karte Bonn",
                              f"Was berät die Politik in {o['name']} (Bonn)? {len(papers)} Vorlagen aus dem Ratsinformationssystem mit Ort, Stand und Gremien.",
-                             body, root), encoding="utf-8")
+                             body, root, feed_head(f"feeds/ortsteil-{o['slug']}.xml", f"RIS-Karte Bonn – {o['name']}", root)),
+                       encoding="utf-8")
         paths.append(path)
         groups.setdefault(o["stadtbezirk"], []).append((o["name"], path, len(papers)))
     for b in index["bezirke"]:
@@ -130,7 +138,9 @@ def write(site, site_url):
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(_page(site_url, path, f"Ratsvorlagen im Stadtbezirk {b['name']} – RIS-Karte Bonn",
                              f"Vorlagen aus dem Ratsinformationssystem mit Bezug zum ganzen Stadtbezirk {b['name']} (Bonn), ohne genaueren Ort.",
-                             body, root), encoding="utf-8")
+                             body, root, feed_head(f"feeds/bezirk-{b['slug']}.xml",
+                                                   f"RIS-Karte Bonn – Stadtbezirk {b['name']}, ohne genaueren Ort", root)),
+                       encoding="utf-8")
         paths.append(path)
         groups.setdefault(b["name"], []).append((f"ganzer Stadtbezirk {b['name']}", path, len(papers)))
     sections = "\n".join(
