@@ -23,8 +23,8 @@
       title: "Die Karte",
       text: "Jeder Punkt ist eine Vorlage mit Ortsbezug; Zahlen fassen nahe Punkte zusammen, ein Klick zoomt hinein. Die Farbe zeigt, wie sicher der Ort ist: grün gesichert (Koordinate oder Bebauungsplan der Stadt), braun erschlossen (Name im Titel), violett unsicher. „Farbe nach Thema“ färbt die Punkte stattdessen nach Thema; die Legende erklärt die Farben. „Bebauungspläne“ blendet die Geltungsbereiche der rechtskräftigen Pläne ein; ein Klick auf eine Fläche öffnet die Planchronik. „Baustellen“ zeigt gemeldete Baustellen mit unverbindlichen Terminen. „Überschwemmungsgebiete“ und „Bodenrichtwerte“ zeigen beim Hineinzoomen Flächen des Landes zur Einordnung (abgeleitet aufbereitet, verbindlich sind die Quellen). „Farbige Karte“ schaltet den Hintergrund um. Alle diese Schaltflächen liegen unter „Ebenen“; die Zahl daneben nennt, wie viele eingeschaltet sind. Die Legenden oben links sind eingeklappt und öffnen sich mit einem Klick, darunter stehen Quellen, Lizenzen und Datenstand." },
     { before: (ui) => { ui.mapMenu(false); ui.panel("panel-list", true); }, target: "#panel-list", beacons: ["#f-text", "#more-filters > summary"],
-      title: "Die Liste",
-      text: () => "Alle Vorlagen des Gebiets – gleichwertig zur Karte und mit der Tastatur bedienbar. Filter nach Stichwort, Vorlagenart, Stand, Thema und Partei; unter „Weitere Filter“ nach Amt, Gremium und Sicherheit der Ortsangabe."
+      title: "Die Vorlagen",
+      text: () => "Alle Vorlagen des Gebiets als Liste – gleichwertig zur Karte und mit der Tastatur bedienbar. Filter nach Stichwort, Vorlagenart, Stand, Thema und Partei; unter „Weitere Filter“ nach Amt, Gremium und Sicherheit der Ortsangabe."
         + (MOBILE.matches ? "" : " Die Breite lässt sich am Rand ziehen.") },
     { when: () => !document.querySelector('.toggle[data-panel="timeline-wrap"]').hidden,
       before: (ui) => ui.panel("timeline-wrap", true), target: "#timeline-wrap", beacons: [".tl-presets"],
@@ -54,7 +54,7 @@
       text: "Ein KI-System beantwortet Fragen zu Bonner Ratsvorgängen und stützt sich dabei nur auf die Daten dieser Seite. Er braucht einen eigenen API-Schlüssel, nennt seine Quellen und verlinkt die Originale. Antworten können Fehler enthalten." },
     { target: ".nav-group.seg",
       title: "Flächen ein- und ausklappen",
-      text: "Liste, Zeitleiste, Vorgang, Prozesse und Assistent lassen sich hier öffnen und schließen; die Karte bleibt darunter sichtbar. Esc schließt die Fläche, in der Sie gerade sind." },
+      text: "Vorlagen (die Liste aller Vorlagen im Gebiet), Zeitleiste, Vorgang (die Einzelheiten einer Vorlage), Prozesse und Assistent lassen sich hier öffnen und schließen; die Karte bleibt darunter sichtbar. Esc schließt die Fläche, in der Sie gerade sind." },
     { target: "#about-open",
       title: "Über die Karte",
       text: "Hier steht, woher die Daten stammen, was Stand und Sicherheit der Angaben bedeuten und was die Karte nicht zeigen kann. Viel Freude beim Erkunden." },
