@@ -53,6 +53,13 @@ test("Start: Übersicht über ganz Bonn, Fenster „Los geht's“, ohne Verstö�
   await page.waitForFunction(() => document.querySelectorAll(".nav-label-bz").length === 4);
   assert.equal(await page.locator("#detail-heading").textContent(), "Los geht's");
   assert.equal(await page.locator("#f-area").inputValue(), "bonn:alle");
+  assert.equal(await page.locator("#f-area option:checked").textContent(), "Gebiet wählen");
+  assert.equal(await page.locator('#f-area option[value="bonn:ganz"]').textContent(), "Ganz Bonn");
+  // Start ohne Hinweistext und Schaltflächen; Legenden und Quellen eingeklappt übereinander oben links
+  assert.equal(await page.locator("#detail .intro-actions").count(), 0);
+  assert.deepEqual(await page.evaluate(() => [...document.querySelectorAll(".map-stack > details")].map((d) => [d.className, d.open])),
+    [["nav-legend", false], ["map-legend", false], ["map-legend map-sources", false]]);
+  assert.equal(await page.locator("#mega-daten #sources").count(), 0, "Quellen nicht mehr im Menü „Daten“");
   assert.equal(await page.locator(".nav-label-bz").count(), 4, "Namen der vier Stadtbezirke");
   assert.ok(!/gebiet=/.test(page.url()), "die Übersicht schreibt kein Gebiet in die Adresse");
   assert.deepEqual(await axe(page), []);
@@ -95,6 +102,7 @@ test("Link mit Gebiet: Liste, Vorgang mit Prozesslinie, ohne Verstöße", async 
 
 test("Themenebene: Flächen nach Anteil eines Themas, Zustand in der Adresse", async () => {
   const page = await open();
+  await page.locator(".nav-legend > summary").click();
   await page.locator("#nav-metric").selectOption("verkehr");
   assert.match(page.url(), /flaechen=verkehr/);
   assert.match(await page.locator(".nav-legend summary").textContent(), /Verkehr/);
@@ -110,6 +118,7 @@ test("Themenebene: Flächen nach Anteil eines Themas, Zustand in der Adresse", a
 
 test("Zahlen zum Gebiet: Flächen nach Kontextdaten, Steckbrief im Ortsteil", async () => {
   const page = await open();
+  await page.locator(".nav-legend > summary").click();
   await page.locator("#nav-metric").selectOption("kontext-miete");
   assert.match(page.url(), /flaechen=kontext-miete/);
   assert.match(await page.locator(".nav-legend").textContent(), /Zensus 2022.*Stand 15\.05\.2022.*kein Urteil/s);
@@ -146,10 +155,13 @@ test("Zahlen zum Gebiet: Flächen nach Kontextdaten, Steckbrief im Ortsteil", as
 
 test("Zuschaltbare Flächen: erst beim Hineinzoomen, Legende mit Quelle, Zustand in der Adresse", async () => {
   const page = await open("?gebiet=ortsteil:beuel-mitte");
+  assert.equal(await page.locator(".map-kx-uesg").isVisible(), false, "Ebenen erst nach „Ebenen“");
+  await page.locator(".map-menu").click();
   await page.locator(".map-kx-uesg").click();
   await page.locator(".map-kx-brw").click();
   assert.match(page.url(), /ebenen=uesg%2Cbrw|ebenen=uesg,brw/);
-  const legend = page.locator(".map-legend");
+  assert.match(await page.locator(".map-menu").textContent(), /Ebenen\s*2/, "Zahl der eingeschalteten Ebenen");
+  const legend = page.locator(".map-legend:not(.map-sources)");
   await page.waitForFunction(() => /Überschwemmungsgebiet, festgesetzt/.test(document.querySelector(".map-legend").textContent));
   // ab Ortsteil-Zoom gezeichnet: Flächen in der eigenen Ebene, Stufen der Bodenrichtwerte in der Legende
   await page.waitForFunction(() => document.querySelectorAll(".leaflet-kontextflaechen-pane path").length > 10);
@@ -231,16 +243,20 @@ test("Mitmachen in Bonn: Stadtbezirk wechseln", async () => {
   await page.close();
 });
 
-test("Mobil: Kartenoptionen in einem Menü, ohne Verstöße", async () => {
+test("Mobil: Ebenen in einem Menü, ohne Verstöße", async () => {
   const page = await open("", { width: 390, height: 844 });
   // auf dem Telefon liegt das Fenster „Los geht's“ über der Karte; erst schließen
   await page.locator('.toggle[data-panel="panel-detail"]').click();
   const menu = page.locator(".map-menu");
   assert.equal(await menu.getAttribute("aria-expanded"), "false");
-  assert.equal(await page.locator(".map-whole").isVisible(), false, "„Ganz Bonn ansehen“ steckt im Menü");
+  assert.match(await menu.textContent(), /^Ebenen/);
+  assert.equal(await page.locator(".map-plans").isVisible(), false, "Ebenen stecken im Menü");
+  assert.ok(await page.locator(".map-whole").isVisible(), "„Ganz Bonn ansehen“ bleibt sichtbar");
   await menu.click();
   assert.equal(await menu.getAttribute("aria-expanded"), "true");
-  assert.ok(await page.locator(".map-whole").isVisible());
+  assert.ok(await page.locator(".map-plans").isVisible());
+  await page.keyboard.press("Escape");
+  assert.equal(await menu.getAttribute("aria-expanded"), "false", "Esc schließt die Ebenen");
   assert.deepEqual(await axe(page), []);
   assert.deepEqual(page.errors, []);
   await page.close();

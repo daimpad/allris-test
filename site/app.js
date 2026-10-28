@@ -50,12 +50,7 @@
   // Startfenster „Los geht's“ im Vorgang, solange keine Vorlage gewählt ist; die Tour steht in site/tour.js
   const INTRO = `<div class="intro">
     <p class="intro-lead">Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – wo, wann und wer ist beteiligt?</p>
-    <button type="button" class="btn btn-cta tour-cta" data-tour><span class="tour-cta-dot" aria-hidden="true"></span>Tour durch alle Funktionen</button>
-    <p><strong>So geht's:</strong> Auf der Karte einen Stadtbezirk und einen Ortsteil anklicken oder oben ein Gebiet wählen, dann auf der Karte oder in der Liste eine Vorlage anklicken. Hier erscheint der Vorgang: wer ihn eingebracht hat, welches Amt zuständig ist und welche Gremien wann beraten haben.</p>
-    <p class="intro-actions">
-      <button type="button" class="btn btn-soft" data-show="panel-list"><svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>Liste öffnen</button>
-      <button type="button" class="btn btn-soft" data-show="timeline-wrap"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Zeitleiste öffnen</button></p>
-    <p>Eine <strong>Vorlage</strong> ist ein Schriftstück, über das Rat, Bezirksvertretung oder Ausschüsse beraten – etwa ein Antrag, eine Beschlussvorlage oder ein Bürgerantrag. Mehr unter „Über“.</p></div>${LIMITS}`;
+    <button type="button" class="btn btn-cta tour-cta" data-tour><span class="tour-cta-dot" aria-hidden="true"></span>Tour durch alle Funktionen</button></div>${LIMITS}`;
 
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -69,7 +64,7 @@
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null, kontext = null, anliegen = null;
-  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, detailSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, planOn = false, allPlans = null, shownPlan = null;
+  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, detailSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, mapStack = null, planOn = false, allPlans = null, shownPlan = null;
   let bau = null, bauOn = false, bauLayer = null, shownSite = null, bauByRef = new Map();
   let kxOn = new Set(), kxData = {}, kxLayers = {}, brwBr = null;  // zuschaltbare Flächen (Überschwemmung, Bodenrichtwerte)
   // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
@@ -130,8 +125,6 @@
     if (planLayer) { planLayer.remove(); planLayer = null; }   // Umriss eines zuvor gewählten Vorgangs (Gebietswechsel)
     $("#detail-heading").textContent = "Los geht's";
     $("#detail").innerHTML = INTRO;
-    const t = toggleFor("timeline-wrap");
-    if (t && t.hidden) $('#detail [data-show="timeline-wrap"]').hidden = true;
   }
   function closePanel(id) {
     setPanel(id, false);
@@ -279,7 +272,8 @@
     if (!index) { sel.innerHTML = '<option value="ortsteil:endenich">Endenich (Pilot)</option>'; return; }
     const groups = {};
     index.ortsteile.forEach((o) => (groups[o.stadtbezirk] ||= []).push(o));
-    let html = '<option value="bonn:alle">Ganz Bonn – Gebiet wählen</option>';
+    // Ausgangszustand „Gebiet wählen“ (zeigt ganz Bonn); „Ganz Bonn“ als eigener Eintrag, wenn man dorthin zurückwechselt
+    let html = '<option value="bonn:alle" hidden>Gebiet wählen</option><option value="bonn:ganz">Ganz Bonn</option>';
     for (const bz of Object.keys(groups).sort()) {
       html += `<optgroup label="Stadtbezirk ${esc(bz)}">` + groups[bz].sort((a, b) => a.name.localeCompare(b.name, "de"))
         .map((o) => `<option value="ortsteil:${o.slug}">${esc(o.name)} (${o.count})</option>`).join("");
@@ -305,7 +299,7 @@
   async function loadArea(value, keepState) {
     const seq = ++loadSeq;
     const next = parseArea(value);
-    $("#f-area").value = `${next.kind}:${next.key}`;
+    $("#f-area").value = next.kind === "bonn" && value === "bonn:ganz" ? value : `${next.kind}:${next.key}`;
     $("#count").textContent = `Lade Vorlagen für ${next.name} …`;
     setLoading(true);
     let data;
@@ -361,6 +355,20 @@
     map = L.map("map", { zoomControl: false, scrollWheelZoom: true, zoomAnimation: !REDUCED, fadeAnimation: !REDUCED, markerZoomAnimation: !REDUCED });
     L.control.zoom({ position: "bottomright" }).addTo(map);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap-Mitwirkende" }).addTo(map);
+    // Ganz Bonn ansehen: nur die Ansicht, das Gebiet bleibt; herausgezoomt sind die Stadtbezirke anklickbar
+    const Whole = L.Control.extend({
+      options: { position: "bottomright" },
+      onAdd() {
+        const b = L.DomUtil.create("button", "map-style map-whole");
+        b.type = "button";
+        b.textContent = "Ganz Bonn ansehen";
+        b.title = "Karte auf ganz Bonn zoomen; Stadtbezirke und Ortsteile lassen sich anklicken";
+        b.addEventListener("click", () => { navDeep = false; navFocus = null; map.fitBounds(bonnBounds || L.geoJSON(geo.bezirk).getBounds(), mapPadding()); });
+        L.DomEvent.disableClickPropagation(b);
+        return b;
+      },
+    });
+    new Whole().addTo(map);
     // Kartenhintergrund standardmäßig grau, damit die Marker hervortreten; die Wahl merkt sich der Browser
     let colored = false;
     try { colored = localStorage.getItem("ris-karte-farbig") === "1"; } catch (e) { /* ohne Speicher: grau */ }
@@ -385,20 +393,6 @@
       },
     });
     new MapStyle().addTo(map);
-    // Ganz Bonn ansehen: nur die Ansicht, das Gebiet bleibt; herausgezoomt sind die Stadtbezirke anklickbar
-    const Whole = L.Control.extend({
-      options: { position: "bottomright" },
-      onAdd() {
-        const b = L.DomUtil.create("button", "map-style map-whole");
-        b.type = "button";
-        b.textContent = "Ganz Bonn ansehen";
-        b.title = "Karte auf ganz Bonn zoomen; Stadtbezirke und Ortsteile lassen sich anklicken";
-        b.addEventListener("click", () => { navDeep = false; navFocus = null; map.fitBounds(bonnBounds || L.geoJSON(geo.bezirk).getBounds(), mapPadding()); });
-        L.DomEvent.disableClickPropagation(b);
-        return b;
-      },
-    });
-    new Whole().addTo(map);
     // Farbe der Punkte: Sicherheit der Ortsangabe (Standard) oder Thema; Legende darunter
     colorBy = new URLSearchParams(location.search).get("farbe") === "thema" ? "thema" : "sicherheit";
     const ColorBy = L.Control.extend({
@@ -474,33 +468,46 @@
       new Toggle().addTo(map);
     }
     map.on("zoomend", () => { if (kxOn.size) drawKx(); });
-    // mobil: die Schaltflächen unten rechts hinter „Kartenoptionen“, damit sie die Karte nicht verdecken
+    // „Ebenen“: alle zuschaltbaren Ebenen und Darstellungen hinter einer Schaltfläche, damit sie die Karte nicht
+    // verdecken; die Zahl nennt die eingeschalteten (Entscheidung des Auftraggebers 28.10.2026)
     const MapMenu = L.Control.extend({
       options: { position: "bottomright" },
       onAdd() {
         const b = L.DomUtil.create("button", "map-style map-menu");
         b.type = "button";
-        b.textContent = "Kartenoptionen";
         b.setAttribute("aria-expanded", "false");
+        b.title = "Ebenen und Darstellung der Karte";
         const set = (open) => { map.getContainer().classList.toggle("map-menu-open", open); b.setAttribute("aria-expanded", String(open)); };
+        const count = () => {
+          const n = [...map.getContainer().querySelectorAll('.leaflet-right .map-style[aria-pressed="true"]')].filter((x) => !x.hidden).length;
+          b.innerHTML = `Ebenen${n ? ` <span class="map-menu-n">${n}<span class="visually-hidden"> eingeschaltet</span></span>` : ""}`;
+        };
         b.addEventListener("click", () => set(b.getAttribute("aria-expanded") !== "true"));
         map.on("click", () => set(false));
+        map.getContainer().addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && b.getAttribute("aria-expanded") === "true") { e.stopPropagation(); set(false); b.focus(); }
+        });
+        new MutationObserver(count).observe(map.getContainer().querySelector(".leaflet-control-container"), { attributes: true, subtree: true, attributeFilter: ["aria-pressed", "hidden"] });
+        count();
         L.DomEvent.disableClickPropagation(b);
         return b;
       },
     });
     new MapMenu().addTo(map);
-    const Legend = L.Control.extend({
-      options: { position: "bottomleft" },
+    // Legenden übereinander oben links, alle eingeklappt: Flächen (initNav), Punkte, Quellen und Datenstand
+    const Stack = L.Control.extend({
+      options: { position: "topleft" },
       onAdd() {
-        const d = L.DomUtil.create("details", "map-legend");
-        d.open = !MOBILE.matches;
+        const d = L.DomUtil.create("div", "map-stack");
+        legendEl = L.DomUtil.create("details", "map-legend", d);
+        const src = document.getElementById("sources");
+        if (src) d.appendChild(src);
         L.DomEvent.disableClickPropagation(d);
         L.DomEvent.disableScrollPropagation(d);
         return d;
       },
     });
-    legendEl = new Legend().addTo(map).getContainer();
+    mapStack = new Stack().addTo(map).getContainer();
     cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 40, animate: !REDUCED }).addTo(map);
   }
   function mapPadding() {
@@ -773,33 +780,24 @@
     if (kontext && Object.hasOwn(KONTEXT_FARBE, kKey(f) || "")) navMetric = f;
     navBreaks();
     navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
-    // Legende der Flächen: Stufen der jeweils sichtbaren Ebene
-    const Legend = L.Control.extend({
-      options: { position: "topleft" },
-      onAdd() {
-        navLegend = L.DomUtil.create("details", "nav-legend");
-        navLegend.open = !MOBILE.matches;
-        const themes = index.zahlen?.themen_bonn ? Object.entries(THEMES) : [];
-        const kx = kontext ? Object.entries(KONTEXT_FARBE) : [];
-        const opt = (k, v) => `<option value="${k}"${k === navMetric ? " selected" : ""}>${esc(v)}</option>`;
-        navLegend.innerHTML = `<summary></summary>${themes.length || kx.length ? `<label class="nav-metric">Flächen färben nach
-          <select id="nav-metric"><option value="">Zahl der Vorlagen (12 Monate)</option>
-          ${themes.length ? `<optgroup label="Anteil eines Themas (seit 2019)">${themes.map(([k, v]) => opt(k, v)).join("")}</optgroup>` : ""}
-          ${kx.length ? `<optgroup label="Zahlen zum Gebiet (abgeleitet)">${kx.map(([k, v]) => opt(`kontext-${k}`, v)).join("")}</optgroup>` : ""}</select></label>` : ""}
-          <div class="nav-legend-body"></div>`;
-        navLegend.querySelector("#nav-metric")?.addEventListener("change", (e) => {
-          navMetric = e.target.value;
-          navBreaks();
-          navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
-          updateNav(true);
-          syncUrl();
-        });
-        L.DomEvent.disableClickPropagation(navLegend);
-        L.DomEvent.disableScrollPropagation(navLegend);
-        return navLegend;
-      },
+    // Legende der Flächen: Stufen der jeweils sichtbaren Ebene; oben im Stapel der Legenden, eingeklappt
+    navLegend = L.DomUtil.create("details", "nav-legend");
+    const themes = index.zahlen?.themen_bonn ? Object.entries(THEMES) : [];
+    const kx = kontext ? Object.entries(KONTEXT_FARBE) : [];
+    const opt = (k, v) => `<option value="${k}"${k === navMetric ? " selected" : ""}>${esc(v)}</option>`;
+    navLegend.innerHTML = `<summary></summary>${themes.length || kx.length ? `<label class="nav-metric">Flächen färben nach
+      <select id="nav-metric"><option value="">Zahl der Vorlagen (12 Monate)</option>
+      ${themes.length ? `<optgroup label="Anteil eines Themas (seit 2019)">${themes.map(([k, v]) => opt(k, v)).join("")}</optgroup>` : ""}
+      ${kx.length ? `<optgroup label="Zahlen zum Gebiet (abgeleitet)">${kx.map(([k, v]) => opt(`kontext-${k}`, v)).join("")}</optgroup>` : ""}</select></label>` : ""}
+      <div class="nav-legend-body"></div>`;
+    navLegend.querySelector("#nav-metric")?.addEventListener("change", (e) => {
+      navMetric = e.target.value;
+      navBreaks();
+      navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
+      updateNav(true);
+      syncUrl();
     });
-    new Legend().addTo(map);
+    mapStack.prepend(navLegend);
     map.on("zoomend", () => updateNav());
     updateNav();
   }

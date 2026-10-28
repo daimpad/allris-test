@@ -324,7 +324,7 @@ def aufrufe(t, d, root):
         _karte("calendar", "Termine in den Kalender",
                "Die Sitzungen dieser Seite als Kalenderdatei, mit Link zur Tagesordnung, sobald sie erscheint.",
                f'<a class="pb-knopf" href="{root}data/export/bonn/dossiers/{t.key}.ics" download>Kalender (.ics)</a>'),
-        _karte("rss", "Auf dem Laufenden bleiben",
+        _karte("rss", "Informiert bleiben",
                f"Neue Vorlagen und Beratungsergebnisse {escape(t.feed_text)} im Feed-Reader.",
                f'<a class="pb-knopf" href="{root}data/export/bonn/dossiers/{t.key}.xml">Feed abonnieren</a>'),
         _karte("people", "Sitzung besuchen",

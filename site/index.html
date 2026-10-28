@@ -104,8 +104,8 @@
       <label class="visually-hidden" for="f-area">Gebiet</label>
       <select id="f-area" class="nav-area"></select>
       <div class="nav-group seg" role="group" aria-label="Flächen ein- und ausblenden">
-        <button type="button" class="toggle" data-panel="panel-list" aria-controls="panel-list" aria-pressed="false" title="Liste der Vorlagen">
-          <svg class="icon" aria-hidden="true"><use href="#i-list"/></svg><span>Liste</span></button>
+        <button type="button" class="toggle" data-panel="panel-list" aria-controls="panel-list" aria-pressed="false" title="Alle Vorlagen im Gebiet als Liste">
+          <svg class="icon" aria-hidden="true"><use href="#i-list"/></svg><span>Vorlagen</span></button>
         <button type="button" class="toggle" data-panel="timeline-wrap" aria-controls="timeline-wrap" aria-pressed="false" title="Zeitleiste">
           <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Zeitleiste</span></button>
         <button type="button" class="toggle" data-panel="panel-detail" aria-controls="panel-detail" aria-pressed="true" title="Gewählter Vorgang">
@@ -187,7 +187,7 @@
         </div>
         <div class="card static">
           <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg></span>
-          <span class="card-title">Auf dem Laufenden bleiben</span>
+          <span class="card-title">Informiert bleiben</span>
           <span class="card-text" id="cta-feed-text">Neue Vorlagen und Beratungsergebnisse im gewählten Gebiet per Feed-Reader erhalten.</span>
           <span class="card-actions" id="cta-feed"></span>
         </div>
@@ -198,7 +198,6 @@
           <span class="card-actions">
             <a class="btn btn-cta" href="https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Bürgerantrag stellen<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a>
             <button type="button" class="btn btn-soft" id="cta-mitmachen"><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg>Alle Wege im Überblick</button>
-            <button type="button" class="btn btn-soft" data-about="mitwirken"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>So geht's</button>
           </span>
         </div>
         <div class="card static">
@@ -227,14 +226,6 @@
       </div>
       <p class="mega-links"><button type="button" class="btn btn-soft" data-about="pruefung"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Wie verlässlich sind die Angaben?</button>
         <button type="button" class="btn btn-soft" data-about="version"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Version 1.0: Was ist neu?</button></p>
-      <details class="acc" id="sources">
-        <summary>Quellen, Lizenzen und Datenstand</summary>
-        <div>
-          <p>OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Texte der Dokumente über OParl-Lite (nur zur Verortung verarbeitet, nicht wiedergegeben) · Ortsteil- und Bezirksflächen, Hausnummernverzeichnis (nur zur Bestimmung des Ortsteils), Geltungsbereiche der Bebauungspläne und Baustellen der Stadt Bonn (CC0 1.0; Baustellen: Termine unverbindlich, Archiv ab 19.10.2026, „mögliche Umsetzung“ ist ein Indiz, kein Beleg) · Straßen, Gebäude und Anlagen sowie Kartenhintergrund © OpenStreetMap-Mitwirkende (ODbL 1.0) · Beträge je Produktbereich aus den Haushaltsplänen 2023/2024 und 2025/2026 der Stadt Bonn (PDF, ausgelesen; keine Lizenzangabe der Stadt) · Zahl der Meldungen im Anliegen- und Mängelmelder der Stadt Bonn (CC0 1.0; nur Kategorie, Tag, Ortsteil und Status, eigenes Archiv ab Ende Oktober 2026) · Zahlen zum Gebiet (abgeleitet, auf Ortsteile umgerechnet): Zensus 2022 © Statistisches Bundesamt (Destatis), Kitas Land NRW (dl-de/by-2.0), Bodenrichtwerte BORIS NRW, Klimaanalyse und Überschwemmungsgebiete NRW, Haltestellen VRS (dl-de/zero-2.0), Wahlbeteiligung der Ratswahl 2025 nach Stimmbezirken (IT.NRW als Übergang, amtliches Ergebnis; Zuordnung über das Straßenverzeichnis 2020 der Stadt, CC0); die zuschaltbaren Flächen Überschwemmungsgebiete und Bodenrichtwerte sind vereinfacht, verbindlich sind die Karten des Landes. Abgeleitete Angaben sind gekennzeichnet.</p>
-          <p id="stand"></p>
-          <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/bonn/termine.ics">Sitzungskalender (iCalendar)</a> · <a href="gebiete/">Übersicht nach Gebiet</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a> · <a href="https://nozilla.de/impressum/" target="_blank" rel="noopener">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="mailto:contact@nozilla.de">Kontakt</a></p>
-        </div>
-      </details>
     </section>
   </header>
 
@@ -429,6 +420,15 @@
       <div class="panel-body" id="bt-body"><p class="hint" aria-live="polite">Wird geladen …</p></div>
     </section>
 
+    <!-- Quellen, Lizenzen und Datenstand: auf der Karte unter den Legenden (app.js setzt das Element in den Stapel) -->
+    <details class="map-legend map-sources" id="sources">
+      <summary>Quellen, Lizenzen und Datenstand</summary>
+      <div>
+        <p>OParl-API der Stadt Bonn (CC0 1.0) · OParl-Lite Bonn, machdenstaat (CC BY 4.0; Sitzungen, Tagesordnungspunkte, Ergebnisse) · Texte der Dokumente über OParl-Lite (nur zur Verortung verarbeitet, nicht wiedergegeben) · Ortsteil- und Bezirksflächen, Hausnummernverzeichnis (nur zur Bestimmung des Ortsteils), Geltungsbereiche der Bebauungspläne und Baustellen der Stadt Bonn (CC0 1.0; Baustellen: Termine unverbindlich, Archiv ab 19.10.2026, „mögliche Umsetzung“ ist ein Indiz, kein Beleg) · Straßen, Gebäude und Anlagen sowie Kartenhintergrund © OpenStreetMap-Mitwirkende (ODbL 1.0) · Beträge je Produktbereich aus den Haushaltsplänen 2023/2024 und 2025/2026 der Stadt Bonn (PDF, ausgelesen; keine Lizenzangabe der Stadt) · Zahl der Meldungen im Anliegen- und Mängelmelder der Stadt Bonn (CC0 1.0; nur Kategorie, Tag, Ortsteil und Status, eigenes Archiv ab Ende Oktober 2026) · Zahlen zum Gebiet (abgeleitet, auf Ortsteile umgerechnet): Zensus 2022 © Statistisches Bundesamt (Destatis), Kitas Land NRW (dl-de/by-2.0), Bodenrichtwerte BORIS NRW, Klimaanalyse und Überschwemmungsgebiete NRW, Haltestellen VRS (dl-de/zero-2.0), Wahlbeteiligung der Ratswahl 2025 nach Stimmbezirken (IT.NRW als Übergang, amtliches Ergebnis; Zuordnung über das Straßenverzeichnis 2020 der Stadt, CC0); die zuschaltbaren Flächen Überschwemmungsgebiete und Bodenrichtwerte sind vereinfacht, verbindlich sind die Karten des Landes. Abgeleitete Angaben sind gekennzeichnet.</p>
+        <p id="stand"></p>
+        <p><a href="data/LICENSE-DATA.md">Lizenzen der Daten</a> · <a href="data/export/bonn/termine.ics">Sitzungskalender (iCalendar)</a> · <a href="gebiete/">Übersicht nach Gebiet</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a> · <a href="https://nozilla.de/impressum/" target="_blank" rel="noopener">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="mailto:contact@nozilla.de">Kontakt</a></p>
+      </div>
+    </details>
     <div id="map" role="region" aria-label="Karte der Vorlagen im gewählten Gebiet. Alle Vorlagen stehen auch in der Liste; Gebiete lassen sich auf der Karte anklicken oder oben über die Auswahl „Gebiet“ wählen."></div>
   </main>
 
@@ -447,7 +447,7 @@
 
       <h3>So benutzen Sie die Karte</h3>
       <ol>
-        <li>Wählen Sie oben ein Gebiet: einen Ortsteil, einen Stadtbezirk oder „stadtweit“.</li>
+        <li>Die Karte zeigt zuerst ganz Bonn. Klicken Sie einen Stadtbezirk und dann einen Ortsteil an, oder wählen Sie oben unter „Gebiet wählen“ einen Ortsteil, einen ganzen Stadtbezirk oder Vorlagen ohne Ortsbezug.</li>
         <li>Klicken Sie in der Liste oder auf der Karte eine Vorlage an.</li>
         <li>Rechts sehen Sie den Vorgang: wer ihn eingebracht hat, welches Amt zuständig ist und welche Gremien wann darüber beraten haben.</li>
         <li>Mit der Zeitleiste grenzen Sie den Zeitraum ein. Alle Flächen lassen sich über die Leiste oben ein- und ausklappen; Liste und Vorgang lassen sich am Rand breiter ziehen.</li>
@@ -486,10 +486,10 @@
       <h3 id="about-themen" tabindex="-1">Themenseiten</h3>
       <p>Unter <a href="thema/">Themenseiten</a> (Menü „Auswertung“) ordnen fünf Seiten die Vorlagen seit Beginn der Wahlperiode nach Strängen: Kultur und Haushalt, Verkehr und Mobilität, Schule und Bildung, Wohnen und Bauen sowie Klima und Umwelt. Jede Seite zeigt auf einen Blick, wo ein Verfahren steht und wann darüber beraten wird, mit den nächsten Sitzungen und Fristen, einem Kalender und einem Feed. Die Zuordnung folgt festen Regeln je Thema; bei jeder Vorlage steht, worauf sie beruht. Eine Vorlage kann auf mehreren Themenseiten stehen. Beträge nennen die Seiten nur je Produktbereich aus den Haushaltsplänen der Stadt (Abschnitt „Haushalt“, Ist und Plan getrennt), nicht je Vorlage; Bewertungen enthalten sie nicht.</p>
 
-      <h3>Weitere Ebenen</h3>
-      <p>Über die Schaltflächen auf der Karte lassen sich die Geltungsbereiche der Bebauungspläne und die gemeldeten Baustellen einblenden. Der Ratsassistent beantwortet Fragen zu den Vorlagen; Sie brauchen dafür einen eigenen Schlüssel eines KI-Anbieters.</p>
+      <h3>Ebenen und Legenden</h3>
+      <p>Unter „Ebenen“ auf der Karte lassen sich die Geltungsbereiche der Bebauungspläne, gemeldete Baustellen, Überschwemmungsgebiete und Bodenrichtwerte einblenden, die Punkte nach Thema färben und der Kartenhintergrund farbig zeigen. Die Legenden oben links sind eingeklappt und öffnen sich mit einem Klick; in der obersten wählen Sie, wonach die Flächen gefärbt werden. Darunter stehen Quellen, Lizenzen und Datenstand. Der Ratsassistent beantwortet Fragen zu den Vorlagen; Sie brauchen dafür einen eigenen Schlüssel eines KI-Anbieters.</p>
 
-      <h3>Auf dem Laufenden bleiben</h3>
+      <h3>Informiert bleiben</h3>
       <p>Unter „Mitmachen“ finden Sie einen <strong>Feed</strong> für das gewählte Gebiet, bei einer Vorlage einen Feed für genau diesen Vorgang. Ein Feed-Reader (zum Beispiel im Browser oder E-Mail-Programm) meldet dann neue Vorlagen und Beratungsergebnisse. Unter „Mitmachen“ → „Termine anzeigen“ stehen die kommenden Sitzungen; sie lassen sich als Kalenderdatei in den eigenen Kalender übernehmen.</p>
 
       <h3>Was die Karte nicht kann</h3>
@@ -520,7 +520,7 @@
       </ul>
 
       <h3>Wer steckt dahinter?</h3>
-      <p>Die RIS-Karte hat Damian Paderta im Rahmen des Hackathons „Hack den Stadtrat“ erstellt. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Das Modell der Verfahren nach Regelwerk (Abschnitt „Nach Regelwerk (Soll)“ und Hinweise unter „Selbst mitwirken“) stammt aus dem Projekt <a href="https://github.com/anster2025/bonn-entscheidet" target="_blank" rel="noopener">„Bonn entscheidet“<span class="visually-hidden"> (GitHub, neuer Tab)</span></a> von <a href="https://github.com/anster2025" target="_blank" rel="noopener">Thomas (anster2025)<span class="visually-hidden"> (GitHub, neuer Tab)</span></a>, MIT-Lizenz; die RIS-Karte hat es um eigene, belegte Schritte ergänzt. Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
+      <p>Die RIS-Karte hat <a href="https://paderta.com/" target="_blank" rel="noopener">Damian Paderta<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a> im Rahmen des Hackathons „Hack den Stadtrat“ erstellt; Hintergründe stehen im Blogbeitrag <a href="https://paderta.com/ris-karte-bonn-ratsinformationsdaten-der-stadt-bonn-im-ueberblick/" target="_blank" rel="noopener">„RIS-Karte Bonn – Ratsinformationsdaten der Stadt Bonn im Überblick“<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a>. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Das Modell der Verfahren nach Regelwerk (Abschnitt „Nach Regelwerk (Soll)“ und Hinweise unter „Selbst mitwirken“) stammt aus dem Projekt <a href="https://github.com/anster2025/bonn-entscheidet" target="_blank" rel="noopener">„Bonn entscheidet“<span class="visually-hidden"> (GitHub, neuer Tab)</span></a> von <a href="https://github.com/anster2025" target="_blank" rel="noopener">Thomas (anster2025)<span class="visually-hidden"> (GitHub, neuer Tab)</span></a>, MIT-Lizenz; die RIS-Karte hat es um eigene, belegte Schritte ergänzt. Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
 
       <h3 id="about-impressum" tabindex="-1">Kontakt, Impressum und Datenschutz</h3>
       <p>Schrift und Programmbibliotheken kommen vom Server dieser Seite. Nur die Kartenkacheln lädt Ihr Browser von OpenStreetMap (tile.openstreetmap.org); die Suche im Text der Dokumente fragt erst nach einem Klick OParl-Lite (oparl.bonn.machdenstaat.de) ab. Der Ratsassistent sendet Fragen erst, wenn Sie ihn einrichten, und nur an den gewählten Anbieter.</p>
