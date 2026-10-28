@@ -192,7 +192,11 @@ body:has(.hh-wahl) :is(.page-head, .page, .page-foot) { width: min(1120px, calc(
 .hh-radio:nth-of-type(1):checked ~ .hh-karten .hh-v0, .hh-radio:nth-of-type(2):checked ~ .hh-karten .hh-v1,
 .hh-radio:nth-of-type(3):checked ~ .hh-karten .hh-v2 { display: block; }
 .hh-svg { display: block; width: 100%; height: auto; font-family: "Inter", system-ui, sans-serif; }
-.hh-svg a:focus-visible rect, .hh-svg a:hover rect { stroke: var(--text); stroke-width: 3; }
+.hh-svg a > rect { stroke: #fff; stroke-width: 2; }
+.hh-svg a:focus-visible > rect, .hh-svg a:hover > rect { stroke: var(--text); stroke-width: 3; }
+.hh-svg .hh-n { font-size: 15px; font-weight: 600; } .hh-svg .hh-b { font-size: 14px; }
+.hh-svg .hh-m { font-size: 13px; font-weight: 600; } .hh-svg .hh-k { font-size: 13px; }
+.hh-pgs text { fill: #2e2a3d; } .hh-pgs.hh-hell text { fill: #fff; }   /* Treemap der Produktgruppen */
 .hh-hoch { display: none; }
 @media (max-width: 600px) { .hh-breit { display: none; } .hh-hoch { display: block; } }
 .page table.hh-tabelle { table-layout: auto; }
@@ -200,3 +204,27 @@ body:has(.hh-wahl) :is(.page-head, .page, .page-foot) { width: min(1120px, calc(
 .page table.hh-tabelle td { font-variant-numeric: tabular-nums; }
 .page table.hh-tabelle tr:target { background: rgba(124, 58, 237, 0.1); }
 .page table.hh-tabelle .hh-summe { font-weight: 600; }
+/* Ebenen 2 und 3: Produktgruppen und Aufwandsarten; Hineinzoomen über die Sprungziele #zoom-XX und #pg-…, ohne Skript */
+.hh-ebene { display: none; scroll-margin-top: 72px; }
+.hh-ebene:target, .hh-ebene:has(:target) { display: block; }
+.hh-karten:has(.hh-ebene:target, .hh-ebene :target) > .hh-haupt { display: none; }
+.hh-wahl:has(.hh-ebene:target, .hh-ebene :target) .hh-radio + label small { display: none; }   /* Summen aller Bereiche */
+.page .hh-ebene h2 { margin: 4px 0 6px; padding-top: 0; border-top: 0; }
+.page .hh-ebene h3 { font-size: 17px; margin: 18px 0 4px; }
+.hh-pfad { font-size: 14px; margin: 0 0 6px; color: var(--muted); }
+.hh-pfad a { font-weight: 600; }
+.hh-pfad [aria-current] { color: var(--text); font-weight: 600; }
+.hh-balken.hh-balken { height: 22px; margin: 6px 0 10px; border-radius: 6px; overflow: hidden; white-space: nowrap; font-size: 0; background: #f3f1f8; }
+.hh-balken i { display: inline-block; height: 100%; box-shadow: inset -2px 0 #fff; }
+/* Aufwandsarten 11–16: feste, nominale Farben; alle Paare auch bei Rot- oder Grünschwäche unterscheidbar (OKLab-Abstand
+   ≥ 11, simuliert nach Machado u. a. 2009), Text dazu steht in der Tabelle */
+tr[class^="hh-z"] > th::before { content: ""; display: inline-block; width: 12px; height: 12px; margin-right: 6px; border-radius: 3px; vertical-align: -1px; }
+.hh-f11, .hh-z11 > th::before { background: #3f81c1; } .hh-f12, .hh-z12 > th::before { background: #c79de6; }
+.hh-f13, .hh-z13 > th::before { background: #bf7946; } .hh-f14, .hh-z14 > th::before { background: #5a610c; }
+.hh-f15, .hh-z15 > th::before { background: #8bc27f; } .hh-f16, .hh-z16 > th::before { background: #753a79; }
+.page table.hh-pg-tabelle, .hh-pg .hh-balken { max-width: 720px; }
+@media (min-width: 601px) { .page table.hh-zoom-tabelle td:not(:last-child), .page table.hh-pg-tabelle td { white-space: nowrap; } }
+@media (max-width: 600px) {
+  .hh-ebene { scroll-margin-top: 124px; }   /* Auswahlknöpfe in zwei Zeilen bleiben sichtbar */
+  .page table:is(.hh-zoom-tabelle, .hh-pg-tabelle) td::before { color: var(--muted); }   /* Spaltennamen: Stilblock der Seite */
+}

@@ -202,21 +202,91 @@ test("Themenseiten: Wer berät mit (Fachausschuss, Fraktion abgeleitet), Link in
   await page.close();
 });
 
-test("Haushalt auf einen Blick: Treemap je Ansicht ohne Skript umschaltbar, Fläche führt zur Tabelle, ohne Verstöße", async () => {
+// sichtbare Treemaps der Seite haushalt/ (aria-label bis zum Doppelpunkt, mit voller Angabe auf Wunsch)
+const treemaps = (page, voll = false) => page.evaluate((voll) => [...document.querySelectorAll(".hh-svg")]
+  .filter((s) => s.getBoundingClientRect().height > 0).map((s) => voll ? s.getAttribute("aria-label") : s.getAttribute("aria-label").split(":")[0]), voll);
+
+test("Haushalt auf einen Blick: Treemap je Ansicht ohne Skript umschaltbar, Zeile der Tabelle als Sprungziel, ohne Verstöße", async () => {
   for (const [width, format] of [[1440, "breit"], [390, "hoch"]]) {
     const page = await browser.newPage({ viewport: { width, height: 900 }, bypassCSP: true });
     await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
-    const sichtbar = () => page.evaluate(() => [...document.querySelectorAll(".hh-svg")]
-      .filter((s) => s.getBoundingClientRect().height > 0).map((s) => s.getAttribute("aria-label").split(":")[0]));
-    assert.deepEqual(await sichtbar(), ["Plan 2026"]);
-    assert.equal(await page.locator(`.hh-v0 .hh-${format} a`).count(), 17);
+    assert.deepEqual(await treemaps(page), ["Plan 2026"]);
+    assert.equal(await page.locator(`.hh-haupt .hh-v0 .hh-${format} a`).count(), 17);
     await page.locator('label[for="hh-ist2023"]').click();
-    assert.deepEqual(await sichtbar(), ["Ist 2023"]);
-    await page.locator(`.hh-v2 .hh-${format} a[href="#pb-04"]`).click();
+    assert.deepEqual(await treemaps(page), ["Ist 2023"]);
+    await page.goto(SITE + "haushalt/#pb-04");   // Sprungziel der Themenseiten
     assert.match(await page.locator("tr:target").textContent(), /Kultur und Wissenschaft.*Themenseite/s);
-    assert.match(await page.locator(".hh-summe").textContent(), /1\.797,0 Mio\. €/);   // Plan 2025 = Gesamtergebnisplan
+    assert.match(await page.locator("#tabelle + p + table .hh-summe").textContent(), /1\.797,0 Mio\. €/);   // Plan 2025 = Gesamtergebnisplan
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     assert.deepEqual(await axe(page), []);
     await page.close();
   }
+});
+
+// Ebenen 2 und 3 (freigegeben 28.10.2026; tests.yml erzeugt die Seite zusätzlich mit HAUSHALT_EBENEN=vorschau)
+const ebenen = (page) => page.evaluate(() => [...document.querySelectorAll(".hh-ebene")]
+  .filter((s) => s.getBoundingClientRect().height > 0).map((s) => s.id));
+
+test("Haushalt: Klick führt zu den Produktgruppen und weiter zu den Aufwandsarten, Brotkrumen zurück, ohne Verstöße", async () => {
+  for (const [width, format] of [[1440, "breit"], [390, "hoch"]]) {
+    const page = await browser.newPage({ viewport: { width, height: 900 }, bypassCSP: true });
+    page.errors = [];
+    page.on("pageerror", (e) => page.errors.push(String(e)));
+    await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
+    assert.equal(await page.locator('section.hh-ebene[id^="zoom-"]').count(), 17, "Ebenen fehlen: Seite mit HAUSHALT_EBENEN=vorschau erzeugen");
+    assert.deepEqual(await ebenen(page), []);
+    // Ebene 2: Produktgruppen des Bereichs
+    await page.locator(`.hh-haupt .hh-v0 .hh-${format} a[href="#zoom-04"]`).click();
+    assert.deepEqual(await ebenen(page), ["zoom-04"]);
+    assert.equal(await page.locator(".hh-haupt").isVisible(), false, "Treemap der Produktbereiche ausgeblendet");
+    assert.equal(await page.locator("#zoom-04 h2").textContent(), "Produktbereich 04 Kultur und Wissenschaft");
+    assert.deepEqual(await treemaps(page, true), ["Plan 2026: Produktgruppen im Produktbereich 04 Kultur und Wissenschaft, zusammen 92,8 Mio. €"]);
+    assert.ok(await page.locator('label[for="hh-ist2023"]').evaluate((l) => l.getBoundingClientRect().top >= 0), "Auswahlknöpfe sichtbar");
+    assert.equal(await page.locator("#zoom-04 .hh-balken").filter({ visible: true }).count(), 1, "ein Balken der Aufwandsarten je Ansicht");
+    await page.locator('label[for="hh-ist2023"]').click();
+    assert.match((await treemaps(page, true))[0], /^Ist 2023: Produktgruppen im Produktbereich 04/);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    assert.deepEqual(await axe(page), []);
+    // Ebene 3: Aufwandsarten der Produktgruppe, ohne Treemap
+    await page.locator(`#zoom-04 .hh-v2 .hh-${format} a[href="#pg-1-04-07"]`).click();
+    assert.deepEqual(await ebenen(page), ["pg-1-04-07"]);
+    assert.equal(await page.locator("#pg-1-04-07 h2").textContent(), "Produktgruppe 1.04.07 Stadtarchiv");
+    assert.match(await page.locator("#pg-1-04-07 .hh-pfad").textContent(), /^Alle Produktbereiche › 04 Kultur und Wissenschaft › 1\.04\.07 Stadtarchiv$/);
+    assert.match(await page.locator("#pg-1-04-07").textContent(), /Name in Haushaltsplan 2023\/2024: Z\. f\. Stadtgesch\. u\. Erinnerungskulturen/);
+    assert.deepEqual(await treemaps(page), []);
+    assert.equal(await page.locator("#pg-1-04-07 .hh-balken.hh-v2").isVisible(), true, "Balken der gewählten Ansicht");
+    assert.equal(await page.locator("#pg-1-04-07 tbody tr").count(), 7);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    assert.deepEqual(await axe(page), []);
+    // Brotkrumen: zurück zu Ebene 2, dann zu allen Produktbereichen; die Ansicht bleibt gewählt
+    await page.locator('#pg-1-04-07 .hh-pfad a[href="#zoom-04"]').click();
+    assert.deepEqual(await ebenen(page), ["zoom-04"]);
+    await page.locator('#zoom-04 .hh-pfad a[href="#produktbereiche"]').click();
+    assert.deepEqual(await ebenen(page), []);
+    assert.deepEqual(await treemaps(page), ["Ist 2023"], "Ansicht bleibt gewählt");
+    assert.deepEqual(page.errors, []);
+    await page.close();
+  }
+});
+
+test("Haushalt: negative und leere Werte ohne Fläche und Balkenstück, 0 € nur in der Tabelle, Tastatur", async () => {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, bypassCSP: true });
+  await page.goto(SITE + "haushalt/#zoom-09", { waitUntil: "networkidle" });
+  await page.locator('label[for="hh-ist2023"]').click();
+  assert.equal(await page.locator("#zoom-09 .hh-balken.hh-v2 .hh-f15").count(), 0, "negativ: kein Balkenstück");
+  assert.match(await page.locator("#zoom-09").textContent(), /Negativ sind: Transferaufwendungen im Ist 2023 \(−84\.508 €\)/);
+  assert.equal(await page.locator('#zoom-09 a[href="#pg-1-09-06"]').count(), 0, "0 €: ohne Fläche und ohne Ebene 3");
+  assert.match(await page.locator("#zoom-09").textContent(), /1\.09\.06 Ortsbaurecht/);
+  assert.deepEqual(await axe(page), []);
+  await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
+  await page.locator('.hh-haupt .hh-v0 .hh-breit a[href="#zoom-16"]').focus();
+  await page.keyboard.press("Enter");
+  assert.deepEqual(await ebenen(page), ["zoom-16"]);
+  assert.equal(await page.locator("#zoom-16 .hh-f11").count(), 0, "leer: kein Balkenstück für Personalaufwendungen");
+  await page.keyboard.press("Tab");
+  assert.equal(await page.evaluate(() => document.activeElement.getAttribute("href")), "#produktbereiche");
+  await page.keyboard.press("Tab");
+  await page.keyboard.press("Enter");   // erste Fläche der Produktgruppen
+  assert.match((await ebenen(page))[0] || "", /^pg-1-16-/);
+  await page.close();
 });

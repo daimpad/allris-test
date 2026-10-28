@@ -1,4 +1,4 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-besetzung|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|wahlen-rohdaten|wahlen-ausschnitt|haushalt-ausschnitt|haushalt-pruefbogen|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-besetzung|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|wahlen-rohdaten|wahlen-ausschnitt|haushalt-ausschnitt|haushalt-pruefbogen|haushalt-ebenen|haushalt-pruefbogen-ebenen|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|all}"""
 import sys
 
 from . import anliegen, baustellen, besetzung, build, check, dossier, export, fetch, geocode, kandidaten, kontext, haushaltsplan, kurzfassung, seo, soll, stufe_c, verify, wahlen
@@ -32,6 +32,8 @@ STEPS = {
     "stufe-c": stufe_c.schritt,  # Stufe C (Sprachmodell, nach build, vor export): Anfragen, Gegenprüfung, Audit
     "haushalt-ausschnitt": haushaltsplan.ausschnitt,  # einmalig, lokal (pdftotext): Beträge je Produktbereich aus den PDFs
     "haushalt-pruefbogen": haushaltsplan.pruefbogen,  # einmalig: Prüfbogen der Werte der Themenseiten
+    "haushalt-ebenen": haushaltsplan.ebenen,  # einmalig, lokal (pdftotext -bbox): Aufwandsarten und Produktgruppen
+    "haushalt-pruefbogen-ebenen": haushaltsplan.pruefbogen_ebenen,  # einmalig: Prüfbogen der Ebenen 2 und 3
     "wahlen-rohdaten": wahlen.rohdaten,  # auf Knopfdruck (quellen.yml): Quelldateien der Wahl 2025 in den Branch quellen
     "wahlen-ausschnitt": wahlen.ausschnitt,  # einmalig: Wahl 2025 je Stimmbezirk und Zuordnung zum Ortsteil (Übergang)
     "kontext-ausschnitte": kontext.ausschnitte,  # einmalig: Ausschnitte für Bonn (Zensus, Bodenrichtwerte, Klima, ...)

@@ -78,7 +78,8 @@ jobs:
           cp -r data/export _site/data/
           cp data/LICENSE-DATA.md _site/data/
           cp data/geo/*.geojson _site/data/geo/
-          SITE_URL=http://localhost:8765/ python -m pipeline seo
+          # Vorschau der Ebenen 2 und 3 des Haushalts (Produktgruppen, Aufwandsarten) bis zur Freigabe, damit sie geprüft werden
+          HAUSHALT_EBENEN=vorschau SITE_URL=http://localhost:8765/ python -m pipeline seo
       - uses: actions/setup-node@v4
         with:
           node-version: "22"

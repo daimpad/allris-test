@@ -274,5 +274,39 @@
    }
   }
  },
- "lizenz": "Keine Lizenzangabe der Stadt Bonn; Haushaltsplan als Teil der Haushaltssatzung, amtliches Werk nach § 5 UrhG (Einschätzung)"
+ "lizenz": "Keine Lizenzangabe der Stadt Bonn; Haushaltsplan als Teil der Haushaltssatzung, amtliches Werk nach § 5 UrhG (Einschätzung)",
+ "ebenen": {
+  "abruf": "2026-10-28",
+  "zeilen": {
+   "11": "Personalaufwendungen",
+   "12": "Versorgungsaufwendungen",
+   "13": "Aufwendungen für Sach- und Dienstleistungen",
+   "14": "Bilanzielle Abschreibungen",
+   "15": "Transferaufwendungen",
+   "16": "Sonstige ordentliche Aufwendungen"
+  },
+  "produktgruppen": {
+   "2023/2024": 150,
+   "2025/2026": 150
+  },
+  "pruefsummen": {
+   "aufwandsarten_produktbereich": {
+    "spalten": 170,
+    "groesste_abweichung_euro": 0
+   },
+   "aufwandsarten_produktgruppe": {
+    "spalten": 1500,
+    "groesste_abweichung_euro": 0
+   },
+   "produktgruppen_produktbereich": {
+    "spalten": 170,
+    "groesste_abweichung_euro": 6
+   }
+  },
+  "toleranz_euro": 1500,
+  "leere_zellen": {
+   "produktbereiche": 57,
+   "produktgruppen": 2332
+  }
+ }
 }
