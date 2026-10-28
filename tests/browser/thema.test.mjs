@@ -271,20 +271,23 @@ test("Haushalt: Klick führt zu den Produktgruppen und weiter zu den Aufwandsart
 });
 
 test("Haushalt: Zoom beim Wechsel der Ebene, ohne Bewegung bei reduzierter Bewegung, ohne Skript Balken", async () => {
-  const zoom = (page) => page.locator(".hh-wahl").getAttribute("data-zoom");
+  // hashchange läuft nach dem Klick als eigene Aufgabe: auf die Bewegung warten statt sofort zu lesen
+  const zoom = (page, soll) => page.waitForFunction((soll) => document.querySelector(".hh-wahl").dataset.zoom === soll, soll, { timeout: 5000 })
+    .then(() => soll, () => page.locator(".hh-wahl").getAttribute("data-zoom"));
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, bypassCSP: true });
   await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
   await page.locator('.hh-haupt .hh-v0 .hh-breit a[href="#zoom-04"]').click();
-  assert.equal(await zoom(page), "hinein", "Kachel wächst");
+  assert.equal(await zoom(page, "hinein"), "hinein", "Kachel wächst");
   await page.goBack();   // heraus, auch mit dem Zurück des Browsers
   assert.deepEqual(await ebenen(page), []);
-  assert.equal(await zoom(page), "heraus", "zurück auf die Kachel");
+  assert.equal(await zoom(page, "heraus"), "heraus", "zurück auf die Kachel");
   await page.close();
   const ruhig = await browser.newPage({ viewport: { width: 1440, height: 900 }, bypassCSP: true, reducedMotion: "reduce" });
   await ruhig.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
   await ruhig.locator('.hh-haupt .hh-v0 .hh-breit a[href="#zoom-04"]').click();
   assert.deepEqual(await ebenen(ruhig), ["zoom-04"]);
-  assert.equal(await zoom(ruhig), null, "ohne Animation");
+  await ruhig.waitForTimeout(300);   // hashchange ist gelaufen
+  assert.equal(await ruhig.locator(".hh-wahl").getAttribute("data-zoom"), null, "ohne Animation");
   await ruhig.close();
   const ohne = await browser.newPage({ viewport: { width: 1440, height: 900 }, javaScriptEnabled: false });
   await ohne.goto(SITE + "haushalt/#pg-1-04-07");
