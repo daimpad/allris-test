@@ -80,7 +80,7 @@ class Auffindbarkeit(unittest.TestCase):
             urls = [e.text for e in ET.parse(site / "sitemap.xml").getroot().iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
             # ohne Gebietsdaten keine Gebiets- und Themenseiten; haushalt/ beruht auf data/haushalt/ im Repository
             self.assertEqual(urls, ["https://ris-bonn.example/", "https://ris-bonn.example/datenschutz.html",
-                                    "https://ris-bonn.example/haushalt/"])
+                                    "https://ris-bonn.example/haushalt/", "https://ris-bonn.example/rss/"])
             self.assertIsNone(re.search(r"lastmod", (site / "sitemap.xml").read_text(encoding="utf-8")))
 
 

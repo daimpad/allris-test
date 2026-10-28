@@ -1667,8 +1667,13 @@
     ((p.date || "") >= `${Number(dataStand.slice(0, 4)) - 1}-01-01` || ["in Beratung", "offen"].includes(p.stand));
   function subscribeArea() {
     const box = $("#subscribe");
-    document.querySelectorAll('link[rel="alternate"][type="application/atom+xml"]').forEach((l) => l.remove());
-    if (!index || area.kind === "bonn") { box.hidden = true; fillMitmachen(); fillKontext(); return; }
+    // nur den Verweis des vorigen Gebiets entfernen; der Feed über ganz Bonn steht fest im Kopf (index.html)
+    document.querySelectorAll('link[rel="alternate"][data-gebiet]').forEach((l) => l.remove());
+    if (!index || area.kind === "bonn") {
+      box.innerHTML = index ? `<a class="btn btn-soft" href="${BONN}feeds/ganz-bonn.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ganz Bonn abonnieren</a>` : "";
+      box.hidden = !index;
+      fillMitmachen(); fillKontext(); return;
+    }
     const href = `${BONN}feeds/${area.kind}-${area.key}.xml`;
     const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
     box.innerHTML = `<a class="btn btn-soft" href="${href}" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ${esc(where)} abonnieren</a>`;
@@ -1677,6 +1682,7 @@
     fillKontext();
     const l = document.createElement("link");
     Object.assign(l, { rel: "alternate", type: "application/atom+xml", href, title: `RIS-Karte Bonn – ${where}` });
+    l.dataset.gebiet = `${area.kind}:${area.key}`;
     document.head.appendChild(l);
   }
 
@@ -1732,9 +1738,12 @@
     if (!area) return;
     const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
     const acts = [];
-    if (index && area.kind !== "bonn") acts.push(`<a class="btn btn-cta" href="${BONN}feeds/${area.kind}-${area.key}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ${esc(where)}</a>`);
+    if (index) acts.push(area.kind === "bonn"
+      ? `<a class="btn btn-cta" href="${BONN}feeds/ganz-bonn.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ganz Bonn</a>`
+      : `<a class="btn btn-cta" href="${BONN}feeds/${area.kind}-${area.key}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ${esc(where)}</a>`);
     if (selected && hasPaperFeed(selected)) acts.push(`<a class="btn btn-soft" href="${BONN}feeds/vorlagen/${slug(selected.reference)}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Vorgang ${esc(selected.reference)}</a>`);
-    $("#cta-feed").innerHTML = acts.join("") || '<span class="hint">Feeds gibt es für die Gebiete in ganz Bonn.</span>';
+    acts.push('<a class="btn btn-soft" href="rss/">Alle Feeds und Anleitung</a>');
+    $("#cta-feed").innerHTML = acts.join("");
     $("#cta-feed-text").textContent = `Neue Vorlagen und Beratungsergebnisse aus ${where} im Feed-Reader erhalten${selected ? ", oder nur den gewählten Vorgang" : ""}.`;
     const report = $("#cta-report");
     report.href = selected ? reportLink(selected) : `${REPO}/issues/new/choose`;

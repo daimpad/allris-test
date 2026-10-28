@@ -51,6 +51,32 @@ class Feeds(unittest.TestCase):
         self.assertEqual(xml, publish._atom("tag:x,2026:feed/a", "T & <a>", "S", "https://site/f.xml",
                                             "https://site/", list(reversed(entries))))
 
+    def test_feed_ganz_bonn(self):
+        # Seite rss/ (28.10.2026): ein Feed über alle Gebiete; Einträge verweisen auf das Gebiet der Vorlage und tragen
+        # dieselben IDs wie im Gebietsfeed
+        zweite = {**PAPER, "reference": "261900", "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2",
+                  "date": "2026-07-01", "steps": []}
+        cache = {1: PAPER, 2: zweite}
+        areas = {"ortsteil:endenich": [1], "ohne:2026": [2], "gesamt": [1, 2]}
+        names = {"ortsteil:endenich": "Endenich", "ohne:2026": "stadtweit / ohne Ortsbezug 2026"}
+        home = {1: "ortsteil:endenich", 2: "ohne:2026"}
+        with tempfile.TemporaryDirectory() as d:
+            out = Path(d)
+            publish.write_feeds(out, areas, cache, names, home, lambda r: r, "2025-01-01")
+            ganz = ET.parse(out / "ganz-bonn.xml").getroot()
+            gebiet = ET.parse(out / "ortsteil-endenich.xml").getroot()
+        self.assertEqual(ganz.find(ATOM + "id").text, "tag:allris-bonn,2026:feed/ganz-bonn")
+        self.assertEqual(ganz.find(ATOM + "title").text, "RIS-Karte Bonn – ganz Bonn")
+        self.assertTrue(ganz.find(ATOM + "link[@rel='self']").get("href").endswith("data/export/bonn/feeds/ganz-bonn.xml"))
+        self.assertTrue(ganz.find(ATOM + "link[@rel='alternate']").get("href").endswith("?gebiet=bonn:ganz"))
+        eintraege = ganz.findall(ATOM + "entry")
+        self.assertEqual(len(eintraege), 3)   # zwei Ereignisse der ersten, eines der zweiten Vorlage, keine doppelt
+        ids = [e.find(ATOM + "id").text for e in eintraege]
+        self.assertEqual(len(set(ids)), 3)
+        self.assertTrue(set(e.find(ATOM + "id").text for e in gebiet.findall(ATOM + "entry")) <= set(ids))
+        links = {e.find(ATOM + "id").text: e.find(ATOM + "link[@rel='alternate']").get("href") for e in eintraege}
+        self.assertTrue(links["https://www.bonn.sitzung-online.de/oparl/papers/2#vorlage"].endswith("?gebiet=ohne:2026#261900"))
+
     def test_feed_je_vorlage_nur_wo_sich_etwas_aendern_kann(self):
         self.assertTrue(publish.has_paper_feed(PAPER, "2025-01-01"))
         alt = {**PAPER, "date": "2020-01-01", "stand": "entschieden"}
