@@ -262,6 +262,34 @@ test("Mobil: Ebenen in einem Menü, ohne Verstöße", async () => {
   await page.close();
 });
 
+test("Über und „Was ist neu?“: gestraffter Dialog, eigenes Fenster, ohne Verstöße", async () => {
+  const page = await open();
+  await page.locator("#about-open").click();
+  const about = page.locator("#about");
+  assert.ok(await about.isVisible());
+  const h3 = await about.locator("h3").allTextContents();
+  assert.ok(h3.includes("Wie sicher sind die Angaben?") && h3.includes("Weitere Seiten") && h3.includes("Informiert bleiben"));
+  assert.ok(!h3.some((t) => /verlässlich|Version 1\.0/.test(t)), "keine Doppelung, Neuigkeiten im eigenen Fenster");
+  assert.equal(await about.locator('a[href="https://paderta.com/"]').count(), 1);
+  assert.deepEqual(await axe(page), []);
+  await about.locator("[data-neu]").click();
+  assert.equal(await about.evaluate((d) => d.open), false);
+  const neu = page.locator("#neu");
+  assert.ok(await neu.isVisible());
+  assert.match(await neu.textContent(), /Version 1\.0.*Seit Version 1\.0/s);
+  assert.deepEqual(await axe(page), []);
+  await page.keyboard.press("Escape");
+  assert.equal(await neu.evaluate((d) => d.open), false);
+  // auch über das Menü „Daten“
+  await page.locator('.menu-btn[data-mega="mega-daten"]').click();
+  await page.locator("#mega-daten [data-neu]").click();
+  assert.ok(await neu.isVisible());
+  await neu.locator("[data-close-dialog]").click();
+  assert.equal(await neu.evaluate((d) => d.open), false);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
 test("Ratsassistent: erst beim Öffnen geladen, ohne Verstöße", async () => {
   const page = await open();
   const chatFiles = () => page.evaluate(() => performance.getEntriesByType("resource").filter((e) => e.name.includes("/chat/")).length);
