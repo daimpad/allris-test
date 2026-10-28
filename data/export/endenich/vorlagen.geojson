@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 664,
+  "count": 665,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -732,6 +732,30 @@
     "method": "ortsteil_name",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028209"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "261146",
+    "name": "Kleine Anfrage der CDU-Bezirksfraktion: Umsetzungsstand der Projekte Endenicher Burg und Sportanlagen Endenicher Park",
+    "paper_type": "Kleine Anfrage",
+    "date": "2026-06-09",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "ortsteil_adjektiv",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027944"
    }
   },
   {
