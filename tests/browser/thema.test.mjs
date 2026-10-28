@@ -201,3 +201,22 @@ test("Themenseiten: Wer berät mit (Fachausschuss, Fraktion abgeleitet), Link in
   assert.deepEqual(page.errors, []);
   await page.close();
 });
+
+test("Haushalt auf einen Blick: Treemap je Ansicht ohne Skript umschaltbar, Fläche führt zur Tabelle, ohne Verstöße", async () => {
+  for (const [width, format] of [[1440, "breit"], [390, "hoch"]]) {
+    const page = await browser.newPage({ viewport: { width, height: 900 }, bypassCSP: true });
+    await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
+    const sichtbar = () => page.evaluate(() => [...document.querySelectorAll(".hh-svg")]
+      .filter((s) => s.getBoundingClientRect().height > 0).map((s) => s.getAttribute("aria-label").split(":")[0]));
+    assert.deepEqual(await sichtbar(), ["Plan 2026"]);
+    assert.equal(await page.locator(`.hh-v0 .hh-${format} a`).count(), 17);
+    await page.locator('label[for="hh-ist2023"]').click();
+    assert.deepEqual(await sichtbar(), ["Ist 2023"]);
+    await page.locator(`.hh-v2 .hh-${format} a[href="#pb-04"]`).click();
+    assert.match(await page.locator("tr:target").textContent(), /Kultur und Wissenschaft.*Themenseite/s);
+    assert.match(await page.locator(".hh-summe").textContent(), /1\.797,0 Mio\. €/);   // Plan 2025 = Gesamtergebnisplan
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    assert.deepEqual(await axe(page), []);
+    await page.close();
+  }
+});

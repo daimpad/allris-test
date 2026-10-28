@@ -422,7 +422,7 @@ def _mio(x):
     return f"{x / 1e6:,.1f}".replace(",", " ").replace(".", ",").replace(" ", ".") + " Mio. €" if x is not None else "–"
 
 
-def _haushalt(d):
+def _haushalt(d, root=""):
     """Abschnitt „Haushalt im Produktbereich“: Ist und Plan getrennt, nominal, mit Fundstelle."""
     h = d.get("haushalt_betraege")
     if not h:
@@ -442,6 +442,7 @@ def _haushalt(d):
       </tbody>
     </table>
     <p class="meta">Ausgelesen aus den Haushaltsplänen der Stadt Bonn (PDF: {quellen}; Abruf {_date(h["abruf"])}); die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan. Der Produktbereich deckt sich nicht genau mit dem Thema dieser Seite; interne Leistungen und Umgliederungen verschieben Beträge. Die Finanzplanung ab 2027 ist nicht übernommen; der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht. Zu einzelnen Vorlagen nennt die Seite keine Beträge.</p>
+    <p><a href="{root}haushalt/#pb-{escape(h["produktbereich"])}">Alle Produktbereiche im Vergleich: Haushalt auf einen Blick</a></p>
 """
 
 
@@ -505,7 +506,7 @@ def body(t, d, root):
     <p class="meta">Die Seite beschreibt Verfahren; sie bewertet keine Entscheidungen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
     <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> {sprung}</nav>
 {prozessbild.abschnitt(t, d, root)}
-{_schritte(t, d, root)}{_haushalt(d)}{vergleich}{_ausschuss(d, root)}    <h2 id="sitzungen">Nächste Sitzungen</h2>
+{_schritte(t, d, root)}{_haushalt(d, root)}{vergleich}{_ausschuss(d, root)}    <h2 id="sitzungen">Nächste Sitzungen</h2>
     <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher. Die Frist (21 Tage vorher, GeschO §§ 26, 27) ist berechnet.</p>
     <ul>
 {sitzungen}
