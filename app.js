@@ -248,6 +248,12 @@
     const h = document.getElementById("about-" + b.dataset.about);
     if (h) { h.scrollIntoView({ block: "start" }); h.focus(); }
   });
+  // Externe Links immer in einem neuen Tab (Entscheidung des Auftraggebers 28.10.2026); gilt auch für Links, die
+  // erst zur Laufzeit entstehen (Vorgang, Prozesse, Mitmachen, Assistent)
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest?.("a[href]");
+    if (a && /^https?:$/.test(a.protocol) && a.host !== location.host && !a.target) { a.target = "_blank"; a.rel = a.rel || "noopener"; }
+  }, true);
   // „Was ist neu?“ in einem eigenen Fenster (aus „Über“ und dem Menü „Daten“)
   document.addEventListener("click", (e) => {
     if (e.target.closest("[data-neu]")) { closeMega(); if ($("#about").open) $("#about").close(); $("#neu").showModal(); }
@@ -500,9 +506,9 @@
       },
     });
     new MapMenu().addTo(map);
-    // Legenden übereinander oben links, alle eingeklappt: Flächen (initNav), Punkte, Quellen und Datenstand
+    // Legenden übereinander unten links, alle eingeklappt: Flächen (initNav), Punkte, Quellen und Datenstand
     const Stack = L.Control.extend({
-      options: { position: "topleft" },
+      options: { position: "bottomleft" },
       onAdd() {
         const d = L.DomUtil.create("div", "map-stack");
         legendEl = L.DomUtil.create("details", "map-legend", d);

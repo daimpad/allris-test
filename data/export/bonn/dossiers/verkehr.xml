@@ -9,6 +9,14 @@
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030137#vorlage</id>
+<title>Neue Vorlage 262029: Bürgerantrag: Verkehrsberuhigenden Maßnahmen auf der Römerstraße (Abschnitt Augustusring bis Wachsbleiche)</title>
+<updated>2026-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-castell#262029"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030137"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030136#vorlage</id>
 <title>Neue Vorlage 262028: Bürgerantrag: Beibehaltung der Fahrradabstellplätze in der Gabelsbergerstraße</title>
 <updated>2026-10-28T00:00:00Z</updated>
@@ -23,6 +31,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:gronau#262023"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030130"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029812#vorlage</id>
+<title>Neue Vorlage 260919-07 ST: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:venusberg#260919-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029812"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030055#vorlage</id>
@@ -790,22 +806,6 @@
 <updated>2026-10-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:endenich#261529-06"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029745"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028705#vorlage</id>
-<title>Neue Vorlage 261378-01 ST: Stellungnahme zur Grüne-Bezirksfraktion-Großen Anfrage: Weiteres Verfahren zum Quartierskonzept Südstadt</title>
-<updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:suedstadt#261378-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028705"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029728#vorlage</id>
-<title>Neue Vorlage 261858: Bürgerantrag: Antrag auf Sperrung des Linksabbiegers vom Belderberg (B 9) in Fahrtrichtung Bertha-von-Suttner-Platz bis zur Wiedereröffnung der Nordbrücke</title>
-<updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#261858"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029728"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
 </feed>
