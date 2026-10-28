@@ -4,6 +4,7 @@ die Inhalte der Karte finden. Grundlage sind die Gebietsdateien in _site/data/ex
 Je Seite: Kennzahlen, Themen, die 20 jüngsten Vorlagen mit Stand und Links (Karte, Original).
 Keine Erzeugungszeitpunkte, damit sich der Branch deploy nur bei Inhaltsänderungen ändert."""
 import json
+import re
 from collections import Counter
 from html import escape
 from urllib.parse import quote
@@ -19,8 +20,18 @@ def _date(iso):
     return f"{iso[8:10]}.{iso[5:7]}.{iso[:4]}" if iso and len(iso) >= 10 else "–"
 
 
+# Externe Links öffnen in einem neuen Tab (Entscheidung des Auftraggebers 28.10.2026), z. B. die PDF der Stadt
+EIGENE = ("ris-bonn.datenatlas.de", "daimpad.github.io/allris-test")
+_EXTERN = re.compile(r'<a\s(?![^>]*\btarget=)([^>]*\bhref="https?://(?!(?:%s))[^"]*"[^>]*)>' % "|".join(re.escape(h) for h in EIGENE))
+
+
+def neuer_tab(html):
+    """Ergänzt target="_blank" (und rel="noopener", falls kein rel gesetzt ist) an externen Links ohne target."""
+    return _EXTERN.sub(lambda m: f'<a {m.group(1)} target="_blank"' + ("" if " rel=" in m.group(0) else ' rel="noopener"') + ">", html)
+
+
 def _page(site_url, path, title, description, body, root, head=""):
-    return f"""<!doctype html>
+    return neuer_tab(f"""<!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
@@ -46,7 +57,7 @@ def _page(site_url, path, title, description, body, root, head=""):
   </footer>
 </body>
 </html>
-"""
+""")
 
 
 def _area_body(kind_label, name, bezirk, key, papers, root):

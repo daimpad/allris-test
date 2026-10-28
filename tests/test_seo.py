@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 
-from pipeline import seo
+from pipeline import gebietsseiten, seo
 
 SITE = Path(__file__).resolve().parent.parent / "site"
 
@@ -101,13 +101,27 @@ class Gebietsseiten(unittest.TestCase):
             page = (site / "ortsteil" / "endenich" / "index.html").read_text(encoding="utf-8")
             self.assertIn('<link rel="canonical" href="https://ris-bonn.example/ortsteil/endenich/">', page)
             self.assertIn("Radweg &lt;Endenicher&gt; Straße", page)
-            self.assertIn('href="https://example.org/vo?x=1&amp;y=2"', page)
+            self.assertIn('href="https://example.org/vo?x=1&amp;y=2" target="_blank" rel="noopener"', page)
             self.assertIn('href="../../?gebiet=ortsteil:endenich#261856"', page)
             self.assertFalse((site / "ortsteil" / "leer").exists())
             self.assertIn('href="../ortsteil/endenich/"', (site / "gebiete" / "index.html").read_text(encoding="utf-8"))
             urls = [e.text for e in ET.parse(site / "sitemap.xml").getroot().iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
             self.assertIn("https://ris-bonn.example/ortsteil/endenich/", urls)
             self.assertIn("https://ris-bonn.example/gebiete/", urls)
+
+
+class NeuerTab(unittest.TestCase):
+    def test_nur_externe_links_ohne_target(self):
+        html = ('<a href="https://www.bonn.de/plan.pdf">PDF</a> <a class="x" href="https://example.org/a" rel="license">L</a> '
+                '<a href="../haushalt/">intern</a> <a href="https://ris-bonn.datenatlas.de/thema/">eigen</a> '
+                '<a href="https://example.org/b" target="_self">fest</a> <a href="mailto:a@example.org">Mail</a>')
+        out = gebietsseiten.neuer_tab(html)
+        self.assertIn('<a href="https://www.bonn.de/plan.pdf" target="_blank" rel="noopener">PDF</a>', out)
+        self.assertIn('<a class="x" href="https://example.org/a" rel="license" target="_blank">L</a>', out)
+        for unveraendert in ('<a href="../haushalt/">', '<a href="https://ris-bonn.datenatlas.de/thema/">',
+                             '<a href="https://example.org/b" target="_self">', '<a href="mailto:a@example.org">'):
+            self.assertIn(unveraendert, out)
+        self.assertEqual(gebietsseiten.neuer_tab(out), out)
 
 
 if __name__ == "__main__":

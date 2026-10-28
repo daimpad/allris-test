@@ -452,8 +452,9 @@ body.detail-closed #timeline-wrap { right: 16px; }
 #map.map-gray .leaflet-tile-pane { filter: grayscale(1) contrast(.9) brightness(1.08); }
 .map-style { font: 500 13px/1 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); cursor: pointer; }
 .map-legend { font: 400 12.5px/1.4 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); }
-/* Legenden übereinander oben links (Flächen, Punkte, Quellen), alle eingeklappt; zusammen höchstens so hoch wie die Karte */
-.map-stack { display: flex; flex-direction: column; gap: 8px; width: 260px; margin-top: 96px !important; max-height: calc(100vh - 120px); overflow-y: auto; overscroll-behavior: contain; }
+/* Legenden übereinander unten links (Flächen, Punkte, Quellen), alle eingeklappt; geöffnet wachsen sie nach oben,
+   zusammen höchstens bis unter die Leiste */
+.map-stack { display: flex; flex-direction: column; gap: 8px; width: 260px; max-height: calc(100vh - 130px); overflow-y: auto; overscroll-behavior: contain; }
 .map-stack > details { flex: none; }   /* nicht zusammendrücken: der Stapel rollt als Ganzes */
 .map-sources p { margin: 6px 0 0; font-size: 12px; color: var(--text-muted); }
 .map-sources p:first-of-type { color: var(--text); }
@@ -722,7 +723,7 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .nav-metric { display: grid; gap: 3px; margin: 8px 0 2px; font-size: 11px; color: var(--text-muted); }
 .nav-metric select { font: inherit; font-size: 12px; color: var(--text); padding: 4px 6px; border-radius: 8px;
   border: 1px solid var(--border-alt); background: var(--surface); width: 100%; box-sizing: border-box; min-width: 0; }
-@media (max-width: 900px) { .map-stack { margin-top: 70px !important; width: 232px; max-height: calc(100vh - 270px); } }
+@media (max-width: 900px) { .map-stack { width: min(232px, calc(100vw - 185px));   /* frei neben „Ganz Bonn ansehen“ */ max-height: calc(100vh - 250px); } }
 
 /* Mitmachen in Bonn (site/beteiligung.js) */
 #bt-body h3 { font-size: 15px; margin: 16px 0 8px; }
