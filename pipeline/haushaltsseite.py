@@ -12,6 +12,10 @@ einer Tabelle der Produktgruppen (data/haushalt/aufwandsarten.tsv, produktgruppe
 Produktgruppe führt auf #pg-1-XX-YY mit ihren Aufwandsarten als Balken und Tabelle. Auch das geht ohne Skript (:target);
 alle Abschnitte liegen in .hh-karten, damit die Auswahlknöpfe überall wirken. Für die Browser-Prüfung vor der Freigabe
 zeigt die Umgebungsvariable HAUSHALT_EBENEN=vorschau die Ebenen beim Erzeugen der Seite.
+
+Mit Skript (site/haushalt.js, Entscheidung 28.10.2026) wächst die angeklickte Kachel auf die ganze Fläche und zeigt ihre
+Unterteilung; Ebene 3 zeichnet es als Kacheln aus den Beträgen der Balken (data-b), damit die Seite klein bleibt.
+Erklärungen stehen einmal im Akkordeon „So lesen Sie die Zahlen“, Grenzen und Quellen in zugeklappten Akkordeons.
 """
 import json
 import os
@@ -30,6 +34,7 @@ FORMATE = {"breit": (1000, 560), "hoch": (340, 640)}   # hoch: etwa in Bildschir
 HINWEIS = ("Aufwandsarten sind Kontenarten, keine Aufgaben: Sie zeigen, wofür das Geld der Art nach verbucht ist, etwa "
            "für Personal oder für Transfers. Bilanzielle Abschreibungen verteilen den Wertverlust von Gebäuden und "
            "Anlagen auf die Jahre; sie fließen nicht als Geld ab.")
+BEGRIFFE = "Begriffe oben unter „So lesen Sie die Zahlen“."   # kein Link: ein Sprung verließe die Ebene (:target)
 
 
 def _prozent(x):
@@ -237,14 +242,16 @@ def treemap_gruppen(p, ansicht, format_):
                                            f'zusammen {_mio(gesamt["betrag"])}', *_farben_pb(p))
 
 
-def _balken(arten, ansichten):
+def _balken(arten, ansichten, betraege=False):
     """Gestapelter Balken der Aufwandsarten je Ansicht (HTML, Breite anteilig an der Summe der positiven Werte). Die
-    Tabelle darunter nennt dieselben Werte; der Balken ist für Vorleseprogramme ausgeblendet."""
+    Tabelle darunter nennt dieselben Werte; der Balken ist für Vorleseprogramme ausgeblendet. Mit betraege trägt jedes
+    Stück seinen Betrag (data-b), aus dem site/haushalt.js die Kacheln der Ebene 3 zeichnet."""
     out = []
     for k, a in enumerate(ansichten):
         werte = [(t["zeile"], t[a["art"]][a["jahr"]]["betrag"]) for t in arten if a["jahr"] in t[a["art"]]]
         positiv = sum(b for _, b in werte if b > 0)
-        teile = "".join(f'<i class="hh-f{nr}" style="width:{100 * b / positiv:.1f}%"></i>' for nr, b in werte
+        teile = "".join(f'<i class="hh-f{nr}" style="width:{100 * b / positiv:.1f}%"{f' data-b="{b}"' if betraege else ""}></i>'
+                        for nr, b in werte
                         if positiv and 100 * b / positiv >= 0.05)   # unter 0,05 % unsichtbar
         out.append(f'<div class="hh-ansicht hh-v{k} hh-balken" aria-hidden="true">{teile}</div>')
     return "".join(out)
@@ -315,12 +322,10 @@ def zoom(d, p):
                      + "".join(zelle(_zelle_art(x)) for x in werte)
                      + zelle(anteil(t["plan"].get(ref["jahr"]))) + "</tr>")
     # Produktgruppen
-    gruppen, null = [], []
+    gruppen = []
     for g in p["produktgruppen"]:
         werte = [g[art].get(j) for art, j, _ in spalten]
         negativ += _negativ(f'{g["nr"]} {g["name"]}', spalten, werte)
-        if any(x and x["betrag"] == 0 for x in werte):
-            null.append(g["nr"])
         name = f'<a href="#{_anker(g["nr"])}">{escape(g["name"])}</a>' if _mit_werten(g, ansichten) else escape(g["name"])
         zusatz = "".join(f'<br><small>Name in Haushaltsplan {escape(a)}: {escape(n)}</small>' for a, n in g["alt"])
         gruppen.append(f'<tr><th scope="row">{escape(g["nr"])} {name}'
@@ -328,12 +333,8 @@ def zoom(d, p):
                        + "".join(zelle(_zelle_art(x)) for x in werte)
                        + zelle(anteil(g["plan"].get(ref["jahr"])))
                        + zelle(_fundstelle(d, pb, werte, ausgabe=neu)) + "</tr>")
-    hinweise = [HINWEIS, "„leer“ heißt: Die Zelle ist im Haushaltsplan leer, sie zählt als 0 €."]
-    if negativ:
-        hinweise.append(f'Negativ sind: {"; ".join(negativ)}. Ein negativer Wert hat keine Fläche und kein Stück im '
-                        'Balken; die übrigen Flächen zeigen dann zusammen etwas mehr als die Summe.')
-    if null:
-        hinweise.append("Produktgruppen mit 0 € in einer Ansicht stehen nur in der Tabelle.")
+    hinweise = [f'Negativ sind: {"; ".join(negativ)}.'] if negativ else []
+    hinweise.append(BEGRIFFE)
     t_ = f"zoom-{pb}-t"
     return f"""        <section id="zoom-{pb}" class="hh-ebene" aria-labelledby="{t_}">
           {_pfad(("produktbereiche", "Alle Produktbereiche"), f'{pb} {p["name"]}')}
@@ -356,8 +357,8 @@ def zoom(d, p):
 
 
 def gruppe(d, p, g):
-    """Ebene 3, Abschnitt #pg-1-XX-YY: Aufwandsarten einer Produktgruppe als Balken je Ansicht und Tabelle (ohne
-    Treemap, damit die Seite klein bleibt)."""
+    """Ebene 3, Abschnitt #pg-1-XX-YY: Aufwandsarten einer Produktgruppe als Balken je Ansicht und Tabelle; mit Skript
+    zeichnet site/haushalt.js aus den Balken Kacheln (keine Treemap im HTML, damit die Seite klein bleibt)."""
     ansichten = d["ansichten"]
     spalten = [(a["art"], a["jahr"], a["titel"]) for a in reversed(ansichten)]
     zeilen, negativ, alle = [], [], []
@@ -373,15 +374,15 @@ def gruppe(d, p, g):
     kopf = "".join(f'<th scope="col">{escape(t)}</th>' for *_, t in spalten)
     angaben = [escape(g["einheit"])] if g["einheit"] else []
     angaben += [f"Name in Haushaltsplan {escape(a)}: {escape(n)}" for a, n in g["alt"]]
-    hinweis = (f' Negativ sind: {"; ".join(negativ)}; ein negativer Wert hat kein Stück im Balken.' if negativ else "")
+    hinweis = f' Negativ sind: {"; ".join(negativ)}.' if negativ else ""
     t_ = f"{_anker(g['nr'])}-t"
     return f"""        <section id="{_anker(g["nr"])}" class="hh-ebene hh-pg" aria-labelledby="{t_}">
           {_pfad(("produktbereiche", "Alle Produktbereiche"), (f"zoom-{p['pb']}", f'{p["pb"]} {p["name"]}'), f'{g["nr"]} {g["name"]}')}
           <h2 id="{t_}">Produktgruppe {escape(g["nr"])} {escape(g["name"])}</h2>
           {f'<p class="meta">{" · ".join(angaben)}</p>' if angaben else ""}
-          {_balken(g["aufwandsarten"], ansichten)}
+          {_balken(g["aufwandsarten"], ansichten, betraege=True)}
           <table class="hh-tabelle hh-pg-tabelle"><thead><tr><th scope="col">Aufwandsart</th>{kopf}</tr></thead><tbody>{"".join(zeilen)}</tbody></table>
-          <p class="meta">Fundstelle: {_fundstelle(d, p["pb"], alle + summe, datei=True)}. Aufwandsarten sind Kontenarten, keine Aufgaben; Abschreibungen fließen nicht als Geld ab. „leer“ zählt als 0 €.{hinweis}</p>
+          <p class="meta">Fundstelle: {_fundstelle(d, p["pb"], alle + summe, datei=True)}.{hinweis}</p>
         </section>"""
 
 
@@ -417,21 +418,33 @@ def body(d, root):
                        for p in d["produktbereiche"] if p.get("thema"))
     dateien = ", ".join(f'<a href="{escape(v["seite"])}">Haushaltsplan {escape(a)}</a>' for a, v in sorted(d["ausgaben"].items()))
     if d.get("zoom"):
-        klick = ("Ein Klick auf eine Fläche zeigt die Produktgruppen und Aufwandsarten des Produktbereichs, ein weiterer "
-                 "Klick die Aufwandsarten einer Produktgruppe. Die Flächen zeigen nur den Anteil am Haushalt, nicht, ob "
-                 "ein Betrag hoch oder niedrig ist.")
+        klick = ("Ein Klick auf eine Fläche zeigt ihre Unterteilung: erst die Produktgruppen, dann die Aufwandsarten. "
+                 "Die Flächen zeigen Anteile, keine Bewertung.")
         umfang = ("Die Seite zeigt drei Ebenen: Produktbereiche, Produktgruppen und je Bereich und Gruppe die sechs "
                   "Aufwandsarten. Produkte und Konten enthalten die Haushaltspläne nicht.")
-        pruefung = ("; je Produktbereich und Spalte ergeben die Produktgruppen und die Aufwandsarten (Zeilen 11–16) die "
-                    "ordentlichen Aufwendungen, ebenso je Produktgruppe, leere Zellen zählen als 0")
+        pruefung = (" Je Produktbereich und Spalte ergeben die Produktgruppen und die Aufwandsarten (Zeilen 11–16) die "
+                    "ordentlichen Aufwendungen, ebenso je Produktgruppe; leere Zellen zählen als 0. Ein Prüfbogen mit 33 "
+                    "Zellen wurde mit einem zweiten Leseweg gegengeprüft (KI-gestützt, 33 von 33 gleich) und vor der "
+                    "Veröffentlichung freigegeben.")
+        begriffe = f"""
+        <dt>Ebenen</dt><dd>Produktbereich, Produktgruppe, Aufwandsart. Die Produktgruppen eines Bereichs ergeben zusammen seine ordentlichen Aufwendungen, ebenso seine sechs Aufwandsarten.</dd>
+        <dt>Aufwandsarten</dt><dd>{HINWEIS}</dd>
+        <dt>„leer“ und 0 €</dt><dd>Eine leere Zelle im Haushaltsplan zählt als 0 €. Produktgruppen mit 0 € in einer Ansicht haben keine Fläche und stehen nur in der Tabelle.</dd>
+        <dt>Negative Werte</dt><dd>Sie kommen nur im Ist vor und haben keine Fläche; die übrigen Flächen zeigen dann zusammen etwas mehr als die Summe.</dd>"""
     else:
-        klick = ("Ein Klick auf eine Fläche führt zur Zeile in der Tabelle. Die Flächen zeigen nur den Anteil am Haushalt, "
-                 "nicht, ob ein Betrag hoch oder niedrig ist.")
+        klick = "Ein Klick auf eine Fläche führt zur Zeile in der Tabelle. Die Flächen zeigen Anteile, keine Bewertung."
         umfang = "Die Seite zeigt eine Ebene, die 17 Produktbereiche. Produktgruppen, Produkte und Konten stehen in den Haushaltsplänen."
-        pruefung = ""
+        pruefung = begriffe = ""
     return f"""    <h1>Haushalt auf einen Blick</h1>
     <p class="lead">Wofür plant die Stadt Bonn Geld ein? Jede Fläche ist ein Produktbereich des Haushalts; je größer die Fläche, desto höher die ordentlichen Aufwendungen.</p>
-    <p class="meta">Ordentliche Aufwendungen (Zeile 17 der Teilergebnispläne), nominal in Mio. €. Plan heißt Ansatz des Haushaltsjahres, Ist heißt Ergebnis laut Haushaltsplan; beide weichen oft voneinander ab. Die Seite bewertet keine Beträge. Farbig sind die Produktbereiche mit eigener Themenseite: {themen}.</p>
+    <details class="hh-mehr" id="lesen">
+      <summary>So lesen Sie die Zahlen</summary>
+      <dl>
+        <dt>Betrag</dt><dd>Ordentliche Aufwendungen (Zeile 17 der Teilergebnispläne), nominal in Mio. €, ohne Investitionen.</dd>
+        <dt>Plan und Ist</dt><dd>Plan ist der Ansatz des Haushaltsjahres, Ist das Ergebnis laut Haushaltsplan; beide weichen oft voneinander ab.</dd>{begriffe}
+        <dt>Farben</dt><dd>Farbig sind die Produktbereiche mit eigener Themenseite: {themen}.</dd>
+      </dl>
+    </details>
     <div class="hh-wahl" id="produktbereiche">
       <p class="hh-wahl-titel" id="hh-wahl-titel">Ansicht:</p>
 {wahl}
@@ -444,7 +457,7 @@ def body(d, root):
       </div>
     </div>
     <h2 id="tabelle">Alle Produktbereiche</h2>
-    <p>Sortiert nach dem {escape(ref["titel"])}. Der Name führt zum Teilergebnisplan (PDF); die Fundstelle steht unter jedem Betrag.</p>
+    <p>Sortiert nach dem {escape(ref["titel"])}; der Name führt zum Teilergebnisplan (PDF).</p>
     <table class="hh-tabelle">
       <thead><tr><th scope="col">Produktbereich</th>{kopf}<th scope="col">Anteil {escape(ref["titel"])}</th></tr></thead>
       <tbody>
@@ -452,27 +465,36 @@ def body(d, root):
         <tr class="hh-summe"><th scope="row">Zusammen</th>{summe}<td>100,0 %</td></tr>
       </tbody>
     </table>
-    <h2>Was diese Seite nicht zeigt</h2>
-    <ul>
-      <li><strong>Einzelne Posten:</strong> {umfang}</li>
-      <li><strong>Erträge und Investitionen:</strong> Die Flächen zeigen nur Aufwendungen, keine Erträge (Zeile 10). Investitionen stehen getrennt in den Teilfinanzplänen.</li>
-      <li><strong>Ausgegliederte Bereiche:</strong> Eigenbetriebe und das Städtische Gebäudemanagement haben eigene Wirtschaftspläne. Interne Leistungen, Umgliederungen und der globale Minderaufwand verschieben Summen zwischen den Bereichen.</li>
-      <li><strong>Künftige Jahre:</strong> Die Finanzplanung ab 2027 ist nicht übernommen. Der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht.</li>
-      <li><strong>Vorlagen:</strong> Einzelnen Vorlagen ordnet die Seite keine Beträge zu.</li>
-    </ul>
-    <p class="meta">Quelle: Stadt Bonn, {dateien} (PDF, Teilergebnispläne je Produktbereich; Abruf {_date(d["abruf"])}); ausgelesen mit pipeline/haushaltsplan.py, die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan{pruefung}. Lizenz: {escape(d["lizenz"])}. Gestaltung nach dem Vorbild der <a href="https://haushaltsdaten.odis-berlin.de/visualisierung/">Berliner Haushaltsdaten</a> (ODIS, Technologiestiftung Berlin).</p>
+    <details class="hh-mehr">
+      <summary>Was diese Seite nicht zeigt</summary>
+      <ul>
+        <li><strong>Einzelne Posten:</strong> {umfang}</li>
+        <li><strong>Erträge und Investitionen:</strong> Die Flächen zeigen nur Aufwendungen, keine Erträge (Zeile 10). Investitionen stehen getrennt in den Teilfinanzplänen.</li>
+        <li><strong>Ausgegliederte Bereiche:</strong> Eigenbetriebe und das Städtische Gebäudemanagement haben eigene Wirtschaftspläne. Interne Leistungen, Umgliederungen und der globale Minderaufwand verschieben Summen zwischen den Bereichen.</li>
+        <li><strong>Künftige Jahre:</strong> Die Finanzplanung ab 2027 ist nicht übernommen. Der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht.</li>
+        <li><strong>Vorlagen:</strong> Einzelnen Vorlagen ordnet die Seite keine Beträge zu.</li>
+      </ul>
+    </details>
+    <details class="hh-mehr">
+      <summary>Quellen, Prüfung und Lizenz</summary>
+      <p>Stadt Bonn, {dateien} (PDF, Teilergebnispläne je Produktbereich; Abruf {_date(d["abruf"])}).</p>
+      <p>Ausgelesen mit pipeline/haushaltsplan.py; die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan.{pruefung}</p>
+      <p>Lizenz: {escape(d["lizenz"])}.</p>
+      <p>Gestaltung nach dem Vorbild der <a href="https://haushaltsdaten.odis-berlin.de/visualisierung/">Berliner Haushaltsdaten</a> (ODIS, Technologiestiftung Berlin).</p>
+    </details>
     <p><a href="{root}thema/">Alle Themenseiten</a> · <a href="{root}">Zur Karte</a></p>"""
 
 
 def stil(d):
     """Spaltennamen der Tabellen der Ebenen 2 und 3 auf dem Telefon, wo die Tabellen zu Listen werden; die Jahre kommen aus den
-    Daten, daher als Stilblock der Seite statt als Attribut an jeder Zelle."""
+    Daten, daher als Stilblock der Seite statt als Attribut an jeder Zelle. Dazu das Skript für Zoom und Kacheln."""
     if not d.get("zoom"):
         return ""
     titel = [a["titel"] for a in reversed(d["ansichten"])] + [f'Anteil {d["ansichten"][0]["titel"]}', "Fundstelle"]
     regeln = " ".join(f'.page table:is(.hh-zoom-tabelle, .hh-pg-tabelle) td:nth-of-type({k})::before {{ content: "{t}: "; }}'
                       for k, t in enumerate(titel, 1))
-    return f"\n  <style>@media (max-width: 600px) {{ {regeln} }}</style>"
+    return (f"\n  <style>@media (max-width: 600px) {{ {regeln} }}</style>"
+            f'\n  <script src="../haushalt.js" defer></script>')
 
 
 def write(site, site_url, page):

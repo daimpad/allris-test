@@ -219,10 +219,28 @@ body:has(.hh-wahl) :is(.page-head, .page, .page-foot) { width: min(1120px, calc(
 /* Aufwandsarten 11–16: feste, nominale Farben; alle Paare auch bei Rot- oder Grünschwäche unterscheidbar (OKLab-Abstand
    ≥ 11, simuliert nach Machado u. a. 2009), Text dazu steht in der Tabelle */
 tr[class^="hh-z"] > th::before { content: ""; display: inline-block; width: 12px; height: 12px; margin-right: 6px; border-radius: 3px; vertical-align: -1px; }
-.hh-f11, .hh-z11 > th::before { background: #3f81c1; } .hh-f12, .hh-z12 > th::before { background: #c79de6; }
+.hh-f11, .hh-z11 > th::before { background: #3a77b3; } .hh-f12, .hh-z12 > th::before { background: #c79de6; }
 .hh-f13, .hh-z13 > th::before { background: #bf7946; } .hh-f14, .hh-z14 > th::before { background: #5a610c; }
 .hh-f15, .hh-z15 > th::before { background: #8bc27f; } .hh-f16, .hh-z16 > th::before { background: #753a79; }
 .page table.hh-pg-tabelle, .hh-pg .hh-balken { max-width: 720px; }
+/* Mit Skript (site/haushalt.js): Kacheln der Aufwandsarten auf Ebene 3 statt Balken, Zoom beim Wechsel der Ebene */
+.hh-pg.hh-mit-kacheln .hh-balken { display: none !important; }
+.hh-arten rect.hh-f11 { fill: #3a77b3; } .hh-arten rect.hh-f12 { fill: #c79de6; } .hh-arten rect.hh-f13 { fill: #bf7946; }
+.hh-arten rect.hh-f14 { fill: #5a610c; } .hh-arten rect.hh-f15 { fill: #8bc27f; } .hh-arten rect.hh-f16 { fill: #753a79; }
+.hh-arten rect { stroke: #fff; stroke-width: 2; }
+.hh-arten text { fill: #1d1b26; } .hh-arten .hh-dunkel text { fill: #fff; }
+.hh-ansicht { overflow: hidden; border-radius: 4px; }
+.hh-svg { transform-origin: 0 0; }
+.hh-svg text { transition: opacity 0.25s ease-out; }
+.hh-svg.hh-zoom text { opacity: 0; transition: none; }
+@media (prefers-reduced-motion: reduce) { .hh-svg text { transition: none; } }
+/* Akkordeons: Begriffe oben, Grenzen und Quellen unten, zugeklappt */
+.hh-mehr { margin: 12px 0; padding: 2px 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.hh-mehr[open] { padding-bottom: 12px; }
+.hh-mehr ul { margin: 4px 0 0; padding-left: 20px; } .hh-mehr p { margin: 6px 0 0; font-size: 15px; }
+.hh-mehr dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 4px 0 0; font-size: 15px; }
+.hh-mehr dt { font-weight: 600; } .hh-mehr dd { margin: 0; }
+@media (max-width: 600px) { .hh-mehr dl { grid-template-columns: 1fr; gap: 2px; } .hh-mehr dd { margin-bottom: 8px; } }
 @media (min-width: 601px) { .page table.hh-zoom-tabelle td:not(:last-child), .page table.hh-pg-tabelle td { white-space: nowrap; } }
 @media (max-width: 600px) {
   .hh-ebene { scroll-margin-top: 124px; }   /* Auswahlknöpfe in zwei Zeilen bleiben sichtbar */
