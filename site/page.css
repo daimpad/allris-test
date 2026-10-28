@@ -178,3 +178,25 @@ body:has(.kacheln) .page { background: transparent; box-shadow: none; padding: 8
   .thema-kopf { margin: -8px -18px 0; }
   .thema-kopf h1 { margin: 14px 18px 6px; }
 }
+/* Seite haushalt/ (pipeline/haushaltsseite.py): Treemap je Ansicht, Wechsel über Auswahlknöpfe ohne Skript */
+body:has(.hh-wahl) :is(.page-head, .page, .page-foot) { width: min(1120px, calc(100% - 32px)); }
+.hh-wahl { margin: 16px 0 8px; }
+.hh-wahl-titel { display: inline; margin: 0 8px 0 0; font-weight: 600; }
+.hh-radio { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.hh-radio + label { display: inline-block; margin: 0 6px 8px 0; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: #fff; cursor: pointer; font-weight: 600; }
+.hh-radio + label small { font-weight: 400; color: var(--muted); }
+.hh-radio:checked + label { background: var(--accent-ink); border-color: var(--accent-ink); color: #fff; }
+.hh-radio:checked + label small { color: #fff; }
+.hh-radio:focus-visible + label { outline: 2px solid var(--accent-fill); outline-offset: 2px; }
+.hh-ansicht { display: none; margin: 4px 0 0; }
+.hh-radio:nth-of-type(1):checked ~ .hh-karten .hh-v0, .hh-radio:nth-of-type(2):checked ~ .hh-karten .hh-v1,
+.hh-radio:nth-of-type(3):checked ~ .hh-karten .hh-v2 { display: block; }
+.hh-svg { display: block; width: 100%; height: auto; font-family: "Inter", system-ui, sans-serif; }
+.hh-svg a:focus-visible rect, .hh-svg a:hover rect { stroke: var(--text); stroke-width: 3; }
+.hh-hoch { display: none; }
+@media (max-width: 600px) { .hh-breit { display: none; } .hh-hoch { display: block; } }
+.page table.hh-tabelle { table-layout: auto; }
+.page table.hh-tabelle th { width: auto; }
+.page table.hh-tabelle td { font-variant-numeric: tabular-nums; }
+.page table.hh-tabelle tr:target { background: rgba(124, 58, 237, 0.1); }
+.page table.hh-tabelle .hh-summe { font-weight: 600; }
