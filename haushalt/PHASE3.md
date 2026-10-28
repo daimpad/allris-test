@@ -42,7 +42,8 @@
   - die drei umbenannten Produktgruppen in beiden Ausgaben;
   - eine Produktgruppe mit 0 € im Plan und die größte Produktgruppe;
   - eine Stichprobe der Ebenen 2 und 3.
-- Schalter `haushaltsplan.EBENEN_FREIGEGEBEN = False`: Ohne Freigabe zeigt die Seite nur Ebene 1 wie bisher. Für die Browser-Prüfung erzeugt `tests.yml` die Seite mit `HAUSHALT_EBENEN=vorschau`.
+- Schalter `haushaltsplan.EBENEN_FREIGEGEBEN`: Ohne Freigabe zeigt die Seite nur Ebene 1. Für die Browser-Prüfung erzeugt `tests.yml` die Seite mit `HAUSHALT_EBENEN=vorschau`.
+- **Freigabe (28.10.2026):** Der Auftraggeber hat den Prüfbogen im Gespräch freigegeben. Grundlage war eine KI-Gegenprobe aller 33 Zellen über einen zweiten Leseweg (`pdftotext -layout`, Spalte über die Spaltennummern): 33 von 33 gleich, die geänderten Namen ebenso; keine Prüfung von Hand. Danach `EBENEN_FREIGEGEBEN = True`.
 
 ## Geprüft
 - `tests/test_haushaltsplan.py`:

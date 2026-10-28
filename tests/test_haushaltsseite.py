@@ -61,8 +61,10 @@ class Seite(unittest.TestCase):
         self.assertEqual(len(set(re.findall(r'<tr id="(pb-\d\d)"', self.html))), 17)
         self.assertNotIn("2027", self.html.split("Was diese Seite nicht zeigt")[0])   # keine Finanzplanung
 
+    def test_freigegeben(self):
+        self.assertTrue(hs.haushaltsplan.EBENEN_FREIGEGEBEN)   # Prüfbogen im Gespräch freigegeben 28.10.2026
+
     def test_ohne_freigabe_nur_ebene_1(self):
-        self.assertFalse(hs.haushaltsplan.EBENEN_FREIGEGEBEN)   # Prüfbogen noch nicht im Gespräch geprüft
         self.assertFalse(self.d["zoom"])
         self.assertNotIn("hh-ebene", self.html)
         self.assertNotIn("#zoom-", self.html)

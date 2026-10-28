@@ -223,7 +223,7 @@ test("Haushalt auf einen Blick: Treemap je Ansicht ohne Skript umschaltbar, Zeil
   }
 });
 
-// Ebenen 2 und 3: bis zur Freigabe nur in der Vorschau (Seite mit HAUSHALT_EBENEN=vorschau erzeugt, tests.yml)
+// Ebenen 2 und 3 (freigegeben 28.10.2026; tests.yml erzeugt die Seite zusätzlich mit HAUSHALT_EBENEN=vorschau)
 const ebenen = (page) => page.evaluate(() => [...document.querySelectorAll(".hh-ebene")]
   .filter((s) => s.getBoundingClientRect().height > 0).map((s) => s.id));
 

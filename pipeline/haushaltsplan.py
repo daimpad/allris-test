@@ -61,7 +61,7 @@ AUFWANDSARTEN_KOPF = KOPF + ["leer"]
 PRODUKTGRUPPEN_TSV = ORDNER / "produktgruppen.tsv"
 PRODUKTGRUPPEN_KOPF = ["ausgabe", "produktbereich", "produktgruppe", "name", "einheit", "zeile", "zeile_name", "jahr",
                        "art", "betrag", "datei", "seite", "leer"]
-EBENEN_FREIGEGEBEN = False   # Ebenen 2 und 3 erst nach Prüfung des Prüfbogens im Gespräch (haushalt/PHASE3.md)
+EBENEN_FREIGEGEBEN = True   # Ebenen 2 und 3: Prüfbogen im Gespräch freigegeben 28.10.2026 (haushalt/PHASE3.md)
 EBENEN_PRUEFBOGEN = config.EXPORT / "haushalt" / "pruefbogen_haushalt_ebenen.tsv"
 SPALTE_PT = 4   # pt: größter Abstand des rechten Rands einer Zahl von der Lage, die ihre Spalte erwarten lässt
 WORT = re.compile(r'<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)">(.*?)</word>')
