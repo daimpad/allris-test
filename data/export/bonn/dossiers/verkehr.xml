@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/verkehr</id>
 <title>RIS-Karte Bonn – Verkehr und Mobilität</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Verkehr und Mobilität (Zuordnung abgeleitet)</subtitle>
-<updated>2026-10-27T00:00:00Z</updated>
+<updated>2026-10-28T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/dossiers/verkehr.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/thema/verkehr-und-mobilitaet/"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030136#vorlage</id>
+<title>Neue Vorlage 262028: Bürgerantrag: Beibehaltung der Fahrradabstellplätze in der Gabelsbergerstraße</title>
+<updated>2026-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#262028"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030136"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030130#vorlage</id>
+<title>Neue Vorlage 262023: Bürgerantrag: Verbesserung der Verkehrssicherheit im Bereich der Lennéstraße</title>
+<updated>2026-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:gronau#262023"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030130"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030055#vorlage</id>
 <title>Neue Vorlage 260876-02: Maßnahmen zur Verkehrsberuhigung am Kreisverkehr Im großen Garten/Otto-Hahn-Straße/Lärchenstraße</title>
@@ -790,22 +806,6 @@
 <updated>2026-10-05T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#261858"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029728"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029726#vorlage</id>
-<title>Neue Vorlage 261856: Bürgerantrag: Optimierung der Verkehrssicherheit im Bereich der Einmündung „Am Burggraben“/„Pastoratsgasse“ in Bonn-Endenich</title>
-<updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:endenich#261856"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029726"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029720#vorlage</id>
-<title>Neue Vorlage 261854: Bürgerantrag: Rücknahme der Eingriffe in den Fahrradverkehr auf der Verkehrsachse Kennedybrücke – Bertha-von-Suttner-Platz – Oxfordstraße – Adenauerallee</title>
-<updated>2026-10-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#261854"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029720"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
 </feed>
