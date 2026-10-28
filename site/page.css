@@ -196,7 +196,13 @@ body:has(.hh-wahl) :is(.page-head, .page, .page-foot) { width: min(1120px, calc(
 .hh-svg a:focus-visible > rect, .hh-svg a:hover > rect { stroke: var(--text); stroke-width: 3; }
 .hh-svg .hh-n { font-size: 15px; font-weight: 600; } .hh-svg .hh-b { font-size: 14px; }
 .hh-svg .hh-m { font-size: 13px; font-weight: 600; } .hh-svg .hh-k { font-size: 13px; }
-.hh-pgs text { fill: #2e2a3d; } .hh-pgs.hh-hell text { fill: #fff; }   /* Treemap der Produktgruppen */
+/* Ebenen 1 und 2: eine Farbe in fünf Stufen nach Anteil (haushaltsseite.STUFEN), Schrift je Stufe mit Kontrast ≥ 4,5 */
+.hh-svg .s1 > rect { fill: #ede9fe; } .hh-svg .s2 > rect { fill: #c4b5fd; } .hh-svg .s3 > rect { fill: #a78bfa; }
+.hh-svg .s4 > rect { fill: #7c3aed; } .hh-svg .s5 > rect { fill: #5b21b6; }
+.hh-svg :is(.s1, .s2, .s3) text { fill: #2e2a3d; } .hh-svg :is(.s4, .s5) text { fill: #fff; }
+i.hh-s1 { background: #ede9fe; } i.hh-s2 { background: #c4b5fd; } i.hh-s3 { background: #a78bfa; } i.hh-s4 { background: #7c3aed; } i.hh-s5 { background: #5b21b6; }
+.hh-legende { margin: 8px 0 4px; font-size: 14px; line-height: 1.9; color: var(--text); }
+.hh-legende i { display: inline-block; width: 18px; height: 12px; margin: 0 5px 0 12px; vertical-align: -1px; border-radius: 3px; box-shadow: inset 0 0 0 1px rgba(15, 15, 20, 0.15); }
 .hh-hoch { display: none; }
 @media (max-width: 600px) { .hh-breit { display: none; } .hh-hoch { display: block; } }
 .page table.hh-tabelle { table-layout: auto; }

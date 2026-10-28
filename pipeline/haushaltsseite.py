@@ -28,7 +28,11 @@ from .themenseiten import ALLE as THEMEN
 
 PFAD = "haushalt/"
 ZEILE = 17
-NEUTRAL = ("#ece8f6", "#2e2a3d")   # Fläche und Schrift der Produktbereiche ohne Themenseite
+# Farbe der Flächen (Ebenen 1 und 2): eine Farbe in fünf Stufen nach dem Anteil an der Ebene darüber, je dunkler, desto
+# größer (Entscheidung des Auftraggebers 28.10.2026; Klassen s1 … s5 an den Flächen, hh-s1 … hh-s5 in der Legende, page.css;
+# Schrift je Stufe mit Kontrast ≥ 4,5)
+STUFEN = (2, 5, 10, 20)   # Grenzen in Prozent
+STUFEN_TEXT = ("unter 2 %", "2 bis 5 %", "5 bis 10 %", "10 bis 20 %", "ab 20 %")
 FORMATE = {"breit": (1000, 560), "hoch": (340, 640)}   # hoch: etwa in Bildschirmgröße eines Telefons
 # Aufwandsarten: feste, nominale Farben als Klassen hh-f11 … hh-f16 (Balken) und hh-z11 … hh-z16 (Tabelle) in page.css
 HINWEIS = ("Aufwandsarten sind Kontenarten, keine Aufgaben: Sie zeigen, wofür das Geld der Art nach verbucht ist, etwa "
@@ -187,41 +191,47 @@ def _text(x, y, rw, rh, name, marke, betrag):
     return ""
 
 
-def _svg_gruppen(flaechen, format_, label, fill, ink):
+def _stufe(anteil):
+    """Farbstufe 1–5 nach dem Anteil in Prozent (STUFEN)."""
+    return 1 + sum(anteil >= g for g in STUFEN)
+
+
+def legende(bezug):
+    """Legende der Farbstufen; die Beschriftung steht in Textfarbe, die Farbe nur im Feld davor."""
+    return (f'<p class="hh-legende">Anteil {escape(bezug)}:'
+            + "".join(f'<i class="hh-s{k}"></i>{t}' for k, t in enumerate(STUFEN_TEXT, 1)) + "</p>")
+
+
+def _svg_gruppen(flaechen, format_, label):
     """Treemap der Produktgruppen als SVG, knapp gehalten (viele Flächen): flaechen absteigend nach Betrag als
-    (Betrag, Ziel, Beschreibung, Name, Marke, Betragstext). Alle Flächen tragen die Farbe des Produktbereichs (am SVG),
-    die Schrift ihre Klasse (page.css); Koordinaten ganzzahlig, der weiße Rand deckt die Rundung. Jede Fläche ist ein
-    Link mit Titel (Hinweis beim Überfahren, zugleich Name des Links); _text setzt nur Beschriftungen, die passen."""
+    (Betrag, Ziel, Beschreibung, Name, Marke, Betragstext, Anteil). Jede Fläche trägt die Klasse ihrer Farbstufe (Fläche
+    und Schrift in page.css); Koordinaten ganzzahlig, der weiße Rand deckt die Rundung. Jede Fläche ist ein Link mit
+    Titel (Hinweis beim Überfahren, zugleich Name des Links); _text setzt nur Beschriftungen, die passen."""
     w, h = FORMATE[format_]
     teile = []
-    for (b, ziel, beschreibung, name, marke, text), (x, y, rw, rh) in zip(flaechen, squarify([f[0] for f in flaechen], 0, 0, w, h)):
-        teile.append(f'<a href="#{ziel}"><title>{escape(beschreibung)}</title>'
+    for (b, ziel, beschreibung, name, marke, text, anteil), (x, y, rw, rh) in zip(flaechen, squarify([f[0] for f in flaechen], 0, 0, w, h)):
+        teile.append(f'<a href="#{ziel}" class="s{_stufe(anteil)}"><title>{escape(beschreibung)}</title>'
                      f'<rect x="{x:.0f}" y="{y:.0f}" width="{rw:.0f}" height="{rh:.0f}" rx="3"/>{_text(x, y, rw, rh, name, marke, text)}</a>')
-    return (f'<svg class="hh-svg hh-{format_} hh-pgs{" hh-hell" if ink == "#ffffff" else ""}" viewBox="0 0 {w} {h}" '
-            f'fill="{fill}" role="group" aria-label="{escape(label)}">' + "".join(teile) + "</svg>")
-
-
-def _farben_pb(p):
-    return (p["thema"]["farben"][0], "#ffffff") if p.get("thema") else NEUTRAL   # dunkle Themenfarbe: Kontrast
+    return (f'<svg class="hh-svg hh-{format_} hh-pgs" viewBox="0 0 {w} {h}" role="group" aria-label="{escape(label)}">'
+            + "".join(teile) + "</svg>")
 
 
 def treemap(d, ansicht, format_):
     """SVG einer Ansicht der Produktbereiche; jede Fläche verweist auf Ebene 2 oder (ohne Ebenen) auf die Zeile der
-    Tabelle. Die Flächen der Themenseiten tragen deren Farbe."""
+    Tabelle. Die Farbstufe folgt dem Anteil an der Summe der Ansicht."""
     a = ansicht
     items = sorted(((p, p[a["art"]][a["jahr"]]["betrag"]) for p in d["produktbereiche"] if a["jahr"] in p[a["art"]]),
                    key=lambda x: (-x[1], x[0]["pb"]))
     w, h = FORMATE[format_]
     teile = []
     for (p, b), (x, y, rw, rh) in zip(items, squarify([b for _, b in items], 0, 0, w, h)):
-        fill, ink = _farben_pb(p)
         ziel = f'{"zoom" if d.get("zoom") else "pb"}-{p["pb"]}'
         label = f'{p["pb"]} {p["name"]}: {_mio(b)}, {_prozent(100 * b / a["summe"])} ({a["titel"]})'
         r = f'x="{x:.1f}" y="{y:.1f}" width="{rw:.1f}" height="{rh:.1f}"'
         clip = f"hh-{a['key']}-{format_}-{p['pb']}"
-        teile.append(f'<a href="#{ziel}" aria-label="{escape(label)}"><title>{escape(label)}</title>'
-                     f'<clipPath id="{clip}"><rect {r}/></clipPath><rect {r} fill="{fill}" rx="3"/>'
-                     f'<g clip-path="url(#{clip})" fill="{ink}">{_text(x, y, rw, rh, p["name"], p["pb"], _mio(b))}</g></a>')
+        teile.append(f'<a href="#{ziel}" class="s{_stufe(100 * b / a["summe"])}" aria-label="{escape(label)}"><title>{escape(label)}</title>'
+                     f'<clipPath id="{clip}"><rect {r}/></clipPath><rect {r} rx="3"/>'
+                     f'<g clip-path="url(#{clip})">{_text(x, y, rw, rh, p["name"], p["pb"], _mio(b))}</g></a>')
     return (f'<svg class="hh-svg hh-{format_}" viewBox="0 0 {w} {h}" role="group" '
             f'aria-label="{escape(a["titel"])}: ordentliche Aufwendungen je Produktbereich, zusammen {escape(_mio(a["summe"]))}">'
             + "".join(teile) + "</svg>")
@@ -237,9 +247,9 @@ def treemap_gruppen(p, ansicht, format_):
     items = sorted(((g, g[a["art"]][a["jahr"]]["betrag"]) for g in p["produktgruppen"]
                     if a["jahr"] in g[a["art"]] and g[a["art"]][a["jahr"]]["betrag"] > 0), key=lambda x: (-x[1], x[0]["nr"]))
     flaechen = [(b, _anker(g["nr"]), f'{g["nr"]} {g["name"]}: {_betrag(b)}, {_prozent(100 * b / gesamt["betrag"])} ({a["titel"]})',
-                 g["name"], g["nr"], _betrag(b)) for g, b in items]
+                 g["name"], g["nr"], _betrag(b), 100 * b / gesamt["betrag"]) for g, b in items]
     return _svg_gruppen(flaechen, format_, f'{a["titel"]}: Produktgruppen im Produktbereich {p["pb"]} {p["name"]}, '
-                                           f'zusammen {_mio(gesamt["betrag"])}', *_farben_pb(p))
+                                           f'zusammen {_mio(gesamt["betrag"])}')
 
 
 def _balken(arten, ansichten, betraege=False):
@@ -341,6 +351,7 @@ def zoom(d, p):
           <h2 id="{t_}">Produktbereich {escape(pb)} {escape(p["name"])}</h2>
           <p class="meta">Jede Fläche ist eine Produktgruppe; ein Klick zeigt ihre Aufwandsarten.</p>
           {karten}
+          {legende("am Produktbereich")}
           <h3>Aufwandsarten des Produktbereichs</h3>
           {_balken(p["aufwandsarten"], ansichten)}
           <table class="hh-tabelle hh-zoom-tabelle">
@@ -442,7 +453,8 @@ def body(d, root):
       <dl>
         <dt>Betrag</dt><dd>Ordentliche Aufwendungen (Zeile 17 der Teilergebnispläne), nominal in Mio. €, ohne Investitionen.</dd>
         <dt>Plan und Ist</dt><dd>Plan ist der Ansatz des Haushaltsjahres, Ist das Ergebnis laut Haushaltsplan; beide weichen oft voneinander ab.</dd>{begriffe}
-        <dt>Farben</dt><dd>Farbig sind die Produktbereiche mit eigener Themenseite: {themen}.</dd>
+        <dt>Farben</dt><dd>Je dunkler eine Fläche, desto größer ihr Anteil an der Summe der Ansicht (Produktbereiche) oder am Produktbereich (Produktgruppen), in fünf Stufen. Die Aufwandsarten haben je eine eigene Farbe.</dd>
+        <dt>Themenseiten</dt><dd>Zu fünf Produktbereichen gibt es eine Themenseite: {themen}.</dd>
       </dl>
     </details>
     <div class="hh-wahl" id="produktbereiche">
@@ -451,6 +463,7 @@ def body(d, root):
       <div class="hh-karten">
         <div class="hh-haupt">
 {karten}
+          {legende("an der Summe")}
           <p class="meta">{klick}</p>
         </div>
 {chr(10).join(ebenen)}

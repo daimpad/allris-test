@@ -147,7 +147,7 @@ def body(site, site_url, root):
         <dt>Datum</dt><dd><code>updated</code> ist der Tag des Ereignisses (Datum der Vorlage oder der Sitzung), immer 00:00 UTC; ein eigenes Veröffentlichungsdatum gibt es nicht.</dd>
         <dt>Umfang</dt><dd>Die letzten 100 Einträge je Feed, neueste zuerst; Feeds je Vorgang enthalten alle Ereignisse.</dd>
         <dt>Adressen</dt><dd><code>data/export/bonn/feeds/ganz-bonn.xml</code>, <code>feeds/ortsteil-&lt;name&gt;.xml</code>, <code>feeds/bezirk-&lt;name&gt;.xml</code>, <code>feeds/ohne-&lt;jahr&gt;.xml</code>, <code>feeds/vorlagen/&lt;drucksache&gt;.xml</code>, <code>dossiers/&lt;thema&gt;.xml</code>.</dd>
-        <dt>Abruf</dt><dd>Die Feeds ändern sich höchstens einmal am Tag ({LAUF}). Bitte höchstens einmal pro Stunde abrufen, besser einmal am Tag; der Server beantwortet bedingte Abrufe (<code>If-Modified-Since</code>, <code>If-None-Match</code>). Abruf aus dem Browser anderer Websites ist erlaubt (CORS), ohne Schlüssel und ohne Anmeldung.</dd>
+        <dt>Abruf</dt><dd>Die Feeds ändern sich höchstens einmal am Tag ({LAUF}). Bitte höchstens einmal pro Stunde abrufen, besser einmal am Tag; der Server beantwortet bedingte Abrufe (<code>If-Modified-Since</code>, <code>If-None-Match</code>). Ohne Schlüssel und ohne Anmeldung. Für den Abruf aus dem Browser anderer Websites (CORS) nutzen Sie derzeit den Spiegel <code>https://daimpad.github.io/allris-test/</code> mit denselben Pfaden; auf der Hauptadresse ist die Freigabe noch nicht eingerichtet.</dd>
       </dl>
       <p>Beispiel in Python, nur mit der Standardbibliothek:</p>
       <pre class="rss-code" id="rss-python" tabindex="0"><code>{escape(beispiel(url))}</code></pre>

@@ -57,7 +57,7 @@ class Seite(unittest.TestCase):
 
     def test_je_ansicht_und_format_alle_produktbereiche(self):
         self.assertEqual(self.html.count('<svg class="hh-svg'), 6)
-        self.assertEqual(len(re.findall(r'<a href="#pb-\d\d" aria-label=', self.html)), 6 * 17)
+        self.assertEqual(len(re.findall(r'<a href="#pb-\d\d" class="s[1-5]" aria-label=', self.html)), 6 * 17)
         self.assertEqual(len(set(re.findall(r'<tr id="(pb-\d\d)"', self.html))), 17)
         self.assertNotIn("2027", self.html.split("Was diese Seite nicht zeigt")[0])   # keine Finanzplanung
 
@@ -92,7 +92,7 @@ class Ebenen(unittest.TestCase):
         cls.pb = {p["pb"]: p for p in cls.d["produktbereiche"]}
 
     def test_ebene_1_fuehrt_zu_ebene_2_tabelle_bleibt(self):
-        self.assertEqual(len(re.findall(r'<a href="#zoom-\d\d" aria-label=', self.html)), 6 * 17)
+        self.assertEqual(len(re.findall(r'<a href="#zoom-\d\d" class="s[1-5]" aria-label=', self.html)), 6 * 17)
         self.assertNotIn('<a href="#pb-', self.html)
         self.assertEqual(len(set(re.findall(r'<tr id="(pb-\d\d)"', self.html))), 17)   # Sprungziele der Themenseiten
         self.assertEqual(self.html.count('<a href="#zoom-01">Produktgruppen und Aufwandsarten</a>'), 1)
@@ -180,6 +180,17 @@ class Ebenen(unittest.TestCase):
                 for g in p["produktgruppen"]:
                     self.assertEqual(sum(t[a["art"]][a["jahr"]]["betrag"] for t in g["aufwandsarten"]),
                                      g[a["art"]][a["jahr"]]["betrag"])
+
+    def test_farbstufen_nach_anteil(self):
+        # Entscheidung 28.10.2026: eine Farbe in fünf Stufen nach Anteil, Legende unter jeder Treemap
+        self.assertEqual([hs._stufe(x) for x in (0.5, 2, 4.9, 5, 10, 19.8, 20, 45)], [1, 2, 2, 3, 4, 4, 5, 5])
+        plan26 = re.search(r'<figure class="hh-ansicht hh-v0">(.*?)</figure>', self.html).group(1)
+        self.assertIn('<a href="#zoom-06" class="s4" aria-label="06 Kinder-', plan26)   # 19,8 % der Summe
+        z = abschnitt(self.html, "zoom-04")
+        self.assertIn('<a href="#pg-1-04-11" class="s5">', z)   # Theater: 45 % des Produktbereichs
+        self.assertIn('<p class="hh-legende">Anteil am Produktbereich:', z)
+        self.assertEqual(self.html.count('<p class="hh-legende">'), 1 + 17)
+        self.assertNotRegex(self.html, r'<svg[^>]+ fill=')   # keine Themenfarben mehr an den Flächen
 
     def test_groesse_und_spaltennamen(self):
         self.assertLess(len(self.html.encode()), 800_000)   # Vorgabe: Seite höchstens etwa 800 KB, ohne Skript
