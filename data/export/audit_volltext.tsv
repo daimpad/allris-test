@@ -10943,6 +10943,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253755-01	kein Ort						
 253758	Titel ohne gemeinsamen Ort, nicht verortet						
 253759	kein Ort						
+253759-01	kein Ort						
 253764	Titel ohne gemeinsamen Ort, nicht verortet						
 253765	kein Ort						
 253766	kein Ort						
@@ -12083,6 +12084,16 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260680-02 AA	kein Ort						
 260681	verortet	Hauptteil	volltext_strasse	Hauptstraße	Holzlar	niedrig	1
 260681	verortet	Hauptteil	volltext_strasse+ortsteil	Am Ehrenmal	Lengsdorf	mittel	1
+260681-01	verortet	Hauptteil	volltext_strasse	Am Ehrenmal	Lengsdorf	mittel	2
+260681-01	verortet	Hauptteil	volltext_strasse	Am Schickshof	Duisdorf	mittel	1
+260681-01	verortet	Hauptteil	volltext_strasse	Lengsdorfer Hauptstraße	Lengsdorf	mittel	2
+260681-01	verortet	Hauptteil	volltext_strasse+hausnummer	An der Burg Medinghoven	Duisdorf	mittel	1
+260681-01	verortet	Hauptteil	volltext_strasse+hausnummer	Edisonallee	Brüser Berg	mittel	1
+260681-01	verortet	Hauptteil	volltext_strasse+hausnummer	Gaußstraße	Brüser Berg	mittel	3
+260681-01	verortet	Hauptteil	volltext_strasse+hausnummer	Meßdorfer Straße	Lessenich/Meßdorf	niedrig	1
+260681-01	verortet	Hauptteil	volltext_strasse+hausnummer	Ossietzkystraße	Duisdorf	mittel	1
+260681-01	verortet	Hauptteil	volltext_strasse+hausnummer	Rochusstraße	Duisdorf	mittel	2
+260681-01	verortet	Hauptteil	volltext_strasse+hausnummer	Stresemannstraße	Duisdorf	mittel	1
 260682	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 260682-02	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 260684	verortet	Hauptteil	volltext_strasse	Ladestraße	Duisdorf	mittel	1
@@ -12822,6 +12833,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261340	kein Ort						
 261340-01	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	niedrig	1
 261341	kein Ort						
+261341-01 ST	kein Ort						
 261343	kein Ort						
 261343-01 AA	kein Ort						
 261344	verortet	Hauptteil	volltext_strasse	Adenauerallee	Gronau	niedrig	1
@@ -13299,3 +13311,5 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262014	kein Ort						
 262017	kein Ort						
 262020	kein Ort						
+262026	kein Ort						
+262031	Titel ohne gemeinsamen Ort, nicht verortet						

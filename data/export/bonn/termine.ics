@@ -6,19 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
 X-WR-TIMEZONE:Europe/Berlin
 BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006495
-DTSTAMP:20260928T170000Z
-DTSTART:20260928T170000Z
-DTEND:20260928T184100Z
-SUMMARY:Rat
-DESCRIPTION:Sitzung des Rates\nTagesordnung: https://www.bonn.sitzung-onlin
- e.de/public/TO010?SILFDNR=2006495\nEinladung: https://www.bonn.sitzung-onl
- ine.de/public/doc?DOCTYP=108&DOLFDNR=3224151&OTYP=41\nQuelle: OParl-API de
- r Stadt Bonn (CC0 1.0)
-STATUS:CONFIRMED
-URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006495
-END:VEVENT
-BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005757
 DTSTAMP:20260929T160000Z
 DTSTART:20260929T160000Z
@@ -634,6 +621,15 @@ DESCRIPTION:Gemeinsame Sitzung des Ausschusses für Mobilität und Verkehr
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006698
+DTSTAMP:20270122T150000Z
+DTSTART:20270122T150000Z
+SUMMARY:Beirat Kinder- und Jugendbeteiligung
+DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
+ g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006592
 DTSTAMP:20270126T170000Z
 DTSTART:20270126T170000Z
@@ -670,6 +666,15 @@ SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
 DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
  on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
  Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006691
+DTSTAMP:20270129T150000Z
+DTSTART:20270129T150000Z
+SUMMARY:Beirat Bürgerbeteiligung
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -757,6 +762,15 @@ DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006699
+DTSTAMP:20270226T150000Z
+DTSTART:20270226T150000Z
+SUMMARY:Beirat Kinder- und Jugendbeteiligung
+DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
+ g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006571
 DTSTAMP:20270302T170000Z
 DTSTART:20270302T170000Z
@@ -764,6 +778,15 @@ SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
 DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
  on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
  Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006692
+DTSTAMP:20270305T150000Z
+DTSTART:20270305T150000Z
+SUMMARY:Beirat Bürgerbeteiligung
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -862,6 +885,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006700
+DTSTAMP:20270416T140000Z
+DTSTART:20270416T140000Z
+SUMMARY:Beirat Kinder- und Jugendbeteiligung
+DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
+ g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006561
 DTSTAMP:20270420T150000Z
 DTSTART:20270420T150000Z
@@ -879,6 +911,15 @@ SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
 DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
  , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
  Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006693
+DTSTAMP:20270423T140000Z
+DTSTART:20270423T140000Z
+SUMMARY:Beirat Bürgerbeteiligung
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -957,6 +998,15 @@ DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006701
+DTSTAMP:20270521T140000Z
+DTSTART:20270521T140000Z
+SUMMARY:Beirat Kinder- und Jugendbeteiligung
+DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
+ g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006562
 DTSTAMP:20270525T150000Z
 DTSTART:20270525T150000Z
@@ -973,6 +1023,15 @@ SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
 DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
  on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
  Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006695
+DTSTAMP:20270526T150000Z
+DTSTART:20270526T150000Z
+SUMMARY:Beirat Bürgerbeteiligung
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1037,6 +1096,24 @@ DTSTART:20270617T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006702
+DTSTAMP:20270618T140000Z
+DTSTART:20270618T140000Z
+SUMMARY:Beirat Kinder- und Jugendbeteiligung
+DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
+ g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006694
+DTSTAMP:20270625T140000Z
+DTSTART:20270625T140000Z
+SUMMARY:Beirat Bürgerbeteiligung
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1209,6 +1286,15 @@ DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006703
+DTSTAMP:20270924T140000Z
+DTSTART:20270924T140000Z
+SUMMARY:Beirat Kinder- und Jugendbeteiligung
+DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
+ g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006581
 DTSTAMP:20270929T160000Z
 DTSTART:20270929T160000Z
@@ -1217,6 +1303,15 @@ SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
 DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
  , Wohnen und Senioren\nTagesordnung noch nicht veröffentlicht.\nQuelle: O
  Parl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006696
+DTSTAMP:20271001T140000Z
+DTSTART:20271001T140000Z
+SUMMARY:Beirat Bürgerbeteiligung
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1323,6 +1418,15 @@ DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006704
+DTSTAMP:20271126T150000Z
+DTSTART:20271126T150000Z
+SUMMARY:Beirat Kinder- und Jugendbeteiligung
+DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
+ g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006568
 DTSTAMP:20271130T160000Z
 DTSTART:20271130T160000Z
@@ -1348,6 +1452,15 @@ DTSTART:20271202T170000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006697
+DTSTAMP:20271203T150000Z
+DTSTART:20271203T150000Z
+SUMMARY:Beirat Bürgerbeteiligung
+DESCRIPTION:Sitzung des Beirates Bürgerbeteiligung\nTagesordnung noch nich
+ t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

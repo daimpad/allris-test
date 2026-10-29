@@ -2580,15 +2580,15 @@
      "position": 1,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": null,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005864",
      "gremium": "Kulturausschuss",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
+     "meeting": "Sitzung des Kulturausschusses",
+     "start_date": "2026-10-06T16:00:00.000Z",
+     "cancelled": 0,
+     "number": "9.3",
      "result": null,
-     "public": null,
-     "status": "offen"
+     "public": 1,
+     "status": "terminiert"
     }
    ],
    "superordinated": [
@@ -2673,9 +2673,12 @@
      "role": "Kenntnisnahme",
      "status": "belegt",
      "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "date": "2026-10-06",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "9.3",
+     "stand": "terminiert",
+     "result_source": "oparl-lite"
     }
    ],
    "soll": {
@@ -3845,10 +3848,10 @@
      "position": 2,
      "role": "Empfehlung",
      "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005756",
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005757",
      "gremium": "Ausschuss für Planen, Bauen und Denkmalschutz",
      "meeting": "Sitzung des Ausschusses für Planen, Bauen und Denkmalschutz",
-     "start_date": "2026-07-14T16:00:00.000Z",
+     "start_date": "2026-09-29T16:00:00.000Z",
      "cancelled": 0,
      "number": "6.15",
      "result": "geändert beschlossen",
@@ -3937,20 +3940,6 @@
      "note": "ohne_sitzung"
     },
     {
-     "typ": "beratung",
-     "label": "Ausschuss für Planen, Bauen und Denkmalschutz",
-     "role": "Empfehlung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2026-07-14",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.15",
-     "result": "geändert beschlossen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    },
-    {
      "typ": "folgevorlage",
      "label": "Stellungnahme der Verwaltung",
      "status": "belegt",
@@ -3958,6 +3947,20 @@
      "source": "oparl-bonn",
      "reference": "261263-01 ST",
      "title": "Stellungnahme zum Antrag GRÜNE-Fraktion - Fehlende Nahversorgung Baugebiete WestSide und Vogelsang in Endenich-Nord"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Planen, Bauen und Denkmalschutz",
+     "role": "Empfehlung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2026-09-29",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.15",
+     "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     }
    ],
    "soll": {
@@ -73757,6 +73760,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, dass ein Bürgerantrag Tempo 30 in einem Teil der Straße Auf dem Hügel zwischen Am Propsthof und Siemensstraße fordert. Sie prüft, ob die gesetzlichen Voraussetzungen dafür erfüllt sind, und wird über das Ergebnis berichten. Die Prüfung ist aufwendig.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-28"
    }
   },
   {

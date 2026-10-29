@@ -69,7 +69,7 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 260640-01	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 260640-01	veroeffentlichung	Datum der Vorlage	belegt	2026-08-27		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028992	ungeprüft
 260640-01	beratung	Rat (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028992	ungeprüft
-260640-01	beratung	Kulturausschuss (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028992	ungeprüft
+260640-01	beratung	Kulturausschuss (Kenntnisnahme)	belegt	2026-10-06	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028992	ungeprüft
 261573	initiierung	Beschlussvorlage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028987	ungeprüft
 261573	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 261573	veroeffentlichung	Datum der Vorlage	belegt	2026-08-24		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028987	ungeprüft
@@ -105,8 +105,8 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 261263	veroeffentlichung	Datum der Vorlage	belegt	2026-06-22		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028209	ungeprüft
 261263	entscheidung	Rat (Entscheidung)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028209	ungeprüft
 261263	beratung	Hauptausschuss (Empfehlung)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028209	ungeprüft
-261263	beratung	Ausschuss für Planen, Bauen und Denkmalschutz (Empfehlung)	belegt	2026-07-14	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028209	ungeprüft
 261263	folgevorlage	Stellungnahme der Verwaltung	belegt	2026-09-07		oparl-bonn	261263-01 ST	ungeprüft
+261263	beratung	Ausschuss für Planen, Bauen und Denkmalschutz (Empfehlung)	belegt	2026-09-29	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028209	ungeprüft
 261146	initiierung	Kleine Anfrage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027944	ungeprüft
 261146	veroeffentlichung	Datum der Vorlage	belegt	2026-06-09		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027944	ungeprüft
 261146	beratung	Rat (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027944	ungeprüft
