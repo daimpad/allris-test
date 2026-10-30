@@ -397,7 +397,7 @@
      "start_date": "2026-10-13T15:00:00.000Z",
      "cancelled": 0,
      "number": "2.9.1",
-     "result": "zur Kenntnis genommen - mit Maßgabe",
+     "result": "zur Kenntnis genommen",
      "public": 1,
      "status": "beraten"
     },
@@ -506,7 +506,7 @@
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
      "number": "2.9.1",
-     "result": "zur Kenntnis genommen - mit Maßgabe",
+     "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite"
     },
@@ -2586,9 +2586,9 @@
      "start_date": "2026-10-06T16:00:00.000Z",
      "cancelled": 0,
      "number": "9.3",
-     "result": null,
+     "result": "zur Kenntnis genommen",
      "public": 1,
-     "status": "terminiert"
+     "status": "beraten"
     }
    ],
    "superordinated": [
@@ -2618,7 +2618,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028992",
-   "stand": "offen",
+   "stand": "in Beratung",
    "themes": [
     {
      "theme": "kultur",
@@ -2677,7 +2677,8 @@
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
      "number": "9.3",
-     "stand": "terminiert",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
      "result_source": "oparl-lite"
     }
    ],
@@ -69150,6 +69151,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass sie mehr Zeit für die genaue Prüfung der geplanten Radwege-Verbesserungen in Endenich braucht. Sie schlägt vor, die Entscheidung auf die nächste oder übernächste Sitzung zu verschieben. Eine Stellungnahme liegt noch nicht vor.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -69342,6 +69348,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass sie nur dann alle sechs Monate über Fortschritte bei Bus- und Bahnprojekten berichtet, wenn der Hauptausschuss den Antrag dazu annimmt. Der Bericht soll den aktuellen Stand der Maßnahmen zeigen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -69564,6 +69575,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert: Der Verkehrsversuch „Umweltspur“ auf dem Hermann-Wandersleb-Ring wird angepasst. Auf der Rochusstraße soll die Spur verkürzt und für Rechtsabbieger freigegeben werden, da Bäume und Grünflächen den Ausbau behindern. Die Arbeiten beginnen im September. Die geplanten Haushaltsmittel reichen aus.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -69714,6 +69730,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit: Die Bushaltestelle „Auf dem Hügel“ an der Straße Auf dem Hügel wird ab der 32. Kalenderwoche 2022 barrierefrei umgebaut. Ob dort ein Unterstand mit Sitzgelegenheiten in Fahrtrichtung Dransdorf entsteht, prüfen die Stadtwerke. Eine alte Sitzbank wird nicht ersetzt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -69864,6 +69885,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass an der Bushaltestelle Immenburgpark kein Fahrgastunterstand gebaut werden kann, weil der Platz zu eng ist. Sie prüft, ob ein Teil des Grünstreifens vor dem Parkplatz genutzt werden könnte. Die Stadtwerke Bonn würden dann mit dem Investor über eine Wartehalle sprechen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -70037,6 +70063,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen, SPD und weitere Fraktionen beantragen, die Straße Am Bendenberg an der Ecke Zur Marterkapelle bis zu den Garagen als Parkverbotszone zu kennzeichnen. Sie begründen dies mit der unübersichtlichen Kreuzung, die durch parkende Autos schlecht einsehbar sei.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -70463,6 +70494,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, einen Antrag auf Baugenehmigung für eine Ferienwohnung in der Frongasse in Bonn-Endenich abzulehnen. Der Umbau einer Nebenanlage passt nicht zur Umgebung, da dort keine ähnlichen Nutzungen oder Bauweisen üblich sind. Der Ausschuss soll dies zur Kenntnis nehmen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -70649,6 +70685,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen, SPD und weitere Fraktionen beantragen, die Bushaltestelle „Auf dem Hügel“ an der gleichnamigen Straße barrierefrei umzubauen. Sie fordern Sitzgelegenheiten und möglichst einen Wetterschutz in beide Fahrtrichtungen. Zuerst soll die fehlende Sitzbank in Richtung Dransdorf wieder aufgestellt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -70835,6 +70876,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Fraktionen von Grünen, SPD und anderen beantragen, an der Bushaltestelle Immenburgpark in Richtung Dransdorf einen Wetterschutz und Sitzgelegenheiten einzurichten. Falls der Gehweg zu schmal ist, soll die Verwaltung mit dem Studierendenwerk verhandeln, damit dieses einen Teil seines Grundstücks dafür freigibt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -70999,6 +71045,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, warum bisher kein Zebrastreifen an der Endenicher Allee/Ecke Alfred-Bucherer-Straße geplant war. Sie unterstützt aber die Wiederherstellung, weil viele Fußgänger und Busse die Stelle nutzen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -71146,6 +71197,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass eine Tempo-30-Zone in der Straße Auf dem Hügel nicht möglich ist. Die Prüfung ergab, dass weder Verkehrssicherheit noch Lärm- oder Schadstoffbelastung eine Geschwindigkeitsbegrenzung rechtfertigen. Der dortige Spielplatz gilt nicht als besonders schützenswerte Einrichtung.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -71516,6 +71572,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt in einer Beschlussvorlage vor, dass der Ausschuss zur Kenntnis nimmt, dass sie den Bauantrag für zwei Wintergärten in der Verdistraße ablehnen will. Der Plan widerspricht dem Bebauungsplan, da die Wintergärten außerhalb der erlaubten Baufläche liegen. Das Grundstück ist betroffen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -72037,6 +72098,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Fraktionen von Grünen, SPD und anderen beantragen, dass Bonn im Regionalplan Köln drei Flächen im Messdorfer Feld nicht als mögliche Baugebiete meldet. Betroffen sind Gebiete am Maria-von-Linden-Weg und nahe der Theodor-Litt-Straße. Das Feld soll als ökologisch wichtiges Erholungsgebiet erhalten bleiben.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -72243,6 +72309,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, 41 zusätzliche Stellen im Städtischen Gebäudemanagement (SGB) für 2022 zu schaffen und 96 überplanmäßige Stellen in Planstellen umzuwandeln. Damit sollen dringende Bau- und Sanierungsprojekte (z. B. Schulen, Kindergärten) umgesetzt und gesetzliche Vorgaben eingehalten werden. Die Kosten werden im Wirtschaftsplan des SGB verankert.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -72818,6 +72889,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über die Kosten für geplante Verbesserungen im Bonner Nahverkehr ab Dezember 2022. Vorgesehen sind Taktverdichtungen auf Haupt- und Regionalbuslinien sowie die Fortführung einer Buslinie, insgesamt etwa 10,2 Millionen Euro. Die Maßnahmen wurden bereits beschlossen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -73177,6 +73253,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Koalition schlägt vor, auf der Rochus- und Provinzialstraße vor den Haltestellen „Rochusstraße/Ministerien“ und „Kollegienweg“ jeweils eine rechte Fahrspur als Umweltspur für Busse einzurichten. Damit soll der Verkehrsversuch „Umweltspur“ auf dem Hermann-Wandersleb-Ring verbessert werden. Die Markierung soll hinter der Ausfahrt des Ministeriumsstandorts beginnen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {
@@ -74356,6 +74437,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Fraktionen von SPD, Grünen und weiteren beantragen Maßnahmen für bessere Radwege in Endenich. Sie fordern die Umsetzung bereits beschlossener Fahrradstraßen, bessere Markierungen in Einbahnstraßen, die Umgestaltung der Kreuzung Endenicher Straße/Pastoratsgasse/Am Burggraben und die Einbindung der Hainstraße ins Radnetz. Zudem sollen kleinere Verbesserungen wie breitere Durchfahrten oder Fahrradschleusen geprüft werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-10-29"
    }
   },
   {

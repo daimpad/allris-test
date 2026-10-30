@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/verkehr</id>
 <title>RIS-Karte Bonn – Verkehr und Mobilität</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Verkehr und Mobilität (Zuordnung abgeleitet)</subtitle>
-<updated>2026-10-28T00:00:00Z</updated>
+<updated>2026-10-29T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/dossiers/verkehr.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/thema/verkehr-und-mobilitaet/"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030175#vorlage</id>
+<title>Neue Vorlage 262042: Bürgerantrag: Umgestaltung der Combahnstraße in eine Einbahnstraße</title>
+<updated>2026-10-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#262042"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030175"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030169#vorlage</id>
+<title>Neue Vorlage 262041: Bürgerantrag: Einrichtung eines Shuttleverkehrs im Bereich Augustinum und Keltenweg</title>
+<updated>2026-10-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:graurheindorf#262041"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030169"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030143#vorlage</id>
 <title>Neue Vorlage 262033: Bürgerantrag: Einrichtung eines verkehrsberuhigten Bereichs in der Liessemer Straße zwischen der Einmündung Obertorstraße und dem Wendehammer</title>
@@ -554,7 +570,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029611#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen - mit Maßgabe“ – 261553-01 ST Stellungnahme zur Großen Anfrage: Verkehrsführung Siemensstraße und neu angelegte Bushaltestelle Vili-Viorel-Pāun-Platz</title>
+<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 261553-01 ST Stellungnahme zur Großen Anfrage: Verkehrsführung Siemensstraße und neu angelegte Bushaltestelle Vili-Viorel-Pāun-Platz</title>
 <updated>2026-10-13T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dransdorf#261553-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029611"/>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261506-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029756"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029750#vorlage</id>
-<title>Neue Vorlage 254049-01 AA: FDP-Änderungsantrag: Anpassungen der Fahrradstraße "Pützchensweg" Antrag zur Vorlage 254049</title>
-<updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:kuedinghoven#254049-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029750"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029749#vorlage</id>
-<title>Neue Vorlage 261529-07: Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Păun-Platz</title>
-<updated>2026-10-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:endenich#261529-07"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029749"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
 </entry>
 </feed>

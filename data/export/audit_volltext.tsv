@@ -6982,7 +6982,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232211-08	kein Ort						
 232211-09 ST	kein Ort						
 232212	kein Ort						
-232212-01 ST	kein Ort						
 232214	Titel ohne gemeinsamen Ort, nicht verortet						
 232218	kein Ort						
 232219	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -9371,8 +9370,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242128	Titel ohne gemeinsamen Ort, nicht verortet						
 242129	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 242130	kein Ort						
-242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	niedrig	1
-242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
 242131	kein Ort						
 242132	kein Ort						
 242133	kein Ort						
@@ -9860,7 +9857,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
-252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -12782,6 +12778,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261295-01 ST	kein Ort						
 261297	kein Ort						
 261297-01 ST	kein Ort						
+261297-02 ST	kein Ort						
 261298	verortet	Hauptteil	volltext_strasse	Adenauerallee	Gronau	mittel	2
 261298	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	mittel	2
 261300-02	verortet	Hauptteil	volltext_strasse	Gerbergastraße	Vilich	mittel	1
@@ -13020,6 +13017,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261583-01 ST	kein Ort						
 261585	kein Ort						
 261585-01 ST	kein Ort						
+261585-02 ST	kein Ort						
 261586	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	mittel	1
 261586-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	mittel	1
 261588	kein Ort						
@@ -13276,6 +13274,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261899	kein Ort						
 261900	kein Ort						
 261901	kein Ort						
+261901-01 AA	verortet	Hauptteil	volltext_strasse	Schulplatz	Friesdorf	mittel	3
 261902	Titel ohne gemeinsamen Ort, nicht verortet						
 261907	Titel ohne gemeinsamen Ort, nicht verortet						
 261921	kein Ort						
@@ -13313,3 +13312,4 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262020	kein Ort						
 262026	kein Ort						
 262031	Titel ohne gemeinsamen Ort, nicht verortet						
+262037	kein Ort						

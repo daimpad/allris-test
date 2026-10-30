@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-beuel-mitte</id>
 <title>RIS-Karte Bonn – Beuel-Mitte</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Beuel-Mitte</subtitle>
-<updated>2026-10-26T00:00:00Z</updated>
+<updated>2026-10-29T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-beuel-mitte.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030175#vorlage</id>
+<title>Neue Vorlage 262042: Bürgerantrag: Umgestaltung der Combahnstraße in eine Einbahnstraße</title>
+<updated>2026-10-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#262042"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030175"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030167#vorlage</id>
+<title>Neue Vorlage 262040: Bürgerantrag: Realisierung eines Fontänenfeldes auf dem Möhneplatz</title>
+<updated>2026-10-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#262040"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030167"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030108#vorlage</id>
 <title>Neue Vorlage 262015: Informationsbrief - Bauliche Neuaufteilung der Verkehrsfläche auf der Kennedybrücke im November 2026</title>
@@ -790,22 +806,6 @@
 <updated>2026-07-08T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261249"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028162"/>
-<summary>Entscheidung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028128#beratung-2026-07-08-Ausschuss%20f%C3%BCr%20Beteiligung%20der%20B%C3%BCrgerinnen%20und%20B%C3%BCrger</id>
-<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 261236 Bürgerantrag: Antrag zum Stopp der Ausbaupläne der Sankt Augustiner Straße im Bereich des Combahnfriedhofs Beuel</title>
-<updated>2026-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261236"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028128"/>
-<summary>Entscheidung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028044#beratung-2026-07-08-Ausschuss%20f%C3%BCr%20Beteiligung%20der%20B%C3%BCrgerinnen%20und%20B%C3%BCrger</id>
-<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „abgelehnt“ – 261193 Bürgerantrag: Antrag auf Optimierung der Verkehrssicherheit im Bereich der Sankt Augustiner Straße/Combahnstraße</title>
-<updated>2026-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261193"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028044"/>
 <summary>Entscheidung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>
