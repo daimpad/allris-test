@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-vilich-mueldorf</id>
 <title>RIS-Karte Bonn – Vilich- Müldorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Vilich- Müldorf</subtitle>
-<updated>2026-10-28T00:00:00Z</updated>
+<updated>2026-10-30T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-vilich-mueldorf.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030180#vorlage</id>
+<title>Neue Vorlage 221938-03: Bürgerantrag: Aufhebung der Schließung der Schultheißstraße für den PKW Verkehr auf der Schultheißstraße /Beueler Straße</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#221938-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030180"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029620#vorlage</id>
 <title>Neue Vorlage 261820: Bebauungsplanverfahren Nr. 6924-3, Wohnpark II in Vilich-Müldorf: Gesetzlich geschützte Biotopflächen und vorläufig gesichertes Überschwemmungsgebiet</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#240961"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017494"/>
 <summary>Anregungen und Beschwerden · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016626#beratung-2024-05-28-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „abgelehnt“ – 240566 Fällgenehmigung für eine Schwarz-Kiefer auf dem Grundstück Kölnstraße [Hausnummer ausgelassen], 53117 Bonn</title>
-<updated>2024-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#240566"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016626"/>
-<summary>Entscheidung am 2024-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

@@ -3,11 +3,99 @@
 <id>tag:allris-bonn,2026:feed/ganz-bonn</id>
 <title>RIS-Karte Bonn – ganz Bonn</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: ganz Bonn</subtitle>
-<updated>2026-10-29T00:00:00Z</updated>
+<updated>2026-10-30T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ganz-bonn.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bonn:ganz"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030196#vorlage</id>
+<title>Neue Vorlage 262057: Tagesordnungspunkte zur Beratung in nicht öffentlicher Sitzung</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262057"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030196"/>
+<summary>Mitteilungsvorlage · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030194#vorlage</id>
+<title>Neue Vorlage 262056: Grüne-Bezirksfraktion- Antrag: Einrichtung eines Grünpfeils für rechtsabbiegende Radfahrende</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#262056"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030194"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030193#vorlage</id>
+<title>Neue Vorlage 262055: Große Anfrage Grüne: Umsetzung des Beschlusses zum barrierefreien Ausbau der Haltestelle „Am Dickobskreuz“</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#262055"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030193"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030189#vorlage</id>
+<title>Neue Vorlage 262051: Grüne-Bezirksfraktion-Antrag: Wiederherstellung der Fahrbahnschwellen und Verbesserung der Verkehrsberuhigung im Bereich der Montessori-Schule</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262051"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030189"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030187#vorlage</id>
+<title>Neue Vorlage 262049: Grüne-Bezirksfraktion-Antrag: Rechtsabbiegegebot am Erzbergerufer durchsetzen und Radverkehr schützen</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#262049"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030187"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030185#vorlage</id>
+<title>Neue Vorlage 262047: Große Anfrage Grüne: Demontage von Fahrradbügeln in der Gabelsbergerstraße</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#262047"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030185"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030183#vorlage</id>
+<title>Neue Vorlage 261663-02 ST: Vertagungsbitte zum Antrag Grüne-Fraktion - Auffahrt Auerberg erhalten – Innerstädtische Verkehrsbelastung vermeiden</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#261663-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030183"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030180#vorlage</id>
+<title>Neue Vorlage 221938-03: Bürgerantrag: Aufhebung der Schließung der Schultheißstraße für den PKW Verkehr auf der Schultheißstraße /Beueler Straße</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich#221938-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030180"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030178#vorlage</id>
+<title>Neue Vorlage 262044: Bürgerantrag: Maßnahmen zur Verkehrsberuhigung im östlichen Teil des Nonnenpfades</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262044"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030178"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030173#vorlage</id>
+<title>Neue Vorlage 261529-08: Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261529-08"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030173"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029919#vorlage</id>
+<title>Neue Vorlage 261910: Weihnachtsmarkt 2027/28</title>
+<updated>2026-10-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261910"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029919"/>
+<summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030175#vorlage</id>
 <title>Neue Vorlage 262042: Bürgerantrag: Umgestaltung der Combahnstraße in eine Einbahnstraße</title>
@@ -719,93 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261982"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030047"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030046#vorlage</id>
-<title>Neue Vorlage 261981: Antrag der Ratsgruppe BSW/SBI: Schutz der Brandbetroffenen in Tannenbusch Mitte (Oppelnerstr. 59) und Bereitstellung geeigneten, bezahlbaren Ersatzwohnraums</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:tannenbusch#261981"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030046"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030041#vorlage</id>
-<title>Neue Vorlage 261646-01 AA: CDU/SPD-Änderungsantrag: Gewährung von Zuschüssen an Vereine für das Jahr 2026 Antrag zur Vorlage 261646</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lessenich-messdorf#261646-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030041"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030040#vorlage</id>
-<title>Neue Vorlage 261977: CDU/SPD-Antrag: Wiederherstellung des öffentlichen Verbindungsfußweg zwischen Hubert-Maurer-Straße und Enggasse in 53127 Bonn - Lengsdorf</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#261977"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030040"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030039#vorlage</id>
-<title>Neue Vorlage 261976: CDU/SPD-Antrag: Parksituation für Mitarbeitende des Bundesamts für Bevölkerungsschutz und Katastrophenhilfe (BKK) sowie der Bundesanstalt Technisches Hilfswerk (THW) in 53127 Bonn - Lengsdorf</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lengsdorf#261976"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030039"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030035#vorlage</id>
-<title>Neue Vorlage 261973: CDU/SPD-Antrag: Geschwindigkeitsüberwachung auf der B56/Am Burgweiher</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:duisdorf#261973"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030035"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030026#vorlage</id>
-<title>Neue Vorlage 261968: Antrag der Grünen Ratsfraktion zum Quartiersmanagement Tannenbusch</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:tannenbusch#261968"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030026"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030015#vorlage</id>
-<title>Neue Vorlage 261962: Grüner Antrag: Tempo 30 auf der Bahnhofstraße zwischen Bahnübergang und Bezirksgrenze</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lessenich-messdorf#261962"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030015"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030014#vorlage</id>
-<title>Neue Vorlage 261961: Grüner Antrag: Überprüfung und Verlegung von Mülleimern im Derletal</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:duisdorf#261961"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030014"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029914#vorlage</id>
-<title>Neue Vorlage 253376-04: Reinigung an den städtischen Bonner Schulen</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#253376-04"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029914"/>
-<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029807#vorlage</id>
-<title>Neue Vorlage 260915-01 ST: BBB-Antrag: Einrichtung einer Hol- und Bringzone</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:alt-godesberg#260915-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029807"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029806#vorlage</id>
-<title>Neue Vorlage 261798-01: Befreiung zur bauvorbereitenden Rodung von Gehölzbeständen im Kontext der Brückenerneuerungen „An der Schwarzen Brücke“ und „Am Bleichgraben“ hier: Dringlichkeitsentscheidung aufgrund der Ablehnung der Befreiung im Naturschutzbeirat</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dransdorf#261798-01"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029806"/>
-<summary>Dringlichkeitsentscheidung OB · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
 </feed>

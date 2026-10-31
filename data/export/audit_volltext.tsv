@@ -3494,6 +3494,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 221550-12 ST	Titel ohne gemeinsamen Ort, nicht verortet						
 221550-13 AA	kein Ort						
 221550-16	kein Ort						
+221550-17	kein Ort						
 221556	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Beuel		niedrig	1
 221557	kein Ort						
 221557-01 ST	kein Ort						
@@ -6982,6 +6983,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232211-08	kein Ort						
 232211-09 ST	kein Ort						
 232212	kein Ort						
+232212-01 ST	kein Ort						
 232214	Titel ohne gemeinsamen Ort, nicht verortet						
 232218	kein Ort						
 232219	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -9314,7 +9316,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
-242029	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	1
 242031	kein Ort						
 242032	kein Ort						
 242034	kein Ort						
@@ -9370,6 +9371,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242128	Titel ohne gemeinsamen Ort, nicht verortet						
 242129	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 242130	kein Ort						
+242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	niedrig	1
+242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
 242131	kein Ort						
 242132	kein Ort						
 242133	kein Ort						
@@ -9857,6 +9860,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
+252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -13286,6 +13290,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261934	kein Ort						
 261937	Titel ohne gemeinsamen Ort, nicht verortet						
 261941	kein Ort						
+261944	kein Ort						
 261954	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
 261965	Titel ohne gemeinsamen Ort, nicht verortet						
 261969	kein Ort						
@@ -13297,6 +13302,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261984	Titel ohne gemeinsamen Ort, nicht verortet						
 261988	kein Ort						
 261990	kein Ort						
+261991	kein Ort						
 261994	kein Ort						
 261995	kein Ort						
 262000	nur in Anlagen genannt, nicht verortet						
@@ -13313,3 +13319,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262026	kein Ort						
 262031	Titel ohne gemeinsamen Ort, nicht verortet						
 262037	kein Ort						
+262051	kein Ort						
+262056	verortet	Hauptteil	volltext_strasse+kreuzung	Guido-Westerwelle-Brücke	Nordstadt	mittel	1
+262056	verortet	Hauptteil	volltext_strasse+kreuzung	Hochstadenring	Nordstadt	mittel	1
+262057	Titel ohne gemeinsamen Ort, nicht verortet						
