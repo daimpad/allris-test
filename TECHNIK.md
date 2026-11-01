@@ -304,7 +304,8 @@ Elf Werkzeuge in `site/chat/tools.js` über die statischen Exporte (`suche_vorla
 ## Betrieb
 
 - `pages.yml`: täglich 04:17 UTC und bei jedem Push auf `main`; Abruf mit Rückfall auf den zwischengespeicherten Stand, Bebauungspläne montags und auf Knopfdruck (bis zu 15 Minuten); veröffentlicht auf GitHub Pages und im Branch `deploy`.
-- `live.yml`: prüft nach jeder Veröffentlichung und täglich 06:41 UTC Hauptadresse und Spiegel; Fehler meldet GitHub per E-Mail.
+- `live.yml`: prüft nach jeder Veröffentlichung und täglich 06:41 UTC Hauptadresse und Spiegel (Startseite, Daten, Datenschutz, `rss/`, `haushalt/`, `thema/`, eine Gebietsseite, Feed über ganz Bonn als Atom mit Einträgen, Datenstand, Stand des Branch `deploy`); Fehler meldet GitHub per E-Mail. Fehlende Kopfzeilen der Hauptadresse (nosniff, HSTS, CORS) erscheinen als Hinweis; geprüft wird mit GET, weil der Server HEAD-Anfragen auf einem anderen Weg beantwortet.
+- Härtung (01.11.2026): alle GitHub-Aktionen auf feste Commits mit Versionskommentar (`# v4.4.0`); Rechte je Job, Schreiben nur in Jobs, die einen Branch schreiben (`deploy`, `kurzfassungen`, `archiv`, `quellen`, `auswertung`) oder GitHub Pages veröffentlichen.
 - `tests.yml`: Unit-Tests, Syntaxprüfung, Node-Tests bei Pull Requests.
 - Eigener Server (Plesk): Subdomain mit Let's-Encrypt-Zertifikat; „Git“ mit `https://github.com/daimpad/allris-test.git`, Branch `deploy`, automatische Bereitstellung; Webhook-URL in GitHub unter Settings → Webhooks (push). `SITE_URL` (Standard `https://ris-bonn.datenatlas.de/`) bestimmt die absoluten Adressen.
 

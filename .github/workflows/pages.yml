@@ -11,10 +11,9 @@ on:
     - cron: "17 4 * * *"
   workflow_dispatch:
 
+# Rechte je Job (Härtung 01.11.2026): Lesen als Vorgabe, Schreiben nur, wo ein Job es braucht
 permissions:
-  contents: write   # Branch deploy
-  pages: write
-  id-token: write
+  contents: read
 
 concurrency:
   group: "pages"
@@ -23,10 +22,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # Branches deploy und kurzfassungen
+      pages: read       # configure-pages liest die Einstellungen von GitHub Pages
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
         with:
           python-version: "3.12"
           cache: pip
@@ -36,7 +38,7 @@ jobs:
 
       # Der letzte erfolgreiche Abruf dient als Rückfall, falls eine Quelle nicht antwortet.
       - name: Rohdaten des letzten Laufs
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
         with:
           path: |
             data/raw/papers.jsonl
@@ -54,7 +56,7 @@ jobs:
       # im Repository enthält. Ein Commit an einer dieser Dateien beginnt so mit der Fassung im Repository, statt vom
       # Zwischenspeicher überschrieben zu werden (Code-Prüfung 24.10.2026: bis zum nächsten Montag galt sonst der alte Stand).
       - name: Geodaten und Haltestellen des letzten Abrufs
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
         with:
           path: |
             data/geo/bebauungsplaene_bonn.geojson
@@ -116,7 +118,7 @@ jobs:
 
       # Texte der Hauptdokumente (OParl-Lite) nur zur Verarbeitung (Verortung): eigener Zwischenspeicher, nie veröffentlicht
       - name: Volltexte des letzten Laufs
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
         with:
           path: data/raw/texte.jsonl
           key: texte-${{ github.run_id }}
@@ -185,7 +187,7 @@ jobs:
       # Baustellen für die Seite: aus dem Archiv (Branch archiv, täglich 05:23 UTC), sonst direkt aus den Feeds;
       # mögliche Umsetzungen nur mit Konfidenz hoch (vorläufig). Scheitert beides, bleibt die Ebene ausgeblendet.
       - name: Archiv der Baustellen
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
           ref: archiv
           path: _archiv
@@ -259,22 +261,25 @@ jobs:
           git commit -q -m "Seite aus ${GITHUB_SHA::7}, erzeugt $(date -u +%F)"
           git push -q "$url" HEAD:deploy
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b  # v5.0.0
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa  # v3.0.1
         with:
           path: "_site"
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write      # GitHub Pages
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Auf GitHub Pages veröffentlichen
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5.0.1
 
   # Neue Kurzfassungen (Mistral; täglich höchstens 500, nach einem Merge 50) nach dem Veröffentlichen, damit die Seite
   # nicht auf das Sprachmodell wartet; sie erscheinen mit dem nächsten Lauf. Rohdaten und Volltexte aus dem Zwischen-
@@ -283,10 +288,12 @@ jobs:
   kurzfassungen:
     needs: deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # Branch kurzfassungen
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
         with:
           python-version: "3.12"
           cache: pip
@@ -295,7 +302,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Rohdaten dieses Laufs
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
         with:
           path: |
             data/raw/papers.jsonl
@@ -309,7 +316,7 @@ jobs:
           restore-keys: raw-
 
       - name: Volltexte dieses Laufs
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
         with:
           path: data/raw/texte.jsonl
           key: texte-${{ github.run_id }}
