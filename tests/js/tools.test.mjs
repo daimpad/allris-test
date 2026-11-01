@@ -175,6 +175,15 @@ test("Datenschutz: auch Folgevorlagen eines Bürgerantrags ohne Hausnummer, Plan
   assert.equal(v.bebauungsplaene[0].fundstelle, `Bebauungsplan 7923-2 an der Frongasse ${OHNE_NR}`);
 });
 
+test("Datenschutz: auch Nummern hinter „Hausnummer“, „Haus-Nr.“ und „Straße Nr.“ (Lücke 01.11.2026)", async () => {
+  const files = structuredClone(FILES);
+  files["bonn/suche.json"].rows[0][1] = "Bürgerantrag: Tempo 30 in Höhe der Hausnummer 82, vor Haus-Nr. 5 und Frongasse Nr. 3 (neben Haus-Nr.) 7";
+  const t = createTools({ today: "2026-10-18", load: async (p) => { if (!(p in files)) throw new Error(`HTTP 404 ${p}`); return structuredClone(files[p]); } });
+  const r = await t.run("suche_vorlagen", {});
+  assert.equal(r.treffer.find((x) => x.drucksache === "261749").titel,
+    `Bürgerantrag: Tempo 30 in Höhe der ${OHNE_NR}, vor ${OHNE_NR} und Frongasse ${OHNE_NR} (neben ${OHNE_NR})`);
+});
+
 test("hole_vorlage: KI-Kurzfassung als abgeleitet gekennzeichnet", async () => {
   const kurz = { ...VORLAGE, kurzfassung: { text: "Es geht um Bäume.", modell: "m" } };
   const t = createTools({ today: "2026-10-18", load: async (p) => structuredClone(p === "bonn/chat/vorlagen/2610.json" ? { papers: { 261088: kurz } } : FILES[p]) });

@@ -26,6 +26,14 @@ class Maske(unittest.TestCase):
         # unbekannte Straße, erkannt an der Endung; Postleitzahl bleibt
         self.assertEqual(m("Kapitelshof 3, 53229 Bonn", "231681-12 ST"), "Kapitelshof [Hausnummer ausgelassen], 53229 Bonn")
         self.assertEqual(m("Tempo 30 in der Reichsstraße", "261847"), "Tempo 30 in der Reichsstraße")
+        # Lücke 01.11.2026: Nummer hinter „Hausnummer“, „Haus-Nr.“, „Haus Nr.“ oder „Straße Nr.“
+        self.assertEqual(m("Endenicher Allee in Höhe der Hausnummer 82", "261847"), "Endenicher Allee in Höhe der [Hausnummer ausgelassen]")
+        self.assertEqual(m("vor Haus-Nr. 264 und Haus Nr. 5", "261847"), "vor [Hausnummer ausgelassen] und [Hausnummer ausgelassen]")
+        self.assertEqual(m("zwischen den Hausnummern 36 bis 40", "261847"), "zwischen den [Hausnummer ausgelassen]")
+        self.assertEqual(m("Reichsstraße Nr. 12", "261847"), "Reichsstraße [Hausnummer ausgelassen]")
+        self.assertEqual(m("Reichsstraße (neben Haus-Nr.) 68 - Neubau", "261847"), "Reichsstraße (neben [Hausnummer ausgelassen]) - Neubau")
+        self.assertTrue(m.offen("vor der Hausnummer 82", "261847"))
+        self.assertFalse(m.offen("vor der Hausnummer 82", "250001"))
         self.assertIsNone(m(None, "261847"))
 
     def test_kette_ueber_folgevorlagen(self):

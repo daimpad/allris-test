@@ -9,7 +9,9 @@ Verortung und Audit der Geokodierung arbeiten weiter mit dem vollen Titel aus de
 bestimmt den Ortsteil, angezeigt wird nur die Straße).
 Erweitert am 26.10.2026 (Entscheidung des Auftraggebers): auch Vorlagen, die das Bauordnungsamt (63) oder eine Untere
 Naturschutzbehörde (56-3, 67-6) federführend betreut (Bauanträge und Fällgenehmigungen auf Grundstücken), und ihre
-verbundenen Vorlagen."""
+verbundenen Vorlagen.
+Ergänzt am 01.11.2026 (Lücke aus der Phase 0 „Verständlichkeit“: 27 Titel aus 15 Vorgängen): auch eine Nummer hinter
+„Hausnummer(n)“, „Hausnr.“, „Haus-Nr.“ oder „Haus Nr.“ (ersetzt samt dem Wort) und hinter „Straße Nr.“."""
 import json
 import re
 
@@ -25,9 +27,14 @@ SUFFIX = (rf"(?:{_L}|[.-])*(?:straße|strasse|str\.|weg|platz|gasse|allee|ring|u
           r"graben|berg|feld)")
 
 
+# „Hausnummer 82“, „Haus-Nr. 264“, „Haus Nr. 5“, „Hausnummern 36 bis 40“, „(neben Haus-Nr.) 68“ (wie WORT in
+# site/chat/tools.js); eine schließende Klammer bleibt stehen
+WORT = re.compile(rf"\b(?:hausnummern?|hausnr\.?|haus-nr\.?|haus\s+nr\.?)\s*(\))?\s*{NR}", re.I)
+
+
 def _muster(strassen):
     names = sorted({s for s in strassen if s}, key=len, reverse=True)
-    return re.compile(rf"((?:{'|'.join([*map(re.escape, names), SUFFIX])})\s+){NR}", re.I)
+    return re.compile(rf"((?:{'|'.join([*map(re.escape, names), SUFFIX])})\s+)(?:nr\.?\s*)?{NR}", re.I)
 
 
 def privat(p):
@@ -54,11 +61,11 @@ class Maske:
     def __call__(self, titel, ref):
         if not self._betroffen(titel, ref):
             return titel
-        return self.rx.sub(lambda m: m.group(1) + OHNE_NR, titel)
+        return WORT.sub(lambda m: OHNE_NR + (m.group(1) or ""), self.rx.sub(lambda m: m.group(1) + OHNE_NR, titel))
 
     def offen(self, titel, ref):
         """Bleibt nach dem Ausblenden eine Hausnummer stehen? (Prüfung in check.py)"""
-        return self._betroffen(titel, ref) and bool(self.rx.search(titel))
+        return self._betroffen(titel, ref) and bool(self.rx.search(titel) or WORT.search(titel))
 
 
 def aus_db(db, strassen=None):
