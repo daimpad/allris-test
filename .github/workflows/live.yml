@@ -45,6 +45,18 @@ jobs:
             check "${base}data/export/bonn/index.json" "generated_at"
             check "${base}datenschutz.html" "Verantwortlich"
           done
+          # Unterseiten und Feed über ganz Bonn (seit 01.11.2026; Themen- und Haushaltsseite, Seite rss/, eine Gebietsseite)
+          for base in https://ris-bonn.datenatlas.de/ https://daimpad.github.io/allris-test/; do
+            check "${base}rss/" "Inhalte abonnieren und weiterverwenden"
+            check "${base}haushalt/" "Haushalt auf einen Blick"
+            check "${base}thema/" "<h1>Themen"
+            check "${base}ortsteil/endenich/" "Ratsvorlagen in Endenich"
+            feed="${base}data/export/bonn/feeds/ganz-bonn.xml"
+            n=$(curl -fsSL --retry 3 --retry-delay 10 "$feed" | python3 -c 'import sys, xml.etree.ElementTree as ET
+          r = ET.parse(sys.stdin).getroot(); a = "{http://www.w3.org/2005/Atom}"
+          print(len(r.findall(a + "entry")) if r.tag == a + "feed" else 0)') || n=0
+            if [ "${n:-0}" -gt 0 ]; then echo "ok  $feed ($n Einträge)"; else echo "::error::$feed ist kein Atom-Feed mit Einträgen"; fail=1; fi
+          done
           check https://ris-bonn.datenatlas.de/robots.txt "Sitemap: https://ris-bonn.datenatlas.de/sitemap.xml"
           check https://ris-bonn.datenatlas.de/sitemap.xml "<urlset"
           # Datenstand höchstens zwei Tage alt
@@ -65,3 +77,18 @@ jobs:
             echo "ok  Hauptadresse auf dem Stand des Branch deploy ($soll)"
           fi
           exit $fail
+
+      # deploy/htaccess setzt Sicherheitskopfzeilen und CORS; nginx liefert statische Dateien auf der Hauptadresse
+      # derzeit ohne sie aus (Plesk, beim Auftraggeber offen). Bis zur Umstellung nur ein Hinweis, kein Fehler.
+      - name: Kopfzeilen der Hauptadresse (Hinweis)
+        if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+        run: |
+          # mit GET wie ein Browser: HEAD-Anfragen beantwortet der Server auf einem anderen Weg (mit Kopfzeilen)
+          kopf() {  # Adresse, Kopfzeile
+            if curl -fsS --retry 3 --retry-delay 10 -D - -o /dev/null "$1" | tr -d '\r' | grep -qi "^$2:"; then echo "ok  $1 $2"
+            else echo "::warning::$1 ohne Kopfzeile $2"; fi
+          }
+          kopf https://ris-bonn.datenatlas.de/ X-Content-Type-Options
+          kopf https://ris-bonn.datenatlas.de/ Strict-Transport-Security
+          kopf https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ganz-bonn.xml Access-Control-Allow-Origin
+          kopf https://ris-bonn.datenatlas.de/data/export/bonn/index.json Access-Control-Allow-Origin
