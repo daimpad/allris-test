@@ -1625,6 +1625,11 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 210501	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 210501	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 210501	beratung: Hauptausschuss (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+210353	datum_vorlage	2021-03-30	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+210353	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2021-04-13	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+210353	beratung: Bezirksvertretung Hardtberg (Kenntnisnahme)	2021-04-13	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+210353	beratung: Ausschuss für Mobilität und Verkehr (Kenntnisnahme)	2021-04-20	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+210353	beratung: Bezirksvertretung Beuel (Kenntnisnahme)	2021-06-16	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 210274	datum_vorlage	2021-03-17	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 210274	folgevorlage: 210274-01 ST	2021-04-13	oparl-bonn	belegt	Stellungnahme der Verwaltung
 210274	folgevorlage: 210274-02 ST	2021-06-01	oparl-bonn	belegt	Stellungnahme der Verwaltung
@@ -1656,6 +1661,8 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 201710-01	beratung: Rat (Entscheidung)	2021-02-04	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201780-01 ST	datum_vorlage	2021-02-01	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 201780-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2021-06-30	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+202101-01 ST	datum_vorlage	2021-01-11	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+202101-01 ST	beratung: Rat (Entscheidung)	2021-02-04	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 202210	datum_vorlage	2021-01-11	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 202210	beratung: Bezirksvertretung Bonn (Anhörung)	2021-02-02	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 202210	beratung: Ausschuss für Kinder, Jugend und Familie (Empfehlung)	2021-03-11	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
@@ -1668,13 +1675,24 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 201923-03 AA	beratung: Rat (Entscheidung)	2020-12-10	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201923-02 AA	datum_vorlage	2020-12-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 201923-02 AA	beratung: Rat (Entscheidung)	2020-12-10	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+202058-01 ST	datum_vorlage	2020-12-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+202058-01 ST	beratung: Rat (Stellungnahme)	2020-12-14	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+202058-02 AA	datum_vorlage	2020-12-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+202058-02 AA	beratung: Rat (Entscheidung)	2020-12-14	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200178-2 ST	datum_vorlage	2020-12-01	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 200178-2 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2021-05-18	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201897	datum_vorlage	2020-11-25	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 201897	beratung: Bezirksvertretung Bonn (Entscheidung)	2021-02-02	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+202058	datum_vorlage	2020-11-25	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+202058	folgevorlage: 202058-01 ST	2020-12-08	oparl-bonn	belegt	Stellungnahme der Verwaltung
+202058	folgevorlage: 202058-02 AA	2020-12-08	oparl-bonn	belegt	Änderungsantrag
+202058	beratung: Rat (Entscheidung)	2020-12-14	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+202058	folgevorlage: 210353	2021-03-30	oparl-bonn	belegt	Mitteilungsvorlage
 201923-01 AA	datum_vorlage	2020-11-24	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 201923-01 AA	beratung: Bezirksvertretung Bonn (Anhörung)	2020-11-24	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201923-01 AA	beratung: Rat (Entscheidung)	2020-12-10	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+202060-02 AA	datum_vorlage	2020-11-24	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+202060-02 AA	beratung: Rat (Entscheidung)	2020-12-14	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 202072	datum_vorlage	2020-11-23	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 202072	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-11-24	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201923	datum_vorlage	2020-11-20	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
@@ -1697,6 +1715,8 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 200322-1 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2021-10-05	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201906	datum_vorlage	2020-11-13	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 201906	beratung: Bezirksvertretung Bonn (Entscheidung)	2021-02-02	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+201844	datum_vorlage	2020-11-04	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+201844	beratung: Rat (Entscheidung)	2020-11-05	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201780	datum_vorlage	2020-10-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 201780	folgevorlage: 201780-01 ST	2021-02-01	oparl-bonn	belegt	Stellungnahme der Verwaltung
 201780	beratung: Bezirksvertretung Bonn (Entscheidung)	2021-06-30	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
@@ -1745,6 +1765,8 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 201471	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Empfehlung)	2020-08-26	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201471	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-10-06	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201471	folgevorlage: 210869	2021-05-14	oparl-bonn	belegt	Dringlichkeitsantrag
+201570	datum_vorlage	2020-08-13	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+201570	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-11-24	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201620	datum_vorlage	2020-08-12	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 201620	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 201620	beratung: Hauptausschuss (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
@@ -1774,6 +1796,9 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 201432	datum_vorlage	2020-07-28	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 201432	beratung: Ausschuss für Kinder, Jugend und Familie (Empfehlung)	2020-08-12	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201432	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-08-25	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+201305	datum_vorlage	2020-07-15	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+201305	beratung: Integrationsrat (Anhörung)	2020-08-12	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+201305	beratung: Ausschuss für Soziales, Migration, Gesundheit und Wohnen (Entscheidung)	2020-08-19	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 201281	datum_vorlage	2020-07-10	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 201281	folgevorlage: 201281-1 ST	2020-10-01	oparl-bonn	belegt	Stellungnahme der Verwaltung
 201281	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-11-24	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
@@ -1791,17 +1816,45 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 201232	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 201232	beratung: Hauptausschuss (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 201232	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+201001-1 ST	datum_vorlage	2020-06-13	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+201001-1 ST	beratung: Rat (Entscheidung)	2020-06-22	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200671-2 AA	datum_vorlage	2020-06-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+200671-2 AA	beratung: Sportausschuss (Empfehlung)	2020-06-09	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200671-2 AA	beratung: Bezirksvertretung Bonn (Anhörung)	2020-06-16	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200671-2 AA	beratung: Rat (Entscheidung)	2020-06-18	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200671-8 AA	datum_vorlage	2020-06-04	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+200671-8 AA	beratung: Sportausschuss (Empfehlung)			unklar	Beratung ohne verknüpfte Sitzung
+200671-8 AA	beratung: Rat (Entscheidung)			unklar	Beratung ohne verknüpfte Sitzung
 191010-3 ST	datum_vorlage	2020-06-03	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 191010-3 ST	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-08-25	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200812-1 ST	datum_vorlage	2020-05-27	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+200812-1 ST	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Kenntnisnahme)	2020-05-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200812-1 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2020-06-16	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200812-1 ST	beratung: Rat (Kenntnisnahme)	2020-06-22	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200769-1 AA	datum_vorlage	2020-05-26	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 200769-1 AA	beratung: Ausschuss für Kinder, Jugend und Familie (Entscheidung)	2020-05-26	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+201001	datum_vorlage	2020-05-26	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+201001	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Empfehlung)	2020-05-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+201001	folgevorlage: 201001-1 ST	2020-06-13	oparl-bonn	belegt	Stellungnahme der Verwaltung
+201001	beratung: Rat (Entscheidung)	2020-06-22	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200898	datum_vorlage	2020-05-15	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+200898	beratung: Beirat Bürgerbeteiligung (Anregung)	2020-05-15	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200898	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-05-19	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200577	datum_vorlage	2020-05-14	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 200577	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-05-19	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200577	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Empfehlung)	2020-05-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200797	datum_vorlage	2020-05-14	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+200797	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Kenntnisnahme)	2020-05-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200797	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2020-06-16	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200797	beratung: Bezirksvertretung Beuel (Kenntnisnahme)	2020-06-16	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200132-3	datum_vorlage	2020-05-12	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+200132-3	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Kenntnisnahme)	2020-06-24	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200769	datum_vorlage	2020-05-05	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 200769	beratung: Ausschuss für Kinder, Jugend und Familie (Empfehlung)	2020-05-26	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200769	folgevorlage: 200769-1 AA	2020-05-26	oparl-bonn	belegt	Änderungsantrag
 200769	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-06-16	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200513-1 ST	datum_vorlage	2020-04-23	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+200513-1 ST	beratung: Bezirksvertretung Hardtberg (Entscheidung)	2020-06-16	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 190310-2 ST	datum_vorlage	2020-04-21	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 190310-2 ST	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-04-21	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200206-1 ST	datum_vorlage	2020-04-20	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
@@ -1811,6 +1864,9 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 200654	beratung: Bezirksvertretung Beuel (Anhörung)	2020-05-06	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200654	beratung: Bezirksvertretung Bonn (Anhörung)	2020-05-19	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200654	beratung: Rat (Entscheidung)	2020-06-22	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200563	datum_vorlage	2020-04-03	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+200563	beratung: Beirat Bürgerbeteiligung (Kenntnisnahme)	2020-05-15	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+200563	beratung: Ausschuss für Beteiligung der Bürgerinnen und Bürger und Lokale Agenda (Kenntnisnahme)	2020-05-28	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200434	datum_vorlage	2020-04-02	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 200434	beratung: Bezirksvertretung Bonn (Empfehlung)	2020-04-21	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200434	beratung: Rat (Entscheidung)	2020-05-07	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
@@ -1821,6 +1877,8 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 190310-3 AA	beratung: Ausschuss für Umwelt und Verbraucherschutz (Anhörung)	2020-03-12	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 190310-3 AA	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-04-21	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 190310-3 AA	folgevorlage: 190310-2 ST	2020-04-21	oparl-bonn	belegt	Stellungnahme der Verwaltung
+200132-2	datum_vorlage	2020-03-11	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+200132-2	beratung: Rat (Entscheidung)	2020-05-07	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200178	datum_vorlage	2020-03-10	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 200178	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-04-21	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200178	folgevorlage: 200178-1	2020-08-27	oparl-bonn	belegt	Antrag
@@ -1855,6 +1913,8 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 200239	datum_vorlage	2020-02-12	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 200239	beratung: Baumkommission (Kenntnisnahme)	2020-03-02	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200239	beratung: Bezirksvertretung Hardtberg (Kenntnisnahme)	2020-03-03	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+190574-2 ST	datum_vorlage	2020-02-07	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+190574-2 ST	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Entscheidung)	2020-03-11	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 190807-1 ST	datum_vorlage	2020-02-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 190807-1 ST	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-03-03	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 200204	datum_vorlage	2020-02-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
@@ -1921,6 +1981,9 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 190362-4 AA	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Entscheidung)	2019-11-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 190363-4 AA	datum_vorlage	2019-11-25	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 190363-4 AA	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Entscheidung)	2019-11-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+190574	datum_vorlage	2019-11-22	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+190574	folgevorlage: 190574-2 ST	2020-02-07	oparl-bonn	belegt	Stellungnahme der Verwaltung
+190574	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Entscheidung)	2020-03-11	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 190876	datum_vorlage	2019-11-22	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 190876	folgevorlage: 190876-1 ST	2020-02-14	oparl-bonn	belegt	Stellungnahme der Verwaltung
 190876	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-03-03	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
@@ -1940,6 +2003,9 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 190306	datum_vorlage	2019-11-11	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 190306	beratung: Baumkommission (Empfehlung)	2020-01-20	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 190306	beratung: Bezirksvertretung Bonn (Entscheidung)	2020-01-28	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+190637-2 ST	datum_vorlage	2019-11-11	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+190637-2 ST	beratung: Ausschuss für Planung, Verkehr und Denkmalschutz (Kenntnisnahme)	2019-11-27	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+190637-2 ST	beratung: Bezirksvertretung Hardtberg (Kenntnisnahme)	2019-12-03	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 190741	datum_vorlage	2019-11-11	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 190741	beratung: Baumkommission (Empfehlung)	2019-11-25	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 190310	datum_vorlage	2019-11-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
