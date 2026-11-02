@@ -7478,7 +7478,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 222049	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
 222050	kein Ort						
 222050-01 ST	nur in Anlagen genannt, nicht verortet						
-222050-02	nur in Anlagen genannt, nicht verortet						
 222050-03	nur in Anlagen genannt, nicht verortet						
 222052	Titel ohne gemeinsamen Ort, nicht verortet						
 222053	kein Ort						
@@ -9847,10 +9846,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 231783	verortet	Hauptteil	volltext_strasse+kreuzung	Vivatsgasse	Bonn-Zentrum	mittel	2
 231783	verortet	Hauptteil	volltext_strasse+kreuzung	Windeckstraße	Bonn-Zentrum	mittel	2
 231784	kein Ort						
-231785	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	1
-231785	verortet	Hauptteil	volltext_strasse+kreuzung	Bischofsplatz	Bonn-Zentrum	mittel	2
-231785	verortet	Hauptteil	volltext_strasse+kreuzung	Franziskanerstraße	Bonn-Zentrum	mittel	1
-231785	verortet	Hauptteil	volltext_strasse+kreuzung	Stockenstraße	Bonn-Zentrum	mittel	4
 231785-01 AA	kein Ort						
 231789	kein Ort						
 231790-02	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
@@ -10537,7 +10532,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240195	kein Ort						
 240196	kein Ort						
 240197	kein Ort						
-240200	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
 240200-01 ST	kein Ort						
 240200-02 AA	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
 240200-03 AA	kein Ort						
@@ -11202,7 +11196,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Stockenstraße	Südstadt	niedrig	1
 240739-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Theaterstraße	Bonn-Zentrum	niedrig	1
 240742	kein Ort						
-240744	kein Ort						
 240745	kein Ort						
 240746	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Beuel		niedrig	1
 240747	kein Ort						
@@ -11417,7 +11410,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240922	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 240922-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 240922-02	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
-240924	kein Ort						
 240927	kein Ort						
 240927-01	kein Ort						
 240927-02 ST	kein Ort						
@@ -13123,6 +13115,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
+252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -16590,7 +16583,3 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262026	kein Ort						
 262031	Titel ohne gemeinsamen Ort, nicht verortet						
 262037	kein Ort						
-262051	kein Ort						
-262056	verortet	Hauptteil	volltext_strasse+kreuzung	Guido-Westerwelle-Brücke	Nordstadt	mittel	1
-262056	verortet	Hauptteil	volltext_strasse+kreuzung	Hochstadenring	Nordstadt	mittel	1
-262057	Titel ohne gemeinsamen Ort, nicht verortet						

@@ -3,19 +3,11 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-plittersdorf</id>
 <title>RIS-Karte Bonn – Plittersdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Plittersdorf</subtitle>
-<updated>2026-11-02T00:00:00Z</updated>
+<updated>2026-10-19T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-plittersdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030200#vorlage</id>
-<title>Neue Vorlage 260956-02 AA: GRÜNE Änderungsantrag: Einrichtung eines Zebrastreifens im Bereich KGS Donatusschule – zu DS 260956</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf#260956-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030200"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029718#vorlage</id>
 <title>Neue Vorlage 260956-01 ST: Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich KGS Donatusschule, Donatusstraße [Hausnummer ausgelassen]</title>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf#242218-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025805"/>
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025682#vorlage</id>
+<title>Neue Vorlage 260095-01 ST: Bürgerantrag: Antrag auf verkehrsberuhigende Maßnahmen im Bereich der Teutonenstraße</title>
+<updated>2026-03-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:plittersdorf#260095-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025682"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
