@@ -1,5 +1,6 @@
-"""Themenseite „Digitale Verwaltung“ (thema/digitale-verwaltung/), Entwurf. Phase 0 und Entscheidungen:
-themen/phase0/WEITERE.md (Abschnitt c), digital/PHASE1.md.
+"""Themenseite „Digitale Verwaltung“ (thema/digitale-verwaltung/). Phase 0 und Entscheidungen:
+themen/phase0/WEITERE.md (Abschnitt c), digital/PHASE1.md; Prüfbogen im Gespräch geprüft am 02.11.2026, Regeln
+unverändert, „weitere“ ausgeblendet, solange leer (digital/PRUEFUNG.md).
 
 Eigene Regeln (Entscheidungen 02.11.2026): Digitalisierung, IT, Verwaltungsmodernisierung und Dienstleistung
 (Bürgerdienste als Online-Angebote). Stabsstelle CDO (Dezernat OB) und die Abteilung IT des Personal- und
@@ -116,6 +117,7 @@ THEMA = Thema(
     ],
     ausschluss=AUSSCHLUSS,
     eingeklappt={"weitere"},
+    leer_ausblenden={"weitere"},  # derzeit leer; erscheint, sobald er Vorlagen enthält (Entscheidung 02.11.2026)
     punkt_straenge=("strategie", "online", "it", "organisation", "weitere"),
     # Punkte im Bild nur mit Beratung in Rat, Hauptausschuss oder Digitalisierungsausschuss
     punkt_gremien=("Rat", "Hauptausschuss", DIGITAL),
@@ -138,7 +140,9 @@ THEMA = Thema(
     bild_titel="Zeitleiste: Digitale Verwaltung in Rat, Hauptausschuss, Digitalisierungsausschuss und "
                "Bezirksvertretungen",
     feed_text="zur digitalen Verwaltung",
-    pruefung_text="Eine Stichprobe von 30 Vorlagen wird vor der Veröffentlichung von Hand geprüft.",
+    pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 02.11.2026 geprüft (Vorschlag einer KI, im Gespräch von "
+                  "Hand bestätigt: 24 passend, 1 teilweise, 0 unpassend; in der Gegenprobe fehlte keine von 5); die "
+                  "Regeln blieben unverändert.",
     nicht_gezeigt=[
         "<strong>Beträge und Haushalt:</strong> Kosten, Lizenzen und Vergaben stehen in den Dokumenten der Vorlagen und "
         "im Haushaltsplan der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge "

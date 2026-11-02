@@ -790,7 +790,7 @@ def _v(ref, name, amt="01-2 Ratsbüro", abteilung=None, gremien=("Rat",), themen
 
 
 class Wirtschaft(unittest.TestCase):
-    """Entwurf der Themenseite Wirtschaft und Wissenschaft (themenseiten/wirtschaft.py): mehrdeutige Wörter
+    """Themenseite Wirtschaft und Wissenschaft (themenseiten/wirtschaft.py): mehrdeutige Wörter
     („Wirtschaft“, „Liegenschaften“), Liegenschaften ohne Vorlagen der Wohnseite, Amt 02 und Abteilung 03-4, „weitere“
     ohne Vorlagen anderer Themenseiten, zwei Fachausschüsse, Produktbereich 15."""
 
@@ -885,13 +885,14 @@ class Wirtschaft(unittest.TestCase):
     def test_andere_seiten_in_weitere(self):
         self.assertNotIn("262123", self.by)  # „Rhein in Flammen“ steht auf der Seite Sicherheit und Ordnung
         weitere = [r for r in self.t.regeln if r.strang == "weitere"]
-        self.assertTrue(weitere and all(isinstance(r.ohne_seite, tuple) and len(r.ohne_seite) == len(ALLE)
-                                        for r in weitere))
+        # alle anderen Seiten außer der Digitalseite, die ihrerseits alle Vorlagen dieser Seite überspringt
+        ohne = {t.key for t in ALLE} - {self.t.key, "digital"}
+        self.assertTrue(weitere and all({t.key for t in r.ohne_seite} == ohne for r in weitere))
 
-    def test_entwurf(self):
+    def test_veroeffentlicht(self):
         from pipeline.themenseiten import ENTWUERFE
-        self.assertIn(self.t, ENTWUERFE)
-        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertNotIn(self.t, ENTWUERFE)
+        self.assertIn(self.t.key, [t.key for t in ALLE])
         self.assertEqual(self.t.pfad, "thema/wirtschaft-und-wissenschaft/")
         self.assertEqual([k for k, *_ in self.t.straenge],
                          ["wirtschaft", "zentren", "liegenschaften", "wissenschaft", "weitere"])
@@ -908,8 +909,9 @@ class Wirtschaft(unittest.TestCase):
         self.assertTrue({"bv", "fach", "finanz", "rat", "wirtschaft", "wissenschaft"} <= set(bahnen))
         self.assertEqual(sum(self.t.stichprobe_je_strang.values()), 25)
         self.assertEqual(self.t.stichprobe_pfad.name, "stichprobe_wirtschaft.tsv")
-        self.assertNotIn(self.t.farben, [t.farben for t in ALLE])  # eigene Farben und eigenes Symbol
-        self.assertNotIn(self.t.symbol, [t.symbol for t in ALLE])
+        andere = [t for t in ALLE if t.key != self.t.key]
+        self.assertNotIn(self.t.farben, [t.farben for t in andere])  # eigene Farben und eigenes Symbol
+        self.assertNotIn(self.t.symbol, [t.symbol for t in andere])
         self.assertIn("WorldCCBonn", "".join(self.t.nicht_gezeigt).replace("World Conference Center Bonn", "WorldCCBonn"))
 
     def test_kandidat_ohne_teilwoerter(self):
@@ -926,7 +928,7 @@ class Wirtschaft(unittest.TestCase):
 
 
 class Digital(unittest.TestCase):
-    """Entwurf der Themenseite Digitale Verwaltung (themenseiten/digital.py): Stabsstelle CDO und Abteilung 10-2,
+    """Themenseite Digitale Verwaltung (themenseiten/digital.py): Stabsstelle CDO und Abteilung 10-2,
     vom Amt 10 sonst nur Wörter im Titel, keine Personalangelegenheiten und Büromöbel, „IT“ nur groß, digitale Wirtschaft
     nur auf der Wirtschaftsseite, kein Haushaltsabschnitt."""
 
@@ -984,6 +986,14 @@ class Digital(unittest.TestCase):
         self.assertEqual(self.by["262207"], ("weitere", "Beratung im Ausschuss für Digitalisierung, Dienstleistung und "
                                                         "Verwaltungsmodernisierung"))
 
+    def test_leerer_strang_ausgeblendet(self):
+        # „weitere“ erscheint nicht, solange er leer ist (Entscheidung 02.11.2026); die Regel bleibt
+        cache = {k: v for k, v in self.cache.items() if k != "i"}
+        d = dossier.daten(self.t, cache, {}, [], "2026-11-02", {})
+        self.assertNotIn("weitere", [s["key"] for s in d["straenge"]])
+        self.assertIn("weitere", [s.strang for s in self.t.regeln])
+        self.assertIn("weitere", [s["key"] for s in self.d["straenge"]])
+
     def test_personalangelegenheiten(self):
         for ref in ("262208", "262209", "262210", "262211", "262212", "262213"):
             self.assertNotIn(ref, self.by, ref)
@@ -1009,10 +1019,10 @@ class Digital(unittest.TestCase):
         self.assertIn('<a href="#sitzungen">Nächste Sitzungen</a>', html)
         self.assertNotIn("kachel-haushalt", dossier._kachel(self.t, self.d))
 
-    def test_entwurf(self):
+    def test_veroeffentlicht(self):
         from pipeline.themenseiten import ENTWUERFE
-        self.assertIn(self.t, ENTWUERFE)
-        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertNotIn(self.t, ENTWUERFE)
+        self.assertIn(self.t.key, [t.key for t in ALLE])
         self.assertEqual(self.t.pfad, "thema/digitale-verwaltung/")
         self.assertEqual([k for k, *_ in self.t.straenge], ["strategie", "online", "it", "organisation", "weitere"])
         self.assertEqual(self.t.fachausschuss, "Ausschuss für Digitalisierung, Dienstleistung und "
@@ -1026,8 +1036,7 @@ class Digital(unittest.TestCase):
         self.assertLessEqual({b for b, *_ in self.t.phasen}, set(bahnen))
         self.assertLessEqual(set(self.t.stichprobe_je_strang), strang)
         self.assertEqual(sum(self.t.stichprobe_je_strang.values()), 25)
-        from pipeline.themenseiten import wirtschaft
-        andere = [t for t in ALLE] + [wirtschaft.THEMA]
+        andere = [t for t in ALLE if t.key != self.t.key]
         self.assertNotIn(self.t.farben, [t.farben for t in andere])
         self.assertNotIn(self.t.symbol, [t.symbol for t in andere])
 

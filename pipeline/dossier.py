@@ -84,6 +84,7 @@ class Thema:
     pruefung_text: str
     nicht_gezeigt: list       # HTML
     eingeklappt: set = frozenset()
+    leer_ausblenden: set = frozenset()  # diese Stränge erscheinen nicht, solange sie leer sind; die Regel bleibt
     sitzungen_je_gremium: int = 2
     terminplan: str = None    # Drucksache, aus der die Phasen stammen
     phasen: list = ()         # (Bahn, von, bis, Beschriftung, nicht öffentlich), geplant laut Terminplan
@@ -313,7 +314,7 @@ def daten(t, cache, home, meetings, today, meta):
         **({("fachausschuesse" if isinstance(ausschuss, list) else "fachausschuss"): ausschuss} if ausschuss else {}),
         "meta": {**meta, "seit": t.seit, "hinweis": t.hinweis},
         "straenge": [{"key": k, "titel": ti, "regel": r, "eingeklappt": k in t.eingeklappt, "vorlagen": straenge[k]}
-                     for k, ti, r in t.straenge],
+                     for k, ti, r in t.straenge if straenge[k] or k not in t.leer_ausblenden],
         "heute": today,
         "sitzungen": termine,
         "punkte": punkte,
@@ -676,7 +677,7 @@ def uebersicht(themen, site, site_url, page):
         return []
     body = f"""    <div class="themen-kopf">
     <h1>Themen</h1>
-    <p class="lead">Themenseiten ordnen Vorlagen aus dem Ratsinformationssystem der Stadt Bonn nach Strängen und zeigen, wo ein Verfahren steht, was entschieden ist und wo man sich einbringen kann. Jede Seite nennt dazu die Aufwendungen des passenden Produktbereichs aus den Haushaltsplänen der Stadt (Abschnitt „Haushalt“).</p>
+    <p class="lead">Themenseiten ordnen Vorlagen aus dem Ratsinformationssystem der Stadt Bonn nach Strängen und zeigen, wo ein Verfahren steht, was entschieden ist und wo man sich einbringen kann. Die meisten Seiten nennen dazu die Aufwendungen des passenden Produktbereichs aus den Haushaltsplänen der Stadt (Abschnitt „Haushalt“).</p>
     <ul class="themen-zahlen" aria-label="Auf einen Blick">
       <li><strong>{len(refs)}</strong> Vorlagen seit Beginn der Wahlperiode</li>
       <li><strong>{len(kacheln)}</strong> Themen</li>
