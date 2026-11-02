@@ -470,20 +470,34 @@ def _nominativ(name):
     return re.sub(r"(schuss)es\b", r"\1", name, flags=re.I)
 
 
+def _schluessel(name):
+    """Vergleich von Gremiennamen ohne Satzzeichen: „Kinder-, Jugend“ wie „Kinder, Jugend“."""
+    return re.sub(r"[\s,\-–]+", " ", name or "").strip().lower()
+
+
+def gremium_der_sitzung(m, names, bekannt=None):
+    """Gremium einer Sitzung: aus der Organisation; fehlt sie (z. B. neue Wahlperiode, Sitzung am 25.11.2026), aus
+    dem Sitzungsnamen, bei gleichem Namen ohne Satzzeichen in der Schreibweise des bekannten Gremiums."""
+    org = (m.get("organization") or [None])[0]
+    if names.get(org):
+        return names[org]
+    name = _nominativ(re.sub(r"^(Gemeinsame )?Sitzung (des|der) ", "", m.get("name") or ""))
+    bekannt = bekannt if bekannt is not None else {_schluessel(n): n for n in sorted(names.values(), key=str)}
+    return bekannt.get(_schluessel(name), name) or "unbekannt"
+
+
 def _meetings(db):
     """Sitzungen der städtischen OParl-API (auch künftige, als Termin belegt)."""
     if not config.MEETINGS.exists():
         return []
     names = dict(db.execute("SELECT id, name FROM organization"))
+    bekannt = {_schluessel(n): n for n in sorted(names.values(), key=str)}
     out = []
     for m in json.loads(config.MEETINGS.read_text()):
         if not m.get("start"):
             continue
-        org = (m.get("organization") or [None])[0]
         time = m["start"][11:16] if len(m["start"]) > 10 and m["start"][11:16] != "00:00" else None
-        # Gremium aus der Organisation; fehlt sie (z. B. neue Wahlperiode), aus dem Sitzungsnamen
-        gremium = names.get(org) or _nominativ(re.sub(r"^(Gemeinsame )?Sitzung (des|der) ", "", m.get("name") or "")) \
-            or "unbekannt"
+        gremium = gremium_der_sitzung(m, names, bekannt)
         out.append({"date": proc.local_day(m["start"]), "time": time, "gremium": gremium,
                     "name": m.get("name"), "cancelled": bool(m.get("cancelled")), "state": m.get("meetingState"),
                     "web": m.get("web"), "invitation": m.get("invitation"),
