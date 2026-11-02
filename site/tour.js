@@ -126,6 +126,7 @@
     document.querySelectorAll("body > header, body > main").forEach((el) => { el.inert = false; });
     document.body.classList.remove("touring");
     ui.menu(null);
+    if (ui.nav) ui.nav(false);
     root.remove();
     root = null;
     const back = prevFocus && prevFocus.isConnected && shown(prevFocus) ? prevFocus : $("#detail-heading");
@@ -148,6 +149,11 @@
     }
     // während des Wartens (Beispiel wird geladen) weitergeblättert oder beendet
     if (seq !== goSeq || !root) return;
+    // Telefon: Menüs und Einträge der Leiste liegen hinter ☰ (Hamburger-Menü öffnen, sonst schließen)
+    if (ui.nav) {
+      const el = s.target && document.querySelector(s.target);
+      ui.nav(MOBILE.matches && ((s.menu && s.menu !== "mega-suche") || !!(el && el.closest("#nav-more"))));
+    }
     ui.menu(s.menu || null);
     if (s.scroll) { const el = $(s.target); if (el) el.scrollIntoView({ block: "start" }); }
     // fehlt das Element (etwa ohne Vorlagen im Gebiet), in Laufrichtung überspringen

@@ -108,6 +108,9 @@ button, select, input { font: inherit; color: inherit; }
 .toggle[aria-pressed="true"] { background: #fff; color: var(--accent-ink); box-shadow: 0 1px 3px rgba(15, 15, 20, 0.12); }
 .menu-btn[aria-expanded="true"] { background: rgba(124, 58, 237, 0.12); color: var(--accent-ink); }
 .menu-btn .chev { width: 14px; height: 14px; transition: transform .2s; }
+/* Hamburger-Menü nur auf dem Telefon; auf breiten Bildschirmen ist die Hülle unsichtbar (Inhalt direkt in der Leiste) */
+.nav-burger { display: none; }
+.nav-more { display: contents; }
 .menu-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
 
 /* Mega-Menüs */
@@ -674,7 +677,28 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
   :root { --nav-h: 0px; }
   body { --bg-gradient: radial-gradient(at 20% 0%, #ffe0f0 0%, transparent 55%), radial-gradient(at 80% 100%, #e0d4ff 0%, transparent 55%); }
   .glass { -webkit-backdrop-filter: blur(8px) saturate(150%); backdrop-filter: blur(8px) saturate(150%); }
-  .nav { top: auto; bottom: 10px; left: 10px; right: 10px; height: auto; flex-wrap: wrap; padding: 8px; gap: 6px; border-radius: 22px; }
+  /* Leiste unten mit Suche und ☰; Gebiet, Flächen und Menüs als Blatt darüber (Entscheidung 02.11.2026) */
+  .nav { top: auto; bottom: 10px; left: 10px; right: 10px; height: auto; flex-wrap: nowrap; padding: 8px; gap: 8px; border-radius: 22px; }
+  .nav-burger {
+    display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; flex: 0 0 auto;
+    min-width: 60px; height: 48px; padding: 0 8px; border: 0; border-radius: 16px; cursor: pointer;
+    background: rgba(124, 58, 237, 0.10); color: var(--accent-ink); font: 600 11px/1 var(--font-body);
+  }
+  .nav-burger .icon { width: 22px; height: 22px; }
+  .nav-burger[aria-expanded="true"] { background: var(--accent-fill); color: #fff; }
+  .nav-more {
+    display: none; position: fixed; left: 10px; right: 10px; bottom: 76px; z-index: 1001; flex-direction: column; gap: 10px;
+    max-height: calc(100vh - 150px); overflow: auto; overscroll-behavior: contain; padding: 12px; border-radius: 22px;
+    background: rgba(255, 255, 255, 0.97); border: 1px solid var(--border); box-shadow: var(--shadow-lift), var(--highlight);
+  }
+  body.nav-open .nav-more { display: flex; animation: mega-in .2s var(--ease); }
+  .nav-more .nav-group:not(.seg) { flex-direction: column; align-items: stretch; gap: 2px; }
+  .nav-more .nav-group:not(.seg) .menu-btn { flex-direction: row; justify-content: flex-start; gap: 10px; height: 48px; padding: 0 12px; font-size: 16px; border-radius: 14px; }
+  .nav-more .menu-btn .chev { display: inline; margin-left: auto; transform: rotate(-90deg); }
+  .nav-more .menu-btn[aria-expanded="true"] .chev { transform: none; }
+  /* Mega-Menü klappt im Blatt unter seinem Eintrag auf */
+  .nav-more .mega { position: static; width: auto !important; max-height: none; overflow: visible; margin: 2px 0 8px; padding: 12px;
+    border-radius: 16px; box-shadow: none; background: rgba(124, 58, 237, 0.04); animation: none; transform: none; }
   .brand { display: none; }
   .site-title {
     position: fixed; top: 10px; left: 10px; z-index: 850; width: auto; height: auto; overflow: visible; clip: auto;
@@ -683,22 +707,20 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
     font: 700 20px/1 var(--font-display); letter-spacing: -0.02em; color: var(--accent-fill);
   }
   .site-title span { color: var(--text); font-weight: 600; }
-  .nav-search { flex: 1 1 60%; max-width: none; }
-  .nav-area { flex: 1 1 30%; max-width: none; min-width: 0; height: 44px; }
+  .nav-search { flex: 1 1 auto; max-width: none; min-width: 0; }
+  .nav-area { flex: 0 0 auto; width: 100%; max-width: none; min-width: 0; height: 48px; font-size: 16px; }
   .nav-search input { height: 44px; }
   .nav-group, .nav-group + .nav-group, .nav-area + .nav-group { padding-left: 0; border: 0; }
-  .nav-group.seg { flex: 3 1 0; justify-content: space-between; }
-  .nav-group:not(.seg) { flex: 4 1 0; justify-content: space-between; }
-  .toggle, .menu-btn { flex: 1; flex-direction: column; justify-content: center; gap: 2px; height: 50px; padding: 0 2px; font-size: 11px; }
-  .menu-btn .chev { display: none; }
+  .nav-group.seg { justify-content: space-between; border-radius: 16px; }
+  .toggle { flex: 1; flex-direction: column; justify-content: center; gap: 2px; height: 54px; padding: 0 2px; font-size: 12px; border-radius: 13px; }
   /* Blätter beginnen unter dem Seitentitel, damit der Name immer sichtbar bleibt */
-  .panel, .overlay, .mega { top: 58px; bottom: auto; left: 10px !important; right: 10px !important; width: auto !important; max-height: calc(100vh - 258px); transform: none; }
+  .panel, .overlay, .mega { top: 58px; bottom: auto; left: 10px !important; right: 10px !important; width: auto !important; max-height: calc(100vh - 150px); transform: none; }
   .panel { overflow: hidden; }
   .panel[hidden] { transform: translateY(-110%); }
   .resizer { display: none; }
-  #timeline-wrap { top: auto; bottom: 190px; left: 10px !important; right: 10px !important; max-height: 34vh; }
+  #timeline-wrap { top: auto; bottom: 86px; left: 10px !important; right: 10px !important; max-height: 34vh; }
   #timeline-wrap .tl-presets, #timeline-wrap .tl-jumps, #timeline-wrap .tl-dim, #timeline-wrap .tl-hint { display: none; }
-  .leaflet-bottom { bottom: 176px; }
+  .leaflet-bottom { bottom: 76px; }
   body.detail-open .leaflet-right { right: 0; }
   body.list-open .leaflet-left, body.chat-open .leaflet-left { left: 0; }
   .step .jump { display: none; }
@@ -734,7 +756,7 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .nav-metric { display: grid; gap: 3px; margin: 8px 0 2px; font-size: 11px; color: var(--text-muted); }
 .nav-metric select { font: inherit; font-size: 12px; color: var(--text); padding: 4px 6px; border-radius: 8px;
   border: 1px solid var(--border-alt); background: var(--surface); width: 100%; box-sizing: border-box; min-width: 0; }
-@media (max-width: 900px) { .map-stack { width: min(232px, calc(100vw - 185px));   /* frei neben „Ganz Bonn ansehen“ */ max-height: calc(100vh - 250px); } }
+@media (max-width: 900px) { .map-stack { width: min(232px, calc(100vw - 185px));   /* frei neben „Ganz Bonn ansehen“ */ max-height: calc(100vh - 150px); } }
 
 /* Mitmachen in Bonn (site/beteiligung.js) */
 #bt-body h3 { font-size: 15px; margin: 16px 0 8px; }
