@@ -36,7 +36,7 @@ async function axe(page) {
 
 // Punkt auf der Karte, an dem eine Fläche der Navigation obenauf liegt (wie ein Klick mit der Maus)
 async function areaPoint(page) {
-  const pts = await page.evaluate(() => {
+  const scan = () => page.evaluate(() => {
     const o = [];
     for (let y = 100; y < innerHeight - 40; y += 15) for (let x = 20; x < innerWidth - 20; x += 15) {
       const el = document.elementFromPoint(x, y);
@@ -44,6 +44,15 @@ async function areaPoint(page) {
     }
     return o;
   });
+  // erst klicken, wenn die Karte stillsteht: nach einem Klick zoomt sie in den Stadtbezirk; ein Punkt aus der
+  // laufenden Bewegung trifft auf einem langsamen Rechner daneben (CI 02.11.2026)
+  let pts = await scan();
+  for (let i = 0; i < 20; i++) {
+    await page.waitForTimeout(250);
+    const next = await scan();
+    if (JSON.stringify(next) === JSON.stringify(pts)) break;
+    pts = next;
+  }
   assert.ok(pts.length, "keine anklickbare Fläche auf der Karte");
   return pts[Math.floor(pts.length / 2)];
 }
@@ -243,10 +252,35 @@ test("Mitmachen in Bonn: Stadtbezirk wechseln", async () => {
   await page.close();
 });
 
+test("Mobil: Hamburger-Menü mit Gebiet, Flächen und Menüs; Esc schließt Menü und Blatt", async () => {
+  const page = await open("", { width: 390, height: 844 });
+  const burger = page.locator("#nav-burger");
+  assert.ok(await page.locator("#q").isVisible(), "Suche bleibt sichtbar");
+  assert.equal(await page.locator("#f-area").isVisible(), false, "Gebiet steckt im Menü");
+  assert.ok((await page.locator(".nav").boundingBox()).height < 80, "Leiste einzeilig");
+  await burger.click();
+  assert.equal(await burger.getAttribute("aria-expanded"), "true");
+  assert.ok(await page.locator("#f-area").isVisible());
+  assert.ok(await page.locator('.toggle[data-panel="panel-list"]').isVisible());
+  await page.locator('#nav-more [data-mega="mega-auswertung"]').click();
+  assert.ok(await page.locator("#nav-more #mega-auswertung").isVisible(), "Menü klappt im Blatt auf");
+  assert.deepEqual(await axe(page), []);
+  await page.keyboard.press("Escape");
+  assert.equal(await page.locator("#mega-auswertung").isVisible(), false);
+  assert.equal(await page.locator("#nav-more #mega-auswertung").count(), 0, "Menü wieder an seinem Platz");
+  await page.keyboard.press("Escape");
+  assert.equal(await burger.getAttribute("aria-expanded"), "false");
+  assert.equal(await page.evaluate(() => document.activeElement.id), "nav-burger");
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
 test("Mobil: Ebenen in einem Menü, ohne Verstöße", async () => {
   const page = await open("", { width: 390, height: 844 });
-  // auf dem Telefon liegt das Fenster „Los geht's“ über der Karte; erst schließen
+  // auf dem Telefon liegt das Fenster „Los geht's“ über der Karte; erst schließen (Schalter hinter ☰)
+  await page.locator("#nav-burger").click();
   await page.locator('.toggle[data-panel="panel-detail"]').click();
+  assert.equal(await page.locator("#nav-burger").getAttribute("aria-expanded"), "false", "Wahl schließt das Hamburger-Menü");
   const menu = page.locator(".map-menu");
   assert.equal(await menu.getAttribute("aria-expanded"), "false");
   assert.match(await menu.textContent(), /^Ebenen/);
@@ -349,9 +383,11 @@ test("Menü „Verstehen“: Einfache Sprache, Begriffe, Verlässlichkeit und To
   for (const width of [1440, 390]) {
     const page = await open("", { width, height: 900 });
     await page.keyboard.press("Escape");
+    if (width < 900) await page.locator("#nav-burger").click();   // Telefon: Menüs hinter ☰
     await page.locator('.menu-btn[data-mega="mega-verstehen"]').click();
     const m = page.locator("#mega-verstehen");
     assert.ok(await m.isVisible());
+    if (width < 900) assert.ok(await page.locator("#nav-more #mega-verstehen").count(), "klappt im Hamburger-Menü auf");
     assert.equal(await m.locator('a[href="einfach/"]').count(), 1);
     assert.equal(await m.locator('a[href="begriffe/"]').count(), 1);
     assert.equal(await m.locator("[data-tour]").count(), 1);

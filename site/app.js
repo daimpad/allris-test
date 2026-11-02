@@ -155,6 +155,7 @@
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape" || $("#about").open || $("#neu").open) return;
     if (openMegaId) return closeMega(true);
+    if (navIsOpen()) return setNav(false, true);
     const overlay = OVERLAYS.find((id) => !document.getElementById(id).hidden);
     if (overlay) return closePanel(overlay);
     const inside = SHEETS.find((id) => document.getElementById(id).contains(document.activeElement));
@@ -166,6 +167,7 @@
       open.slice(1).forEach((id) => setPanel(id, false));
     } else if (NARROW.matches && !$("#panel-list").hidden && !$("#panel-detail").hidden) setPanel("panel-detail", false);
     $("#timeline-wrap").classList.toggle("tl-compact", MOBILE.matches);
+    if (!MOBILE.matches) setNav(false);
     clampWidths();
     if (tl) tl.select(selected);
   }
@@ -174,7 +176,11 @@
   let openMegaId = null;
   function openMega(id, trigger) {
     if (openMegaId && openMegaId !== id) closeMega();
+    if (id === "mega-suche" && navIsOpen()) setNav(false);
     const el = document.getElementById(id);
+    // im Hamburger-Menü klappt das Mega-Menü unter seinem Eintrag auf (Platz merken, beim Schließen zurück)
+    const entry = navIsOpen() && navMore.querySelector(`[data-mega="${id}"]`);
+    if (entry) { if (!megaHome.has(el)) { const mark = document.createComment(id); el.before(mark); megaHome.set(el, mark); } entry.after(el); }
     el.hidden = false;
     openMegaId = id;
     el.dataset.trigger = trigger ? trigger.id || "" : "";
@@ -186,7 +192,9 @@
   function closeMega(returnFocus) {
     if (!openMegaId) return;
     const id = openMegaId;
-    document.getElementById(id).hidden = true;
+    const el = document.getElementById(id);
+    el.hidden = true;
+    if (megaHome.has(el)) { megaHome.get(el).replaceWith(el); megaHome.delete(el); }
     openMegaId = null;
     document.querySelectorAll(`[data-mega="${id}"]`).forEach((b) => b.setAttribute("aria-expanded", "false"));
     if (returnFocus) (id === "mega-suche" ? $("#q") : document.querySelector(`[data-mega="${id}"]`)).focus();
@@ -201,6 +209,28 @@
     // Klick außerhalb schließt das Menü (das Suchfeld gehört zum Suchmenü)
     // (Ziele, die beim Klick neu aufgebaut wurden, z. B. Chips, sind nicht mehr im Dokument)
     if (openMegaId && e.target.isConnected && !e.target.closest(".mega") && !e.target.closest("#nav-search")) closeMega();
+  });
+
+  // --- Hamburger-Menü auf dem Telefon: Gebiet, Flächen und Menüs als Blatt über der Leiste --------------
+  // (Entscheidung 02.11.2026: sichtbar bleiben nur Suche und ☰; Menüs klappen im Blatt auf)
+  const burger = $("#nav-burger"), navMore = $("#nav-more"), megaHome = new Map();
+  function navIsOpen() { return document.body.classList.contains("nav-open"); }
+  function setNav(open, returnFocus) {
+    if (open === navIsOpen()) return;
+    if (!open) closeMega();
+    document.body.classList.toggle("nav-open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    if (!open && (returnFocus || navMore.contains(document.activeElement))) burger.focus();
+  }
+  burger.addEventListener("click", () => setNav(!navIsOpen()));
+  // Wahl eines Eintrags schließt das Blatt (Flächen, Seiten, Dialoge, Tour, Links)
+  navMore.addEventListener("click", (e) => {
+    if (MOBILE.matches && e.target.closest(".toggle, [data-show], [data-panel], #about-open, [data-about], [data-neu], [data-tour], a[href]")) setNav(false);
+  });
+  $("#f-area").addEventListener("change", () => { if (MOBILE.matches) setNav(false); });
+  // Tippen außerhalb der Leiste schließt das Blatt
+  document.addEventListener("click", (e) => {
+    if (navIsOpen() && e.target.isConnected && !e.target.closest(".nav") && !e.target.closest("dialog")) setNav(false);
   });
 
   // --- Breite von Liste und Vorgang per Ziehgriff ---------------------------------------------------
@@ -2202,6 +2232,7 @@
       panel(id, open) { if (!toggleFor(id) || !toggleFor(id).hidden) setPanel(id, open); },
       mapMenu(open) { const b = document.querySelector(".map-menu"); if (b && (b.getAttribute("aria-expanded") === "true") !== open) b.click(); },
       menu(id) { if (id) openMega(id); else closeMega(); },
+      nav(open) { if (MOBILE.matches || !open) setNav(open); },
       // Beispielgebiet der Tour vorab laden, solange die ersten Schritte laufen
       prefetch() { if (area && area.kind === "bonn" && index) fetch(`${BONN}ortsteile/bonn-zentrum.json`).catch(() => {}); },
       async example() {

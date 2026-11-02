@@ -77,6 +77,7 @@
       <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12M11 11V4.5a1.5 1.5 0 0 1 3 0V12M14 11.5V6a1.5 1.5 0 0 1 3 0v8a7 7 0 0 1-7 7h-.6a6 6 0 0 1-4.5-2.1L2.6 16a1.5 1.5 0 0 1 2.2-2L8 16"/></symbol>
       <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
       <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
       <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4.5A1.5 1.5 0 0 1 4.5 3H12l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></symbol>
       <symbol id="i-code" viewBox="0 0 24 24"><path d="m9 8-5 4 5 4M15 8l5 4-5 4"/></symbol>
       <symbol id="i-assist" viewBox="0 0 24 24"><path d="M20 12.5a7.5 7.5 0 0 1-11 6.6L4 20.5l1.4-4.4A7.5 7.5 0 1 1 20 12.5z"/><path d="M12.5 8.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></symbol>
@@ -97,6 +98,10 @@
         <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
         <input type="search" id="q" placeholder="Vorlagen in ganz Bonn suchen …" autocomplete="off" aria-controls="mega-suche">
       </form>
+      <!-- Telefon: Gebiet, Flächen und Menüs hinter ☰ (Entscheidung 02.11.2026); auf breiten Bildschirmen ohne eigene Box -->
+      <button type="button" class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-more">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span>Menü</span></button>
+      <div class="nav-more" id="nav-more">
       <label class="visually-hidden" for="f-area">Gebiet</label>
       <select id="f-area" class="nav-area"></select>
       <div class="nav-group seg" role="group" aria-label="Flächen ein- und ausblenden">
@@ -122,6 +127,7 @@
           <svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span>Verstehen</span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron"/></svg></button>
         <button type="button" class="menu-btn" id="about-open" aria-haspopup="dialog">
           <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Über</span></button>
+      </div>
       </div>
     </nav>
 
