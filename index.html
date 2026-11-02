@@ -68,6 +68,7 @@
       <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"/></symbol>
       <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-3.6 3.2-6 6.5-6s6 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.6c1.8.9 3 2.7 3.2 5.4"/></symbol>
       <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.5"/><path d="M4.5 5.5v13c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5v-13M4.5 12c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6.5C10.5 5 8 4.5 4 4.5v13c4 0 6.5.5 8 2 1.5-1.5 4-2 8-2v-13c-4 0-6.5.5-8 2z"/><path d="M12 6.5v13"/></symbol>
       <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></symbol>
       <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
       <symbol id="i-rss" viewBox="0 0 24 24"><path d="M5 11a8 8 0 0 1 8 8M5 4.5A14.5 14.5 0 0 1 19.5 19"/><circle cx="6" cy="18" r="1.4"/></symbol>
@@ -117,6 +118,8 @@
           <svg class="icon" aria-hidden="true"><use href="#i-people"/></svg><span>Mitmachen</span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron"/></svg></button>
         <button type="button" class="menu-btn" data-mega="mega-daten" aria-expanded="false" aria-controls="mega-daten">
           <svg class="icon" aria-hidden="true"><use href="#i-data"/></svg><span>Daten</span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <button type="button" class="menu-btn" data-mega="mega-verstehen" aria-expanded="false" aria-controls="mega-verstehen">
+          <svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span>Verstehen</span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron"/></svg></button>
         <button type="button" class="menu-btn" id="about-open" aria-haspopup="dialog">
           <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Über</span></button>
       </div>
@@ -165,7 +168,7 @@
         <a class="card" href="haushalt/">
           <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span>
           <span class="card-title">Haushalt auf einen Blick</span>
-          <span class="card-text">Aufwendungen der 17 Produktbereiche als Flächen: Plan und Ist aus den Haushaltsplänen der Stadt, mit Fundstelle.</span></a>
+          <span class="card-text">Aufwendungen, Erträge und Ergebnis der 17 Produktbereiche: Plan und Ist aus den Haushaltsplänen der Stadt, mit Fundstelle und je Einwohner.</span></a>
       </div>
     </section>
 
@@ -219,11 +222,26 @@
           <span class="card-title">Datensatzbeschreibung (DCAT-AP)</span>
           <span class="card-text">Für Open-Data-Portale; mit Lizenzen je Datei.</span></a>
       </div>
-      <p class="mega-links"><button type="button" class="btn btn-soft" data-about="pruefung"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Wie verlässlich sind die Angaben?</button>
-        <button type="button" class="btn btn-soft" data-neu><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Version 1.0: Was ist neu?</button>
-        <a class="btn btn-soft" href="rss/"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Feeds abonnieren und einbinden</a>
-        <a class="btn btn-soft" href="begriffe/"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Begriffe erklärt</a>
-        <a class="btn btn-soft" href="einfach/"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Einfache Sprache</a></p>
+      <p class="mega-links"><button type="button" class="btn btn-soft" data-neu><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>Version 1.0: Was ist neu?</button>
+        <a class="btn btn-soft" href="rss/"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Feeds abonnieren und einbinden</a></p>
+    </section>
+    <!-- Verstehen (Entscheidung 02.11.2026): Hilfen zum Lesen der Karte, bisher unter „Daten“ -->
+    <section class="mega glass" id="mega-verstehen" aria-label="Verstehen: Hilfen zum Lesen der Karte" hidden>
+      <div class="cards cards-3">
+        <a class="card" href="einfach/">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span>
+          <span class="card-title">Einfache Sprache</span>
+          <span class="card-text">Was die Karte zeigt, wer in Bonn entscheidet und wie Sie mitmachen können, in kurzen Sätzen.</span></a>
+        <a class="card" href="begriffe/">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></span>
+          <span class="card-title">Begriffe erklärt</span>
+          <span class="card-text">Vorlagenarten, Kürzel, Beratung und Haushalt in einfachen Worten, mit Fundstelle.</span></a>
+        <button type="button" class="card" data-about="pruefung">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg></span>
+          <span class="card-title">Wie verlässlich sind die Angaben?</span>
+          <span class="card-text">Woher Orte und Themen stammen und was die Prüfungen von Hand ergeben haben.</span></button>
+      </div>
+      <p class="mega-links"><button type="button" class="btn btn-soft" data-tour><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>Tour durch alle Funktionen</button></p>
     </section>
   </header>
 
@@ -529,6 +547,8 @@
       </ul>
       <p>Seit Version 1.0 (Stand 02.11.2026):</p>
       <ul>
+        <li>Neues Menü „Verstehen“: Einfache Sprache, Begriffe, „Wie verlässlich sind die Angaben?“ und die Tour an einem Ort.</li>
+        <li>„Haushalt auf einen Blick“ zeigt auch Erträge und Ergebnis je Produktbereich, den Zuschussbedarf als Flächen und alle Beträge je Einwohner.</li>
         <li>Die graue Karte kommt vom Server dieser Seite (aus OpenStreetMap-Daten erzeugt) und lädt schneller; nur „Farbige Karte“ lädt die Kacheln von OpenStreetMap.</li>
         <li>Die RIS-Karte <a href="einfach/">in Einfacher Sprache</a> erklärt, verlinkt im Startfenster und am Fuß jeder Seite.</li>
         <li><a href="begriffe/">Begriffe</a> in einfachen Worten; im Vorgang ein „?“ neben Art, Drucksache, Amt und Stand, Gremien der Prozesslinie führen in den Reiter „Prozesse“; „Anstoß“ und „Umsetzung“ statt „Initiierung“ und „Vollzug“.</li>
