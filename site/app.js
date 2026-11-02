@@ -39,11 +39,13 @@
   };
   // Glossar, Erläuterungen und Bezeichnungen der Prozessebene: data/export/glossar.json (pipeline/glossar.py)
   const GLOSSAR_URL = "data/export/glossar.json";
-  let GLOSSAR = {}, NOTES = {}, STEP_LABEL = {}, STATUS_TEXT = {};
+  let GLOSSAR = {}, NOTES = {}, STEP_LABEL = {}, STATUS_TEXT = {}, STAND_TEXT = {}, BEGRIFF = {}, ARTEN = {}, KUERZEL = {};
+  // Herkunft eines Ortsbezugs in einfachen Worten (Stufe A/B/C im Audit; Entscheidung 02.11.2026)
+  const STUFE = { A: "Angabe der Stadt", B: "nach festen Regeln erschlossen", C: "mit einem Sprachmodell erschlossen" };
   const LIMITS = `<details class="acc"><summary>Was diese Darstellung nicht zeigen kann</summary><ul>
     <li>Verwaltungsinterne Abläufe vor dem Datum der Vorlage (Erarbeitung, Mitzeichnung, Freigaben).</li>
-    <li>Den Vollzug von Beschlüssen: Die Beschlusskontrolle hat keine öffentliche Schnittstelle.</li>
-    <li>Ob jeder Schritt nach Regelwerk eingehalten wurde: Das Soll ist ein vereinfachtes Modell; abgeglichen wird nur, welche Gremienarten beraten haben, nicht Reihenfolge, Fristen oder Rollen.</li>
+    <li>Die Umsetzung von Beschlüssen: Die Beschlusskontrolle hat keine öffentliche Schnittstelle.</li>
+    <li>Ob jeder Schritt nach Regelwerk eingehalten wurde: Das Soll ist ein vereinfachtes Modell; abgeglichen wird nur, welche Arten von Gremien beraten haben, nicht Reihenfolge, Fristen oder Rollen.</li>
     <li>Inhalte nichtöffentlicher Beratungen und Vorlagen vor Oktober 2019.</li>
     <li>Sitzungen und Ergebnisse, die OParl-Lite (noch) nicht verknüpft.</li></ul>
     <p class="hint">Abweichungen zwischen Regel und Ablauf sind Befunde, keine Bewertung.</p></details>`;
@@ -1119,7 +1121,9 @@
     const box = s.note && (status === "nicht_öffentlich" || status === "unklar" || s.note === "ohne_sitzung")
       ? `<div class="blackbox">${esc(NOTES[s.note])}</div>` : (s.note ? `<div class="hint">${esc(NOTES[s.note])}</div>` : "");
     const cls = s.date_status === "abgeleitet" ? " date-derived" : "";
-    const label = s.label && s.label !== STEP_LABEL[s.typ] ? ": " + esc(s.label) : "";
+    const gremium = index && (s.typ === "beratung" || s.typ === "entscheidung") && s.label && s.status !== "nicht_öffentlich";
+    const label = s.label && s.label !== STEP_LABEL[s.typ]
+      ? ": " + (gremium ? `<button type="button" class="link-btn" data-gremium-name="${esc(s.label)}" title="Zuständigkeit und Besetzung im Reiter Prozesse">${esc(s.label)}</button>` : esc(s.label)) : "";
     return `<li class="step${cls}" data-status="${esc(status)}">
       <span class="mark mark-${esc(status)}" aria-hidden="true">${mark}</span>
       <div class="step-head">${esc(STEP_LABEL[s.typ] || s.typ)}${label}<span class="step-status">${esc(STATUS[status])}</span></div>
@@ -1130,12 +1134,21 @@
       .concat("soll").map((s) => `<span><span class="mark mark-${s}" aria-hidden="true">${s === "unklar" ? "?" : ""}</span><strong>${STATUS[s]}</strong> – ${esc(STATUS_TEXT[s] || "")}</span>`).join("")}
       <span class="hint">Linie: durchgezogen = belegt, gestrichelt = abgeleitet, gepunktet = nicht öffentlich oder unklar.</span></div></details>`;
   }
+  // Erklärung zum Aufklappen neben einem Begriff im Vorgang: Knopf „?“, ein Satz darunter (Glossar, pipeline/glossar.py)
+  let erklN = 0;
+  function erkl(begriff, text, anker) {
+    if (!text) return "";
+    const id = `erkl-${++erklN}`;
+    return ` <button type="button" class="erkl-btn" aria-expanded="false" aria-controls="${id}" aria-label="Erklärung: ${esc(begriff)}">?</button>`
+      + `<span class="erkl-text" id="${id}" hidden>${esc(text)}${anker ? ` <a href="begriffe/#${esc(anker)}">Mehr unter Begriffe</a>` : ""}</span>`;
+  }
+  const erklBegriff = (anker, label) => (BEGRIFF[anker] ? erkl(label || BEGRIFF[anker].begriff, BEGRIFF[anker].erklaerung, anker) : "");
   function glossary(p) {
     const keys = [...new Set(p.process.flatMap((s) => [...glossKeys(s.result), ...glossKeys(s.role)]))];
     if (!keys.length) return "";
     return `<details class="acc glossary"><summary>Was bedeuten die Begriffe?</summary><div><dl>${keys
       .map((k) => `<dt>${esc(k)}</dt><dd>${esc(GLOSSAR[k])}</dd>`).join("")}</dl>
-      <p class="hint">Erläuterung allgemein; maßgeblich ist das Original.</p></div></details>`;
+      <p class="hint">Erläuterung allgemein; maßgeblich ist das Original. <a href="begriffe/">Alle Begriffe</a></p></div></details>`;
   }
   function reportLink(p) {
     const q = new URLSearchParams({ template: "verortung.yml", title: `Verortung prüfen: ${p.reference}`, drucksache: p.reference, titel: p.name, gebiet: area.name });
@@ -1435,7 +1448,7 @@
   const lawLinks = (links) => (links || []).map((l) => link(l.url, esc(l.label))).filter(Boolean).join(" · ");
   function sollStep(st, d, ist) {
     const status = GREMIUM_BAHN.has(st.bahn) && ist.has(st.bahn) ? "belegt" : "soll";
-    const note = status === "belegt" ? "Gremienart hat beraten (belegt)" : GREMIUM_BAHN.has(st.bahn) ? "soll, keine Beratung dieser Gremienart" : "soll, nicht abgeglichen";
+    const note = status === "belegt" ? "ein Gremium dieser Art hat beraten (belegt)" : GREMIUM_BAHN.has(st.bahn) ? "soll, kein Gremium dieser Art hat beraten" : "soll, nicht abgeglichen";
     const who = st.bahn ? `Wer: ${esc(d.bahnen[st.bahn] || st.bahn)}<br>` : "";
     return `<li class="step" data-status="${status}"><span class="mark mark-${status}" aria-hidden="true"></span>
       <div class="step-head">${esc(st.label)}<span class="step-status">${note}</span></div>
@@ -1469,7 +1482,7 @@
       : s.passung === "ohne Beratung" ? '<p class="hint">In den Daten ist keine Beratung verzeichnet; ein Abgleich entfällt.</p>' : "";
     const body = v ? `<p><strong>${esc(v.titel)}</strong>${v.kurz ? ` – ${esc(v.kurz)}` : ""}<br>
         <span class="derived">Zuordnung abgeleitet: ${esc(s.grund)}; Sicherheit ${esc(s.sicherheit)}</span></p>${befund}
-      <p class="hint">Schritte nach Regelwerk. Nicht jeder Schritt kommt in jedem Fall vor. Abgeglichen wird nur, ob eine Gremienart beraten hat.</p>
+      <p class="hint">Schritte nach Regelwerk. Nicht jeder Schritt kommt in jedem Fall vor. Abgeglichen wird nur, ob ein Gremium dieser Art beraten hat.</p>
       <ol class="steps">${v.schritte.map((st) => sollStep(st, d, ist)).join("")}</ol>`
       : `<p>Vorlagenart „${esc(p.paper_type)}“: ${esc(d.ohne_soll[p.paper_type] || "kein Verfahren im Regelwerk; kein Soll angenommen.")}</p>`;
     const zusto = zustoHtml(p, d);
@@ -1484,14 +1497,14 @@
     fillMitwirken(p, d);
   }
 
-  // Station „mögliche Umsetzung“ in der Prozesslinie (neben dem Vollzug, der unklar bleibt)
+  // Station „mögliche Umsetzung“ in der Prozesslinie (neben der Umsetzung durch die Verwaltung, die unklar bleibt)
   function umsetzungHtml(p) {
     const hits = bauByRef.get(p.reference) || [];
     if (!hits.length) return "";
     return `<li class="step" data-status="abgeleitet"><span class="mark mark-abgeleitet" aria-hidden="true"></span>
       <div class="step-head">Mögliche Umsetzung<span class="step-status">abgeleitet</span></div>
       <div class="step-body">${hits.map(({ b, c }) => `Baustelle <button type="button" class="link-btn" data-open-site="${esc(b.id)}">${esc(b.bezeichnung)}</button>, ${esc(b.massnahme || "")}, ${fmtDate(b.von)} – ${fmtDate(b.bis)} (unverbindlich)<ul class="related">${candHtml(c, true)}</ul>`).join("")}
-        <div class="hint">${esc(UMSETZUNG_HINT)} Der Vollzug bleibt unklar.</div></div></li>`;
+        <div class="hint">${esc(UMSETZUNG_HINT)} Ob und wie die Verwaltung den Beschluss umsetzt, bleibt unklar.</div></div></li>`;
   }
 
   // Beteiligung: nächste Sitzung eines beteiligten Gremiums (laut Sitzungsliste der Stadt), Bürgerantrag
@@ -1551,7 +1564,7 @@
     const outside = (l) => (area.kind === "ortsteil" && l.ortsteil && l.ortsteil !== area.name)
       || (area.kind === "bezirk" && l.stadtbezirk && l.stadtbezirk !== area.name);
     const locItem = (l) => `<li><strong>${esc(l.name || l.ortsteil || l.stadtbezirk)}</strong>
-      ${l.ortsteil && (l.level === "strasse" || l.level === "objekt") ? `(${esc(l.ortsteil)})` : ""} – <span class="conf conf-${esc(l.confidence)}">${CONF[l.confidence] || esc(l.confidence)}</span>, Stufe ${esc(l.stage)}${outside(l) ? ' <span class="hint">außerhalb des gewählten Gebiets</span>' : ""}<br>
+      ${l.ortsteil && (l.level === "strasse" || l.level === "objekt") ? `(${esc(l.ortsteil)})` : ""} – <span class="conf conf-${esc(l.confidence)}">${CONF[l.confidence] || esc(l.confidence)}</span>, ${esc(STUFE[l.stage] || `Stufe ${l.stage}`)}${outside(l) ? ' <span class="hint">außerhalb des gewählten Gebiets</span>' : ""}<br>
       <span class="meta">${methodText(l)}</span></li>`;
     // Volltext: erkannter Ort und Teil des Dokuments, kein Zitat (Rahmen laut Antwort der Stadt Bonn)
     function methodText(l) {
@@ -1570,11 +1583,11 @@
     $("#detail").innerHTML = `
       <h3 tabindex="-1">${esc(p.name)}</h3>
       <dl class="facts">
-        <dt>Drucksache</dt><dd>${esc(p.reference)}</dd>
-        <dt>Art</dt><dd>${esc(p.paper_type)}</dd>
+        <dt>Drucksache</dt><dd>${esc(p.reference)}${erklBegriff(KUERZEL[(String(p.reference).match(/ ([A-Z]{2})$/) || [])[1]], `Kürzel ${(String(p.reference).match(/ ([A-Z]{2})$/) || [])[1]}`)}</dd>
+        <dt>Art</dt><dd>${esc(p.paper_type)}${erklBegriff(ARTEN[p.paper_type], p.paper_type)}</dd>
         <dt>Datum</dt><dd>${fmtDate(p.date)}</dd>
-        <dt>Amt</dt><dd>${resp || esc(p.amt)}</dd>
-        <dt>Stand</dt><dd>${esc(p.stand)}</dd>
+        <dt>Amt</dt><dd>${resp || esc(p.amt)}${erklBegriff("federfuehrendes-amt", "federführendes Amt")}</dd>
+        <dt>Stand</dt><dd>${esc(p.stand)}${erkl(`Stand ${p.stand}`, STAND_TEXT[p.stand], "stand-eines-vorgangs")}</dd>
         <dt>Themen</dt><dd>${(p.themes || []).length ? p.themes.map((t) => `${esc(THEMES[t.theme])} <span class="derived">abgeleitet, über ${esc(THEME_METHOD[t.method])} „${esc(t.evidence)}“</span>`).join("<br>") : "–"}</dd>
       </dl>
       <div class="links">${link(p.web, "Original im Ratsinformationssystem", "btn btn-primary")}
@@ -1623,6 +1636,15 @@
     if (site) { showSite(site.dataset.openSite); return; }
     const ref = e.target.closest("[data-open-ref]");
     if (ref) { const p = papers.find((x) => x.reference === ref.dataset.openRef); if (p) select(p); else window.risKarte.open(ref.dataset.openRef); return; }
+    const erk = e.target.closest(".erkl-btn");
+    if (erk) {
+      const open = erk.getAttribute("aria-expanded") !== "true";
+      erk.setAttribute("aria-expanded", String(open));
+      document.getElementById(erk.getAttribute("aria-controls")).hidden = !open;
+      return;
+    }
+    const gr = e.target.closest("[data-gremium-name]");
+    if (gr) { setPanel("panel-prozesse", true); openProzesse({ tab: "gremien", gremiumName: gr.dataset.gremiumName }); focusPanel("panel-prozesse"); return; }
     const b = e.target.closest(".jump");
     if (b && tl) { if ($("#timeline-wrap").hidden) setPanel("timeline-wrap", true); tl.center(b.dataset.date); }
   });
@@ -1970,7 +1992,10 @@
       if (!bauByRef.has(c.drucksache)) bauByRef.set(c.drucksache, []);
       bauByRef.get(c.drucksache).push({ b, c });
     }
-    if (g) ({ ergebnisse: GLOSSAR, hinweise: NOTES, schritte: STEP_LABEL, evidenz: STATUS_TEXT } = g);
+    if (g) {
+      ({ ergebnisse: GLOSSAR, hinweise: NOTES, schritte: STEP_LABEL, evidenz: STATUS_TEXT, staende: STAND_TEXT = {}, arten: ARTEN = {}, kuerzel: KUERZEL = {} } = g);
+      BEGRIFF = Object.fromEntries((g.begriffe || []).filter((b) => b.anker).map((b) => [b.anker, b]));
+    }
     [geo.ortsteil, geo.bezirk] = await shapes;
     initMap();
     fillAreaSelect();

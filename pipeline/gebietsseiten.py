@@ -9,7 +9,7 @@ from collections import Counter
 from html import escape
 from urllib.parse import quote
 
-from . import topics
+from . import begriffsseite, topics
 
 LATEST = 20
 CSP = ("default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'; "
@@ -84,6 +84,7 @@ def _area_body(kind_label, name, bezirk, key, papers, root):
         for p in latest)
     theme_list = ", ".join(f"{escape(dict(topics.THEMES).get(k, k))} ({n})" for k, n in themes.most_common(5))
     stand_list = ", ".join(f"{escape(k)}: {n}" for k, n in stand.most_common())
+    begriffe = begriffsseite.akkordeon([*stand, *(p["paper_type"] for p in latest)], root)   # Entscheidung 02.11.2026
     return f"""    <h1>Ratsvorlagen in {escape(name)}</h1>
     <p class="lead">{escape(kind_label)} {escape(where)}: Vorlagen aus dem Ratsinformationssystem der Stadt Bonn mit Ortsbezug – auf der Karte, mit Verfahrensstand, Gremien und Quellen.</p>
     <p><a class="page-back" href="{map_url}">Alle {len(papers)} Vorlagen auf der Karte öffnen</a></p>
@@ -100,7 +101,7 @@ def _area_body(kind_label, name, bezirk, key, papers, root):
 {rows}
       </tbody>
     </table>
-    <p class="meta">Quelle: OParl-API der Stadt Bonn (CC0), Sitzungen und Ergebnisse aus OParl-Lite (CC BY 4.0). Der Ortsbezug ist teils aus dem Titel erschlossen; Einzelheiten und Fundstellen stehen im Vorgang auf der Karte. Maßgeblich ist das Original im Ratsinformationssystem.</p>"""
+{begriffe}    <p class="meta">Quelle: OParl-API der Stadt Bonn (CC0), Sitzungen und Ergebnisse aus OParl-Lite (CC BY 4.0). Der Ortsbezug ist teils aus dem Titel erschlossen; Einzelheiten und Fundstellen stehen im Vorgang auf der Karte. Maßgeblich ist das Original im Ratsinformationssystem.</p>"""
 
 
 def write(site, site_url):

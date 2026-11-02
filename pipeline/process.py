@@ -120,7 +120,7 @@ def steps(p):
                     "date": sub.get("date"), "source": "oparl-bonn", "reference": sub["reference"],
                     "title": sub["name"], "note": "datum_vor_vorlage" if early else None})
     if decided:
-        out.append({"typ": "vollzug", "label": "Vollzug durch die Verwaltung", "status": "unklar",
+        out.append({"typ": "vollzug", "label": "Umsetzung durch die Verwaltung", "status": "unklar",
                     "date": None, "note": "vollzug"})
 
     # Datierte Schritte nach Datum; eine undatierte Beratung folgt der vorigen in der Beratungsfolge,

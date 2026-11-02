@@ -268,6 +268,14 @@ dl.facts dd { min-width: 0; overflow-wrap: anywhere; } dl.facts dd .derived { di
 .related { margin: 0; padding-left: 18px; font-size: 13px; }
 .link-btn { border: 0; background: none; color: var(--accent-ink); padding: 0; font: inherit; font-weight: 600; cursor: pointer; text-decoration: underline; }
 .link-btn:hover { text-decoration-thickness: 2px; }
+/* Erklärung zum Aufklappen neben Begriffen im Vorgang (Glossar; Entscheidung 02.11.2026) */
+.erkl-btn { display: inline-grid; place-items: center; width: 24px; height: 24px; margin-left: 4px; padding: 0; vertical-align: middle;
+  border: 1px solid var(--accent-ink); border-radius: 50%; background: #fff; color: var(--accent-ink); font: 700 0.8rem/1 inherit; cursor: pointer; }
+.erkl-btn[aria-expanded="true"] { background: var(--accent-ink); color: #fff; }
+.erkl-btn:focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 2px; }
+.erkl-text { display: block; margin: 4px 0 2px; padding: 6px 8px; border-left: 3px solid var(--accent-soft); background: rgba(124, 58, 237, 0.06);
+  font-size: 0.85rem; line-height: 1.4; }
+.erkl-text[hidden] { display: none; }
 .plan-papers li { margin: 0 0 6px; }
 .map-legend .swatch-plan { border-radius: 2px; background: rgba(14, 116, 144, 0.15); border: 1.5px solid #0e7490; box-shadow: none; }
 .map-legend .swatch-area { border-radius: 2px; border: 1px solid rgba(15, 15, 20, 0.35); box-shadow: none; }
