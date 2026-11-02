@@ -72,3 +72,35 @@ Entscheidung des Auftraggebers vom 02.11.2026: Die graue Standardansicht zeigt e
 - Beim Start werden 374 KB weniger übertragen.
 - Die Zeiten hängen nicht mehr vom OSM-Server ab; vorher schwankte die LCP zwischen 2,3 und 5,4 s.
 - Der Richtwert von 2,5 s ist noch nicht erreicht. Die Blockierzeit im Gebiet betrifft Schritt 2 (Gebietsdaten aufteilen).
+
+## Schritt 2: Rechenarbeit im Gebiet (02.11.2026)
+Entscheidung des Auftraggebers vom 02.11.2026: zuerst messen, dann die Gebietsdatei teilen und die Liste in Schritten zu 50 zeigen. Nach der Messung (unten) entschied der Auftraggeber, zuerst nur kleine Eingriffe vorzunehmen und das Teilen der Datei nur anzugehen, wenn der Richtwert danach noch verfehlt wird.
+
+**Messung der Rechenarbeit** (CPU-Profil beim Öffnen von Endenich, Telefonbreite, vierfach gedrosselt; Selbstzeit je Funktion):
+
+| Stelle | vorher | nachher | Ursache |
+|---|---|---|---|
+| Zeitleiste zeichnen (`draw`) | 414 ms | 120–150 ms | Monatsnamen der Achse mit `toLocaleDateString` je Strich |
+| Datum formatieren (`fmtDate`) | 200 ms | – | `toLocaleDateString` mit Optionen baut den Formatierer bei jedem Aufruf neu |
+| Farbe der Punkte (`color`) | 119 ms | – | `getComputedStyle` je Punkt |
+| Breite der Flächen (`widthOf`) | rund 100 ms | – | `getComputedStyle` erzwang eine Stilberechnung |
+| Gebietsdatei auswerten (`loadArea`) | 123 ms | 100–130 ms | unverändert; das Teilen der Datei spart hier höchstens 60–80 ms |
+
+**Änderungen:**
+- Formatierer für Datum, Tag, Monat, Zahl und Prozent werden einmal angelegt (`app.js`, `timeline.js`).
+- Die Farben der Punkte werden je Name einmal gelesen.
+- Die Breite von Liste und Vorgang wird aus dem gesetzten Wert oder der Vorgabe gelesen, ohne Stilberechnung.
+- Die Liste zeigt 50 statt 200 Einträge; „Weitere 50 anzeigen“ setzt den Fokus auf den ersten neuen Eintrag. Dafür gibt es einen neuen Browser-Test.
+
+**Lighthouse mobil** (lokal mit gzip, je 5 Läufe, Median; vorher = Stand `main` mit grauen Kacheln):
+
+| Seite | | Score | FCP | LCP | TBT | Übertragen |
+|---|---|---|---|---|---|---|
+| Start | vorher | 84 | 1,6 s | 3,9 s | 223 ms | 473 KB |
+| Start | Schritt 2 | 92 | 1,3 s | 3,0 s | 138 ms | 474 KB |
+| Endenich | vorher | 67 | 1,3 s | 4,6 s | 618 ms | 553 KB |
+| Endenich | Schritt 2 | 86 | 1,3 s | 2,8 s | 362 ms | 554 KB |
+
+**Ergebnis:**
+- Im Gebiet sinkt die Blockierzeit um rund 250 ms, die LCP liegt bei 2,8 s; der Wert „vorher“ streute in dieser Messreihe stärker als zuvor (3,4 s in der Messung zur grauen Karte).
+- Der Richtwert von 2,5 s ist noch knapp verfehlt. Das Teilen der Gebietsdatei bleibt als nächster Schritt möglich; nach der Messung spart es im Gebiet höchstens 60–80 ms Rechenzeit.
