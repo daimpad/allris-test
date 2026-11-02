@@ -555,10 +555,22 @@ class Soziales(unittest.TestCase):
                     "261925"):
             self.assertNotIn(ref, self.by, ref)
 
-    def test_entwurf(self):
+    def test_regeln_nach_pruefung(self):
+        from pipeline import dossier
+        # A: Friedhöfe und Bestattungswesen nicht, auch bei Mitberatung im ACI; muslimische Bestattungsflächen bleiben
+        p = vorlage("261990", "Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026",
+                    amt="13 Amt für Umwelt", gremien=("Ausschuss für Chancengerechtigkeit und Integration",))
+        self.assertIsNone(dossier.zuordnen(self.t, p))
+        p = vorlage("261991", "Sicherung einer muslimischen Bestattungsfläche am Nordfriedhof")
+        self.assertEqual(dossier.zuordnen(self.t, p)[0], "integration")
+        # B: soziales Miteinander
+        p = vorlage("261992", "Grüne/Linke-Antrag: Soziales Miteinander in der GGS Medinghoven")
+        self.assertEqual(dossier.zuordnen(self.t, p)[0], "integration")
+
+    def test_veroeffentlicht(self):
         from pipeline.themenseiten import ENTWUERFE
-        self.assertIn(self.t, ENTWUERFE)
-        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertNotIn(self.t, ENTWUERFE)
+        self.assertIn(self.t.key, [t.key for t in ALLE])
         self.assertEqual(self.t.fachausschuss, ("Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren",
                                                 "Ausschuss für Chancengerechtigkeit und Integration"))
         strang = {k for k, _, _ in self.t.straenge}
@@ -609,7 +621,7 @@ class MehrereFachausschuesse(unittest.TestCase):
         d = dossier.daten(zwei, {}, {}, [], "2026-11-02", {})
         self.assertNotIn("fachausschuss", d)
         html = dossier.body(zwei, d, "../../")
-        self.assertIn('<h2 id="fachausschuss">Wer berät mit</h2>\n    <p>Zu diesem Thema beraten 2 Fachausschüsse:</p>',
+        self.assertIn('<h2 id="fachausschuss">Wer berät mit</h2>\n    <p>Zu diesem Thema beraten zwei Fachausschüsse:</p>',
                       html)
         self.assertIn('<h3 id="fachausschuss-374">Sozialausschuss</h3>', html)
         self.assertIn('<h3 id="fachausschuss-368">ACI</h3>', html)

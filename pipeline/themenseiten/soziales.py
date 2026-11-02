@@ -1,5 +1,6 @@
 """Themenseite „Soziales, Gesundheit und Integration“ (thema/soziales-gesundheit-und-integration/). Phase 0 und
-Entscheidungen: themen/phase0/WEITERE.md (Abschnitt a), soziales/PHASE1.md. Entwurf: Prüfbogen noch nicht geprüft.
+Entscheidungen: themen/phase0/WEITERE.md (Abschnitt a), soziales/PHASE1.md; Prüfbogen im Gespräch geprüft am
+02.11.2026, danach Regeln A und B (soziales/PRUEFUNG.md).
 
 Eigene Regeln (Entscheidungen 02.11.2026): Amt für Soziales und Wohnen (50, ohne Wohnen), Amt für Integration und
 Vielfalt (05), Gesundheitsamt (53), Seniorenzentren, Gleichstellungsbeauftragte (04), Ausschuss für Soziales, Migration,
@@ -49,7 +50,9 @@ INTEGRATION = re.compile(r"(?<!Chancengerechtigkeit und )Integration(?! von (?:B
                          r"interkulturell|Zuwander|Zugewandert|(?<!Ausschuss für )(?<!Ausschusses für )Chancengerechtigkeit|"
                          r"Gleichstellung|Frauenhaus|Gewalt gegen Frauen|Istanbul-Konvention|queer|LSBTI|Regenbogen|"
                          r"Ausländer(?:amt|behörde)|Aufenthaltsrecht|AufenthG|Staatsa\w*gehörigkeit|nachzug|"
-                         r"ausländischer Berufsabschl|Rechtsextremismus",
+                         r"ausländischer Berufsabschl|Rechtsextremismus|"
+                         # Regel B (Prüfung 02.11.2026): soziales Miteinander und Zusammenhalt (Gegenprobe 253927)
+                         r"[Ss]oziale[sn]? Miteinander|sozialen? Zusammenhalt|Zusammenleben",
                          re.I)
 # Zuschüsse und Förderung von Trägern und Vereinen aus den Ämtern und Ausschüssen des Themas stehen unter „weitere“
 # (Entscheidung 02.11.2026); nicht „Bezuschussung“ von Tickets (Bonn-Ausweis)
@@ -65,6 +68,10 @@ AUSSCHLUSS = re.compile(r"Tagesordnungspunkte? (?:zur Beratung )?in nicht ?öffe
                         r"Benennung (?:von|einer|eines|der) (?:\w+ )?(?:Mitglied|Vertret|Delegiert|Jury|Wirtschaftsprüf)|"
                         r"Besetzung der|Neuwahl de[rs]|Wahlausschuss|Gültigkeit der (?:Kommunal)?[Ww]ahl|"
                         r"Straßenbenennung|Fällung|Parkplatz|Parkmöglichkeit|Halteflächen|Halteverbot|\bParken\b|"
+                        # Regel A (Prüfung 02.11.2026): Friedhöfe und Bestattungswesen (Seite Klima und Umwelt), auch wenn
+                        # der ACI oder der Sozialausschuss mitberät (260145-02 Gebührenkalkulation); muslimische
+                        # Bestattungsflächen bleiben bei der Integration
+                        r"^(?!.*muslim).*(?:Friedhof|Bestattungswesen)|"
                         r"^(?!.*(?:Wohnungslos|Obdachlos|Housing First|Geflücht|Flüchtling|Unterkunft|Unterkünft))"
                         r".*(?:Wohnprojekt|Bebauungsplan|Baugesetzbuch)", re.I)
 ZUST = Zustaendig(aemter=("50 ", "05 ", "53 ", "04 ", "Seniorenzentren"), gremien=(SOZIAL, ACI))
@@ -137,7 +144,8 @@ THEMA = Thema(
     bild_titel="Zeitleiste: Soziales, Gesundheit und Integration in Rat, Hauptausschuss, Sozialausschuss und "
                "Bezirksvertretungen",
     feed_text="zu Soziales, Gesundheit und Integration",
-    pruefung_text="Die Zuordnung ist noch nicht von Hand geprüft.",
+    pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 02.11.2026 im Gespräch geprüft (24 passend, 0 teilweise, "
+                  "1 unpassend; in der Gegenprobe fehlte 1 von 5), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten, Leistungen und Zuschüsse stehen in den Dokumenten der Vorlagen und im "
         "Haushaltsplan der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je "

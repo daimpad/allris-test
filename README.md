@@ -26,7 +26,7 @@ Die RIS-Karte zeigt die Vorlagen aus dem Ratsinformationssystem der Stadt Bonn a
 | 🕒 | **Zeitleiste** | Vorlagen je Monat, Sitzungen und Wahlperioden; ein Zeitraum filtert Karte und Liste. |
 | 📄 | **Vorgang** | Eine Vorlage mit ihren Stationen: Einreichung, Beratungen mit Ergebnis, Folgevorlagen – und was das Regelwerk vorsieht. |
 | ⚖️ | **Prozesse** | Wer entscheidet was? Verfahren mit Schritten und Fristen, Gremien mit Besetzung, Ämter. |
-| 🏷️ | **Themenseiten** | Kultur und Haushalt, Verkehr und Mobilität, Schule und Bildung, Wohnen und Bauen, Klima und Umwelt, Kinder, Jugend und Familie – mit Zeitleiste und nächsten Sitzungen. |
+| 🏷️ | **Themenseiten** | Kultur und Haushalt, Verkehr und Mobilität, Schule und Bildung, Wohnen und Bauen, Klima und Umwelt, Kinder, Jugend und Familie, Soziales, Gesundheit und Integration – mit Zeitleiste und nächsten Sitzungen. |
 | 💶 | **Haushalt auf einen Blick** | Die Aufwendungen der Stadt als Kacheln; ein Klick zoomt bis zu den Produktgruppen und Aufwandsarten. |
 | 📊 | **Zahlen zum Gebiet** | Einwohner, Mieten, Bodenrichtwerte, Haltestellen, Kitas, Hitze, Überschwemmungsgebiete, Wahlbeteiligung, Meldungen im Mängelmelder. |
 | 🏗️ | **Bebauungspläne und Baustellen** | Geltungsbereiche der Pläne mit Planchronik, gemeldete Baustellen der Stadt. |

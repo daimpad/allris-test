@@ -469,13 +469,16 @@ def _haushalt(d, root=""):
 """
 
 
+ZAHLWORT = {2: "zwei", 3: "drei", 4: "vier"}
+
+
 def _ausschuss(d, root):
     """Kasten „Wer berät mit“: Vorsitz und Sitze des Fachausschusses, Fraktion abgeleitet. Mehrere Ausschüsse
     (fachausschuesse) je mit eigener Unterüberschrift unter einer gemeinsamen Überschrift."""
     if d.get("fachausschuesse"):
         alle = d["fachausschuesse"]
         return (f"""    <h2 id="fachausschuss">Wer berät mit</h2>
-    <p>Zu diesem Thema beraten {len(alle)} Fachausschüsse:</p>
+    <p>Zu diesem Thema beraten {ZAHLWORT.get(len(alle), len(alle))} Fachausschüsse:</p>
 """ + "".join(_kasten(a, root, "h3", f"fachausschuss-{escape(a['id'])}", escape(a["name"])) for a in alle))
     a = d.get("fachausschuss")
     if not a:
