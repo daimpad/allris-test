@@ -19,7 +19,7 @@
   - Daten, Audits und Assistent behalten die Fachwörter.
 - **Seite `begriffe/`** (`pipeline/begriffsseite.py`, Schritt `seo`, Sitemap):
   - Gruppen: Vorlagen, Gremien, Verfahren, Kürzel, Haushalt, Planung, Ergebnisse, Rollen, Stand, Schritte, Sicherheit der Angaben.
-  - Jeder Eintrag hat eine Sprungmarke. Die Seite ist aus dem Menü „Daten“, dem Dialog „Über“, dem Vorgang und der Haushaltsseite verlinkt.
+  - Jeder Eintrag hat eine Sprungmarke. Die Seite ist aus dem Menü „Verstehen“ (bis 02.11.2026 „Daten“), dem Dialog „Über“, dem Vorgang und der Haushaltsseite verlinkt.
 - **Themen- und Gebietsseiten:** Ein eingeklapptes Akkordeon „Begriffe auf dieser Seite“ zeigt nur die Vorlagenarten, Stände und Ergebnisse, die auf der Seite vorkommen.
 
 ## Prüfung

@@ -306,7 +306,7 @@ test("Ratsassistent: erst beim Öffnen geladen, ohne Verstöße", async () => {
 
 test("Tour: alle Schritte bis zum Ende", async () => {
   const page = await open();
-  await page.locator("[data-tour]").first().click();
+  await page.locator(".tour-cta[data-tour]").click();   // Knopf im Startfenster (ein weiterer steht im Menü „Verstehen“)
   const titles = [];
   for (let i = 0; i < 30; i++) {
     // Schritte mit Ladevorgang zeigen „Einen Moment …“, bis Gebiet oder Vorgang geladen sind
@@ -343,4 +343,26 @@ test("Liste in Schritten zu 50: „Weitere anzeigen“ ergänzt 50 Einträge, Fo
   assert.equal(fokusIndex, 50);
   assert.deepEqual(page.errors, []);
   await page.close();
+});
+
+test("Menü „Verstehen“: Einfache Sprache, Begriffe, Verlässlichkeit und Tour; nicht mehr unter „Daten“", async () => {
+  for (const width of [1440, 390]) {
+    const page = await open("", { width, height: 900 });
+    await page.keyboard.press("Escape");
+    await page.locator('.menu-btn[data-mega="mega-verstehen"]').click();
+    const m = page.locator("#mega-verstehen");
+    assert.ok(await m.isVisible());
+    assert.equal(await m.locator('a[href="einfach/"]').count(), 1);
+    assert.equal(await m.locator('a[href="begriffe/"]').count(), 1);
+    assert.equal(await m.locator("[data-tour]").count(), 1);
+    assert.deepEqual(await axe(page), [], `Menü Verstehen (${width} px)`);
+    await m.locator('[data-about="pruefung"]').click();
+    assert.ok(await page.locator("#about").evaluate((d) => d.open));
+    await page.keyboard.press("Escape");
+    assert.equal(await page.locator('#mega-daten a[href="begriffe/"], #mega-daten a[href="einfach/"], #mega-daten [data-about]').count(), 0);
+    // Leiste ohne Überlauf
+    assert.ok(await page.evaluate(() => { const n = document.querySelector(".nav"); return n.scrollWidth <= n.clientWidth + 1; }));
+    assert.deepEqual(page.errors, []);
+    await page.close();
+  }
 });
