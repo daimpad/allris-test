@@ -214,6 +214,33 @@ class Verkehr(unittest.TestCase):
         self.assertEqual(zu("Lärmschutzmaßnahmen Autobahn", thema=False), "weitere")
         self.assertIsNone(zu("Kita-Neubau in der Riemannstraße", thema=False))
 
+    def test_tempo_und_strassenverkehrsbehoerde(self):
+        """Ergänzung 02.11.2026 (verkehr/ERGAENZUNG.md): Strang „Tempo, Verkehrsregeln und Sicherheit“, Vorlagen
+        der Straßenverkehrsbehörde (33-1) nur mit Verkehrswort, Regel A der Prüfung."""
+        from pipeline.themenseiten import verkehr
+        t = verkehr.THEMA
+        self.assertIn("tempo", [k for k, *_ in t.straenge])
+
+        def zu(name, thema=False, abt=None):
+            p = vorlage("262000", name)
+            p["themes"] = [{"theme": "verkehr", "evidence": "61-3 Stadtverkehr"}] if thema else []
+            if abt:
+                p["responsibility"] = [{"kind": "federfuehrend", "label": "33 Bürgerdienste", "name": abt}]
+            return (dossier.zuordnen(t, p) or (None,))[0]
+        stvb = "33-1 Ordnungs- und Straßenverkehrsbehörde"
+        self.assertEqual(zu("Einrichtung einer Tempo-30-Zone in der Wurzerstraße"), "tempo")
+        self.assertEqual(zu("Verkehrsberuhigende Maßnahmen", thema=True), "tempo")  # vorher „weitere“
+        self.assertEqual(zu("Geschwindigkeitsüberwachung auf der B56"), "tempo")
+        self.assertIsNone(zu("Bonn klimafit machen: Tempo erhöhen beim Hitzeschutz"))
+        self.assertIsNone(zu("Projekt Verkehrssicherheit städtischer Bäume"))
+        self.assertEqual(zu("Zusätzlicher Taxistand", abt=stvb), "tempo")
+        self.assertIsNone(zu("Zusätzlicher Taxistand"))  # ohne Straßenverkehrsbehörde
+        self.assertIsNone(zu("Rattenbekämpfung in Bad Godesberg", abt=stvb))  # Ordnungsthema ohne Verkehrswort
+        self.assertEqual(zu("Optimierung der Parksituation", abt=stvb), "parken")
+        self.assertEqual(zu("Abmarkierung von Kfz-Stellflächen", abt=stvb), "parken")  # Regel A
+        self.assertEqual(zu("Einrichtung einer Brötchentaste", abt=stvb), "parken")  # Regel A
+        self.assertIsNone(zu("Aufstellflächen für Fahrräder"))
+
     def test_veroeffentlicht_mit_uebersicht(self):
         self.assertIn(self.t.key, [t.key for t in ALLE])
         with tempfile.TemporaryDirectory() as tmp:
@@ -226,7 +253,7 @@ class Verkehr(unittest.TestCase):
             self.assertEqual(dossier.uebersicht(ALLE, site, "https://example.org/", gebietsseiten._page), ["thema/"])
             html = (site / "thema" / "index.html").read_text()
         self.assertIn('<h2><a href="../thema/verkehr-und-mobilitaet/">Verkehr und Mobilität</a></h2>', html)
-        self.assertIn('<p class="kachel-zahl"><strong>8</strong> Vorlagen in 5 Strängen</p>', html)
+        self.assertIn('<p class="kachel-zahl"><strong>8</strong> Vorlagen in 6 Strängen</p>', html)  # mit Strang Tempo (02.11.2026)
         self.assertIn('class="kachel-symbol"', html)
         self.assertNotIn("kunst-und-kultur", html)  # ohne Daten keine Zeile
 

@@ -1,5 +1,7 @@
 """Themenseite „Verkehr und Mobilität“ (thema/verkehr-und-mobilitaet/). Phase 0 und Entscheidungen:
 verkehr/phase0/BERICHT.md; Prüfbogen im Gespräch geprüft am 26.10.2026, danach Regeln ergänzt (verkehr/PRUEFUNG.md).
+Ergänzung 02.11.2026: Strang „Tempo, Verkehrsregeln und Sicherheit“ und Vorlagen der Straßenverkehrsbehörde mit
+Verkehrswort im Titel, eigener Prüfbogen (verkehr/ERGAENZUNG.md).
 
 Grundlage ist die abgeleitete Themenzuordnung „Verkehr und Mobilität“ (topics.py: Amt 61-3 Stadtverkehr und 66,
 Ausschuss für Mobilität und Verkehr, Stichwörter). Stränge nach Wörtern im Titel, die Sperrung der Nordbrücke als
@@ -22,7 +24,9 @@ BUS_BAHN = re.compile(r"ÖPNV|ÖSPV|Nahverkehr|\bBus(?!iness)|Busse|Haltestelle|
 # und nicht Fahrrad- oder Lastenradstellplätze; „Park- und …“ mit Ergänzungsstrich zählt (Prüfung 26.10.2026)
 PARKEN = re.compile(r"(?<!fahrrad)(?<!rad)park(?:en|platz|plätz|raum|haus|häus|gebühr|schein|verbot|druck|situation|"
                     r"möglichkeit|zone)|\bPark- |Park ?(?:&|\+|and) ?Ride|\bP\+R\b|Bewohnerpark|Anwohnerpark|Halteverbot|"
-                    r"(?<!rad)(?<!rad-)(?<!ab)Stellpl(?:atz|ätz)|Ladezone|Lieferzone", re.I)
+                    r"(?<!rad)(?<!rad-)(?<!ab)Stellpl(?:atz|ätz)|Ladezone|Lieferzone|"
+                    # Regel A (Prüfung 02.11.2026, verkehr/ERGAENZUNG.md): Kfz-Stellflächen und Brötchentaste
+                    r"(?<!rad)(?<!rad-)(?<!auf)Stellfläch|Brötchentaste", re.I)  # nicht „Aufstellflächen für Fahrräder“
 RAD_FUSS = re.compile(r"\bRad(?:verkehr|weg|fahr|streifen|schnell|spur|station|abstell|bügel|route|netz|parken|achse|"
                       r"pendler|wege)|Fahrrad|Lastenrad|Fußverkehr|Fußgänger|Fußweg|Gehweg|Zebrastreifen|Querung|"
                       r"Bürgersteig|Gehsteig|E-Scooter|Scooter", re.I)
@@ -119,7 +123,10 @@ THEMA = Thema(
     bild_titel="Zeitleiste: Verkehr und Mobilität in Rat, Hauptausschuss und Mobilitätsausschuss",
     feed_text="zu Verkehr und Mobilität",
     pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 26.10.2026 im Gespräch geprüft (16 passend, 3 teilweise, "
-                  "5 unpassend; in der Gegenprobe fehlten 3 von 6), danach wurden die Regeln ergänzt.",
+                  "5 unpassend; in der Gegenprobe fehlten 3 von 6), danach wurden die Regeln ergänzt. Der Strang „Tempo, "
+                  "Verkehrsregeln und Sicherheit“ kam am 02.11.2026 dazu; seine Stichprobe von 30 Vorlagen wurde geprüft "
+                  "(Vorschlag einer KI, im Gespräch von Hand bestätigt: 24 passend, 1 teilweise, 0 unpassend; in der "
+                  "Gegenprobe fehlte 1 von 5), danach wurde die Regel zum Parken ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten von Maßnahmen stehen in den Dokumenten der Vorlagen und im Haushaltsplan "
         "der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je Vorlage; Beträge je Produktbereich stehen im Abschnitt „Haushalt“.",
