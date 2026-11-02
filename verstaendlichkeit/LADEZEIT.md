@@ -26,10 +26,10 @@ Lighthouse 12.8.2 mobil (simuliert 150 ms RTT, 1,6 Mbit/s, CPU × 4). Lokale Kop
 - Beim Start werden 15 Kacheln mit zusammen 515 KB geladen, das sind 61 % aller Daten.
 - Bei 1,6 Mbit/s teilen sich die Kacheln die Bandbreite, deshalb ist die letzte erst spät fertig.
 
-**Gegenprobe, nur lokal und nicht übernommen:**
-- Mit einer leichteren grauen Hintergrundkarte (CARTO Positron, mit Beschriftung) sind es beim Start 362 KB statt 846 KB.
-- Das LCP sinkt auf der Startseite auf 3,8 s und in Endenich auf 4,4 s (je 2 Läufe).
-- Der Richtwert von 2,5 s ist damit noch nicht erreicht. Dafür müssten weitere Daten nach die Kacheln rücken (Zeitleiste, Flächen, Schrift).
+**Gegenprobe, nur lokal und nicht übernommen (berichtigt 02.11.2026):**
+- Die Gegenprobe mit CARTO Positron hat nicht die echte Karte gemessen. CARTO verlangt inzwischen einen API-Schlüssel. Ohne Schlüssel liefert jede Kachel nur den Platzhalter „API KEY REQUIRED“ mit rund 2 KB.
+- Die zuerst genannten Werte (362 KB, LCP 3,8 s bzw. 4,4 s) gelten deshalb nur für diese Platzhalter und sind ungültig.
+- Den Vergleich der Kartenquellen mit echten Kacheln enthält `kartenquellen/BERICHT.md` (in diesem Ordner).
 - Ein Wechsel der Kartenquelle ist eine Entscheidung des Auftraggebers: Es käme ein weiterer Anbieter mit Nutzungsbedingungen hinzu, und Datenschutzerklärung und Quellenangabe müssten angepasst werden.
 
 ## Schritt 1b: Daten nach den Kacheln (02.11.2026)
