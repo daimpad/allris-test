@@ -22,7 +22,9 @@
   "Entscheidung": "Dieses Gremium entscheidet abschließend.",
   "Empfehlung": "Das Gremium berät vor und gibt eine Empfehlung an das entscheidende Gremium.",
   "Anhörung": "Das Gremium wird angehört; seine Stellungnahme ist nicht bindend.",
-  "Kenntnisnahme": "Das Gremium wird informiert."
+  "Kenntnisnahme": "Das Gremium wird informiert.",
+  "Genehmigung": "Das Gremium genehmigt nachträglich eine Dringlichkeits- oder Eilentscheidung.",
+  "Eilentscheidung": "Der Hauptausschuss entscheidet anstelle des Rates, weil die Angelegenheit keinen Aufschub duldet."
  },
  "hinweise": {
   "sonderweg": "Sonderweg: Entscheidung vor der Beratung, nachträgliche Genehmigung durch das Gremium.",
@@ -34,13 +36,13 @@
   "datum_vor_vorlage": "Dieser Schritt liegt vor dem angegebenen Datum der Vorlage; die Quelle erklärt die Abweichung nicht."
  },
  "schritte": {
-  "initiierung": "Initiierung",
+  "initiierung": "Anstoß",
   "vorbereitung": "Vorbereitung",
   "veroeffentlichung": "Datum der Vorlage",
   "beratung": "Beratung",
   "entscheidung": "Entscheidung",
   "folgevorlage": "Folgevorlage",
-  "vollzug": "Vollzug"
+  "vollzug": "Umsetzung"
  },
  "evidenz": {
   "belegt": "Als Datenobjekt in der Quelle vorhanden.",
@@ -72,107 +74,330 @@
   {
    "begriff": "Vorlage",
    "erklaerung": "Schriftstück, über das Rat, Bezirksvertretungen oder Ausschüsse beraten, etwa ein Antrag, eine Beschlussvorlage oder ein Bürgerantrag.",
-   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Objekt „Paper“"
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Objekt „Paper“",
+   "gruppe": "vorlagen",
+   "anker": "vorlage"
   },
   {
    "begriff": "Drucksachennummer",
    "erklaerung": "Kennung einer Vorlage, z. B. 261798. Zusätze wie „-01“ kennzeichnen zugehörige Folgevorlagen.",
-   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „reference“"
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „reference“",
+   "gruppe": "vorlagen",
+   "anker": "drucksachennummer"
   },
   {
    "begriff": "Beschlussvorlage",
    "erklaerung": "Vorlage der Verwaltung mit einem Beschlussvorschlag, über den ein Gremium entscheidet.",
-   "fundstelle": "allgemeine Erklärung"
+   "fundstelle": "allgemeine Erklärung",
+   "gruppe": "vorlagen",
+   "anker": "beschlussvorlage"
   },
   {
    "begriff": "Mitteilungsvorlage",
    "erklaerung": "Vorlage, mit der die Verwaltung ein Gremium informiert; ein Beschluss ist nicht vorgesehen.",
-   "fundstelle": "allgemeine Erklärung"
+   "fundstelle": "allgemeine Erklärung",
+   "gruppe": "vorlagen",
+   "anker": "mitteilungsvorlage"
   },
   {
    "begriff": "Antrag",
    "erklaerung": "Vorlage einer Fraktion, Gruppe oder eines Mitglieds, mit der ein Gremium um einen Beschluss gebeten wird.",
-   "fundstelle": "allgemeine Erklärung"
+   "fundstelle": "allgemeine Erklärung",
+   "gruppe": "vorlagen",
+   "anker": "antrag"
   },
   {
    "begriff": "Änderungsantrag",
    "erklaerung": "Antrag, der eine andere Vorlage oder einen anderen Antrag ändern will.",
-   "fundstelle": "allgemeine Erklärung"
+   "fundstelle": "allgemeine Erklärung",
+   "gruppe": "vorlagen",
+   "anker": "aenderungsantrag"
   },
   {
    "begriff": "Stellungnahme der Verwaltung",
    "erklaerung": "Schriftliche Antwort der Verwaltung, meist auf einen Antrag oder eine Anfrage.",
-   "fundstelle": "allgemeine Erklärung"
+   "fundstelle": "allgemeine Erklärung",
+   "gruppe": "vorlagen",
+   "anker": "stellungnahme-der-verwaltung"
   },
   {
    "begriff": "Anfrage",
    "erklaerung": "Fragen einer Fraktion oder eines Mitglieds an die Verwaltung (Kleine oder Große Anfrage); die Verwaltung antwortet schriftlich oder in der Sitzung.",
-   "fundstelle": "allgemeine Erklärung"
+   "fundstelle": "allgemeine Erklärung",
+   "gruppe": "vorlagen",
+   "anker": "anfrage"
   },
   {
    "begriff": "Anregungen und Beschwerden (Bürgerantrag)",
    "erklaerung": "Jede Person kann sich schriftlich mit Anregungen oder Beschwerden in Angelegenheiten der Gemeinde an den Rat oder die Bezirksvertretung wenden, allein oder gemeinsam mit anderen. Unterschriften weiterer Personen sind dafür nicht nötig. Nicht zu verwechseln mit dem Einwohnerantrag.",
-   "fundstelle": "§ 24 GO NRW"
+   "fundstelle": "§ 24 GO NRW",
+   "gruppe": "gremium",
+   "anker": "anregungen-und-beschwerden-buergerantrag"
   },
   {
    "begriff": "Einwohnerantrag",
    "erklaerung": "Einwohnerinnen und Einwohner können beantragen, dass der Rat über eine bestimmte Angelegenheit berät und entscheidet. Der Antrag braucht die Unterschriften einer Mindestzahl von Einwohnerinnen und Einwohnern; Einzelheiten regelt die Gemeindeordnung. Nicht zu verwechseln mit dem Bürgerantrag (Anregungen und Beschwerden).",
-   "fundstelle": "§ 25 GO NRW"
+   "fundstelle": "§ 25 GO NRW",
+   "gruppe": "gremium",
+   "anker": "einwohnerantrag"
   },
   {
    "begriff": "Einwohnerfragestunde",
    "erklaerung": "Zeit in einer Sitzung, in der Einwohnerinnen und Einwohner Fragen stellen können; Einzelheiten regelt die Geschäftsordnung.",
-   "fundstelle": "Geschäftsordnung des Rates der Stadt Bonn"
+   "fundstelle": "Geschäftsordnung des Rates der Stadt Bonn",
+   "gruppe": "gremium",
+   "anker": "einwohnerfragestunde"
   },
   {
    "begriff": "Rat",
    "erklaerung": "Gewählte Vertretung der Bürgerinnen und Bürger; er ist für alle Angelegenheiten der Gemeinde zuständig, soweit nichts anderes bestimmt ist.",
-   "fundstelle": "§ 41 GO NRW"
+   "fundstelle": "§ 41 GO NRW",
+   "gruppe": "gremium",
+   "anker": "rat"
   },
   {
    "begriff": "Bezirksvertretung",
    "erklaerung": "Gewählte Vertretung eines Stadtbezirks in kreisfreien Städten; Bonn hat vier (Bonn, Bad Godesberg, Beuel, Hardtberg). Sie entscheidet über Angelegenheiten, deren Bedeutung nicht wesentlich über den Stadtbezirk hinausgeht.",
-   "fundstelle": "§§ 36, 37 GO NRW"
+   "fundstelle": "§§ 36, 37 GO NRW",
+   "gruppe": "gremium",
+   "anker": "bezirksvertretung"
   },
   {
    "begriff": "Ausschuss",
    "erklaerung": "Vom Rat gebildetes Gremium, das Beschlüsse vorbereitet oder in übertragenen Angelegenheiten selbst entscheidet.",
-   "fundstelle": "§§ 41, 57 GO NRW"
+   "fundstelle": "§§ 41, 57 GO NRW",
+   "gruppe": "gremium",
+   "anker": "ausschuss"
   },
   {
    "begriff": "Hauptausschuss",
    "erklaerung": "Pflichtausschuss des Rates; er stimmt die Arbeit der Ausschüsse ab und kann in dringenden Fällen anstelle des Rates entscheiden.",
-   "fundstelle": "§§ 59, 60 GO NRW"
+   "fundstelle": "§§ 59, 60 GO NRW",
+   "gruppe": "gremium",
+   "anker": "hauptausschuss"
   },
   {
    "begriff": "Dringlichkeitsentscheidung",
    "erklaerung": "Entscheidung in dringenden Fällen ohne Sitzung des zuständigen Gremiums; sie wird dem Gremium nachträglich zur Genehmigung vorgelegt.",
-   "fundstelle": "§ 60 GO NRW (Rat), § 36 GO NRW (Bezirksvertretung)"
+   "fundstelle": "§ 60 GO NRW (Rat), § 36 GO NRW (Bezirksvertretung)",
+   "gruppe": "verfahren",
+   "anker": "dringlichkeitsentscheidung"
   },
   {
    "begriff": "Fraktion",
    "erklaerung": "Zusammenschluss von Mitgliedern des Rates oder einer Bezirksvertretung.",
-   "fundstelle": "§ 56 GO NRW"
+   "fundstelle": "§ 56 GO NRW",
+   "gruppe": "gremium",
+   "anker": "fraktion"
   },
   {
    "begriff": "Öffentlichkeit von Sitzungen",
    "erklaerung": "Sitzungen des Rates sind grundsätzlich öffentlich; für einzelne Angelegenheiten kann die Öffentlichkeit ausgeschlossen werden. Inhalte nichtöffentlicher Beratungen sind nicht einsehbar.",
-   "fundstelle": "§ 48 GO NRW"
+   "fundstelle": "§ 48 GO NRW",
+   "gruppe": "verfahren",
+   "anker": "oeffentlichkeit-von-sitzungen"
   },
   {
    "begriff": "Federführendes Amt",
    "erklaerung": "Amt der Verwaltung, das eine Vorlage verantwortet.",
-   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „underDirectionOf“"
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „underDirectionOf“",
+   "gruppe": "verfahren",
+   "anker": "federfuehrendes-amt"
   },
   {
    "begriff": "Beratungsfolge",
    "erklaerung": "Reihenfolge der Gremien, die eine Vorlage beraten, jeweils mit Rolle (Entscheidung, Empfehlung, Anhörung, Kenntnisnahme).",
-   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Objekt „Consultation“"
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Objekt „Consultation“",
+   "gruppe": "verfahren",
+   "anker": "beratungsfolge"
   },
   {
    "begriff": "Tagesordnungspunkt",
    "erklaerung": "Punkt der Tagesordnung einer Sitzung; über ihn wird beraten und gegebenenfalls abgestimmt. Das Ergebnis stammt aus OParl-Lite.",
-   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Objekt „AgendaItem“"
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Objekt „AgendaItem“",
+   "gruppe": "verfahren",
+   "anker": "tagesordnungspunkt"
+  },
+  {
+   "begriff": "Dringlichkeitsantrag",
+   "erklaerung": "Antrag, der ohne die übliche Frist auf die Tagesordnung kommen soll, weil die Angelegenheit keinen Aufschub duldet; ob er behandelt wird, entscheidet das Gremium.",
+   "fundstelle": "Geschäftsordnung des Rates der Stadt Bonn",
+   "gruppe": "vorlagen",
+   "anker": "dringlichkeitsantrag"
+  },
+  {
+   "begriff": "Informationsbrief",
+   "erklaerung": "Schreiben der Verwaltung, mit dem sie Rat, Hauptausschuss oder Bezirksvertretungen über ein Vorhaben informiert, etwa eine Baumaßnahme; die Gremien nehmen es zur Kenntnis.",
+   "fundstelle": "Vorlagenart im Ratsinformationssystem der Stadt Bonn; Erklärung aus Titeln und Beratungsfolge erschlossen",
+   "gruppe": "vorlagen",
+   "anker": "informationsbrief"
+  },
+  {
+   "begriff": "Bürgerbrief",
+   "erklaerung": "Schreiben der Verwaltung, das sich laut den Titeln an Anwohnerinnen und Anwohner richtet, etwa zu einer Baumaßnahme oder einer Bürgerbeteiligung; die Gremien nehmen es zur Kenntnis.",
+   "fundstelle": "Vorlagenart im Ratsinformationssystem der Stadt Bonn; Erklärung aus Titeln und Beratungsfolge erschlossen",
+   "gruppe": "vorlagen",
+   "anker": "buergerbrief"
+  },
+  {
+   "begriff": "Einwohnerfrage",
+   "erklaerung": "Frage einer Einwohnerin oder eines Einwohners für die Einwohnerfragestunde; in den Daten meist an eine Bezirksvertretung gerichtet.",
+   "fundstelle": "Geschäftsordnung des Rates der Stadt Bonn",
+   "gruppe": "gremium",
+   "anker": "einwohnerfrage"
+  },
+  {
+   "begriff": "Tagesordnungspunkte in nichtöffentlicher Sitzung",
+   "erklaerung": "Sammelvorlage mit den Punkten einer Sitzung, die ohne Öffentlichkeit beraten werden; ihr Inhalt ist nicht einsehbar.",
+   "fundstelle": "§ 48 GO NRW",
+   "gruppe": "vorlagen",
+   "anker": "tagesordnungspunkte-in-nichtoeffentlicher-sitzung"
+  },
+  {
+   "begriff": "Beschlussvorlage: Einleitung",
+   "erklaerung": "Beschlussvorlage, mit der die Verwaltung ein Verfahren einleiten will, laut den Titeln meist ein Vergabeverfahren (Ausschreibung).",
+   "fundstelle": "Vorlagenart im Ratsinformationssystem der Stadt Bonn; Erklärung aus Titeln und Beratungsfolge erschlossen",
+   "gruppe": "vorlagen",
+   "anker": "beschlussvorlage-einleitung"
+  },
+  {
+   "begriff": "Beschlussvorlage: Auftrag",
+   "erklaerung": "Beschlussvorlage, die laut den Titeln auf einen Antrag oder Auftrag eines Gremiums zurückgeht.",
+   "fundstelle": "Vorlagenart im Ratsinformationssystem der Stadt Bonn; Erklärung aus Titeln und Beratungsfolge erschlossen",
+   "gruppe": "vorlagen",
+   "anker": "beschlussvorlage-auftrag"
+  },
+  {
+   "begriff": "Eilentscheidung (Hauptausschuss)",
+   "erklaerung": "Entscheidung des Hauptausschusses anstelle des Rates in einer Angelegenheit, die keinen Aufschub duldet; der Rat genehmigt sie nachträglich.",
+   "fundstelle": "§ 60 Abs. 1 GO NRW",
+   "gruppe": "verfahren",
+   "anker": "eilentscheidung-hauptausschuss"
+  },
+  {
+   "begriff": "Stand eines Vorgangs",
+   "erklaerung": "Von der RIS-Karte aus der Beratungsfolge abgeleitet: entschieden, beraten ohne Entscheidung, in Beratung, offen oder ohne Beratungsfolge. Maßgeblich ist das Original.",
+   "fundstelle": "abgeleitet (RIS-Karte)",
+   "gruppe": "verfahren",
+   "anker": "stand-eines-vorgangs"
+  },
+  {
+   "begriff": "ST",
+   "erklaerung": "Kürzel an der Drucksachennummer: Stellungnahme der Verwaltung zu der Vorlage mit derselben Nummer davor, z. B. 261088-01 ST zu 261088.",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „reference“; Bedeutung aus der Vorlagenart erschlossen",
+   "gruppe": "kuerzel",
+   "anker": "st"
+  },
+  {
+   "begriff": "AA",
+   "erklaerung": "Kürzel an der Drucksachennummer: Änderungsantrag zu der Vorlage mit derselben Nummer davor.",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „reference“; Bedeutung aus der Vorlagenart erschlossen",
+   "gruppe": "kuerzel",
+   "anker": "aa"
+  },
+  {
+   "begriff": "DA",
+   "erklaerung": "Kürzel an der Drucksachennummer: Dringlichkeitsantrag zu der Vorlage mit derselben Nummer davor.",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „reference“; Bedeutung aus der Vorlagenart erschlossen",
+   "gruppe": "kuerzel",
+   "anker": "da"
+  },
+  {
+   "begriff": "TOP",
+   "erklaerung": "Tagesordnungspunkt einer Sitzung.",
+   "fundstelle": "allgemeine Erklärung",
+   "gruppe": "kuerzel",
+   "anker": "top"
+  },
+  {
+   "begriff": "GO NRW",
+   "erklaerung": "Gemeindeordnung für das Land Nordrhein-Westfalen; sie regelt Aufgaben und Arbeit von Rat, Ausschüssen und Bezirksvertretungen.",
+   "fundstelle": "Gemeindeordnung NRW",
+   "gruppe": "kuerzel",
+   "anker": "go-nrw"
+  },
+  {
+   "begriff": "OB",
+   "erklaerung": "Oberbürgermeisterin oder Oberbürgermeister; leitet die Verwaltung und führt den Vorsitz im Rat.",
+   "fundstelle": "§§ 40, 62 GO NRW",
+   "gruppe": "kuerzel",
+   "anker": "ob"
+  },
+  {
+   "begriff": "BV",
+   "erklaerung": "Bezirksvertretung.",
+   "fundstelle": "§ 36 GO NRW",
+   "gruppe": "kuerzel",
+   "anker": "bv"
+  },
+  {
+   "begriff": "HA",
+   "erklaerung": "Hauptausschuss.",
+   "fundstelle": "§ 59 GO NRW",
+   "gruppe": "kuerzel",
+   "anker": "ha"
+  },
+  {
+   "begriff": "Produktbereich",
+   "erklaerung": "Gliederung des Haushalts nach Aufgaben; Bonn hat 17 Produktbereiche, z. B. 06 Kinder-, Jugend- und Familienhilfe. Darunter stehen Produktgruppen.",
+   "fundstelle": "Haushaltspläne der Stadt Bonn",
+   "gruppe": "haushalt",
+   "anker": "produktbereich"
+  },
+  {
+   "begriff": "Ansatz",
+   "erklaerung": "Betrag, den der Haushaltsplan für ein Jahr vorsieht (Plan). Was tatsächlich anfällt, heißt Ist.",
+   "fundstelle": "Haushaltspläne der Stadt Bonn",
+   "gruppe": "haushalt",
+   "anker": "ansatz"
+  },
+  {
+   "begriff": "Ordentliche Aufwendungen",
+   "erklaerung": "Laufende Aufwendungen eines Jahres ohne Investitionen, etwa für Personal, Sachaufwand und Transferleistungen.",
+   "fundstelle": "Haushaltspläne der Stadt Bonn, Teilergebnispläne Zeile 17",
+   "gruppe": "haushalt",
+   "anker": "ordentliche-aufwendungen"
+  },
+  {
+   "begriff": "Bebauungsplan",
+   "erklaerung": "Satzung der Gemeinde, die festlegt, wie Grundstücke in einem Gebiet bebaut und genutzt werden dürfen.",
+   "fundstelle": "§§ 8, 10 BauGB",
+   "gruppe": "planung",
+   "anker": "bebauungsplan"
   }
- ]
+ ],
+ "gruppen": {
+  "vorlagen": "Vorlagen und Vorlagenarten",
+  "gremium": "Gremien und Beteiligung",
+  "verfahren": "Verfahren und Sitzungen",
+  "kuerzel": "Kürzel",
+  "haushalt": "Haushalt",
+  "planung": "Planung"
+ },
+ "arten": {
+  "Stellungnahme der Verwaltung": "stellungnahme-der-verwaltung",
+  "Beschlussvorlage": "beschlussvorlage",
+  "Mitteilungsvorlage": "mitteilungsvorlage",
+  "Änderungsantrag": "aenderungsantrag",
+  "Antrag": "antrag",
+  "Große Anfrage": "anfrage",
+  "Kleine Anfrage": "anfrage",
+  "Bürgerantrag § 24 GO - Öffentlich": "anregungen-und-beschwerden-buergerantrag",
+  "Anregungen und Beschwerden": "anregungen-und-beschwerden-buergerantrag",
+  "Tagesordnungspunkte in nichtöffentlicher Sitzung": "tagesordnungspunkte-in-nichtoeffentlicher-sitzung",
+  "Beschlussvorlage: Einleitung": "beschlussvorlage-einleitung",
+  "Beschlussvorlage: Auftrag": "beschlussvorlage-auftrag",
+  "Dringlichkeitsantrag": "dringlichkeitsantrag",
+  "Informationsbrief": "informationsbrief",
+  "Bürgerbrief": "buergerbrief",
+  "Einwohnerfrage": "einwohnerfrage",
+  "Dringlichkeitsentscheidung OB": "dringlichkeitsentscheidung",
+  "Dringlichkeitsentscheidung BV": "dringlichkeitsentscheidung",
+  "Eilentscheidung HA": "eilentscheidung-hauptausschuss"
+ },
+ "kuerzel": {
+  "ST": "st",
+  "AA": "aa",
+  "DA": "da"
+ }
 }

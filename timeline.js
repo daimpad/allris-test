@@ -105,7 +105,7 @@
         <ul class="tl-limits">
           <li>Vorlagen vor Oktober 2019 (nur im ALLRIS-Archiv).</li>
           <li>Verwaltungsinterne Vorlaufzeiten vor dem Datum der Vorlage.</li>
-          <li>Den Vollzug von Beschlüssen (Beschlusskontrolle ohne Schnittstelle).</li>
+          <li>Die Umsetzung von Beschlüssen (Beschlusskontrolle ohne Schnittstelle).</li>
           <li>Sitzungsdaten von Beratungen, die OParl-Lite (noch) nicht verknüpft; sie fehlen in der Achse „Sitzungsdatum“.</li>
           <li>Baustellen vor Beginn des Archivs; ihre Termine sind laut Quelle unverbindlich (Balken mit unscharfen Enden).</li>
         </ul>
