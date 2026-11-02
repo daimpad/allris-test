@@ -652,14 +652,14 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .chat-status { min-height: 1.2em; margin: 0; }
 #panel-assistent > .panel-body { border-radius: 0; }
 
-@media (min-width: 1440px) and (max-width: 1759px) {  /* volle Beschriftung, etwas enger */
+@media (min-width: 1600px) and (max-width: 1919px) {  /* volle Beschriftung, etwas enger (seit dem Menü „Verstehen“ ab 1600 statt 1440 px) */
   .menu-btn .chev { display: none; }
   .nav { gap: 6px; }
   .nav-area { max-width: 150px; }
   .toggle, .menu-btn { padding: 0 8px; }
   .nav-group + .nav-group, .nav-area + .nav-group { padding-left: 6px; }
 }
-@media (min-width: 901px) and (max-width: 1439px) {
+@media (min-width: 901px) and (max-width: 1599px) {
   .toggle > span, .menu-btn > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }  /* nur Symbole; Name bleibt für Screenreader */
   .menu-btn .chev { display: none; }
   .toggle, .menu-btn { padding: 0 10px; }

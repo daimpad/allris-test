@@ -26,7 +26,7 @@
 - **Verlinkung:**
   - im Startfenster „Los geht's“;
   - im Fuß aller statischen Seiten;
-  - im Menü „Daten“;
+  - im Menü „Verstehen“ (bis 02.11.2026 im Menü „Daten“);
   - im Dialog „Über“ (Weitere Seiten, Was ist neu?).
 
 ## Prüfung
