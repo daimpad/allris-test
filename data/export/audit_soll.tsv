@@ -14202,3 +14202,5 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 262056	2026	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	1	bv	aus,bv	passt	
 262057	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 262058	2026	Dringlichkeitsantrag	dringlichkeitsantrag	hoch	Vorlagenart „Dringlichkeitsantrag“	1	rat	aus,bv,rat	passt	
+262060	2026	Anregungen und Beschwerden	buergerantrag	hoch	Vorlagenart „Anregungen und Beschwerden“ (§ 24 GO NRW)	1	bv	aus,bv,rat	passt	
+262061	2026	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	1	bv	aus,bv	passt	

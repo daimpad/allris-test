@@ -9,6 +9,14 @@
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030204#vorlage</id>
+<title>Neue Vorlage 262060: Bürgerantrag: Maßnahmen zur Verkehrsberuhigung im Bereich Frankenweg</title>
+<updated>2026-11-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#262060"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030204"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030200#vorlage</id>
 <title>Neue Vorlage 260956-02 AA: GRÜNE Änderungsantrag: Einrichtung eines Zebrastreifens im Bereich KGS Donatusschule – zu DS 260956</title>
 <updated>2026-11-02T00:00:00Z</updated>
@@ -798,14 +806,6 @@
 <updated>2026-10-13T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:dottendorf#261644-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029586"/>
-<summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029265#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 261349-01 ST Stellungnahme zum Bürgerantrag: Einrichtung eines Fußgängerüberwegs (Zebrastreifen) im Kreuzungsbereich Franz-Lohe-Straße/ August-Bier-Straße</title>
-<updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:kessenich#261349-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029265"/>
 <summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
