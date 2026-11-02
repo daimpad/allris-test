@@ -51,7 +51,7 @@ class KulturUnveraendert(unittest.TestCase):
         self.assertEqual(json.loads(json.dumps(self.d)), json.loads((REFERENZ / "kultur.json").read_text()))
 
     def test_bild_zum_teilen(self):
-        self.assertEqual(prozessbild.bild(kultur.THEMA, self.d, "https://example.org/thema/kultur-und-haushalt/"),
+        self.assertEqual(prozessbild.bild(kultur.THEMA, self.d, "https://example.org/thema/kunst-und-kultur/"),
                          (REFERENZ / "kultur-zeitleiste.svg").read_text())
 
     def test_seite(self):
@@ -63,7 +63,12 @@ class KulturUnveraendert(unittest.TestCase):
             self.assertEqual(dossier.write(kultur.THEMA, site, "https://example.org/", gebietsseiten._page),
                              [kultur.THEMA.pfad])
             html = (site / kultur.THEMA.pfad / "index.html").read_text()
+            alt = (site / "thema/kultur-und-haushalt/index.html").read_text()
         self.assertEqual(html, (REFERENZ / "kultur-seite.html").read_text())
+        # frühere Adresse (bis 02.11.2026 „Kultur und Haushalt“) leitet weiter, nicht für Suchmaschinen
+        self.assertIn('<meta http-equiv="refresh" content="0; url=https://example.org/thema/kunst-und-kultur/">', alt)
+        self.assertIn('<meta name="robots" content="noindex">', alt)
+        self.assertIn('<link rel="canonical" href="https://example.org/thema/kunst-und-kultur/">', alt)
 
 
 class Beschreibungen(unittest.TestCase):
@@ -223,7 +228,7 @@ class Verkehr(unittest.TestCase):
         self.assertIn('<h2><a href="../thema/verkehr-und-mobilitaet/">Verkehr und Mobilität</a></h2>', html)
         self.assertIn('<p class="kachel-zahl"><strong>8</strong> Vorlagen in 5 Strängen</p>', html)
         self.assertIn('class="kachel-symbol"', html)
-        self.assertNotIn("kultur-und-haushalt", html)  # ohne Daten keine Zeile
+        self.assertNotIn("kunst-und-kultur", html)  # ohne Daten keine Zeile
 
 
 class Schule(unittest.TestCase):

@@ -163,13 +163,13 @@ THEMA = Thema(
         "Haushaltsplan der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je "
         "Vorlage. Der Produktbereich 15 „Wirtschaft und Tourismus“ im Abschnitt „Haushalt“ besteht im Plan 2026 zum "
         "größten Teil aus dem World Conference Center Bonn (21,1 Mio. €) und der Beethovenhalle (6,0 Mio. €; sie steht "
-        "auf der Seite Kultur und Haushalt); auf die Wirtschaftsförderung entfallen 4,0 Mio. €, auf den Tourismus "
+        "auf der Seite Kunst und Kultur); auf die Wirtschaftsförderung entfallen 4,0 Mio. €, auf den Tourismus "
         "2,0 Mio. €. Wissenschaft und Internationales gehören nicht zu diesem Produktbereich.",
         "<strong>Einzelne Grundstücksgeschäfte</strong> werden meist nichtöffentlich beraten und erscheinen nicht. "
         "Nichtöffentliche Beratungen fehlen.",
         "<strong>Digitalisierung</strong> der Verwaltung steht auf der Seite Digitale Verwaltung. Liegenschaften mit "
         "Wohnbezug (Wohnraum, Bebauungspläne) stehen auf der Seite Wohnen und Bauen, Theaterliegenschaften und die "
-        "Beethovenhalle auf der Seite Kultur und Haushalt, Parken auf der Seite Verkehr und Mobilität.",
+        "Beethovenhalle auf der Seite Kunst und Kultur, Parken auf der Seite Verkehr und Mobilität.",
     ],
     # Prüfbogen (einmalig): je Strang einige zugeordnete Vorlagen, dazu eine Gegenprobe nicht zugeordneter Vorlagen
     # mit Wörtern des Themas am Wortanfang

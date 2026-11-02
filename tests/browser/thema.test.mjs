@@ -1,4 +1,4 @@
-// Browser-Prüfung der Themenseiten (pipeline/prozessbild.py, site/thema.js): Kultur und Haushalt mit Detailfeld
+// Browser-Prüfung der Themenseiten (pipeline/prozessbild.py, site/thema.js): Kunst und Kultur mit Detailfeld
 // zu Punkt und Sitzung, Esc, Schalter der Stränge, Auswahl im Seitenlink; Verkehr und Mobilität mit Stadtbezirken
 // und Übersicht thema/; Barrierefreiheit mit axe-core
 // (WCAG 2.1 A und AA). Erwartet die zusammengestellte Seite mit dem Schritt seo unter SITE.
@@ -9,7 +9,7 @@ import { createRequire } from "node:module";
 import { chromium } from "playwright";
 
 const SITE = process.env.SITE || "http://localhost:8765/";
-const SEITE = SITE + "thema/kultur-und-haushalt/";
+const SEITE = SITE + "thema/kunst-und-kultur/";
 const AXE = readFileSync(createRequire(import.meta.url).resolve("axe-core/axe.min.js"), "utf8");
 let browser;
 
@@ -100,7 +100,7 @@ test("Themenseite Verkehr: Stränge nach Stadtbezirk, Übersicht thema/, ohne Ve
   assert.deepEqual(await axe(page), []);
   await page.goto(SITE + "thema/", { waitUntil: "networkidle" });
   assert.equal(await page.locator("a[href='../thema/verkehr-und-mobilitaet/']").count(), 1);
-  assert.equal(await page.locator("a[href='../thema/kultur-und-haushalt/']").count(), 1);
+  assert.equal(await page.locator("a[href='../thema/kunst-und-kultur/']").count(), 1);
   assert.deepEqual(await axe(page), []);
   assert.deepEqual(page.errors, []);
   await page.close();
@@ -170,7 +170,7 @@ test("Themenseite Schule: Stränge, Detailfeld, ohne Verstöße", async () => {
 
 test("Themenseiten: Haushalt im Produktbereich, Ist und Plan getrennt, auch auf dem Telefon als Tabelle", async () => {
   const page = await browser.newPage({ viewport: { width: 390, height: 900 }, bypassCSP: true });
-  for (const [pfad, pb] of [["kultur-und-haushalt", "04"], ["verkehr-und-mobilitaet", "12"], ["schule-und-bildung", "03"],
+  for (const [pfad, pb] of [["kunst-und-kultur", "04"], ["verkehr-und-mobilitaet", "12"], ["schule-und-bildung", "03"],
     ["wohnen-und-bauen", "10"], ["klima-und-umwelt", "13"]]) {
     await page.goto(SITE + `thema/${pfad}/`, { waitUntil: "networkidle" });
     assert.match(await page.locator("#haushalt-produktbereich").textContent(), new RegExp(`Produktbereich ${pb} `));

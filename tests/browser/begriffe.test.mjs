@@ -66,7 +66,7 @@ test("Seite begriffe/ und Akkordeon auf den Themenseiten, ohne Verstöße", asyn
     assert.ok(await page.locator("dl.begriffe dt").count() > 80);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     assert.deepEqual(await axe(page), []);
-    await page.goto(SITE + "thema/kultur-und-haushalt/", { waitUntil: "networkidle" });
+    await page.goto(SITE + "thema/kunst-und-kultur/", { waitUntil: "networkidle" });
     const acc = page.locator("details.begriffe-acc");
     assert.equal(await acc.count(), 1);
     await acc.locator("summary").click();

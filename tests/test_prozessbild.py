@@ -104,9 +104,9 @@ class Prozessbild(unittest.TestCase):
 
 
     def test_bild_zum_teilen(self):
-        text = prozessbild.bild(K, self.d, "https://example.org/thema/kultur-und-haushalt/")
+        text = prozessbild.bild(K, self.d, "https://example.org/thema/kunst-und-kultur/")
         self.assertIn("Datenstand 18.10.2026", text)
-        self.assertIn("https://example.org/thema/kultur-und-haushalt/", text)
+        self.assertIn("https://example.org/thema/kunst-und-kultur/", text)
         self.assertIn('<svg x="0" y="74"', text)  # Zeitleiste eingebettet
         with tempfile.TemporaryDirectory() as tmp:
             png = prozessbild.schreibe_bild(K, self.d, Path(tmp), "https://example.org/")
