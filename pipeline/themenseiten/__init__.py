@@ -2,7 +2,7 @@
 Daten, Seite, Prozessbild, Kalender, Feed und Bild zum Teilen erzeugen pipeline/dossier.py und
 pipeline/prozessbild.py für alle Themen gleich. Ein neues Thema erscheint erst nach Prüfung von Hand
 (Phase 0, Regelentwurf, Prüfbogen; Vorgehen wie kultur/)."""
-from . import kinder, klima, kultur, schule, verkehr, wohnen
+from . import kinder, klima, kultur, schule, soziales, verkehr, wohnen
 
 ALLE = [kultur.THEMA, verkehr.THEMA, schule.THEMA, wohnen.THEMA, klima.THEMA, kinder.THEMA]
-ENTWUERFE = []  # nur Prüfbogen (python -m pipeline <key>-stichprobe), keine Seite, kein Export
+ENTWUERFE = [soziales.THEMA]  # nur Prüfbogen (python -m pipeline <key>-stichprobe), keine Seite, kein Export

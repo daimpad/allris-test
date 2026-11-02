@@ -42,7 +42,9 @@ class Regel:
     - zustaendig: Amt, Stelle oder Gremium; ohne Treffer im Titel gilt der Strang sonst
     - thema: Schlüssel der Themenzuordnung (topics.py, abgeleitet); wie zustaendig
     - bedingung: ein zweites Merkmal, das der Titel zusätzlich nennen muss (z. B. ein Wort für Schule)
-    - ohne_thema: Schlüssel der Themenzuordnung; Vorlagen mit diesem Thema überspringen die Regel"""
+    - ohne_thema: Schlüssel der Themenzuordnung; Vorlagen mit diesem Thema überspringen die Regel
+    - ohne_seite: eine andere Themenseite (Thema); Vorlagen, die dort in einem Strang stehen, überspringen die Regel
+      (Regeln der anderen Seite ohne deren Verfahren nach Titel, d. h. ohne verfahren_titel)"""
     strang: str
     stammnummer: str = None
     verfahren_titel: re.Pattern = None
@@ -53,6 +55,7 @@ class Regel:
     sonst: str = None
     bedingung: re.Pattern = None
     ohne_thema: str = None
+    ohne_seite: "Thema" = None
 
 
 @dataclass(frozen=True)
@@ -95,7 +98,8 @@ class Thema:
     farben: tuple = ("#6d28d9", "#7c3aed", "#a78bfa")  # Übersicht thema/: Schrift, Verlauf von, Verlauf bis
     symbol: str = ""          # Übersicht thema/: Linien-Symbol (SVG-Inhalt, viewBox 0 0 24 24)
     produktbereich: str = None  # Haushalt: Produktbereich mit Ist und Plan (Entscheidung 27.10.2026: je Thema einer)
-    fachausschuss: str = None   # Kasten „Wer berät mit“: Besetzung des Fachausschusses (Fraktion abgeleitet)
+    # Kasten „Wer berät mit“: Besetzung des Fachausschusses (Fraktion abgeleitet); ein Name oder ein Tupel von Namen
+    fachausschuss: object = None
 
     @property
     def stichprobe_pfad(self):
@@ -170,6 +174,8 @@ def zuordnen(t, p, verfahren=None):
         if r.bedingung and not mb:
             continue
         if r.ohne_thema and _thema(r.ohne_thema, p):
+            continue
+        if r.ohne_seite and zuordnen(r.ohne_seite, p):
             continue
         if r.zustaendig or r.thema:
             grund = _zustaendig(r.zustaendig, p) if r.zustaendig else _thema(r.thema, p)
@@ -294,7 +300,8 @@ def daten(t, cache, home, meetings, today, meta):
     ausschuss = fachausschuss(t)
     return {
         **({"haushalt_betraege": betraege} if betraege else {}),
-        **({"fachausschuss": ausschuss} if ausschuss else {}),
+        # ein Ausschuss: "fachausschuss" (wie bisher), mehrere: "fachausschuesse" (Liste)
+        **({("fachausschuesse" if isinstance(ausschuss, list) else "fachausschuss"): ausschuss} if ausschuss else {}),
         "meta": {**meta, "seit": t.seit, "hinweis": t.hinweis},
         "straenge": [{"key": k, "titel": ti, "regel": r, "eingeklappt": k in t.eingeklappt, "vorlagen": straenge[k]}
                      for k, ti, r in t.straenge],
@@ -314,21 +321,37 @@ def daten(t, cache, home, meetings, today, meta):
 
 def fachausschuss(t, orgs=None, path=None):
     """Besetzung des Fachausschusses eines Themas (pipeline/besetzung.py): Vorsitz, Sitze nach Fraktion (abgeleitet),
-    ohne Fraktion, sachkundige Bürger:innen; keine weiteren Namen. None ohne Auszug oder ohne Ausschuss."""
+    ohne Fraktion, sachkundige Bürger:innen; keine weiteren Namen. None ohne Auszug oder ohne Ausschuss.
+    Nennt das Thema mehrere Ausschüsse (Tupel), dann eine Liste in dieser Reihenfolge (fehlende ausgelassen)."""
     if not t.fachausschuss or not config.ORGANIZATIONS.exists():
         return None
     orgs = orgs or {o["id"]: o for o in json.loads(config.ORGANIZATIONS.read_text())}
-    ids = [besetzung._kurz(k) for k, o in orgs.items() if o.get("name") == t.fachausschuss and not o.get("endDate")]
+    if isinstance(t.fachausschuss, str):
+        return _besetzung(t.fachausschuss, t.seit, orgs, path)
+    out = [a for a in (_besetzung(n, t.seit, orgs, path) for n in t.fachausschuss) if a]
+    return out or None
+
+
+def _besetzung(name, seit, orgs, path):
+    ids = [besetzung._kurz(k) for k, o in orgs.items() if o.get("name") == name and not o.get("endDate")]
     if len(ids) != 1:
         return None
-    b = besetzung.gremien(t.seit, path=path, orgs=orgs)[0].get(ids[0])
+    b = besetzung.gremien(seit, path=path, orgs=orgs)[0].get(ids[0])
     if not b:
         return None
-    return {"name": t.fachausschuss, "id": ids[0].rsplit("/", 1)[-1], "mitglieder": b["sitze_gesamt"],
+    # Mitglieder ohne Fraktion, die keine sachkundigen Bürger:innen sind: Rollen wie in der Quelle (nur gezählt)
+    rollen = {}
+    for e in b["ordentlich"]:
+        if not e["fraktion"] and not e["sachkundig"]:
+            rolle = "Vorsitz" if e["vorsitz"] else e["rolle"]
+            rollen[rolle] = rollen.get(rolle, 0) + 1
+    return {"name": name, "id": ids[0].rsplit("/", 1)[-1], "mitglieder": b["sitze_gesamt"],
             "vorsitz": sorted(({"name": e["name"], "rolle": e["rolle"], "fraktion": e["fraktion"]}
                                for e in b["ordentlich"] if e["vorsitz"]),
-                              key=lambda v: (v["rolle"] != "Vorsitz", v["rolle"])),   # Vorsitz, 1., 2. Stellvertretung
+                              key=lambda v: (not v["rolle"].startswith("Vorsitz"), v["rolle"])),  # Vorsitz, 1., 2. Stellv.
             "sitze": b["sitze"], "ohne_fraktion": b["ohne_fraktion"], "sachkundig": b["sachkundig"],
+            **({"ohne_fraktion_rollen": [{"rolle": r, "n": n} for r, n in sorted(rollen.items(), key=lambda x: -x[1])]}
+               if rollen else {}),
             "stichtag": json.loads((path or config.BESETZUNG).read_text(encoding="utf-8"))["meta"]["stichtag"]}
 
 
@@ -447,19 +470,34 @@ def _haushalt(d, root=""):
 
 
 def _ausschuss(d, root):
-    """Kasten „Wer berät mit“: Vorsitz und Sitze des Fachausschusses, Fraktion abgeleitet."""
+    """Kasten „Wer berät mit“: Vorsitz und Sitze des Fachausschusses, Fraktion abgeleitet. Mehrere Ausschüsse
+    (fachausschuesse) je mit eigener Unterüberschrift unter einer gemeinsamen Überschrift."""
+    if d.get("fachausschuesse"):
+        alle = d["fachausschuesse"]
+        return (f"""    <h2 id="fachausschuss">Wer berät mit</h2>
+    <p>Zu diesem Thema beraten {len(alle)} Fachausschüsse:</p>
+""" + "".join(_kasten(a, root, "h3", f"fachausschuss-{escape(a['id'])}", escape(a["name"])) for a in alle))
     a = d.get("fachausschuss")
     if not a:
         return ""
+    return _kasten(a, root, "h2", "fachausschuss", f'Wer berät mit: {escape(a["name"])}')
+
+
+def _kasten(a, root, h, anker, ueberschrift):
     def teile(x):
         return " (" + ", ".join(f'{escape(t["fraktion"])} {t["n"]}' for t in x["aus"]) + ")" if x.get("aus") else ""
     sitze = "\n".join(f'      <li>{escape(x["fraktion"])}: {x["n"]}{teile(x)}</li>' for x in a["sitze"])
+    # Rollen der Mitglieder ohne Fraktion, die keine sachkundigen Bürger:innen sind, wie in der Quelle (z. B. im
+    # Ausschuss für Chancengerechtigkeit und Integration); nur gezählt, ohne Namen
+    darunter = ([f'{a["sachkundig"]} sachkundige Bürger:innen und Einwohner:innen'] if a["sachkundig"] else []) + [
+        f'{x["n"]} im Vorsitz oder in der Stellvertretung' if x["rolle"] == "Vorsitz" else f'{x["n"]} mit der Rolle „{escape(x["rolle"])}“'
+        for x in a.get("ohne_fraktion_rollen", [])]
     ohne = (f'\n      <li>ohne Angabe einer Fraktion: {a["ohne_fraktion"]}'
-            + (f' (darunter {a["sachkundig"]} sachkundige Bürger:innen und Einwohner:innen)' if a["sachkundig"] else "") + "</li>"
+            + (f' (darunter {", ".join(darunter)})' if darunter else "") + "</li>"
             if a["ohne_fraktion"] else "")
     vorsitz = "; ".join(f'{escape(v["rolle"])}: {escape(v["name"])}' + (f' ({escape(v["fraktion"])})' if v["fraktion"] else "")
                         for v in a["vorsitz"])
-    return f"""    <h2 id="fachausschuss">Wer berät mit: {escape(a["name"])}</h2>
+    return f"""    <{h} id="{anker}">{ueberschrift}</{h}>
     <p>{a["mitglieder"]} Mitglieder{f". {vorsitz}" if vorsitz else ""}. Sitze nach Fraktion <span class="meta">(abgeleitet aus der Mitgliedschaft in einer Fraktion; die Quelle nennt nicht, für wen jemand im Ausschuss sitzt)</span>:</p>
     <ul>
 {sitze}{ohne}
@@ -491,7 +529,7 @@ def body(t, d, root):
     <p class="meta">Regel (abgeleitet): {escape(s['regel'].rstrip('.'))}.</p>
 """ + tabelle)
     inhalt = " · ".join(f'<a href="#{s["key"]}">{escape(s["titel"])}</a>' for s in d["straenge"])
-    h, a = d.get("haushalt_betraege"), d.get("fachausschuss")
+    h, a = d.get("haushalt_betraege"), d.get("fachausschuss") or d.get("fachausschuesse")
     ziele = ([("haushalt-produktbereich", f'Haushalt (Produktbereich {escape(h["produktbereich"])})')] if h else []) \
         + ([("fachausschuss", "Wer berät mit")] if a else []) \
         + [("sitzungen", "Nächste Sitzungen"), ("mitwirken", "Mitwirken"), ("vorlagen", "Vorlagen nach Strang")]
