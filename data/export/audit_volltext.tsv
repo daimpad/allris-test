@@ -12553,6 +12553,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
 241998	kein Ort						
+241998-01 ST	kein Ort						
 242006	Titel ohne gemeinsamen Ort, nicht verortet						
 242009	Titel ohne gemeinsamen Ort, nicht verortet						
 242011	nur in Anlagen genannt, nicht verortet						
@@ -12667,7 +12668,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242149-01 ST	kein Ort						
 242149-02 ST	kein Ort						
 242149-03	kein Ort						
-242151	kein Ort						
 242153	Titel ohne gemeinsamen Ort, nicht verortet						
 242155	Titel ohne gemeinsamen Ort, nicht verortet						
 242157	kein Ort						
@@ -13122,6 +13122,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
+252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -16291,7 +16292,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261590	nur in Anlagen genannt, nicht verortet						
 261592	nur in Anlagen genannt, nicht verortet						
 261593	nur in Anlagen genannt, nicht verortet						
-261594	kein Ort						
 261594-01	kein Ort						
 261595	Titel ohne gemeinsamen Ort, nicht verortet						
 261596	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16453,7 +16453,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261777-01 ST	verortet	Hauptteil	volltext_strasse	Schulplatz	Friesdorf	mittel	2
 261779	kein Ort						
 261779-01 ST	kein Ort						
-261783	nur in Anlagen genannt, nicht verortet						
 261789	kein Ort						
 261790	kein Ort						
 261791	kein Ort						
