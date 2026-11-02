@@ -1,6 +1,6 @@
-"""Themenseite „Kinder, Jugend und Familie“ (thema/kinder-jugend-und-familie/), Regelentwurf (Phase 1). Phase 0 und
-Entscheidungen: themen/phase0/WEITERE.md, kinder/PHASE1.md. Noch nicht veröffentlicht: erst nach dem Prüfbogen im
-Gespräch (data/export/kinder/stichprobe_kinder.tsv).
+"""Themenseite „Kinder, Jugend und Familie“ (thema/kinder-jugend-und-familie/). Phase 0 und Entscheidungen:
+themen/phase0/WEITERE.md, kinder/PHASE1.md; Prüfbogen im Gespräch geprüft am 02.11.2026, danach Regeln A und B
+(kinder/PRUEFUNG.md).
 
 Eigene Regeln (Entscheidungen 02.11.2026): Amt für Kinder, Jugend und Familie (51), Ausschuss für Kinder, Jugend und
 Familie, Beirat Kinder- und Jugendbeteiligung (nur mit Kindern oder Jugend im Titel) und Wörter im Titel. Spielplätze
@@ -34,6 +34,8 @@ FAMILIE = re.compile(r"Frühen? Hilfen|Kinderschutz|Hilfen? zur Erziehung|Jugend
                      r"(?<!Jugend und )\bFamilie\b|Familien(?!fest)|Kinderarmut|kinderstark|Unterhaltsvorschuss|Vormund|"
                      r"Pflegekind|Adoption|Kinder- und Jugendgesundheit|Alleinerziehend", re.I)
 KINDER_JUGEND = re.compile(r"Kinder|Jugend", re.I)
+# Regel B (Prüfung 02.11.2026): Angebote für Kinder und Jugendliche ohne eigenes Fachwort (freier Eintritt in den Bädern)
+JUNGE_MENSCHEN = re.compile(r"(?:für|von) Kinder(?:n)? und Jugendliche|junge[nr]? Menschen", re.I)
 # Formalien und Sammellisten nichtöffentlicher Punkte; Bauanträge auf Grundstücken; Haustypen; Offener Ganztag und
 # Schulsozialarbeit stehen auf der Schulseite (Entscheidung 02.11.2026); Kitas als bloße Ortsangabe bei Parken,
 # Winterdienst, Laternen, Abfallbehältern und Wahlwerbung (vor dem Ziehen des Prüfbogens, 02.11.2026)
@@ -43,7 +45,10 @@ AUSSCHLUSS = re.compile(r"Tagesordnungspunkte? in nichtöffentlicher Sitzung|Pun
                         r"Entsendung von|Zuständigkeitsordnung|Grundstück in Bonn|(?:Ein|Zwei|Mehr)familien|"
                         r"Offene[nrs]? Ganztag|\bOGS\b|Schulsozialarbeit|Parksituation|\bParken\b|Halteverbot|"
                         r"Winterdienst|Straßenlatern|Abfallbehälter|Wahlwerbung", re.I)
-AMT = Zustaendig(aemter=("51 ",), gremien=(AUSSCHUSS, "Unterausschuss für Kinder- und Jugendhilfe"))
+AMT = Zustaendig(aemter=("51 ",))
+# Regel A (Prüfung 02.11.2026): Beratung im Ausschuss allein genügt nicht für Vorlagen zum Bauen (Baulandmodell,
+# Berichte des Gebäudemanagements); Vorlagen, die Amt 51 federführend betreut, bleiben alle
+AUSSCHUSS_BERATUNG = Zustaendig(gremien=(AUSSCHUSS, "Unterausschuss für Kinder- und Jugendhilfe"))
 
 THEMA = Thema(
     key="kinder",
@@ -74,8 +79,9 @@ THEMA = Thema(
          "Titel nennt Kinder- und Jugendbeteiligung, einen Jugendrat, Kinderrechte oder den Weltkindertag; dazu "
          "Vorlagen des Beirats Kinder- und Jugendbeteiligung mit Kindern oder Jugend im Titel"),
         ("weitere", "Weitere Vorlagen zu Kindern, Jugend und Familie",
-         "Amt für Kinder, Jugend und Familie federführend oder Beratung im Ausschuss für Kinder, Jugend und Familie, "
-         "ohne die Merkmale der anderen Stränge; ohne Formalien und Sammellisten nichtöffentlicher Punkte"),
+         "Amt für Kinder, Jugend und Familie federführend oder Beratung im Ausschuss für Kinder, Jugend und Familie "
+         "(dort ohne Vorlagen zum Bauen), Titel mit „für Kinder und Jugendliche“ oder „junge Menschen“, ohne die "
+         "Merkmale der anderen Stränge; ohne Formalien und Sammellisten nichtöffentlicher Punkte"),
     ],
     regeln=[
         Regel("kita", titel=KITA, ohne_thema=OHNE),
@@ -84,7 +90,9 @@ THEMA = Thema(
         Regel("jugend", titel=JUGEND),
         Regel("familie", titel=FAMILIE),
         Regel("weitere", zustaendig=AMT),
+        Regel("weitere", zustaendig=AUSSCHUSS_BERATUNG, ohne_thema="bauen"),
         Regel("beteiligung", titel=KINDER_JUGEND, zustaendig=Zustaendig(gremien=(BEIRAT,))),
+        Regel("weitere", titel=JUNGE_MENSCHEN, ohne_thema=OHNE),
     ],
     ausschluss=AUSSCHLUSS,
     eingeklappt={"weitere"},
@@ -112,7 +120,8 @@ THEMA = Thema(
     bild_titel="Zeitleiste: Kinder, Jugend und Familie in Rat, Hauptausschuss, Ausschuss für Kinder, Jugend und "
                "Familie und Bezirksvertretungen",
     feed_text="zu Kindern, Jugend und Familie",
-    pruefung_text="Der Prüfbogen steht noch aus.",  # Entwurf; nach der Prüfung im Gespräch ersetzen
+    pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 02.11.2026 im Gespräch geprüft (23 passend, 1 teilweise, "
+                  "1 unpassend; in der Gegenprobe fehlte 1 von 5), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten und Zuschüsse stehen in den Dokumenten der Vorlagen und im Haushaltsplan "
         "der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je Vorlage; "

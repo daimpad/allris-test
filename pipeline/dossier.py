@@ -442,7 +442,7 @@ def _haushalt(d, root=""):
       </tbody>
     </table>
     <p class="meta">Ausgelesen aus den Haushaltsplänen der Stadt Bonn (PDF: {quellen}; Abruf {_date(h["abruf"])}); die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan. Der Produktbereich deckt sich nicht genau mit dem Thema dieser Seite; interne Leistungen und Umgliederungen verschieben Beträge. Die Finanzplanung ab 2027 ist nicht übernommen; der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht. Zu einzelnen Vorlagen nennt die Seite keine Beträge.</p>
-    <p><a href="{root}haushalt/#pb-{escape(h["produktbereich"])}">Alle Produktbereiche im Vergleich: Haushalt auf einen Blick</a></p>
+    <p><a href="{root}haushalt/#{"zoom" if haushaltsplan.EBENEN_FREIGEGEBEN else "pb"}-{escape(h["produktbereich"])}">Produktgruppen dieses Bereichs und alle Produktbereiche im Vergleich: Haushalt auf einen Blick</a></p>
 """
 
 

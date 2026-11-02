@@ -2,7 +2,7 @@
 
 **Grundlage:** `../themen/phase0/WEITERE.md` mit den Entscheidungen vom 02.11.2026.
 
-**Stand:** Entwurf ohne Seite und ohne Export (`ENTWUERFE`). Die Seite folgt erst nach der Prüfung des Prüfbogens im Gespräch.
+**Stand:** Nach der Prüfung im Gespräch am 02.11.2026 sind die Regeln ergänzt (A und B), und die Seite ist veröffentlicht (`PRUEFUNG.md`). Bis dahin war `kinder` ein Entwurf ohne Seite und ohne Export.
 
 **Datenstand:** OParl-API und OParl-Lite neu abgerufen am 02.11.2026; jüngste Vorlage vom 31.10.2026.
 
