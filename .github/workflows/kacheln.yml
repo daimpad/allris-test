@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   kacheln:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # Playwright 1.56.1 unterstützt ubuntu-latest (26.04) nicht, wie der Job browser in tests.yml
     timeout-minutes: 60
     permissions:
       contents: write   # Branch kacheln
