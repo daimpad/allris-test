@@ -31,3 +31,27 @@ Lighthouse 12.8.2 mobil (simuliert 150 ms RTT, 1,6 Mbit/s, CPU × 4). Lokale Kop
 - Das LCP sinkt auf der Startseite auf 3,8 s und in Endenich auf 4,4 s (je 2 Läufe).
 - Der Richtwert von 2,5 s ist damit noch nicht erreicht. Dafür müssten weitere Daten nach die Kacheln rücken (Zeitleiste, Flächen, Schrift).
 - Ein Wechsel der Kartenquelle ist eine Entscheidung des Auftraggebers: Es käme ein weiterer Anbieter mit Nutzungsbedingungen hinzu, und Datenschutzerklärung und Quellenangabe müssten angepasst werden.
+
+## Schritt 1b: Daten nach den Kacheln (02.11.2026)
+Entscheidung des Auftraggebers vom 02.11.2026: Zeitleiste, Gebietsflächen und weitere Daten laden erst nach den Kacheln.
+
+**Umsetzung:**
+- Der Start lädt zuerst nur `index.json`. Die Datei ist klein, wird vorab angefordert und enthält jetzt den Umriss (`bbox`) jedes Ortsteils und Stadtbezirks.
+- Daraus ergibt sich der erste Kartenausschnitt, und die Kacheln laden sofort.
+- Glossar, Flächen, Zeitleiste, Baustellen, Kontext, Mängelmelder und die Gebietsdatei aus dem Link folgen, sobald die sichtbaren Kacheln geladen sind. Länger als 2,5 s wartet der Start nicht.
+- Vorab angefordert werden nur noch `index.json` und die Schrift.
+
+**Messung** (wie oben, je 3 Läufe):
+
+| Seite | | Score | FCP | LCP | TBT | Übertragen |
+|---|---|---|---|---|---|---|
+| Start | Schritt 1 | 76 | 1,3 s | 6,0 s | 129 ms | 846 KB |
+| Start | Schritt 1b | 92 | 1,3 s | 3,1 s | 115 ms | 846 KB |
+| Endenich | Schritt 1 | 62 | 1,3 s | 5,9 s | 666 ms | 860 KB |
+| Endenich | Schritt 1b | 69 | 1,3 s | 4,2 s | 676 ms | 861 KB |
+
+**Ergebnis:**
+- Die übertragene Menge bleibt gleich, aber die Kacheln teilen die Bandbreite nicht mehr mit den übrigen Daten.
+- Der Richtwert von 2,5 s ist auf der Startseite fast erreicht.
+- Größter verbleibender Hebel ist die Kartenquelle. Die Bedingungen der Anbieter werden geprüft, bevor etwas umgestellt wird.
+- Die Blockierzeit im Gebiet (rund 670 ms) betrifft Schritt 2.
