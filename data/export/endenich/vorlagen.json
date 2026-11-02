@@ -107546,6 +107546,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung gibt eine Stellungnahme zu einem Bürgerantrag ab, der die Einbahnstraßenregelung in der Brahmsstraße in Endenich betrifft. Sie verzichtet vorerst auf eine weitere Bewertung, da am 9. Juni 2020 eine Ortsbesichtigung stattfindet. Danach werden mögliche Erkenntnisse berücksichtigt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-02"
    }
   },
   {
@@ -107964,6 +107969,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung berichtet über den Testbetrieb des erweiterten Cityrings in der Bonner Innenstadt (u. a. Belderberg, Adenauerallee, Kaiserstraße). Ziel war weniger Verkehr in der Rathausgasse und am Hof sowie bessere Anbindung der Uni. Die zweite Testphase reduzierte den Verkehr dort deutlich, erhöhte ihn aber auf der Fritz-Tillmann-Straße und Kaiserstraße. Sicherheitsprobleme hingen meist nicht mit dem Versuch zusammen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-02"
    }
   },
   {
