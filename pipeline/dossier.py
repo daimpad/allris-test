@@ -24,10 +24,13 @@ PUNKT_ARTEN = ("Beschlussvorlage", "Antrag", "Dringlichkeitsantrag")  # Punkte: 
 @dataclass(frozen=True)
 class Zustaendig:
     """Zuständigkeit für eine Regel: federführendes Amt (Anfang der Bezeichnung), Stellen nur mit Wort im Titel,
-    beratende Gremien."""
+    beratende Gremien; abteilungen: Anfang des Namens der federführenden Organisationseinheit (Abteilung, z. B.
+    „33-2 “, oder „33 “ für das Amt allgemein ohne Abteilung), für Ämter, von denen nur einzelne Abteilungen zum
+    Thema gehören."""
     aemter: tuple = ()
     stellen_mit_titel: dict = field(default_factory=dict)
     gremien: tuple = ()
+    abteilungen: tuple = ()
 
 
 @dataclass(frozen=True)
@@ -141,6 +144,10 @@ def _zustaendig(z, p):
     gremien = sorted({s["gremium"] for s in p["process"] if s.get("gremium") in z.gremien})
     if amt.startswith(z.aemter) or (amt in z.stellen_mit_titel and z.stellen_mit_titel[amt].search(name)):
         return f"federführend: {amt}"
+    if z.abteilungen:  # Abteilung aus der Federführung (underDirectionOf, Export: responsibility)
+        abt = next((r.get("name") or "" for r in p.get("responsibility") or [] if r.get("kind") == "federfuehrend"), "")
+        if abt.startswith(z.abteilungen):
+            return f"federführend: {abt}"
     if gremien:
         return "Beratung im " + " und in der ".join(gremien)
     return None

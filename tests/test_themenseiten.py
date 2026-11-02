@@ -632,3 +632,149 @@ class MehrereFachausschuesse(unittest.TestCase):
         self.assertIn("Vorsitz IntegrationsA: Anna Beispiel.", html)
         self.assertIn('<a href="#fachausschuss">Wer berät mit</a>', html)
         self.assertEqual(html.count('?prozesse=gremien&amp;gremium='), 2)
+
+
+class Sicherheit(unittest.TestCase):
+    """Entwurf der Themenseite Sicherheit und Ordnung (themenseiten/sicherheit.py): Abteilungsregel für das Amt 33
+    (Zustaendig.abteilungen: 33-2, 33-5 und das Amt allgemein, nicht 33-1, 33-4, 33-6, 33-0), Amt 37 im Strang
+    Feuerwehr, „Feuerwehrtopf“ ausgeschlossen, Verkehrs-, Versorgungs- und Cybersicherheit nicht, Fehltreffer vor dem
+    Ziehen des Prüfbogens."""
+
+    def setUp(self):
+        from pipeline.themenseiten import sicherheit
+
+        def v(ref, name, amt="01-2 Ratsbüro", abteilung=None, gremien=("Rat",), themen=()):
+            p = vorlage(ref, name, amt=amt, gremien=gremien)
+            p["themes"] = [{"theme": t, "method": "stichwort", "evidence": t} for t in themen]
+            p["locations"] = []
+            p["responsibility"] = [{"kind": "federfuehrend", "label": amt, "name": abteilung or amt}]
+            return p
+        self.t = sicherheit.THEMA
+        a33, a37 = "33 Bürgerdienste", "37 Feuerwehr und Rettungsdienst"
+        self.cache = {
+            # Abteilungen des Amts 33 (Titel ohne Merkmal eines Strangs)
+            "a": v("261900", "Sachstand Personal", amt=a33, abteilung="33-2 Ordnungswidrigkeiten, Stadtordnungsdienst"),
+            "b": v("261901", "Rahmenbedingungen für Veranstaltungen im Stadtgarten", amt=a33,
+                   abteilung="33-5 Veranstaltungskoordination und Märkte"),
+            "c": v("261902", "Vertagungsbitte zum Bürgerantrag: Baden im Rhein", amt=a33, abteilung=a33),
+            "d": v("261903", "Anordnung „Einfahrt verboten – Anlieger frei“", amt=a33,
+                   abteilung="33-1 Ordnungs- und Straßenverkehrsbehörde"),
+            "e": v("261904", "Controllingbericht 2025", amt=a33, abteilung="33-4 Dienstleistungszentrum"),
+            "f": v("261905", "Stellungnahme zum Elternnachzug", amt=a33,
+                   abteilung="33-6 Ausländeramt Allgemeines Aufenthaltsrecht, Verpflichtungserklärungen, "
+                             "Internationale Angelegenheiten, Visa, Patientenaufenthalte"),
+            "g": v("261906", "Bildung eines Wahlausschusses für die Kommunalwahlen", amt=a33, abteilung=a33),
+            # Amt 37 und Titelregeln
+            "h": v("261907", "Sachstand Abrechnung", amt=a37, abteilung="37-0 Verwaltung und Rettungsdienst"),
+            "i": v("261908", "Neufassung der Gebührensatzung für den Rettungsdienst", amt=a37),
+            "j": v("261909", "Antrag: Grundzüge des Bonner Bevölkerungsschutzes"),
+            "k": v("261910", "Große Anfrage zur Sicherheitslage im Stadtteil Tannenbusch"),
+            "l": v("261911", "Marktverzeichnis für den Stadtbezirk Beuel 2026", amt=a33,
+                   abteilung="33-5 Veranstaltungskoordination und Märkte"),
+            "m": v("261912", "Sachstand", gremien=("Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz",)),
+            # Feuerwehrtopf (Mittel der Bezirksvertretungen für Vereine)
+            "n": v("261913", "Bereitstellung von Mitteln aus dem Feuerwehrtopf für das Straßenfest"),
+            "o": v("261914", "Sicherheit für den Bad Godesberger Nikolausmarkt; Bereitstellung von Mitteln aus dem "
+                             "Feuerwehrtopf"),
+            # Verkehrs-, Versorgungs-, Informations- und Cybersicherheit
+            "p": v("261915", "Verkehrssicherheit an der Kreuzung Beispielstraße", amt=a33,
+                   abteilung="33-1 Ordnungs- und Straßenverkehrsbehörde"),
+            "q": v("261916", "Sicherheit für den Radverkehr auf der Beispielstraße", themen=("verkehr",)),
+            "r": v("261917", "Verbesserung der Sicherheit für Radfahrer am ehemaligen Bahnübergang"),
+            "s": v("261918", "Antrag: Sicherheit der Stromversorgungsinfrastruktur"),
+            "t": v("261919", "Region Bonn als Zentrum für Cyber- und Informationssicherheit"),
+            "u": v("261920", "Einleitung des Vergabeverfahrens zur mobilen Geschwindigkeitsüberwachung", amt=a33,
+                   abteilung="33-2 Ordnungswidrigkeiten, Stadtordnungsdienst"),
+            # Versorgungssicherheit nur über die Beratung im Ausschuss unter „weitere“
+            "w": v("261921", "Große Anfrage: Versorgungssicherheit der Krankenhäuser mit Trinkwasser",
+                   gremien=("Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz",)),
+            # weitere Fehltreffer vor dem Ziehen des Prüfbogens (02.11.2026)
+            "x": v("261922", "Personelle Aufstockung im Bauordnungsamt"),
+            "y": v("261923", "Linksliberale Gesinnungspolizei abschaffen"),
+            "z": v("261924", "Große Anfrage: Miet-, Reinigungs-, Sicherheits- und Hausmeisterkosten der Unterkünfte"),
+            "aa": v("261925", "Aufsichtsrat der Internationalen Beethovenfeste Bonn gGmbH"),
+            "ab": v("261926", "Förderung des Sozialkompetenztrainings: Gewaltprävention an der Gesamtschule"),
+            "ac": v("261927", "Parksituation für Mitarbeitende des Bundesamts für Bevölkerungsschutz"),
+            "ad": v("261928", "Tagesordnungspunkte in nichtöffentlicher Sitzung des Ausschusses für Sicherheit, Ordnung "
+                              "und Bevölkerungsschutz",
+                    gremien=("Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz",)),
+            "ae": v("261929", "Erlass einer Ordnungsbehördlichen Verordnung über das Offenhalten von Verkaufsstellen aus "
+                              "Anlass des Weihnachtsmarktes", amt=a33, abteilung=a33),
+        }
+        self.d = dossier.daten(self.t, self.cache, {}, [], "2026-11-02", {})
+        self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_abteilungen_des_amts_33(self):
+        self.assertEqual(self.by["261900"], ("weitere", "federführend: 33-2 Ordnungswidrigkeiten, Stadtordnungsdienst"))
+        self.assertEqual(self.by["261901"], ("veranstaltungen", "federführend: 33-5 Veranstaltungskoordination und Märkte"))
+        self.assertEqual(self.by["261902"], ("weitere", "federführend: 33 Bürgerdienste"))
+        for ref in ("261903", "261904", "261905", "261906"):  # 33-1, 33-4, 33-6, Wahlen
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_abteilungen_rueckwaertskompatibel(self):
+        # aemter prüft weiter nur die Amtsbezeichnung; abteilungen nur die federführende Organisationseinheit
+        p = self.cache["d"]
+        self.assertEqual(dossier._zustaendig(dossier.Zustaendig(aemter=("33 ",)), p), "federführend: 33 Bürgerdienste")
+        self.assertIsNone(dossier._zustaendig(dossier.Zustaendig(abteilungen=("33 ", "33-2 ")), p))
+        self.assertIsNone(dossier._zustaendig(dossier.Zustaendig(abteilungen=("33-2 ",)), vorlage("1", "x", amt="33 Bürgerdienste")))
+
+    def test_feuerwehr_und_straenge(self):
+        self.assertEqual(self.by["261907"], ("feuerwehr", "federführend: 37 Feuerwehr und Rettungsdienst"))
+        self.assertEqual(self.by["261908"], ("feuerwehr", "Titel: „Rettungsdienst“"))
+        self.assertEqual(self.by["261909"][0], "bevoelkerungsschutz")
+        self.assertEqual(self.by["261910"], ("ordnung", "Titel: „Sicherheitslage“"))
+        self.assertEqual(self.by["261911"][0], "veranstaltungen")
+        self.assertEqual(self.by["261912"], ("weitere", "Beratung im Ausschuss für Sicherheit, Ordnung und "
+                                                        "Bevölkerungsschutz"))
+        self.assertEqual(self.by["261929"], ("veranstaltungen", "Titel: „Offenhalten von Verkaufsstellen“"))
+        bezirke = [r for s in self.d["straenge"] for r in s["vorlagen"] if "bezirk" in r]
+        self.assertTrue(bezirke and all(r["reference"] in ("261901", "261911", "261929") for r in bezirke))
+
+    def test_feuerwehrtopf(self):
+        self.assertNotIn("261913", self.by)
+        self.assertNotIn("261914", self.by)
+
+    def test_verkehrs_versorgungs_und_cybersicherheit(self):
+        for ref in ("261915", "261916", "261917", "261918", "261919", "261920"):
+            self.assertNotIn(ref, self.by, ref)
+        self.assertEqual(self.by["261921"][0], "weitere")
+
+    def test_fehltreffer(self):
+        for ref in ("261922", "261923", "261924", "261925", "261926", "261927", "261928"):
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_regel_a_abfallwirtschaft(self):
+        from pipeline import dossier
+        # Prüfung 02.11.2026: Altpapier und Wertstoffe nicht, auch bei Mitberatung im Sicherheitsausschuss
+        p = vorlage("262090", "Große Anfrage: Einführung smarter Altpapiercontainer mit Füllstandsüberwachung",
+                    gremien=("Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz",))
+        self.assertIsNone(dossier.zuordnen(self.t, p))
+
+    def test_veroeffentlicht(self):
+        from pipeline.themenseiten import ENTWUERFE
+        self.assertNotIn(self.t, ENTWUERFE)
+        self.assertIn(self.t.key, [t.key for t in ALLE])
+        self.assertEqual(self.t.pfad, "thema/sicherheit-und-ordnung/")
+        self.assertEqual([k for k, *_ in self.t.straenge],
+                         ["feuerwehr", "bevoelkerungsschutz", "ordnung", "veranstaltungen", "weitere"])
+        self.assertEqual(self.t.fachausschuss, "Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz")
+        self.assertEqual(self.t.produktbereich, "02")
+        self.assertEqual(self.t.nach_bezirk, frozenset({"veranstaltungen"}))
+        self.assertEqual(self.t.punkt_gremien, ("Rat", "Hauptausschuss", self.t.fachausschuss))
+        strang, bahnen = {k for k, _, _ in self.t.straenge}, [k for k, _ in self.t.bahnen]
+        self.assertLessEqual({r.strang for r in self.t.regeln}, strang)
+        self.assertLessEqual(set(self.t.punkt_straenge), strang)
+        self.assertLessEqual(set(self.t.bahn_gremien), set(bahnen))
+        self.assertLessEqual({b for b, *_ in self.t.phasen}, set(bahnen))
+        self.assertTrue({"bv", "fach", "finanz", "rat"} <= set(bahnen))
+        self.assertEqual(sum(self.t.stichprobe_je_strang.values()), 25)
+        self.assertNotIn(self.t.farben, [t.farben for t in ALLE if t.key != self.t.key])  # eigene Farben
+        self.assertNotIn(self.t.symbol, [t.symbol for t in ALLE if t.key != self.t.key])
+
+    def test_kandidat_ohne_teilwoerter(self):
+        k = self.t.kandidat
+        for titel in ("Verkehrssicherheit an der Kreuzung", "Spielplatz im Brandengarten", "Kanalsanierung Auf dem Brand",
+                      "Mietspiegel aufgrund der Marktentwicklung", "Cyber- und Informationssicherheit"):
+            self.assertIsNone(k.search(titel), titel)
+        for titel in ("Sicherheit am Rheinufer", "Brand in der Innenstadt", "Kirmes in Beuel", "Rettungswagen"):
+            self.assertIsNotNone(k.search(titel), titel)
