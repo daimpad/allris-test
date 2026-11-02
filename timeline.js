@@ -45,6 +45,7 @@
   const iso = (ms) => { const d = new Date(ms); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
   const DE = new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
   const DE_MONTH = new Intl.DateTimeFormat("de-DE", { month: "long", year: "numeric" });
+  const DE_MON = new Intl.DateTimeFormat("de-DE", { month: "short" });
   const de = (ms) => DE.format(ms);
   const deMonth = (ms) => DE_MONTH.format(ms);
   const el = (name, attrs, parent) => {
@@ -192,7 +193,7 @@
       const lv = LEVELS[level];
       const ticks = [];
       const d0 = new Date(view[0]);
-      if (lv.bin === "month") for (let y = d0.getFullYear(); t(`${y}-01`) < view[1]; y++) for (let m = 1; m <= 12; m += (lv.name === "Jahr" ? 12 : 3)) ticks.push([t(`${y}-${String(m).padStart(2, "0")}`), m === 1 ? String(y) : new Date(t(`${y}-${String(m).padStart(2, "0")}`)).toLocaleDateString("de-DE", { month: "short" })]);
+      if (lv.bin === "month") for (let y = d0.getFullYear(); t(`${y}-01`) < view[1]; y++) for (let m = 1; m <= 12; m += (lv.name === "Jahr" ? 12 : 3)) ticks.push([t(`${y}-${String(m).padStart(2, "0")}`), m === 1 ? String(y) : DE_MON.format(t(`${y}-${String(m).padStart(2, "0")}`))]);
       else for (let ms = t(iso(view[0]).slice(0, 7)); ms < view[1]; ms = new Date(new Date(ms).setMonth(new Date(ms).getMonth() + 1)).getTime()) ticks.push([ms, deMonth(ms)]);
       for (const [ms, label] of ticks) {
         if (ms < view[0]) continue;
