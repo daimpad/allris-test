@@ -91,7 +91,7 @@ flowchart LR
 | 🌡️ Land NRW: [BORIS](https://www.opengeodata.nrw.de/produkte/infrastruktur_bauen_wohnen/boris/BRW/), [Klimaanalyse](https://www.opengeodata.nrw.de/produkte/umwelt_klima/klima/klimaanalyse/), [Überschwemmungsgebiete](https://www.opengeodata.nrw.de/produkte/umwelt_klima/wasser/hochwasser/uesg/), [Kitas](https://www.opengeodata.nrw.de/produkte/bildung_wissenschaft/kitas/) | Bodenrichtwerte, Hitze, Überschwemmungsgebiete, Kitas | dl-de/zero-2.0; Kitas dl-de/by-2.0 |
 | 🚌 [VRS-Fahrplandaten](https://www.vrs.de/fuer-unternehmen/open-data-service) | Haltestellen | dl-de/zero-2.0 |
 | 🗳️ [IT.NRW, Kommunalwahl 2025](https://www.wahlergebnisse.nrw/kommunalwahlen/2025/); Stadt Bonn, [Straßenverzeichnis 2020](https://opendata.bonn.de/dataset/kommunalwahl-und-integrationsratswahl-2020-wahlbezirke-und-stimmbezirke) | Wahlbeteiligung je Ortsteil (geschätzt, ohne Parteistimmen) | amtliches Ergebnis; CC0 1.0 |
-| 🌍 OpenStreetMap | Straßen, Gebäude und Anlagen, Kartenhintergrund | ODbL 1.0, © OpenStreetMap-Mitwirkende |
+| 🌍 OpenStreetMap | Straßen, Gebäude und Anlagen, Kartenhintergrund (graue Karte: eigene Kacheln aus einem Ausschnitt von Protomaps, `pipeline/kacheln/`, Workflow `kacheln.yml`, vierteljährlich; „Farbige Karte“: tile.openstreetmap.org) | ODbL 1.0, © OpenStreetMap-Mitwirkende |
 
 Lizenzen je Datei: [`data/LICENSE-DATA.md`](data/LICENSE-DATA.md). Der Code steht unter [MIT-Lizenz](LICENSE).
 

@@ -55,3 +55,20 @@ Entscheidung des Auftraggebers vom 02.11.2026: Zeitleiste, Gebietsflächen und w
 - Der Richtwert von 2,5 s ist auf der Startseite fast erreicht.
 - Größter verbleibender Hebel ist die Kartenquelle. Die Bedingungen der Anbieter werden geprüft, bevor etwas umgestellt wird.
 - Die Blockierzeit im Gebiet (rund 670 ms) betrifft Schritt 2.
+
+## Graue Karte vom eigenen Server (02.11.2026)
+Entscheidung des Auftraggebers vom 02.11.2026: Die graue Standardansicht zeigt eigene Rasterkacheln aus OSM-Daten (Weg B, `kartenquellen/OSM_GRAU.md`). „Farbige Karte“ bleibt bei OpenStreetMap.
+
+**Messung** (Lighthouse mobil, lokal mit gzip, je 5 Läufe; vorher = Stand `main` mit OSM-Kacheln):
+
+| Seite | | Score | FCP | LCP | TBT | Übertragen |
+|---|---|---|---|---|---|---|
+| Start | vorher | 83 | 1,3 s | 4,7 s | 140 ms | 847 KB |
+| Start | graue Kacheln | 91 | 1,3 s | 3,0 s | 160 ms | 473 KB |
+| Endenich | vorher | 69 | 1,3 s | 4,1 s | 667 ms | 861 KB |
+| Endenich | graue Kacheln | 76 | 1,3 s | 3,4 s | 554 ms | 553 KB |
+
+**Ergebnis:**
+- Beim Start werden 374 KB weniger übertragen.
+- Die Zeiten hängen nicht mehr vom OSM-Server ab; vorher schwankte die LCP zwischen 2,3 und 5,4 s.
+- Der Richtwert von 2,5 s ist noch nicht erreicht. Die Blockierzeit im Gebiet betrifft Schritt 2 (Gebietsdaten aufteilen).

@@ -380,10 +380,43 @@
     const b = (liste.find((x) => x.slug === key) || {}).bbox;
     return Array.isArray(b) && b.length === 4 ? [[b[0], b[1]], [b[2], b[3]]] : BONN_BOUNDS;
   }
+  // Graue Standardansicht: eigene Rasterkacheln aus OSM-Daten vom Server dieser Seite (Workflow kacheln.yml, Ausschnitt
+  // aus Protomaps, ODbL; Entscheidung 02.11.2026). Kachelbereich je Zoomstufe wie pipeline/kacheln/rahmen.py, außerhalb
+  // fordert die Seite nichts an; über Zoom 16 werden die Kacheln vergrößert. „Farbige Karte“: Kacheln von OpenStreetMap.
+  const KACHEL_RAHMEN = { 10: [530, 342, 533, 346], 11: [1061, 684, 1067, 692], 12: [2122, 1368, 2135, 1384], 13: [4253, 2747, 4262, 2759], 14: [8507, 5494, 8524, 5518], 15: [17020, 10998, 17043, 11027], 16: [34040, 21996, 34086, 22054] };
+  const OSM_LINK = '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-Mitwirkende</a> (ODbL)';
+  const GrauKacheln = L.TileLayer.extend({
+    _isValidTile(c) {
+      const r = KACHEL_RAHMEN[c.z];
+      return !!r && c.x >= r[0] && c.x <= r[2] && c.y >= r[1] && c.y <= r[3];
+    },
+  });
+  let farbig = false;
+  try { farbig = localStorage.getItem("ris-karte-farbig") === "1"; } catch (e) { /* ohne Speicher: grau */ }
+  const osmKacheln = () => L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: OSM_LINK });
+  function kachelnSetzen() {
+    if (kacheln) map.removeLayer(kacheln);
+    const el = document.getElementById("map");
+    el.classList.toggle("map-grau", !farbig);
+    el.classList.remove("map-gray");
+    if (farbig) { kacheln = osmKacheln().addTo(map); return; }
+    const grau = new GrauKacheln("kacheln/{z}/{x}/{y}.png", { minZoom: 10, maxNativeZoom: 16, maxZoom: 19, attribution: `${OSM_LINK}, Protomaps` });
+    // Ohne eigene Kacheln (z. B. vor dem ersten Lauf von kacheln.yml): OSM-Kacheln grau gefiltert wie bis 02.11.2026
+    let geladen = false, fehler = 0;
+    grau.on("tileload", () => { geladen = true; });
+    grau.on("tileerror", () => {
+      if (geladen || ++fehler < 2 || kacheln !== grau) return;
+      map.removeLayer(grau);
+      el.classList.remove("map-grau");
+      el.classList.add("map-gray");
+      kacheln = osmKacheln().addTo(map);
+    });
+    kacheln = grau.addTo(map);
+  }
   function createMap(bounds = BONN_BOUNDS) {
     if (map) return;
-    map = L.map("map", { zoomControl: false, scrollWheelZoom: true, zoomAnimation: !REDUCED, fadeAnimation: !REDUCED, markerZoomAnimation: !REDUCED });
-    kacheln = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap-Mitwirkende" }).addTo(map);
+    map = L.map("map", { zoomControl: false, scrollWheelZoom: true, minZoom: 10, zoomAnimation: !REDUCED, fadeAnimation: !REDUCED, markerZoomAnimation: !REDUCED });
+    kachelnSetzen();
     map.fitBounds(bounds, { ...mapPadding(), animate: false });
   }
   // Schritt 1b: Daten, die das erste Bild nicht braucht, erst anfordern, wenn die sichtbaren Kacheln geladen sind
@@ -411,25 +444,20 @@
     });
     new Whole().addTo(map);
     // Kartenhintergrund standardmäßig grau, damit die Marker hervortreten; die Wahl merkt sich der Browser
-    let colored = false;
-    try { colored = localStorage.getItem("ris-karte-farbig") === "1"; } catch (e) { /* ohne Speicher: grau */ }
     const MapStyle = L.Control.extend({
       options: { position: "bottomright" },
       onAdd() {
         const b = L.DomUtil.create("button", "map-style");
         b.type = "button";
         b.textContent = "Farbige Karte";
-        const apply = () => {
-          document.getElementById("map").classList.toggle("map-gray", !colored);
-          b.setAttribute("aria-pressed", String(colored));
-        };
+        b.setAttribute("aria-pressed", String(farbig));
         b.addEventListener("click", () => {
-          colored = !colored;
-          try { localStorage.setItem("ris-karte-farbig", colored ? "1" : "0"); } catch (e) { /* nicht speicherbar */ }
-          apply();
+          farbig = !farbig;
+          try { localStorage.setItem("ris-karte-farbig", farbig ? "1" : "0"); } catch (e) { /* nicht speicherbar */ }
+          b.setAttribute("aria-pressed", String(farbig));
+          kachelnSetzen();
         });
         L.DomEvent.disableClickPropagation(b);
-        apply();
         return b;
       },
     });
