@@ -36,7 +36,7 @@ async function axe(page) {
 
 // Punkt auf der Karte, an dem eine Fläche der Navigation obenauf liegt (wie ein Klick mit der Maus)
 async function areaPoint(page) {
-  const pts = await page.evaluate(() => {
+  const scan = () => page.evaluate(() => {
     const o = [];
     for (let y = 100; y < innerHeight - 40; y += 15) for (let x = 20; x < innerWidth - 20; x += 15) {
       const el = document.elementFromPoint(x, y);
@@ -44,6 +44,15 @@ async function areaPoint(page) {
     }
     return o;
   });
+  // erst klicken, wenn die Karte stillsteht: nach einem Klick zoomt sie in den Stadtbezirk; ein Punkt aus der
+  // laufenden Bewegung trifft auf einem langsamen Rechner daneben (CI 02.11.2026)
+  let pts = await scan();
+  for (let i = 0; i < 20; i++) {
+    await page.waitForTimeout(250);
+    const next = await scan();
+    if (JSON.stringify(next) === JSON.stringify(pts)) break;
+    pts = next;
+  }
   assert.ok(pts.length, "keine anklickbare Fläche auf der Karte");
   return pts[Math.floor(pts.length / 2)];
 }
