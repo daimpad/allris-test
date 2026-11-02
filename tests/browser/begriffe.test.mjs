@@ -75,3 +75,23 @@ test("Seite begriffe/ und Akkordeon auf den Themenseiten, ohne Verstöße", asyn
     await page.close();
   }
 });
+
+test("Seite einfach/: acht Abschnitte, Link im Startfenster und im Fuß, ohne Verstöße", async () => {
+  for (const width of [1440, 390]) {
+    const page = await browser.newPage({ viewport: { width, height: 900 }, bypassCSP: true });
+    await page.goto(SITE + "einfach/", { waitUntil: "networkidle" });
+    assert.equal(await page.locator("h1").textContent(), "Die RIS-Karte in Einfacher Sprache");
+    assert.equal(await page.locator(".einfach h2").count(), 8);
+    assert.equal(await page.locator("ol.einfach-weg li").count(), 5);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    assert.deepEqual(await axe(page), []);
+    await page.close();
+  }
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  await page.goto(SITE, { waitUntil: "networkidle" });
+  await page.waitForFunction(() => document.querySelector("#detail .intro"));
+  assert.equal(await page.locator('#detail .intro a[href="einfach/"]').count(), 1, "Link im Startfenster");
+  await page.goto(SITE + "thema/", { waitUntil: "networkidle" });
+  assert.equal(await page.locator('footer a[href="../einfach/"]').count(), 1, "Link im Fuß");
+  await page.close();
+});

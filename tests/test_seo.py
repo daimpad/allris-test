@@ -81,7 +81,7 @@ class Auffindbarkeit(unittest.TestCase):
             # ohne Gebietsdaten keine Gebiets- und Themenseiten; haushalt/ beruht auf data/haushalt/ im Repository
             self.assertEqual(urls, ["https://ris-bonn.example/", "https://ris-bonn.example/datenschutz.html",
                                     "https://ris-bonn.example/haushalt/", "https://ris-bonn.example/rss/",
-                            "https://ris-bonn.example/begriffe/"])
+                            "https://ris-bonn.example/begriffe/", "https://ris-bonn.example/einfach/"])
             self.assertIsNone(re.search(r"lastmod", (site / "sitemap.xml").read_text(encoding="utf-8")))
 
 

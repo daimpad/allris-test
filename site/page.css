@@ -287,3 +287,13 @@ tr[class^="hh-z"] > th::before { content: ""; display: inline-block; width: 12px
 .page dl.begriffe dt:target { color: var(--accent-ink); }
 .page dl.begriffe dt:target + dd { border-left: 3px solid var(--accent-ink); padding-left: 8px; }
 .page details.begriffe-acc { margin: 24px 0 8px; }
+
+/* Seite einfach/ (pipeline/einfachseite.py, 02.11.2026): etwas größere Schrift, Ablauf als Schritte, Fundstellen klein */
+.page .einfach { font-size: 1.0625rem; line-height: 1.65; }
+.page .einfach h2 { margin-top: 32px; }
+.page ol.einfach-weg { list-style: none; counter-reset: weg; padding: 0; display: grid; gap: 10px; }
+.page ol.einfach-weg li { counter-increment: weg; position: relative; padding: 10px 12px 10px 52px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.page ol.einfach-weg li::before { content: counter(weg); position: absolute; left: 12px; top: 10px; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent-fill); color: #fff; font-weight: 700; display: grid; place-items: center; }
+.page ol.einfach-weg li:not(:last-child)::after { content: ""; position: absolute; left: 25px; bottom: -11px; width: 2px; height: 10px; background: var(--accent-fill); }
+.page .einfach-fach { font-size: 0.875rem; color: var(--muted); border-left: 3px solid var(--line); padding-left: 8px; }
