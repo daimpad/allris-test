@@ -14981,6 +14981,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260396-04 AA	kein Ort						
 260396-05 AA	kein Ort						
 260396-06 AA	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+260396-07 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 260397	Titel ohne gemeinsamen Ort, nicht verortet						
 260398	kein Ort						
 260399	kein Ort						
@@ -16431,6 +16432,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261752	kein Ort						
 261753	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
 261753	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
+261753-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
 261764	kein Ort						
 261769	kein Ort						
 261769-02 ST	kein Ort						
@@ -16583,3 +16585,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262026	kein Ort						
 262031	Titel ohne gemeinsamen Ort, nicht verortet						
 262037	kein Ort						
+262051	kein Ort						
+262056	verortet	Hauptteil	volltext_strasse+kreuzung	Guido-Westerwelle-Brücke	Nordstadt	mittel	1
+262056	verortet	Hauptteil	volltext_strasse+kreuzung	Hochstadenring	Nordstadt	mittel	1
+262057	Titel ohne gemeinsamen Ort, nicht verortet						
+262058	kein Ort						
