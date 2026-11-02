@@ -12070,6 +12070,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241471-02	verortet	Hauptteil	volltext_strasse+kreuzung	Rheinaustraße	Beuel-Mitte	mittel	6
 241471-02	verortet	Hauptteil	volltext_strasse+kreuzung	Rheindorfer Straße	Beuel-Mitte	mittel	7
 241471-02	verortet	Hauptteil	volltext_strasse+kreuzung	Von-Sandt-Straße	Beuel-Mitte	mittel	2
+241472	verortet	Hauptteil	volltext_strasse+kreuzung	Burghofstraße	Holtorf	mittel	4
+241472	verortet	Hauptteil	volltext_strasse+kreuzung	Löwenburgstraße	Holtorf	mittel	1
+241472	verortet	Hauptteil	volltext_strasse+kreuzung	Zur Saalkirche	Holtorf	mittel	3
 241473	kein Ort						
 241476	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 241478	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
@@ -12550,7 +12553,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
 241998	kein Ort						
-241998-01 ST	kein Ort						
 242006	Titel ohne gemeinsamen Ort, nicht verortet						
 242009	Titel ohne gemeinsamen Ort, nicht verortet						
 242011	nur in Anlagen genannt, nicht verortet						
@@ -12891,6 +12893,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252385	verortet	Hauptteil	volltext_strasse	Kaiserplatz	Südstadt	mittel	1
 252385	verortet	Hauptteil	volltext_strasse	Martinsplatz	Bonn-Zentrum	mittel	1
 252385-01 ST	verortet	Hauptteil	volltext_strasse	Cassius-Passage	Bonn-Zentrum	mittel	1
+252386	kein Ort						
 252388	Titel ohne gemeinsamen Ort, nicht verortet						
 252390	Titel ohne gemeinsamen Ort, nicht verortet						
 252394	kein Ort						
@@ -13119,7 +13122,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
-252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -14879,6 +14881,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260302	Titel ohne gemeinsamen Ort, nicht verortet						
 260303	kein Ort						
 260305	kein Ort						
+260305-01 ST	kein Ort						
 260306	kein Ort						
 260307	kein Ort						
 260308	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
