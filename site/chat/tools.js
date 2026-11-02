@@ -19,6 +19,9 @@ const EINWOHNER_TITEL = /bürgerantrag|einwohner|anregung|beschwerde/i;
 const NR = String.raw`\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?(?:\s*(?:-|–|bis|und|u\.|/|,)\s*\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?)*(?!\d)`;
 const SUFFIX = String.raw`[\p{L}.-]*(?:straße|strasse|str\.|weg|platz|gasse|allee|ring|ufer|damm|pfad|chaussee|hof|markt|graben|berg|feld)`;
 export const OHNE_NR = "[Hausnummer ausgelassen]";
+// „Hausnummer 82“, „Haus-Nr. 264“, „(neben Haus-Nr.) 68“ (wie WORT in pipeline/maske.py; ersetzt samt dem Wort,
+// eine schließende Klammer bleibt stehen; 01.11.2026)
+const WORT = new RegExp(String.raw`\b(?:hausnummern?|hausnr\.?|haus-nr\.?|haus\s+nr\.?)\s*(\))?\s*${NR}`, "giu");
 const STAENDE = ["entschieden", "beraten, ohne Entscheidung", "in Beratung", "offen", "ohne Beratungsfolge"];
 const THEMEN = ["verkehr", "bauen", "umwelt", "bildung", "kinder", "soziales", "kultur", "wirtschaft", "sicherheit", "beteiligung"];
 const KENNZAHLEN = ["einwohner", "unter_18", "ab_65", "miete", "bodenrichtwert", "haltestellen", "kitas", "kita_plaetze_u3", "kita_plaetze_ue3", "hitze", "ueberschwemmung", "wahlbeteiligung"];
@@ -267,8 +270,8 @@ export function createTools({ load, today: fest = null } = {}) {
       try { ew = new Set((await get("bonn/chat/einwohner.json")).drucksachen); } catch (e) { /* ältere Exporte ohne Datei */ }
       const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       const names = [...new Set(d.places.filter((p) => p.level === "strasse").map((p) => p.name))].sort((a, b) => b.length - a.length).map(esc);
-      const rx = new RegExp(String.raw`((?:${[...names, SUFFIX].join("|")})\s+)${NR}`, "giu");
-      d._mask = (title, type, ref) => (title && (EINWOHNER.has(type) || EINWOHNER_TITEL.test(title) || ew.has(ref)) ? title.replace(rx, `$1${OHNE_NR}`) : title);
+      const rx = new RegExp(String.raw`((?:${[...names, SUFFIX].join("|")})\s+)(?:nr\.?\s*)?${NR}`, "giu");
+      d._mask = (title, type, ref) => (title && (EINWOHNER.has(type) || EINWOHNER_TITEL.test(title) || ew.has(ref)) ? title.replace(rx, `$1${OHNE_NR}`).replace(WORT, (m, klammer) => OHNE_NR + (klammer || "")) : title);
     }
     return d._mask;
   }
