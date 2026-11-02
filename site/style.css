@@ -486,6 +486,10 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .map-menu-n { display: inline-block; min-width: 20px; margin-left: 6px; padding: 2px 6px; border-radius: 999px; background: #fff; color: var(--accent-ink); font-size: 12px; text-align: center; }
 .leaflet-container:not(.map-menu-open) .leaflet-right .map-style:not(.map-menu):not(.map-whole) { display: none; }
 .map-style[aria-pressed="true"] { background: var(--accent-fill); color: #fff; border-color: transparent; }
+/* „Ganz Bonn ansehen“: auf breiten Bildschirmen als Text, auf dem Telefon als Symbol (siehe unten) */
+.map-whole .icon { display: none; }
+/* Blatt „Karte“ (Ebenen, Legenden, Quellen) nur auf dem Telefon */
+.map-sheet { display: none; }
 
 /* Kartensteuerung und Namensnennung neben den Flächen, nicht darunter */
 .leaflet-right { transition: right .35s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -756,7 +760,33 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .nav-metric { display: grid; gap: 3px; margin: 8px 0 2px; font-size: 11px; color: var(--text-muted); }
 .nav-metric select { font: inherit; font-size: 12px; color: var(--text); padding: 4px 6px; border-radius: 8px;
   border: 1px solid var(--border-alt); background: var(--surface); width: 100%; box-sizing: border-box; min-width: 0; }
-@media (max-width: 900px) { .map-stack { width: min(232px, calc(100vw - 185px));   /* frei neben „Ganz Bonn ansehen“ */ max-height: calc(100vh - 150px); } }
+/* Telefon: Ebenen, Legenden und Quellen in einem Blatt über der Leiste, hinter dem Knopf „Karte“; rechts nur noch
+   „Karte“, „Ganz Bonn“ als Symbol und Zoom; Quellenzeile einzeilig (Entscheidung 02.11.2026) */
+@media (max-width: 900px) {
+  .leaflet-container.map-menu-open .map-sheet {
+    display: block; position: absolute; left: 10px; right: 10px; bottom: 86px; z-index: 1001;
+    max-height: calc(100vh - 160px); overflow-y: auto; overscroll-behavior: contain; padding: 6px 14px 14px; border-radius: 22px;
+    background: rgba(255, 255, 255, 0.97); border: 1px solid var(--border); box-shadow: var(--shadow-lift), var(--highlight);
+    font: 400 14px/1.4 var(--font-body); color: var(--text); animation: mega-in .2s var(--ease); cursor: auto;
+  }
+  .map-sheet-kopf { display: flex; align-items: center; justify-content: space-between; position: sticky; top: -6px; z-index: 1;
+    margin: 0 -14px; padding: 6px 8px 4px 14px; background: rgba(255, 255, 255, 0.97); }
+  .map-sheet-kopf h2 { margin: 0; font: 700 18px/1.2 var(--font-display); }
+  .map-sheet-h { margin: 10px 0 8px; font: 600 12px/1 var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
+  .map-sheet-ebenen { display: flex; flex-wrap: wrap; gap: 8px; }
+  .map-sheet-ebenen .map-style { box-shadow: none; font-size: 14px; }
+  .map-sheet .map-stack { float: none; clear: none; margin: 0; width: auto; max-height: none; overflow: visible; gap: 6px; }
+  .map-sheet .map-legend, .map-sheet .nav-legend { box-shadow: none; font-size: 14px; padding: 10px 12px; }
+  .map-sheet .map-legend[open] { max-height: none; overflow: visible; }
+  .map-sheet .map-legend[open] > summary { position: static; margin: 0; padding: 0 0 4px; background: none; }
+  .map-sheet summary { padding: 4px 0; }
+  .map-style.map-whole { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border-radius: 14px; }
+  .map-whole .icon { display: block; width: 22px; height: 22px; }
+  .map-whole-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .leaflet-right .map-style.map-menu { padding: 12px 16px; }
+  .leaflet-control-attribution { font-size: 11px; line-height: 1.4; white-space: nowrap; max-width: calc(100vw - 20px); overflow: hidden; }
+  .attr-info { display: inline-block; padding: 0 4px; font-size: 14px; text-decoration: none; }
+}
 
 /* Mitmachen in Bonn (site/beteiligung.js) */
 #bt-body h3 { font-size: 15px; margin: 16px 0 8px; }

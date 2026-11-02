@@ -275,7 +275,7 @@ test("Mobil: Hamburger-Menü mit Gebiet, Flächen und Menüs; Esc schließt Men�
   await page.close();
 });
 
-test("Mobil: Ebenen in einem Menü, ohne Verstöße", async () => {
+test("Mobil: Ebenen, Legenden und Quellen im Blatt „Karte“, ohne Verstöße", async () => {
   const page = await open("", { width: 390, height: 844 });
   // auf dem Telefon liegt das Fenster „Los geht's“ über der Karte; erst schließen (Schalter hinter ☰)
   await page.locator("#nav-burger").click();
@@ -283,15 +283,25 @@ test("Mobil: Ebenen in einem Menü, ohne Verstöße", async () => {
   assert.equal(await page.locator("#nav-burger").getAttribute("aria-expanded"), "false", "Wahl schließt das Hamburger-Menü");
   const menu = page.locator(".map-menu");
   assert.equal(await menu.getAttribute("aria-expanded"), "false");
-  assert.match(await menu.textContent(), /^Ebenen/);
-  assert.equal(await page.locator(".map-plans").isVisible(), false, "Ebenen stecken im Menü");
+  assert.match(await menu.textContent(), /^Karte/);
+  assert.equal(await page.locator(".map-plans").isVisible(), false, "Ebenen stecken im Blatt");
+  assert.equal(await page.locator("#sources").isVisible(), false, "Legenden und Quellen stecken im Blatt");
   assert.ok(await page.locator(".map-whole").isVisible(), "„Ganz Bonn ansehen“ bleibt sichtbar");
+  assert.equal((await page.locator(".map-whole").boundingBox()).width, 44, "als Symbol");
+  assert.ok((await page.locator(".leaflet-control-attribution").boundingBox()).height < 24, "Quellenzeile einzeilig");
   await menu.click();
   assert.equal(await menu.getAttribute("aria-expanded"), "true");
-  assert.ok(await page.locator(".map-plans").isVisible());
-  await page.keyboard.press("Escape");
-  assert.equal(await menu.getAttribute("aria-expanded"), "false", "Esc schließt die Ebenen");
+  assert.ok(await page.locator(".map-sheet .map-plans").isVisible());
+  assert.ok(await page.locator(".map-sheet #sources").isVisible());
   assert.deepEqual(await axe(page), []);
+  await page.keyboard.press("Escape");
+  assert.equal(await menu.getAttribute("aria-expanded"), "false", "Esc schließt das Blatt");
+  // ⓘ in der Quellenzeile öffnet das Blatt mit den Quellen
+  await page.locator(".attr-info").click();
+  assert.equal(await menu.getAttribute("aria-expanded"), "true");
+  assert.ok(await page.locator("#sources").evaluate((d) => d.open));
+  await page.locator(".map-sheet-zu").click();
+  assert.equal(await menu.getAttribute("aria-expanded"), "false");
   assert.deepEqual(page.errors, []);
   await page.close();
 });

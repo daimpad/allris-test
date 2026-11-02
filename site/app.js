@@ -69,7 +69,7 @@
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null, kontext = null, anliegen = null;
-  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, detailSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, mapStack = null, planOn = false, allPlans = null, shownPlan = null;
+  let map, cluster, outline, markers = new Map(), tl = null, range = null, loadSeq = 0, detailSeq = 0, shown = LIST_STEP, lastList = [], lastMarkers = [], colorBy = "sicherheit", legendEl = null, mapStack = null, mapSheet = null, mapToggles = [], setMapMenu = () => {}, mapMenuCount = null, planOn = false, allPlans = null, shownPlan = null;
   let bau = null, bauOn = false, bauLayer = null, shownSite = null, bauByRef = new Map();
   let kxOn = new Set(), kxData = {}, kxLayers = {}, brwBr = null;  // zuschaltbare Flächen (Überschwemmung, Bodenrichtwerte)
   // Suche über ganz Bonn (suche.json, erst bei Bedarf geladen)
@@ -218,6 +218,7 @@
   function setNav(open, returnFocus) {
     if (open === navIsOpen()) return;
     if (!open) closeMega();
+    else setMapMenu(false);   // nicht zugleich mit dem Blatt „Karte“
     document.body.classList.toggle("nav-open", open);
     burger.setAttribute("aria-expanded", String(open));
     if (!open && (returnFocus || navMore.contains(document.activeElement))) burger.focus();
@@ -470,7 +471,8 @@
       onAdd() {
         const b = L.DomUtil.create("button", "map-style map-whole");
         b.type = "button";
-        b.textContent = "Ganz Bonn ansehen";
+        // Telefon: nur das Symbol, der Name bleibt für Bildschirmleser (Entscheidung 02.11.2026)
+        b.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#i-fit"/></svg><span class="map-whole-text">Ganz Bonn ansehen</span>';
         b.title = "Karte auf ganz Bonn zoomen; Stadtbezirke und Ortsteile lassen sich anklicken";
         b.addEventListener("click", () => { navDeep = false; navFocus = null; map.fitBounds(bonnBounds || L.geoJSON(geo.bezirk).getBounds(), mapPadding()); });
         L.DomEvent.disableClickPropagation(b);
@@ -581,17 +583,24 @@
         b.type = "button";
         b.setAttribute("aria-expanded", "false");
         b.title = "Ebenen und Darstellung der Karte";
-        const set = (open) => { map.getContainer().classList.toggle("map-menu-open", open); b.setAttribute("aria-expanded", String(open)); };
-        const count = () => {
-          const n = [...map.getContainer().querySelectorAll('.leaflet-right .map-style[aria-pressed="true"]')].filter((x) => !x.hidden).length;
-          b.innerHTML = `Ebenen${n ? ` <span class="map-menu-n">${n}<span class="visually-hidden"> eingeschaltet</span></span>` : ""}`;
+        const set = (open) => {
+          map.getContainer().classList.toggle("map-menu-open", open); b.setAttribute("aria-expanded", String(open));
+          if (open) setNav(false);   // Telefon: nicht zugleich mit dem Hamburger-Menü
         };
+        setMapMenu = set;
+        // Zahl der eingeschalteten Ebenen; auf dem Telefon heißt der Knopf „Karte“ (Ebenen, Legenden und Quellen)
+        mapMenuCount = () => {
+          const n = [...map.getContainer().querySelectorAll('.map-style[aria-pressed="true"]:not(.map-menu)')].filter((x) => !x.hidden).length;
+          b.innerHTML = `${MOBILE.matches ? "Karte" : "Ebenen"}${n ? ` <span class="map-menu-n">${n}<span class="visually-hidden"> eingeschaltet</span></span>` : ""}`;
+          b.title = MOBILE.matches ? "Ebenen, Legenden und Quellen der Karte" : "Ebenen und Darstellung der Karte";
+        };
+        const count = mapMenuCount;
         b.addEventListener("click", () => set(b.getAttribute("aria-expanded") !== "true"));
         map.on("click", () => set(false));
         map.getContainer().addEventListener("keydown", (e) => {
           if (e.key === "Escape" && b.getAttribute("aria-expanded") === "true") { e.stopPropagation(); set(false); b.focus(); }
         });
-        new MutationObserver(count).observe(map.getContainer().querySelector(".leaflet-control-container"), { attributes: true, subtree: true, attributeFilter: ["aria-pressed", "hidden"] });
+        new MutationObserver(count).observe(map.getContainer(), { attributes: true, subtree: true, attributeFilter: ["aria-pressed", "hidden"] });
         count();
         L.DomEvent.disableClickPropagation(b);
         return b;
@@ -612,8 +621,44 @@
       },
     });
     mapStack = new Stack().addTo(map).getContainer();
+    // Telefon: Ebenen, Legenden und Quellen in einem Blatt über der Leiste statt rechts und unten links
+    // (Entscheidung 02.11.2026); die Elemente wandern hinein und auf breiten Bildschirmen an ihren Platz zurück
+    mapSheet = L.DomUtil.create("section", "map-sheet", map.getContainer());
+    mapSheet.id = "map-sheet";
+    mapSheet.setAttribute("aria-labelledby", "map-sheet-titel");
+    mapSheet.innerHTML = '<div class="map-sheet-kopf"><h2 id="map-sheet-titel">Karte</h2>'
+      + '<button type="button" class="icon-btn map-sheet-zu" aria-label="Schließen"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>'
+      + '<h3 class="map-sheet-h">Ebenen und Darstellung</h3><div class="map-sheet-ebenen"></div><h3 class="map-sheet-h">Legenden und Quellen</h3>';
+    mapSheet.querySelector(".map-sheet-zu").addEventListener("click", () => { setMapMenu(false); document.querySelector(".map-menu").focus(); });
+    L.DomEvent.disableClickPropagation(mapSheet);
+    L.DomEvent.disableScrollPropagation(mapSheet);
+    mapToggles = [...map.getContainer().querySelectorAll(".leaflet-right .map-style:not(.map-menu):not(.map-whole)")]
+      .map((el) => { const mark = document.createComment("ebene"); el.before(mark); return [el, mark]; });
+    { const mark = document.createComment("legenden"); mapStack.before(mark); mapToggles.push([mapStack, mark]); }
+    placeMapControls();
+    MOBILE.addEventListener("change", placeMapControls);
     cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 40, animate: !REDUCED }).addTo(map);
   }
+  function placeMapControls() {
+    const mobil = MOBILE.matches;
+    for (const [el, mark] of mapToggles) {
+      if (mobil) (el === mapStack ? mapSheet : mapSheet.querySelector(".map-sheet-ebenen")).append(el);
+      else mark.after(el);
+    }
+    // Quellenzeile auf dem Telefon in einer Zeile: ⓘ öffnet Quellen, Lizenzen und Datenstand im Blatt
+    map.attributionControl.setPrefix(mobil ? '<a href="#sources" class="attr-info" aria-label="Quellen, Lizenzen und Datenstand">ⓘ</a>'
+      : L.Control.Attribution.prototype.options.prefix);
+    if (mapMenuCount) mapMenuCount();
+  }
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".attr-info")) return;
+    e.preventDefault();
+    setMapMenu(true);
+    const src = document.getElementById("sources");
+    src.open = true;
+    src.querySelector("summary").focus();
+    src.scrollIntoView({ block: "nearest" });
+  });
   function mapPadding() {
     const desktop = !MOBILE.matches;
     const left = !desktop ? 16 : !$("#panel-list").hidden ? widthOf("list") + 32 : !$("#panel-assistent").hidden ? $("#panel-assistent").offsetWidth + 32 : 16;
