@@ -1,5 +1,7 @@
 # Entwurf: Anfrage an das BKG zu basemap.de Web Raster Grau
 
+> **Entfallen** (Entscheidung des Auftraggebers 02.11.2026): Die graue Karte wird aus OSM-Daten selbst erzeugt (`OSM_GRAU.md`); die Anfrage wird nicht versandt.
+
 An: info@basemap.de
 Betreff: basemap.de Web Raster Grau – einmaliger Abruf der Kacheln für Bonn und Quellenvermerk
 

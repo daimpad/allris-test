@@ -230,6 +230,19 @@ jobs:
           # (der Zeitpunkt steht in data/raw/STAND.json und im Datenpaket)
           python -c "import json, pathlib; p = pathlib.Path('_site/data/geo/bebauungsplaene_bonn.geojson'); d = json.loads(p.read_text()); d.get('meta', {}).pop('retrieved_at', None); p.write_text(json.dumps(d, ensure_ascii=False, separators=(',', ':')) + '\n')"
 
+      # Graue Kartenkacheln aus dem Branch kacheln (kacheln.yml, vierteljährlich); fehlt er, zeigt die Seite ersatzweise
+      # die OSM-Kacheln grau gefiltert
+      - name: Graue Kartenkacheln holen
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          ref: kacheln
+          path: _kacheln
+        continue-on-error: true
+
+      - name: Graue Kartenkacheln in die Seite
+        run: |
+          if [ -f _kacheln/kacheln/stand.json ]; then cp -r _kacheln/kacheln _site/; else echo "keine Kacheln, Rückfall auf OSM"; fi
+
       - name: Auffindbarkeit (robots.txt, sitemap.xml, Adressen für SITE_URL)
         run: python -m pipeline seo
 
