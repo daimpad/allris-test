@@ -48,11 +48,8 @@
   ]}
   </script>
   <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <!-- Startdaten vorab anfordern, statt zu warten, bis app.js läuft (app.js fragt sie gleichzeitig ab) -->
+  <!-- Nur index.json vorab (erster Kartenausschnitt); alles Übrige lädt app.js nach den Kacheln (Schritt 1b) -->
   <link rel="preload" href="data/export/bonn/index.json" as="fetch" crossorigin>
-  <link rel="preload" href="data/export/bonn/flaechen/ortsteile.json" as="fetch" crossorigin>
-  <link rel="preload" href="data/export/bonn/flaechen/bezirke.json" as="fetch" crossorigin>
-  <link rel="preload" href="data/export/glossar.json" as="fetch" crossorigin>
   <!-- Kacheln: Verbindung früh aufbauen; Leaflet- und MarkerCluster-Stile in einer Datei (Phase 0 „Verständlichkeit“) -->
   <link rel="preconnect" href="https://tile.openstreetmap.org">
   <link rel="stylesheet" href="vendor/leaflet/karte.min.css" integrity="sha512-wwPsYmnrqEZ8LY0nw6kiMjMDYyLmsaGxUZnBvGjz1X147eRBi9XOCqkJUK2hubjKolvOUcN/w60Jgdgb+3jXCw==">

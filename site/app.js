@@ -369,25 +369,31 @@
   // --- Karte -----------------------------------------------------------------------------------------
   const MARKER = { radius: 7, weight: 2, color: "#fff", fillOpacity: 0.95 };
   // Karte mit Kacheln vor den übrigen Startdaten anlegen: Die Kacheln sind das größte Element beim Start und warteten
-  // bisher auf alle Daten (Phase 0 „Verständlichkeit“: ein Viertel der Ladezeit mobil). Ausschnitt ganz Bonn
-  // (Grenzen der Stadtbezirke); ein Gebiet im Link setzt fruehAnsicht, sobald die Flächen da sind.
+  // bisher auf alle Daten (Phase 0 „Verständlichkeit“: ein Viertel der Ladezeit mobil). Erster Ausschnitt aus dem
+  // Umriss des Gebiets in index.json (bbox), sonst ganz Bonn (Grenzen der Stadtbezirke).
   const BONN_BOUNDS = [[50.6327, 7.0225], [50.7744, 7.2107]];
-  function createMap(ansicht) {
+  let kacheln = null;
+  function startBounds(idx, value) {
+    const [kind, key] = String(value || "").split(":");
+    const liste = !idx ? [] : kind === "ortsteil" ? idx.ortsteile : kind === "bezirk" ? idx.bezirke : [];
+    const b = (liste.find((x) => x.slug === key) || {}).bbox;
+    return Array.isArray(b) && b.length === 4 ? [[b[0], b[1]], [b[2], b[3]]] : BONN_BOUNDS;
+  }
+  function createMap(bounds = BONN_BOUNDS) {
     if (map) return;
     map = L.map("map", { zoomControl: false, scrollWheelZoom: true, zoomAnimation: !REDUCED, fadeAnimation: !REDUCED, markerZoomAnimation: !REDUCED });
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap-Mitwirkende" }).addTo(map);
-    if (ansicht) map.fitBounds(BONN_BOUNDS, { ...mapPadding(), animate: false });
+    kacheln = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap-Mitwirkende" }).addTo(map);
+    map.fitBounds(bounds, { ...mapPadding(), animate: false });
   }
-  // Ausschnitt des Gebiets aus dem Link, bevor dessen Vorlagen geladen sind (wie drawOutline, ohne Umriss)
-  function fruehAnsicht(value) {
-    const [kind, key] = String(value || "").split(":");
-    const feats = kind === "ortsteil" ? geo.ortsteil.features.filter((f) => slug(f.properties.ortsteil_bez) === key)
-      : kind === "bezirk" ? geo.bezirk.features.filter((f) => slug(f.properties.bezirk_bez) === key) : [];
-    if (!feats.length) { if (!map.getZoom()) map.fitBounds(BONN_BOUNDS, { ...mapPadding(), animate: false }); return; }
-    map.fitBounds(L.geoJSON({ type: "FeatureCollection", features: feats }).getBounds(), { ...mapPadding(), animate: false });
-  }
+  // Schritt 1b: Daten, die das erste Bild nicht braucht, erst anfordern, wenn die sichtbaren Kacheln geladen sind
+  // (höchstens ms Millisekunden warten), damit sie die Bandbreite nicht teilen
+  const kachelnGeladen = (ms) => new Promise((resolve) => {
+    if (!kacheln || !kacheln.isLoading()) { resolve(); return; }
+    const t = setTimeout(resolve, ms);
+    kacheln.once("load", () => { clearTimeout(t); resolve(); });
+  });
   function initMap() {
-    createMap(true);
+    createMap();
     L.control.zoom({ position: "bottomright" }).addTo(map);
     // Ganz Bonn ansehen: nur die Ansicht, das Gebiet bleibt; herausgezoomt sind die Stadtbezirke anklickbar
     const Whole = L.Control.extend({
@@ -2003,20 +2009,19 @@
     const json = (url, priority = "auto") => fetch(url, { priority }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
     const startGebiet = new URLSearchParams(location.search).get("gebiet") || DEFAULT_AREA;
     const [gKind, gKey] = startGebiet.split(":");
+    // 1. index.json (klein, vorab angefordert) gibt den ersten Ausschnitt; die Kacheln laden sofort
+    const idx = await json(BONN + "index.json");
+    createMap(startBounds(idx, startGebiet));
+    // 2. alles Übrige nach den sichtbaren Kacheln (höchstens 2,5 s warten)
+    await kachelnGeladen(2500);
     if ((gKind === "ortsteil" || gKind === "bezirk") && /^[a-z0-9-]+$/.test(gKey || "")) {
       const datei = `${BONN}${gKind === "ortsteil" ? "ortsteile" : "bezirke"}/${gKey}.json`;
       vorab.set(datei, fetch(datei));
     }
     const shapes = Promise.all([loadGeo("ortsteil"), loadGeo("bezirk")]);
     // Baustellen mit möglichen Umsetzungen (nur Konfidenz hoch); ohne Datei bleibt die Funktion ausgeblendet
-    const daten = Promise.all([json(GLOSSAR_URL), json(BONN + "index.json"), json(BONN + "zeit.json", "low"),
+    const [g, z, bs, kx, an] = await Promise.all([json(GLOSSAR_URL), json(BONN + "zeit.json", "low"),
       json(BONN + "baustellen.json", "low"), json(BONN + "kontext.json", "low"), json(BONN + "anliegen.json", "low")]);
-    createMap(gKind !== "ortsteil" && gKind !== "bezirk");
-    try {
-      [geo.ortsteil, geo.bezirk] = await shapes;
-      fruehAnsicht(startGebiet);
-    } catch (e) { /* Flächen fehlen: initMap meldet es wie bisher */ }
-    const [g, idx, z, bs, kx, an] = await daten;
     index = idx;
     kontext = index && kx && kx.ortsteile ? kx : null;
     anliegen = kontext && an && an.ortsteile ? an : null;
@@ -2030,7 +2035,7 @@
       ({ ergebnisse: GLOSSAR, hinweise: NOTES, schritte: STEP_LABEL, evidenz: STATUS_TEXT, staende: STAND_TEXT = {}, arten: ARTEN = {}, kuerzel: KUERZEL = {} } = g);
       BEGRIFF = Object.fromEntries((g.begriffe || []).filter((b) => b.anker).map((b) => [b.anker, b]));
     }
-    if (!geo.ortsteil) [geo.ortsteil, geo.bezirk] = await shapes;
+    [geo.ortsteil, geo.bezirk] = await shapes;
     initMap();
     fillAreaSelect();
     initNav();

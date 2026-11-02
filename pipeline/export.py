@@ -191,6 +191,21 @@ def export_all():
 
     order = "ORDER BY p.date DESC, p.reference"
     index = {"ortsteile": [], "bezirke": [], "ohne_ortsbezug": []}
+
+    def bbox(feature):
+        """Umriss als [Süd, West, Nord, Ost] für den ersten Kartenausschnitt (die Seite lädt die Flächen erst nach
+        den Kacheln; Phase 0 „Verständlichkeit“, Schritt 1b)."""
+        xs, ys = [], []
+
+        def walk(c):
+            if c and isinstance(c[0], (int, float)):
+                xs.append(c[0])
+                ys.append(c[1])
+            else:
+                for x in c:
+                    walk(x)
+        walk(feature["geometry"]["coordinates"])
+        return [round(min(ys), 4), round(min(xs), 4), round(max(ys), 4), round(max(xs), 4)]
     areas, names = {}, {}
 
     for ot in json.loads(config.ORTSTEILE.read_text())["features"]:
@@ -202,7 +217,7 @@ def export_all():
               {"meta": _meta(db, True, ortsteil=name, stadtbezirk=bezirk, count=len(ids)),
                "papers": [detail(i) for i in ids]})
         index["ortsteile"].append({"name": name, "slug": slug(name), "stadtbezirk": bezirk,
-                                   "count": len(ids)})
+                                   "count": len(ids), "bbox": bbox(ot)})
         areas[f"ortsteil:{slug(name)}"] = ids
         names[f"ortsteil:{slug(name)}"] = name
 
@@ -216,7 +231,7 @@ def export_all():
             (name, name))]
         _dump(out / "bezirke" / f"{slug(name)}.json",
               {"meta": _meta(db, True, stadtbezirk=name, count=len(ids)), "papers": [detail(i) for i in ids]})
-        index["bezirke"].append({"name": name, "slug": slug(name), "count": len(ids)})
+        index["bezirke"].append({"name": name, "slug": slug(name), "count": len(ids), "bbox": bbox(bz)})
         areas[f"bezirk:{slug(name)}"] = ids
         names[f"bezirk:{slug(name)}"] = f"Stadtbezirk {name}, ohne genaueren Ort"
 
