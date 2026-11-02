@@ -203,7 +203,8 @@ test("Themenseiten: Wer berät mit (Fachausschuss, Fraktion abgeleitet), Link in
 });
 
 // sichtbare Treemaps der Seite haushalt/ (aria-label bis zum Doppelpunkt, mit voller Angabe auf Wunsch)
-const treemaps = (page, voll = false) => page.evaluate((voll) => [...document.querySelectorAll(".hh-svg")]
+// nur die umschaltbaren Treemaps (Aufwendungen und Ebenen); der Zuschussbedarf unter der Tabelle steht für sich
+const treemaps = (page, voll = false) => page.evaluate((voll) => [...document.querySelectorAll(".hh-wahl .hh-svg")]
   .filter((s) => s.getBoundingClientRect().height > 0).map((s) => voll ? s.getAttribute("aria-label") : s.getAttribute("aria-label").split(":")[0]), voll);
 
 test("Haushalt auf einen Blick: Treemap je Ansicht ohne Skript umschaltbar, Zeile der Tabelle als Sprungziel, ohne Verstöße", async () => {
@@ -217,6 +218,10 @@ test("Haushalt auf einen Blick: Treemap je Ansicht ohne Skript umschaltbar, Zeil
     await page.goto(SITE + "haushalt/#pb-04");   // Sprungziel der Themenseiten
     assert.match(await page.locator("tr:target").textContent(), /Kultur und Wissenschaft.*Themenseite/s);
     assert.match(await page.locator("#tabelle + p + table .hh-summe").textContent(), /1\.797,0 Mio\. €/);   // Plan 2025 = Gesamtergebnisplan
+    // Erträge und Ergebnis (02.11.2026): Zuschussbedarf mit 14 Flächen, Sprung in die Ergebnistabelle
+    assert.equal(await page.locator(`.hh-erg .hh-${format} a`).count(), 14);
+    await page.goto(SITE + "haushalt/#erg-03");
+    assert.match(await page.locator("tr:target").textContent(), /Schulträgeraufgaben.*−152 € je Einwohner/s);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     assert.deepEqual(await axe(page), []);
     await page.close();

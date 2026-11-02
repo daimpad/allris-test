@@ -16,6 +16,11 @@ zeigt die Umgebungsvariable HAUSHALT_EBENEN=vorschau die Ebenen beim Erzeugen de
 Mit Skript (site/haushalt.js, Entscheidung 28.10.2026) wächst die angeklickte Kachel auf die ganze Fläche und zeigt ihre
 Unterteilung; Ebene 3 zeichnet es als Kacheln aus den Beträgen der Balken (data-b), damit die Seite klein bleibt.
 Erklärungen stehen einmal im Akkordeon „So lesen Sie die Zahlen“, Grenzen und Quellen in zugeklappten Akkordeons.
+
+Erträge und Ergebnis (Erweiterung Phase 1, Entscheidungen 02.11.2026; haushalt/phase0/ERWEITERUNG.md): ordentliche
+Erträge (Zeile 10) und Ergebnis vor internen Leistungen (Zeile 18) je Produktbereich, dazu je Einwohner (abgeleitet,
+IT.NRW, Fortschreibung auf Basis des Zensus 2022 zum 31.12.; Ist mit dem Stand seines Jahres, Plan mit dem jüngsten
+Stand). Eine Treemap zeigt den Zuschussbedarf (negatives Ergebnis); Überschüsse stehen nur in der Tabelle.
 """
 import json
 import os
@@ -39,6 +44,11 @@ HINWEIS = ("Aufwandsarten sind Kontenarten, keine Aufgaben: Sie zeigen, wofür d
            "für Personal oder für Transfers. Bilanzielle Abschreibungen verteilen den Wertverlust von Gebäuden und "
            "Anlagen auf die Jahre; sie fließen nicht als Geld ab.")
 BEGRIFFE = "Begriffe oben unter „So lesen Sie die Zahlen“."   # kein Link: ein Sprung verließe die Ebene (:target)
+# Einwohner zum 31.12. (IT.NRW, Kommunalprofil Bonn, Stand 15.01.2026, S. 5; Fortschreibung auf Basis des Zensus 2022;
+# dl-de/by-2.0). Ist mit dem Stand seines Jahres, Plan mit dem jüngsten Stand (Entscheidung 02.11.2026).
+EINWOHNER = {2022: 322_221, 2023: 321_680, 2024: 323_336}
+EINWOHNER_QUELLE = ("IT.NRW, Kommunalprofil Bonn (Stand 15.01.2026), Bevölkerung zum 31.12., Fortschreibung auf Basis "
+                    "des Zensus 2022; Datenlizenz Deutschland – Namensnennung – Version 2.0")
 ZAHLWORT = {2: "zwei", 3: "drei", 4: "vier", 5: "fünf", 6: "sechs", 7: "sieben", 8: "acht", 9: "neun", 10: "zehn"}
 
 
@@ -53,6 +63,21 @@ def _euro(x):
 def _betrag(x):
     """Wie _mio; Beträge unter 0,05 Mio. € in Euro, damit sie nicht als 0,0 Mio. € erscheinen."""
     return _euro(x) if abs(x) < 50_000 else _mio(x)
+
+
+def _mio_v(x):
+    """Wie _mio, mit typografischem Minus."""
+    return _mio(x).replace("-", "−")
+
+
+def einwohner(art, jahr):
+    """Einwohnerzahl für eine Ansicht: Ist mit dem 31.12. seines Jahres, Plan mit dem jüngsten Stand."""
+    return EINWOHNER.get(jahr) if art == "ist" else EINWOHNER[max(EINWOHNER)]
+
+
+def _je_ew(x, art, jahr):
+    ew = einwohner(art, jahr)
+    return f"{round(x / ew):,}".replace(",", ".").replace("-", "−") + " € je Einwohner" if ew else ""
 
 
 def ebenen_an():
@@ -136,6 +161,7 @@ def daten(rows=None, aufwand=None, gruppen=None):
     for pb, name in sorted({(r["produktbereich"], r["name"]) for r in rows}):
         t = themen.get(pb)
         p = {"pb": pb, "name": name, **_ist_plan(haushaltsplan.reihe(pb, rows, ZEILE)),
+             "ertrag": _ist_plan(haushaltsplan.reihe(pb, rows, 10)), "ergebnis": _ist_plan(haushaltsplan.reihe(pb, rows, 18)),
              **({"thema": {"titel": t.titel, "pfad": t.pfad, "farben": t.farben}} if t else {})}
         if aufwand and gruppen:
             p["aufwandsarten"] = _arten(pb, aufwand, "produktbereich")
@@ -153,6 +179,8 @@ def daten(rows=None, aufwand=None, gruppen=None):
         + [{"key": f"ist{ist_jahr}", "art": "ist", "jahr": ist_jahr, "titel": f"Ist {ist_jahr}"}]
     for a in ansichten:
         a["summe"] = sum(p[a["art"]][a["jahr"]]["betrag"] for p in pbs if a["jahr"] in p[a["art"]])
+        for k in ("ertrag", "ergebnis"):
+            a[k] = sum(p[k][a["art"]][a["jahr"]]["betrag"] for p in pbs if a["jahr"] in p[k][a["art"]])
     stand = json.loads(haushaltsplan.STAND.read_text(encoding="utf-8"))
     return {"produktbereiche": pbs, "ansichten": ansichten, "abruf": stand["abruf"], "lizenz": stand["lizenz"],
             "zoom": bool(aufwand and gruppen),
@@ -236,6 +264,65 @@ def treemap(d, ansicht, format_):
     return (f'<svg class="hh-svg hh-{format_}" viewBox="0 0 {w} {h}" role="group" '
             f'aria-label="{escape(a["titel"])}: ordentliche Aufwendungen je Produktbereich, zusammen {escape(_mio(a["summe"]))}">'
             + "".join(teile) + "</svg>")
+
+
+def treemap_zuschuss(d, ansicht, format_):
+    """SVG des Zuschussbedarfs (negatives Ergebnis, Zeile 18) je Produktbereich in einer Ansicht; Produktbereiche mit
+    Überschuss haben keine Fläche. Jede Fläche verweist auf die Zeile der Ergebnistabelle (#erg-XX)."""
+    a = ansicht
+    items = sorted(((p, -p["ergebnis"][a["art"]][a["jahr"]]["betrag"]) for p in d["produktbereiche"]
+                    if a["jahr"] in p["ergebnis"][a["art"]] and p["ergebnis"][a["art"]][a["jahr"]]["betrag"] < 0),
+                   key=lambda x: (-x[1], x[0]["pb"]))
+    gesamt = sum(b for _, b in items)
+    w, h = FORMATE[format_]
+    teile = []
+    for (p, b), (x, y, rw, rh) in zip(items, squarify([b for _, b in items], 0, 0, w, h)):
+        label = f'{p["pb"]} {p["name"]}: Zuschussbedarf {_mio(b)}, {_prozent(100 * b / gesamt)} ({a["titel"]})'
+        r = f'x="{x:.1f}" y="{y:.1f}" width="{rw:.1f}" height="{rh:.1f}"'
+        clip = f"hh-erg-{format_}-{p['pb']}"
+        teile.append(f'<a href="#erg-{p["pb"]}" class="s{_stufe(100 * b / gesamt)}" aria-label="{escape(label)}"><title>{escape(label)}</title>'
+                     f'<clipPath id="{clip}"><rect {r}/></clipPath><rect {r} rx="3"/>'
+                     f'<g clip-path="url(#{clip})">{_text(x, y, rw, rh, p["name"], p["pb"], _mio(b))}</g></a>')
+    return (f'<svg class="hh-svg hh-{format_}" viewBox="0 0 {w} {h}" role="group" '
+            f'aria-label="{escape(a["titel"])}: Zuschussbedarf je Produktbereich, zusammen {escape(_mio(gesamt))}">'
+            + "".join(teile) + "</svg>")
+
+
+def _zelle_ew(x, art, jahr):
+    if not x:
+        return "–"
+    return f'{_mio_v(x["betrag"])}<br><small>{_je_ew(x["betrag"], art, jahr)}</small>'
+
+
+def ergebnis(d, root):
+    """Abschnitt „Erträge und Ergebnis“: Treemap des Zuschussbedarfs (erste Ansicht) und zwei Tabellen mit je Einwohner."""
+    ansichten = d["ansichten"]
+    ref = ansichten[0]
+    spalten = [(a["art"], a["jahr"], a["titel"]) for a in reversed(ansichten)]
+    kopf = "".join(f'<th scope="col">{escape(t)}</th>' for *_, t in spalten)
+    pbs = sorted(d["produktbereiche"], key=lambda p: ((p["ergebnis"]["plan"].get(ref["jahr"]) or {"betrag": 0})["betrag"], p["pb"]))
+    ueberschuss = sorted((p for p in pbs if (p["ergebnis"]["plan"].get(ref["jahr"]) or {"betrag": 0})["betrag"] > 0),
+                         key=lambda p: p["pb"])
+    def tabelle(k, anker, titel, summe_text):
+        zeilen = [f'        <tr{f' id="{anker}-{p["pb"]}"' if anker else ""}><th scope="row">{escape(p["pb"])} {escape(p["name"])}</th>'
+                  + "".join(f"<td>{_zelle_ew(p[k][art].get(j), art, j)}</td>" for art, j, _ in spalten) + "</tr>"
+                  for p in pbs]
+        summe = "".join(f'<td>{_mio_v(a[k])}<br><small>{_je_ew(a[k], a["art"], a["jahr"])}</small></td>' for a in reversed(ansichten))
+        return (f'    <table class="hh-tabelle">\n      <caption>{escape(titel)}</caption>\n'
+                f'      <thead><tr><th scope="col">Produktbereich</th>{kopf}</tr></thead>\n      <tbody>\n'
+                + "\n".join(zeilen) + f'\n        <tr class="hh-summe"><th scope="row">{summe_text}</th>{summe}</tr>\n      </tbody>\n    </table>')
+    ew_plan, ew_ist = EINWOHNER[max(EINWOHNER)], einwohner("ist", ansichten[-1]["jahr"])
+    ew = lambda n: f"{n:,}".replace(",", ".")
+    namen = ", ".join(f'{p["pb"]} {escape(p["name"])}' for p in ueberschuss)
+    return f"""    <h2 id="ergebnis">Erträge und Ergebnis</h2>
+    <p>Ein Produktbereich hat Erträge, etwa Gebühren, Zuweisungen und Steuern, und Aufwendungen. Das Ergebnis ist die Differenz. Ist es negativ, nennt die Stadt es Zuschussbedarf: Diesen Teil der Aufwendungen decken Erträge anderer Bereiche, vor allem die Steuern im Produktbereich 16.</p>
+    <figure class="hh-erg">{treemap_zuschuss(d, ref, "breit")}{treemap_zuschuss(d, ref, "hoch")}
+      <figcaption>Zuschussbedarf je Produktbereich, {escape(ref["titel"])}. Jede Fläche ist ein Produktbereich mit negativem Ergebnis; ein Klick führt zur Zeile der Tabelle. Einen Überschuss haben {namen}; sie stehen nur in der Tabelle.</figcaption>
+    </figure>
+    {legende("am Zuschussbedarf")}
+{tabelle("ergebnis", "erg", "Ordentliches Ergebnis vor internen Leistungen (Zeile 18); negativ heißt Zuschussbedarf, positiv Überschuss", "Zusammen (ordentliches Ergebnis)")}
+{tabelle("ertrag", None, "Ordentliche Erträge (Zeile 10)", "Zusammen")}
+    <p class="meta">Je Einwohner ist abgeleitet: Betrag geteilt durch die Einwohnerzahl laut IT.NRW, für das Ist {ew(ew_ist)} (31.12.{ansichten[-1]["jahr"]}), für den Plan der jüngste Stand {ew(ew_plan)} (31.12.{max(EINWOHNER)}). Die Haushaltssatzung nennt mit der Fortschreibung der Stadt 340.226 Einwohner (31.12.2024); damit wären die Werte je Einwohner rund 5 % kleiner. Bei Steuern und Transfers an bestimmte Gruppen ist „je Einwohner“ keine Last je Person.</p>"""
 
 
 def treemap_gruppen(p, ansicht, format_):
@@ -457,6 +544,10 @@ def body(d, root):
         <dt>Betrag</dt><dd>Ordentliche Aufwendungen (Zeile 17 der Teilergebnispläne), nominal in Mio. €, ohne Investitionen.</dd>
         <dt>Plan und Ist</dt><dd>Plan ist der Ansatz, also der Betrag, den der Haushaltsplan für das Jahr vorsieht; Ist ist das Ergebnis laut Haushaltsplan. Beide weichen oft voneinander ab. <a href="{root}begriffe/#haushalt">Weitere Begriffe</a></dd>{begriffe}
         <dt>Farben</dt><dd>Je dunkler eine Fläche, desto größer ihr Anteil an der Summe der Ansicht (Produktbereiche) oder am Produktbereich (Produktgruppen), in fünf Stufen. Die Aufwandsarten haben je eine eigene Farbe.</dd>
+        <dt>Ergebnis</dt><dd>Ordentliche Erträge minus ordentliche Aufwendungen (Zeile 18), vor internen Leistungen. Negativ heißt Zuschussbedarf, positiv Überschuss.</dd>
+        <dt>Produktbereich 16</dt><dd>Allgemeine Finanzwirtschaft: Hier stehen die Steuern und allgemeinen Zuweisungen. Sein Überschuss zeigt vor allem, wie der Haushalt finanziert wird, nicht eine Aufgabe.</dd>
+        <dt>Interne Leistungen</dt><dd>Leistungen, die Bereiche der Verwaltung untereinander verrechnen, etwa für Gebäude oder Personalverwaltung. Sie verschieben Beträge zwischen den Produktbereichen und sind im Ergebnis hier nicht enthalten.</dd>
+        <dt>Je Einwohner</dt><dd>Abgeleitet: Betrag geteilt durch die Einwohnerzahl laut IT.NRW (Angaben unter der Tabelle „Erträge und Ergebnis“).</dd>
         <dt>Themenseiten</dt><dd>Zu {zahl} Produktbereichen gibt es eine Themenseite: {themen}.</dd>
       </dl>
     </details>
@@ -481,11 +572,12 @@ def body(d, root):
         <tr class="hh-summe"><th scope="row">Zusammen</th>{summe}<td>100,0 %</td></tr>
       </tbody>
     </table>
+{ergebnis(d, root)}
     <details class="hh-mehr">
       <summary>Was diese Seite nicht zeigt</summary>
       <ul>
         <li><strong>Einzelne Posten:</strong> {umfang}</li>
-        <li><strong>Erträge und Investitionen:</strong> Die Flächen zeigen nur Aufwendungen, keine Erträge (Zeile 10). Investitionen stehen getrennt in den Teilfinanzplänen.</li>
+        <li><strong>Ertragsarten und Investitionen:</strong> Erträge und Ergebnis stehen nur je Produktbereich, ohne Aufteilung nach Ertragsarten und Produktgruppen. Investitionen stehen getrennt in den Teilfinanzplänen.</li>
         <li><strong>Ausgegliederte Bereiche:</strong> Eigenbetriebe und das Städtische Gebäudemanagement haben eigene Wirtschaftspläne. Interne Leistungen, Umgliederungen und der globale Minderaufwand verschieben Summen zwischen den Bereichen.</li>
         <li><strong>Künftige Jahre:</strong> Die Finanzplanung ab 2027 ist nicht übernommen. Der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht.</li>
         <li><strong>Vorlagen:</strong> Einzelnen Vorlagen ordnet die Seite keine Beträge zu.</li>
@@ -496,6 +588,7 @@ def body(d, root):
       <p>Stadt Bonn, {dateien} (PDF, Teilergebnispläne je Produktbereich; Abruf {_date(d["abruf"])}).</p>
       <p>Ausgelesen mit pipeline/haushaltsplan.py; die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan.{pruefung}</p>
       <p>Lizenz: {escape(d["lizenz"])}.</p>
+      <p>Einwohnerzahlen für „je Einwohner“: {EINWOHNER_QUELLE}.</p>
       <p>Gestaltung nach dem Vorbild der <a href="https://haushaltsdaten.odis-berlin.de/visualisierung/">Berliner Haushaltsdaten</a> (ODIS, Technologiestiftung Berlin).</p>
     </details>
     <p><a href="{root}thema/">Alle Themenseiten</a> · <a href="{root}">Zur Karte</a></p>"""
@@ -521,6 +614,6 @@ def write(site, site_url, page):
     out = site / PFAD / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(page(site_url, PFAD, "Haushalt auf einen Blick – RIS-Karte Bonn",
-                        "Ordentliche Aufwendungen der Stadt Bonn je Produktbereich als Treemap: Plan und Ist aus den "
-                        "Haushaltsplänen, mit Fundstelle.", body(d, "../"), "../", stil(d)), encoding="utf-8")
+                        "Ordentliche Aufwendungen, Erträge und Ergebnis der Stadt Bonn je Produktbereich: Plan und Ist "
+                        "aus den Haushaltsplänen, mit Fundstelle und je Einwohner.", body(d, "../"), "../", stil(d)), encoding="utf-8")
     return [PFAD]

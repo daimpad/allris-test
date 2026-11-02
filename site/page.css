@@ -189,6 +189,8 @@ body:has(.hh-wahl) :is(.page-head, .page, .page-foot) { width: min(1120px, calc(
 .hh-radio:checked + label small { color: #fff; }
 .hh-radio:focus-visible + label { outline: 2px solid var(--accent-fill); outline-offset: 2px; }
 .hh-ansicht { display: none; margin: 4px 0 0; }
+.hh-erg { margin: 4px 0 0; }
+.hh-erg figcaption { font-size: .9rem; color: var(--muted); margin-top: 6px; }
 .hh-radio:nth-of-type(1):checked ~ .hh-karten .hh-v0, .hh-radio:nth-of-type(2):checked ~ .hh-karten .hh-v1,
 .hh-radio:nth-of-type(3):checked ~ .hh-karten .hh-v2 { display: block; }
 .hh-svg { display: block; width: 100%; height: auto; font-family: "Inter", system-ui, sans-serif; }

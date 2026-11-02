@@ -56,7 +56,7 @@ class Seite(unittest.TestCase):
         self.assertEqual(len(self.d["produktbereiche"]), 17)
 
     def test_je_ansicht_und_format_alle_produktbereiche(self):
-        self.assertEqual(self.html.count('<svg class="hh-svg'), 6)
+        self.assertEqual(self.html.count('<svg class="hh-svg'), 6 + 2)   # dazu Zuschussbedarf breit und hoch
         self.assertEqual(len(re.findall(r'<a href="#pb-\d\d" class="s[1-5]" aria-label=', self.html)), 6 * 17)
         self.assertEqual(len(set(re.findall(r'<tr id="(pb-\d\d)"', self.html))), 17)
         self.assertNotIn("2027", self.html.split("Was diese Seite nicht zeigt")[0])   # keine Finanzplanung
@@ -189,11 +189,12 @@ class Ebenen(unittest.TestCase):
         z = abschnitt(self.html, "zoom-04")
         self.assertIn('<a href="#pg-1-04-11" class="s5">', z)   # Theater: 45 % des Produktbereichs
         self.assertIn('<p class="hh-legende">Anteil am Produktbereich:', z)
-        self.assertEqual(self.html.count('<p class="hh-legende">'), 1 + 17)
+        self.assertEqual(self.html.count('<p class="hh-legende">'), 1 + 17 + 1)   # dazu Zuschussbedarf
         self.assertNotRegex(self.html, r'<svg[^>]+ fill=')   # keine Themenfarben mehr an den Flächen
 
     def test_groesse_und_spaltennamen(self):
-        self.assertLess(len(self.html.encode()), 800_000)   # Vorgabe: Seite höchstens etwa 800 KB, ohne Skript
+        # Vorgabe: Seite höchstens etwa 850 KB ohne Skript (bis 02.11.2026 800 KB; Erträge und Ergebnis: +27 KB, gepackt +4 KB)
+        self.assertLess(len(self.html.encode()), 850_000)
         self.assertIn('td:nth-of-type(1)::before { content: "Ist 2023: "; }', hs.stil(self.d))
 
     def test_farben_fest(self):
@@ -201,6 +202,38 @@ class Ebenen(unittest.TestCase):
         farben = dict(re.findall(r"\.hh-f(1[1-6]), \.hh-z1[1-6] > th::before \{ background: (#[0-9a-f]{6}); \}", css))
         self.assertEqual(sorted(farben), ["11", "12", "13", "14", "15", "16"])
         self.assertEqual(len(set(farben.values())), 6)
+
+
+class ErtraegeUndErgebnis(unittest.TestCase):
+    """Erweiterung Phase 1 (Entscheidungen 02.11.2026): Zeile 10 und 18, je Einwohner mit IT.NRW je Jahr."""
+    @classmethod
+    def setUpClass(cls):
+        cls.d = daten(False)
+        cls.html = hs.body(cls.d, "../")
+        cls.teil = cls.html.split('<h2 id="ergebnis">')[1].split('<details class="hh-mehr">')[0]
+
+    def test_summen_wie_gesamtergebnisplan(self):
+        # haushalt/phase0/ERWEITERUNG.md: Plan 2026 Erträge 1.776,1, Ergebnis −108,0 Mio. € (gepp.pdf S. 2)
+        plan26 = self.d["ansichten"][0]
+        self.assertAlmostEqual(plan26["ertrag"] / 1e6, 1776.1, delta=0.1)
+        self.assertAlmostEqual(plan26["ergebnis"] / 1e6, -108.0, delta=0.1)
+        self.assertEqual(plan26["ertrag"] - plan26["summe"], plan26["ergebnis"])
+
+    def test_je_einwohner(self):
+        self.assertEqual(hs.einwohner("plan", 2026), 323_336)   # jüngster Stand 31.12.2024
+        self.assertEqual(hs.einwohner("ist", 2023), 321_680)
+        z = self.teil.split('<tr id="erg-03">')[1].split("</tr>")[0]
+        self.assertIn("−49,3 Mio. €<br><small>−152 € je Einwohner</small>", z)   # −49.254.097 / 323.336
+        self.assertIn("−35,8 Mio. €<br><small>−111 € je Einwohner</small>", z)   # Ist 2023 / 321.680
+
+    def test_zuschussbedarf_ohne_ueberschuesse(self):
+        figur = self.teil.split('<figure class="hh-erg">')[1].split("</figure>")[0]
+        flaechen = re.findall(r'<a href="#erg-(\d\d)"', figur)
+        self.assertEqual(len(flaechen), 2 * 14)   # breit und hoch, je 14 Produktbereiche mit negativem Ergebnis
+        for pb in ("11", "15", "16"):
+            self.assertNotIn(pb, flaechen)
+        self.assertIn("Einen Überschuss haben 11 Ver- und Entsorgung, 15 Wirtschaft und Tourismus, 16 Allgemeine Finanzwirtschaft;", figur)
+        self.assertIn("IT.NRW", self.html)
 
 
 if __name__ == "__main__":
