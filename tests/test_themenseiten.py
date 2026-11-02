@@ -1,7 +1,8 @@
 """Allgemeine Themenseiten (pipeline/themenseiten/, dossier.py, prozessbild.py): Die Kulturseite bleibt nach dem
 Umbau Zeichen für Zeichen gleich (Referenz in tests/referenz/, erzeugt vor dem Umbau am 26.10.2026; am 27.10.2026 um
 die Abschnitte „Haushalt im Produktbereich“ und „Wer berät mit“ sowie die Sprungleiste und den Link auf haushalt/ ergänzt,
-am 28.10.2026 um target="_blank" an externen Links, die Feed-Erkennung im Kopf und den Link auf rss/); dazu die
+am 28.10.2026 um target="_blank" an externen Links, die Feed-Erkennung im Kopf und den Link auf rss/, am 02.11.2026 um den
+Link in die Kachel des Produktbereichs auf haushalt/); dazu die
 Regeln der Zuordnung und ein Thema ohne Phasen."""
 import json
 import re
@@ -394,8 +395,8 @@ class Klima(unittest.TestCase):
 
 
 class Kinder(unittest.TestCase):
-    """Regelentwurf der Themenseite Kinder, Jugend und Familie (themenseiten/kinder.py, Entwurf, Phase 1): Titelregeln,
-    Kitas als Ortsangabe beim Verkehr, Beirat nur mit Kindern oder Jugend im Titel, Ganztag auf der Schulseite."""
+    """Themenseite Kinder, Jugend und Familie (themenseiten/kinder.py): Titelregeln, Kitas als Ortsangabe beim Verkehr,
+    Beirat nur mit Kindern oder Jugend im Titel, Ganztag auf der Schulseite; Regeln A und B nach der Prüfung."""
 
     def setUp(self):
         from pipeline.themenseiten import kinder
@@ -428,6 +429,14 @@ class Kinder(unittest.TestCase):
             "q": v("261916", "Organisationsuntersuchung im Amt für Kinder, Jugend und Familie",
                    amt="51 Amt für Kinder, Jugend und Familie"),
             "r": v("261917", "Zuschuss an den Verband binationaler Familien"),
+            # nach der Prüfung (02.11.2026): A Bauen nicht allein über die Beratung im Ausschuss, B junge Menschen
+            "s": v("261918", "Evaluation Baulandmodell", amt="61 Stadtplanungsamt",
+                   gremien=("Ausschuss für Kinder, Jugend und Familie",), themen=("bauen",)),
+            "t": v("261919", "Überplanmäßige Ausgaben im Dezernat 5", gremien=("Ausschuss für Kinder, Jugend und Familie",)),
+            "u": v("261920", "Evaluation des freien Eintritts für Kinder und Jugendliche während der Sommerferien"),
+            "w": v("261921", "Sichere Mobilität von Kindern und Jugendlichen - Tempo 30", themen=("verkehr",)),
+            "x": v("261922", "Vertretung von Kindern und Jugendlichen im Klimabeirat",
+                   gremien=("Beirat Kinder- und Jugendbeteiligung",)),
         }
         self.d = dossier.daten(self.t, cache, {}, [], "2026-11-02", {})
         self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
@@ -448,8 +457,15 @@ class Kinder(unittest.TestCase):
         self.assertEqual(self.by["261916"], ("weitere", "federführend: 51 Amt für Kinder, Jugend und Familie"))
         self.assertEqual(self.by["261917"][0], "familie")
 
-    def test_entwurf(self):
+    def test_regeln_nach_pruefung(self):
+        self.assertNotIn("261918", self.by)  # A
+        self.assertEqual(self.by["261919"], ("weitere", "Beratung im Ausschuss für Kinder, Jugend und Familie"))
+        self.assertEqual(self.by["261920"], ("weitere", "Titel: „für Kinder und Jugendliche“"))  # B
+        self.assertNotIn("261921", self.by)  # B ohne Verkehr
+        self.assertEqual(self.by["261922"][0], "beteiligung")  # Beirat vor Regel B
+
+    def test_veroeffentlicht(self):
         from pipeline.themenseiten import ENTWUERFE
-        self.assertIn(self.t, ENTWUERFE)
-        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertIn(self.t.key, [t.key for t in ALLE])
+        self.assertNotIn(self.t, ENTWUERFE)
         self.assertEqual([k for k, *_ in self.t.straenge], ["kita", "spiel", "jugend", "familie", "beteiligung", "weitere"])

@@ -39,6 +39,7 @@ HINWEIS = ("Aufwandsarten sind Kontenarten, keine Aufgaben: Sie zeigen, wofür d
            "für Personal oder für Transfers. Bilanzielle Abschreibungen verteilen den Wertverlust von Gebäuden und "
            "Anlagen auf die Jahre; sie fließen nicht als Geld ab.")
 BEGRIFFE = "Begriffe oben unter „So lesen Sie die Zahlen“."   # kein Link: ein Sprung verließe die Ebene (:target)
+ZAHLWORT = {2: "zwei", 3: "drei", 4: "vier", 5: "fünf", 6: "sechs", 7: "sieben", 8: "acht", 9: "neun", 10: "zehn"}
 
 
 def _prozent(x):
@@ -425,8 +426,10 @@ def body(d, root):
                 + f'<td>{_prozent(100 * anteil["betrag"] / ref["summe"]) if anteil else "–"}</td></tr>')
     kopf = "".join(f'<th scope="col">{escape(t)}</th>' for *_, t in spalten)
     summe = "".join(f"<td>{escape(_mio(a['summe']))}</td>" for a in reversed(ansichten))
+    mit_thema = [p for p in d["produktbereiche"] if p.get("thema")]
     themen = ", ".join(f'<a href="{root}{p["thema"]["pfad"]}">{escape(p["thema"]["titel"])}</a> ({p["pb"]})'
-                       for p in d["produktbereiche"] if p.get("thema"))
+                       for p in mit_thema)
+    zahl = ZAHLWORT.get(len(mit_thema), str(len(mit_thema)))
     dateien = ", ".join(f'<a href="{escape(v["seite"])}">Haushaltsplan {escape(a)}</a>' for a, v in sorted(d["ausgaben"].items()))
     if d.get("zoom"):
         klick = ("Ein Klick auf eine Fläche zeigt ihre Unterteilung: erst die Produktgruppen, dann die Aufwandsarten. "
@@ -454,7 +457,7 @@ def body(d, root):
         <dt>Betrag</dt><dd>Ordentliche Aufwendungen (Zeile 17 der Teilergebnispläne), nominal in Mio. €, ohne Investitionen.</dd>
         <dt>Plan und Ist</dt><dd>Plan ist der Ansatz des Haushaltsjahres, Ist das Ergebnis laut Haushaltsplan; beide weichen oft voneinander ab.</dd>{begriffe}
         <dt>Farben</dt><dd>Je dunkler eine Fläche, desto größer ihr Anteil an der Summe der Ansicht (Produktbereiche) oder am Produktbereich (Produktgruppen), in fünf Stufen. Die Aufwandsarten haben je eine eigene Farbe.</dd>
-        <dt>Themenseiten</dt><dd>Zu fünf Produktbereichen gibt es eine Themenseite: {themen}.</dd>
+        <dt>Themenseiten</dt><dd>Zu {zahl} Produktbereichen gibt es eine Themenseite: {themen}.</dd>
       </dl>
     </details>
     <div class="hh-wahl" id="produktbereiche">
