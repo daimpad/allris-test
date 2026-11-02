@@ -327,3 +327,20 @@ test("Tour: alle Schritte bis zum Ende", async () => {
   assert.deepEqual(page.errors, []);
   await page.close();
 });
+
+test("Liste in Schritten zu 50: „Weitere anzeigen“ ergänzt 50 Einträge, Fokus auf dem ersten neuen", async () => {
+  const page = await open("?gebiet=ortsteil:endenich");
+  await page.waitForFunction(() => /\d+ von \d+ Vorlagen/.test(document.querySelector("#count")?.textContent || ""));
+  if (!(await page.locator("#panel-list").isVisible())) await page.locator('.toggle[data-panel="panel-list"]').click();
+  const eintraege = () => page.locator("#papers > li:not(.more):not(.empty-list)").count();
+  assert.equal(await eintraege(), 50);
+  const more = page.locator("#more");
+  assert.match(await more.textContent(), /Weitere 50 von \d+ anzeigen/);
+  await more.focus();
+  await page.keyboard.press("Enter");
+  assert.equal(await eintraege(), 100);
+  const fokusIndex = await page.evaluate(() => [...document.querySelectorAll("#papers > li")].findIndex((li) => li.contains(document.activeElement)));
+  assert.equal(fokusIndex, 50);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});

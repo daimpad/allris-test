@@ -16,7 +16,7 @@
   const OVERVIEW_HINT = "Ganz Bonn: auf der Karte einen Stadtbezirk und dann einen Ortsteil anklicken oder oben ein Gebiet wählen. Die Suche findet Vorlagen in ganz Bonn.";
   const REPO = "https://github.com/daimpad/allris-test";
   const RANK = { hoch: 3, mittel: 2, niedrig: 1 };
-  const LIST_STEP = 200;
+  const LIST_STEP = 50;  // Liste in Schritten zu 50 mit „Weitere … anzeigen“ (Ladezeit Schritt 2, Entscheidung 02.11.2026)
   const MOBILE = matchMedia("(max-width: 900px)");
   const NARROW = matchMedia("(max-width: 1279px)");
   const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -62,8 +62,10 @@
   // heutiges Datum in Bonn (nicht UTC: zwischen 0 und 2 Uhr wäre es sonst der Vortag), bei jedem Aufruf neu
   const heute = () => new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date());
   const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
-  const fmtDate = (iso) => iso ? new Date(iso.length === 10 ? iso + "T12:00:00Z" : iso)
-    .toLocaleDateString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", year: "numeric" }) : "";
+  // Formatierer einmal anlegen: toLocaleDateString mit Optionen baut sie bei jedem Aufruf neu (Ladezeit Schritt 2:
+  // rund 200 ms beim Öffnen eines Gebiets, mobil gedrosselt gemessen)
+  const DATUM = new Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", year: "numeric" });
+  const fmtDate = (iso) => iso ? DATUM.format(new Date(iso.length === 10 ? iso + "T12:00:00Z" : iso)) : "";
   const debounce = (fn, ms) => { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; };
 
   let index = null, zeit = null, geo = {}, meta = null, papers = [], area = null, selected = null, dataStand = null, kontext = null, anliegen = null;
@@ -204,7 +206,9 @@
   // --- Breite von Liste und Vorgang per Ziehgriff ---------------------------------------------------
   const WIDTH = { list: { v: "--list-w", min: 300, max: () => Math.min(680, innerWidth * 0.45), def: 360 },
     detail: { v: "--detail-w", min: 340, max: () => Math.min(760, innerWidth * 0.5), def: 420 } };
-  const widthOf = (k) => parseFloat(getComputedStyle(document.documentElement).getPropertyValue(WIDTH[k].v)) || WIDTH[k].def;
+  // Breite aus dem Inline-Stil (gesetzt von setWidth oder aus dem Speicher), sonst die Vorgabe wie in style.css (:root);
+  // getComputedStyle erzwang hier bei jedem Aufruf eine Stilberechnung (Ladezeit Schritt 2: rund 100 ms im Gebiet)
+  const widthOf = (k) => parseFloat(document.documentElement.style.getPropertyValue(WIDTH[k].v)) || WIDTH[k].def;
   function setWidth(k, px, save) {
     const w = WIDTH[k], v = Math.round(Math.max(w.min, Math.min(w.max(), px)));
     document.documentElement.style.setProperty(w.v, v + "px");
@@ -787,14 +791,16 @@
   const NAV_NONE = "hsl(240, 6%, 82%)";
   const metricValue = (info) => (kKey(navMetric) ? kValue(info, kKey(navMetric))
     : !navMetric ? info.jahr || 0 : info.themen ? (info.themen[navMetric] || [0, 0])[1] : null);
-  const pct = (v) => `${Number(v).toLocaleString("de-DE", { maximumFractionDigits: 0 })} %`;
+  const PROZENT = new Intl.NumberFormat("de-DE", { maximumFractionDigits: 0 });
+  const pct = (v) => `${PROZENT.format(Number(v))} %`;
   const navFill = (info, br) => { const v = metricValue(info); return v == null ? NAV_NONE : step(klass(v, br)); };
   const fact = (a) => (a ? `<br><span class="nav-dim">Auffällig häufig: ${esc(a.label)} (${a.anteil} % hier, ${a.anteil_bonn} % in ganz Bonn)</span>` : "");
   const glassOn = (layer) => { layer.setStyle(GLASS); layer.bringToFront(); layer.getElement()?.setAttribute("filter", "url(#nav-glow)"); };
   const glassOff = (layer, style) => { layer.setStyle(style); layer.getElement()?.removeAttribute("filter"); };
   const bzStyle = (layer) => ({ ...BZ_LINE, fillColor: navFill(bzInfo(layer), bzBreaks) });
   let navBezirke = null, navOrtsteile = null, bonnBounds = null, navDeep = false, navFocus = null, navLabels = null, navMode = null, navLegend = null;
-  const de = (n) => Number(n || 0).toLocaleString("de-DE");
+  const ZAHL = new Intl.NumberFormat("de-DE");
+  const de = (n) => ZAHL.format(Number(n || 0));
   // Zoomstufe, bei der ganz Bonn ins freie Kartenfeld passt; bis dahin sind die Stadtbezirke anklickbar
   function wholeZoom() {
     const p = mapPadding();
@@ -938,7 +944,12 @@
     else if (navFocus) labels(navOrtsteile.getLayers().filter((l) => l.feature.properties.bezirk_bez === navFocus), "nav-label-ot");
     else if (navLabels) { navLabels.remove(); navLabels = null; }
   }
-  const color = (c) => getComputedStyle(document.documentElement).getPropertyValue("--" + c).trim();
+  // CSS-Variablen einmal je Name lesen statt getComputedStyle je Punkt (Ladezeit Schritt 2: rund 120 ms)
+  const farben = new Map();
+  const color = (c) => {
+    if (!farben.has(c)) farben.set(c, getComputedStyle(document.documentElement).getPropertyValue("--" + c).trim());
+    return farben.get(c);
+  };
   function markerColor(p, l) {
     if (colorBy !== "thema") return color(l.confidence);
     const t = (p.themes || [])[0];
@@ -1772,7 +1783,9 @@
     if (area.kind === "bezirk") return area.name;
     return null;
   }
-  const fmtDay = (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("de-DE", { weekday: "short", day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Europe/Berlin" });
+  const TAG = new Intl.DateTimeFormat("de-DE", { weekday: "short", day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Europe/Berlin" });
+  const MONAT = new Intl.DateTimeFormat("de-DE", { month: "long", year: "numeric", timeZone: "Europe/Berlin" });
+  const fmtDay = (iso) => TAG.format(new Date(iso + "T12:00:00Z"));
   function showTermine() {
     if (!zeit) return;
     const box = $("#termine");
@@ -1786,7 +1799,7 @@
     const onAgenda = (m) => papers.filter((p) => p.steps.some((s) => (s.typ === "beratung" || s.typ === "entscheidung") && s.date === m.date && s.label === m.gremium));
     let month = "";
     const items = list.map((m) => {
-      const head = m.date.slice(0, 7) !== month ? `<h3 class="month">${new Date(m.date + "T12:00:00Z").toLocaleDateString("de-DE", { month: "long", year: "numeric" })}</h3>` : "";
+      const head = m.date.slice(0, 7) !== month ? `<h3 class="month">${MONAT.format(new Date(m.date + "T12:00:00Z"))}</h3>` : "";
       month = m.date.slice(0, 7);
       const docs = [link(m.web, "Tagesordnung"), link(m.invitation, "Einladung (PDF)")].filter(Boolean).join(" · ");
       const ps = onAgenda(m);
@@ -2092,7 +2105,15 @@
     });
     $("#f-area").addEventListener("change", (e) => { range = null; if (tl) tl.reset(); loadArea(e.target.value); });
     $("#papers").addEventListener("click", (e) => {
-      if (e.target.closest("#more")) { shown += LIST_STEP; render(); return; }
+      if (e.target.closest("#more")) {
+        // Fokus auf den ersten neu gezeigten Eintrag, damit Tastatur und Vorleseprogramm an der Stelle weitermachen
+        const vorher = shown;
+        shown += LIST_STEP; render();
+        const neu = $("#papers").children[vorher];
+        const ziel = neu && neu.querySelector("button, a[href]");
+        if (ziel) ziel.focus();
+        return;
+      }
       if (e.target.closest("#reset-filters")) { resetFilters(); return; }
       const g = e.target.closest("button[data-gref]");
       if (g) { openGlobal(g.dataset.gref, g.dataset.area); return; }
