@@ -1,8 +1,8 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-besetzung|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|wahlen-rohdaten|wahlen-ausschnitt|haushalt-ausschnitt|haushalt-pruefbogen|haushalt-ebenen|haushalt-pruefbogen-ebenen|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|kinder-stichprobe|soziales-stichprobe|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-besetzung|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|wahlen-rohdaten|wahlen-ausschnitt|haushalt-ausschnitt|haushalt-pruefbogen|haushalt-ebenen|haushalt-pruefbogen-ebenen|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|kinder-stichprobe|soziales-stichprobe|sicherheit-stichprobe|all}"""
 import sys
 
 from . import anliegen, baustellen, besetzung, build, check, dossier, export, fetch, geocode, kandidaten, kontext, haushaltsplan, kurzfassung, seo, soll, stufe_c, verify, wahlen
-from .themenseiten import kinder, klima, kultur, schule, soziales, verkehr, wohnen
+from .themenseiten import kinder, klima, kultur, schule, sicherheit, soziales, verkehr, wohnen
 
 STEPS = {
     "fetch": fetch.fetch_all,
@@ -46,6 +46,7 @@ STEPS = {
     "klima-stichprobe": lambda: dossier.stichprobe(klima.THEMA),  # einmalig: Prüfbogen (Entwurf, aus der Datenbank)
     "kinder-stichprobe": lambda: dossier.stichprobe(kinder.THEMA),  # einmalig: Prüfbogen (Entwurf, aus der Datenbank)
     "soziales-stichprobe": lambda: dossier.stichprobe(soziales.THEMA),  # einmalig: Prüfbogen (Entwurf, aus der Datenbank)
+    "sicherheit-stichprobe": lambda: dossier.stichprobe(sicherheit.THEMA),  # einmalig: Prüfbogen (Entwurf, aus der Datenbank)
     "soll": soll.write,  # Soll-Modell der Prozessebene: Verfahren je Vorgang, Abgleich mit den Beratungen (Audit)  # Baustellen und mögliche Umsetzungen (hoch) für die Seite
 }
 
