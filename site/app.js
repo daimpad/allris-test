@@ -406,6 +406,7 @@
     grau.on("tileload", () => { geladen = true; });
     grau.on("tileerror", () => {
       if (geladen || ++fehler < 2 || kacheln !== grau) return;
+      grau.fire("load");  // wartenden Start (kachelnGeladen) freigeben, statt die volle Wartezeit abzuwarten
       map.removeLayer(grau);
       el.classList.remove("map-grau");
       el.classList.add("map-gray");
