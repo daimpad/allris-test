@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 688,
+  "count": 704,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -16267,6 +16267,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "210135-01 ST",
+    "name": "Wasserstoffstrategie für Bonn",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-03-18",
+    "amt": "20 Stadtkämmerei",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10192"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0737035,
      50.7337687
     ]
@@ -16315,6 +16339,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "210134-01 ST",
+    "name": "Kontaktlose Ausleihe in Bezirksbibliotheken",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-03-04",
+    "amt": "42 Stadtbibliothek",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10111"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.071393,
      50.735432
     ]
@@ -16332,6 +16380,30 @@
     "method": "bebauungsplan",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10123"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "210134",
+    "name": "Kontaktlose Ausleihe in Bezirksbibliotheken",
+    "paper_type": "Antrag",
+    "date": "2021-02-25",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10059"
    }
   },
   {
@@ -16452,6 +16524,30 @@
     "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9253"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.069428,
+     50.731564
+    ]
+   },
+   "properties": {
+    "reference": "202263-01 ST",
+    "name": "Online-Bürgerbefragung zu Tempo 30",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2021-01-28",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Auf dem Hügel",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9571"
    }
   },
   {
@@ -18139,6 +18235,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "200352-1 ST",
+    "name": "Übernahme von Gedenkstätte und NS-Dokumentationszentrum in die Trägerschaft der Stadt Bonn",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-05-18",
+    "amt": "41 Kulturamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6159"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.080328,
      50.72662
     ]
@@ -18475,6 +18595,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "200032-1 ST",
+    "name": "Radschnellweg statt dreispurigem Ausbau des Tausendfüßlers (BAB 565)",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-03-10",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4150"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.064059,
      50.731039
     ]
@@ -18516,6 +18660,30 @@
     "method": "objekt_name",
     "confidence": "niedrig",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5191"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "200352",
+    "name": "Übernahme von Gedenkstätte und NS-Dokumentationszentrum in die Trägerschaft der Stadt Bonn",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-03-09",
+    "amt": "41 Kulturamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4869"
    }
   },
   {
@@ -18588,6 +18756,30 @@
     "method": "strasse+hausnummer",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4679"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "200132-1 ST",
+    "name": "Förderung von regionalen Schnellbussen",
+    "paper_type": "Stellungnahme der Verwaltung",
+    "date": "2020-02-27",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "vererbt",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4911"
    }
   },
   {
@@ -18835,6 +19027,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "200211",
+    "name": "Radschnellweg Bonn-Rhein-Sieg (BAB 565)",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2020-02-10",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4618"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.074839,
      50.728058
     ]
@@ -18849,8 +19065,8 @@
     "level": "strasse",
     "ortsteil": "Endenich",
     "stage": "B",
-    "method": "vererbt",
-    "confidence": "niedrig",
+    "method": "volltext_strasse",
+    "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3982"
    }
   },
@@ -18931,6 +19147,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.078022,
+     50.723774
+    ]
+   },
+   "properties": {
+    "reference": "200196",
+    "name": "Zusammenfassung von Tempo-30-Abschnitten",
+    "paper_type": "Antrag",
+    "date": "2020-02-05",
+    "amt": "01-2 Ratsbüro",
+    "place": "Sebastianstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4578"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.070351,
      50.725238
     ]
@@ -18979,6 +19219,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.06871,
+     50.737339
+    ]
+   },
+   "properties": {
+    "reference": "200120",
+    "name": "Kennzahlen Bonner Büromarkt Kalenderjahr 2019",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2020-01-29",
+    "amt": "03 Amt für Wirtschaftsförderung",
+    "place": "Siemensstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_strasse",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4365"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.064791,
      50.734904
     ]
@@ -18996,6 +19260,30 @@
     "method": "bebauungsplan",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4450"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "200132",
+    "name": "Förderung von regionalen Schnellbussen",
+    "paper_type": "Antrag",
+    "date": "2020-01-28",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4431"
    }
   },
   {
@@ -19188,6 +19476,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3693"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "191019",
+    "name": "Umsetzung der Leitlinien Bürgerbeteiligung - Veröffentlichung der Vorhabenliste",
+    "paper_type": "Beschlussvorlage",
+    "date": "2020-01-13",
+    "amt": "01-1 Bürgerbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3525"
    }
   },
   {
@@ -19723,6 +20035,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "190718",
+    "name": "Klimawandel in Bonn; Erwerb von Klimadaten",
+    "paper_type": "Antrag",
+    "date": "2019-11-13",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2777"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.0708877,
      50.7295937
     ]
@@ -20083,6 +20419,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "190038",
+    "name": "Evaluation von Kunstrasenplätzen (alt: 1911914NV5, FF: Amt 52)",
+    "paper_type": "Beschlussvorlage",
+    "date": "2019-10-17",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=117"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.074839,
      50.728058
     ]
@@ -20172,6 +20532,30 @@
     "method": "oparl_location",
     "confidence": "hoch",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=605"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "190046",
+    "name": "Sport- und Bewegung im Öffentlichen Raum (alt: 1911915NV3, FF: Amt 52)",
+    "paper_type": "Beschlussvorlage",
+    "date": "2019-10-08",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_adjektiv",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=124"
    }
   }
  ]
