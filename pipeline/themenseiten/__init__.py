@@ -4,5 +4,6 @@ pipeline/prozessbild.py für alle Themen gleich. Ein neues Thema erscheint erst 
 (Phase 0, Regelentwurf, Prüfbogen; Vorgehen wie kultur/)."""
 from . import digital, kinder, klima, kultur, schule, sicherheit, soziales, verkehr, wirtschaft, wohnen
 
-ALLE = [kultur.THEMA, verkehr.THEMA, schule.THEMA, wohnen.THEMA, klima.THEMA, kinder.THEMA, soziales.THEMA, sicherheit.THEMA]
-ENTWUERFE = [wirtschaft.THEMA, digital.THEMA]  # nur Prüfbogen (python -m pipeline <key>-stichprobe), keine Seite, kein Export
+ALLE = [kultur.THEMA, verkehr.THEMA, schule.THEMA, wohnen.THEMA, klima.THEMA, kinder.THEMA, soziales.THEMA, sicherheit.THEMA,
+        wirtschaft.THEMA, digital.THEMA]
+ENTWUERFE = []  # nur Prüfbogen (python -m pipeline <key>-stichprobe), keine Seite, kein Export

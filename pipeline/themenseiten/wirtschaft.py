@@ -1,5 +1,6 @@
-"""Themenseite „Wirtschaft und Wissenschaft“ (thema/wirtschaft-und-wissenschaft/), Entwurf. Phase 0 und
-Entscheidungen: themen/phase0/WEITERE.md (Abschnitt c), wirtschaft/PHASE1.md.
+"""Themenseite „Wirtschaft und Wissenschaft“ (thema/wirtschaft-und-wissenschaft/). Phase 0 und Entscheidungen:
+themen/phase0/WEITERE.md (Abschnitt c), wirtschaft/PHASE1.md; Prüfbogen im Gespräch geprüft am 02.11.2026, Regeln
+unverändert (wirtschaft/PRUEFUNG.md).
 
 Eigene Regeln (Entscheidungen 02.11.2026): Amt für Wirtschaftsförderung (03, mit der Abteilung 03-4 Liegenschaften),
 Amt für Internationales und globale Nachhaltigkeit (02), Ausschuss für Wirtschaft, Liegenschaften und Arbeit und
@@ -154,7 +155,9 @@ THEMA = Thema(
     bild_titel="Zeitleiste: Wirtschaft und Wissenschaft in Rat, Hauptausschuss, Wirtschaftsausschuss, "
                "Wissenschaftsausschuss und Bezirksvertretungen",
     feed_text="zu Wirtschaft und Wissenschaft",
-    pruefung_text="Eine Stichprobe von 30 Vorlagen wird vor der Veröffentlichung von Hand geprüft.",
+    pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 02.11.2026 geprüft (Vorschlag einer KI, im Gespräch von "
+                  "Hand bestätigt: 21 passend, 3 teilweise, 1 unpassend; in der Gegenprobe fehlte keine von 5); die "
+                  "Regeln blieben unverändert.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten, Erlöse, Mieten und Zuschüsse stehen in den Dokumenten der Vorlagen und im "
         "Haushaltsplan der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je "

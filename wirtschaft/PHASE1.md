@@ -2,7 +2,7 @@
 
 **Grundlage:** `../themen/phase0/WEITERE.md`, Abschnitt (c), mit den Entscheidungen vom 02.11.2026 (zwei Seiten statt einer; die zweite ist `../digital/PHASE1.md`).
 
-**Stand:** Entwurf (`ENTWUERFE`), keine Seite, kein Export. Veröffentlichung erst nach Prüfung des Prüfbogens.
+**Stand:** geprüft und veröffentlicht am 02.11.2026 (`PRUEFUNG.md`).
 
 **Datenstand:** lokale Datenbank vom 02.11.2026; jüngste Vorlage vom 31.10.2026; Besetzung zum Stichtag 27.10.2026.
 
