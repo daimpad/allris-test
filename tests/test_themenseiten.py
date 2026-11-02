@@ -778,3 +778,263 @@ class Sicherheit(unittest.TestCase):
             self.assertIsNone(k.search(titel), titel)
         for titel in ("Sicherheit am Rheinufer", "Brand in der Innenstadt", "Kirmes in Beuel", "Rettungswagen"):
             self.assertIsNotNone(k.search(titel), titel)
+
+
+def _v(ref, name, amt="01-2 Ratsbüro", abteilung=None, gremien=("Rat",), themen=()):
+    """Vorlage mit Federführung (Abteilung), Themen und ohne Ortsbezug (für die Entwürfe Wirtschaft und Digital)."""
+    p = vorlage(ref, name, amt=amt, gremien=gremien)
+    p["themes"] = [{"theme": t, "method": "stichwort", "evidence": t} for t in themen]
+    p["locations"] = []
+    p["responsibility"] = [{"kind": "federfuehrend", "label": amt, "name": abteilung or amt}]
+    return p
+
+
+class Wirtschaft(unittest.TestCase):
+    """Entwurf der Themenseite Wirtschaft und Wissenschaft (themenseiten/wirtschaft.py): mehrdeutige Wörter
+    („Wirtschaft“, „Liegenschaften“), Liegenschaften ohne Vorlagen der Wohnseite, Amt 02 und Abteilung 03-4, „weitere“
+    ohne Vorlagen anderer Themenseiten, zwei Fachausschüsse, Produktbereich 15."""
+
+    def setUp(self):
+        from pipeline.themenseiten import wirtschaft
+        self.t = wirtschaft.THEMA
+        a03, a02 = "03 Amt für Wirtschaftsförderung", "02 Amt für Internationales und globale Nachhaltigkeit"
+        w, s = wirtschaft.WIRTSCHAFT, wirtschaft.WISSENSCHAFT
+        self.cache = {
+            "a": _v("262100", "Jahreswirtschaftsbericht 2026", amt=a03),
+            "b": _v("262101", "Bonn-Information: Rückblick 2025 und Ausblick auf das Jahr 2026", amt=a03),
+            "c": _v("262102", "Fortsetzung der Zwischennutzung des Viktoriabads ermöglichen", amt=a03,
+                    abteilung="03-4 Liegenschaften"),
+            "d": _v("262103", "Sachstand", amt=a03, abteilung="03-4 Liegenschaften"),
+            "e": _v("262104", "30 Jahre UN-Stadt Bonn", amt=a02),
+            "f": _v("262105", "Hilfe für die Menschen in Cherson", amt=a02),
+            "g": _v("262106", "Grüne-Antrag: Wissenschaft im öffentlichen Raum sichtbarer machen", gremien=(s,)),
+            "h": _v("262107", "Obst- und Gemüseverkaufsstand an der Erwin-Kranz-Halle", amt=a03),
+            "i": _v("262108", "Große Anfrage: Hightech-Standort", gremien=(w,)),
+            "j": _v("262109", "Sachstand zum Antrag", gremien=(w,)),
+            # mehrdeutiges „Wirtschaft“
+            "k": _v("262110", "Wirtschaftsplan des Theater Bonn 2026/27", gremien=(w,)),
+            "l": _v("262111", "Bericht zur haushaltswirtschaftlichen Lage nach dem 3. Quartal 2026", gremien=(w,)),
+            "m": _v("262112", "Anpassung der Regeln in der Parkraumbewirtschaftungszone Nordstadt", gremien=(w,)),
+            "n": _v("262113", "Vertretung der Bundesstadt Bonn in Organen wirtschaftlicher Unternehmen, hier: "
+                              "Aufsichtsrat der Tourismus & Congress GmbH", amt=a03),
+            "o": _v("262114", "Verpachtung städtischer landwirtschaftlicher Flächen"),  # Liegenschaften, nicht Wirtschaft
+            "p": _v("262115", "Wirtschaftsplan SGB 2027; Einsparungen", amt="85-St Stabsstelle"),
+            # mehrdeutiges „Liegenschaften“
+            "q": _v("262116", "Zukunft Bonner Bühnen – Bauliche Zukunft der Theaterliegenschaften", gremien=(w,)),
+            "r": _v("262117", "Große Anfrage: Energieverbrauch kommunaler Liegenschaften", gremien=(w,)),
+            "s": _v("262118", "Statusbericht zum Photovoltaikausbau auf den städtischen Liegenschaften"),
+            "t": _v("262119", "Rahmenvereinbarung über die Lieferung von Schließfachsystemen für die Liegenschaften",
+                    amt="10 Personal- und Organisationsamt"),
+            # Formalien, Sammellisten, Bauanträge
+            "u": _v("262120", "Punkte der nichtöffentlichen Sitzung", amt=a03, gremien=(w,)),
+            "x": _v("262121", "Bestellung der Schriftführung für den Ausschuss für Wirtschaft, Liegenschaften und Arbeit",
+                    amt=a03),
+            "y": _v("262122", "Grundstück in Bonn, Beispielstraße [Hausnummer ausgelassen] - Neubau eines Wohnhauses",
+                    amt="63-0 Besondere Verfahren"),
+            # andere Themenseiten
+            "z": _v("262123", "Beschlussvorlage \"Rhein in Flammen\"", amt="33 Bürgerdienste",
+                    abteilung="33-5 Veranstaltungskoordination und Märkte", gremien=(w,)),
+            "aa": _v("262124", "Weiterführung des moveBonn-Programms (Förderung des betrieblichen Mobilitätsmanagements "
+                               "in Bonner Unternehmen)", amt="61-3 Stadtverkehr"),
+            "ab": _v("262125", "FDP-Große Anfrage: Beethovenhalle", gremien=(w,)),
+            "ac": _v("262126", "Langer Tag der Region 2026 in der Beethovenhalle", amt=a03),
+            "ad": _v("262127", "Sanierung der Kunstrasenplätze gemäß EU-Verordnung"),
+            "ae": _v("262128", "Einwohnerfrage: Trafostation und Glasfaserverteiler am Beispielplatz"),
+        }
+        self.d = dossier.daten(self.t, self.cache, {}, [], "2026-11-02", {})
+        self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_straenge(self):
+        self.assertEqual(self.by["262100"], ("wirtschaft", "Titel: „Jahreswirtschaftsbericht“"))
+        self.assertEqual(self.by["262101"][0], "zentren")
+        self.assertEqual(self.by["262102"], ("liegenschaften", "Titel: „Zwischennutzung“"))
+        self.assertEqual(self.by["262103"], ("liegenschaften", "federführend: 03-4 Liegenschaften"))
+        self.assertEqual(self.by["262104"], ("wissenschaft", "Titel: „UN-Stadt“"))
+        self.assertEqual(self.by["262105"], ("wissenschaft", "federführend: 02 Amt für Internationales und globale "
+                                                             "Nachhaltigkeit"))
+        self.assertEqual(self.by["262106"], ("wissenschaft", "Titel: „Wissenschaft“"))
+        self.assertEqual(self.by["262107"], ("weitere", "federführend: 03 Amt für Wirtschaftsförderung"))
+        self.assertEqual(self.by["262108"][0], "wirtschaft")
+        self.assertEqual(self.by["262109"], ("weitere", "Beratung im Ausschuss für Wirtschaft, Liegenschaften und Arbeit"))
+        self.assertEqual(self.by["262114"], ("liegenschaften", "Titel: „Verpachtung“"))
+        self.assertEqual(self.by["262126"][0], "weitere")  # Veranstaltung in der Beethovenhalle bleibt
+
+    def test_mehrdeutige_woerter(self):
+        for ref in ("262110", "262111", "262112", "262113", "262115", "262116", "262117", "262118", "262119",
+                    "262124", "262125", "262127", "262128"):
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_formalien(self):
+        for ref in ("262120", "262121", "262122"):
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_liegenschaften_ohne_wohnseite(self):
+        from pipeline.themenseiten import wohnen
+        p = _v("262130", "Amerikanischer Club / Ergebnis des 4. Wertgutachtens", amt="03 Amt für Wirtschaftsförderung",
+               abteilung="03-4 Liegenschaften")
+        alt = dossier.zuordnen
+        try:  # die Vorlage steht auf der Wohnseite (nachgebildet): weder Liegenschaften noch „weitere“
+            dossier.zuordnen = lambda t, x, v=None: ("denkmal", "x") if t is wohnen.THEMA else alt(t, x, v)
+            self.assertIsNone(alt(self.t, p))
+        finally:
+            dossier.zuordnen = alt
+        self.assertEqual(dossier.zuordnen(self.t, p)[0], "liegenschaften")
+        regeln = [r for r in self.t.regeln if r.strang == "liegenschaften"]
+        self.assertTrue(regeln and all(r.ohne_seite is wohnen.THEMA for r in regeln))
+
+    def test_andere_seiten_in_weitere(self):
+        self.assertNotIn("262123", self.by)  # „Rhein in Flammen“ steht auf der Seite Sicherheit und Ordnung
+        weitere = [r for r in self.t.regeln if r.strang == "weitere"]
+        self.assertTrue(weitere and all(isinstance(r.ohne_seite, tuple) and len(r.ohne_seite) == len(ALLE)
+                                        for r in weitere))
+
+    def test_entwurf(self):
+        from pipeline.themenseiten import ENTWUERFE
+        self.assertIn(self.t, ENTWUERFE)
+        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertEqual(self.t.pfad, "thema/wirtschaft-und-wissenschaft/")
+        self.assertEqual([k for k, *_ in self.t.straenge],
+                         ["wirtschaft", "zentren", "liegenschaften", "wissenschaft", "weitere"])
+        self.assertEqual(self.t.fachausschuss, ("Ausschuss für Wirtschaft, Liegenschaften und Arbeit",
+                                                "Ausschuss für Wissenschaft, Europa und Internationales"))
+        self.assertEqual(self.t.produktbereich, "15")
+        self.assertEqual(self.t.seit, "2025-11-01")
+        self.assertEqual(self.t.punkt_gremien, ("Rat", "Hauptausschuss", *self.t.fachausschuss))
+        strang, bahnen = {k for k, _, _ in self.t.straenge}, [k for k, _ in self.t.bahnen]
+        self.assertLessEqual({r.strang for r in self.t.regeln}, strang)
+        self.assertLessEqual(set(self.t.punkt_straenge), strang)
+        self.assertLessEqual(set(self.t.bahn_gremien), set(bahnen))
+        self.assertLessEqual({b for b, *_ in self.t.phasen}, set(bahnen))
+        self.assertTrue({"bv", "fach", "finanz", "rat", "wirtschaft", "wissenschaft"} <= set(bahnen))
+        self.assertEqual(sum(self.t.stichprobe_je_strang.values()), 25)
+        self.assertEqual(self.t.stichprobe_pfad.name, "stichprobe_wirtschaft.tsv")
+        self.assertNotIn(self.t.farben, [t.farben for t in ALLE])  # eigene Farben und eigenes Symbol
+        self.assertNotIn(self.t.symbol, [t.symbol for t in ALLE])
+        self.assertIn("WorldCCBonn", "".join(self.t.nicht_gezeigt).replace("World Conference Center Bonn", "WorldCCBonn"))
+
+    def test_kandidat_ohne_teilwoerter(self):
+        k = self.t.kandidat
+        for titel in ("Verpachtung landwirtschaftlicher Flächen", "Parkraumbewirtschaftung in Beuel",
+                      "Bericht zur haushaltswirtschaftlichen Lage", "Gremien in Beteiligungsunternehmen",
+                      "Bauliche Zukunft der Theaterliegenschaften", "Lehrmittel für naturwissenschaftliche Fächer",
+                      "Fortschreibung des Einzelhandelskonzepts", "Arbeitsprogramm des Amts für Umwelt",
+                      "Müllbehälter am Europaring"):
+            self.assertIsNone(k.search(titel), titel)
+        for titel in ("Wirtschaftsplan 2027", "Liegenschaften der Stadt", "Internationale Konferenzen",
+                      "Arbeitsmarkt in Bonn"):
+            self.assertIsNotNone(k.search(titel), titel)
+
+
+class Digital(unittest.TestCase):
+    """Entwurf der Themenseite Digitale Verwaltung (themenseiten/digital.py): Stabsstelle CDO und Abteilung 10-2,
+    vom Amt 10 sonst nur Wörter im Titel, keine Personalangelegenheiten und Büromöbel, „IT“ nur groß, digitale Wirtschaft
+    nur auf der Wirtschaftsseite, kein Haushaltsabschnitt."""
+
+    def setUp(self):
+        from pipeline.themenseiten import digital
+        self.t = digital.THEMA
+        a10, d = "10 Personal- und Organisationsamt", digital.DIGITAL
+        self.cache = {
+            "a": _v("262200", "Dachstrategie Digitale Transformation", amt="Dezernat OB", abteilung="Stabsstelle CDO",
+                    gremien=(d,)),
+            "b": _v("262201", "Sachstand", amt="Dezernat OB", abteilung="Stabsstelle CDO"),
+            "c": _v("262202", "Volt-Dringlichkeitsantrag: Aufarbeitung des IT-Ausfalls bei RegioIT am 3. März 2026",
+                    gremien=(d,)),
+            "e": _v("262203", "Sachstand Beschaffung", amt=a10, abteilung="10-2 IT"),
+            "f": _v("262204", "Benutzungsfreundlichkeit der städtischen Website und des Terminbuchungsportals verbessern"),
+            "g": _v("262205", "Organisationsuntersuchung im Amt für Kinder, Jugend und Familie",
+                    amt="51 Amt für Kinder, Jugend und Familie"),
+            "h": _v("262206", "Einleitungsbeschluss für das Projekt „Kinderspielplatzkontrolle–Digitales "
+                              "Spielplatzmanagement“", amt=a10),
+            "i": _v("262207", "Controllingbericht 2025", amt="33 Bürgerdienste", abteilung="33-4 Dienstleistungszentrum",
+                    gremien=(d,)),
+            # Personalangelegenheiten und Büromaterial (Amt 10)
+            "j": _v("262208", "Wahl einer Beigeordneten bzw. eines Beigeordneten", amt=a10,
+                    abteilung="10-1 Personal- und Organisationsentwicklung"),
+            "k": _v("262209", "Monitoringbericht zur Stellenplan- und personalwirtschaftlichen Entwicklung I/2026",
+                    amt=a10, abteilung="10-1 Personal- und Organisationsentwicklung", gremien=(d,)),
+            "l": _v("262210", "Ausschreibung der Stelle einer bzw. eines Beigeordneten für das Dezernat I", amt=a10),
+            "m": _v("262211", "Einleitung des Vergabeverfahrens für die Lieferung von Bürostühlen", amt=a10,
+                    abteilung="10-3 Zentrale Dienste und internes Mobilitätszentrum"),
+            "n": _v("262212", "Gesundheitsbericht für das Jahr 2025", amt=a10,
+                    abteilung="10-4 Personalservice / Stabstelle Gesundheit"),
+            "o": _v("262213", "Sachstand", amt=a10, abteilung="10-1 Personal- und Organisationsentwicklung"),
+            # „IT“ nur in Großbuchstaben, digitale Wirtschaft, Verkehr, Stadthaus-Areal
+            "p": _v("262214", "Bürgerantrag: Einführung von Kurzzeit-Anwohnerausweisen", amt="33 Bürgerdienste"),
+            "q": _v("262215", "Anmeldeverfahren an den Schulen: Möglichkeit eines Zweit- und Drittwunsches"),
+            "r": _v("262216", "Firmenjubiläum – 10 Jahre Digital Hub Region Bonn AG und Startup Week",
+                    amt="03 Amt für Wirtschaftsförderung"),
+            "s": _v("262217", "Koalitionsantrag: Digitale Fahrgastanzeige an der Haltestelle Universität/Markt",
+                    themen=("verkehr",)),
+            "t": _v("262218", "Zukunft Stadthaus-Areal: Sachstandsbericht"),
+            "u": _v("262219", "Tagesordnungspunkte in nichtöffentlicher Sitzung", amt=a10, gremien=(d,)),
+            "w": _v("262220", "Vertretung der Stadt Bonn im AR der Digital Hub AG", amt="03 Amt für Wirtschaftsförderung"),
+        }
+        self.d = dossier.daten(self.t, self.cache, {}, [], "2026-11-02", {})
+        self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_straenge(self):
+        self.assertEqual(self.by["262200"], ("strategie", "Titel: „Dachstrategie“"))
+        self.assertEqual(self.by["262201"], ("strategie", "federführend: Stabsstelle CDO"))
+        self.assertEqual(self.by["262202"], ("it", "Titel: „IT-Ausfalls“"))
+        self.assertEqual(self.by["262203"], ("it", "federführend: 10-2 IT"))
+        self.assertEqual(self.by["262204"][0], "online")
+        self.assertEqual(self.by["262205"][0], "organisation")
+        self.assertEqual(self.by["262206"], ("it", "Titel: „Digitales“"))
+        self.assertEqual(self.by["262207"], ("weitere", "Beratung im Ausschuss für Digitalisierung, Dienstleistung und "
+                                                        "Verwaltungsmodernisierung"))
+
+    def test_personalangelegenheiten(self):
+        for ref in ("262208", "262209", "262210", "262211", "262212", "262213"):
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_fehltreffer(self):
+        for ref in ("262214", "262215", "262216", "262217", "262218", "262219", "262220"):
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_ohne_wirtschaftsseite(self):
+        from pipeline.themenseiten import wirtschaft
+        self.assertEqual(dossier.zuordnen(wirtschaft.THEMA, self.cache["r"])[0], "wirtschaft")
+        for r in self.t.regeln:  # jede Regel überspringt Vorlagen der Wirtschaftsseite: keine Doppelnennung
+            seiten = r.ohne_seite if isinstance(r.ohne_seite, tuple) else (r.ohne_seite,)
+            self.assertIn(wirtschaft.THEMA, seiten, r.strang)
+
+    def test_ohne_haushaltsabschnitt(self):
+        self.assertIsNone(self.t.produktbereich)
+        self.assertNotIn("haushalt_betraege", self.d)
+        html = dossier.body(self.t, self.d, "../../")
+        self.assertNotIn('id="haushalt-produktbereich"', html)
+        self.assertNotIn("#haushalt-produktbereich", html)
+        self.assertIn('<a href="../../haushalt/">Haushalt auf einen Blick</a>', html)  # Hinweis unter „nicht zeigt“
+        self.assertIn('<a href="#sitzungen">Nächste Sitzungen</a>', html)
+        self.assertNotIn("kachel-haushalt", dossier._kachel(self.t, self.d))
+
+    def test_entwurf(self):
+        from pipeline.themenseiten import ENTWUERFE
+        self.assertIn(self.t, ENTWUERFE)
+        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertEqual(self.t.pfad, "thema/digitale-verwaltung/")
+        self.assertEqual([k for k, *_ in self.t.straenge], ["strategie", "online", "it", "organisation", "weitere"])
+        self.assertEqual(self.t.fachausschuss, "Ausschuss für Digitalisierung, Dienstleistung und "
+                                               "Verwaltungsmodernisierung")
+        self.assertEqual(self.t.seit, "2025-11-01")
+        self.assertEqual(self.t.punkt_gremien, ("Rat", "Hauptausschuss", self.t.fachausschuss))
+        strang, bahnen = {k for k, _, _ in self.t.straenge}, [k for k, _ in self.t.bahnen]
+        self.assertLessEqual({r.strang for r in self.t.regeln}, strang)
+        self.assertLessEqual(set(self.t.punkt_straenge), strang)
+        self.assertLessEqual(set(self.t.bahn_gremien), set(bahnen))
+        self.assertLessEqual({b for b, *_ in self.t.phasen}, set(bahnen))
+        self.assertLessEqual(set(self.t.stichprobe_je_strang), strang)
+        self.assertEqual(sum(self.t.stichprobe_je_strang.values()), 25)
+        from pipeline.themenseiten import wirtschaft
+        andere = [t for t in ALLE] + [wirtschaft.THEMA]
+        self.assertNotIn(self.t.farben, [t.farben for t in andere])
+        self.assertNotIn(self.t.symbol, [t.symbol for t in andere])
+
+    def test_kandidat_ohne_teilwoerter(self):
+        k = self.t.kandidat
+        for titel in ("Kurzzeit-Bewohnerparkausweise", "Zweit- und Drittwunsch", "Stellungnahme der Verwaltung",
+                      "Anbindung der Klinik durch einen Serviceweg"):
+            self.assertIsNone(k.search(titel), titel)
+        for titel in ("IT-Ausfall", "Digitalisierung der Bauaufsicht", "Online-Terminvergabe", "Verwaltungsprozesse"):
+            self.assertIsNotNone(k.search(titel), titel)

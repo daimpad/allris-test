@@ -46,8 +46,9 @@ class Regel:
     - thema: Schlüssel der Themenzuordnung (topics.py, abgeleitet); wie zustaendig
     - bedingung: ein zweites Merkmal, das der Titel zusätzlich nennen muss (z. B. ein Wort für Schule)
     - ohne_thema: Schlüssel der Themenzuordnung; Vorlagen mit diesem Thema überspringen die Regel
-    - ohne_seite: eine andere Themenseite (Thema); Vorlagen, die dort in einem Strang stehen, überspringen die Regel
-      (Regeln der anderen Seite ohne deren Verfahren nach Titel, d. h. ohne verfahren_titel)"""
+    - ohne_seite: eine andere Themenseite (Thema) oder ein Tupel solcher Seiten; Vorlagen, die dort in einem Strang
+      stehen, überspringen die Regel (Regeln der anderen Seite ohne deren Verfahren nach Titel, d. h. ohne
+      verfahren_titel)"""
     strang: str
     stammnummer: str = None
     verfahren_titel: re.Pattern = None
@@ -58,7 +59,7 @@ class Regel:
     sonst: str = None
     bedingung: re.Pattern = None
     ohne_thema: str = None
-    ohne_seite: "Thema" = None
+    ohne_seite: object = None  # Thema oder Tupel von Themen
 
 
 @dataclass(frozen=True)
@@ -182,7 +183,8 @@ def zuordnen(t, p, verfahren=None):
             continue
         if r.ohne_thema and _thema(r.ohne_thema, p):
             continue
-        if r.ohne_seite and zuordnen(r.ohne_seite, p):
+        if r.ohne_seite and any(zuordnen(s, p) for s in (r.ohne_seite if isinstance(r.ohne_seite, tuple)
+                                                          else (r.ohne_seite,))):
             continue
         if r.zustaendig or r.thema:
             grund = _zustaendig(r.zustaendig, p) if r.zustaendig else _thema(r.thema, p)
