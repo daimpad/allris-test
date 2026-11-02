@@ -470,3 +470,165 @@ class Kinder(unittest.TestCase):
         self.assertIn(self.t.key, [t.key for t in ALLE])
         self.assertNotIn(self.t, ENTWUERFE)
         self.assertEqual([k for k, *_ in self.t.straenge], ["kita", "spiel", "jugend", "familie", "beteiligung", "weitere"])
+
+
+class Soziales(unittest.TestCase):
+    """Entwurf der Themenseite Soziales, Gesundheit und Integration (themenseiten/soziales.py): Abgrenzung zu Wohnen
+    (Regel-Feld ohne_seite, Wohnungslosigkeit und Unterkünfte auf beiden Seiten), Fehltreffer vor dem Ziehen des
+    Prüfbogens, Zuschüsse unter „weitere“."""
+
+    def setUp(self):
+        from pipeline.themenseiten import soziales, wohnen
+
+        def v(ref, name, amt="01-2 Ratsbüro", gremien=("Rat",), themen=()):
+            p = vorlage(ref, name, amt=amt, gremien=gremien)
+            p["themes"] = [{"theme": t, "method": "stichwort", "evidence": t} for t in themen]
+            p["locations"] = []
+            return p
+        self.t, self.wohnen = soziales.THEMA, wohnen.THEMA
+        a50, a05 = "50 Amt für Soziales und Wohnen", "05 Amt für Integration und Vielfalt"
+        self.cache = {
+            # Wohnen bleibt auf der Seite Wohnen und Bauen
+            "a": v("261900", "Fortschreibung des Bonner Mietspiegels 2026", amt=a50),
+            "b": v("261901", "Wohnen in Bonn hier: Handlungskonzept Wohnen Bonn", amt=a50),
+            "c": v("261902", "Programm zur Förderung von gemeinwohlorientierten Wohnprojekten", amt=a50),
+            "d": v("261903", "Bebauungsplan Nr. 1234-5 Pflegeheim am Beispielweg", amt="61 Stadtplanungsamt"),
+            # Wohnungslosigkeit und Unterkünfte auf beiden Seiten
+            "e": v("261904", "Grüne-Antrag: Housing First", amt=a50),
+            "f": v("261905", "Wohnungen für Wohnungslose", amt=a50),
+            "g": v("261906", "Satzung über Unterkünfte für obdachlose und geflüchtete Menschen", amt=a50),
+            "h": v("261907", "Wohnprojekt für Wohnungslose", amt=a50),
+            # übrige Vorlagen der Ämter und Ausschüsse
+            "i": v("261908", "Sachstand Personal", amt=a50),
+            "j": v("261909", "Bericht über das Bürgerschaftliche Engagement",
+                   gremien=("Ausschuss für Chancengerechtigkeit und Integration",)),
+            # Fehltreffer vor dem Ziehen des Prüfbogens (02.11.2026)
+            "k": v("261910", "Aufstellung eines Gedenksteins/-tafel"),
+            "l": v("261911", "Pflege und Erneuerung der städtischen Grünflächen"),
+            "m": v("261912", "Arbeitspaket „Migrationsunterstützung UDP“"),
+            "n": v("261913", "Pilotprojekt: Integration von Bordsteinladesäulen in das Stadtgebiet"),
+            "o": v("261914", "Barrierefreier Umbau der Haltestelle Markt"),
+            "p": v("261915", "Barrierefreiheit im Stadthaus", amt=a50),
+            "q": v("261916", "Wahl des/der Vorsitzenden des Ausschusses für Chancengerechtigkeit und Integration",
+                   amt=a05),
+            "r": v("261917", "Bestellung von Mitgliedern des Rates für den Ausschuss für Chancengerechtigkeit und "
+                             "Integration", amt=a05),
+            "s": v("261918", "Künftige Unterbringung des Stadtmuseums"),
+            "t": v("261919", "Dialogforum Biodiversität"),
+            "u": v("261920", "Zuschuss an den Verein Beispiel e.V.", amt=a05),
+            "w": v("261921", "Bezuschussung MobilPass-Tickets aus Bonn-Ausweis-Mitteln", amt=a50),
+            "x": v("261922", "Grüne Anfrage: Zukunft Bonner Tafel"),
+            "y": v("261923", "Seniorenzentren Wirtschaftsplan 2026", amt="Seniorenzentren der Bundesstadt Bonn"),
+            "z": v("261924", "Maßnahmen zur Bewältigung des Drogenkonsums"),
+            "aa": v("261925", "Sicherheit auf dem Radweg vor dem Ärztehaus", themen=("verkehr",)),
+        }
+        self.d = dossier.daten(self.t, self.cache, {}, [], "2026-11-02", {})
+        self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_wohnen_bleibt_auf_der_wohnseite(self):
+        for ref in ("261900", "261901", "261902", "261903"):
+            self.assertNotIn(ref, self.by, ref)
+        self.assertEqual(dossier.zuordnen(self.wohnen, self.cache["a"])[0], "wohnraum")
+
+    def test_wohnungslosigkeit_auf_beiden_seiten(self):
+        self.assertEqual(self.by["261904"], ("armut", "Titel: „Housing First“"))
+        self.assertEqual(self.by["261905"][0], "armut")
+        self.assertEqual(self.by["261906"][0], "gefluechtete")
+        self.assertEqual(self.by["261907"][0], "armut")
+        for k in ("e", "f"):
+            self.assertEqual(dossier.zuordnen(self.wohnen, self.cache[k])[0], "wohnraum")
+
+    def test_weitere_und_zuschuesse(self):
+        self.assertEqual(self.by["261908"], ("weitere", "federführend: 50 Amt für Soziales und Wohnen"))
+        self.assertEqual(self.by["261909"], ("weitere", "Beratung im Ausschuss für Chancengerechtigkeit und Integration"))
+        self.assertEqual(self.by["261920"], ("weitere", "federführend: 05 Amt für Integration und Vielfalt; "
+                                                        "Titel: „Zuschuss an“"))
+        self.assertEqual(self.by["261921"][0], "armut")  # Bezuschussung von Tickets ist kein Zuschuss an Träger
+        self.assertEqual(self.by["261922"][0], "armut")
+        self.assertEqual(self.by["261923"][0], "senioren")
+        self.assertEqual(self.by["261924"][0], "gesundheit")
+        self.assertEqual(self.by["261915"], ("senioren", "federführend: 50 Amt für Soziales und Wohnen; "
+                                                         "Titel: „Barrierefreiheit“"))
+
+    def test_fehltreffer(self):
+        for ref in ("261910", "261911", "261912", "261913", "261914", "261916", "261917", "261918", "261919",
+                    "261925"):
+            self.assertNotIn(ref, self.by, ref)
+
+    def test_regeln_nach_pruefung(self):
+        from pipeline import dossier
+        # A: Friedhöfe und Bestattungswesen nicht, auch bei Mitberatung im ACI; muslimische Bestattungsflächen bleiben
+        p = vorlage("261990", "Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2026",
+                    amt="13 Amt für Umwelt", gremien=("Ausschuss für Chancengerechtigkeit und Integration",))
+        self.assertIsNone(dossier.zuordnen(self.t, p))
+        p = vorlage("261991", "Sicherung einer muslimischen Bestattungsfläche am Nordfriedhof")
+        self.assertEqual(dossier.zuordnen(self.t, p)[0], "integration")
+        # B: soziales Miteinander
+        p = vorlage("261992", "Grüne/Linke-Antrag: Soziales Miteinander in der GGS Medinghoven")
+        self.assertEqual(dossier.zuordnen(self.t, p)[0], "integration")
+
+    def test_veroeffentlicht(self):
+        from pipeline.themenseiten import ENTWUERFE
+        self.assertNotIn(self.t, ENTWUERFE)
+        self.assertIn(self.t.key, [t.key for t in ALLE])
+        self.assertEqual(self.t.fachausschuss, ("Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren",
+                                                "Ausschuss für Chancengerechtigkeit und Integration"))
+        strang = {k for k, _, _ in self.t.straenge}
+        self.assertLessEqual({r.strang for r in self.t.regeln}, strang)
+        self.assertLessEqual(set(self.t.punkt_straenge), strang)
+        self.assertLessEqual(set(self.t.bahn_gremien), {k for k, _ in self.t.bahnen})
+        self.assertEqual(sum(self.t.stichprobe_je_strang.values()), 25)
+
+
+class OhneSeite(unittest.TestCase):
+    """Regel-Feld ohne_seite: Vorlagen, die auf einer anderen Themenseite stehen, überspringen die Regel."""
+
+    def test_ohne_seite(self):
+        andere = dossier.Thema(**{**SCHULE.__dict__, "key": "andere", "regeln": SCHULE.regeln[:1]})  # nur Neubau
+        thema = dossier.Thema(**{**SCHULE.__dict__, "regeln": [
+            dossier.Regel("bau", titel=re.compile(r"Wohnungslos")),
+            dossier.Regel("weitere", zustaendig=dossier.Zustaendig(aemter=("40 ",)), ohne_seite=andere)]})
+        neubau = vorlage("261900", "Neubau der Grundschule", amt="40 Schulamt")
+        personal = vorlage("261901", "Sachstand Personal", amt="40 Schulamt")
+        beides = vorlage("261902", "Neubau einer Unterkunft für Wohnungslose", amt="40 Schulamt")
+        self.assertEqual(dossier.zuordnen(andere, neubau)[0], "bau")
+        self.assertIsNone(dossier.zuordnen(thema, neubau))           # steht auf der anderen Seite
+        self.assertEqual(dossier.zuordnen(thema, personal)[0], "weitere")
+        self.assertEqual(dossier.zuordnen(thema, beides)[0], "bau")   # Regel ohne ohne_seite gilt vorher
+
+
+class MehrereFachausschuesse(unittest.TestCase):
+    """Kasten „Wer berät mit“ mit zwei Ausschüssen (Thema.fachausschuss als Tupel); ein Name bleibt wie bisher."""
+
+    def setUp(self):
+        self.besetzung = {
+            "Sozialausschuss": dict(AUSSCHUSS, name="Sozialausschuss", id="374", ohne_fraktion=8, sachkundig=8),
+            "ACI": dict(AUSSCHUSS, name="ACI", id="368", mitglieder=28, ohne_fraktion=18, sachkundig=0,
+                        vorsitz=[{"name": "Anna Beispiel", "rolle": "Vorsitz IntegrationsA", "fraktion": None}],
+                        ohne_fraktion_rollen=[{"rolle": "Mitglied ACI", "n": 15}, {"rolle": "Vorsitz", "n": 3}]),
+        }
+        self.alt = dossier._besetzung
+        dossier._besetzung = lambda name, seit, orgs, path: self.besetzung.get(name)
+
+    def tearDown(self):
+        dossier._besetzung = self.alt
+
+    def test_str_und_tupel(self):
+        ein = dossier.Thema(**{**SCHULE.__dict__, "fachausschuss": "Sozialausschuss"})
+        zwei = dossier.Thema(**{**SCHULE.__dict__, "fachausschuss": ("Sozialausschuss", "ACI", "fehlt")})
+        self.assertEqual(dossier.fachausschuss(ein, orgs={"x": {}})["id"], "374")
+        self.assertEqual([a["id"] for a in dossier.fachausschuss(zwei, orgs={"x": {}})], ["374", "368"])
+        d = dossier.daten(zwei, {}, {}, [], "2026-11-02", {})
+        self.assertNotIn("fachausschuss", d)
+        html = dossier.body(zwei, d, "../../")
+        self.assertIn('<h2 id="fachausschuss">Wer berät mit</h2>\n    <p>Zu diesem Thema beraten zwei Fachausschüsse:</p>',
+                      html)
+        self.assertIn('<h3 id="fachausschuss-374">Sozialausschuss</h3>', html)
+        self.assertIn('<h3 id="fachausschuss-368">ACI</h3>', html)
+        self.assertIn("<li>ohne Angabe einer Fraktion: 18 (darunter 15 mit der Rolle „Mitglied ACI“, 3 im Vorsitz "
+                      "oder in der Stellvertretung)</li>", html)
+        self.assertIn("<li>ohne Angabe einer Fraktion: 8 (darunter 8 sachkundige Bürger:innen und Einwohner:innen)</li>",
+                      html)
+        self.assertIn("Vorsitz IntegrationsA: Anna Beispiel.", html)
+        self.assertIn('<a href="#fachausschuss">Wer berät mit</a>', html)
+        self.assertEqual(html.count('?prozesse=gremien&amp;gremium='), 2)
