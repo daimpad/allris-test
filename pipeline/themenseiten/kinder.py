@@ -20,25 +20,29 @@ OHNE = "verkehr"  # Kitas und Spielplätze als bloße Ortsangabe (Parken, Querun
 KITA = re.compile(r"\bKita|Kindertages|Kindergarten|Kindergärten|KiBiz|Familienzentr|\bU3\b|Kinderbetreuung|"
                   r"Betreuungs(?:lücke|zeiten|reduktion|angebot)|Tagespflege|Elternbeitr|Jugendamtselternbeirat|"
                   r"vorschulisch", re.I)
-SPIEL = re.compile(r"Spielplatz|Spielplätze|Spielfläche|Sandspiel|Bolzplatz|Skate|Pumptrack|Kletterturm|Spielgerät|"
-                   r"kinderfreundlich", re.I)
+# Skateanlagen, nicht Wettbewerbe im Skateboarding (vor dem Ziehen des Prüfbogens, 02.11.2026)
+SPIEL = re.compile(r"Spielplatz|Spielplätze|Spielfläche|Sandspiel|Bolzplatz|Skateanlage|Skatepark|Pumptrack|Kletterturm|"
+                   r"Spielgerät|kinderfreundlich", re.I)
 BETEILIGUNG = re.compile(r"Kinder- und Jugendbeteiligung|Jugendbeteiligung|Jugendrat|Jugendparlament|Kinderrechte|"
                          r"Jugendrechte|Weltkindertag", re.I)
 JUGEND = re.compile(r"Jugendzentr|Jugendtreff|Jugendarbeit|Jugendförder|Jugendverb|Jugendring|Jugendeinricht|"
                     r"Gewaltprävention|Streetwork|Jugendsozialarbeit|Ferienfreizeit|Ferienangebot|Jugendkultur|"
                     r"Community-Zentr", re.I)
-# „Familie“ nicht im Namen des Amts (steht nicht im Titel) und nicht in Haustypen (Ausschluss)
-FAMILIE = re.compile(r"Frühen? Hilfen|Kinderschutz|Hilfen? zur Erziehung|Jugendhilfe|Inklusionsassistenz|\bFamilie|"
-                     r"Familien(?!fest)|Kinderarmut|kinderstark|Unterhaltsvorschuss|Vormund|Pflegekind|Adoption|"
-                     r"Kinder- und Jugendgesundheit|Elternbefragung|Alleinerziehend", re.I)
+# „Familie“ nicht im Namen des Amts, nicht in „Familienfest“ und nicht in Haustypen (Ausschluss); nicht
+# „Elternbefragung“ (meist zu Schulplätzen) – vor dem Ziehen des Prüfbogens, 02.11.2026
+FAMILIE = re.compile(r"Frühen? Hilfen|Kinderschutz|Hilfen? zur Erziehung|Jugendhilfe|Inklusionsassistenz|"
+                     r"(?<!Jugend und )\bFamilie\b|Familien(?!fest)|Kinderarmut|kinderstark|Unterhaltsvorschuss|Vormund|"
+                     r"Pflegekind|Adoption|Kinder- und Jugendgesundheit|Alleinerziehend", re.I)
 KINDER_JUGEND = re.compile(r"Kinder|Jugend", re.I)
 # Formalien und Sammellisten nichtöffentlicher Punkte; Bauanträge auf Grundstücken; Haustypen; Offener Ganztag und
-# Schulsozialarbeit stehen auf der Schulseite (Entscheidung 02.11.2026)
+# Schulsozialarbeit stehen auf der Schulseite (Entscheidung 02.11.2026); Kitas als bloße Ortsangabe bei Parken,
+# Winterdienst, Laternen, Abfallbehältern und Wahlwerbung (vor dem Ziehen des Prüfbogens, 02.11.2026)
 AUSSCHLUSS = re.compile(r"Tagesordnungspunkte? in nichtöffentlicher Sitzung|Punkte der nichtöffentlichen Sitzung|"
                         r"Bestellung (?:der|zur) Schriftführung|Sitzungstermine|Wahl (?:des|der)[ /].{0,20}Vorsitz|"
                         r"stellvertretenden Vorsitz|Benennung von sachkundigen|Nachbenennung|Ersatzbenennung|"
-                        r"Grundstück in Bonn|(?:Ein|Zwei|Mehr)familien|Offene[nrs]? Ganztag|\bOGS\b|Schulsozialarbeit",
-                        re.I)
+                        r"Entsendung von|Zuständigkeitsordnung|Grundstück in Bonn|(?:Ein|Zwei|Mehr)familien|"
+                        r"Offene[nrs]? Ganztag|\bOGS\b|Schulsozialarbeit|Parksituation|\bParken\b|Halteverbot|"
+                        r"Winterdienst|Straßenlatern|Abfallbehälter|Wahlwerbung", re.I)
 AMT = Zustaendig(aemter=("51 ",), gremien=(AUSSCHUSS, "Unterausschuss für Kinder- und Jugendhilfe"))
 
 THEMA = Thema(

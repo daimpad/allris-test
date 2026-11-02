@@ -420,6 +420,14 @@ class Kinder(unittest.TestCase):
             "k": v("261910", "Neubau eines Einfamilienhauses"),
             "l": v("261911", "Tagesordnungspunkte in nichtöffentlicher Sitzung",
                    gremien=("Ausschuss für Kinder, Jugend und Familie",)),
+            # vor dem Ziehen des Prüfbogens korrigiert (02.11.2026)
+            "m": v("261912", "Antrag: Parksituation Zuwegung Kita In der Raste"),
+            "n": v("261913", "Marktverzeichnis 2026 - Hier: Jubiläums-, Freundes- und Familienfest"),
+            "o": v("261914", "Elternbefragung zum Bedarf an Gesamtschulplätzen"),
+            "p": v("261915", "Deutsche Meisterschaft im Vert Skateboarding 2026"),
+            "q": v("261916", "Organisationsuntersuchung im Amt für Kinder, Jugend und Familie",
+                   amt="51 Amt für Kinder, Jugend und Familie"),
+            "r": v("261917", "Zuschuss an den Verband binationaler Familien"),
         }
         self.d = dossier.daten(self.t, cache, {}, [], "2026-11-02", {})
         self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
@@ -435,8 +443,10 @@ class Kinder(unittest.TestCase):
 
     def test_abgrenzung(self):
         # Kita als Ortsangabe beim Verkehr, Beirat ohne Kinder/Jugend im Titel, Ganztag (Schulseite), Haustyp, Formalien
-        for ref in ("261901", "261907", "261909", "261910", "261911"):
+        for ref in ("261901", "261907", "261909", "261910", "261911", "261912", "261913", "261914", "261915"):
             self.assertNotIn(ref, self.by, ref)
+        self.assertEqual(self.by["261916"], ("weitere", "federführend: 51 Amt für Kinder, Jugend und Familie"))
+        self.assertEqual(self.by["261917"][0], "familie")
 
     def test_entwurf(self):
         from pipeline.themenseiten import ENTWUERFE
