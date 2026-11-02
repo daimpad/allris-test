@@ -391,3 +391,65 @@ class Klima(unittest.TestCase):
         from pipeline.themenseiten import ENTWUERFE
         self.assertIn(self.t.key, [t.key for t in ALLE])
         self.assertNotIn(self.t, ENTWUERFE)
+
+
+class Kinder(unittest.TestCase):
+    """Regelentwurf der Themenseite Kinder, Jugend und Familie (themenseiten/kinder.py, Entwurf, Phase 1): Titelregeln,
+    Kitas als Ortsangabe beim Verkehr, Beirat nur mit Kindern oder Jugend im Titel, Ganztag auf der Schulseite."""
+
+    def setUp(self):
+        from pipeline.themenseiten import kinder
+
+        def v(ref, name, amt="01-2 Ratsbüro", gremien=("Bezirksvertretung Bonn",), themen=()):
+            p = vorlage(ref, name, amt=amt, gremien=gremien)
+            p["themes"] = [{"theme": t, "method": "stichwort", "evidence": t} for t in themen]
+            p["locations"] = []
+            return p
+        self.t = kinder.THEMA
+        cache = {
+            "a": v("261900", "Kita-Neubau an der Riemannstraße"),
+            "b": v("261901", "Halteverbot vor der Kita am Markt", themen=("verkehr",)),
+            "c": v("261902", "Umbau des Kinderspielplatzes Königsberger Weg"),
+            "d": v("261903", "Fortschreibung des Kinder- und Jugendförderplans: Jugendarbeit"),
+            "e": v("261904", "Arbeit der Frühen Hilfen Bonn"),
+            "f": v("261905", "Kinder- und Jugendrechtewoche und Weltkindertag"),
+            "g": v("261906", "Sachstand Personal", amt="51 Amt für Kinder, Jugend und Familie"),
+            "h": v("261907", "Bericht aus dem Beirat", gremien=("Beirat Kinder- und Jugendbeteiligung",)),
+            "i": v("261908", "Wünsche von Kindern an die Stadt", gremien=("Beirat Kinder- und Jugendbeteiligung",)),
+            "j": v("261909", "Ausbau des Offenen Ganztags", amt="51 Amt für Kinder, Jugend und Familie"),
+            "k": v("261910", "Neubau eines Einfamilienhauses"),
+            "l": v("261911", "Tagesordnungspunkte in nichtöffentlicher Sitzung",
+                   gremien=("Ausschuss für Kinder, Jugend und Familie",)),
+            # vor dem Ziehen des Prüfbogens korrigiert (02.11.2026)
+            "m": v("261912", "Antrag: Parksituation Zuwegung Kita In der Raste"),
+            "n": v("261913", "Marktverzeichnis 2026 - Hier: Jubiläums-, Freundes- und Familienfest"),
+            "o": v("261914", "Elternbefragung zum Bedarf an Gesamtschulplätzen"),
+            "p": v("261915", "Deutsche Meisterschaft im Vert Skateboarding 2026"),
+            "q": v("261916", "Organisationsuntersuchung im Amt für Kinder, Jugend und Familie",
+                   amt="51 Amt für Kinder, Jugend und Familie"),
+            "r": v("261917", "Zuschuss an den Verband binationaler Familien"),
+        }
+        self.d = dossier.daten(self.t, cache, {}, [], "2026-11-02", {})
+        self.by = {r["reference"]: (s["key"], r["grund"]) for s in self.d["straenge"] for r in s["vorlagen"]}
+
+    def test_straenge(self):
+        self.assertEqual(self.by["261900"], ("kita", "Titel: „Kita-Neubau“"))
+        self.assertEqual(self.by["261902"][0], "spiel")
+        self.assertEqual(self.by["261903"][0], "jugend")
+        self.assertEqual(self.by["261904"][0], "familie")
+        self.assertEqual(self.by["261905"][0], "beteiligung")
+        self.assertEqual(self.by["261906"], ("weitere", "federführend: 51 Amt für Kinder, Jugend und Familie"))
+        self.assertEqual(self.by["261908"], ("beteiligung", "Beratung im Beirat Kinder- und Jugendbeteiligung; Titel: „Kindern“"))
+
+    def test_abgrenzung(self):
+        # Kita als Ortsangabe beim Verkehr, Beirat ohne Kinder/Jugend im Titel, Ganztag (Schulseite), Haustyp, Formalien
+        for ref in ("261901", "261907", "261909", "261910", "261911", "261912", "261913", "261914", "261915"):
+            self.assertNotIn(ref, self.by, ref)
+        self.assertEqual(self.by["261916"], ("weitere", "federführend: 51 Amt für Kinder, Jugend und Familie"))
+        self.assertEqual(self.by["261917"][0], "familie")
+
+    def test_entwurf(self):
+        from pipeline.themenseiten import ENTWUERFE
+        self.assertIn(self.t, ENTWUERFE)
+        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertEqual([k for k, *_ in self.t.straenge], ["kita", "spiel", "jugend", "familie", "beteiligung", "weitere"])

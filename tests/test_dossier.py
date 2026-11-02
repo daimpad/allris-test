@@ -163,3 +163,20 @@ class Stichprobe(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class GremiumDerSitzung(unittest.TestCase):
+    """Sitzungen ohne Organisation (export.gremium_der_sitzung): Name aus dem Sitzungstitel, bei gleichem Namen ohne
+    Satzzeichen in der Schreibweise des bekannten Gremiums (Sitzung am 25.11.2026: „Kinder-, Jugend“)."""
+
+    def test_ausweichname(self):
+        from pipeline.export import gremium_der_sitzung
+        names = {"gr/6": "Ausschuss für Kinder, Jugend und Familie", "gr/352": "Beirat Kinder- und Jugendbeteiligung"}
+        m = {"name": "Sitzung des Ausschusses für Kinder-, Jugend und Familie", "organization": None}
+        self.assertEqual(gremium_der_sitzung(m, names), "Ausschuss für Kinder, Jugend und Familie")
+        m = {"name": "Sitzung des Beirates Kinder- und Jugendbeteiligung"}
+        self.assertEqual(gremium_der_sitzung(m, names), "Beirat Kinder- und Jugendbeteiligung")
+        m = {"name": "Sitzung des Ausschusses für Neues", "organization": ["gr/999"]}
+        self.assertEqual(gremium_der_sitzung(m, names), "Ausschuss für Neues")
+        self.assertEqual(gremium_der_sitzung({"name": "x", "organization": ["gr/6"]}, names),
+                         "Ausschuss für Kinder, Jugend und Familie")
