@@ -2,7 +2,7 @@
 
 **Grundlage:** `../themen/phase0/WEITERE.md`, Abschnitt (b), mit den Entscheidungen vom 02.11.2026.
 
-**Stand:** Entwurf. `sicherheit` steht in `ENTWUERFE`, nicht in `ALLE`: kein Export, keine Seite. Prüfbogen zur Prüfung im Gespräch.
+**Stand:** geprüft und veröffentlicht am 02.11.2026 (`PRUEFUNG.md`).
 
 **Datenstand:** lokale Datenbank vom 02.11.2026; jüngste Vorlage vom 31.10.2026; Besetzung zum Stichtag 27.10.2026.
 

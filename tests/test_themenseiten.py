@@ -743,10 +743,17 @@ class Sicherheit(unittest.TestCase):
         for ref in ("261922", "261923", "261924", "261925", "261926", "261927", "261928"):
             self.assertNotIn(ref, self.by, ref)
 
-    def test_entwurf(self):
+    def test_regel_a_abfallwirtschaft(self):
+        from pipeline import dossier
+        # Prüfung 02.11.2026: Altpapier und Wertstoffe nicht, auch bei Mitberatung im Sicherheitsausschuss
+        p = vorlage("262090", "Große Anfrage: Einführung smarter Altpapiercontainer mit Füllstandsüberwachung",
+                    gremien=("Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz",))
+        self.assertIsNone(dossier.zuordnen(self.t, p))
+
+    def test_veroeffentlicht(self):
         from pipeline.themenseiten import ENTWUERFE
-        self.assertIn(self.t, ENTWUERFE)
-        self.assertNotIn(self.t.key, [t.key for t in ALLE])
+        self.assertNotIn(self.t, ENTWUERFE)
+        self.assertIn(self.t.key, [t.key for t in ALLE])
         self.assertEqual(self.t.pfad, "thema/sicherheit-und-ordnung/")
         self.assertEqual([k for k, *_ in self.t.straenge],
                          ["feuerwehr", "bevoelkerungsschutz", "ordnung", "veranstaltungen", "weitere"])
@@ -761,8 +768,8 @@ class Sicherheit(unittest.TestCase):
         self.assertLessEqual({b for b, *_ in self.t.phasen}, set(bahnen))
         self.assertTrue({"bv", "fach", "finanz", "rat"} <= set(bahnen))
         self.assertEqual(sum(self.t.stichprobe_je_strang.values()), 25)
-        self.assertNotIn(self.t.farben, [t.farben for t in ALLE])  # eigene Farben
-        self.assertNotIn(self.t.symbol, [t.symbol for t in ALLE])
+        self.assertNotIn(self.t.farben, [t.farben for t in ALLE if t.key != self.t.key])  # eigene Farben
+        self.assertNotIn(self.t.symbol, [t.symbol for t in ALLE if t.key != self.t.key])
 
     def test_kandidat_ohne_teilwoerter(self):
         k = self.t.kandidat

@@ -1,5 +1,6 @@
-"""Themenseite „Sicherheit und Ordnung“ (thema/sicherheit-und-ordnung/), ENTWURF: nur Prüfbogen, keine Seite und kein
-Export. Phase 0 und Entscheidungen: themen/phase0/WEITERE.md (Abschnitt b), sicherheit/PHASE1.md.
+"""Themenseite „Sicherheit und Ordnung“ (thema/sicherheit-und-ordnung/). Phase 0 und Entscheidungen:
+themen/phase0/WEITERE.md (Abschnitt b), sicherheit/PHASE1.md; Prüfbogen im Gespräch geprüft am 02.11.2026, danach
+Regel A (sicherheit/PRUEFUNG.md).
 
 Eigene Regeln (Entscheidungen 02.11.2026): Amt 37 Feuerwehr und Rettungsdienst (alle Abteilungen); vom Amt 33
 Bürgerdienste nur die Abteilungen 33-2 (Ordnungswidrigkeiten, Stadtordnungsdienst), 33-5 (Veranstaltungskoordination
@@ -58,7 +59,10 @@ VERANSTALTUNG = re.compile(r"Kirmes|Pützchens Markt|Marktverzeichnis|Wochenmark
 # (Feuerwehrtopf, Heimatpflege und Brauchtum), Aufsichtsräte, Berichte des Gebäudemanagements über alle Projekte;
 # Verkehr ohne Kartenthema Verkehr (Bewohnerparken, Parksituation, Brötchentaste, Radfahrer, Zweiräder, Tempo und
 # Geschwindigkeit, Stadtbahn) bleibt beim Verkehr (Entscheidung 6; vor dem Ziehen des Prüfbogens)
-AUSSCHLUSS = re.compile(r"Feuerwehrtopf|Heimatpflege|Brauchtum|Erbbauzins|Aufsichtsrat|Vertretung der Bundesstadt Bonn in|"
+# Regel A (Prüfung 02.11.2026): Abfallwirtschaft (Altpapier, Wertstoffe, Müllabfuhr) gehört nicht zum Thema, auch wenn
+# der Sicherheitsausschuss mitberät (262020); illegale Müllablagerung als Ordnungswidrigkeit bleibt
+AUSSCHLUSS = re.compile(r"Altpapier|Wertstoff|Müllabfuhr|Abfallwirtschaft|Abfallgebühr|"
+                        r"Feuerwehrtopf|Heimatpflege|Brauchtum|Erbbauzins|Aufsichtsrat|Vertretung der Bundesstadt Bonn in|"
                         r"Projektberichterstattung des Städtischen Gebäudemanagements|"
                         r"Tagesordnungspunkte? (?:zur Beratung )?in nicht ?öffentlicher Sitzung|"
                         r"Punkte der nichtöffentlichen Sitzung|Bestellung (?:der|zur) Schriftführung|Schriftführer|"
@@ -150,7 +154,8 @@ THEMA = Thema(
     bild_titel="Zeitleiste: Sicherheit und Ordnung in Rat, Hauptausschuss, Sicherheitsausschuss und "
                "Bezirksvertretungen",
     feed_text="zu Sicherheit und Ordnung",
-    pruefung_text="Die Zuordnung ist noch nicht von Hand geprüft.",
+    pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 02.11.2026 im Gespräch geprüft (24 passend, 0 teilweise, "
+                  "1 unpassend; in der Gegenprobe fehlte keine von 5), danach wurden die Regeln ergänzt.",
     nicht_gezeigt=[
         "<strong>Beträge:</strong> Kosten, Gebühren und Vergaben stehen in den Dokumenten der Vorlagen und im "
         "Haushaltsplan der Stadt, nicht in den Daten des Ratsinformationssystems. Die Seite übernimmt keine Beträge je "
