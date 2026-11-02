@@ -456,8 +456,11 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .share { height: 6px; border-radius: 999px; background: linear-gradient(90deg, var(--accent-fill), var(--accent-soft)); }
 .share-wrap { background: rgba(15, 15, 20, 0.05); border-radius: 999px; }
 
-/* Kartenhintergrund grau (Standard) oder farbig; der Filter wirkt nur auf die Kacheln */
+/* Kartenhintergrund grau (Standard, eigene Kacheln) oder farbig (OSM); Rückfall ohne eigene Kacheln: OSM-Kacheln
+   grau gefiltert, der Filter wirkt nur auf die Kacheln */
 #map.map-gray .leaflet-tile-pane { filter: grayscale(1) contrast(.9) brightness(1.08); }
+/* Eigene graue Kacheln: außerhalb des Kachelbereichs die Farbe des Landes (#eee), damit der Rand nicht auffällt */
+#map.map-grau { background: #eee; }
 .map-style { font: 500 13px/1 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); cursor: pointer; }
 .map-legend { font: 400 12.5px/1.4 var(--font-body); color: var(--text); background: var(--surface-strong); border: 1px solid var(--border-alt); border-radius: var(--radius-s); padding: 8px 12px; box-shadow: var(--shadow); }
 /* Legenden übereinander unten links (Flächen, Punkte, Quellen), alle eingeklappt; geöffnet wachsen sie nach oben,
