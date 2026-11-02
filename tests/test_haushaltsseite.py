@@ -80,7 +80,7 @@ class Seite(unittest.TestCase):
                 self.assertFalse(hs.ebenen_an())
 
     def test_themenseiten_verlinkt(self):
-        for pfad in ("thema/kultur-und-haushalt/", "thema/schule-und-bildung/", "thema/klima-und-umwelt/"):
+        for pfad in ("thema/kunst-und-kultur/", "thema/schule-und-bildung/", "thema/klima-und-umwelt/"):
             self.assertIn(f'href="../{pfad}"', self.html)
 
 

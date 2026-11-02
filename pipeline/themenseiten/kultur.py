@@ -1,5 +1,6 @@
-"""Themenseite „Kultur und Haushalt“ (thema/kultur-und-haushalt/): Vorlagen und Verfahren, die mit dem Haushalt
-und der Kulturförderung zusammenhängen. Anlass und Prüfung: kultur/phase0/BERICHT.md, kultur/PRUEFUNG.md.
+"""Themenseite „Kunst und Kultur“ (thema/kunst-und-kultur/, bis 02.11.2026 „Kultur und Haushalt“ unter
+thema/kultur-und-haushalt/, die alte Adresse leitet weiter): Vorlagen und Verfahren zu Kulturförderung, Bühnen und
+Haushalt. Anlass und Prüfung: kultur/phase0/BERICHT.md, kultur/PRUEFUNG.md.
 
 Die Zuordnung der Vorlagen zu den Strängen ist abgeleitet: feste Regeln aus Amt, Gremium, Titel und
 Drucksachennummer (REGELN), je Vorlage mit Grund. Keine Bewertung, keine Beträge je Vorlage, keine Zitate aus den
@@ -27,13 +28,16 @@ KULTUR = Zustaendig(
 
 THEMA = Thema(
     key="kultur",
-    pfad="thema/kultur-und-haushalt/",
-    titel="Kultur und Haushalt",
-    lead="Welche Vorlagen und Verfahren hängen mit dem Haushalt der Stadt Bonn und der Kulturförderung zusammen? "
+    # Name wie die anderen Themenseiten (Entscheidung 02.11.2026); der Strang zum Haushalt bleibt
+    pfad="thema/kunst-und-kultur/",
+    alte_pfade=("thema/kultur-und-haushalt/",),
+    titel="Kunst und Kultur",
+    lead="Welche Vorlagen und Verfahren betreffen Kunst und Kultur in Bonn – die Kulturförderung, die Bühnen und den "
+         "Haushalt der Stadt? "
          "Diese Seite ordnet Vorlagen aus dem Ratsinformationssystem seit Beginn der Wahlperiode ({seit}) und zeigt, "
          "wann und wo darüber beraten wird.",
-    seo_text="Haushalt 2027/2028 und Kulturförderung in Bonn: {n} Vorlagen aus dem Ratsinformationssystem "
-             "in vier Strängen, der Weg des Haushalts und die nächsten Sitzungen.",
+    seo_text="Kunst und Kultur in Bonn: {n} Vorlagen aus dem Ratsinformationssystem zu Kulturförderung, Bühnen und "
+             "Haushalt 2027/2028 in vier Strängen, der Weg des Haushalts und die nächsten Sitzungen.",
     seit="2025-11-01",  # Beginn der 12. Wahlperiode (legislative_terms)
     straenge=[
         ("haushalt", "Haushalt und Konsolidierung",
@@ -80,8 +84,8 @@ THEMA = Thema(
                    "{n} Vorlagen, vor allem Änderungsanträge und Stellungnahmen der Verwaltung.",
     hinweis="Zuordnung zu den Strängen abgeleitet (feste Regeln, je Vorlage mit Grund); Schritte des Haushalts aus "
             "Drucksache 261064 zusammengefasst, keine Zitate",
-    bild_titel="Zeitleiste: Haushalt und Kultur in Rat, Ausschüssen und Bezirksvertretungen",
-    feed_text="zu Haushalt und Kultur",
+    bild_titel="Zeitleiste: Kunst und Kultur in Rat, Ausschüssen und Bezirksvertretungen",
+    feed_text="zu Kunst und Kultur",
     pruefung_text="Eine Stichprobe von 30 Vorlagen wurde am 25.10.2026 von Hand geprüft (keine unpassend), danach "
                   "wurden die Regeln ergänzt.",
     nicht_gezeigt=[

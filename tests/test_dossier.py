@@ -1,4 +1,4 @@
-"""Themenseite „Kultur und Haushalt“ (pipeline/dossier.py): Regeln der Stränge, Daten und Seite."""
+"""Themenseite „Kunst und Kultur“ (pipeline/dossier.py): Regeln der Stränge, Daten und Seite."""
 import csv
 import json
 import sqlite3
@@ -123,7 +123,7 @@ class Seite(unittest.TestCase):
             src.write_text(json.dumps(d))
             self.assertEqual(dossier.write(K, site, "https://example.org/", gebietsseiten._page), [K.pfad])
             html = (site / K.pfad / "index.html").read_text()
-        self.assertIn('<link rel="canonical" href="https://example.org/thema/kultur-und-haushalt/">', html)
+        self.assertIn('<link rel="canonical" href="https://example.org/thema/kunst-und-kultur/">', html)
         self.assertIn('href="../../?gebiet=ortsteil:endenich#261285"', html)
         self.assertIn("Kulturausschuss 10.06.2026: beschlossen", html)
         self.assertIn("01.12.2026, 18:00 Uhr: Kulturausschuss", html)

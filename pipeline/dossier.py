@@ -84,6 +84,7 @@ class Thema:
     pruefung_text: str
     nicht_gezeigt: list       # HTML
     eingeklappt: set = frozenset()
+    alte_pfade: tuple = ()  # frühere Adressen der Seite; dort steht eine Weiterleitung (nicht in der Sitemap)
     leer_ausblenden: set = frozenset()  # diese Stränge erscheinen nicht, solange sie leer sind; die Regel bleibt
     sitzungen_je_gremium: int = 2
     terminplan: str = None    # Drucksache, aus der die Phasen stammen
@@ -610,8 +611,32 @@ def write(t, site, site_url, page):
     head += (f'\n  <link rel="alternate" type="application/atom+xml" title="{escape("RIS-Karte Bonn – " + t.titel)}" '
              f'href="{root}data/export/bonn/dossiers/{t.key}.xml">')
     out.write_text(page(site_url, t.pfad, titel, text, body(t, d, root), root, head), encoding="utf-8")
+    for alt in t.alte_pfade:  # geteilte Links auf die frühere Adresse führen weiter
+        ziel = site / alt / "index.html"
+        ziel.parent.mkdir(parents=True, exist_ok=True)
+        ziel.write_text(weiterleitung(t, site_url), encoding="utf-8")
     print(f"Themenseite {t.titel}: {n} Vorlagen")
     return [t.pfad]
+
+
+def weiterleitung(t, site_url):
+    """Seite unter einer früheren Adresse der Themenseite: leitet sofort weiter, nicht für Suchmaschinen."""
+    neu = escape(site_url + t.pfad)
+    return f"""<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{escape(t.titel)} – RIS-Karte Bonn</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{neu}">
+  <meta http-equiv="refresh" content="0; url={neu}">
+</head>
+<body>
+  <p>Diese Seite heißt jetzt <a href="{neu}">{escape(t.titel)}</a>.</p>
+</body>
+</html>
+"""
 
 
 UEBERSICHT = "thema/"

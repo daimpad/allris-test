@@ -99,7 +99,7 @@ test("Feed-Erkennung: Startseite und Seiten im Kopf; die Karte ergänzt den Gebi
   assert.deepEqual(await feeds(page), ["data/export/bonn/feeds/ganz-bonn.xml", "data/export/bonn/feeds/ortsteil-poppelsdorf.xml"]);
   for (const [pfad, erwartet] of [["rss/", ["data/export/bonn/feeds/ganz-bonn.xml"]],
     ["ortsteil/endenich/", ["data/export/bonn/feeds/ortsteil-endenich.xml", "data/export/bonn/feeds/ganz-bonn.xml"]],
-    ["thema/kultur-und-haushalt/", ["data/export/bonn/dossiers/kultur.xml", "data/export/bonn/feeds/ganz-bonn.xml"]]]) {
+    ["thema/kunst-und-kultur/", ["data/export/bonn/dossiers/kultur.xml", "data/export/bonn/feeds/ganz-bonn.xml"]]]) {
     await page.goto(SITE + pfad);
     assert.deepEqual(await feeds(page), erwartet, pfad);
   }

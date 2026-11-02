@@ -1,5 +1,7 @@
 # Kultur und Haushalt – Phase 1: Themenseite (25.10.2026)
 
+**Nachtrag 02.11.2026:** Die Seite heißt jetzt „Kunst und Kultur“ und liegt unter `thema/kunst-und-kultur/`; die alte Adresse `thema/kultur-und-haushalt/` leitet weiter (Entscheidung des Auftraggebers).
+
 Grundlage: `phase0/BERICHT.md`. Die Seite liegt unter `thema/kultur-und-haushalt/` und erscheint in der Sitemap. Sie ist auch über „Auswertung“ → „Thema: Kultur und Haushalt“ erreichbar.
 
 ## Umsetzung
