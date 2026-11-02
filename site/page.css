@@ -278,3 +278,12 @@ tr[class^="hh-z"] > th::before { content: ""; display: inline-block; width: 12px
 .rss-kopie { margin-left: 6px; padding: 1px 8px; border: 1px solid rgba(109, 40, 217, 0.35); border-radius: 8px; background: #fff; color: var(--accent-ink); font: 600 13px/1.5 "Inter", system-ui, sans-serif; cursor: pointer; }
 .rss-liste .rss-meldung { margin-left: 6px; font-size: 13px; }
 @media (max-width: 600px) { .rss-felder { grid-template-columns: 1fr; gap: 2px; } .rss-felder dd { margin-bottom: 8px; } .rss-knopf { width: 100%; justify-content: center; } }
+
+/* Seite begriffe/ und Akkordeon „Begriffe auf dieser Seite“ (pipeline/begriffsseite.py, 02.11.2026) */
+.page dl.begriffe { margin: 8px 0 16px; }
+.page dl.begriffe dt { font-weight: 600; margin-top: 14px; scroll-margin-top: 16px; }
+.page dl.begriffe dd { margin: 2px 0 0; }
+.page dl.begriffe dd .meta { display: block; margin-top: 2px; }
+.page dl.begriffe dt:target { color: var(--accent-ink); }
+.page dl.begriffe dt:target + dd { border-left: 3px solid var(--accent-ink); padding-left: 8px; }
+.page details.begriffe-acc { margin: 24px 0 8px; }

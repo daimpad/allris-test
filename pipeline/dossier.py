@@ -15,7 +15,7 @@ from datetime import date, timedelta
 from html import escape
 from urllib.parse import quote
 
-from . import besetzung, config, haushaltsplan, maske, process as proc
+from . import begriffsseite, besetzung, config, haushaltsplan, maske, process as proc
 
 FRIST_TAGE = 21  # Anträge, Bürgeranträge und Einwohnerfragen spätestens 21 Tage vor der Sitzung (GeschO §§ 26, 27)
 PUNKT_ARTEN = ("Beschlussvorlage", "Antrag", "Dringlichkeitsantrag")  # Punkte: Beschlüsse und Anträge
@@ -497,6 +497,11 @@ def body(t, d, root):
         + [("sitzungen", "Nächste Sitzungen"), ("mitwirken", "Mitwirken"), ("vorlagen", "Vorlagen nach Strang")]
     sprung = " · ".join(f'<a href="#{k}">{x}</a>' for k, x in ziele)
     nicht = "\n".join(f"      <li>{x}</li>" for x in t.nicht_gezeigt)
+    # Akkordeon „Begriffe auf dieser Seite“ (Entscheidung 02.11.2026): Vorlagenarten, Stände und Ergebnisse der Seite
+    texte = [x for s in d["straenge"] for r in s["vorlagen"]
+             for x in (r.get("paper_type"), r.get("stand"), (r.get("letzte_beratung") or {}).get("result"))]
+    texte += [b.get("result") for p in d.get("punkte") or [] for b in p.get("beratungen") or []]
+    begriffe = begriffsseite.akkordeon(texte, root)
     ink, von, bis = t.farben  # Kopf wie die Kachel der Übersicht thema/ (Symbol und Farbverlauf)
     return f"""    <div class="thema-kopf" style="--k-ink:{ink};--k-von:{von};--k-bis:{bis}">
       <div class="kachel-kopf thema-band">{_svg(t.symbol, "kachel-symbol")}<a class="thema-alle" href="{root}{UEBERSICHT}">Alle Themen</a></div>
@@ -522,7 +527,7 @@ def body(t, d, root):
     <p>{inhalt}</p>
     <p class="meta">Jede Vorlage steht in höchstens einem Strang. Die Zuordnung folgt festen Regeln (Amt, Gremium, Wörter im Titel, Drucksachennummer); der Grund steht je Vorlage dabei. {t.pruefung_text} Der Stand ist aus der Beratungsfolge abgeleitet, Ergebnisse stehen wörtlich wie in der Quelle.</p>
 {chr(10).join(straenge)}
-    <h2>Was diese Seite nicht zeigt</h2>
+{begriffe}    <h2>Was diese Seite nicht zeigt</h2>
     <ul>
 {nicht}
     </ul>

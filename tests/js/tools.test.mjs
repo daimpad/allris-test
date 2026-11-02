@@ -210,7 +210,7 @@ test("hole_vorlage: Felder, Status und Quellen-ID", async () => {
 
 test("hole_prozesslinie: Schritte mit Evidenzstatus und Erläuterung", async () => {
   const p = await tools().run("hole_prozesslinie", { drucksache: "261088" });
-  assert.deepEqual(p.schritte.map((s) => s.schritt), ["Initiierung", "Datum der Vorlage", "Beratung", "Entscheidung", "Folgevorlage"]);
+  assert.deepEqual(p.schritte.map((s) => s.schritt), ["Anstoß", "Datum der Vorlage", "Beratung", "Entscheidung", "Folgevorlage"]);
   const rat = p.schritte[3];
   assert.equal(rat.datum_status, "unklar");
   assert.equal(rat.hinweis, GLOSSAR.hinweise.ohne_sitzung);

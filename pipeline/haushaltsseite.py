@@ -455,7 +455,7 @@ def body(d, root):
       <summary>So lesen Sie die Zahlen</summary>
       <dl>
         <dt>Betrag</dt><dd>Ordentliche Aufwendungen (Zeile 17 der Teilergebnispläne), nominal in Mio. €, ohne Investitionen.</dd>
-        <dt>Plan und Ist</dt><dd>Plan ist der Ansatz des Haushaltsjahres, Ist das Ergebnis laut Haushaltsplan; beide weichen oft voneinander ab.</dd>{begriffe}
+        <dt>Plan und Ist</dt><dd>Plan ist der Ansatz, also der Betrag, den der Haushaltsplan für das Jahr vorsieht; Ist ist das Ergebnis laut Haushaltsplan. Beide weichen oft voneinander ab. <a href="{root}begriffe/#haushalt">Weitere Begriffe</a></dd>{begriffe}
         <dt>Farben</dt><dd>Je dunkler eine Fläche, desto größer ihr Anteil an der Summe der Ansicht (Produktbereiche) oder am Produktbereich (Produktgruppen), in fünf Stufen. Die Aufwandsarten haben je eine eigene Farbe.</dd>
         <dt>Themenseiten</dt><dd>Zu {zahl} Produktbereichen gibt es eine Themenseite: {themen}.</dd>
       </dl>
