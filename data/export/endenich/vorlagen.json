@@ -103261,6 +103261,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die SPD-Fraktion beantragt, dass die Verwaltung Anwohner des Heinz-Stelling-Wegs in einem Termin vor Ort über die geplanten Baumaßnahmen, den Zeitplan, Entwässerung und mögliche Kosten der Wegverbreiterung informiert. Der Antrag ist ein Vorschlag.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-02"
    }
   },
   {
@@ -104485,6 +104490,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Stadt Bonn informiert Anwohner und Grundstückseigentümer der Konradstraße über eine Kanalsanierung ab September 2020. Die Straße wird abschnittsweise gesperrt, Fußgänger und Radfahrer können die Gehwege nutzen. Eigentümer müssen mit Straßenausbaubeiträgen von 3 bis 13,50 Euro pro Quadratmeter rechnen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-02"
    }
   },
   {
