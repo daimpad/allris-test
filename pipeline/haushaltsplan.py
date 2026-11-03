@@ -477,9 +477,9 @@ def pruefsummen(aufwand, gruppen, produktbereiche):
     }
 
 
-def _zellen(kopf_, cols, werte, ausgabe, datei, seite):
+def _zellen(kopf_, cols, werte, ausgabe, datei, seite, namen=None):
     """TSV-Zeilen je Zeile und Spalte ohne Finanzplanung; leere Zellen als 0 mit Vermerk."""
-    namen = {**AUFWANDSARTEN, 17: ZEILEN[17]}
+    namen = namen or {**AUFWANDSARTEN, 17: ZEILEN[17]}
     for nr, ws in werte.items():
         for (art, jahr), w in zip(cols, ws):
             if art == "Planung":   # Finanzplanung ab dem dritten Jahr: nicht übernommen (wie Zeile 17)
@@ -488,12 +488,10 @@ def _zellen(kopf_, cols, werte, ausgabe, datei, seite):
                    "betrag": w or 0, "datei": Path(datei["url"]).name, "seite": seite, "leer": "ja" if w is None else ""}
 
 
-def ebenen():
-    """Pipeline-Schritt `haushalt-ebenen` (einmalig, lokal): data/haushalt/aufwandsarten.tsv (Zeilen 11–16 je
-    Produktbereich, S. 1) und produktgruppen.tsv (Zeilen 11–17 je Produktgruppe), Vermerk in STAND.json. Liest dieselben
-    PDF wie `haushalt-ausschnitt` (SHA-256 laut STAND.json)."""
-    stand = json.loads(STAND.read_text(encoding="utf-8"))
-    aufwand, gruppen, zahl = [], [], {}
+def teilergebnisplaene(stand):
+    """Erste Seite jedes Teilergebnisplans (Produktbereich auf S. 1, danach die Produktgruppen) beider Ausgaben:
+    (Ausgabe, Produktbereich, Produktgruppe oder None, Name, Organisationseinheit, Datei, Seite, Wörter). Bricht ab,
+    wenn eine Seite nicht passt."""
     for ausgabe in AUSGABEN:
         st, gesehen = stand["ausgaben"][ausgabe], set()
         for pb in (f"{i:02d}" for i in range(1, 18)):
@@ -511,15 +509,29 @@ def ebenen():
                 if pg and (not pg.startswith(f"1.{pb}.") or pg in gesehen):
                     raise ValueError(f"{ausgabe} PB {pb} S. {s}: Produktgruppe {pg} unerwartet oder doppelt")
                 gesehen.add(pg)
-                cols, werte = koordinaten(ws, AUFWANDSARTEN if s == 1 else {**AUFWANDSARTEN, 17: ZEILEN[17]})
-                if [f"{a} {j}" for a, j in cols] != st["spalten"]:
-                    raise ValueError(f"{ausgabe} PB {pb} S. {s}: Spalten {cols} weichen von STAND.json ab")
-                if s == 1:
-                    aufwand += _zellen({"produktbereich": pb, "name": datei["name"]}, cols, werte, ausgabe, datei, s)
-                else:
-                    gruppen += _zellen({"produktbereich": pb, "produktgruppe": pg, "name": name, "einheit": einheit or ""},
-                                       cols, werte, ausgabe, datei, s)
-        zahl[ausgabe] = len(gesehen - {None})
+                yield ausgabe, pb, pg, name, einheit, datei, s, ws
+
+
+def _spalten_wie_stand(cols, stand, ausgabe, pb, s):
+    if [f"{a} {j}" for a, j in cols] != stand["ausgaben"][ausgabe]["spalten"]:
+        raise ValueError(f"{ausgabe} PB {pb} S. {s}: Spalten {cols} weichen von STAND.json ab")
+
+
+def ebenen():
+    """Pipeline-Schritt `haushalt-ebenen` (einmalig, lokal): data/haushalt/aufwandsarten.tsv (Zeilen 11–16 je
+    Produktbereich, S. 1) und produktgruppen.tsv (Zeilen 11–17 je Produktgruppe), Vermerk in STAND.json. Liest dieselben
+    PDF wie `haushalt-ausschnitt` (SHA-256 laut STAND.json)."""
+    stand = json.loads(STAND.read_text(encoding="utf-8"))
+    aufwand, gruppen, zahl = [], [], {}
+    for ausgabe, pb, pg, name, einheit, datei, s, ws in teilergebnisplaene(stand):
+        cols, werte = koordinaten(ws, AUFWANDSARTEN if s == 1 else {**AUFWANDSARTEN, 17: ZEILEN[17]})
+        _spalten_wie_stand(cols, stand, ausgabe, pb, s)
+        if s == 1:
+            aufwand += _zellen({"produktbereich": pb, "name": datei["name"]}, cols, werte, ausgabe, datei, s)
+        else:
+            zahl[ausgabe] = zahl.get(ausgabe, 0) + 1
+            gruppen += _zellen({"produktbereich": pb, "produktgruppe": pg, "name": name, "einheit": einheit or ""},
+                               cols, werte, ausgabe, datei, s)
     pruefung = pruefsummen(aufwand, gruppen, lesen())
     for path, kopf_, rows in ((AUFWANDSARTEN_TSV, AUFWANDSARTEN_KOPF, aufwand),
                               (PRODUKTGRUPPEN_TSV, PRODUKTGRUPPEN_KOPF, gruppen)):
@@ -776,24 +788,28 @@ JA_ABWEICHUNG_GESAMT = {(11, 2): -2880675, (17, 2): -2880675, (18, 2): 2880675,
                         (11, 5): 2880675, (17, 5): 2880675, (18, 5): -2880675}
 
 
-def _ja_zellen(kopf_, cols, werte, seite):
+def _ja_zellen(kopf_, cols, werte, seite, namen=None):
     """TSV-Zeilen des Jahresabschlusses je Zeile und Spalte; leere Zellen als 0 mit Vermerk."""
+    namen = namen or JA_ZEILEN
     for nr, ws in werte.items():
         for k, ((art, jahr), w) in enumerate(zip(cols, ws), 1):
             yield {"quelle": JAHRESABSCHLUSS["quelle"], **kopf_, "zeile": nr,
-                   "zeile_name": JA_ZEILEN[nr].replace(" (Zeilen 10 und 17)", ""), "spalte": k, "jahr": jahr, "art": art,
+                   "zeile_name": namen[nr].replace(" (Zeilen 10 und 17)", ""), "spalte": k, "jahr": jahr, "art": art,
                    "betrag_cent": w or 0, "datei": Path(JAHRESABSCHLUSS["url"]).name, "seite": seite,
                    "leer": "ja" if w is None else ""}
 
 
-def jahresabschluss_lesen(seiten):
+def jahresabschluss_lesen(seiten, nummern=None):
     """(Zeilen der Produktbereiche und Produktgruppen, Zeilen der Gesamtergebnisrechnung) aus den Seiten des
-    Jahresabschlusses 2024 Teil 2 (Wortlisten). Liest die erste Seite jeder Teilergebnisrechnung (Zeilen 10–18)."""
+    Jahresabschlusses 2024 Teil 2 (Wortlisten). Liest die erste Seite jeder Teilergebnisrechnung (Zeilen 10–18). Mit
+    nummern andere Zeilen der Teilergebnisrechnungen (Ertragsarten); die Gesamtergebnisrechnung bleibt dann leer."""
     rows, gesamt, gesehen, cols0 = [], [], set(), None
     pb_aktuell = None
     for s, ws in enumerate(seiten, 1):
         texte = {w[4] for w in ws}
         if "Personalaufwendungen" not in texte:
+            continue
+        if "Gesamtergebnisrechnung" in texte and nummern:
             continue
         if "Gesamtergebnisrechnung" in texte:
             if gesamt:
@@ -812,16 +828,17 @@ def jahresabschluss_lesen(seiten):
             elif pb != pb_aktuell or not pg.startswith(f"1.{pb}.") or pg in gesehen:
                 raise ValueError(f"S. {s}: Produktgruppe {pg} unerwartet oder doppelt")
             gesehen.add(pg or pb)
-            cols, werte = koordinaten_ja(ws, JA_ZEILEN)
+            cols, werte = koordinaten_ja(ws, nummern or JA_ZEILEN)
             rows += _ja_zellen({"ebene": "Produktgruppe" if pg else "Produktbereich", "produktbereich": pb,
-                                "produktgruppe": pg or "", "name": name or "", "einheit": einheit or ""}, cols, werte, s)
+                                "produktgruppe": pg or "", "name": name or "", "einheit": einheit or ""}, cols, werte, s,
+                               nummern)
         else:
             raise ValueError(f"S. {s}: Seite mit Personalaufwendungen weder Teil- noch Gesamtergebnisrechnung")
         if cols0 is None:
             cols0 = cols
         elif cols != cols0:
             raise ValueError(f"S. {s}: Spalten {cols} weichen von {cols0} ab")
-    if not gesamt:
+    if not gesamt and not nummern:
         raise ValueError("Gesamtergebnisrechnung nicht gefunden")
     return rows, gesamt
 
@@ -1380,3 +1397,151 @@ def pruefbogen_erweiterung_finanz():
                      "auswahl", "pruefung"])
         wr.writerows(out)
     print(f"Prüfbogen Erweiterung (Finanzrechnung): {len(out)} Zellen → {ERWEITERUNG_PRUEFBOGEN_FINANZ}")
+
+
+# --- Ertragsarten (Option 5, Entscheidungen 03.11.2026; haushalt/PHASE6.md) ---------------------------------------
+ERTRAGSARTEN = {1: "Steuern und ähnliche Abgaben", 2: "Zuwendungen und allgemeine Umlagen", 3: "Sonstige Transfererträge",
+                4: "Öffentlich-rechtliche Leistungsentgelte", 5: "Privatrechtliche Leistungsentgelte",
+                6: "Kostenerstattungen und Kostenumlagen", 7: "Sonstige ordentliche Erträge", 8: "Aktivierte Eigenleistungen",
+                9: "Bestandsveränderungen"}
+ERTRAGSARTEN_TSV = ORDNER / "ertragsarten.tsv"
+ERTRAGSARTEN_KOPF = ["ebene", "ausgabe", "produktbereich", "produktgruppe", "name", "einheit", "zeile", "zeile_name",
+                     "jahr", "art", "betrag", "datei", "seite", "leer"]
+JA_ERTRAGSARTEN_TSV = ORDNER / "jahresabschluss_ertragsarten.tsv"
+ERTRAGSARTEN_FREIGEGEBEN = True   # Prüfbogen im Gespräch bestätigt, freigegeben 03.11.2026 (haushalt/PHASE6.md)
+ERTRAGSARTEN_PRUEFBOGEN = config.EXPORT / "haushalt" / "pruefbogen_haushalt_ertragsarten.tsv"
+
+
+def ertragsarten_an():
+    return ERTRAGSARTEN_FREIGEGEBEN or os.environ.get("HAUSHALT_ERTRAGSARTEN") == "vorschau"
+
+
+def pruefsummen_ertragsarten(plan, ja, produktbereiche, ja_rows):
+    """Prüfsummen der Ertragsarten je Spalte; bricht bei Abweichung ab: Zeilen 1–9 = Zeile 10 (Produktbereich und
+    Produktgruppe), Zeile 10 = Zeile 10 aus produktbereiche.tsv bzw. jahresabschluss.tsv, Summe der Produktgruppen =
+    Produktbereich (Zeile 10)."""
+    einheit = lambda r: r["produktgruppe"] if r["ebene"] == "Produktgruppe" else r["produktbereich"]
+    k_plan = lambda r: (r["ebene"], r["ausgabe"], einheit(r), int(r["jahr"]), r["art"])
+    k_ja = lambda r: (r["ebene"], einheit(r), int(r["spalte"]))
+    out = {}
+    for name, rows, key, wert, tol in (("Haushaltsplan", plan, k_plan, lambda r: int(r["betrag"]), TOLERANZ),
+                                       ("Jahresabschluss", ja, k_ja, lambda r: int(r["betrag_cent"]), TOLERANZ_CENT)):
+        z10 = {key(r): wert(r) for r in rows if int(r["zeile"]) == 10}
+        out[f"ertragsarten_{name.lower()}"] = pruefsumme([(key(r), wert(r)) for r in rows if int(r["zeile"]) != 10], z10,
+                                                         f"Ertragsarten {name}", tol, "Zeile 10")
+        # Summe der Produktgruppen = Produktbereich; Schlüssel ohne Ebene, Einheit → Produktbereich (1.04.07 → 04)
+        pb_key = (lambda k: (k[1], k[2][2:4] if k[0] == "Produktgruppe" else k[2]) + k[3:]) if name == "Haushaltsplan" \
+            else (lambda k: (k[1][2:4] if k[0] == "Produktgruppe" else k[1],) + k[2:])
+        gruppen = [(pb_key(k), v) for k, v in z10.items() if k[0] == "Produktgruppe"]
+        mit_pg = {k for k, _ in gruppen}
+        out[f"produktgruppen_{name.lower()}"] = pruefsumme(
+            gruppen, {pb_key(k): v for k, v in z10.items() if k[0] == "Produktbereich" and pb_key(k) in mit_pg},
+            f"Produktgruppen {name}", tol, "Zeile 10 des Produktbereichs")
+    ref = {("Produktbereich", r["ausgabe"], r["produktbereich"], int(r["jahr"]), r["art"]): int(r["betrag"])
+           for r in produktbereiche if int(r["zeile"]) == 10}
+    gelesen = {k_plan(r): int(r["betrag"]) for r in plan if int(r["zeile"]) == 10 and r["ebene"] == "Produktbereich"}
+    out["zeile10_produktbereiche_tsv"] = pruefsumme(list(gelesen.items()), {k: v for k, v in ref.items() if k in gelesen},
+                                                    "Zeile 10 gegen produktbereiche.tsv", 0, "produktbereiche.tsv")
+    ref_ja = {k_ja(r): int(r["betrag_cent"]) for r in ja_rows if int(r["zeile"]) == 10}
+    gelesen_ja = {k_ja(r): int(r["betrag_cent"]) for r in ja if int(r["zeile"]) == 10}
+    out["zeile10_jahresabschluss_tsv"] = pruefsumme(list(gelesen_ja.items()), ref_ja, "Zeile 10 gegen jahresabschluss.tsv",
+                                                    0, "jahresabschluss.tsv")
+    return out
+
+
+def ertragsarten():
+    """Pipeline-Schritt `haushalt-ertragsarten` (einmalig, lokal, pdftotext -bbox): data/haushalt/ertragsarten.tsv
+    (Zeilen 1–10 je Produktbereich und Produktgruppe aus beiden Haushaltsplänen, Euro, ohne Finanzplanung) und
+    jahresabschluss_ertragsarten.tsv (dieselben Zeilen aus den Teilergebnisrechnungen des Jahresabschlusses 2024, alle
+    sechs Spalten, Cent); Prüfsummen und Vermerk in STAND.json."""
+    stand = json.loads(STAND.read_text(encoding="utf-8"))
+    nummern = {**ERTRAGSARTEN, 10: ZEILEN[10]}
+    plan = []
+    for ausgabe, pb, pg, name, einheit, datei, s, ws in teilergebnisplaene(stand):
+        cols, werte = koordinaten(ws, nummern)
+        _spalten_wie_stand(cols, stand, ausgabe, pb, s)
+        kopf_ = {"ebene": "Produktgruppe" if pg else "Produktbereich", "produktbereich": pb, "produktgruppe": pg or "",
+                 "name": name if pg else datei["name"], "einheit": (einheit or "") if pg else ""}
+        plan += _zellen(kopf_, cols, werte, ausgabe, datei, s, nummern)
+    ja, _ = jahresabschluss_lesen(_seiten(_pdf(JAHRESABSCHLUSS["url"], JAHRESABSCHLUSS["sha256"])), nummern)
+    pruefung = pruefsummen_ertragsarten(plan, ja, lesen(), lesen(JAHRESABSCHLUSS_TSV))
+    _schreiben(ERTRAGSARTEN_TSV, ERTRAGSARTEN_KOPF, plan)
+    _schreiben(JA_ERTRAGSARTEN_TSV, JAHRESABSCHLUSS_KOPF, ja)
+    stand["ertragsarten"] = {
+        "abruf": datetime.now(timezone.utc).date().isoformat(), "zeilen": {str(k): v for k, v in ERTRAGSARTEN.items()},
+        "haushaltsplan": {"werte": len(plan), "leere_zellen": sum(r["leer"] == "ja" for r in plan)},
+        "jahresabschluss": {"werte": len(ja), "leere_zellen": sum(r["leer"] == "ja" for r in ja),
+                            "datei": "wie jahresabschluss → datei (SHA-256 geprüft)"},
+        "pruefsummen": {k: {"spalten": n, "groesste_abweichung": a} for k, (n, a) in pruefung.items()},
+        "toleranz_euro": TOLERANZ, "toleranz_cent": TOLERANZ_CENT}
+    STAND.write_text(json.dumps(stand, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"Ertragsarten: {len(plan)} Werte aus den Haushaltsplänen, {len(ja)} aus dem Jahresabschluss; Prüfsummen "
+          + ", ".join(f"{k} {n} Spalten bis {a}" for k, (n, a) in pruefung.items()))
+
+
+def pruefbogen_ertragsarten():
+    """Pipeline-Schritt `haushalt-pruefbogen-ertragsarten` (einmalig): etwa 30 Zellen aus ertragsarten.tsv und
+    jahresabschluss_ertragsarten.tsv zur Prüfung von Hand gegen das PDF, mit Link auf die Seite: negative Werte,
+    teilweise gefüllte Zeilen, größte Werte (Steuern, Zuwendungen), aktivierte Eigenleistungen, PB 03 und eine
+    Stichprobe über die Produktbereiche, je aus Plan 2026, Plan 2025, Ist 2023 und Ist 2024. Wird nicht überschrieben."""
+    if ERTRAGSARTEN_PRUEFBOGEN.exists():
+        print(f"Prüfbogen besteht bereits: {ERTRAGSARTEN_PRUEFBOGEN}")
+        return
+    stand = json.loads(STAND.read_text(encoding="utf-8"))
+    einheit = lambda r: r["produktgruppe"] or r["produktbereich"]
+    neu = max(AUSGABEN)
+    j26, j25 = int(neu.split("/")[1]), int(neu.split("/")[0])
+    gezeigt = {(j26, "Ansatz"), (j25, "Ansatz"), (j25 - 2, "Ergebnis")}   # wie haushalt/ (Ist 2023 aus 2025/2026)
+    plan = {(r["ebene"], einheit(r), int(r["zeile"]), int(r["jahr"]), r["art"]): r for r in lesen(ERTRAGSARTEN_TSV)
+            if r["ausgabe"] == neu and (int(r["jahr"]), r["art"]) in gezeigt and int(r["zeile"]) <= 9}
+    ja = {(r["ebene"], einheit(r), int(r["zeile"]), 2024, "Ergebnis"): r for r in lesen(JA_ERTRAGSARTEN_TSV)
+          if r["spalte"] == "4" and int(r["zeile"]) <= 9}
+    b = lambda q, k: int(q[k]["betrag"]) if q is plan else int(q[k]["betrag_cent"])
+    auswahl = {}
+    def nimm(q, k, grund):
+        auswahl.setdefault((id(q) == id(ja), k), [q, []])[1].append(grund)
+    for q, name in ((plan, "Haushaltsplan"), (ja, "Jahresabschluss")):
+        neg = sorted(k for k in q if b(q, k) < 0)
+        for k in [k for k in neg if k[0] == "Produktbereich"][:2] + [k for k in neg if k[0] == "Produktgruppe"][:2]:
+            nimm(q, k, f"negativer Wert ({name})")
+        for nr, grund in ((1, "größte Steuern"), (2, "größte Zuwendungen"), (4, "größte öffentlich-rechtliche Leistungsentgelte")):
+            k = max((k for k in q if k[0] == "Produktgruppe" and k[2] == nr), key=lambda k: b(q, k))
+            nimm(q, k, f"{grund} ({name})")
+        k = next((k for k in sorted(q) if k[2] == 8 and b(q, k) > 0), None)
+        if k:
+            nimm(q, k, f"aktivierte Eigenleistungen ({name})")
+        zeilen = defaultdict(list)
+        for k in sorted(q):
+            zeilen[k[:3]].append(k)
+        ks = next(ks for z, ks in zeilen.items() if z[0] == "Produktgruppe" and len({q[k]["leer"] for k in ks}) == 2) if q is plan else []
+        for k in (ks and (next(k for k in ks if not q[k]["leer"]), next(k for k in ks if q[k]["leer"])) or ()):
+            nimm(q, k, "teilweise gefüllte Zeile")
+    for nr in (4, 6):
+        nimm(plan, ("Produktbereich", "03", nr, j26, "Ansatz"), "PB 03, Plan 2026")
+        nimm(ja, ("Produktbereich", "03", nr, 2024, "Ergebnis"), "PB 03, Ist 2024")
+    gruppen = sorted({k[1] for k in plan if k[0] == "Produktgruppe"})
+    for i, pb in enumerate(f"{n:02d}" for n in range(2, 18, 3)):
+        pgs = [g for g in gruppen if g.startswith(f"1.{pb}.")]
+        jahr, art = sorted(gezeigt)[i % 3]
+        k = ("Produktgruppe", pgs[i % len(pgs)], (2, 4, 5, 6, 7, 3)[i], jahr, art)
+        if k in plan:
+            nimm(plan, k, "Stichprobe")
+    out = []
+    for (aus_ja, k), (q, gruende) in sorted(auswahl.items(), key=lambda x: (x[0][0], x[0][1])):
+        r = q[k]
+        if aus_ja:
+            quelle, url, betrag = JAHRESABSCHLUSS["quelle"], JAHRESABSCHLUSS["url"], _wie_im_pdf(int(r["betrag_cent"]), True)
+            spalte = r["spalte"]
+        else:
+            quelle, betrag = f"Haushaltsplan {neu}", _wie_im_pdf(int(r["betrag"]), False)
+            url = stand["ausgaben"][neu]["dateien"][r["produktbereich"]]["url"]
+            spalte = stand["ausgaben"][neu]["spalten"].index(f'{r["art"]} {r["jahr"]}') + 1
+        out.append([r["ebene"], f"{einheit(r)} {r['name']}", f"{r['zeile']} {r['zeile_name']}", r["jahr"], r["art"],
+                    spalte, betrag, r["leer"], quelle, f"{url}#page={r['seite']}", r["seite"], ", ".join(gruende), ""])
+    ERTRAGSARTEN_PRUEFBOGEN.parent.mkdir(parents=True, exist_ok=True)
+    with open(ERTRAGSARTEN_PRUEFBOGEN, "w", newline="", encoding="utf-8") as f:
+        wr = csv.writer(f, delimiter="\t", lineterminator="\n")
+        wr.writerow(["ebene", "einheit", "zeile", "jahr", "art", "spalte", "betrag", "leer", "quelle", "datei", "seite",
+                     "auswahl", "pruefung"])
+        wr.writerows(out)
+    print(f"Prüfbogen Ertragsarten: {len(out)} Zellen → {ERTRAGSARTEN_PRUEFBOGEN}")

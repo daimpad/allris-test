@@ -232,7 +232,14 @@ tr[class^="hh-z"] > th::before { content: ""; display: inline-block; width: 12px
 .hh-f15, .hh-z15 > th::before { background: #8bc27f; } .hh-f16, .hh-z16 > th::before { background: #753a79; }
 .page table.hh-pg-tabelle, .hh-pg .hh-balken { max-width: 720px; }
 /* Mit Skript (site/haushalt.js): Kacheln der Aufwandsarten auf Ebene 3 statt Balken, Zoom beim Wechsel der Ebene */
-.hh-pg.hh-mit-kacheln .hh-balken { display: none !important; }
+.hh-pg.hh-mit-kacheln .hh-balken:not(.hh-eb) { display: none !important; }
+/* Ertragsarten (Zeilen 1–9): eigene nominale Farben, Balken ohne Kacheln (Klasse hh-eb) */
+tr[class^="hh-e"] > th::before { content: ""; display: inline-block; width: 12px; height: 12px; margin-right: 6px; border-radius: 3px; vertical-align: -1px; }
+i.hh-e1, tr.hh-e1 > th::before { background: #1f6f8b; } i.hh-e2, tr.hh-e2 > th::before { background: #4daf7c; }
+i.hh-e3, tr.hh-e3 > th::before { background: #a3c75a; } i.hh-e4, tr.hh-e4 > th::before { background: #e0a030; }
+i.hh-e5, tr.hh-e5 > th::before { background: #d9734e; } i.hh-e6, tr.hh-e6 > th::before { background: #c25b8f; }
+i.hh-e7, tr.hh-e7 > th::before { background: #8c6bb1; } i.hh-e8, tr.hh-e8 > th::before { background: #7f8c8d; }
+i.hh-e9, tr.hh-e9 > th::before { background: #b0a48a; }
 .hh-arten rect.hh-f11 { fill: #3a77b3; } .hh-arten rect.hh-f12 { fill: #c79de6; } .hh-arten rect.hh-f13 { fill: #bf7946; }
 .hh-arten rect.hh-f14 { fill: #5a610c; } .hh-arten rect.hh-f15 { fill: #8bc27f; } .hh-arten rect.hh-f16 { fill: #753a79; }
 .hh-arten rect { stroke: #fff; stroke-width: 2; }

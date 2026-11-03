@@ -8,12 +8,13 @@ from unittest import mock
 from pipeline import config, haushaltsseite as hs
 
 
-def daten(ebenen, erweiterung=False):
+def daten(ebenen, erweiterung=False, ertragsarten=False):
     """Daten der Seite mit oder ohne Ebenen 2 und 3 und Erweiterung (Ist 2024, Investitionen), unabhängig von Freigabe
     und Umgebung."""
     with mock.patch.object(hs.haushaltsplan, "EBENEN_FREIGEGEBEN", ebenen), \
             mock.patch.object(hs.haushaltsplan, "ERWEITERUNG_FREIGEGEBEN", erweiterung), \
-            mock.patch.dict(os.environ, {"HAUSHALT_EBENEN": "", "HAUSHALT_ERWEITERUNG": ""}):
+            mock.patch.object(hs.haushaltsplan, "ERTRAGSARTEN_FREIGEGEBEN", ertragsarten), \
+            mock.patch.dict(os.environ, {"HAUSHALT_EBENEN": "", "HAUSHALT_ERWEITERUNG": "", "HAUSHALT_ERTRAGSARTEN": ""}):
         return hs.daten()
 
 
@@ -279,6 +280,37 @@ class Erweiterung(unittest.TestCase):
                          "−109,6 Mio. € −190,1 Mio. € −343,3 Mio. € −297,3 Mio. € −285,6 Mio. €")
         self.assertIn("Ohne Teilfinanzrechnung im Jahresabschluss 2024: 17 Stiftungen.", self.html)
         self.assertIn("Jahresabschluss-2024_Teil-2.pdf#page=", self.html)
+
+
+
+class Ertragsarten(unittest.TestCase):
+    """Ertragsarten (Zeilen 1–9) in den Ebenen 2 und 3 (haushalt/PHASE6.md)."""
+    @classmethod
+    def setUpClass(cls):
+        cls.d = daten(True, erweiterung=True, ertragsarten=True)
+        cls.html = hs.body(cls.d, "../")
+
+    def test_ohne_freigabe_nicht_sichtbar(self):
+        self.assertNotIn("Woher kommt das Geld", hs.body(daten(True, erweiterung=True), "../"))
+
+    def test_summe_und_ist_2024(self):
+        p = next(p for p in self.d["produktbereiche"] if p["pb"] == "03")
+        oeff = next(e for e in p["ertragsarten"] if e["zeile"] == 4)
+        self.assertEqual(oeff["ist"][2024]["betrag"], 13_077_058)   # 13.077.057,82 € (Prüfbogen, S. 180)
+        self.assertEqual(oeff["plan"][2026]["betrag"], 12_975_145)   # Prüfbogen, PB03.pdf S. 1
+        for p in self.d["produktbereiche"]:
+            for art, j in (("plan", 2026), ("ist", 2023), ("ist", 2024)):
+                teile = sum(e[art][j]["betrag"] for e in p["ertragsarten"] if j in e[art])
+                self.assertLessEqual(abs(teile - p["ertrag"][art][j]["betrag"]), 1_500, (p["pb"], art, j))
+
+    def test_abschnitt_in_jeder_ebene(self):
+        teil = self.html.split('<section id="zoom-03"')[1].split("</section>")[0]
+        self.assertIn("Woher kommt das Geld? Ertragsarten", teil)
+        self.assertIn("Ohne Betrag in allen Ansichten:", teil)   # leere Ertragsarten nur als Liste
+        self.assertNotIn('<tr class="hh-e1">', teil)            # keine Steuern im PB 03
+        pg = self.html.split('<section id="pg-1-11-03"')[1].split("</section>")[0]
+        self.assertIn('<tr class="hh-e4"><th scope="row">Öffentlich-rechtliche Leistungsentgelte</th>', pg)
+        self.assertIn('hh-balken hh-eb', pg)                     # Balken ohne Kacheln (site/haushalt.js)
 
 
 if __name__ == "__main__":

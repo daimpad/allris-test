@@ -173,9 +173,9 @@ def _ist_plan(reihe):
     return {"ist": {j: _wert(i) for j, i, _ in reihe if i}, "plan": {j: _wert(x) for j, _, x in reihe if x}}
 
 
-def _arten(schluessel, rows, feld):
+def _arten(schluessel, rows, feld, arten=None):
     return [{"zeile": nr, "name": name, **_ist_plan(haushaltsplan.reihe(schluessel, rows, nr, feld))}
-            for nr, name in haushaltsplan.AUFWANDSARTEN.items()]
+            for nr, name in (arten or haushaltsplan.AUFWANDSARTEN).items()]
 
 
 def daten(rows=None, aufwand=None, gruppen=None):
@@ -195,6 +195,11 @@ def daten(rows=None, aufwand=None, gruppen=None):
         namen[r["produktgruppe"]][r["ausgabe"]] = (r["name"], r["einheit"])
     neu = max((r["ausgabe"] for r in gruppen), default=None)
     themen = {t.produktbereich: t for t in THEMEN if t.produktbereich}
+    # Ertragsarten (Zeilen 1–9, Option 5; nur mit Freigabe oder HAUSHALT_ERTRAGSARTEN=vorschau)
+    mit_ertragsarten = bool(aufwand and gruppen) and haushaltsplan.ertragsarten_an() and haushaltsplan.ERTRAGSARTEN_TSV.exists()
+    er_pb, er_pg = [], defaultdict(list)
+    for r in haushaltsplan.lesen(haushaltsplan.ERTRAGSARTEN_TSV) if mit_ertragsarten else []:
+        (er_pg[r["produktgruppe"]] if r["ebene"] == "Produktgruppe" else er_pb).append(r)
     pbs = []
     for pb, name in sorted({(r["produktbereich"], r["name"]) for r in rows}):
         t = themen.get(pb)
@@ -209,7 +214,12 @@ def daten(rows=None, aufwand=None, gruppen=None):
                 alt = sorted((a, v[0]) for a, v in namen[pg].items() if v[0] != n)   # andere Namen älterer Ausgaben
                 p["produktgruppen"].append({"nr": pg, "name": n, "einheit": einheit, "alt": alt,
                                             **_ist_plan(haushaltsplan.reihe(pg, je_pg[pg], ZEILE, "produktgruppe")),
-                                            "aufwandsarten": _arten(pg, je_pg[pg], "produktgruppe")})
+                                            "aufwandsarten": _arten(pg, je_pg[pg], "produktgruppe"),
+                                            **({"ertragsarten": _arten(pg, er_pg[pg], "produktgruppe", haushaltsplan.ERTRAGSARTEN),
+                                                "ertrag": _ist_plan(haushaltsplan.reihe(pg, er_pg[pg], 10, "produktgruppe"))}
+                                               if mit_ertragsarten else {})})
+            if mit_ertragsarten:
+                p["ertragsarten"] = _arten(pb, er_pb, "produktbereich", haushaltsplan.ERTRAGSARTEN)
         pbs.append(p)
     erweitert = erweiterung_an() and haushaltsplan.JAHRESABSCHLUSS_TSV.exists()
     if erweitert:   # Ist 2024 aus dem Jahresabschluss auf allen Ebenen
@@ -224,6 +234,15 @@ def daten(rows=None, aufwand=None, gruppen=None):
                 setze(g, "Produktgruppe", g["nr"], ZEILE)
                 for t in g["aufwandsarten"]:
                     setze(t, "Produktgruppe", g["nr"], t["zeile"])
+        if mit_ertragsarten and haushaltsplan.JA_ERTRAGSARTEN_TSV.exists():   # Ist 2024 der Ertragsarten
+            ja = _ja_index(haushaltsplan.JA_ERTRAGSARTEN_TSV)
+            for p in pbs:
+                for t in p["ertragsarten"]:
+                    setze(t, "Produktbereich", p["pb"], t["zeile"])
+                for g in p["produktgruppen"]:
+                    setze(g["ertrag"], "Produktgruppe", g["nr"], 10)
+                    for t in g["ertragsarten"]:
+                        setze(t, "Produktgruppe", g["nr"], t["zeile"])
     plan_jahre = sorted({j for p in pbs for j in p["plan"]})[-2:]
     ist_jahre = sorted({j for p in pbs for j in p["ist"]})[-(2 if erweitert else 1):]
     ansichten = [{"key": f"plan{j}", "art": "plan", "jahr": j, "titel": f"Plan {j}"} for j in reversed(plan_jahre)] \
@@ -520,7 +539,7 @@ def treemap_gruppen(p, ansicht, format_):
                                            f'zusammen {_mio(gesamt["betrag"])}')
 
 
-def _balken(arten, ansichten, betraege=False):
+def _balken(arten, ansichten, betraege=False, marke="f", klasse=""):
     """Gestapelter Balken der Aufwandsarten je Ansicht (HTML, Breite anteilig an der Summe der positiven Werte). Die
     Tabelle darunter nennt dieselben Werte; der Balken ist für Vorleseprogramme ausgeblendet. Mit betraege trägt jedes
     Stück seinen Betrag (data-b), aus dem site/haushalt.js die Kacheln der Ebene 3 zeichnet."""
@@ -528,10 +547,10 @@ def _balken(arten, ansichten, betraege=False):
     for k, a in enumerate(ansichten):
         werte = [(t["zeile"], t[a["art"]][a["jahr"]]["betrag"]) for t in arten if a["jahr"] in t[a["art"]]]
         positiv = sum(b for _, b in werte if b > 0)
-        teile = "".join(f'<i class="hh-f{nr}" style="width:{100 * b / positiv:.1f}%"{f' data-b="{b}"' if betraege else ""}></i>'
+        teile = "".join(f'<i class="hh-{marke}{nr}" style="width:{100 * b / positiv:.1f}%"{f' data-b="{b}"' if betraege else ""}></i>'
                         for nr, b in werte
                         if positiv and 100 * b / positiv >= 0.05)   # unter 0,05 % unsichtbar
-        out.append(f'<div class="hh-ansicht hh-v{k} hh-balken" aria-hidden="true">{teile}</div>')
+        out.append(f'<div class="hh-ansicht hh-v{k} hh-balken{klasse}" aria-hidden="true">{teile}</div>')
     return "".join(out)
 
 
@@ -573,6 +592,49 @@ def _pfad(*teile):
     return ('<nav class="hh-pfad" aria-label="Ebenen des Haushalts">'
             + "".join(f'<a href="#{ziel}">{escape(text)}</a> › ' for ziel, text in links)
             + f'<span aria-current="location">{escape(aktuell)}</span></nav>')
+
+
+ERTRAG_TEXT = ("Erträge nach ihrer Art, etwa Steuern, Zuwendungen oder Gebühren (öffentlich-rechtliche "
+               "Leistungsentgelte); zusammen ergeben sie die ordentlichen Erträge (Zeile 10).")
+
+
+def ertragsarten(t, ansichten, spalten, ref, tabelle, anteil_spalte=True):
+    """Unterabschnitt „Woher kommt das Geld?“ einer Ebene: Balken (Klasse hh-eb, ohne Kacheln) und Tabelle der
+    Ertragsarten; Zeilen ohne Betrag in allen Ansichten nur als Liste darunter. Leer ohne Ertragsarten."""
+    if not t.get("ertragsarten"):
+        return "", []
+    summe = t["ertrag"]
+    ref_summe = summe["plan"].get(ref["jahr"])
+    anteil = lambda x: _prozent(100 * x["betrag"] / ref_summe["betrag"]) if x and x["betrag"] > 0 and ref_summe and ref_summe["betrag"] > 0 else "–"
+    zeilen, negativ, ohne, werte_alle = [], [], [], []
+    for e in t["ertragsarten"]:
+        werte = [e[art].get(j) for art, j, _ in spalten]
+        if not any(x and x["betrag"] for x in werte):
+            ohne.append(e["name"])
+            continue
+        werte_alle += werte
+        negativ += _negativ(e["name"], spalten, werte)
+        zeilen.append(f'<tr class="hh-e{e["zeile"]}"><th scope="row">{escape(e["name"])}</th>'
+                      + "".join(f"<td>{_zelle_art(x)}</td>" for x in werte)
+                      + (f"<td>{anteil(e['plan'].get(ref['jahr']))}</td>" if anteil_spalte else "") + "</tr>")
+    werte_summe = [summe[art].get(j) for art, j, _ in spalten]
+    zeilen.append('<tr class="hh-summe"><th scope="row">Ordentliche Erträge (Zeile 10)</th>'
+                  + "".join(f"<td>{_zelle_art(x)}</td>" for x in werte_summe)
+                  + ("<td>100,0 %</td>" if anteil_spalte and ref_summe and ref_summe["betrag"] > 0 else "<td>–</td>" if anteil_spalte else "") + "</tr>")
+    kopf = "".join(f'<th scope="col">{escape(x)}</th>' for *_, x in spalten)
+    kopf += f'<th scope="col">Anteil {escape(ref["titel"])}</th>' if anteil_spalte else ""
+    hinweis = [f'Ohne Betrag in allen Ansichten: {", ".join(escape(n) for n in ohne)}.'] if ohne else []
+    if negativ:
+        hinweis.append(f'Negativ sind: {"; ".join(negativ)}.')
+    html = f"""
+          <h3>Woher kommt das Geld? Ertragsarten</h3>
+          <p class="meta">{ERTRAG_TEXT}</p>
+          {_balken([e for e in t["ertragsarten"] if e["name"] not in ohne], ansichten, marke="e", klasse=" hh-eb")}
+          <table class="hh-tabelle {tabelle}">
+            <thead><tr><th scope="col">Ertragsart</th>{kopf}</tr></thead>
+            <tbody>{"".join(zeilen)}</tbody>
+          </table>{f'<p class="meta">{" ".join(hinweis)}</p>' if hinweis else ""}"""
+    return html, werte_alle + werte_summe
 
 
 def zoom(d, p):
@@ -625,7 +687,7 @@ def zoom(d, p):
           <table class="hh-tabelle hh-zoom-tabelle">
             <thead><tr><th scope="col">Aufwandsart</th>{kopf}<th scope="col">Anteil {escape(ref["titel"])}</th></tr></thead>
             <tbody>{"".join(arten)}{summenzeile}</tr></tbody>
-          </table>
+          </table>{ertragsarten({**p, "ertrag": p["ertrag"]}, ansichten, spalten, ref, "hh-zoom-tabelle")[0]}
           <h3>Produktgruppen</h3>
           <table class="hh-tabelle hh-zoom-tabelle">
             <thead><tr><th scope="col">Produktgruppe</th>{kopf}<th scope="col">Anteil {escape(ref["titel"])}</th><th scope="col">Seite im Haushaltsplan {escape(neu)}</th></tr></thead>
@@ -654,14 +716,15 @@ def gruppe(d, p, g):
     angaben = [escape(g["einheit"])] if g["einheit"] else []
     angaben += [f"Name in Haushaltsplan {escape(a)}: {escape(n)}" for a, n in g["alt"]]
     hinweis = f' Negativ sind: {"; ".join(negativ)}.' if negativ else ""
+    ertrag_html, ertrag_werte = ertragsarten(g, ansichten, spalten, ansichten[0], "hh-pg-tabelle", anteil_spalte=False)
     t_ = f"{_anker(g['nr'])}-t"
     return f"""        <section id="{_anker(g["nr"])}" class="hh-ebene hh-pg" aria-labelledby="{t_}">
           {_pfad(("produktbereiche", "Alle Produktbereiche"), (f"zoom-{p['pb']}", f'{p["pb"]} {p["name"]}'), f'{g["nr"]} {g["name"]}')}
           <h2 id="{t_}">Produktgruppe {escape(g["nr"])} {escape(g["name"])}</h2>
           {f'<p class="meta">{" · ".join(angaben)}</p>' if angaben else ""}
           {_balken(g["aufwandsarten"], ansichten, betraege=True)}
-          <table class="hh-tabelle hh-pg-tabelle"><thead><tr><th scope="col">Aufwandsart</th>{kopf}</tr></thead><tbody>{"".join(zeilen)}</tbody></table>
-          <p class="meta">Fundstelle: {_fundstelle(d, p["pb"], alle + summe, datei=True)}.{hinweis}</p>
+          <table class="hh-tabelle hh-pg-tabelle"><thead><tr><th scope="col">Aufwandsart</th>{kopf}</tr></thead><tbody>{"".join(zeilen)}</tbody></table>{ertrag_html}
+          <p class="meta">Fundstelle: {_fundstelle(d, p["pb"], alle + summe + ertrag_werte, datei=True)}.{hinweis}</p>
         </section>"""
 
 
@@ -700,6 +763,10 @@ def body(d, root):
     dateien = ", ".join(f'<a href="{escape(d["ausgaben"][a]["seite"])}">{escape(_quelle(a))}</a>' for a in _plan_ausgaben(d) + ([JA] if JA in d["ausgaben"] else []))
     ist_quelle = (" laut Haushaltsplan, für 2024 laut festgestelltem Jahresabschluss" if d.get("erweiterung")
                   else " laut Haushaltsplan")
+    mit_er = any(p.get("ertragsarten") for p in d["produktbereiche"])
+    ertrag_grenze = ("Ertragsarten stehen je Produktbereich und Produktgruppe; einzelne Steuern, Gebühren oder Zuweisungen "
+                     "zeigt die Seite nicht." if mit_er else
+                     "Erträge und Ergebnis stehen nur je Produktbereich, ohne Aufteilung nach Ertragsarten und Produktgruppen.")
     invest_grenze = ("Investitionen stehen nur je Produktbereich, ohne einzelne Maßnahmen und ohne Verpflichtungsermächtigungen."
                      if d.get("erweiterung") else "Investitionen stehen getrennt in den Teilfinanzplänen.")
     abweichung = ("" if not d.get("erweiterung") else
@@ -771,7 +838,7 @@ def body(d, root):
       <summary>Was diese Seite nicht zeigt</summary>
       <ul>
         <li><strong>Einzelne Posten:</strong> {umfang}</li>
-        <li><strong>Ertragsarten und Investitionen:</strong> Erträge und Ergebnis stehen nur je Produktbereich, ohne Aufteilung nach Ertragsarten und Produktgruppen. {invest_grenze}</li>{abweichung}
+        <li><strong>Erträge und Investitionen:</strong> {ertrag_grenze} {invest_grenze}</li>{abweichung}
         <li><strong>Ausgegliederte Bereiche:</strong> Eigenbetriebe und das Städtische Gebäudemanagement haben eigene Wirtschaftspläne. Interne Leistungen, Umgliederungen und der globale Minderaufwand verschieben Summen zwischen den Bereichen.</li>
         <li><strong>Künftige Jahre:</strong> Die Finanzplanung ab 2027 ist nicht übernommen. Der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht.</li>
         <li><strong>Vorlagen:</strong> Einzelnen Vorlagen ordnet die Seite keine Beträge zu.</li>

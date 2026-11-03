@@ -572,5 +572,25 @@ class Freigabe(unittest.TestCase):
         self.assertEqual(dossier._mio(1797043216), "1.797,0 Mio. €")
 
 
+
+class DateienErtragsarten(unittest.TestCase):
+    """data/haushalt/ertragsarten.tsv und jahresabschluss_ertragsarten.tsv (haushalt/PHASE6.md)."""
+    def test_zeilen_1_bis_9_ergeben_zeile_10(self):
+        from collections import defaultdict
+        for path, wert, key in ((h.ERTRAGSARTEN_TSV, "betrag", ("ebene", "ausgabe", "produktbereich", "produktgruppe", "jahr", "art")),
+                                (h.JA_ERTRAGSARTEN_TSV, "betrag_cent", ("ebene", "produktbereich", "produktgruppe", "spalte"))):
+            teile, summe = defaultdict(int), {}
+            for r in h.lesen(path):
+                k = tuple(r[f] for f in key)
+                if r["zeile"] == "10":
+                    summe[k] = int(r[wert])
+                else:
+                    teile[k] += int(r[wert])
+            self.assertEqual(set(teile), set(summe))
+            self.assertLessEqual(max(abs(teile[k] - summe[k]) for k in summe), 0, path.name)
+
+    def test_freigegeben(self):
+        self.assertTrue(h.ERTRAGSARTEN_FREIGEGEBEN)   # Prüfbogen im Gespräch bestätigt 03.11.2026
+
 if __name__ == "__main__":
     unittest.main()
