@@ -98427,6 +98427,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung lehnt den Bürgerantrag ab, die Einbahnstraßenregelung an der Endenicher Allee beizubehalten. Sie verweist auf einen früheren Beschluss, der Radwege in beide Richtungen und einen Alleencharakter vorsieht. Die temporäre Verkehrsführung soll nicht verlängert werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-03"
    }
   },
   {
@@ -98983,6 +98988,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung gibt ihre Einschätzung zu geschützten Radspuren („Protected Bike Lanes“) oder Umweltspuren ab. Sie benennt mögliche Straßenabschnitte in Bonn, hält den geplanten Zeitrahmen bis Februar 2021 aber für unrealistisch. Eine detaillierte Prüfung und Beteiligung von Gremien wären nötig.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-03"
    }
   },
   {
