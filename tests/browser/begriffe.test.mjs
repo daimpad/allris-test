@@ -95,3 +95,28 @@ test("Seite einfach/: acht Abschnitte, Link im Startfenster und im Fuß, ohne Ve
   assert.equal(await page.locator('footer a[href="../einfach/"]').count(), 1, "Link im Fuß");
   await page.close();
 });
+
+test("So funktioniert die Karte: Klick auf einen Kasten zeigt die Erklärung, Tastatur, ohne Verstöße", async () => {
+  for (const [width, format] of [[1440, "breit"], [390, "hoch"]]) {
+    const page = await browser.newPage({ viewport: { width, height: 900 }, bypassCSP: true });
+    const fehler = [];
+    page.on("pageerror", (e) => fehler.push(String(e)));
+    await page.goto(SITE + "technik/", { waitUntil: "networkidle" });
+    assert.equal(await page.locator(`.tk-svg.hh-${format}`).filter({ visible: true }).count(), 4, "vier Grafiken");
+    const kasten = page.locator(`#datenfluss + p + .tk-grafik .tk-svg.hh-${format} a[href="#tk-s-check"]`);
+    await kasten.click();
+    const feld = page.locator("#datenfluss + p + .tk-grafik .tk-detail");
+    assert.equal(await feld.isVisible(), true);
+    assert.match(await feld.textContent(), /^Prüfung: Prüft Kennzahlen und Datenschutz/);
+    assert.equal(await kasten.getAttribute("aria-current"), "true");
+    assert.equal(new URL(page.url()).hash, "#tk-s-check");
+    // Tastatur: Kasten des Zeitplans per Enter
+    await page.locator(`#zeitplan + p + .tk-grafik .tk-svg.hh-${format} a[href^="#tk-z-pages-"]`).focus();
+    await page.keyboard.press("Enter");
+    assert.match(await page.locator("#zeitplan + p + .tk-grafik .tk-detail").textContent(), /täglich 04:17 UTC/);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    assert.deepEqual(await axe(page), []);
+    assert.deepEqual(fehler, []);
+    await page.close();
+  }
+});
