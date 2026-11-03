@@ -799,5 +799,56 @@
    "produktbereiche": 512,
    "produktgruppen": 3293
   }
+ },
+ "ertragsarten": {
+  "abruf": "2026-11-03",
+  "zeilen": {
+   "1": "Steuern und ähnliche Abgaben",
+   "2": "Zuwendungen und allgemeine Umlagen",
+   "3": "Sonstige Transfererträge",
+   "4": "Öffentlich-rechtliche Leistungsentgelte",
+   "5": "Privatrechtliche Leistungsentgelte",
+   "6": "Kostenerstattungen und Kostenumlagen",
+   "7": "Sonstige ordentliche Erträge",
+   "8": "Aktivierte Eigenleistungen",
+   "9": "Bestandsveränderungen"
+  },
+  "haushaltsplan": {
+   "werte": 16700,
+   "leere_zellen": 9354
+  },
+  "jahresabschluss": {
+   "werte": 9480,
+   "leere_zellen": 6247,
+   "datei": "wie jahresabschluss → datei (SHA-256 geprüft)"
+  },
+  "pruefsummen": {
+   "ertragsarten_haushaltsplan": {
+    "spalten": 1670,
+    "groesste_abweichung": 0
+   },
+   "produktgruppen_haushaltsplan": {
+    "spalten": 170,
+    "groesste_abweichung": 5
+   },
+   "ertragsarten_jahresabschluss": {
+    "spalten": 948,
+    "groesste_abweichung": 0
+   },
+   "produktgruppen_jahresabschluss": {
+    "spalten": 102,
+    "groesste_abweichung": 0
+   },
+   "zeile10_produktbereiche_tsv": {
+    "spalten": 170,
+    "groesste_abweichung": 0
+   },
+   "zeile10_jahresabschluss_tsv": {
+    "spalten": 948,
+    "groesste_abweichung": 0
+   }
+  },
+  "toleranz_euro": 1500,
+  "toleranz_cent": 2
  }
 }

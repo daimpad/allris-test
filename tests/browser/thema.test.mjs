@@ -247,7 +247,7 @@ test("Haushalt: Klick führt zu den Produktgruppen und weiter zu den Aufwandsart
     assert.equal(await page.locator("#zoom-04 h2").textContent(), "Produktbereich 04 Kultur und Wissenschaft");
     assert.deepEqual(await treemaps(page, true), ["Plan 2026: Produktgruppen im Produktbereich 04 Kultur und Wissenschaft, zusammen 92,8 Mio. €"]);
     assert.ok(await page.locator('label[for="hh-ist2023"]').evaluate((l) => l.getBoundingClientRect().top >= 0), "Auswahlknöpfe sichtbar");
-    assert.equal(await page.locator("#zoom-04 .hh-balken").filter({ visible: true }).count(), 1, "ein Balken der Aufwandsarten je Ansicht");
+    assert.equal(await page.locator("#zoom-04 .hh-balken:not(.hh-eb)").filter({ visible: true }).count(), 1, "ein Balken der Aufwandsarten je Ansicht");
     await page.locator('label[for="hh-ist2023"]').click();
     assert.match((await treemaps(page, true))[0], /^Ist 2023: Produktgruppen im Produktbereich 04/);
     // Stelle der Ansicht Ist 2023 (dritte, mit Ist 2024 aus dem Jahresabschluss vierte)
@@ -262,8 +262,8 @@ test("Haushalt: Klick führt zu den Produktgruppen und weiter zu den Aufwandsart
     assert.match(await page.locator("#pg-1-04-07").textContent(), /Name in Haushaltsplan 2023\/2024: Z\. f\. Stadtgesch\. u\. Erinnerungskulturen/);
     assert.deepEqual(await treemaps(page, true), ["Ist 2023: Aufwandsarten der Produktgruppe 1.04.07 Stadtarchiv"]);
     assert.equal(await page.locator(`#pg-1-04-07 .hh-v${v} .hh-${format} rect`).count(), 5, "Transfers leer: fünf Kacheln");
-    assert.equal(await page.locator("#pg-1-04-07 .hh-balken").filter({ visible: true }).count(), 0, "Balken nur ohne Skript");
-    assert.equal(await page.locator("#pg-1-04-07 tbody tr").count(), 7);
+    assert.equal(await page.locator("#pg-1-04-07 .hh-balken:not(.hh-eb)").filter({ visible: true }).count(), 0, "Balken nur ohne Skript");
+    assert.equal(await page.locator("#pg-1-04-07 table:first-of-type tbody tr").count(), 7);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     assert.deepEqual(await axe(page), []);
     // Brotkrumen: zurück zu Ebene 2, dann zu allen Produktbereichen; die Ansicht bleibt gewählt
@@ -298,7 +298,7 @@ test("Haushalt: Zoom beim Wechsel der Ebene, ohne Bewegung bei reduzierter Beweg
   await ruhig.close();
   const ohne = await browser.newPage({ viewport: { width: 1440, height: 900 }, javaScriptEnabled: false });
   await ohne.goto(SITE + "haushalt/#pg-1-04-07");
-  assert.equal(await ohne.locator("#pg-1-04-07 .hh-balken.hh-v0").isVisible(), true, "ohne Skript: Balken");
+  assert.equal(await ohne.locator("#pg-1-04-07 .hh-balken.hh-v0:not(.hh-eb)").isVisible(), true, "ohne Skript: Balken");
   assert.equal(await ohne.locator("#pg-1-04-07 svg").count(), 0);
   await ohne.close();
 });
@@ -338,4 +338,21 @@ test("Haushalt: negative und leere Werte ohne Fläche und Balkenstück, 0 € nu
   await page.keyboard.press("Enter");   // erste Fläche der Produktgruppen
   assert.match((await ebenen(page))[0] || "", /^pg-1-16-/);
   await page.close();
+});
+
+test("Haushalt: Ertragsarten je Produktbereich und Produktgruppe (Vorschau), ohne Kacheln, ohne Verstöße", async () => {
+  for (const [width, ziel] of [[1440, "zoom-03"], [390, "pg-1-11-03"]]) {
+    const page = await browser.newPage({ viewport: { width, height: 900 }, bypassCSP: true });
+    await page.goto(SITE + `haushalt/#${ziel}`, { waitUntil: "networkidle" });
+    const titel = page.locator(`#${ziel} h3`, { hasText: "Woher kommt das Geld?" });
+    assert.equal(await titel.count(), 1, "Ertragsarten fehlen: Seite mit HAUSHALT_ERTRAGSARTEN=vorschau erzeugen");
+    assert.equal(await titel.isVisible(), true);
+    assert.equal(await page.locator(`#${ziel} .hh-balken.hh-eb`).filter({ visible: true }).count(), 1, "ein Balken je Ansicht");
+    if (ziel.startsWith("pg-")) {   // Kacheln nur für die Aufwandsarten
+      assert.equal(await page.locator(`#${ziel} .hh-kacheln`).filter({ visible: true }).count(), 1);
+    }
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    assert.deepEqual(await axe(page), []);
+    await page.close();
+  }
 });
