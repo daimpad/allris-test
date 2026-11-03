@@ -123,3 +123,14 @@ Eine Gegenprobe über `pdftotext -layout` fand alle 31 gefüllten Beträge in ih
   - PB 01, Zeile 2 (Veräußerung von Sachanlagen): −1.725.134,41 € (S. 10).
 - **Prüfbogen-Ergänzung:** `data/export/haushalt/pruefbogen_haushalt_erweiterung_finanz.tsv` (`haushalt-pruefbogen-erweiterung-finanz`, 8 Zellen, wird nicht überschrieben). Alle 8 Beträge stehen auch im Text der Seite (`pdftotext -layout`); die Prüfung von Hand steht aus.
 
+
+## Vorschau auf der Seite `haushalt/` (03.11.2026)
+
+Sichtbar nur mit `ERWEITERUNG_FREIGEGEBEN` oder `HAUSHALT_ERWEITERUNG=vorschau` (Vorschau im Workflow `tests.yml`); `pipeline/haushaltsseite.py`.
+
+- **Ist 2024** als vierte Ansicht (Plan 2026, Plan 2025, Ist 2024, Ist 2023) auf allen Ebenen: Produktbereiche, Erträge, Ergebnis, Aufwandsarten, Produktgruppen. Spalte 4 von `jahresabschluss.tsv`, auf Euro gerundet; Fundstelle „Jahresabschluss 2024, S. …“ mit Link auf das PDF.
+- **Veränderung** der ordentlichen Aufwendungen (Zeile 17) je Produktbereich: Ist 2024 zu Ist 2023, Ist 2024 zum Ansatz 2024 der Satzung, Plan 2026 zu Plan 2025; in Mio. € und Prozent, ohne Prozent bei einem Ausgangswert bis 0 €. Hinweise: nominal, fortgeschriebener Ansatz 1.819,6 zu 1.771,1 Mio. €, Umgliederungen und globaler Minderaufwand.
+- **Investitionen:** Summen der Stadt (Zeilen 6, 13, 10, 14; Ist 2023, Ist 2024, Ansatz 2024, Plan 2025, Plan 2026) und je Produktbereich die investiven Auszahlungen mit dem Anteil für Finanzanlagen und Fundstelle. Ohne Verpflichtungsermächtigungen und Finanzplanung; PB 17 ohne Teilfinanzrechnung 2024.
+- **Grenzen:** die zwei Abweichungen innerhalb des Jahresabschlusses (S. 186, S. 6).
+- Tabellen der Seite tragen auf dem Telefon die Spaltennamen (`data-l`).
+- Prüfung: Python-Tests (`Erweiterung` in `tests/test_haushaltsseite.py`), Browser-Tests 37/37, axe ohne Verstöße bei 1440 und 390 px.

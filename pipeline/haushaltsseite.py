@@ -21,6 +21,13 @@ Erträge und Ergebnis (Erweiterung Phase 1, Entscheidungen 02.11.2026; haushalt/
 Erträge (Zeile 10) und Ergebnis vor internen Leistungen (Zeile 18) je Produktbereich, dazu je Einwohner (abgeleitet,
 IT.NRW, Fortschreibung auf Basis des Zensus 2022 zum 31.12.; Ist mit dem Stand seines Jahres, Plan mit dem jüngsten
 Stand). Eine Treemap zeigt den Zuschussbedarf (negatives Ergebnis); Überschüsse stehen nur in der Tabelle.
+
+Ist 2024, Veränderung und Investitionen (Erweiterung Phase 5, Entscheidungen 03.11.2026; haushalt/PHASE5.md; nur mit
+haushaltsplan.ERWEITERUNG_FREIGEGEBEN, vor der Freigabe mit HAUSHALT_ERWEITERUNG=vorschau): Ist 2024 aus dem
+festgestellten Jahresabschluss 2024 als vierte Ansicht auf allen Ebenen (data/haushalt/jahresabschluss.tsv, Spalte 4,
+auf Euro gerundet); Veränderung nur zwischen gleichartigen Werten (Ist zu Ist, Ist 2024 zum Ansatz der Satzung 2024,
+Plan zu Plan), ohne Prozent bei Ausgangswerten bis 0 €; Investitionen aus Teilfinanzplan A und Teilfinanzrechnung
+(investitionen.tsv, jahresabschluss_investitionen.tsv), ohne Verpflichtungsermächtigungen und Finanzplanung.
 """
 import json
 import os
@@ -78,6 +85,37 @@ def einwohner(art, jahr):
 def _je_ew(x, art, jahr):
     ew = einwohner(art, jahr)
     return f"{round(x / ew):,}".replace(",", ".").replace("-", "−") + " € je Einwohner" if ew else ""
+
+
+JA = "Jahresabschluss 2024"
+
+
+def erweiterung_an():
+    return haushaltsplan.ERWEITERUNG_FREIGEGEBEN or os.environ.get("HAUSHALT_ERWEITERUNG") == "vorschau"
+
+
+def _euro_cent(c):
+    """Cent → Euro, kaufmännisch gerundet (auch negativ)."""
+    return (abs(c) + 50) // 100 * (1 if c >= 0 else -1)
+
+
+def _ja_index(path, spalte="4"):
+    """{(Ebene, Produktbereich oder Produktgruppe, Zeile): Wert} einer Spalte einer Datei des Jahresabschlusses."""
+    out = {}
+    for r in haushaltsplan.lesen(path):
+        if r["spalte"] == spalte:
+            key = r["produktgruppe"] if r["ebene"] == "Produktgruppe" else r["produktbereich"]
+            out[(r["ebene"], key, int(r["zeile"]))] = {"betrag": _euro_cent(int(r["betrag_cent"])), "ausgabe": JA,
+                                                       "datei": r["datei"], "seite": int(r["seite"]), "leer": r["leer"] == "ja"}
+    return out
+
+
+def _quelle(a):
+    return a if a.startswith("Jahresabschluss") else f"Haushaltsplan {a}"
+
+
+def _plan_ausgaben(d):
+    return sorted(a for a in d["ausgaben"] if "/" in a)
 
 
 def ebenen_an():
@@ -173,19 +211,64 @@ def daten(rows=None, aufwand=None, gruppen=None):
                                             **_ist_plan(haushaltsplan.reihe(pg, je_pg[pg], ZEILE, "produktgruppe")),
                                             "aufwandsarten": _arten(pg, je_pg[pg], "produktgruppe")})
         pbs.append(p)
+    erweitert = erweiterung_an() and haushaltsplan.JAHRESABSCHLUSS_TSV.exists()
+    if erweitert:   # Ist 2024 aus dem Jahresabschluss auf allen Ebenen
+        ja = _ja_index(haushaltsplan.JAHRESABSCHLUSS_TSV)
+        setze = lambda ziel, ebene, key, nr: ja.get((ebene, key, nr)) and ziel["ist"].__setitem__(2024, ja[(ebene, key, nr)])
+        for p in pbs:
+            for ziel, nr in ((p, ZEILE), (p["ertrag"], 10), (p["ergebnis"], 18)):
+                setze(ziel, "Produktbereich", p["pb"], nr)
+            for t in p.get("aufwandsarten", []):
+                setze(t, "Produktbereich", p["pb"], t["zeile"])
+            for g in p.get("produktgruppen", []):
+                setze(g, "Produktgruppe", g["nr"], ZEILE)
+                for t in g["aufwandsarten"]:
+                    setze(t, "Produktgruppe", g["nr"], t["zeile"])
     plan_jahre = sorted({j for p in pbs for j in p["plan"]})[-2:]
-    ist_jahr = max(j for p in pbs for j in p["ist"])
+    ist_jahre = sorted({j for p in pbs for j in p["ist"]})[-(2 if erweitert else 1):]
     ansichten = [{"key": f"plan{j}", "art": "plan", "jahr": j, "titel": f"Plan {j}"} for j in reversed(plan_jahre)] \
-        + [{"key": f"ist{ist_jahr}", "art": "ist", "jahr": ist_jahr, "titel": f"Ist {ist_jahr}"}]
+        + [{"key": f"ist{j}", "art": "ist", "jahr": j, "titel": f"Ist {j}"} for j in reversed(ist_jahre)]
     for a in ansichten:
         a["summe"] = sum(p[a["art"]][a["jahr"]]["betrag"] for p in pbs if a["jahr"] in p[a["art"]])
         for k in ("ertrag", "ergebnis"):
             a[k] = sum(p[k][a["art"]][a["jahr"]]["betrag"] for p in pbs if a["jahr"] in p[k][a["art"]])
     stand = json.loads(haushaltsplan.STAND.read_text(encoding="utf-8"))
-    return {"produktbereiche": pbs, "ansichten": ansichten, "abruf": stand["abruf"], "lizenz": stand["lizenz"],
-            "zoom": bool(aufwand and gruppen),
-            "ausgaben": {a: {"seite": v["seite"], "dateien": {k: d["url"] for k, d in v["dateien"].items()}}
-                         for a, v in stand["ausgaben"].items()}}
+    ausgaben = {a: {"seite": v["seite"], "dateien": {k: d["url"] for k, d in v["dateien"].items()}}
+                for a, v in stand["ausgaben"].items()}
+    out = {"produktbereiche": pbs, "ansichten": ansichten, "abruf": stand["abruf"], "lizenz": stand["lizenz"],
+           "zoom": bool(aufwand and gruppen), "ausgaben": ausgaben}
+    if erweitert:
+        url = stand["jahresabschluss"]["datei"]["url"]
+        ausgaben[JA] = {"seite": stand["jahresabschluss"]["seite"], "dateien": {p["pb"]: url for p in pbs}}
+        out["erweiterung"] = {"investitionen": investitionen_daten(pbs),
+                              "fortgeschrieben": _ja_summe(_ja_index(haushaltsplan.JAHRESABSCHLUSS_TSV, "2"), ZEILE),
+                              "abruf_ja": stand["jahresabschluss"]["abruf"]}
+    return out
+
+
+def _ja_summe(idx, nr):
+    return sum(v["betrag"] for (ebene, _, z), v in idx.items() if ebene == "Produktbereich" and z == nr)
+
+
+INVEST_ZEILEN = {6: "Investive Einzahlungen", 10: "davon Finanzanlagen", 13: "Investive Auszahlungen", 14: "Saldo"}
+
+
+def investitionen_daten(pbs):
+    """Je Produktbereich Zeilen 6, 10, 13, 14 des Teilfinanzplans A (Ist 2023, Ansatz 2024 der Satzung, Plan 2025 und
+    2026) und der Teilfinanzrechnung (Ist 2024): {pb: {zeile: {(art, jahr): Wert}}}."""
+    out = {p["pb"]: {nr: {} for nr in INVEST_ZEILEN} for p in pbs}
+    for r in haushaltsplan.lesen(haushaltsplan.INVESTITIONEN_TSV):
+        nr, j = int(r["zeile"]), int(r["jahr"])
+        if r["ebene"] != "Produktbereich" or nr not in INVEST_ZEILEN or r["produktbereich"] not in out:
+            continue
+        art = "ist" if r["art"] == "Ergebnis" else "plan"
+        if (art == "ist" and r["ausgabe"] == "2025/2026") or (art == "plan" and str(j) in r["ausgabe"].split("/")):
+            out[r["produktbereich"]][nr][(art, j)] = {"betrag": int(r["betrag"]), "ausgabe": r["ausgabe"],
+                                                      "datei": r["datei"], "seite": int(r["seite"]), "leer": r["leer"] == "ja"}
+    for (ebene, pb, nr), v in _ja_index(haushaltsplan.JA_INVESTITIONEN_TSV).items():
+        if ebene == "Produktbereich" and nr in INVEST_ZEILEN and pb in out:
+            out[pb][nr][("ist", 2024)] = v
+    return out
 
 
 def _zeilen(text, max_zeichen):
@@ -305,14 +388,16 @@ def ergebnis(d, root):
                          key=lambda p: p["pb"])
     def tabelle(k, anker, titel, summe_text):
         zeilen = [f'        <tr{f' id="{anker}-{p["pb"]}"' if anker else ""}><th scope="row">{escape(p["pb"])} {escape(p["name"])}</th>'
-                  + "".join(f"<td>{_zelle_ew(p[k][art].get(j), art, j)}</td>" for art, j, _ in spalten) + "</tr>"
+                  + "".join(_td(_zelle_ew(p[k][art].get(j), art, j), t) for art, j, t in spalten) + "</tr>"
                   for p in pbs]
-        summe = "".join(f'<td>{_mio_v(a[k])}<br><small>{_je_ew(a[k], a["art"], a["jahr"])}</small></td>' for a in reversed(ansichten))
+        summe = "".join(_td(f'{_mio_v(a[k])}<br><small>{_je_ew(a[k], a["art"], a["jahr"])}</small>', a["titel"]) for a in reversed(ansichten))
         return (f'    <table class="hh-tabelle">\n      <caption>{escape(titel)}</caption>\n'
                 f'      <thead><tr><th scope="col">Produktbereich</th>{kopf}</tr></thead>\n      <tbody>\n'
                 + "\n".join(zeilen) + f'\n        <tr class="hh-summe"><th scope="row">{summe_text}</th>{summe}</tr>\n      </tbody>\n    </table>')
-    ew_plan, ew_ist = EINWOHNER[max(EINWOHNER)], einwohner("ist", ansichten[-1]["jahr"])
+    ew_plan = EINWOHNER[max(EINWOHNER)]
     ew = lambda n: f"{n:,}".replace(",", ".")
+    ist = [a["jahr"] for a in reversed(ansichten) if a["art"] == "ist"]
+    ew_ist = " und ".join(f"{ew(einwohner('ist', j))} (31.12.{j})" for j in ist)
     namen = ", ".join(f'{p["pb"]} {escape(p["name"])}' for p in ueberschuss)
     return f"""    <h2 id="ergebnis">Erträge und Ergebnis</h2>
     <p>Ein Produktbereich hat Erträge, etwa Gebühren, Zuweisungen und Steuern, und Aufwendungen. Das Ergebnis ist die Differenz. Ist es negativ, nennt die Stadt es Zuschussbedarf: Diesen Teil der Aufwendungen decken Erträge anderer Bereiche, vor allem die Steuern im Produktbereich 16.</p>
@@ -322,7 +407,102 @@ def ergebnis(d, root):
     {legende("am Zuschussbedarf")}
 {tabelle("ergebnis", "erg", "Ordentliches Ergebnis vor internen Leistungen (Zeile 18); negativ heißt Zuschussbedarf, positiv Überschuss", "Zusammen (ordentliches Ergebnis)")}
 {tabelle("ertrag", None, "Ordentliche Erträge (Zeile 10)", "Zusammen")}
-    <p class="meta">Je Einwohner ist abgeleitet: Betrag geteilt durch die Einwohnerzahl laut IT.NRW, für das Ist {ew(ew_ist)} (31.12.{ansichten[-1]["jahr"]}), für den Plan der jüngste Stand {ew(ew_plan)} (31.12.{max(EINWOHNER)}). Die Haushaltssatzung nennt mit der Fortschreibung der Stadt 340.226 Einwohner (31.12.2024); damit wären die Werte je Einwohner rund 5 % kleiner. Bei Steuern und Transfers an bestimmte Gruppen ist „je Einwohner“ keine Last je Person.</p>"""
+    <p class="meta">Je Einwohner ist abgeleitet: Betrag geteilt durch die Einwohnerzahl laut IT.NRW, für das Ist {ew_ist}, für den Plan der jüngste Stand {ew(ew_plan)} (31.12.{max(EINWOHNER)}). Die Haushaltssatzung nennt mit der Fortschreibung der Stadt 340.226 Einwohner (31.12.2024); damit wären die Werte je Einwohner rund 5 % kleiner. Bei Steuern und Transfers an bestimmte Gruppen ist „je Einwohner“ keine Last je Person.</p>"""
+
+
+def _td(inhalt, spalte):
+    """Zelle mit Spaltennamen für das Telefon, wo die Tabellen zu Listen werden (page.css, td[data-l]::before)."""
+    return f'<td data-l="{escape(spalte)}">{inhalt}</td>'
+
+
+def _delta(neu, alt):
+    """Veränderung in Mio. € mit Vorzeichen und, bei einem Ausgangswert über 0 €, in Prozent."""
+    if not neu or not alt:
+        return "–"
+    diff = neu["betrag"] - alt["betrag"]
+    text = ("+" if diff > 0 else "") + _betrag(diff).replace("-", "−")
+    if alt["betrag"] > 0:
+        text += "<br><small>" + ("+" if diff > 0 else "") + _prozent(100 * diff / alt["betrag"]).replace("-", "−") + "</small>"
+    return text
+
+
+def _summe(pbs, wert):
+    werte = [wert(p) for p in pbs]
+    return {"betrag": sum(w["betrag"] for w in werte if w)} if any(werte) else None
+
+
+def veraenderung(d):
+    """Abschnitt „Veränderung“: ordentliche Aufwendungen (Zeile 17) nur zwischen gleichartigen Werten."""
+    pbs = d["produktbereiche"]
+    plan = sorted({j for p in pbs for j in p["plan"]})[-2:]
+    paare = [("Ist 2024 zu Ist 2023", lambda p: p["ist"].get(2024), lambda p: p["ist"].get(2023)),
+             ("Ist 2024 zum Ansatz 2024", lambda p: p["ist"].get(2024), lambda p: p["plan"].get(2024)),
+             (f"Plan {plan[1]} zu Plan {plan[0]}", lambda p: p["plan"].get(plan[1]), lambda p: p["plan"].get(plan[0]))]
+    kopf = "".join(f'<th scope="col">{t}</th>' for t, *_ in paare)
+    zeilen = "\n".join(f'        <tr><th scope="row">{escape(p["pb"])} {escape(p["name"])}</th>'
+                       + "".join(_td(_delta(neu(p), alt(p)), t) for t, neu, alt in paare) + "</tr>" for p in pbs)
+    summe = "".join(_td(_delta(_summe(pbs, neu), _summe(pbs, alt)), t) for t, neu, alt in paare)
+    fort = d["erweiterung"]["fortgeschrieben"]
+    satzung = _summe(pbs, lambda p: p["plan"].get(2024))
+    return f"""    <h2 id="veraenderung">Veränderung</h2>
+    <p>Wie haben sich die ordentlichen Aufwendungen (Zeile 17) verändert? Verglichen werden nur Werte gleicher Art: Ist mit Ist, Plan mit Plan und das Ist 2024 mit dem Ansatz, den die Haushaltssatzung für 2024 vorsah.</p>
+    <table class="hh-tabelle">
+      <caption>Veränderung der ordentlichen Aufwendungen in Mio. €, darunter in Prozent</caption>
+      <thead><tr><th scope="col">Produktbereich</th>{kopf}</tr></thead>
+      <tbody>
+{zeilen}
+        <tr class="hh-summe"><th scope="row">Zusammen</th>{summe}</tr>
+      </tbody>
+    </table>
+    <p class="meta">Abgeleitet aus den Beträgen oben. Alle Werte sind nominal, ohne Ausgleich der Preissteigerung. Der Ansatz 2024 ist der Betrag der Satzung (Haushaltsplan 2023/2024, zusammen {escape(_mio(satzung["betrag"]))}); der Jahresabschluss nennt einen fortgeschriebenen Ansatz mit Übertragungen aus dem Vorjahr ({escape(_mio(fort))}). Umgliederungen zwischen Produktbereichen und der globale Minderaufwand können Veränderungen einzelner Bereiche erklären, die keine Änderung der Aufgabe sind. Ohne Prozent, wenn der Ausgangswert 0 € oder negativ ist.</p>"""
+
+
+def investitionen(d):
+    """Abschnitt „Investitionen“: Auszahlungen (Zeile 13) und davon Finanzanlagen (Zeile 10) je Produktbereich, dazu
+    die Summen der Stadt mit Einzahlungen und Saldo."""
+    inv = d["erweiterung"]["investitionen"]
+    plan = sorted({j for z in inv.values() for (art, j) in z[13] if art == "plan"})[-2:]
+    spalten = [("ist", 2023, "Ist 2023"), ("ist", 2024, "Ist 2024"), *[("plan", j, f"Plan {j}") for j in plan]]
+    pbs = [p for p in d["produktbereiche"] if inv[p["pb"]][13]]
+    ohne = [p for p in pbs if ("ist", 2024) not in inv[p["pb"]][13]]
+    def zelle(pb, art, j):
+        aus, fin = inv[pb][13].get((art, j)), inv[pb][10].get((art, j))
+        if not aus:
+            return "–"
+        text = _betrag(aus["betrag"]).replace("-", "−")
+        if fin and fin["betrag"]:
+            text += f'<br><small>davon Finanzanlagen {_betrag(fin["betrag"]).replace("-", "−")}</small>'
+        url = d["ausgaben"][aus["ausgabe"]]["dateien"][pb]
+        return text + f'<br><small><a href="{escape(url)}#page={aus["seite"]}">{escape(_quelle(aus["ausgabe"]))}, S. {aus["seite"]}</a></small>'
+    kopf = "".join(f'<th scope="col">{t}</th>' for *_, t in spalten)
+    zeilen = "\n".join(f'        <tr><th scope="row">{escape(p["pb"])} {escape(p["name"])}</th>'
+                       + "".join(_td(zelle(p['pb'], art, j), t) for art, j, t in spalten) + "</tr>" for p in pbs)
+    gesamt_spalten = spalten[:2] + [("plan", 2024, "Ansatz 2024")] + spalten[2:]
+    def summe(nr, art, j):
+        werte = [z[nr].get((art, j)) for z in inv.values()]
+        return _mio_v(sum(w["betrag"] for w in werte if w)) if any(werte) else "–"
+    gkopf = "".join(f'<th scope="col">{t}</th>' for *_, t in gesamt_spalten)
+    gzeilen = "\n".join(f'        <tr><th scope="row">{name}</th>' + "".join(_td(summe(nr, art, j), t) for art, j, t in gesamt_spalten) + "</tr>"
+                        for nr, name in ((6, "Investive Einzahlungen (Zeile 6)"), (13, "Investive Auszahlungen (Zeile 13)"),
+                                         (10, "davon Finanzanlagen (Zeile 10)"), (14, "Saldo (Zeile 14)")))
+    ohne_text = ", ".join(f'{p["pb"]} {escape(p["name"])}' for p in ohne)
+    return f"""    <h2 id="investitionen">Investitionen</h2>
+    <p>Investitionen sind Auszahlungen für Grundstücke, Gebäude, Bauten, Ausstattung und Beteiligungen. Sie stehen nicht in den ordentlichen Aufwendungen, sondern in den Teilfinanzplänen. Einzahlungen, etwa Fördermittel, mindern den Betrag, den die Stadt selbst aufbringt.</p>
+    <table class="hh-tabelle">
+      <caption>Investitionen der Stadt Bonn in Mio. €</caption>
+      <thead><tr><th scope="col">Summe aller Produktbereiche</th>{gkopf}</tr></thead>
+      <tbody>
+{gzeilen}
+      </tbody>
+    </table>
+    <table class="hh-tabelle">
+      <caption>Investive Auszahlungen je Produktbereich in Mio. € (Zeile 13), darunter der Anteil für Finanzanlagen (Zeile 10)</caption>
+      <thead><tr><th scope="col">Produktbereich</th>{kopf}</tr></thead>
+      <tbody>
+{zeilen}
+      </tbody>
+    </table>
+    <p class="meta">Das Ist liegt oft deutlich unter dem Ansatz, weil Maßnahmen später beginnen oder länger dauern; nicht verbrauchte Mittel kann die Stadt in das Folgejahr übertragen. Finanzanlagen sind Auszahlungen etwa für Beteiligungen und Ausleihungen; die größten Beträge stehen bei den Produktgruppen 1.01.29 Gebäudemanagement (SGB) und 1.16.04 Forderungsverwaltung. Die Bauten des Städtischen Gebäudemanagements stehen in seinem eigenen Wirtschaftsplan. Verpflichtungsermächtigungen und die Finanzplanung ab 2027 sind nicht übernommen.{f" Ohne Teilfinanzrechnung im Jahresabschluss 2024: {ohne_text}." if ohne else ""}</p>"""
 
 
 def treemap_gruppen(p, ansicht, format_):
@@ -356,7 +536,7 @@ def _balken(arten, ansichten, betraege=False):
 
 
 def _zelle(x):
-    return f'{_mio(x["betrag"])}<br><small>Haushaltsplan {escape(x["ausgabe"])}, S. {x["seite"]}</small>' if x else "–"
+    return f'{_mio(x["betrag"])}<br><small>{escape(_quelle(x["ausgabe"]))}, S. {x["seite"]}</small>' if x else "–"
 
 
 def _zelle_art(x):
@@ -373,7 +553,7 @@ def _fundstelle(d, pb, werte, datei=False, ausgabe=None):
     """Links auf die Seiten im PDF; aus der Ausgabe `ausgabe` (im Spaltenkopf genannt) nur die Seite."""
     orte = sorted({(x["ausgabe"], x["datei"], x["seite"]) for x in werte if x})
     return "; ".join(f'<a href="{escape(d["ausgaben"][a]["dateien"][pb])}#page={s}">'
-                     + (f"S. {s}" if a == ausgabe else f'Haushaltsplan {escape(a)}{", " + escape(f) if datei else ""}, S. {s}')
+                     + (f"S. {s}" if a == ausgabe else f'{escape(_quelle(a))}{", " + escape(f) if datei else ""}, S. {s}')
                      + "</a>" for a, f, s in orte)
 
 
@@ -398,7 +578,7 @@ def _pfad(*teile):
 def zoom(d, p):
     """Ebene 2, Abschnitt #zoom-XX: Treemap der Produktgruppen je Ansicht, Aufwandsarten des Produktbereichs als Balken
     und Tabelle, Tabelle der Produktgruppen mit Fundstelle."""
-    pb, ansichten, neu = p["pb"], d["ansichten"], max(d["ausgaben"])
+    pb, ansichten, neu = p["pb"], d["ansichten"], _plan_ausgaben(d)[-1]
     ref = ansichten[0]
     spalten = [(a["art"], a["jahr"], a["titel"]) for a in reversed(ansichten)]
     kopf = "".join(f'<th scope="col">{escape(t)}</th>' for *_, t in spalten)
@@ -506,18 +686,27 @@ def body(d, root):
                  if p.get("thema") else "")
         tiefer = f'<br><small><a href="#zoom-{p["pb"]}">Produktgruppen und Aufwandsarten</a></small>' if d.get("zoom") else ""
         anteil = p["plan"].get(ref["jahr"])
-        quelle = next((v["dateien"][p["pb"]] for a, v in sorted(d["ausgaben"].items(), reverse=True) if p["pb"] in v["dateien"]), None)
+        quelle = next((d["ausgaben"][a]["dateien"][p["pb"]] for a in reversed(_plan_ausgaben(d)) if p["pb"] in d["ausgaben"][a]["dateien"]), None)
         name = f'<a href="{escape(quelle)}">{escape(p["name"])}</a>' if quelle else escape(p["name"])
         return (f'        <tr id="pb-{p["pb"]}"><th scope="row">{escape(p["pb"])} {name}{thema}{tiefer}</th>'
-                + "".join(f"<td>{_zelle(p[art].get(j))}</td>" for art, j, _ in spalten)
-                + f'<td>{_prozent(100 * anteil["betrag"] / ref["summe"]) if anteil else "–"}</td></tr>')
+                + "".join(_td(_zelle(p[art].get(j)), t) for art, j, t in spalten)
+                + _td(_prozent(100 * anteil["betrag"] / ref["summe"]) if anteil else "–", f'Anteil {ref["titel"]}') + "</tr>")
     kopf = "".join(f'<th scope="col">{escape(t)}</th>' for *_, t in spalten)
-    summe = "".join(f"<td>{escape(_mio(a['summe']))}</td>" for a in reversed(ansichten))
+    summe = "".join(_td(escape(_mio(a['summe'])), a["titel"]) for a in reversed(ansichten))
     mit_thema = [p for p in d["produktbereiche"] if p.get("thema")]
     themen = ", ".join(f'<a href="{root}{p["thema"]["pfad"]}">{escape(p["thema"]["titel"])}</a> ({p["pb"]})'
                        for p in mit_thema)
     zahl = ZAHLWORT.get(len(mit_thema), str(len(mit_thema)))
-    dateien = ", ".join(f'<a href="{escape(v["seite"])}">Haushaltsplan {escape(a)}</a>' for a, v in sorted(d["ausgaben"].items()))
+    dateien = ", ".join(f'<a href="{escape(d["ausgaben"][a]["seite"])}">{escape(_quelle(a))}</a>' for a in _plan_ausgaben(d) + ([JA] if JA in d["ausgaben"] else []))
+    ist_quelle = (" laut Haushaltsplan, für 2024 laut festgestelltem Jahresabschluss" if d.get("erweiterung")
+                  else " laut Haushaltsplan")
+    invest_grenze = ("Investitionen stehen nur je Produktbereich, ohne einzelne Maßnahmen und ohne Verpflichtungsermächtigungen."
+                     if d.get("erweiterung") else "Investitionen stehen getrennt in den Teilfinanzplänen.")
+    abweichung = ("" if not d.get("erweiterung") else
+                  "\n        <li><strong>Abweichungen im Jahresabschluss:</strong> Zwei Summen im Jahresabschluss 2024 weichen von "
+                  "der Summe ihrer Teile ab: in der Gesamtergebnisrechnung der fortgeschriebene Ansatz des Personalaufwands um "
+                  "28.806,75 € (S. 186), in der Gesamtfinanzrechnung die Auszahlungen für Baumaßnahmen um 10.000 € (S. 6). "
+                  "Die Seite übernimmt die Werte der Produktbereiche.</li>")
     if d.get("zoom"):
         klick = ("Ein Klick auf eine Fläche zeigt ihre Unterteilung: erst die Produktgruppen, dann die Aufwandsarten. "
                  "Die Flächen zeigen Anteile, keine Bewertung.")
@@ -542,7 +731,7 @@ def body(d, root):
       <summary>So lesen Sie die Zahlen</summary>
       <dl>
         <dt>Betrag</dt><dd>Ordentliche Aufwendungen (Zeile 17 der Teilergebnispläne), nominal in Mio. €, ohne Investitionen.</dd>
-        <dt>Plan und Ist</dt><dd>Plan ist der Ansatz, also der Betrag, den der Haushaltsplan für das Jahr vorsieht; Ist ist das Ergebnis laut Haushaltsplan. Beide weichen oft voneinander ab. <a href="{root}begriffe/#haushalt">Weitere Begriffe</a></dd>{begriffe}
+        <dt>Plan und Ist</dt><dd>Plan ist der Ansatz, also der Betrag, den der Haushaltsplan für das Jahr vorsieht; Ist ist das Ergebnis{ist_quelle}. Beide weichen oft voneinander ab. <a href="{root}begriffe/#haushalt">Weitere Begriffe</a></dd>{begriffe}
         <dt>Farben</dt><dd>Je dunkler eine Fläche, desto größer ihr Anteil an der Summe der Ansicht (Produktbereiche) oder am Produktbereich (Produktgruppen), in fünf Stufen. Die Aufwandsarten haben je eine eigene Farbe.</dd>
         <dt>Ergebnis</dt><dd>Ordentliche Erträge minus ordentliche Aufwendungen (Zeile 18), vor internen Leistungen. Negativ heißt Zuschussbedarf, positiv Überschuss.</dd>
         <dt>Produktbereich 16</dt><dd>Allgemeine Finanzwirtschaft: Hier stehen die Steuern und allgemeinen Zuweisungen. Sein Überschuss zeigt vor allem, wie der Haushalt finanziert wird, nicht eine Aufgabe.</dd>
@@ -569,15 +758,16 @@ def body(d, root):
       <thead><tr><th scope="col">Produktbereich</th>{kopf}<th scope="col">Anteil {escape(ref["titel"])}</th></tr></thead>
       <tbody>
 {chr(10).join(zeile(p) for p in pbs)}
-        <tr class="hh-summe"><th scope="row">Zusammen</th>{summe}<td>100,0 %</td></tr>
+        <tr class="hh-summe"><th scope="row">Zusammen</th>{summe}{_td("100,0 %", f'Anteil {ref["titel"]}')}</tr>
       </tbody>
     </table>
 {ergebnis(d, root)}
+{veraenderung(d) + chr(10) + investitionen(d) if d.get("erweiterung") else ""}
     <details class="hh-mehr">
       <summary>Was diese Seite nicht zeigt</summary>
       <ul>
         <li><strong>Einzelne Posten:</strong> {umfang}</li>
-        <li><strong>Ertragsarten und Investitionen:</strong> Erträge und Ergebnis stehen nur je Produktbereich, ohne Aufteilung nach Ertragsarten und Produktgruppen. Investitionen stehen getrennt in den Teilfinanzplänen.</li>
+        <li><strong>Ertragsarten und Investitionen:</strong> Erträge und Ergebnis stehen nur je Produktbereich, ohne Aufteilung nach Ertragsarten und Produktgruppen. {invest_grenze}</li>{abweichung}
         <li><strong>Ausgegliederte Bereiche:</strong> Eigenbetriebe und das Städtische Gebäudemanagement haben eigene Wirtschaftspläne. Interne Leistungen, Umgliederungen und der globale Minderaufwand verschieben Summen zwischen den Bereichen.</li>
         <li><strong>Künftige Jahre:</strong> Die Finanzplanung ab 2027 ist nicht übernommen. Der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht.</li>
         <li><strong>Vorlagen:</strong> Einzelnen Vorlagen ordnet die Seite keine Beträge zu.</li>
@@ -585,7 +775,7 @@ def body(d, root):
     </details>
     <details class="hh-mehr">
       <summary>Quellen, Prüfung und Lizenz</summary>
-      <p>Stadt Bonn, {dateien} (PDF, Teilergebnispläne je Produktbereich; Abruf {_date(d["abruf"])}).</p>
+      <p>Stadt Bonn, {dateien} (PDF, Teilergebnispläne{" und Teilfinanzpläne, im Jahresabschluss Teilergebnis- und Teilfinanzrechnungen" if d.get("erweiterung") else ""} je Produktbereich; Abruf {_date(d["abruf"])}{f', Jahresabschluss {_date(d["erweiterung"]["abruf_ja"])}' if d.get("erweiterung") else ""}).</p>
       <p>Ausgelesen mit pipeline/haushaltsplan.py; die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan.{pruefung}</p>
       <p>Lizenz: {escape(d["lizenz"])}.</p>
       <p>Einwohnerzahlen für „je Einwohner“: {EINWOHNER_QUELLE}.</p>
