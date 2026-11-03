@@ -589,8 +589,8 @@ class DateienErtragsarten(unittest.TestCase):
             self.assertEqual(set(teile), set(summe))
             self.assertLessEqual(max(abs(teile[k] - summe[k]) for k in summe), 0, path.name)
 
-    def test_noch_nicht_freigegeben(self):
-        self.assertFalse(h.ERTRAGSARTEN_FREIGEGEBEN)
+    def test_freigegeben(self):
+        self.assertTrue(h.ERTRAGSARTEN_FREIGEGEBEN)   # Prüfbogen im Gespräch bestätigt 03.11.2026
 
 if __name__ == "__main__":
     unittest.main()

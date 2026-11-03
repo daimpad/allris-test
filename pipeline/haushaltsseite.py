@@ -763,6 +763,10 @@ def body(d, root):
     dateien = ", ".join(f'<a href="{escape(d["ausgaben"][a]["seite"])}">{escape(_quelle(a))}</a>' for a in _plan_ausgaben(d) + ([JA] if JA in d["ausgaben"] else []))
     ist_quelle = (" laut Haushaltsplan, für 2024 laut festgestelltem Jahresabschluss" if d.get("erweiterung")
                   else " laut Haushaltsplan")
+    mit_er = any(p.get("ertragsarten") for p in d["produktbereiche"])
+    ertrag_grenze = ("Ertragsarten stehen je Produktbereich und Produktgruppe; einzelne Steuern, Gebühren oder Zuweisungen "
+                     "zeigt die Seite nicht." if mit_er else
+                     "Erträge und Ergebnis stehen nur je Produktbereich, ohne Aufteilung nach Ertragsarten und Produktgruppen.")
     invest_grenze = ("Investitionen stehen nur je Produktbereich, ohne einzelne Maßnahmen und ohne Verpflichtungsermächtigungen."
                      if d.get("erweiterung") else "Investitionen stehen getrennt in den Teilfinanzplänen.")
     abweichung = ("" if not d.get("erweiterung") else
@@ -834,7 +838,7 @@ def body(d, root):
       <summary>Was diese Seite nicht zeigt</summary>
       <ul>
         <li><strong>Einzelne Posten:</strong> {umfang}</li>
-        <li><strong>Ertragsarten und Investitionen:</strong> Erträge und Ergebnis stehen nur je Produktbereich, ohne Aufteilung nach Ertragsarten und Produktgruppen. {invest_grenze}</li>{abweichung}
+        <li><strong>Erträge und Investitionen:</strong> {ertrag_grenze} {invest_grenze}</li>{abweichung}
         <li><strong>Ausgegliederte Bereiche:</strong> Eigenbetriebe und das Städtische Gebäudemanagement haben eigene Wirtschaftspläne. Interne Leistungen, Umgliederungen und der globale Minderaufwand verschieben Summen zwischen den Bereichen.</li>
         <li><strong>Künftige Jahre:</strong> Die Finanzplanung ab 2027 ist nicht übernommen. Der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht.</li>
         <li><strong>Vorlagen:</strong> Einzelnen Vorlagen ordnet die Seite keine Beträge zu.</li>

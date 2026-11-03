@@ -1408,7 +1408,7 @@ ERTRAGSARTEN_TSV = ORDNER / "ertragsarten.tsv"
 ERTRAGSARTEN_KOPF = ["ebene", "ausgabe", "produktbereich", "produktgruppe", "name", "einheit", "zeile", "zeile_name",
                      "jahr", "art", "betrag", "datei", "seite", "leer"]
 JA_ERTRAGSARTEN_TSV = ORDNER / "jahresabschluss_ertragsarten.tsv"
-ERTRAGSARTEN_FREIGEGEBEN = False   # erst nach Prüfbogen im Gespräch (haushalt/PHASE6.md)
+ERTRAGSARTEN_FREIGEGEBEN = True   # Prüfbogen im Gespräch bestätigt, freigegeben 03.11.2026 (haushalt/PHASE6.md)
 ERTRAGSARTEN_PRUEFBOGEN = config.EXPORT / "haushalt" / "pruefbogen_haushalt_ertragsarten.tsv"
 
 
