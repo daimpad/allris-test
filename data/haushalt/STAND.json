@@ -308,5 +308,496 @@
    "produktbereiche": 57,
    "produktgruppen": 2332
   }
+ },
+ "jahresabschluss": {
+  "abruf": "2026-11-03",
+  "seite": "https://www.bonn.de/service-bieten/aktuelles-zahlen-fakten/jahresabschluesse.php",
+  "datei": {
+   "url": "https://www.bonn.de/medien-global/amt-20-und-21/jahresabschluesse/Jahresabschluss-2024_Teil-2.pdf",
+   "sha256": "254b1b5f5bc0da943cb70b66ab3e94de70a93b24982a8d7da8d7e22e3c3d9609"
+  },
+  "feststellung": "Rat 12.03.2026 (haushalt/phase0/ERWEITERUNG.md)",
+  "gesamtergebnisrechnung_seite": 2,
+  "spalten": [
+   {
+    "spalte": 1,
+    "art": "Ergebnis",
+    "jahr": 2023,
+    "kopf": "Ergebnis des Vorjahres"
+   },
+   {
+    "spalte": 2,
+    "art": "Ansatz fortgeschrieben",
+    "jahr": 2024,
+    "kopf": "fortgeschriebener Ansatz des Haushaltsjahres"
+   },
+   {
+    "spalte": 3,
+    "art": "davon Ermächtigungsübertragung aus dem Vorjahr",
+    "jahr": 2024,
+    "kopf": "davon Ermächtigungsübertragungen aus dem Vorjahr"
+   },
+   {
+    "spalte": 4,
+    "art": "Ergebnis",
+    "jahr": 2024,
+    "kopf": "Ist-Ergebnis des Haushaltsjahres"
+   },
+   {
+    "spalte": 5,
+    "art": "Vergleich Ansatz/Ist",
+    "jahr": 2024,
+    "kopf": "Vergleich Ansatz/Ist (Sp. 4 ./. Sp. 2)"
+   },
+   {
+    "spalte": 6,
+    "art": "Ermächtigungsübertragung in das Folgejahr",
+    "jahr": 2024,
+    "kopf": "Ermächtigungsübertragungen in das Folgejahr"
+   }
+  ],
+  "zeilen": {
+   "10": "Ordentliche Erträge",
+   "11": "Personalaufwendungen",
+   "12": "Versorgungsaufwendungen",
+   "13": "Aufwendungen für Sach- und Dienstleistungen",
+   "14": "Bilanzielle Abschreibungen",
+   "15": "Transferaufwendungen",
+   "16": "Sonstige ordentliche Aufwendungen",
+   "17": "Ordentliche Aufwendungen",
+   "18": "Ergebnis der laufenden Verwaltungstätigkeit"
+  },
+  "produktbereiche": 17,
+  "produktgruppen": 141,
+  "produktgruppen_nur_im_haushaltsplan": {
+   "1.01.24": "IT-Anwend. u. elektr. Verwaltungsdienste",
+   "1.02.15": "Statistik (bis 2019)",
+   "1.04.08": "Stadtm., Gedenkstätte, Zentrale Projekte",
+   "1.04.13": "Internationale Wissenschaft",
+   "1.04.14": "Beethoven 2020",
+   "1.09.03": "Stabsstelle Dezernatskoordination III",
+   "1.09.06": "Ortsbaurecht",
+   "1.10.06": "Wohnraumversorgung durch Unternehmen",
+   "1.15.10": "Anteile an Unternehmen"
+  },
+  "produktgruppen_nur_im_jahresabschluss": {},
+  "namen_abweichend_vom_haushaltsplan": {
+   "1.04.07": {
+    "jahresabschluss": "Zentrum für Stadtgeschichte u. Erinnerungskultur",
+    "haushaltsplan": "Stadtarchiv"
+   }
+  },
+  "pruefsummen": {
+   "aufwandsarten_17": {
+    "spalten": 954,
+    "groesste_abweichung_cent": 0
+   },
+   "ergebnis_18": {
+    "spalten": 954,
+    "groesste_abweichung_cent": 0
+   },
+   "produktgruppen_produktbereich": {
+    "spalten": 918,
+    "groesste_abweichung_cent": 0
+   },
+   "produktbereiche_gesamt": {
+    "spalten": 54,
+    "groesste_abweichung_cent": 0
+   },
+   "vorjahr_haushaltsplan": {
+    "spalten": 1140,
+    "groesste_abweichung_euro": 2
+   }
+  },
+  "toleranz_cent": 2,
+  "toleranz_euro_haushaltsplan": 9,
+  "bekannte_abweichung_gesamtrechnung_cent": {
+   "11/2": -2880675,
+   "17/2": -2880675,
+   "18/2": 2880675,
+   "11/5": 2880675,
+   "17/5": 2880675,
+   "18/5": -2880675
+  },
+  "leere_zellen": {
+   "produktbereiche": 159,
+   "produktgruppen": 2204
+  }
+ },
+ "investitionen": {
+  "abruf": "2026-11-03",
+  "dateien": {
+   "2023/2024": {
+    "gesamt": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/gepp.pdf",
+     "sha256": "895ddf34f6953b86e27da77ad4651dff264c600820dd7ae9600a59f547286455"
+    },
+    "01": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb01.pdf",
+     "sha256": "10ba3db7f23bdb4cdeacd51b230e96f080b5d08e677d9bd76ff596ddbff869e7"
+    },
+    "02": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb02.pdf",
+     "sha256": "46de0a73ceb28fb96d2f3cad25db454bdbfbaa17ded3478757e86a81808b7ef4"
+    },
+    "03": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb03.pdf",
+     "sha256": "65b6f7ce3b1f38d8dd2fa2a0c7beed3e9e999317212d313e7d335d15b715c33c"
+    },
+    "04": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb04.pdf",
+     "sha256": "bc05aa814919b855253c3a991243ce139976aeb8bd81579aa15b61b8dc990744"
+    },
+    "05": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb05.pdf",
+     "sha256": "ca38f4008f8205ec406a94efd75c7aa024e46945bd93e0f9e45edc89a0ebeeca"
+    },
+    "06": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb06.pdf",
+     "sha256": "14f63697496a9274b6d0595ccec2eb2eb6c5bd69d89e68a9970d9984f8eb408e"
+    },
+    "07": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb07.pdf",
+     "sha256": "ce8f5f3fb62aacc52339fb1a45af887fad9bb8500e4367a3f4d7a11ad115566d"
+    },
+    "08": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb08.pdf",
+     "sha256": "0c05213d6e9697371e72bc9c27e70105e93921f34207f1453b89f6714bf52910"
+    },
+    "09": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb09.pdf",
+     "sha256": "7826b1443e2047d759ab9415e6dc0b45991104e14544cb57f5c599f6db904dcf"
+    },
+    "10": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb10.pdf",
+     "sha256": "4a92bbb7f3527bb58358062ad657488eca11946df3ced0449926b473df607a90"
+    },
+    "11": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb11.pdf",
+     "sha256": "bdaef859be709ce6e08a007b2f798b8c2e43d0c143d4f24f3d9accd85db81397"
+    },
+    "12": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb12.pdf",
+     "sha256": "2e2ed8fde59f24cdb8d4d279b23d5770fde7537c0bf5956f81e55ce8aaf6bc63"
+    },
+    "13": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb13.pdf",
+     "sha256": "65e83d2f8d11ed0e990dc52c1a6915679f75a14e0aa04fbecf5419fc8dd8cbf1"
+    },
+    "14": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb14.pdf",
+     "sha256": "b924854a115561886ad40fdbabb68c6fab12d5e568c0ca1efb4594c37d7d0950"
+    },
+    "15": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb15.pdf",
+     "sha256": "b0a3886fcb51a49386c1a22512c73cc9141482d42d1567b11b9c16cef89a7e10"
+    },
+    "16": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb16.pdf",
+     "sha256": "b8574b12b5379ecdfb62a05c60a9df5f0833437476a06d8d2eac91aa87c3633f"
+    },
+    "17": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2023-24/produktbereiche/pb17.pdf",
+     "sha256": "bc97fc9f932a6108fc74504794aadbc367ab2181348dd6312d50a209109e7009"
+    }
+   },
+   "2025/2026": {
+    "gesamt": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/gepp.pdf",
+     "sha256": "12d8b19541ebb13bb85e967c7f8299ca80469de149aabdbd3e0a395d985c1d76"
+    },
+    "01": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB01.pdf",
+     "sha256": "d82e8891ae66d69e10240ed13954bd0ec475a280d9adcdb5035b9a8d3ab4840e"
+    },
+    "02": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB02.pdf",
+     "sha256": "de7ac5aede03bb1485bc2bd4d7bf5a77b50e23ac645d19d315fdff3a1480c3b8"
+    },
+    "03": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB03.pdf",
+     "sha256": "aa1a54b8d7569eea3f0d2648687ebe8dfe8c1d9bd86288be1805c898ddef35fc"
+    },
+    "04": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB04.pdf",
+     "sha256": "834a66c5b5bc0c85b3bbb6ddb01c6104d01442a47cda5e9a031aaed7196440fb"
+    },
+    "05": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB05.pdf",
+     "sha256": "4c68c8a347da54b93c60f59a20b0954f8040f0e24e68b2137852b860404c010b"
+    },
+    "06": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB06.pdf",
+     "sha256": "6fee2127586ae9e3e6d76ea233a3638d38998dd3bbce6a8d36c03579069519ba"
+    },
+    "07": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB07.pdf",
+     "sha256": "41161a187a424f17cd36962e917da2da63c3c274fc3d7dbb9a7b37df38ceae2e"
+    },
+    "08": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB08.pdf",
+     "sha256": "a1f0102e63acc8532aa1f1ece99272332cf6bb272e74b6a534ba646745c2ad8e"
+    },
+    "09": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB09.pdf",
+     "sha256": "ab3588a4090f883bef06aeccb17c6b407255e950709b14d7a46111f21e9cc078"
+    },
+    "10": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB10.pdf",
+     "sha256": "015f6cf11960cb415ce761d3fa666656828468fb8cbeafe4503fb64ee2c191fe"
+    },
+    "11": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB11.pdf",
+     "sha256": "cde2e45cb72f60d9993c4111486fae5313ebcb307dbdc98b52eb3c2fde245584"
+    },
+    "12": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB12.pdf",
+     "sha256": "5987d6f2244a9ed1e6ef1e54434b007f74fa8e642e34fc0c630d627fabf63ac3"
+    },
+    "13": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB13.pdf",
+     "sha256": "636657270cac0eef190a11fa7dc09bb27e4372e4bb811eb9a2b03ad48a895ca0"
+    },
+    "14": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB14.pdf",
+     "sha256": "986005297757f4c42ec19f173f1de48bd84f00a3d73c0b1e249f92a50befa48e"
+    },
+    "15": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB15.pdf",
+     "sha256": "d236527707028976d3094f6cf632cd88b51e39492c379cf8b91dd0314818f332"
+    },
+    "16": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB16.pdf",
+     "sha256": "25431c71f8a976c33a51d2eb52f802892fd2ff8f5cd9ca8d2c00f2fbe264602b"
+    },
+    "17": {
+     "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB17.pdf",
+     "sha256": "ffe189b9e6d29f71cb876c2f1ca41e687901d624c12f08926e25ca4bc92e38f8"
+    }
+   }
+  },
+  "seite_produktbereich": 3,
+  "zeilen": {
+   "1": "Einzahlungen aus Zuwendungen für Investitionsmaßnahmen",
+   "2": "Einzahlungen aus der Veräußerung von Sachanlagen",
+   "3": "Einzahlungen aus der Veräußerung von Finanzanlagen",
+   "4": "Einzahlungen aus Beiträgen und ähnlichen Entgelten",
+   "5": "sonstige Investitionseinzahlungen",
+   "6": "Summe der investiven Einzahlungen",
+   "7": "Auszahlungen für den Erwerb von Grundstücken und Gebäuden",
+   "8": "Auszahlungen für Baumaßnahmen",
+   "9": "Auszahlungen für den Erwerb von beweglichem Anlagevermögen",
+   "10": "Auszahlungen für den Erwerb von Finanzanlagen",
+   "11": "Auszahlungen von aktivierbaren Zuwendungen",
+   "12": "sonstige Investitionsauszahlungen",
+   "13": "Summe der investiven Auszahlungen",
+   "14": "Saldo der Investitionstätigkeit (= Zeilen 6 und 13)"
+  },
+  "spalten_im_pdf": {
+   "2023/2024": [
+    "1 Ergebnis 2020",
+    "2 Ergebnis 2021",
+    "3 Ansatz 2022",
+    "4 Ansatz 2023",
+    "5 VE 2023",
+    "6 Ansatz 2024",
+    "7 VE 2024",
+    "8 Planung 2025",
+    "9 Planung 2026",
+    "10 Planung 2027"
+   ],
+   "2025/2026": [
+    "1 Ergebnis 2022",
+    "2 Ergebnis 2023",
+    "3 Ansatz 2024",
+    "4 Ansatz 2025",
+    "5 VE 2025",
+    "6 Ansatz 2026",
+    "7 VE 2026",
+    "8 Planung 2027",
+    "9 Planung 2028",
+    "10 Planung 2029"
+   ]
+  },
+  "spalten_uebernommen": "Ergebnis und Ansatz; ohne VE (Verpflichtungsermächtigungen) und Planung (Entscheidung 03.11.2026)",
+  "gesamtfinanzplan_zeilen": "18–31 = Teilfinanzplan A 1–14",
+  "produktgruppen": {
+   "2023/2024": 88,
+   "2025/2026": 87
+  },
+  "pruefsummen": {
+   "zeilen_1_5_gleich_6": {
+    "spalten": 1045,
+    "groesste_abweichung_euro": 1
+   },
+   "zeilen_7_12_gleich_13": {
+    "spalten": 1045,
+    "groesste_abweichung_euro": 1
+   },
+   "saldo_6_minus_13_gleich_14": {
+    "spalten": 1045,
+    "groesste_abweichung_euro": 1
+   },
+   "produktgruppen_produktbereich": {
+    "spalten": 2380,
+    "groesste_abweichung_euro": 2
+   },
+   "produktbereiche_gesamtfinanzplan": {
+    "spalten": 140,
+    "groesste_abweichung_euro": 3
+   }
+  },
+  "toleranz_euro": 9,
+  "leere_zellen": {
+   "2023/2024": {
+    "produktbereiche": 690,
+    "produktgruppen": 4257
+   },
+   "2025/2026": {
+    "produktbereiche": 687,
+    "produktgruppen": 4197
+   }
+  }
+ },
+ "jahresabschluss_investitionen": {
+  "abruf": "2026-11-03",
+  "datei": "wie jahresabschluss → datei (SHA-256 geprüft)",
+  "teil": "Teilfinanzrechnung, Teil A: Zahlungsnachweis (Investitionstätigkeit); Teil B (Investitionseinzelmaßnahmen) nicht gelesen",
+  "gesamtfinanzrechnung_seite": 6,
+  "spalten_uebernommen": [
+   {
+    "spalte": 1,
+    "art": "Ergebnis",
+    "jahr": 2023,
+    "kopf": "Ergebnis des Vorjahres"
+   },
+   {
+    "spalte": 2,
+    "art": "Ansatz fortgeschrieben",
+    "jahr": 2024,
+    "kopf": "fortgeschriebener Ansatz des Haushaltsjahres"
+   },
+   {
+    "spalte": 4,
+    "art": "Ergebnis",
+    "jahr": 2024,
+    "kopf": "Ist-Ergebnis des Haushaltsjahres"
+   },
+   {
+    "spalte": 5,
+    "art": "Vergleich Ansatz/Ist",
+    "jahr": 2024,
+    "kopf": "Vergleich Ansatz/Ist (Sp. 4 ./. Sp. 2)"
+   }
+  ],
+  "spalten_weggelassen": {
+   "3": "davon Ermächtigungsübertragungen aus dem Vorjahr",
+   "6": "Ermächtigungsübertragungen in das Folgejahr"
+  },
+  "zeilen_im_jahresabschluss": {
+   "1": "aus Zuwendungen für Investitionsmaßnahmen",
+   "2": "aus der Veräußerung von Sachanlagen",
+   "3": "aus der Veräußerung von Finanzanlagen",
+   "4": "aus Beiträgen u. ä. Entgelten",
+   "5": "Sonstige Investitionseinzahlungen",
+   "6": "Summe: (invest. Einzahlungen)",
+   "7": "für den Erwerb von Grundstücken und Gebäuden",
+   "8": "für Baumaßnahmen",
+   "9": "für den Erwerb von beweglichem Anlagevermögen",
+   "10": "für den Erwerb von Finanzanlagen",
+   "11": "von aktivierbaren Zuwendungen",
+   "12": "Sonstige Investitionsauszahlungen",
+   "13": "Summe: (invest. Auszahlungen)",
+   "14": "Saldo: der Investitionstätigkeit (Einzahlungen ./. Auszahlungen)"
+  },
+  "zeilen_gesamtfinanzrechnung": "18–31 = Zeilen 1–14",
+  "zeile_12": "kommt in keiner Teilfinanzrechnung vor; Wortlaut erschlossen",
+  "leere_zeilen": "Der Jahresabschluss druckt leere Zeilen nicht; sie stehen als 0 mit leer = ja",
+  "produktbereiche": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16"
+  ],
+  "ohne_teilfinanzrechnung": [
+   "17"
+  ],
+  "produktgruppen": 82,
+  "produktgruppen_nur_im_haushaltsplan": {
+   "1.01.04": "Integration und Vielfalt",
+   "1.01.21": "Finanzbuchhaltung",
+   "1.02.02": "Gewerbewesen",
+   "1.04.12": "Wissenschaft",
+   "1.09.01": "Raumplanung",
+   "1.17.03": "Stiftung Peter Kemper",
+   "1.17.16": "Stiftung Arme im Allgemeinen"
+  },
+  "produktgruppen_nur_im_jahresabschluss": {
+   "1.01.13": "Arbeitssicherheit",
+   "1.04.03": "Beethovenpflege"
+  },
+  "seiten_mit_vermerk": {
+   "608": [
+    "kein Jahr im Kopf der Spalte 1, 2023 angenommen",
+    "kein Jahr im Kopf der Spalte 4, 2024 angenommen"
+   ]
+  },
+  "pruefsummen": {
+   "zeilen_1_5_gleich_6": {
+    "spalten": 396,
+    "groesste_abweichung_cent": 0
+   },
+   "zeilen_7_12_gleich_13": {
+    "spalten": 396,
+    "groesste_abweichung_cent": 0
+   },
+   "saldo_6_minus_13_gleich_14": {
+    "spalten": 396,
+    "groesste_abweichung_cent": 0
+   },
+   "vergleich_4_minus_2": {
+    "spalten": 1386,
+    "groesste_abweichung_cent": 0
+   },
+   "produktgruppen_produktbereich": {
+    "spalten": 896,
+    "groesste_abweichung_cent": 0
+   },
+   "produktbereiche_gesamt": {
+    "spalten": 56,
+    "groesste_abweichung_cent": 0
+   },
+   "vorjahr_haushaltsplan": {
+    "spalten": 1484,
+    "groesste_abweichung_euro": 1
+   }
+  },
+  "toleranz_cent": 2,
+  "toleranz_euro_haushaltsplan": 9,
+  "bekannte_abweichung_gesamtrechnung_cent": {
+   "8/2": 1000000,
+   "13/2": 1000000,
+   "14/2": -1000000,
+   "8/5": -1000000,
+   "13/5": -1000000,
+   "14/5": 1000000
+  },
+  "hinweis_ermaechtigungsuebertragungen": "nicht übernommen; in der Gesamtfinanzrechnung (S. 6) hat Zeile 31 in den Spalten 3 und 6 das Vorzeichen von Zeile 30, nicht 23 − 30 wie in den Teilfinanzrechnungen",
+  "leere_zellen": {
+   "produktbereiche": 512,
+   "produktgruppen": 3293
+  }
  }
 }
