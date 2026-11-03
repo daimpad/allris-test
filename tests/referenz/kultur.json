@@ -38,6 +38,12 @@
      "04": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB04.pdf"
     },
     "seite": "https://www.bonn.de/service-bieten/aktuelles-zahlen-fakten/haushaltsplan-2025-2026.php"
+   },
+   "Jahresabschluss 2024": {
+    "dateien": {
+     "04": "https://www.bonn.de/medien-global/amt-20-und-21/jahresabschluesse/Jahresabschluss-2024_Teil-2.pdf"
+    },
+    "seite": "https://www.bonn.de/service-bieten/aktuelles-zahlen-fakten/jahresabschluesse.php"
    }
   },
   "jahre": [
@@ -67,7 +73,12 @@
     }
    },
    {
-    "ist": null,
+    "ist": {
+     "ausgabe": "Jahresabschluss 2024",
+     "betrag": 84459002,
+     "datei": "Jahresabschluss-2024_Teil-2.pdf",
+     "seite": 230
+    },
     "jahr": 2024,
     "plan": {
      "ausgabe": "2023/2024",

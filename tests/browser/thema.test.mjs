@@ -250,16 +250,18 @@ test("Haushalt: Klick führt zu den Produktgruppen und weiter zu den Aufwandsart
     assert.equal(await page.locator("#zoom-04 .hh-balken").filter({ visible: true }).count(), 1, "ein Balken der Aufwandsarten je Ansicht");
     await page.locator('label[for="hh-ist2023"]').click();
     assert.match((await treemaps(page, true))[0], /^Ist 2023: Produktgruppen im Produktbereich 04/);
+    // Stelle der Ansicht Ist 2023 (dritte, mit Ist 2024 aus dem Jahresabschluss vierte)
+    const v = await page.locator(".hh-radio").evaluateAll((rs) => rs.findIndex((r) => r.id === "hh-ist2023"));
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     assert.deepEqual(await axe(page), []);
     // Ebene 3: Aufwandsarten der Produktgruppe als Kacheln (site/haushalt.js zeichnet sie aus den Balken)
-    await page.locator(`#zoom-04 .hh-v2 .hh-${format} a[href="#pg-1-04-07"]`).click();
+    await page.locator(`#zoom-04 .hh-v${v} .hh-${format} a[href="#pg-1-04-07"]`).click();
     assert.deepEqual(await ebenen(page), ["pg-1-04-07"]);
     assert.equal(await page.locator("#pg-1-04-07 h2").textContent(), "Produktgruppe 1.04.07 Stadtarchiv");
     assert.match(await page.locator("#pg-1-04-07 .hh-pfad").textContent(), /^Alle Produktbereiche › 04 Kultur und Wissenschaft › 1\.04\.07 Stadtarchiv$/);
     assert.match(await page.locator("#pg-1-04-07").textContent(), /Name in Haushaltsplan 2023\/2024: Z\. f\. Stadtgesch\. u\. Erinnerungskulturen/);
     assert.deepEqual(await treemaps(page, true), ["Ist 2023: Aufwandsarten der Produktgruppe 1.04.07 Stadtarchiv"]);
-    assert.equal(await page.locator(`#pg-1-04-07 .hh-v2 .hh-${format} rect`).count(), 5, "Transfers leer: fünf Kacheln");
+    assert.equal(await page.locator(`#pg-1-04-07 .hh-v${v} .hh-${format} rect`).count(), 5, "Transfers leer: fünf Kacheln");
     assert.equal(await page.locator("#pg-1-04-07 .hh-balken").filter({ visible: true }).count(), 0, "Balken nur ohne Skript");
     assert.equal(await page.locator("#pg-1-04-07 tbody tr").count(), 7);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
@@ -319,7 +321,8 @@ test("Haushalt: negative und leere Werte ohne Fläche und Balkenstück, 0 € nu
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, bypassCSP: true });
   await page.goto(SITE + "haushalt/#zoom-09", { waitUntil: "networkidle" });
   await page.locator('label[for="hh-ist2023"]').click();
-  assert.equal(await page.locator("#zoom-09 .hh-balken.hh-v2 .hh-f15").count(), 0, "negativ: kein Balkenstück");
+  const v = await page.locator(".hh-radio").evaluateAll((rs) => rs.findIndex((r) => r.id === "hh-ist2023"));
+  assert.equal(await page.locator(`#zoom-09 .hh-balken.hh-v${v} .hh-f15`).count(), 0, "negativ: kein Balkenstück");
   assert.match(await page.locator("#zoom-09").textContent(), /Negativ sind: Transferaufwendungen im Ist 2023 \(−84\.508 €\)/);
   assert.equal(await page.locator('#zoom-09 a[href="#pg-1-09-06"]').count(), 0, "0 €: ohne Fläche und ohne Ebene 3");
   assert.match(await page.locator("#zoom-09").textContent(), /1\.09\.06 Ortsbaurecht/);

@@ -8,10 +8,12 @@ from unittest import mock
 from pipeline import config, haushaltsseite as hs
 
 
-def daten(ebenen):
-    """Daten der Seite mit oder ohne Ebenen 2 und 3, unabhängig von Freigabe und Umgebung."""
+def daten(ebenen, erweiterung=False):
+    """Daten der Seite mit oder ohne Ebenen 2 und 3 und Erweiterung (Ist 2024, Investitionen), unabhängig von Freigabe
+    und Umgebung."""
     with mock.patch.object(hs.haushaltsplan, "EBENEN_FREIGEGEBEN", ebenen), \
-            mock.patch.dict(os.environ, {"HAUSHALT_EBENEN": ""}):
+            mock.patch.object(hs.haushaltsplan, "ERWEITERUNG_FREIGEGEBEN", erweiterung), \
+            mock.patch.dict(os.environ, {"HAUSHALT_EBENEN": "", "HAUSHALT_ERWEITERUNG": ""}):
         return hs.daten()
 
 
@@ -234,6 +236,49 @@ class ErtraegeUndErgebnis(unittest.TestCase):
             self.assertNotIn(pb, flaechen)
         self.assertIn("Einen Überschuss haben 11 Ver- und Entsorgung, 15 Wirtschaft und Tourismus, 16 Allgemeine Finanzwirtschaft;", figur)
         self.assertIn("IT.NRW", self.html)
+
+
+
+class Erweiterung(unittest.TestCase):
+    """Ist 2024 aus dem Jahresabschluss, Veränderung und Investitionen (haushalt/PHASE5.md)."""
+    @classmethod
+    def setUpClass(cls):
+        cls.d = daten(True, erweiterung=True)
+        cls.html = hs.body(cls.d, "../")
+
+    def test_ohne_freigabe_nicht_sichtbar(self):
+        d = daten(True)
+        self.assertNotIn("erweiterung", d)
+        self.assertNotIn('id="investitionen"', hs.body(d, "../"))
+
+    def test_vier_ansichten_und_ist_2024_auf_allen_ebenen(self):
+        self.assertEqual([a["titel"] for a in self.d["ansichten"]], ["Plan 2026", "Plan 2025", "Ist 2024", "Ist 2023"])
+        p = next(p for p in self.d["produktbereiche"] if p["pb"] == "03")
+        for x in (p["ist"][2024], p["ertrag"]["ist"][2024], p["produktgruppen"][0]["ist"][2024],
+                  p["aufwandsarten"][0]["ist"][2024]):
+            self.assertEqual(x["ausgabe"], "Jahresabschluss 2024")
+        self.assertIn('id="hh-ist2024"', self.html)
+        self.assertIn(".hh-v3", (config.ROOT / "site" / "page.css").read_text(encoding="utf-8"))
+
+    def test_veraenderung_nur_gleicher_art(self):
+        teil = self.html.split('<h2 id="veraenderung">')[1].split("</table>")[0]
+        self.assertIn("<th scope=\"col\">Ist 2024 zu Ist 2023</th><th scope=\"col\">Ist 2024 zum Ansatz 2024</th>"
+                      "<th scope=\"col\">Plan 2026 zu Plan 2025</th>", teil)
+        self.assertEqual(hs._delta({"betrag": 5}, {"betrag": -10}), "+15 €")   # ohne Prozent bei negativem Ausgangswert
+        self.assertEqual(hs._delta({"betrag": 3_000_000}, {"betrag": 2_000_000}), "+1,0 Mio. €<br><small>+50,0 %</small>")
+        self.assertIn("1.771,1 Mio. €", self.html)   # Ansatz der Satzung
+        self.assertIn("1.819,6 Mio. €", self.html)   # fortgeschriebener Ansatz (Jahresabschluss)
+
+    def test_investitionen_summen(self):
+        # haushalt/PHASE5.md: Gesamtfinanzplan und Gesamtfinanzrechnung, Zeilen 6, 13, 10 und 14
+        teil = self.html.split('<h2 id="investitionen">')[1].split("</table>")[0]
+        zeile = lambda name: re.sub(r"<[^>]+>", " ", teil.split(name)[1].split("</tr>")[0]).split()
+        self.assertEqual(" ".join(zeile("Investive Auszahlungen (Zeile 13)")),
+                         "169,0 Mio. € 225,6 Mio. € 447,6 Mio. € 369,4 Mio. € 368,6 Mio. €")
+        self.assertEqual(" ".join(zeile("Saldo (Zeile 14)")),
+                         "−109,6 Mio. € −190,1 Mio. € −343,3 Mio. € −297,3 Mio. € −285,6 Mio. €")
+        self.assertIn("Ohne Teilfinanzrechnung im Jahresabschluss 2024: 17 Stiftungen.", self.html)
+        self.assertIn("Jahresabschluss-2024_Teil-2.pdf#page=", self.html)
 
 
 if __name__ == "__main__":
