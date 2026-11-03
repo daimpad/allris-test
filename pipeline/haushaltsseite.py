@@ -874,7 +874,7 @@ def write(site, site_url, page):
         return []
     out = site / PFAD / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(site_url, PFAD, "Haushalt auf einen Blick – RIS-Karte Bonn",
+    out.write_text(page(site_url, PFAD, "Haushalt auf einen Blick – Ratsatlas Bonn",
                         "Ordentliche Aufwendungen, Erträge und Ergebnis der Stadt Bonn je Produktbereich: Plan und Ist "
                         "aus den Haushaltsplänen, mit Fundstelle und je Einwohner.", body(d, "../"), "../", stil(d)), encoding="utf-8")
     return [PFAD]

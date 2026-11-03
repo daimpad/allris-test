@@ -1,4 +1,4 @@
-"""Seite begriffe/: Begriffe der RIS-Karte in einfachen Worten (Entscheidung des Auftraggebers 02.11.2026), dazu das
+"""Seite begriffe/: Begriffe des Ratsatlas in einfachen Worten (Entscheidung des Auftraggebers 02.11.2026), dazu das
 Akkordeon „Begriffe auf dieser Seite“ für Themen- und Gebietsseiten.
 
 Quelle ist das Glossar (pipeline/glossar.py, auch glossar.json für Karte und Ratsassistent). Die Erklärungen sind
@@ -35,7 +35,7 @@ def abschnitte():
                 "Erklärung daneben ist allgemein formuliert.", ergebnisse))
     out.append(("rollen", "Rollen in der Beratungsfolge", "Jedes Gremium der Beratungsfolge hat eine Rolle.", rollen))
     out.append(("stand", "Stand eines Vorgangs",
-                "Der Stand ist von der RIS-Karte aus der Beratungsfolge abgeleitet.",
+                "Der Stand ist vom Ratsatlas aus der Beratungsfolge abgeleitet.",
                 [(k, v, None, glossar.anker("stand " + k)) for k, v in glossar.STAENDE.items()]))
     out.append(("schritte", "Schritte der Prozesslinie", "",
                 [(glossar.SCHRITTE[k], v, None, glossar.anker("schritt " + k)) for k, v in glossar.SCHRITTE_TEXT.items()]))
@@ -55,7 +55,7 @@ def body(root):
     teile = abschnitte()
     sprung = " · ".join(f'<a href="#{k}">{escape(t)}</a>' for k, t, _, _ in teile)
     html = [f"""    <h1>Begriffe</h1>
-    <p class="lead">Was bedeuten die Wörter auf der RIS-Karte? Hier stehen Vorlagenarten, Gremien, Ergebnisse und Kürzel in einfachen Worten, jeweils mit Fundstelle.</p>
+    <p class="lead">Was bedeuten die Wörter im Ratsatlas? Hier stehen Vorlagenarten, Gremien, Ergebnisse und Kürzel in einfachen Worten, jeweils mit Fundstelle.</p>
     <p class="meta">Die Erklärungen sind allgemein und keine Rechtsberatung. Maßgeblich sind die Gemeindeordnung NRW, die Geschäftsordnung des Rates und die Originale im Ratsinformationssystem. Wo eine Vorlagenart in keinem Regelwerk beschrieben ist, ist die Erklärung aus den Daten erschlossen; das steht bei der Fundstelle.</p>
     <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> {sprung}</nav>"""]
     for key, titel, einleitung, eintraege in teile:
@@ -63,7 +63,7 @@ def body(root):
         if einleitung:
             html.append(f"    <p>{escape(einleitung)}</p>")
         html.append(_dl(eintraege))
-    html.append(f'    <p class="meta">Quelle: Glossar der RIS-Karte (<a href="{root}data/export/glossar.json">glossar.json</a>), '
+    html.append(f'    <p class="meta">Quelle: Glossar des Ratsatlas (<a href="{root}data/export/glossar.json">glossar.json</a>), '
                 "das auch der Ratsassistent nutzt. <a href=\"" + root + "\">Zur Karte</a> · <a href=\"" + root
                 + "thema/\">Themenseiten</a></p>")
     return "\n".join(html)
@@ -110,7 +110,7 @@ def write(site, site_url, page):
     """Schreibt begriffe/index.html; gibt den Pfad für die Sitemap zurück."""
     out = site / PFAD / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(site_url, PFAD, "Begriffe – RIS-Karte Bonn",
+    out.write_text(page(site_url, PFAD, "Begriffe – Ratsatlas Bonn",
                         "Was bedeuten Beschlussvorlage, Stellungnahme der Verwaltung, „zur Kenntnis genommen“ oder ST? "
                         "Begriffe aus dem Ratsinformationssystem der Stadt Bonn in einfachen Worten, mit Fundstelle.",
                         body("../"), "../"), encoding="utf-8")

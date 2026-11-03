@@ -154,8 +154,8 @@ BEGRIFFE = [
      "zurückgeht.", ERSCHLOSSEN),
     ("Eilentscheidung (Hauptausschuss)", "Entscheidung des Hauptausschusses anstelle des Rates in einer Angelegenheit, "
      "die keinen Aufschub duldet; der Rat genehmigt sie nachträglich.", "§ 60 Abs. 1 GO NRW"),
-    ("Stand eines Vorgangs", "Von der RIS-Karte aus der Beratungsfolge abgeleitet: entschieden, beraten ohne "
-     "Entscheidung, in Beratung, offen oder ohne Beratungsfolge. Maßgeblich ist das Original.", "abgeleitet (RIS-Karte)"),
+    ("Stand eines Vorgangs", "Vom Ratsatlas aus der Beratungsfolge abgeleitet: entschieden, beraten ohne "
+     "Entscheidung, in Beratung, offen oder ohne Beratungsfolge. Maßgeblich ist das Original.", "abgeleitet (Ratsatlas)"),
     # Kürzel
     ("ST", "Kürzel an der Drucksachennummer: Stellungnahme der Verwaltung zu der Vorlage mit derselben Nummer davor, "
      "z. B. 261088-01 ST zu 261088.", DATENFELD + ", Feld „reference“; Bedeutung aus der Vorlagenart erschlossen"),

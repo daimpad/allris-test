@@ -1,4 +1,4 @@
-"""Seite einfach/: Die RIS-Karte in Einfacher Sprache (Entscheidungen des Auftraggebers 02.11.2026: acht Abschnitte,
+"""Seite einfach/: Der Ratsatlas in Einfacher Sprache (Entscheidungen des Auftraggebers 02.11.2026: acht Abschnitte,
 überall verlinkt, direkt veröffentlicht, Prüfung danach). Grundlage: verstaendlichkeit/phase0/BERICHT.md, Abschnitt 3.
 
 Einfache Sprache, nicht Leichte Sprache: keine Prüfgruppe. Kurze Sätze, ein Gedanke je Satz. Jede Aussage zu Rechten
@@ -40,15 +40,15 @@ def _fach(text):
 
 def body(root):
     woerter = "\n".join(f"      <dt>{w}</dt><dd>{e}</dd>" for w, e in WOERTER)
-    return f"""    <h1>Die RIS-Karte in Einfacher Sprache</h1>
-    <p class="lead">Auf dieser Seite erklären wir die RIS-Karte in Einfacher Sprache. Sie erfahren: Was zeigt die Karte? Wer entscheidet in Bonn? Und wie können Sie mitmachen?</p>
-    <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> <a href="#was">Was ist die RIS-Karte?</a> · <a href="#wer">Wer entscheidet?</a> · <a href="#ablauf">Wie läuft eine Sache ab?</a> · <a href="#woerter">Was bedeuten die Wörter?</a> · <a href="#benutzen">Wie benutze ich die Karte?</a> · <a href="#mitmachen">Wie kann ich mitmachen?</a> · <a href="#grenzen">Was die Karte nicht kann</a> · <a href="#kontakt">Kontakt</a></nav>
+    return f"""    <h1>Der Ratsatlas in Einfacher Sprache</h1>
+    <p class="lead">Auf dieser Seite erklären wir den Ratsatlas in Einfacher Sprache. Sie erfahren: Was zeigt die Karte? Wer entscheidet in Bonn? Und wie können Sie mitmachen?</p>
+    <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> <a href="#was">Was ist der Ratsatlas?</a> · <a href="#wer">Wer entscheidet?</a> · <a href="#ablauf">Wie läuft eine Sache ab?</a> · <a href="#woerter">Was bedeuten die Wörter?</a> · <a href="#benutzen">Wie benutze ich die Karte?</a> · <a href="#mitmachen">Wie kann ich mitmachen?</a> · <a href="#grenzen">Was die Karte nicht kann</a> · <a href="#kontakt">Kontakt</a></nav>
     <div class="einfach">
-    <h2 id="was">Was ist die RIS-Karte?</h2>
+    <h2 id="was">Was ist der Ratsatlas?</h2>
     <p>Der Rat der Stadt Bonn und andere Gremien beraten über viele Themen. Zum Beispiel über Straßen, Schulen oder Spielplätze.</p>
     <p>Zu jedem Thema gibt es ein Schreiben. Dieses Schreiben heißt Vorlage.</p>
     <p>Alle Vorlagen stehen im Ratsinformationssystem der Stadt Bonn. Die Abkürzung dafür ist RIS.</p>
-    <p>Die RIS-Karte zeigt diese Vorlagen auf einer Karte. So sehen Sie: Worum geht es in meiner Nähe? Wann wurde darüber beraten? Und wer war beteiligt?</p>
+    <p>Der Ratsatlas zeigt diese Vorlagen auf einer Karte. Ein Atlas ist eine Sammlung von Karten. So sehen Sie: Worum geht es in meiner Nähe? Wann wurde darüber beraten? Und wer war beteiligt?</p>
     <p>Die Daten kommen von der Stadt Bonn. Die Karte holt sie jeden Morgen neu. Sie zeigt Vorlagen ab Oktober 2019.</p>
 {_fach("Quelle ist die OParl-Schnittstelle des Ratsinformationssystems der Stadt Bonn (CC0); Sitzungen und Ergebnisse über OParl-Lite (CC BY 4.0).")}
 
@@ -95,7 +95,7 @@ def body(root):
       <li><strong>Bürgerantrag:</strong> Sie können sich schriftlich mit einer Anregung oder Beschwerde an den Rat oder an Ihre Bezirksvertretung wenden. <a href="{BUERGERANTRAG}">So geht der Bürgerantrag bei der Stadt Bonn</a></li>
       <li><strong>Informiert bleiben:</strong> Mit einem <a href="{root}rss/">Feed</a> erfahren Sie, wenn es Neues gibt.</li>
     </ul>
-    <p>Wichtig: Die RIS-Karte ist keine Stelle der Stadt. Fragen und Anträge gehen an die Stadt Bonn.</p>
+    <p>Wichtig: Der Ratsatlas ist keine Stelle der Stadt. Fragen und Anträge gehen an die Stadt Bonn.</p>
 {_fach("Öffentlichkeit der Sitzungen § 48 GO NRW; Einwohnerfragestunde § 26 der Geschäftsordnung des Rates; Anregungen und Beschwerden § 24 GO NRW.")}
 
     <h2 id="grenzen">Was die Karte nicht kann</h2>
@@ -109,7 +109,7 @@ def body(root):
     </ul>
 
     <h2 id="kontakt">Kontakt</h2>
-    <p>Die RIS-Karte hat Damian Paderta beim Hackathon „Hack den Stadtrat“ gemacht.</p>
+    <p>Den Ratsatlas hat Damian Paderta beim Hackathon „Hack den Stadtrat“ gemacht.</p>
     <p>E-Mail: <a href="mailto:contact@nozilla.de">contact@nozilla.de</a></p>
     <p>Haben Sie einen Fehler gefunden? Schreiben Sie uns. Oder klicken Sie auf der Karte im Vorgang auf „Verortung falsch? Hinweis geben“.</p>
     </div>
@@ -120,7 +120,7 @@ def write(site, site_url, page):
     """Schreibt einfach/index.html; gibt den Pfad für die Sitemap zurück."""
     out = site / PFAD / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(site_url, PFAD, "Die RIS-Karte in Einfacher Sprache – RIS-Karte Bonn",
-                        "Was zeigt die RIS-Karte Bonn, wer entscheidet in Bonn und wie können Sie mitmachen? "
+    out.write_text(page(site_url, PFAD, "Der Ratsatlas in Einfacher Sprache – Ratsatlas Bonn",
+                        "Was zeigt der Ratsatlas Bonn, wer entscheidet in Bonn und wie können Sie mitmachen? "
                         "Erklärt in Einfacher Sprache.", body("../"), "../"), encoding="utf-8")
     return [PFAD]

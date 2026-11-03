@@ -10,7 +10,7 @@ on:
       titel:
         description: "Titel des Release"
         required: true
-        default: "RIS-Karte Bonn"
+        default: "Ratsatlas Bonn"
 
 permissions:
   contents: write

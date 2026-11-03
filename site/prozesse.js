@@ -1,5 +1,5 @@
 // Reiter „Prozesse“: Verfahrensarten (Soll-Modell, soll.json), Gremien und Ämter (prozessarten.json) als Schaubild oder Liste.
-// Verfahren und Zuständigkeitsordnung stammen aus „Bonn entscheidet“ (anster2025, MIT) mit Ergänzungen der RIS-Karte;
+// Verfahren und Zuständigkeitsordnung stammen aus „Bonn entscheidet“ (anster2025, MIT) mit Ergänzungen des Ratsatlas;
 // Zahlen je Verfahren beruhen auf der abgeleiteten Zuordnung (pipeline/soll.py), Gremien und Sitzungen auf der
 // OParl-API der Stadt Bonn (CC0); Ämter und Federführung aus `underDirectionOf`, gruppiert nach der Amtsnummer
 // (abgeleitet, die Quelle nennt keine Dezernate). Wird von app.js erst beim Öffnen des Reiters geladen.
@@ -15,7 +15,7 @@ const ART_PL = { rat: "Rat", hauptausschuss: "Hauptausschuss", ausschuss: "Facha
 const ART = { rat: "Rat", hauptausschuss: "Hauptausschuss", ausschuss: "Fachausschuss", bezirksvertretung: "Bezirksvertretung",
   beirat: "Beirat oder Kommission", unterausschuss: "Unterausschuss", wahlausschuss: "Wahlausschuss" };
 const RECHT = [["Entscheidung", "entscheidet selbst"], ["Empfehlung", "empfiehlt dem Rat"], ["Anhörung", "wird angehört"], ["Mitteilung", "erhält Mitteilungen"]];
-// Wege, sich einzubringen (Regeln des Soll-Modells); kurze Bezeichnungen der RIS-Karte, Frist und Beleg aus der Quelle
+// Wege, sich einzubringen (Regeln des Soll-Modells); kurze Bezeichnungen des Ratsatlas, Frist und Beleg aus der Quelle
 const WEGE = { "sitzung-besuchen": "Sitzung besuchen", livestream: "Ratssitzung im Livestream verfolgen",
   "buergerantrag-erlaeutern": "Eigenen Bürgerantrag im Ausschuss erläutern", einwohnerfrage: "Frage in der Einwohnerfragestunde stellen",
   "ansprechen-bv": "Bezirksverordnete ansprechen", "ansprechen-rat": "Fraktionen oder Gruppen ansprechen",
@@ -62,7 +62,7 @@ function swimlane(vid, v) {
   return `<div class="pz-scroll" tabindex="0" role="region" aria-label="Schaubild ${esc(v.titel)}, seitlich verschiebbar"><svg class="pz-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(summary)}">
     <defs><marker id="pz-head-${vid}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="pz-head"/></marker></defs>
     ${lanesSvg}${arrows}${nodes}</svg></div>
-    <p class="hint">Jede Zeile ist eine Ebene, die Kästen sind die Schritte in ihrer Reihenfolge.${v.schritte.some((s) => s.eigen) ? " Gestrichelt: von der RIS-Karte ergänzte Schritte." : ""} Dieselben Schritte stehen unten als Liste.</p>`;
+    <p class="hint">Jede Zeile ist eine Ebene, die Kästen sind die Schritte in ihrer Reihenfolge.${v.schritte.some((s) => s.eigen) ? " Gestrichelt: vom Ratsatlas ergänzte Schritte." : ""} Dieselben Schritte stehen unten als Liste.</p>`;
 }
 function wegeFor(vid, v) {
   const lanes = new Set(lanesOf(v));
@@ -80,7 +80,7 @@ function wegeFor(vid, v) {
 function verfahrenBody(vid, v) {
   const z = (data.verfahren || {})[vid];
   const steps = `<ol class="pz-steps">${v.schritte.map((s) => `<li><strong>${esc(s.label)}</strong> <span class="pz-bahn">${esc(soll.bahnen[s.bahn] || "")}</span>
-      ${s.was && s.was !== s.label ? `<br>${esc(s.was)}` : ""}${s.eigen ? ' <span class="derived">ergänzt von der RIS-Karte</span>' : ""}
+      ${s.was && s.was !== s.label ? `<br>${esc(s.was)}` : ""}${s.eigen ? ' <span class="derived">ergänzt vom Ratsatlas</span>' : ""}
       ${beleg(s) ? `<br><span class="hint">Rechtsgrundlage: ${beleg(s)}</span>` : ""}</li>`).join("")}</ol>`;
   const zahl = z ? `<p><strong>In Bonn:</strong> ${num(z.vorgaenge)} Vorgänge seit Oktober 2019 <span class="derived">abgeleitet</span>
       <span class="hint">(davon ${num(z.sicher)} mit hoher Sicherheit zugeordnet)</span></p>
@@ -123,7 +123,7 @@ function zustaendig(g) {
   const rule = (re) => (soll.zustaendigkeit || []).filter((z) => re.test(`${z.frage} ${z.antwort}`));
   const rules = g.art === "bezirksvertretung" ? rule(/Bezirk|BV/) : g.art === "rat" || g.art === "hauptausschuss" ? rule(/Rat|Hauptausschuss/) : [];
   if (rules.length) return `<h4>Zuständigkeit nach Regelwerk</h4><dl class="pz-zust">${rules.map((z) => `<dt>${esc(z.frage)}</dt><dd>${esc(z.antwort)}${beleg(z) ? ` <span class="hint">(${beleg(z)})</span>` : ""}</dd>`).join("")}</dl>`;
-  return `<p class="hint">Für dieses Gremium enthält das Regelwerk der RIS-Karte keinen eigenen Abschnitt.</p>`;
+  return `<p class="hint">Für dieses Gremium enthält das Regelwerk des Ratsatlas keinen eigenen Abschnitt.</p>`;
 }
 // Besetzung (prozessarten.json, pipeline/besetzung.py): laufende Mitgliedschaften ohne Kontaktdaten; Fraktion abgeleitet
 function besetzung(g) {

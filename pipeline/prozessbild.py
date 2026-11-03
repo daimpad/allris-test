@@ -257,7 +257,7 @@ def bild(t, d, seiten_url):
             f'{innen}'
             f'<text x="16" y="{kopf + hoehe_innen + 22}" font-size="12" fill="{TEXT}">Nummern, Vorlagen und Fristen: '
             f'{escape(seiten_url)}</text>'
-            f'<text x="16" y="{kopf + hoehe_innen + 40}" font-size="11" fill="{GRAU}">RIS-Karte Bonn · Daten: OParl-API '
+            f'<text x="16" y="{kopf + hoehe_innen + 40}" font-size="11" fill="{GRAU}">Ratsatlas Bonn · Daten: OParl-API '
             f'der Stadt Bonn (CC0), Sitzungen und Ergebnisse OParl-Lite (CC BY 4.0) · maßgeblich sind die Originale im '
             f'Ratsinformationssystem</text></svg>\n')
 

@@ -66,7 +66,7 @@ class Feeds(unittest.TestCase):
             ganz = ET.parse(out / "ganz-bonn.xml").getroot()
             gebiet = ET.parse(out / "ortsteil-endenich.xml").getroot()
         self.assertEqual(ganz.find(ATOM + "id").text, "tag:allris-bonn,2026:feed/ganz-bonn")
-        self.assertEqual(ganz.find(ATOM + "title").text, "RIS-Karte Bonn – ganz Bonn")
+        self.assertEqual(ganz.find(ATOM + "title").text, "Ratsatlas Bonn – ganz Bonn")
         self.assertTrue(ganz.find(ATOM + "link[@rel='self']").get("href").endswith("data/export/bonn/feeds/ganz-bonn.xml"))
         self.assertTrue(ganz.find(ATOM + "link[@rel='alternate']").get("href").endswith("?gebiet=bonn:ganz"))
         eintraege = ganz.findall(ATOM + "entry")

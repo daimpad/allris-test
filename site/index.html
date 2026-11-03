@@ -8,7 +8,7 @@
        Verbindungen nur zu den Daten der Seite, den unterstützten Anbietern des Ratsassistenten und lokalen Modellen.
        Inline-Stile bleiben erlaubt (Leaflet, Balken der Auswertung). -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://oparl.bonn.machdenstaat.de https://api.anthropic.com https://api.mistral.ai https://openrouter.ai http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'; form-action 'self'">
-  <title>RIS-Karte Bonn – Ratsinformationen der Stadt Bonn auf Karte und Zeitleiste</title>
+  <title>Ratsatlas Bonn – Was Rat und Bezirksvertretungen beraten – wo, wann, wer und mit welchem Geld</title>
   <meta name="description" content="Was berät der Bonner Stadtrat? Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste – mit Verfahrensstand, Gremien, Ämtern und Quellen.">
   <meta name="author" content="Damian Paderta">
   <meta name="robots" content="index, follow">
@@ -20,25 +20,25 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <!-- Feed-Erkennung: Feed über ganz Bonn (Seite rss/); app.js ergänzt den Feed des gewählten Gebiets -->
-  <link rel="alternate" type="application/atom+xml" title="RIS-Karte Bonn – ganz Bonn" href="data/export/bonn/feeds/ganz-bonn.xml">
+  <link rel="alternate" type="application/atom+xml" title="Ratsatlas Bonn – ganz Bonn" href="data/export/bonn/feeds/ganz-bonn.xml">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="RIS-Karte Bonn">
+  <meta property="og:site_name" content="Ratsatlas Bonn">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="RIS-Karte Bonn – Was berät der Bonner Stadtrat?">
+  <meta property="og:title" content="Ratsatlas Bonn – Was Rat und Bezirksvertretungen beraten – wo, wann, wer und mit welchem Geld">
   <meta property="og:description" content="Was berät der Bonner Stadtrat? Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste – mit Verfahrensstand, Gremien, Ämtern und Quellen.">
   <meta property="og:url" content="https://daimpad.github.io/allris-test/">
   <meta property="og:image" content="https://daimpad.github.io/allris-test/og-image.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="RIS-Karte Bonn: Karte von Bonn-Zentrum mit gebündelten Ratsvorlagen">
+  <meta property="og:image:alt" content="Ratsatlas Bonn: Karte von Bonn-Zentrum mit gebündelten Ratsvorlagen">
   <meta name="twitter:card" content="summary_large_image">
   <!-- strukturierte Daten (nur Daten, wird nicht ausgeführt; mit der CSP vereinbar) -->
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@graph": [
-    {"@type": "WebSite", "@id": "https://daimpad.github.io/allris-test/#website", "url": "https://daimpad.github.io/allris-test/", "name": "RIS-Karte Bonn", "inLanguage": "de",
+    {"@type": "WebSite", "@id": "https://daimpad.github.io/allris-test/#website", "url": "https://daimpad.github.io/allris-test/", "name": "Ratsatlas Bonn", "inLanguage": "de",
      "description": "Was berät der Bonner Stadtrat? Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste – mit Verfahrensstand, Gremien, Ämtern und Quellen."},
-    {"@type": "WebApplication", "@id": "https://daimpad.github.io/allris-test/#app", "url": "https://daimpad.github.io/allris-test/", "name": "RIS-Karte Bonn", "inLanguage": "de",
+    {"@type": "WebApplication", "@id": "https://daimpad.github.io/allris-test/#app", "url": "https://daimpad.github.io/allris-test/", "name": "Ratsatlas Bonn", "inLanguage": "de",
      "applicationCategory": "ReferenceApplication", "operatingSystem": "Web-Browser", "isAccessibleForFree": true,
      "image": "https://daimpad.github.io/allris-test/og-image.jpg", "license": "https://opensource.org/licenses/MIT",
      "creator": {"@type": "Person", "name": "Damian Paderta"},
@@ -55,7 +55,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="list-closed detail-open">
-  <noscript><div class="noscript glass"><p><strong>RIS-Karte Bonn</strong> zeigt Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste. Für die Karte wird JavaScript benötigt.</p>
+  <noscript><div class="noscript glass"><p><strong>Ratsatlas Bonn</strong> zeigt Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf Karte und Zeitleiste. Für die Karte wird JavaScript benötigt.</p>
     <p>Die Daten gibt es auch ohne Karte: <a href="data/export/allris-bonn-export.zip">Datenpaket (Zip)</a> · <a href="gebiete/">Vorlagen nach Gebiet</a> · <a href="data/export/bonn/vorlagen.geojson">GeoJSON</a> · <a href="https://github.com/daimpad/allris-test">Quellcode</a> · <a href="https://nozilla.de/impressum/">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p></div></noscript>
   <!-- Symbole (eigene Strichzeichnungen, 24er-Raster) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -91,9 +91,9 @@
   </svg>
 
   <header>
-    <h1 class="site-title">RIS-Karte <span>Bonn</span></h1>
+    <h1 class="site-title">Ratsatlas <span>Bonn</span></h1>
     <nav class="nav glass" aria-label="Hauptmenü">
-      <div class="brand" aria-hidden="true">RIS-Karte <span>Bonn</span></div>
+      <div class="brand" aria-hidden="true">Ratsatlas <span>Bonn</span></div>
       <form class="nav-search" id="nav-search" role="search">
         <label class="visually-hidden" for="q">Vorlagen in ganz Bonn suchen</label>
         <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
@@ -249,7 +249,7 @@
           <span class="card-text">Woher Orte und Themen stammen und was die Prüfungen von Hand ergeben haben.</span></button>
         <a class="card" href="technik/">
           <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span>
-          <span class="card-title">So funktioniert die Karte</span>
+          <span class="card-title">So funktioniert der Ratsatlas</span>
           <span class="card-text">Woher die Daten kommen, was jeden Morgen passiert und welche Technik dahintersteht, in vier Grafiken.</span></a>
       </div>
       <p class="mega-links"><button type="button" class="btn btn-soft" data-tour><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>Tour durch alle Funktionen</button></p>
@@ -462,12 +462,12 @@
 
   <dialog id="about" class="glass" aria-labelledby="about-heading">
     <div class="panel-head">
-      <h2 id="about-heading">Über die RIS-Karte Bonn</h2>
+      <h2 id="about-heading">Über den Ratsatlas Bonn</h2>
       <button type="button" class="icon-btn" id="about-close" aria-label="Schließen">×</button>
     </div>
     <div class="about-body">
       <h3>Worum geht es?</h3>
-      <p>Die RIS-Karte zeigt, womit sich der Rat, die Bezirksvertretungen und die Ausschüsse der Stadt Bonn beschäftigen – auf einer Karte, auf einer Zeitleiste und als Liste. Grundlage ist das Ratsinformationssystem (RIS) der Stadt Bonn. Dort stehen alle öffentlichen Vorlagen seit Oktober 2019.</p>
+      <p>Der Ratsatlas zeigt, womit sich der Rat, die Bezirksvertretungen und die Ausschüsse der Stadt Bonn beschäftigen – auf einer Karte, auf einer Zeitleiste und als Liste. Grundlage ist das Ratsinformationssystem (RIS) der Stadt Bonn. Dort stehen alle öffentlichen Vorlagen seit Oktober 2019.</p>
 
       <h3>Was ist eine Vorlage?</h3>
       <p>Ein Schriftstück, über das ein politisches Gremium berät: etwa ein Antrag einer Fraktion, eine Beschlussvorlage der Verwaltung, eine Anfrage, eine Stellungnahme oder ein Bürgerantrag. Jede Vorlage hat eine Drucksachennummer, zum Beispiel 261856.</p>
@@ -515,8 +515,8 @@
         <li>Zahlen zum Gebiet: in der Liste unter „Zahlen zu …“ und als Flächenfarbe auf der Karte (abgeleitet, zur Einordnung).</li>
         <li><a href="gebiete/">Vorlagen nach Gebiet</a>: eine Übersichtsseite je Ortsteil und Stadtbezirk.</li>
         <li><a href="begriffe/">Begriffe</a>: Vorlagenarten, Gremien, Ergebnisse und Kürzel in einfachen Worten, mit Fundstelle; im Vorgang erklärt ein „?“ neben dem Begriff.</li>
-        <li><a href="einfach/">Die RIS-Karte in Einfacher Sprache</a>: was die Karte zeigt, wer in Bonn entscheidet und wie man mitmachen kann.</li>
-        <li><a href="technik/">So funktioniert die Karte</a>: Datenquellen, Datenfluss, Zeitplan der automatischen Läufe und Technik, in vier anklickbaren Grafiken.</li>
+        <li><a href="einfach/">Der Ratsatlas in Einfacher Sprache</a>: was die Karte zeigt, wer in Bonn entscheidet und wie man mitmachen kann.</li>
+        <li><a href="technik/">So funktioniert der Ratsatlas</a>: Datenquellen, Datenfluss, Zeitplan der automatischen Läufe und Technik, in vier anklickbaren Grafiken.</li>
       </ul>
 
       <h3>Ebenen und Legenden</h3>
@@ -532,7 +532,7 @@
       <p>Welche Wege bei einem Vorgang offen sind, zeigt dort der Abschnitt „Selbst mitwirken“; alle Wege je Stadtbezirk stehen unter „Mitmachen“ → „Alle Wege im Überblick“.</p>
 
       <h3>Wer steckt dahinter?</h3>
-      <p>Die RIS-Karte hat <a href="https://paderta.com/" target="_blank" rel="noopener">Damian Paderta<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a> im Rahmen des Hackathons „Hack den Stadtrat“ erstellt; Hintergründe stehen im Blogbeitrag <a href="https://paderta.com/ris-karte-bonn-ratsinformationsdaten-der-stadt-bonn-im-ueberblick/" target="_blank" rel="noopener">„RIS-Karte Bonn – Ratsinformationsdaten der Stadt Bonn im Überblick“<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a>. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Das Modell der Verfahren nach Regelwerk (Abschnitt „Nach Regelwerk (Soll)“ und Hinweise unter „Selbst mitwirken“) stammt aus dem Projekt <a href="https://github.com/anster2025/bonn-entscheidet" target="_blank" rel="noopener">„Bonn entscheidet“<span class="visually-hidden"> (GitHub, neuer Tab)</span></a> von <a href="https://github.com/anster2025" target="_blank" rel="noopener">Thomas (anster2025)<span class="visually-hidden"> (GitHub, neuer Tab)</span></a>, MIT-Lizenz; die RIS-Karte hat es um eigene, belegte Schritte ergänzt. Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
+      <p>Den Ratsatlas hat <a href="https://paderta.com/" target="_blank" rel="noopener">Damian Paderta<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a> im Rahmen des Hackathons „Hack den Stadtrat“ erstellt; Hintergründe stehen im Blogbeitrag <a href="https://paderta.com/ris-karte-bonn-ratsinformationsdaten-der-stadt-bonn-im-ueberblick/" target="_blank" rel="noopener">„Ratsatlas Bonn – Ratsinformationsdaten der Stadt Bonn im Überblick“<span class="visually-hidden"> (paderta.com, neuer Tab)</span></a>. Sie ist ein offenes Projekt; der Code steht unter MIT-Lizenz. Die Daten stammen von der Stadt Bonn (CC0), aus OParl-Lite von machdenstaat (CC BY 4.0) und aus OpenStreetMap (ODbL). Das Modell der Verfahren nach Regelwerk (Abschnitt „Nach Regelwerk (Soll)“ und Hinweise unter „Selbst mitwirken“) stammt aus dem Projekt <a href="https://github.com/anster2025/bonn-entscheidet" target="_blank" rel="noopener">„Bonn entscheidet“<span class="visually-hidden"> (GitHub, neuer Tab)</span></a> von <a href="https://github.com/anster2025" target="_blank" rel="noopener">Thomas (anster2025)<span class="visually-hidden"> (GitHub, neuer Tab)</span></a>, MIT-Lizenz; die Ratsatlas hat es um eigene, belegte Schritte ergänzt. Fehler können Sie über „Verortung falsch?“ bei einer Vorlage oder im <a href="https://github.com/daimpad/allris-test/issues">Projekt auf GitHub</a> melden.</p>
 
       <h3 id="about-impressum" tabindex="-1">Kontakt, Impressum und Datenschutz</h3>
       <p>Schrift, Programmbibliotheken und die graue Karte kommen vom Server dieser Seite. Nur bei „Farbige Karte“ lädt Ihr Browser die Kacheln von OpenStreetMap (tile.openstreetmap.org); die Suche im Text der Dokumente fragt erst nach einem Klick OParl-Lite (oparl.bonn.machdenstaat.de) ab. Der Ratsassistent sendet Fragen erst, wenn Sie ihn einrichten, und nur an den gewählten Anbieter.</p>
@@ -559,8 +559,9 @@
       </ul>
       <p>Seit Version 1.0 (Stand 03.11.2026):</p>
       <ul>
+        <li>Die RIS-Karte heißt jetzt <strong>Ratsatlas Bonn</strong>: Was Rat und Bezirksvertretungen beraten – wo, wann, wer und mit welchem Geld. Links und Abos gelten weiter.</li>
         <li>„Haushalt auf einen Blick“: je Produktbereich und Produktgruppe auch die Ertragsarten („Woher kommt das Geld?“), etwa Steuern, Zuwendungen und Gebühren.</li>
-        <li>Neue Seite <a href="technik/">So funktioniert die Karte</a> im Menü „Verstehen“: Überblick, Datenfluss, Zeitplan und Technik als anklickbare Grafiken, erzeugt aus dem Code.</li>
+        <li>Neue Seite <a href="technik/">So funktioniert der Ratsatlas</a> im Menü „Verstehen“: Überblick, Datenfluss, Zeitplan und Technik als anklickbare Grafiken, erzeugt aus dem Code.</li>
         <li>„Haushalt auf einen Blick“ zeigt das Ist 2024 aus dem Jahresabschluss, die Veränderung je Produktbereich (nur gleichartige Werte) und die Investitionen; auch die Themenseiten nennen das Ist 2024.</li>
         <li>Themenseite <a href="thema/verkehr-und-mobilitaet/">Verkehr und Mobilität</a> mit neuem Strang „Tempo, Verkehrsregeln und Sicherheit“, auch mit Vorlagen der Straßenverkehrsbehörde.</li>
         <li>Auf dem Telefon liegen Ebenen, Legenden und Quellen der Karte zusammen hinter „Karte“; „Ganz Bonn ansehen“ ist ein Symbol, die Quellenzeile einzeilig.</li>
@@ -571,7 +572,7 @@
         <li>Neues Menü „Verstehen“: Einfache Sprache, Begriffe, „Wie verlässlich sind die Angaben?“ und die Tour an einem Ort.</li>
         <li>„Haushalt auf einen Blick“ zeigt auch Erträge und Ergebnis je Produktbereich, den Zuschussbedarf als Flächen und alle Beträge je Einwohner.</li>
         <li>Die graue Karte kommt vom Server dieser Seite (aus OpenStreetMap-Daten erzeugt) und lädt schneller; nur „Farbige Karte“ lädt die Kacheln von OpenStreetMap.</li>
-        <li>Die RIS-Karte <a href="einfach/">in Einfacher Sprache</a> erklärt, verlinkt im Startfenster und am Fuß jeder Seite.</li>
+        <li>Der Ratsatlas <a href="einfach/">in Einfacher Sprache</a> erklärt, verlinkt im Startfenster und am Fuß jeder Seite.</li>
         <li><a href="begriffe/">Begriffe</a> in einfachen Worten; im Vorgang ein „?“ neben Art, Drucksache, Amt und Stand, Gremien der Prozesslinie führen in den Reiter „Prozesse“; „Anstoß“ und „Umsetzung“ statt „Initiierung“ und „Vollzug“.</li>
         <li>Themenseite <a href="thema/kinder-jugend-und-familie/">Kinder, Jugend und Familie</a>: Kitas, Spielplätze, Jugendarbeit, Hilfen für Familien und Beteiligung, mit Prozessbild und Haushalt im Produktbereich.</li>
         <li>„Haushalt auf einen Blick“: Aufwendungen der 17 Produktbereiche als Treemap (Plan und Ist), mit Tabelle und Fundstelle; ein Klick führt zu den Produktgruppen und Aufwandsarten.</li>

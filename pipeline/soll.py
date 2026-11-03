@@ -240,7 +240,7 @@ def site_data(modell=None):
              for a in m.zusto["ausschuesse"] if a["rechte"]}
     return {
         "meta": {"quelle": "Verfahrensmodell und Zuständigkeitsordnung aus „Bonn entscheidet“ von Thomas (anster2025/bonn-entscheidet, "
-                           "Commit 26641f7, MIT) mit Ergänzungen und Korrekturen der RIS-Karte Bonn",
+                           "Commit 26641f7, MIT) mit Ergänzungen und Korrekturen des Ratsatlas Bonn",
                  "zusto_stand": m.zusto.get("stand"), "zusto_url": GESETZE["ZustO"][1],
                  "hinweis": "Vereinfachtes Modell des Regelwerks, keine Rechtsauskunft. Abweichungen sind Befunde, keine Bewertung."},
         "bahnen": {b["id"]: b["name"] for b in m.quelle["bahnen"]},

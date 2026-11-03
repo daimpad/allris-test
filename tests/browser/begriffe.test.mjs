@@ -80,7 +80,7 @@ test("Seite einfach/: acht Abschnitte, Link im Startfenster und im Fuß, ohne Ve
   for (const width of [1440, 390]) {
     const page = await browser.newPage({ viewport: { width, height: 900 }, bypassCSP: true });
     await page.goto(SITE + "einfach/", { waitUntil: "networkidle" });
-    assert.equal(await page.locator("h1").textContent(), "Die RIS-Karte in Einfacher Sprache");
+    assert.equal(await page.locator("h1").textContent(), "Der Ratsatlas in Einfacher Sprache");
     assert.equal(await page.locator(".einfach h2").count(), 8);
     assert.equal(await page.locator("ol.einfach-weg li").count(), 5);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
@@ -96,7 +96,7 @@ test("Seite einfach/: acht Abschnitte, Link im Startfenster und im Fuß, ohne Ve
   await page.close();
 });
 
-test("So funktioniert die Karte: Klick auf einen Kasten zeigt die Erklärung, Tastatur, ohne Verstöße", async () => {
+test("So funktioniert der Ratsatlas: Klick auf einen Kasten zeigt die Erklärung, Tastatur, ohne Verstöße", async () => {
   for (const [width, format] of [[1440, "breit"], [390, "hoch"]]) {
     const page = await browser.newPage({ viewport: { width, height: 900 }, bypassCSP: true });
     const fehler = [];

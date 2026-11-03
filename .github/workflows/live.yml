@@ -41,7 +41,7 @@ jobs:
             echo "ok  $1"
           }
           for base in https://ris-bonn.datenatlas.de/ https://daimpad.github.io/allris-test/; do
-            check "$base" "RIS-Karte"
+            check "$base" "Ratsatlas"
             check "${base}data/export/bonn/index.json" "generated_at"
             check "${base}datenschutz.html" "Verantwortlich"
           done
