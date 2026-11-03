@@ -301,3 +301,26 @@ tr[class^="hh-z"] > th::before { content: ""; display: inline-block; width: 12px
   background: var(--accent-fill); color: #fff; font-weight: 700; display: grid; place-items: center; }
 .page ol.einfach-weg li:not(:last-child)::after { content: ""; position: absolute; left: 25px; bottom: -11px; width: 2px; height: 10px; background: var(--accent-fill); }
 .page .einfach-fach { font-size: 0.875rem; color: var(--muted); border-left: 3px solid var(--line); padding-left: 8px; }
+/* Seite technik/ (pipeline/technikseite.py): Grafiken aus Kästen, Farben je Spalte mit Kontrast ≥ 4,5 für die Schrift */
+.tk-grafik { margin: 12px 0 8px; }
+.tk-svg { display: block; width: 100%; height: auto; font-family: "Inter", system-ui, sans-serif; font-size: 13px; }
+.tk-svg text { fill: #2e2a3d; }
+.tk-svg .tk-kopf { font-size: 14px; font-weight: 700; fill: var(--accent-ink); }
+.tk-svg .tk-achse { font-size: 12px; fill: var(--muted); } .tk-svg .tk-zeit { font-size: 12px; font-weight: 600; }
+.tk-svg .tk-raster { stroke: rgba(15, 15, 20, 0.12); stroke-width: 1; }
+.tk-svg .tk-achse-linie, .tk-svg .tk-pfeil { stroke: #6b6580; stroke-width: 2; } .tk-svg .tk-spitze { fill: #6b6580; }
+.tk-svg .tk-punkt { fill: var(--accent-fill); }
+.tk-svg .tk-schicht { fill: rgba(124, 58, 237, 0.05); stroke: rgba(124, 58, 237, 0.18); }
+.tk-svg a > rect { stroke: rgba(15, 15, 20, 0.18); stroke-width: 1; }
+.tk-svg .tk-c0 > rect { fill: #e0ecff; } .tk-svg .tk-c1 > rect { fill: #ede9fe; }
+.tk-svg .tk-c2 > rect { fill: #fde8f1; } .tk-svg .tk-c3 > rect { fill: #e3f5ea; }
+.tk-svg a:hover > rect, .tk-svg a:focus-visible > rect { stroke: var(--text); stroke-width: 2.5; }
+.tk-svg a[aria-current] > rect { stroke: var(--accent-fill); stroke-width: 3; }
+.tk-svg a:focus-visible { outline: none; }
+.tk-detail { margin: 10px 0 0; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(124, 58, 237, 0.25); background: rgba(124, 58, 237, 0.06); font-size: 15px; }
+.tk-ohne-titel { margin: 10px 0 2px; font-weight: 600; font-size: 15px; } .tk-ohne { margin: 0; padding-left: 20px; font-size: 15px; }
+.tk-ohne a[aria-current] { font-weight: 700; }
+.tk-liste li:target { background: rgba(124, 58, 237, 0.1); }
+.tk-liste li { margin: 4px 0; scroll-margin-top: 16px; }
+.tk-svg.hh-hoch { display: none; }
+@media (max-width: 600px) { .tk-svg.hh-breit { display: none; } .tk-svg.hh-hoch { display: block; } }
