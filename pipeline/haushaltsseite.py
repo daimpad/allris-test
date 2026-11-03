@@ -91,7 +91,7 @@ JA = "Jahresabschluss 2024"
 
 
 def erweiterung_an():
-    return haushaltsplan.ERWEITERUNG_FREIGEGEBEN or os.environ.get("HAUSHALT_ERWEITERUNG") == "vorschau"
+    return haushaltsplan.erweiterung_an()
 
 
 def _euro_cent(c):
@@ -715,7 +715,11 @@ def body(d, root):
         pruefung = (" Je Produktbereich und Spalte ergeben die Produktgruppen und die Aufwandsarten (Zeilen 11–16) die "
                     "ordentlichen Aufwendungen, ebenso je Produktgruppe; leere Zellen zählen als 0. Ein Prüfbogen mit 33 "
                     "Zellen wurde mit einem zweiten Leseweg gegengeprüft (KI-gestützt, 33 von 33 gleich) und vor der "
-                    "Veröffentlichung freigegeben.")
+                    "Veröffentlichung freigegeben."
+                    + (" Für das Ist 2024 und die Investitionen gilt dasselbe mit zwei Prüfbögen mit zusammen 44 Zellen "
+                       "(44 von 44 gleich, freigegeben 03.11.2026); die Prüfsummen von Jahresabschluss und Teilfinanzplänen "
+                       "gehen bis auf die zwei unter „Was diese Seite nicht zeigt“ genannten Abweichungen auf."
+                       if d.get("erweiterung") else ""))
         begriffe = f"""
         <dt>Ebenen</dt><dd>Produktbereich, Produktgruppe, Aufwandsart. Die Produktgruppen eines Bereichs ergeben zusammen seine ordentlichen Aufwendungen, ebenso seine sechs Aufwandsarten.</dd>
         <dt>Aufwandsarten</dt><dd>{HINWEIS}</dd>

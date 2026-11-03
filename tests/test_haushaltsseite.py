@@ -8,9 +8,11 @@ from unittest import mock
 from pipeline import config, haushaltsseite as hs
 
 
-def daten(ebenen):
-    """Daten der Seite mit oder ohne Ebenen 2 und 3, unabhängig von Freigabe und Umgebung."""
+def daten(ebenen, erweiterung=False):
+    """Daten der Seite mit oder ohne Ebenen 2 und 3 und Erweiterung (Ist 2024, Investitionen), unabhängig von Freigabe
+    und Umgebung."""
     with mock.patch.object(hs.haushaltsplan, "EBENEN_FREIGEGEBEN", ebenen), \
+            mock.patch.object(hs.haushaltsplan, "ERWEITERUNG_FREIGEGEBEN", erweiterung), \
             mock.patch.dict(os.environ, {"HAUSHALT_EBENEN": "", "HAUSHALT_ERWEITERUNG": ""}):
         return hs.daten()
 
@@ -241,8 +243,7 @@ class Erweiterung(unittest.TestCase):
     """Ist 2024 aus dem Jahresabschluss, Veränderung und Investitionen (haushalt/PHASE5.md)."""
     @classmethod
     def setUpClass(cls):
-        with mock.patch.object(hs.haushaltsplan, "ERWEITERUNG_FREIGEGEBEN", True):
-            cls.d = daten(True)
+        cls.d = daten(True, erweiterung=True)
         cls.html = hs.body(cls.d, "../")
 
     def test_ohne_freigabe_nicht_sichtbar(self):

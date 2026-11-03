@@ -378,11 +378,17 @@ def _betraege(pb):
     stand = json.loads(haushaltsplan.STAND.read_text(encoding="utf-8"))
     name = next(r["name"] for r in rows if r["produktbereich"] == pb)
     wert = lambda x: x and {"betrag": x[0], "ausgabe": x[1]["ausgabe"], "datei": x[1]["datei"], "seite": int(x[1]["seite"])}
+    jahre = [{"jahr": j, "ist": wert(i), "plan": wert(p)} for j, i, p in reihe if j >= haushaltsplan.AB_JAHR]
+    ausgaben = {a: {"seite": v["seite"], "dateien": {k: d["url"] for k, d in v["dateien"].items() if k == pb}}
+                for a, v in stand["ausgaben"].items()}
+    ist = haushaltsplan.ist_2024("Produktbereich", pb)   # Ist 2024 laut Jahresabschluss (Freigabe 03.11.2026)
+    if ist:
+        for j in jahre:
+            if j["jahr"] == 2024 and not j["ist"]:
+                j["ist"] = ist
+        ausgaben[ist["ausgabe"]] = {"seite": stand["jahresabschluss"]["seite"], "dateien": {pb: stand["jahresabschluss"]["datei"]["url"]}}
     return {"produktbereich": pb, "name": name, "zeile": "Ordentliche Aufwendungen (Zeile 17 des Teilergebnisplans)",
-            "jahre": [{"jahr": j, "ist": wert(i), "plan": wert(p)} for j, i, p in reihe if j >= haushaltsplan.AB_JAHR],
-            "ausgaben": {a: {"seite": v["seite"], "dateien": {k: d["url"] for k, d in v["dateien"].items() if k == pb}}
-                         for a, v in stand["ausgaben"].items()},
-            "abruf": stand["abruf"], "lizenz": stand["lizenz"]}
+            "jahre": jahre, "ausgaben": ausgaben, "abruf": stand["abruf"], "lizenz": stand["lizenz"]}
 
 
 # --- Seite --------------------------------------------------------------------------------------------
@@ -462,9 +468,13 @@ def _haushalt(d, root=""):
     if not h:
         return ""
     def zelle(x):
-        return f'{_mio(x["betrag"])} <small>(Haushaltsplan {x["ausgabe"]}, S. {x["seite"]})</small>' if x else "–"
+        quelle = x and (x["ausgabe"] if x["ausgabe"].startswith("Jahresabschluss") else f'Haushaltsplan {x["ausgabe"]}')
+        return f'{_mio(x["betrag"])} <small>({quelle}, S. {x["seite"]})</small>' if x else "–"
+    ja = "Jahresabschluss 2024"
     quellen = ", ".join(f'<a href="{escape(v["dateien"][h["produktbereich"]])}">Teilergebnisplan im Haushaltsplan {escape(a)}</a>'
-                        for a, v in sorted(h["ausgaben"].items()) if h["produktbereich"] in v["dateien"])
+                        for a, v in sorted(h["ausgaben"].items()) if h["produktbereich"] in v["dateien"] and a != ja)
+    if ja in h["ausgaben"]:
+        quellen += f', <a href="{escape(h["ausgaben"][ja]["dateien"][h["produktbereich"]])}">Teilergebnisrechnung im {ja}</a>'
     rows = "\n".join(f'        <tr><th scope="row">{j["jahr"]}</th><td>{zelle(j["ist"])}</td><td>{zelle(j["plan"])}</td></tr>'
                      for j in h["jahre"])
     return f"""    <h2 id="haushalt-produktbereich">Haushalt im Produktbereich {escape(h["produktbereich"])} {escape(h["name"])}</h2>
@@ -475,7 +485,7 @@ def _haushalt(d, root=""):
 {rows}
       </tbody>
     </table>
-    <p class="meta">Ausgelesen aus den Haushaltsplänen der Stadt Bonn (PDF: {quellen}; Abruf {_date(h["abruf"])}); die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan. Der Produktbereich deckt sich nicht genau mit dem Thema dieser Seite; interne Leistungen und Umgliederungen verschieben Beträge. Die Finanzplanung ab 2027 ist nicht übernommen; der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht. Zu einzelnen Vorlagen nennt die Seite keine Beträge.</p>
+    <p class="meta">Ausgelesen aus den Haushaltsplänen{" und dem Jahresabschluss 2024" if ja in h["ausgaben"] else ""} der Stadt Bonn (PDF: {quellen}; Abruf {_date(h["abruf"])}); die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan. Der Produktbereich deckt sich nicht genau mit dem Thema dieser Seite; interne Leistungen und Umgliederungen verschieben Beträge. Die Finanzplanung ab 2027 ist nicht übernommen; der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht. Zu einzelnen Vorlagen nennt die Seite keine Beträge.</p>
     <p><a href="{root}haushalt/#{"zoom" if haushaltsplan.EBENEN_FREIGEGEBEN else "pb"}-{escape(h["produktbereich"])}">Produktgruppen dieses Bereichs und alle Produktbereiche im Vergleich: Haushalt auf einen Blick</a></p>
 """
 

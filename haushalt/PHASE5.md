@@ -126,7 +126,9 @@ Eine Gegenprobe über `pdftotext -layout` fand alle 31 gefüllten Beträge in ih
 
 ## Vorschau auf der Seite `haushalt/` (03.11.2026)
 
-Sichtbar nur mit `ERWEITERUNG_FREIGEGEBEN` oder `HAUSHALT_ERWEITERUNG=vorschau` (Vorschau im Workflow `tests.yml`); `pipeline/haushaltsseite.py`.
+Sichtbar mit `ERWEITERUNG_FREIGEGEBEN` (vor der Freigabe mit `HAUSHALT_ERWEITERUNG=vorschau`); `pipeline/haushaltsseite.py`.
+
+**Freigabe 03.11.2026:** Beide Prüfbögen (44 Zellen) vom Auftraggeber im Gespräch bestätigt; Grundlage war der KI-gestützte zweite Leseweg (44 von 44 gleich), vermerkt in der Spalte `pruefung`. Veröffentlicht auf `haushalt/` und in den Haushaltsabschnitten der Themenseiten (Ist 2024 laut Jahresabschluss, `haushaltsplan.ist_2024`).
 
 - **Ist 2024** als vierte Ansicht (Plan 2026, Plan 2025, Ist 2024, Ist 2023) auf allen Ebenen: Produktbereiche, Erträge, Ergebnis, Aufwandsarten, Produktgruppen. Spalte 4 von `jahresabschluss.tsv`, auf Euro gerundet; Fundstelle „Jahresabschluss 2024, S. …“ mit Link auf das PDF.
 - **Veränderung** der ordentlichen Aufwendungen (Zeile 17) je Produktbereich: Ist 2024 zu Ist 2023, Ist 2024 zum Ansatz 2024 der Satzung, Plan 2026 zu Plan 2025; in Mio. € und Prozent, ohne Prozent bei einem Ausgangswert bis 0 €. Hinweise: nominal, fortgeschriebener Ansatz 1.819,6 zu 1.771,1 Mio. €, Umgliederungen und globaler Minderaufwand.

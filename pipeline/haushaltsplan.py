@@ -659,8 +659,27 @@ INVESTITIONEN = {1: "Einzahlungen aus Zuwendungen für Investitionsmaßnahmen",
 INVESTITIONEN_TSV = ORDNER / "investitionen.tsv"
 INVESTITIONEN_KOPF = ["quelle", "ausgabe", "ebene", "produktbereich", "produktgruppe", "name", "einheit", "zeile",
                       "zeile_name", "spalte", "jahr", "art", "betrag", "datei", "seite", "leer"]
-ERWEITERUNG_FREIGEGEBEN = False   # Ist 2024 und Investitionen: erst nach Prüfbogen und Freigabe (haushalt/PHASE5.md)
+ERWEITERUNG_FREIGEGEBEN = True   # Ist 2024 und Investitionen: Prüfbögen im Gespräch bestätigt, freigegeben 03.11.2026 (haushalt/PHASE5.md)
 ERWEITERUNG_PRUEFBOGEN = config.EXPORT / "haushalt" / "pruefbogen_haushalt_erweiterung.tsv"
+
+
+def erweiterung_an():
+    """Ist 2024 und Investitionen zeigen: nach Freigabe oder als Vorschau (HAUSHALT_ERWEITERUNG=vorschau)."""
+    return ERWEITERUNG_FREIGEGEBEN or os.environ.get("HAUSHALT_ERWEITERUNG") == "vorschau"
+
+
+def ist_2024(ebene, nr, zeile=17):
+    """Ist 2024 laut Jahresabschluss (Spalte 4) einer Einheit und Zeile, auf Euro gerundet: {betrag, ausgabe, datei, seite}
+    oder None (ohne Freigabe, ohne Datei oder ohne Wert)."""
+    if not erweiterung_an() or not JAHRESABSCHLUSS_TSV.exists():
+        return None
+    spalte = "produktgruppe" if ebene == "Produktgruppe" else "produktbereich"
+    for r in lesen(JAHRESABSCHLUSS_TSV):
+        if r["ebene"] == ebene and r[spalte] == nr and r["zeile"] == str(zeile) and r["spalte"] == "4":
+            c = int(r["betrag_cent"])
+            return {"betrag": (abs(c) + 50) // 100 * (1 if c >= 0 else -1), "ausgabe": "Jahresabschluss 2024",
+                    "datei": r["datei"], "seite": int(r["seite"])}
+    return None
 
 
 def _cent(text):

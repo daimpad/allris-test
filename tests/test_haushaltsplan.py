@@ -472,8 +472,9 @@ class DateienErweiterung(unittest.TestCase):
         self.assertEqual(finanzanlagen[("2025/2026", "1.01.29", "2026")], 99558600)
         self.assertEqual(finanzanlagen[("2025/2026", "1.16.04", "2026")], 70000000)
 
-    def test_noch_nicht_freigegeben(self):
-        self.assertFalse(h.ERWEITERUNG_FREIGEGEBEN)
+    def test_freigegeben(self):
+        self.assertTrue(h.ERWEITERUNG_FREIGEGEBEN)   # Prüfbögen im Gespräch bestätigt 03.11.2026
+        self.assertEqual(h.ist_2024("Produktbereich", "03")["betrag"], 77_769_135)   # 77.769.134,95 € (Prüfbogen)
 
 def probe_tfr(jahr_kopf=True):
     """Kleine Teilfinanzrechnung (Teil A) des Jahresabschlusses: Zeilen 1, 6, 9, 13, 14; Zeile 1 und 9 mit der Nummer
