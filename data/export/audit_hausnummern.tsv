@@ -329,6 +329,7 @@ drucksache	strasse	ortsteile_ohne_hausnummer	ortsteil_der_hausnummer	wirkung
 201072	Am Engelspfad	Ippendorf	Ippendorf	bestätigt
 201072-04	Am Engelspfad	Ippendorf	Ippendorf	bestätigt
 201072-05 ST	Am Engelspfad	Ippendorf	Ippendorf	bestätigt
+201072-06	Am Engelspfad	Ippendorf	Ippendorf	bestätigt
 201072-07 ST	Am Engelspfad	Ippendorf	Ippendorf	bestätigt
 201072-3 ST	Am Engelspfad	Ippendorf	Ippendorf	bestätigt
 201074	Rüdigerstraße	Mehlem	Mehlem	bestätigt
@@ -878,6 +879,7 @@ drucksache	strasse	ortsteile_ohne_hausnummer	ortsteil_der_hausnummer	wirkung
 231549	Hermannstraße	Beuel-Mitte	Beuel-Mitte	bestätigt
 231555	Max-Planck-Straße	Pennenfeld	Pennenfeld	bestätigt
 231603	Markt	Bonn-Zentrum	Bonn-Zentrum	bestätigt
+231603-01 ST	Markt	Bonn-Zentrum	Bonn-Zentrum	bestätigt
 231623	Hohe Straße	Tannenbusch	Tannenbusch	bestätigt
 231637	Trierer Straße	Ippendorf; Poppelsdorf	Poppelsdorf	eindeutig
 231694	Friesdorfer Straße	Alt-Godesberg; Friesdorf; Godesberg-Nord	Alt-Godesberg	eindeutig
@@ -1185,7 +1187,6 @@ drucksache	strasse	ortsteile_ohne_hausnummer	ortsteil_der_hausnummer	wirkung
 260564-01 AA	Römerstraße	Bonn-Castell; Graurheindorf	Graurheindorf	eindeutig
 260598	Wehrhausweg	Küdinghoven	Küdinghoven	bestätigt
 260598-01 AA	Wehrhausweg	Küdinghoven	Küdinghoven	bestätigt
-260598-02 AA	Wehrhausweg	Küdinghoven	Küdinghoven	bestätigt
 260642	Hohe Straße	Tannenbusch	Tannenbusch	bestätigt
 260762	Basaltstraße	Oberkassel	Oberkassel	bestätigt
 260766	Mordkapellenpfad	Poppelsdorf	Poppelsdorf	bestätigt
@@ -1226,6 +1227,7 @@ drucksache	strasse	ortsteile_ohne_hausnummer	ortsteil_der_hausnummer	wirkung
 261765	Erich-Böger-Straße	Ippendorf	Ippendorf	bestätigt
 261765-01 ST	Erich-Böger-Straße	Ippendorf	Ippendorf	bestätigt
 261768	Meckenheimer Allee	Poppelsdorf; Weststadt	Weststadt	eindeutig
+261768-03 ST	Meckenheimer Allee	Poppelsdorf; Weststadt	Weststadt	eindeutig
 261780	Kiefernweg	Venusberg	Venusberg	bestätigt
 261781	Klosterweg	Buschdorf	Buschdorf	bestätigt
 261782	Venusbergweg	Südstadt	Südstadt	bestätigt

@@ -1,6 +1,6 @@
 // Fläche „Mitmachen in Bonn“: Wege, sich einzubringen, für einen gewählten Stadtbezirk – mit den nächsten Gelegenheiten
 // aus dem Sitzungskalender (zeit.json, OParl-API der Stadt Bonn) und Fristen nach dem Regelwerk (soll.json, Soll-Modell
-// nach „Bonn entscheidet“ mit Ergänzungen der RIS-Karte). Fristdaten sind abgeleitet; maßgeblich sind Einladung,
+// nach „Bonn entscheidet“ mit Ergänzungen des Ratsatlas). Fristdaten sind abgeleitet; maßgeblich sind Einladung,
 // Geschäftsordnung und Gemeindeordnung. Wird von app.js erst beim Öffnen geladen.
 import { addDays, deDate } from "./mitwirken.js";
 

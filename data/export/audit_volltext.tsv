@@ -12577,7 +12577,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
-242029	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	1
 242031	kein Ort						
 242032	kein Ort						
 242034	kein Ort						
@@ -13412,7 +13411,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252900	kein Ort						
 252903	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
 252903	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	niedrig	1
-252903-01	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
 252903-02 ST	kein Ort						
 252903-03 ST	kein Ort						
 252904	verortet	Hauptteil	volltext_ortsteil_adjektiv	Endenich	Endenich	niedrig	1
@@ -13713,6 +13711,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253108-02 ST	kein Ort						
 253114	kein Ort						
 253115	kein Ort						
+253116	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
+253116	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
 253117	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
 253117	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
 253117	verortet	Hauptteil	volltext_strasse	Nordstraße	Bonn-Castell	niedrig	1
@@ -14772,7 +14772,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260165	kein Ort						
 260167	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 260167	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
-260168	kein Ort						
 260169	Liste (7 Ortsteile), nicht verortet	Hauptteil					
 260169-01	kein Ort						
 260169-02 ST	kein Ort						
@@ -15368,9 +15367,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260684-01 AA	verortet	Hauptteil	volltext_strasse	Rochusstraße	Duisdorf	mittel	1
 260684-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Fontainengraben	Duisdorf	mittel	1
 260684-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Robelstraße	Duisdorf	mittel	1
-260686	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Damm	Brüser Berg	mittel	1
-260686	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Damm	Duisdorf	mittel	1
-260686	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Damm	Lengsdorf	mittel	1
 260691	kein Ort						
 260691-01 ST	kein Ort						
 260693	kein Ort						

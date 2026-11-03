@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//RIS-Karte Bonn//Sitzungskalender//DE
+PRODID:-//Ratsatlas Bonn//Sitzungskalender//DE
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
@@ -176,6 +176,16 @@ DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006726
+DTSTAMP:20270120T170000Z
+DTSTART:20270120T170000Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006592
 DTSTAMP:20270126T170000Z
 DTSTART:20270126T170000Z
@@ -236,6 +246,16 @@ DTSTART:20270224T160000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
  röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006727
+DTSTAMP:20270311T170000Z
+DTSTART:20270311T170000Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -311,6 +331,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006732
+DTSTAMP:20270427T160000Z
+DTSTART:20270427T160000Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006487
 DTSTAMP:20270504T160000Z
 DTSTART:20270504T160000Z
@@ -383,6 +413,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006728
+DTSTAMP:20270616T160000Z
+DTSTART:20270616T160000Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006478
 DTSTAMP:20270617T150000Z
 DTSTART:20270617T150000Z
@@ -407,6 +447,16 @@ DTSTART:20270713T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006729
+DTSTAMP:20270713T160000Z
+DTSTART:20270713T160000Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -473,6 +523,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006730
+DTSTAMP:20271005T160000Z
+DTSTART:20271005T160000Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006556
 DTSTAMP:20271006T150000Z
 DTSTART:20271006T150000Z
@@ -533,6 +593,16 @@ DTSTART:20271124T160000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
  nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006731
+DTSTAMP:20271124T170000Z
+DTSTART:20271124T170000Z
+SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
+DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
+ be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
+ Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

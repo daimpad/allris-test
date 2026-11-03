@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
 <id>tag:allris-bonn,2026:feed/ortsteil-weststadt</id>
-<title>RIS-Karte Bonn – Weststadt</title>
+<title>Ratsatlas Bonn – Weststadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Weststadt</subtitle>
-<updated>2026-10-30T00:00:00Z</updated>
+<updated>2026-11-03T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-weststadt.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt"/>
-<author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
+<author><name>Ratsatlas Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029965#vorlage</id>
+<title>Neue Vorlage 261768-03 ST: Stellungnahme zu CDU-Bezirksfraktion-Antrag: Freiräumung Bürgersteig Meckenheimer Allee 76</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#261768-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029965"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030193#vorlage</id>
 <title>Neue Vorlage 262055: Große Anfrage Grüne: Umsetzung des Beschlusses zum barrierefreien Ausbau der Haltestelle „Am Dickobskreuz“</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#242148-10"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025667"/>
 <summary>Entscheidung am 2026-03-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025683#vorlage</id>
-<title>Neue Vorlage 260195-01 ST: Stellungnahme zum Bürgerantrag: Maßnahmen zur Verbesserung der Situation im Bereich der Unterführung Poppelsdorfer Allee/Kaiserplatz</title>
-<updated>2026-03-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:weststadt#260195-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025683"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
