@@ -22,7 +22,7 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 253158-03 AA	datum_vorlage	2026-09-24	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 253158-03 AA	beratung: Rat (Entscheidung)	2026-09-24	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 261798	datum_vorlage	2026-09-24	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-261798	beratung: Naturschutzbeirat (Entscheidung)			unklar	Beratung ohne verknüpfte Sitzung
+261798	beratung: Naturschutzbeirat (Entscheidung)	2026-10-07	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 261798	folgevorlage: 261798-01	2026-10-21	oparl-bonn	belegt	Dringlichkeitsentscheidung OB
 242332-02	datum_vorlage	2026-09-16	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 242332-02	beratung: Rat (Entscheidung)			unklar	Beratung ohne verknüpfte Sitzung
