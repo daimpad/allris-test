@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-auerberg</id>
 <title>RIS-Karte Bonn – Auerberg</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Auerberg</subtitle>
-<updated>2026-10-30T00:00:00Z</updated>
+<updated>2026-11-03T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-auerberg.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030192#vorlage</id>
+<title>Neue Vorlage 240810-03: Grüne-Bezirksfraktion-Antrag: Prüfung einer alternativen Möglichkeit zur Realisierung eines Wetterschutzes an der Bushaltestelle „Auerberger Mitte“ in Fahrtrichtung Hersel</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#240810-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030192"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030183#vorlage</id>
 <title>Neue Vorlage 261663-02 ST: Vertagungsbitte zum Antrag Grüne-Fraktion - Auffahrt Auerberg erhalten – Innerstädtische Verkehrsbelastung vermeiden</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260341-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026593"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026327#vorlage</id>
-<title>Neue Vorlage 260557: Beteiligungskonzept Rheingärten</title>
-<updated>2026-04-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#260557"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026327"/>
-<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
 </entry>
 </feed>

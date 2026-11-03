@@ -110,9 +110,12 @@ DTSTAMP:20261117T170000Z
 DTSTART:20261117T170000Z
 SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
 DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
- ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
- r Stadt Bonn (CC0 1.0)
+ ungsschutz\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?
+ SILFDNR=2005859\nEinladung: https://www.bonn.sitzung-online.de/public/doc?
+ DOCTYP=108&DOLFDNR=3246823&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 
+ 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005859
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005620

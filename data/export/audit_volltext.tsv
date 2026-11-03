@@ -12577,6 +12577,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
+242029	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	1
 242031	kein Ort						
 242032	kein Ort						
 242034	kein Ort						
@@ -13045,6 +13046,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252550	verortet	Hauptteil	volltext_strasse	Friedrichstraße	Bonn-Zentrum	mittel	2
 252551	verortet	Hauptteil	volltext_ortsteil_name	Holzlar	Holzlar	niedrig	1
 252556	kein Ort						
+252556-01 ST	kein Ort						
 252557	nur in Anlagen genannt, nicht verortet						
 252557-01 AA	kein Ort						
 252557-02 AA	kein Ort						
@@ -13711,8 +13713,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253108-02 ST	kein Ort						
 253114	kein Ort						
 253115	kein Ort						
-253116	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
-253116	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
 253117	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
 253117	verortet	Hauptteil	volltext_ortsteil_name	Pennenfeld	Pennenfeld	niedrig	1
 253117	verortet	Hauptteil	volltext_strasse	Nordstraße	Bonn-Castell	niedrig	1
@@ -15945,6 +15945,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261226-01 ST	Liste (9 Ortsteile), nicht verortet	Hauptteil					
 261227	kein Ort						
 261227-01 ST	kein Ort						
+261229	verortet	Hauptteil	volltext_strasse	Friedrich-Ebert-Brücke	Bonn-Castell	mittel	1
+261229	verortet	Hauptteil	volltext_strasse	Friedrich-Ebert-Brücke	Graurheindorf	mittel	1
 261230	kein Ort						
 261230-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 261233	kein Ort						
@@ -16015,6 +16017,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261281-08 AA	kein Ort						
 261281-09 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 261281-10 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+261281-11 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 261285	kein Ort						
 261285-01 ST	kein Ort						
 261286	kein Ort						

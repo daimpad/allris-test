@@ -3,11 +3,51 @@
 <id>tag:allris-bonn,2026:feed/ganz-bonn</id>
 <title>RIS-Karte Bonn – ganz Bonn</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: ganz Bonn</subtitle>
-<updated>2026-11-02T00:00:00Z</updated>
+<updated>2026-11-03T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ganz-bonn.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bonn:ganz"/>
 <author><name>RIS-Karte Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030232#vorlage</id>
+<title>Neue Vorlage 262071: Sitzungen der Bezirksvertretung Beuel im Jahr 2027</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:beuel#262071"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030232"/>
+<summary>Mitteilungsvorlage · federführend: Bezirksverwaltungsstelle Beuel · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030224#vorlage</id>
+<title>Neue Vorlage 261262-03 AA: Volt-Änderungsantrag zu Erstellung eines Image- und Marketingkonzeptes für das Bad Godesberger Zentrum: Einbindung der Bürgerinnen und Bürger in die Imagekampagne für das Bad Godesberger Zentrum</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bezirk:bad-godesberg#261262-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030224"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030210#vorlage</id>
+<title>Neue Vorlage 262062: Bürgerantrag: Automatische Grün-Schaltung der Fußgängerampel an der Kreuzung Niederkasseler Straße/Sankt Augustiner Straße</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#262062"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030210"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030192#vorlage</id>
+<title>Neue Vorlage 240810-03: Grüne-Bezirksfraktion-Antrag: Prüfung einer alternativen Möglichkeit zur Realisierung eines Wetterschutzes an der Bushaltestelle „Auerberger Mitte“ in Fahrtrichtung Hersel</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:auerberg#240810-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030192"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030188#vorlage</id>
+<title>Neue Vorlage 262050: Große Anfrage Grüne-Bezirksfraktion: Umsetzungsstand des Spielplatzbedarfsplans 2022 im Stadtbezirk Bonn unter Berücksichtigung der Kinder- und Jugendbefragung</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262050"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030188"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030212#vorlage</id>
 <title>Neue Vorlage 261778-01 AA: BBB-Antrag: Bebauungsplan Nr. 8215-44, „Siebengebirgsterrassen“, Deutschherrenstraße, Fuß- und Fahrradweg zur Saint-Cloud-Straße; Drucksachen 1410552, 212209 und 261778</title>
@@ -767,45 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261929"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029949"/>
 <summary>Beschlussvorlage · federführend: 21 Kassen- und Steueramt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029943#vorlage</id>
-<title>Neue Vorlage 261830-01 ST: Stellungnahme zum Linke-Bezirksfraktion-Antrag: ÖPNV-Vorrang in der Thomas-Mann-Straße zwischen Budapester Str. und Berliner Platz</title>
-<updated>2026-10-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#261830-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029943"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029928#vorlage</id>
-<title>Neue Vorlage 261918: Entsperrung von Haushaltsmitteln zur Umsetzung der Maßnahme "Reuterpark - Ein Platz für Alle - 2. Bauabschnitt"</title>
-<updated>2026-10-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:kessenich#261918"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029928"/>
-<summary>Beschlussvorlage · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029894#vorlage</id>
-<title>Neue Vorlage 261832-01 ST: Rechtsanspruch schulische Ganztagsbetreuung</title>
-<updated>2026-10-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261832-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029894"/>
-<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029880#vorlage</id>
-<title>Neue Vorlage 261348-01 ST: Bürgerantrag: Antrag auf Einführung von Tempo 30 auf der Konstantinstraße im Bereich Römerplatz zum Schutz eines denkmalgeschützten Gebäudes sowie zur Erhöhung der Verkehrssicherheit</title>
-<updated>2026-10-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:ruengsdorf#261348-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029880"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030085#vorlage</id>
-<title>Neue Vorlage 261849-01 AA: Linke-Änderungsantrag: Bürgerbegehren „Melbbad möglichst schnell wiedereröffnen“ Antrag zur Vorlage 261849</title>
-<updated>2026-10-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261849-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030085"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 </feed>
