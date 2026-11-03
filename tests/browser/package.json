@@ -1,7 +1,7 @@
 {
   "name": "allris-bonn-browser-tests",
   "private": true,
-  "description": "Browser-Prüfung der RIS-Karte Bonn (Playwright, axe-core); nur für den Workflow tests.yml",
+  "description": "Browser-Prüfung des Ratsatlas Bonn (Playwright, axe-core); nur für den Workflow tests.yml",
   "type": "module",
   "dependencies": {
     "axe-core": "4.10.2",

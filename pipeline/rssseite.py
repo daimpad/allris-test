@@ -20,7 +20,7 @@ def feed_url(site_url, name=GANZ_BONN):
     return f"{site_url}data/export/bonn/feeds/{name}.xml"
 
 
-def head(site_url, titel="RIS-Karte Bonn – ganz Bonn", url=None):
+def head(site_url, titel="Ratsatlas Bonn – ganz Bonn", url=None):
     """Verweis für die automatische Feed-Erkennung (link rel="alternate") im Kopf einer Seite."""
     return (f'\n  <link rel="alternate" type="application/atom+xml" title="{escape(titel)}" '
             f'href="{escape(url or feed_url(site_url))}">')
@@ -90,7 +90,7 @@ def body(site, site_url, root):
     themen, gebiete, ohne = _feeds(site, root)
     gruppen = "".join(_liste(escape(bezirk), eintraege, "h4") for bezirk, eintraege in sorted(gebiete.items()))
     einbinden = (f'<link rel="alternate" type="application/atom+xml"\n'
-                 f'      title="RIS-Karte Bonn – ganz Bonn"\n      href="{url}">')
+                 f'      title="Ratsatlas Bonn – ganz Bonn"\n      href="{url}">')
     return f"""    <h1>Inhalte abonnieren und weiterverwenden</h1>
     <p class="lead">Erhalten Sie neue Vorlagen und Beratungsergebnisse automatisch oder binden Sie sie in Ihre eigene Website ein. RSS ist offen, kostenlos und braucht kein Benutzerkonto.</p>
 
@@ -114,7 +114,7 @@ def body(site, site_url, root):
       <ol class="rss-schritte">
         <li><strong>Feed-Reader wählen.</strong> Ein Feed-Reader sammelt Neuigkeiten von Websites. Kostenlos und ohne Konto zum Beispiel: <a href="https://www.thunderbird.net/de/">Thunderbird</a> (E-Mail-Programm, Windows, macOS, Linux), <a href="https://netnewswire.com/">NetNewsWire</a> (Mac, iPhone, iPad), <a href="https://f-droid.org/packages/com.nononsenseapps.feeder/">Feeder</a> (Android).</li>
         <li><strong>Adresse einfügen.</strong> Kopieren Sie die Feed-Adresse oben und fügen Sie sie im Reader bei „Feed hinzufügen“ oder „Abonnieren“ ein.</li>
-        <li><strong>Neues erhalten.</strong> Der Reader zeigt neue Einträge von selbst, sobald die Karte sie übernimmt ({AKTUALISIERUNG}). Abbestellen geht jederzeit im Reader; die RIS-Karte erfährt davon nichts.</li>
+        <li><strong>Neues erhalten.</strong> Der Reader zeigt neue Einträge von selbst, sobald die Karte sie übernimmt ({AKTUALISIERUNG}). Abbestellen geht jederzeit im Reader; der Ratsatlas erfährt davon nichts.</li>
       </ol>
       <p class="rss-weiter"><button type="button" class="rss-knopf rss-haupt" data-kopieren="#rss-url" hidden>RSS-Adresse kopieren</button> <a href="#weitere">Nur ein Gebiet oder Thema abonnieren</a></p>
       <details class="hh-mehr" id="weitere">
@@ -133,7 +133,7 @@ def body(site, site_url, root):
       <p>Damit Browser und Reader den Feed auf Ihrer Seite finden, genügt eine Zeile im Kopf (<code>&lt;head&gt;</code>) der Seite:</p>
       <pre class="rss-code" id="rss-head" tabindex="0"><code>{escape(einbinden)}</code></pre>
       <p class="rss-weiter"><button type="button" class="rss-knopf rss-zweit" data-kopieren="#rss-head" hidden>Zeile kopieren</button> <a href="#technik">Technische Angaben</a></p>
-      <p class="meta">Bitte nennen Sie die Quelle „RIS-Karte Bonn“. Ergebnisse der Beratungen stammen aus OParl-Lite Bonn (machdenstaat, CC BY 4.0), die übrigen Angaben aus dem Ratsinformationssystem der Stadt Bonn (CC0 1.0); maßgeblich ist das Original. Einzelheiten in der <a href="https://github.com/daimpad/allris-test/blob/main/data/LICENSE-DATA.md">Lizenz der Daten</a>.</p>
+      <p class="meta">Bitte nennen Sie die Quelle „Ratsatlas Bonn“. Ergebnisse der Beratungen stammen aus OParl-Lite Bonn (machdenstaat, CC BY 4.0), die übrigen Angaben aus dem Ratsinformationssystem der Stadt Bonn (CC0 1.0); maßgeblich ist das Original. Einzelheiten in der <a href="https://github.com/daimpad/allris-test/blob/main/data/LICENSE-DATA.md">Lizenz der Daten</a>.</p>
     </section>
 
     <section class="rss-zugang rss-technik" id="technik" aria-labelledby="technik-t">
@@ -161,8 +161,8 @@ def write(site, site_url, page):
     """Schreibt rss/index.html; gibt den Pfad für die Sitemap zurück."""
     out = site / PFAD / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(site_url, PFAD, "Inhalte abonnieren und weiterverwenden – RIS-Karte Bonn",
-                        "Feeds der RIS-Karte Bonn abonnieren oder einbinden: neue Vorlagen und Beratungsergebnisse "
+    out.write_text(page(site_url, PFAD, "Inhalte abonnieren und weiterverwenden – Ratsatlas Bonn",
+                        "Feeds des Ratsatlas Bonn abonnieren oder einbinden: neue Vorlagen und Beratungsergebnisse "
                         "aus ganz Bonn, je Gebiet und je Thema, offen und ohne Konto.",
                         body(site, site_url, "../"), "../"), encoding="utf-8")   # Feed-Erkennung im Kopf: _page
     return [PFAD]

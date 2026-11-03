@@ -147,7 +147,7 @@ test("OpenAI-kompatibel: Text und in Stücken gelieferte Werkzeugargumente", asy
   const { url, init, body } = f.calls[0];
   assert.equal(url, "https://openrouter.ai/api/v1/chat/completions");
   assert.equal(init.headers.authorization, `Bearer ${KEY}`);
-  assert.equal(init.headers["X-Title"], "RIS-Karte Bonn");
+  assert.equal(init.headers["X-Title"], "Ratsatlas Bonn");
   assert.deepEqual(body.messages[0], { role: "system", content: "S" });
   assert.equal(body.tools[0].function.name, "hole_vorlage");
   assert.equal(body.tool_choice, "auto");

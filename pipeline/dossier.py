@@ -605,20 +605,20 @@ def write(t, site, site_url, page):
     n = sum(len(s["vorlagen"]) for s in d["straenge"])
     out = site / t.pfad / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
-    titel = f"{t.titel} – RIS-Karte Bonn"
+    titel = f"{t.titel} – Ratsatlas Bonn"
     text = t.seo_text.format(n=n)
     head = ""
     png = site / "data" / "export" / "bonn" / "dossiers" / f"{t.key}-zeitleiste.png"
     if png.exists():  # Vorschaubild beim Teilen: die Zeitleiste
         bild = f"{site_url}data/export/bonn/dossiers/{t.key}-zeitleiste.png"
         head = "".join(f'\n  <meta property="{k}" content="{escape(v)}">' for k, v in (
-            ("og:type", "article"), ("og:site_name", "RIS-Karte Bonn"), ("og:locale", "de_DE"), ("og:title", titel),
+            ("og:type", "article"), ("og:site_name", "Ratsatlas Bonn"), ("og:locale", "de_DE"), ("og:title", titel),
             ("og:description", text), ("og:url", site_url + t.pfad), ("og:image", bild),
             ("og:image:alt", t.bild_titel)))
         head += '\n  <meta name="twitter:card" content="summary_large_image">'
     root = "../" * t.pfad.rstrip("/").count("/") + "../"
     # Feed-Erkennung: Feed der Themenseite (der Feed über ganz Bonn kommt aus dem Seitenrahmen)
-    head += (f'\n  <link rel="alternate" type="application/atom+xml" title="{escape("RIS-Karte Bonn – " + t.titel)}" '
+    head += (f'\n  <link rel="alternate" type="application/atom+xml" title="{escape("Ratsatlas Bonn – " + t.titel)}" '
              f'href="{root}data/export/bonn/dossiers/{t.key}.xml">')
     out.write_text(page(site_url, t.pfad, titel, text, body(t, d, root), root, head), encoding="utf-8")
     for alt in t.alte_pfade:  # geteilte Links auf die frühere Adresse führen weiter
@@ -637,7 +637,7 @@ def weiterleitung(t, site_url):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{escape(t.titel)} – RIS-Karte Bonn</title>
+  <title>{escape(t.titel)} – Ratsatlas Bonn</title>
   <meta name="robots" content="noindex">
   <link rel="canonical" href="{neu}">
   <meta http-equiv="refresh" content="0; url={neu}">
@@ -726,8 +726,8 @@ def uebersicht(themen, site, site_url, page):
     <p><a href="../">Zur Karte</a></p>"""
     out = site / UEBERSICHT / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(site_url, UEBERSICHT, "Themen – RIS-Karte Bonn",
-                        "Themenseiten der RIS-Karte Bonn: Vorlagen und Verfahren je Thema mit Prozessbild, Sitzungen und "
+    out.write_text(page(site_url, UEBERSICHT, "Themen – Ratsatlas Bonn",
+                        "Themenseiten des Ratsatlas Bonn: Vorlagen und Verfahren je Thema mit Prozessbild, Sitzungen und "
                         "Wegen zum Mitwirken.", body, "../"), encoding="utf-8")
     return [UEBERSICHT]
 

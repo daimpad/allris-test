@@ -1,6 +1,6 @@
 <p align="center"><img src="site/favicon.svg" width="64" height="64" alt=""></p>
 
-<h1 align="center">RIS-Karte Bonn</h1>
+<h1 align="center">Ratsatlas Bonn</h1>
 
 <p align="center"><strong>Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – wo, wann und wer ist beteiligt?</strong></p>
 
@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/axe-WCAG%202.1%20AA%20gepr%C3%BCft-5b21b6" alt="Barrierefreiheit: mit axe auf WCAG 2.1 AA geprüft">
 </p>
 
-Die RIS-Karte zeigt die Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf einer Karte, einer Zeitleiste und als Liste – rund 25.000 Vorlagen seit Oktober 2019, täglich aktualisiert. Jede Angabe führt zum Original; was abgeleitet ist, ist gekennzeichnet.
+Der Ratsatlas zeigt die Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf einer Karte, einer Zeitleiste und als Liste – rund 25.000 Vorlagen seit Oktober 2019, täglich aktualisiert. Jede Angabe führt zum Original; was abgeleitet ist, ist gekennzeichnet.
 
 🌐 **Seite:** https://ris-bonn.datenatlas.de/ · Spiegel: https://daimpad.github.io/allris-test/
 📰 **Abonnieren:** [Feeds und Anleitung](https://ris-bonn.datenatlas.de/rss/) · 📦 **Daten:** [Datenpaket (Zip)](https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip) · 🛠️ **Technik:** [TECHNIK.md](TECHNIK.md)

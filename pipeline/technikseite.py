@@ -1,4 +1,4 @@
-"""Seite technik/: So funktioniert die Karte (Entscheidungen des Auftraggebers 03.11.2026: vier Grafiken – Überblick,
+"""Seite technik/: So funktioniert der Ratsatlas (Entscheidungen des Auftraggebers 03.11.2026: vier Grafiken – Überblick,
 Datenfluss, Zeitplan, Technik-Stapel –, aus dem Repository erzeugt, anklickbar mit Erklärung, je Grafik zwei bis vier
 Sätze, Menü „Verstehen“, ohne Laufstatus).
 
@@ -591,8 +591,8 @@ def body(d, root):
     zeit_svg = zeitplan_svg(d["wfs"], "breit") + zeitplan_svg(d["wfs"], "hoch")
     ohne = "\n".join(f'        <li><a class="tk-box" href="#tk-{k}">{escape(t)}</a>: {escape(e.split(". ", 1)[0])}</li>'
                      for k, t, e, *_ in d["ohne"])
-    return f"""    <h1>So funktioniert die Karte</h1>
-    <p class="lead">Woher kommen die Daten der RIS-Karte, was passiert mit ihnen und wann wird die Seite neu erzeugt? Vier Grafiken zeigen es, vom Überblick bis zur Technik. Sie entstehen aus dem Code im Repository und zeigen den Aufbau, nicht den Verlauf einzelner Läufe.</p>
+    return f"""    <h1>So funktioniert der Ratsatlas</h1>
+    <p class="lead">Woher kommen die Daten des Ratsatlas, was passiert mit ihnen und wann wird die Seite neu erzeugt? Vier Grafiken zeigen es, vom Überblick bis zur Technik. Sie entstehen aus dem Code im Repository und zeigen den Aufbau, nicht den Verlauf einzelner Läufe.</p>
     <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> <a href="#ueberblick">Überblick</a> · <a href="#datenfluss">Datenfluss</a> · <a href="#zeitplan">Zeitplan</a> · <a href="#technik">Technik</a> · <a href="#grenzen">Grenzen</a></nav>
 {_grafik("ueberblick", "Überblick", "Die Karte erfindet nichts: Sie holt öffentliche Daten der Stadt Bonn und weiterer Stellen, ordnet sie jeden Morgen neu und zeigt sie so, dass man sie nach Ort, Zeit und Zuständigkeit finden kann. Was die Karte selbst erschließt, etwa den Ort einer Vorlage, ist als abgeleitet gekennzeichnet.", spalten_svg(d["ueberblick"], "breit", "ueber", "Überblick: Woher, jeden Morgen, die Seite, für wen") + spalten_svg(d["ueberblick"], "hoch", "ueber", "Überblick: Woher, jeden Morgen, die Seite, für wen"), ueber_alle, root)}
 {_grafik("datenfluss", "Datenfluss", "Jeder Kasten in der Mitte ist ein Schritt der Pipeline, aufgerufen mit <code>python -m pipeline &lt;schritt&gt;</code>, in der Reihenfolge des Hauptlaufs. Links stehen die Quellen mit ihrer Lizenz, rechts die Ergebnisse. Die Liste der Schritte liest diese Seite aus dem Workflow; kommt ein Schritt hinzu, erscheint er hier.", spalten_svg(d["fluss"], "breit", "fluss", "Datenfluss: Quellen, Abruf, Aufbereitung, Ergebnis") + spalten_svg(d["fluss"], "hoch", "fluss", "Datenfluss: Quellen, Abruf, Aufbereitung, Ergebnis"), fluss_alle, root)}
@@ -615,8 +615,8 @@ def write(site, site_url, page):
     """Schreibt technik/index.html; gibt den Pfad für die Sitemap zurück."""
     out = site / PFAD / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(page(site_url, PFAD, "So funktioniert die Karte – RIS-Karte Bonn",
-                        "Woher die RIS-Karte Bonn ihre Daten nimmt, wie sie jeden Morgen aufbereitet werden, wann die "
+    out.write_text(page(site_url, PFAD, "So funktioniert der Ratsatlas – Ratsatlas Bonn",
+                        "Woher der Ratsatlas Bonn seine Daten nimmt, wie sie jeden Morgen aufbereitet werden, wann die "
                         "automatischen Läufe starten und welche Technik dahintersteht, in vier Grafiken.",
                         body(daten("../"), "../"), "../", '\n  <script src="../technik.js" defer></script>'),
                    encoding="utf-8")

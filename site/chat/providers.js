@@ -26,7 +26,7 @@ export const PROVIDERS = {
   },
   openrouter: {
     label: "OpenRouter", format: "openai", url: "https://openrouter.ai/api/v1/chat/completions",
-    models: [], modelsUrl: "https://openrouter.ai/api/v1/models", headers: { "X-Title": "RIS-Karte Bonn" },
+    models: [], modelsUrl: "https://openrouter.ai/api/v1/models", headers: { "X-Title": "Ratsatlas Bonn" },
     keyUrl: "https://openrouter.ai/settings/keys",
   },
   lokal: {

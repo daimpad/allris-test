@@ -49,7 +49,7 @@ class Seite(unittest.TestCase):
             self.assertIn(f">{t}</h2>", html)
         # Feed-Erkennung im Kopf, ohne Skripte von außen
         kopf = html.split("</head>")[0]
-        self.assertIn('<link rel="alternate" type="application/atom+xml" title="RIS-Karte Bonn – ganz Bonn" '
+        self.assertIn('<link rel="alternate" type="application/atom+xml" title="Ratsatlas Bonn – ganz Bonn" '
                       'href="../data/export/bonn/feeds/ganz-bonn.xml">', kopf)
         self.assertNotRegex(html, r'<script[^>]+src="https?:')
         self.assertIn('<script src="../rss.js" defer></script>', html)

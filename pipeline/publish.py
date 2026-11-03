@@ -63,7 +63,7 @@ def _atom(feed_id, title, subtitle, self_url, alt_url, entries):
              f"<subtitle>{escape(subtitle)}</subtitle>", f"<updated>{updated}</updated>",
              f'<link rel="self" type="application/atom+xml" href={quoteattr(self_url)}/>',
              f'<link rel="alternate" type="text/html" href={quoteattr(alt_url)}/>',
-             f"<author><name>RIS-Karte Bonn</name><uri>{escape(config.SITE_URL)}</uri></author>",
+             f"<author><name>Ratsatlas Bonn</name><uri>{escape(config.SITE_URL)}</uri></author>",
              f"<rights>{escape(RIGHTS)}</rights>"]
     for e in entries:
         parts += ["<entry>", f"<id>{escape(e['id'])}</id>", f"<title>{escape(e['title'])}</title>",
@@ -107,7 +107,7 @@ def write_feeds(out, areas, cache, names, home, slug, since):
         name = GANZ_BONN if ganz else key.replace(":", "-")
         wo = "ganz Bonn" if ganz else names[key]
         (out / f"{name}.xml").write_text(_atom(
-            f"tag:allris-bonn,2026:feed/{name}", f"RIS-Karte Bonn – {wo}",
+            f"tag:allris-bonn,2026:feed/{name}", f"Ratsatlas Bonn – {wo}",
             f"Neue Vorlagen und Beratungsergebnisse: {wo}", f"{base}{name}.xml",
             site_link("bonn:ganz" if ganz else key), entries))
     vdir = out / "vorlagen"
@@ -134,7 +134,7 @@ def write_topic_feed(path, key, title, papers, home, page_url):
     entries = sorted(entries, key=lambda e: (e["date"], e["id"]), reverse=True)[:FEED_LIMIT]
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(_atom(
-        f"tag:allris-bonn,2026:feed/thema/{key}", f"RIS-Karte Bonn – {title}",
+        f"tag:allris-bonn,2026:feed/thema/{key}", f"Ratsatlas Bonn – {title}",
         f"Neue Vorlagen und Beratungsergebnisse: {title} (Zuordnung abgeleitet)",
         f"{config.SITE_URL}data/export/bonn/dossiers/{path.name}", page_url, entries))
 
@@ -166,7 +166,7 @@ def _utc(ts):
 def write_calendar(path, meetings, today=None):
     """Sitzungen ab 30 Tage vor dem Datenstand; abgesagte mit STATUS:CANCELLED."""
     since = ((today or date.today()) - timedelta(days=30)).isoformat()
-    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//RIS-Karte Bonn//Sitzungskalender//DE",
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Ratsatlas Bonn//Sitzungskalender//DE",
              "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:Sitzungen Rat\\, Ausschüsse und "
              "Bezirksvertretungen Bonn", "X-WR-TIMEZONE:Europe/Berlin"]
     for m in meetings:
@@ -238,7 +238,7 @@ def write_dcat(path, data_start, modified, kurzfassungen=False):
                      "foaf": "http://xmlns.com/foaf/0.1/", "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
                      "xsd": "http://www.w3.org/2001/XMLSchema#", "locn": "http://www.w3.org/ns/locn#"},
         "@id": f"{base}bonn/dcat.jsonld#dataset", "@type": "dcat:Dataset",
-        "dct:title": {"@language": "de", "@value": "RIS-Karte Bonn – Ratsvorlagen räumlich, zeitlich und nach Akteuren"},
+        "dct:title": {"@language": "de", "@value": "Ratsatlas Bonn – Ratsvorlagen räumlich, zeitlich und nach Akteuren"},
         "dct:description": {"@language": "de", "@value": (
             "Vorlagen aus dem Ratsinformationssystem der Stadt Bonn seit Oktober 2019 mit Ortsbezug "
             "(Ortsteil, Straße; Stufe A aus der OParl-API, Stufe B regelbasiert aus dem Titel), "

@@ -1,4 +1,4 @@
-// Tour durch die Funktionen der RIS-Karte Bonn: hebt nacheinander Bedienelemente hervor (abgedunkelte Umgebung,
+// Tour durch die Funktionen des Ratsatlas Bonn: hebt nacheinander Bedienelemente hervor (abgedunkelte Umgebung,
 // pulsierender Rahmen, pulsierende Punkte an erwähnten Einzelheiten) und erklärt sie in einer Karte.
 // Start über Schaltflächen mit data-tour (Fenster „Los geht's“, Dialog „Über“). Bedienung: Weiter/Zurück,
 // Pfeiltasten, Esc beendet. Bei reduzierter Bewegung ohne Animation (style.css). Kein Inline-Skript (CSP).
@@ -11,7 +11,7 @@
   // beacons (Selektoren für pulsierende Punkte), clip (sichtbarer Ausschnitt), when (Schritt nur, wenn verfügbar)
   const STEPS = [
     { title: "Willkommen zur Tour",
-      text: "Die RIS-Karte zeigt, womit sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn befassen: wo (Karte), wann (Zeitleiste) und wer beteiligt ist (Ämter, Gremien, Fraktionen). Die Tour stellt die Funktionen der Reihe nach vor. Weiter mit der Pfeiltaste nach rechts, beenden mit Esc." },
+      text: "Der Ratsatlas zeigt, womit sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn befassen: wo (Karte), wann (Zeitleiste) und wer beteiligt ist (Ämter, Gremien, Fraktionen). Die Tour stellt die Funktionen der Reihe nach vor. Weiter mit der Pfeiltaste nach rechts, beenden mit Esc." },
     { menu: "mega-suche", target: "#mega-suche", fallback: "#nav-search", beacons: ["#q"],
       title: "Suche in ganz Bonn",
       text: "Ein Stichwort oder eine Drucksachennummer eingeben, etwa „Radweg“ oder „261856“. Darunter stehen Schnellfilter nach Thema und Partei; die Treffer lassen sich in der Liste anzeigen." },
@@ -52,7 +52,7 @@
       text: "Alle Daten zum Herunterladen: das Datenpaket mit Prüfprotokollen, die verorteten Vorlagen als GeoJSON und eine Datensatzbeschreibung nach DCAT-AP. Quellen, Lizenzen und Datenstand stehen auf der Karte unter den Legenden." },
     { menu: "mega-verstehen", target: "#mega-verstehen",
       title: "Verstehen",
-      text: "Hilfen zum Lesen der Karte: die RIS-Karte in Einfacher Sprache, Begriffe wie Vorlage, Beratungsfolge oder Zuschussbedarf in einfachen Worten und wie verlässlich die Angaben sind. Diese Tour finden Sie hier wieder." },
+      text: "Hilfen zum Lesen der Karte: der Ratsatlas in Einfacher Sprache, Begriffe wie Vorlage, Beratungsfolge oder Zuschussbedarf in einfachen Worten und wie verlässlich die Angaben sind. Diese Tour finden Sie hier wieder." },
     { target: ".toggle-ai",
       title: "Der Ratsassistent",
       text: "Ein KI-System beantwortet Fragen zu Bonner Ratsvorgängen und stützt sich dabei nur auf die Daten dieser Seite. Er braucht einen eigenen API-Schlüssel, nennt seine Quellen und verlinkt die Originale. Antworten können Fehler enthalten." },

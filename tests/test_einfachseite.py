@@ -18,7 +18,7 @@ class Einfach(unittest.TestCase):
     def test_acht_abschnitte(self):
         ids = re.findall(r'<h2 id="([a-z]+)">', self.html)
         self.assertEqual(ids, ["was", "wer", "ablauf", "woerter", "benutzen", "mitmachen", "grenzen", "kontakt"])
-        self.assertIn("<h1>Die RIS-Karte in Einfacher Sprache</h1>", self.html)
+        self.assertIn("<h1>Der Ratsatlas in Einfacher Sprache</h1>", self.html)
 
     def test_kurze_saetze_und_umfang(self):
         teil = self.html.split('<div class="einfach">')[1].split("</div>")[0]

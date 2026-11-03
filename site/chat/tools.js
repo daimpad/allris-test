@@ -342,7 +342,7 @@ export function createTools({ load, today: fest = null } = {}) {
       if (refs) hinweise.push("Ortsbezüge sind teils abgeleitet (Stufe B); Methode und Konfidenz liefert suche_ort oder hole_vorlage.");
       if (terms.length) hinweise.push("Gesucht wurde nur in Titeln, nicht in Dokumenttexten.");
       return { anfrage: { stichwort: a.stichwort || null, von, bis, ...filter }, treffer_gesamt: p.treffer_gesamt, seite: p.seite, seiten: p.seiten,
-        treffer: p.items.map((r) => item(s, r, mask)), hinweise, quelle: "OParl-API Stadt Bonn (CC0), Suchindex der RIS-Karte" };
+        treffer: p.items.map((r) => item(s, r, mask)), hinweise, quelle: "OParl-API Stadt Bonn (CC0), Suchindex des Ratsatlas" };
     },
 
     async hole_vorlage(a) {
@@ -436,7 +436,7 @@ export function createTools({ load, today: fest = null } = {}) {
         treffer: p.items.map((r) => ({ ...item(s, r, mask), verortung: by.get(r[0]).slice(0, 3) })),
         hinweise: ["Stufe A: Ort von der Stadt angegeben (hoch). Stufe B: aus dem Titel abgeleitet (mittel oder niedrig).",
           "Orte nur auf Straßen-, Ortsteil- oder Bezirksebene."],
-        quelle: "Ortsbezüge der RIS-Karte (Stufe A: OParl-API Stadt Bonn, CC0; Stufe B: abgeleitet, Straßen aus OpenStreetMap, ODbL)",
+        quelle: "Ortsbezüge des Ratsatlas (Stufe A: OParl-API Stadt Bonn, CC0; Stufe B: abgeleitet, Straßen aus OpenStreetMap, ODbL)",
       };
     },
 
@@ -504,8 +504,8 @@ export function createTools({ load, today: fest = null } = {}) {
       const entries = [
         ...g.begriffe.map((b) => ({ begriff: b.begriff, erklaerung: b.erklaerung, fundstelle: b.fundstelle })),
         ...Object.entries(g.ergebnisse).map(([k, v]) => ({ begriff: k, erklaerung: v, fundstelle: "Ergebnis bzw. Rolle einer Beratung, wörtlich aus der Quelle" })),
-        ...Object.entries(g.staende).map(([k, v]) => ({ begriff: `Stand: ${k}`, erklaerung: v, fundstelle: "Prozessebene der RIS-Karte" })),
-        ...Object.entries(g.evidenz).map(([k, v]) => ({ begriff: `Evidenzstatus: ${k}`, erklaerung: v, fundstelle: "Prozessebene der RIS-Karte" })),
+        ...Object.entries(g.staende).map(([k, v]) => ({ begriff: `Stand: ${k}`, erklaerung: v, fundstelle: "Prozessebene des Ratsatlas" })),
+        ...Object.entries(g.evidenz).map(([k, v]) => ({ begriff: `Evidenzstatus: ${k}`, erklaerung: v, fundstelle: "Prozessebene des Ratsatlas" })),
       ];
       const q = norm(a.begriff);
       let hits = entries.filter((e) => norm(e.begriff) === q || norm(e.begriff).replace(/^(stand|evidenzstatus) /, "") === q);
@@ -614,7 +614,7 @@ export function createTools({ load, today: fest = null } = {}) {
 
     async datenstand() {
       const d = await status();
-      return { heute: today(), ...d, quelle: "Datenstand der RIS-Karte Bonn" };
+      return { heute: today(), ...d, quelle: "Datenstand des Ratsatlas Bonn" };
     },
   };
 

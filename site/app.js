@@ -1,4 +1,4 @@
-// RIS-Karte Bonn – Karte vollflächig, darüber Liste, Zeitleiste, Detail (Prozesslinie mit Evidenzstatus)
+// Ratsatlas Bonn – Karte vollflächig, darüber Liste, Zeitleiste, Detail (Prozesslinie mit Evidenzstatus)
 // und typische Wege. Liest die Exporte der Pipeline; ohne Gesamtexport Rückfall auf den Pilot Endenich.
 (function () {
   "use strict";
@@ -51,9 +51,9 @@
     <p class="hint">Abweichungen zwischen Regel und Ablauf sind Befunde, keine Bewertung.</p></details>`;
   // Startfenster „Los geht's“ im Vorgang, solange keine Vorlage gewählt ist; die Tour steht in site/tour.js
   const INTRO = `<div class="intro">
-    <p class="intro-lead">Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – wo, wann und wer ist beteiligt?</p>
+    <p class="intro-lead">Was Rat und Bezirksvertretungen der Stadt Bonn beraten – wo, wann, wer und mit welchem Geld.</p>
     <button type="button" class="btn btn-cta tour-cta" data-tour><span class="tour-cta-dot" aria-hidden="true"></span>Tour durch alle Funktionen</button>
-    <p><a href="einfach/">Die RIS-Karte in Einfacher Sprache</a></p></div>${LIMITS}`;
+    <p><a href="einfach/">Der Ratsatlas in Einfacher Sprache</a></p></div>${LIMITS}`;
 
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -378,8 +378,8 @@
     const oparl = meta.sources.find((s) => s.name === "oparl-bonn") || {};
     dataStand = (oparl.retrieved_at || meta.generated_at || new Date().toISOString()).slice(0, 10);
     papers = data.papers;
-    document.title = area.kind === "bonn" ? "RIS-Karte Bonn – Ratsvorlagen räumlich, zeitlich und nach Akteuren"
-      : `RIS-Karte Bonn – Ratsvorlagen ${area.kind === "ohne" ? "ohne Ortsbezug " + area.key : "in " + area.name}`;
+    document.title = area.kind === "bonn" ? "Ratsatlas Bonn – Was Rat und Bezirksvertretungen beraten – wo, wann, wer und mit welchem Geld"
+      : `Ratsatlas Bonn – Ratsvorlagen ${area.kind === "ohne" ? "ohne Ortsbezug " + area.key : "in " + area.name}`;
     $("#f-conf").hidden = area.kind === "ohne" || area.kind === "bonn";
     fillFilters();
     drawOutline();
@@ -1595,7 +1595,7 @@
     return `<li class="step" data-status="${status}"><span class="mark mark-${status}" aria-hidden="true"></span>
       <div class="step-head">${esc(st.label)}<span class="step-status">${note}</span></div>
       <div class="step-body">${who}${st.was !== st.label ? esc(st.was) + "<br>" : ""}${st.links ? `Rechtsgrundlage: ${lawLinks(st.links)}` : st.beleg ? `Rechtsgrundlage: ${esc(st.beleg)}` : ""}
-        ${st.eigen ? ' <span class="derived">Ergänzung der RIS-Karte</span>' : ""}</div></li>`;
+        ${st.eigen ? ' <span class="derived">Ergänzung des Ratsatlas</span>' : ""}</div></li>`;
   }
   function zustoHtml(p, d) {
     const names = [...new Set(p.steps.filter((s) => s.typ === "beratung" || s.typ === "entscheidung").map((s) => s.label))];
@@ -1845,7 +1845,7 @@
     fillMitmachen();
     fillKontext();
     const l = document.createElement("link");
-    Object.assign(l, { rel: "alternate", type: "application/atom+xml", href, title: `RIS-Karte Bonn – ${where}` });
+    Object.assign(l, { rel: "alternate", type: "application/atom+xml", href, title: `Ratsatlas Bonn – ${where}` });
     l.dataset.gebiet = `${area.kind}:${area.key}`;
     document.head.appendChild(l);
   }

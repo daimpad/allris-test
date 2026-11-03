@@ -49,11 +49,11 @@ def _page(site_url, path, title, description, body, root, head=""):
   <link rel="icon" href="{root}favicon.ico" sizes="32x32">
   <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{root}page.css">{head}
-  <link rel="alternate" type="application/atom+xml" title="RIS-Karte Bonn – ganz Bonn" href="{root}data/export/bonn/feeds/ganz-bonn.xml">
+  <link rel="alternate" type="application/atom+xml" title="Ratsatlas Bonn – ganz Bonn" href="{root}data/export/bonn/feeds/ganz-bonn.xml">
 </head>
 <body>
   <header class="page-head">
-    <a class="page-brand" href="{root}"><img src="{root}favicon.svg" width="32" height="32" alt="">RIS-Karte <span>Bonn</span></a>
+    <a class="page-brand" href="{root}"><img src="{root}favicon.svg" width="32" height="32" alt="">Ratsatlas <span>Bonn</span></a>
     <a class="page-back" href="{root}">Zur Karte</a>
   </header>
   <main class="page">
@@ -122,9 +122,9 @@ def write(site, site_url):
         body = _area_body("Ortsteil", o["name"], o["stadtbezirk"], f"ortsteil:{o['slug']}", papers, root)
         out = site / path / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(_page(site_url, path, f"Ratsvorlagen in {o['name']} – RIS-Karte Bonn",
+        out.write_text(_page(site_url, path, f"Ratsvorlagen in {o['name']} – Ratsatlas Bonn",
                              f"Was berät die Politik in {o['name']} (Bonn)? {len(papers)} Vorlagen aus dem Ratsinformationssystem mit Ort, Stand und Gremien.",
-                             body, root, feed_head(f"feeds/ortsteil-{o['slug']}.xml", f"RIS-Karte Bonn – {o['name']}", root)),
+                             body, root, feed_head(f"feeds/ortsteil-{o['slug']}.xml", f"Ratsatlas Bonn – {o['name']}", root)),
                        encoding="utf-8")
         paths.append(path)
         groups.setdefault(o["stadtbezirk"], []).append((o["name"], path, len(papers)))
@@ -137,10 +137,10 @@ def write(site, site_url):
         body = _area_body("Stadtbezirk", b["name"], None, f"bezirk:{b['slug']}", papers, root)
         out = site / path / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(_page(site_url, path, f"Ratsvorlagen im Stadtbezirk {b['name']} – RIS-Karte Bonn",
+        out.write_text(_page(site_url, path, f"Ratsvorlagen im Stadtbezirk {b['name']} – Ratsatlas Bonn",
                              f"Vorlagen aus dem Ratsinformationssystem mit Bezug zum ganzen Stadtbezirk {b['name']} (Bonn), ohne genaueren Ort.",
                              body, root, feed_head(f"feeds/bezirk-{b['slug']}.xml",
-                                                   f"RIS-Karte Bonn – Stadtbezirk {b['name']}, ohne genaueren Ort", root)),
+                                                   f"Ratsatlas Bonn – Stadtbezirk {b['name']}, ohne genaueren Ort", root)),
                        encoding="utf-8")
         paths.append(path)
         groups.setdefault(b["name"], []).append((f"ganzer Stadtbezirk {b['name']}", path, len(papers)))
@@ -154,7 +154,7 @@ def write(site, site_url):
 {sections}"""
     (site / "gebiete").mkdir(parents=True, exist_ok=True)
     (site / "gebiete" / "index.html").write_text(
-        _page(site_url, "gebiete/", "Ratsvorlagen nach Gebiet – RIS-Karte Bonn",
+        _page(site_url, "gebiete/", "Ratsvorlagen nach Gebiet – Ratsatlas Bonn",
               "Übersicht der Bonner Ortsteile und Stadtbezirke mit ihren Vorlagen aus dem Ratsinformationssystem.", hub, "../"),
         encoding="utf-8")
     print(f"Gebietsseiten: {len(paths)} und Übersicht")
