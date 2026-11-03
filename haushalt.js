@@ -96,7 +96,7 @@
     const namen = {};
     sektion.querySelectorAll('tr[class^="hh-z"] > th').forEach((th) => { namen[th.parentElement.className.slice(4)] = th.textContent.trim(); });
     const wer = sektion.querySelector("h2").textContent.trim();
-    sektion.querySelectorAll(".hh-balken").forEach((balken) => {
+    sektion.querySelectorAll(".hh-balken:not(.hh-eb)").forEach((balken) => {
       const v = [...balken.classList].find((c) => /^hh-v\d$/.test(c));
       const teile = [...balken.querySelectorAll("i[data-b]")].map((i) => ({ z: i.className.slice(4), b: Number(i.dataset.b) }))
         .filter((t) => t.b > 0).sort((a, b) => b.b - a.b || a.z - b.z);
