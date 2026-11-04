@@ -2,21 +2,21 @@
 
 <h1 align="center">Ratsatlas Bonn</h1>
 
-<p align="center"><strong>Womit befassen sich Rat, Bezirksvertretungen und Ausschüsse der Stadt Bonn – wo, wann und wer ist beteiligt?</strong></p>
+<p align="center"><strong>Was Rat und Bezirksvertretungen beraten – wo, wann, wer und mit welchem Geld</strong></p>
 
 <p align="center">
-  <a href="https://ris-bonn.datenatlas.de/"><img src="https://img.shields.io/badge/Seite-ris--bonn.datenatlas.de-7c3aed" alt="Seite: ris-bonn.datenatlas.de"></a>
+  <a href="https://bonn.ratsatlas.de/"><img src="https://img.shields.io/badge/Seite-bonn.ratsatlas.de-7c3aed" alt="Seite: bonn.ratsatlas.de"></a>
   <a href="https://github.com/daimpad/ratsatlas-bonn/actions/workflows/pages.yml"><img src="https://github.com/daimpad/ratsatlas-bonn/actions/workflows/pages.yml/badge.svg" alt="Tägliche Aktualisierung"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/Code-MIT-2563eb" alt="Code: MIT"></a>
   <a href="data/LICENSE-DATA.md"><img src="https://img.shields.io/badge/Daten-CC0%20%2F%20CC%20BY%204.0-15803d" alt="Daten: CC0 und CC BY 4.0"></a>
-  <a href="https://ris-bonn.datenatlas.de/rss/"><img src="https://img.shields.io/badge/Feeds-Atom%20%2F%20RSS-c2410c" alt="Feeds: Atom und RSS"></a>
+  <a href="https://bonn.ratsatlas.de/rss/"><img src="https://img.shields.io/badge/Feeds-Atom%20%2F%20RSS-c2410c" alt="Feeds: Atom und RSS"></a>
   <img src="https://img.shields.io/badge/axe-WCAG%202.1%20AA%20gepr%C3%BCft-5b21b6" alt="Barrierefreiheit: mit axe auf WCAG 2.1 AA geprüft">
 </p>
 
 Der Ratsatlas zeigt die Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf einer Karte, einer Zeitleiste und als Liste – rund 25.000 Vorlagen seit Oktober 2019, täglich aktualisiert. Jede Angabe führt zum Original; was abgeleitet ist, ist gekennzeichnet.
 
-🌐 **Seite:** https://ris-bonn.datenatlas.de/ · Spiegel: https://daimpad.github.io/ratsatlas-bonn/
-📰 **Abonnieren:** [Feeds und Anleitung](https://ris-bonn.datenatlas.de/rss/) · 📦 **Daten:** [Datenpaket (Zip)](https://daimpad.github.io/ratsatlas-bonn/data/export/allris-bonn-export.zip) · 🛠️ **Technik:** [TECHNIK.md](TECHNIK.md)
+🌐 **Seite:** https://bonn.ratsatlas.de/ · Spiegel: https://daimpad.github.io/ratsatlas-bonn/
+📰 **Abonnieren:** [Feeds und Anleitung](https://bonn.ratsatlas.de/rss/) · 📦 **Daten:** [Datenpaket (Zip)](https://daimpad.github.io/ratsatlas-bonn/data/export/allris-bonn-export.zip) · 🛠️ **Technik:** [TECHNIK.md](TECHNIK.md)
 
 ## 🗺️ Was Sie auf der Seite finden
 
@@ -27,17 +27,18 @@ Der Ratsatlas zeigt die Vorlagen aus dem Ratsinformationssystem der Stadt Bonn a
 | 📄 | **Vorgang** | Eine Vorlage mit ihren Stationen: Einreichung, Beratungen mit Ergebnis, Folgevorlagen – und was das Regelwerk vorsieht. |
 | ⚖️ | **Prozesse** | Wer entscheidet was? Verfahren mit Schritten und Fristen, Gremien mit Besetzung, Ämter. |
 | 🏷️ | **Themenseiten** | Kunst und Kultur, Verkehr und Mobilität, Schule und Bildung, Wohnen und Bauen, Klima und Umwelt, Kinder, Jugend und Familie, Soziales, Gesundheit und Integration, Sicherheit und Ordnung, Wirtschaft und Wissenschaft, Digitale Verwaltung – mit Zeitleiste und nächsten Sitzungen. |
-| 💶 | **Haushalt auf einen Blick** | Die Aufwendungen der Stadt als Kacheln; ein Klick zoomt bis zu den Produktgruppen und Aufwandsarten. |
+| 💶 | **Haushalt auf einen Blick** | Aufwendungen und Erträge der Stadt als Kacheln, Plan und Ist bis 2024; ein Klick zoomt bis zu Produktgruppen, Aufwands- und Ertragsarten. Dazu Veränderung und Investitionen je Produktbereich. |
 | 📊 | **Zahlen zum Gebiet** | Einwohner, Mieten, Bodenrichtwerte, Haltestellen, Kitas, Hitze, Überschwemmungsgebiete, Wahlbeteiligung, Meldungen im Mängelmelder. |
 | 🏗️ | **Bebauungspläne und Baustellen** | Geltungsbereiche der Pläne mit Planchronik, gemeldete Baustellen der Stadt. |
 | 🙋 | **Mitmachen** | Nächste Sitzungen, berechnete Fristen und alle Wege, sich einzubringen – mit Rechtsgrundlage. |
 | 📰 | **Feeds und Kalender** | Neues für ganz Bonn, je Gebiet, Thema oder Vorgang im Feed-Reader; Sitzungen als Kalenderdatei. |
 | 🔍 | **Suche** | Nach Titel und Drucksache in ganz Bonn, auf Wunsch auch im Text der Dokumente. |
+| 📖 | **Verstehen** | Die Seite in Einfacher Sprache, Begriffe in einfachen Worten, wie verlässlich die Angaben sind und „So funktioniert der Ratsatlas“ mit Datenfluss, Zeitplan und Technik. |
 | 🤖 | **Ratsassistent** | Fragen in eigenen Worten; ein Sprachmodell antwortet nur mit den Daten der Seite (eigener Schlüssel nötig). |
 
 Neu auf der Seite? Das Fenster „Los geht's“ startet eine Tour durch alle Funktionen.
 
-## 🔄 So entsteht die Karte
+## 🔄 So entsteht der Ratsatlas
 
 ```mermaid
 flowchart LR
@@ -114,7 +115,7 @@ node --test tests/js/*.test.mjs           # Werkzeuge des Ratsassistenten
 | `tests/` | Unit-Tests, Browser-Tests (Playwright, axe) |
 | `.github/workflows/` | tägliche Aktualisierung und Veröffentlichung, Tests |
 
-Einzelheiten zu Aufbau, Regeln und Prüfungen: [`TECHNIK.md`](TECHNIK.md). Feeds weiterverarbeiten: [Anleitung auf der Seite](https://ris-bonn.datenatlas.de/rss/#technik).
+Einzelheiten zu Aufbau, Regeln und Prüfungen: [`TECHNIK.md`](TECHNIK.md). Feeds weiterverarbeiten: [Anleitung auf der Seite](https://bonn.ratsatlas.de/rss/#technik).
 
 </details>
 
@@ -122,4 +123,5 @@ Einzelheiten zu Aufbau, Regeln und Prüfungen: [`TECHNIK.md`](TECHNIK.md). Feeds
 
 - 🐞 **Fehler gefunden?** Bei jeder Vorlage führt „Hinweis geben“ zu einem vorausgefüllten Issue.
 - 💡 **Mitentwickeln:** [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- 👤 Erstellt von [Damian Paderta](https://paderta.com/) im Rahmen des Hackathons „Hack den Stadtrat“ · [Impressum](https://nozilla.de/impressum/) · [Datenschutz](https://ris-bonn.datenatlas.de/datenschutz.html)
+- 🔁 **Frühere Namen:** RIS-Karte Bonn (bis 03.11.2026), Repository `daimpad/allris-test` und Adresse `ris-bonn.datenatlas.de` (bis 04.11.2026; die alte Adresse leitet weiter).
+- 👤 Erstellt von [Damian Paderta](https://paderta.com/) im Rahmen des Hackathons „Hack den Stadtrat“ · [Impressum](https://nozilla.de/impressum/) · [Datenschutz](https://bonn.ratsatlas.de/datenschutz.html)

@@ -112,7 +112,7 @@ Läuft auf der Seite seit dem 21.10.2026 (Konfidenz „niedrig“, 837 Vorlagen)
 | Aufgabe | Stand |
 |---|---|
 | Plesk: Webhook für den Branch `deploy` | Am 22.10.2026 sind Hauptadresse, Branch und Spiegel gleich. `live.yml` meldet, wenn der Server zurückbleibt. Prüfen, ob der Webhook dauerhaft eingerichtet ist. |
-| Google Search Console | Eigentum von ris-bonn.datenatlas.de bestätigen, `sitemap.xml` einreichen |
+| Google Search Console | Eigentum von bonn.ratsatlas.de bestätigen, `sitemap.xml` einreichen |
 | Secret `ANTHROPIC_API_KEY` | nur für den Lauf unter 3 |
 
 ## 7. Außenwirkung (nur nach Ihrer Entscheidung)

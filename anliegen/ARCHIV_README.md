@@ -1,6 +1,6 @@
 # Archiv des Mängelmelders der Stadt Bonn
 
-Dieser Ordner wird täglich vom Workflow `baustellen.yml` im Repository [daimpad/ratsatlas-bonn](https://github.com/daimpad/ratsatlas-bonn) fortgeschrieben (RIS-Karte Bonn, https://ris-bonn.datenatlas.de/).
+Dieser Ordner wird täglich vom Workflow `baustellen.yml` im Repository [daimpad/ratsatlas-bonn](https://github.com/daimpad/ratsatlas-bonn) fortgeschrieben (Ratsatlas Bonn, https://bonn.ratsatlas.de/).
 
 **Quelle:** Stadt Bonn, Anliegen- und Mängelmelder (https://anliegen.bonn.de), Schnittstelle Open311 GeoReport v2 (`/api/georeport/v2/requests.json`). **Lizenz:** CC0 1.0 (Datensatz auf opendata.bonn.de).
 

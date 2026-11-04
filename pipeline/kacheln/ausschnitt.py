@@ -19,7 +19,7 @@ from rahmen import VEKTOR_MAXZOOM, kachelbereich, rahmen  # noqa: E402
 
 BUILDS = "https://build-metadata.protomaps.dev/builds.json"
 BASIS = "https://build.protomaps.com/"
-UA = "ratsatlas-bonn/1.0 (+https://ris-bonn.datenatlas.de/; Ausschnitt Bonn, vierteljaehrlich)"
+UA = "ratsatlas-bonn/1.0 (+https://bonn.ratsatlas.de/; Ausschnitt Bonn, vierteljaehrlich)"
 REQ = {"n": 0, "bytes": 0}
 
 

@@ -126,7 +126,7 @@ AUSGABEN = [
                                 "TSV.", None),
     ("a-paket", "Datenpaket", "Alle Daten, Prüfprotokolle und Lizenzen als Zip-Paket.", config.PAKET_URL),
     ("a-pages", "GitHub Pages", "Der Spiegel der Seite unter daimpad.github.io.", "https://daimpad.github.io/ratsatlas-bonn/"),
-    ("a-server", "Hauptadresse", "Der Branch deploy enthält die fertige Seite; der Server von ris-bonn.datenatlas.de "
+    ("a-server", "Hauptadresse", "Der Branch deploy enthält die fertige Seite; der Server von bonn.ratsatlas.de "
                                  "übernimmt ihn über einen Webhook.", config.SITE_URL),
 ]
 

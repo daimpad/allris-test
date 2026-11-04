@@ -44,5 +44,14 @@ AddCharset utf-8 .json .geojson .tsv .md .js .css .xml .ics
   </FilesMatch>
 </IfModule>
 
+# Frühere Hauptadresse (bis 04.11.2026): dauerhaft mit Pfad auf die neue Adresse. Liefert nginx statische Dateien
+# selbst aus, greift diese Regel nicht für sie; dafür in Plesk bei ris-bonn.datenatlas.de unter „Apache & nginx“
+# als zusätzliche nginx-Anweisung: return 301 https://bonn.ratsatlas.de$request_uri;
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^ris-bonn\.datenatlas\.de$ [NC]
+  RewriteRule ^ https://bonn.ratsatlas.de%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 RedirectMatch 404 /\.git
 ErrorDocument 404 /404.html
