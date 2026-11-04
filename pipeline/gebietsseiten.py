@@ -21,7 +21,7 @@ def _date(iso):
 
 
 # Externe Links öffnen in einem neuen Tab (Entscheidung des Auftraggebers 28.10.2026), z. B. die PDF der Stadt
-EIGENE = ("ris-bonn.datenatlas.de", "daimpad.github.io/ratsatlas-bonn")
+EIGENE = ("bonn.ratsatlas.de", "ris-bonn.datenatlas.de", "daimpad.github.io/ratsatlas-bonn")
 _EXTERN = re.compile(r'<a\s(?![^>]*\btarget=)([^>]*\bhref="https?://(?!(?:%s))[^"]*"[^>]*)>' % "|".join(re.escape(h) for h in EIGENE))
 
 

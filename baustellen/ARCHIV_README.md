@@ -1,6 +1,6 @@
 # Archiv der Baustellen der Stadt Bonn
 
-Dieser Branch wird täglich vom Workflow `baustellen.yml` im Repository [daimpad/ratsatlas-bonn](https://github.com/daimpad/ratsatlas-bonn) fortgeschrieben (RIS-Karte Bonn, https://ris-bonn.datenatlas.de/).
+Dieser Branch wird täglich vom Workflow `baustellen.yml` im Repository [daimpad/ratsatlas-bonn](https://github.com/daimpad/ratsatlas-bonn) fortgeschrieben (Ratsatlas Bonn, https://bonn.ratsatlas.de/).
 
 **Quelle:** Stadt Bonn, Schnittstellen unter stadtplan.bonn.de – Thema 14403 (Baustellen tagesaktuell), 14698 (geplant, 1 Jahr), 14755 (geplant, 30 Tage). **Lizenz:** CC0 1.0 (laut Auftraggeber; die Datensätze stehen seit 2026 nicht mehr im Katalog von opendata.bonn.de).
 
