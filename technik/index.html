@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <title>So funktioniert der Ratsatlas – Ratsatlas Bonn</title>
   <meta name="description" content="Woher der Ratsatlas Bonn seine Daten nimmt, wie sie jeden Morgen aufbereitet werden, wann die automatischen Läufe starten und welche Technik dahintersteht, in vier Grafiken.">
-  <link rel="canonical" href="https://ris-bonn.datenatlas.de/technik/">
+  <link rel="canonical" href="https://bonn.ratsatlas.de/technik/">
   <link rel="icon" href="../favicon.ico" sizes="32x32">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../page.css">
@@ -98,7 +98,7 @@
         <li id="tk-a-offen"><strong>Offene Daten</strong>: GeoJSON der verorteten Vorlagen, Beschreibung nach DCAT-AP und Prüfprotokolle als TSV.</li>
         <li id="tk-a-paket"><strong>Datenpaket</strong>: Alle Daten, Prüfprotokolle und Lizenzen als Zip-Paket. <a href="https://daimpad.github.io/ratsatlas-bonn/data/export/allris-bonn-export.zip">Öffnen</a></li>
         <li id="tk-a-pages"><strong>GitHub Pages</strong>: Der Spiegel der Seite unter daimpad.github.io. <a href="https://daimpad.github.io/ratsatlas-bonn/">Öffnen</a></li>
-        <li id="tk-a-server"><strong>Hauptadresse</strong>: Der Branch deploy enthält die fertige Seite; der Server von ris-bonn.datenatlas.de übernimmt ihn über einen Webhook. <a href="https://ris-bonn.datenatlas.de/">Öffnen</a></li>
+        <li id="tk-a-server"><strong>Hauptadresse</strong>: Der Branch deploy enthält die fertige Seite; der Server von bonn.ratsatlas.de übernimmt ihn über einen Webhook. <a href="https://bonn.ratsatlas.de/">Öffnen</a></li>
       </ul>
     </details>
     <h2 id="zeitplan">Zeitplan</h2>
@@ -141,7 +141,7 @@
       <ul>
         <li id="tk-t-actions"><strong>GitHub Actions</strong>: 8 Workflows steuern Abruf, Prüfung und Veröffentlichung (Grafik „Zeitplan“). <a href="https://github.com/daimpad/ratsatlas-bonn/actions" target="_blank" rel="noopener">Läufe auf GitHub</a></li>
         <li id="tk-t-pages"><strong>GitHub Pages</strong>: Hostet den Spiegel der Seite. <a href="https://daimpad.github.io/ratsatlas-bonn/">Spiegel</a></li>
-        <li id="tk-t-server"><strong>Webhosting (Plesk)</strong>: Der Server der Hauptadresse übernimmt den Branch deploy über einen Webhook; .htaccess setzt Sicherheitskopfzeilen. <a href="https://ris-bonn.datenatlas.de/">Hauptadresse</a></li>
+        <li id="tk-t-server"><strong>Webhosting (Plesk)</strong>: Der Server der Hauptadresse übernimmt den Branch deploy über einen Webhook; .htaccess setzt Sicherheitskopfzeilen. <a href="https://bonn.ratsatlas.de/">Hauptadresse</a></li>
         <li id="tk-t-branches"><strong>Branches</strong>: Neben main: archiv, auswertung, deploy, else, fi, git, kacheln, kurzfassungen, quellen. Sie halten die fertige Seite, Archive, Kurzfassungen, Quelldateien, Kacheln und Auswertungen getrennt vom Code. <a href="https://github.com/daimpad/ratsatlas-bonn/branches" target="_blank" rel="noopener">Branches</a></li>
         <li id="tk-t-html"><strong>HTML und CSS</strong>: Statische Seiten ohne Server-Programm; Glas-Stil, WCAG 2.1 AA.</li>
         <li id="tk-t-js"><strong>JavaScript</strong>: Eigener Code ohne Framework für Karte, Liste, Zeitleiste und Tour. <a href="https://github.com/daimpad/ratsatlas-bonn/blob/main/site/app.js" target="_blank" rel="noopener">Code (site/app.js)</a></li>

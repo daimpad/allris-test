@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <title>Inhalte abonnieren und weiterverwenden – Ratsatlas Bonn</title>
   <meta name="description" content="Feeds des Ratsatlas Bonn abonnieren oder einbinden: neue Vorlagen und Beratungsergebnisse aus ganz Bonn, je Gebiet und je Thema, offen und ohne Konto.">
-  <link rel="canonical" href="https://ris-bonn.datenatlas.de/rss/">
+  <link rel="canonical" href="https://bonn.ratsatlas.de/rss/">
   <link rel="icon" href="../favicon.ico" sizes="32x32">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../page.css">
@@ -24,7 +24,7 @@
     <section class="rss-cta" aria-labelledby="rss-adresse-t">
       <h2 id="rss-adresse-t">Feed für ganz Bonn</h2>
       <label for="rss-url">Feed-Adresse</label>
-      <input id="rss-url" class="rss-url" type="text" readonly value="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ganz-bonn.xml" spellcheck="false" autocomplete="off">
+      <input id="rss-url" class="rss-url" type="text" readonly value="https://bonn.ratsatlas.de/data/export/bonn/feeds/ganz-bonn.xml" spellcheck="false" autocomplete="off">
       <div class="rss-aktionen">
         <button type="button" class="rss-knopf rss-haupt" data-kopieren="#rss-url" hidden>RSS-Adresse kopieren</button>
         <a class="rss-knopf rss-zweit" href="../data/export/bonn/feeds/ganz-bonn.xml" type="application/atom+xml">Feed direkt ansehen</a>
@@ -60,7 +60,7 @@
       <p>Damit Browser und Reader den Feed auf Ihrer Seite finden, genügt eine Zeile im Kopf (<code>&lt;head&gt;</code>) der Seite:</p>
       <pre class="rss-code" id="rss-head" tabindex="0"><code>&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot;
       title=&quot;Ratsatlas Bonn – ganz Bonn&quot;
-      href=&quot;https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ganz-bonn.xml&quot;&gt;</code></pre>
+      href=&quot;https://bonn.ratsatlas.de/data/export/bonn/feeds/ganz-bonn.xml&quot;&gt;</code></pre>
       <p class="rss-weiter"><button type="button" class="rss-knopf rss-zweit" data-kopieren="#rss-head" hidden>Zeile kopieren</button> <a href="#technik">Technische Angaben</a></p>
       <p class="meta">Bitte nennen Sie die Quelle „Ratsatlas Bonn“. Ergebnisse der Beratungen stammen aus OParl-Lite Bonn (machdenstaat, CC BY 4.0), die übrigen Angaben aus dem Ratsinformationssystem der Stadt Bonn (CC0 1.0); maßgeblich ist das Original. Einzelheiten in der <a href="https://github.com/daimpad/ratsatlas-bonn/blob/main/data/LICENSE-DATA.md" target="_blank" rel="noopener">Lizenz der Daten</a>.</p>
     </section>
@@ -82,7 +82,7 @@
       <pre class="rss-code" id="rss-python" tabindex="0"><code>import urllib.request
 import xml.etree.ElementTree as ET
 
-URL = &quot;https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ganz-bonn.xml&quot;
+URL = &quot;https://bonn.ratsatlas.de/data/export/bonn/feeds/ganz-bonn.xml&quot;
 ATOM = {&quot;a&quot;: &quot;http://www.w3.org/2005/Atom&quot;}
 
 with urllib.request.urlopen(URL, timeout=30) as antwort:
