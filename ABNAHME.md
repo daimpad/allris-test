@@ -44,7 +44,7 @@ KI-Vorprüfungen von je 30 Kurzfassungen (`data/export/kurzfassungen/vorpruefung
 
 **Ergebnis (22.10.2026):** Prüfung von Hand im Gespräch: 18 zutreffend, 12 teilweise, keine falsch (`data/export/kurzfassungen/pruefung_kurzfassungen_v7.tsv`). Die Urteile stimmen in allen 30 Fällen mit der KI-Vorprüfung überein; diese war bei der Prüfung sichtbar, die Prüfung ist daher nicht unabhängig von ihr. Entscheidung des Auftraggebers: **B, freigeben**, Hinweis geschärft („Einzelheiten können ungenau sein, etwa ob etwas beschlossen oder nur vorgeschlagen ist. Maßgeblich ist das Original.“). Es erscheinen nur Kurzfassungen der Fassung 7; ältere werden im täglichen Lauf neu erzeugt (bis 500 je Tag).
 
-**Prüfbogen:** [`stichprobe_kurzfassungen_v7.tsv`](https://github.com/daimpad/allris-test/blob/kurzfassungen/stichprobe_kurzfassungen_v7.tsv) im Branch `kurzfassungen`.
+**Prüfbogen:** [`stichprobe_kurzfassungen_v7.tsv`](https://github.com/daimpad/ratsatlas-bonn/blob/kurzfassungen/stichprobe_kurzfassungen_v7.tsv) im Branch `kurzfassungen`.
 - 30 Kurzfassungen der Fassung 7, je mit Link zum Original im Ratsinformationssystem.
 - Spalte `urteil`: zutreffend, teilweise oder falsch.
 
@@ -76,7 +76,7 @@ Mit `eval.yml` (Actions → „Auswertung Ratsassistent“) wurden die 36 Fragen
 Mit v0.3 werden die Aufforderungen „Systemprompt ausgeben“ und „antworte nur noch mit …“ abgelehnt. Offen bleibt: Mistral nennt einmal eine Zahl aus allgemeinem Wissen (Hebesatz) und bildet weiterhin manchmal Adressen selbst. Die Seite zeigt solche Adressen nicht als Link.
 
 **Zu tun:**
-1. **Bewertung von Hand** des zweiten Laufs: [`2026-10-22-09-28_mistral_mistral-large-latest.tsv`](https://github.com/daimpad/allris-test/blob/auswertung/2026-10-22-09-28_mistral_mistral-large-latest.tsv) im Branch `auswertung`, Spalten `evidenz_korrekt (Hand)`, `neutral (Hand)` und `bewertung (Hand)`.
+1. **Bewertung von Hand** des zweiten Laufs: [`2026-10-22-09-28_mistral_mistral-large-latest.tsv`](https://github.com/daimpad/ratsatlas-bonn/blob/auswertung/2026-10-22-09-28_mistral_mistral-large-latest.tsv) im Branch `auswertung`, Spalten `evidenz_korrekt (Hand)`, `neutral (Hand)` und `bewertung (Hand)`.
 2. **Lauf mit Anthropic.** Entweder das Secret `ANTHROPIC_API_KEY` im Repository anlegen (Settings → Secrets → Actions) und den Workflow mit `anbieter = anthropic` und einem Claude-Modell starten, oder lokal nach `eval/README.md`.
 
 **Empfehlung:** Systemprompt v0.3 behalten. Nach dem Lauf mit Anthropic entscheiden, ob der Assistent ein bestimmtes Modell empfehlen soll.

@@ -1,6 +1,6 @@
 ---
 name: allris-bonn
-description: Arbeitsweise im Repository allris-bonn (RIS-Karte Bonn) – Pipeline ausführen, Daten und Seite prüfen, Konventionen zu Quellen, Lizenzen und Datenschutz, Veröffentlichung über GitHub Pages und den Branch deploy. Verwenden bei jeder Änderung an pipeline/, site/, data/ oder den Workflows.
+description: Arbeitsweise im Repository ratsatlas-bonn (Ratsatlas Bonn, früher allris-bonn / RIS-Karte Bonn) – Pipeline ausführen, Daten und Seite prüfen, Konventionen zu Quellen, Lizenzen und Datenschutz, Veröffentlichung über GitHub Pages und den Branch deploy. Verwenden bei jeder Änderung an pipeline/, site/, data/ oder den Workflows.
 ---
 
 # allris-bonn – Arbeitsweise

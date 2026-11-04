@@ -4,7 +4,7 @@
 |---|---|---|
 | `verfahren.json` | anster2025/bonn-entscheidet, `data/verfahren.json`, Commit `26641f7` (19.10.2026), unverändert | MIT, © 2026 anster2025 (`LICENSE-bonn-entscheidet`) |
 | `zustaendigkeitsordnung.json` | anster2025/bonn-entscheidet, `data/zustaendigkeitsordnung.json`, Commit `26641f7`, unverändert; Inhalt aus der Zuständigkeitsordnung der Ratsausschüsse der Stadt Bonn, Stand 9.7.2026 | MIT (Datei), amtliches Werk (Inhalt) |
-| `ergaenzungen.json` | eigene Ergänzungen und Korrekturen der RIS-Karte Bonn mit Belegen | MIT |
+| `ergaenzungen.json` | eigene Ergänzungen und Korrekturen des Ratsatlas Bonn (früher RIS-Karte Bonn) mit Belegen | MIT |
 
 Autor von „Bonn entscheidet“: Thomas (https://github.com/anster2025).
 
