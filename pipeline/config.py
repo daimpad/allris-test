@@ -44,7 +44,7 @@ OVERPASS = [
 ]
 # Umgebendes Rechteck der 51 Ortsteile (Süd, West, Nord, Ost), für den Kachelabruf gerundet
 BONN_BBOX = (50.63, 7.02, 50.78, 7.22)
-USER_AGENT = "allris-bonn-pipeline (https://github.com/daimpad/allris-test)"
+USER_AGENT = "allris-bonn-pipeline (https://github.com/daimpad/ratsatlas-bonn)"
 
 # Quelle je Datensatz; wird in die Datenbank und in jeden Export übernommen.
 SOURCES = {
@@ -86,4 +86,4 @@ BAUSTELLEN_LICENSE = ("CC0 1.0 (Stadt Bonn, Baustellen tagesaktuell und geplant;
 SITE_URL = os.environ.get("SITE_URL", "https://ris-bonn.datenatlas.de/")
 # Das Datenpaket (Zip) liegt nur auf GitHub Pages; der Branch `deploy` für die Hauptadresse enthält es nicht
 # (pages.yml, Schritt „Branch deploy“, setzt dieselbe Adresse in index.html und datenschutz.html)
-PAKET_URL = os.environ.get("PAKET_URL", "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip")
+PAKET_URL = os.environ.get("PAKET_URL", "https://daimpad.github.io/ratsatlas-bonn/data/export/allris-bonn-export.zip")

@@ -184,7 +184,7 @@ sind im Datensatz der Stadt nicht enthalten.
 
 Abgeleitete Angaben (Einreichende, fachliche Zuständigkeit, Ortsbezüge der Stufe B und
 „vererbt“) sind in den Feldern method, confidence und evidence gekennzeichnet.
-Quellcode und Dokumentation: https://github.com/daimpad/allris-test
+Quellcode und Dokumentation: https://github.com/daimpad/ratsatlas-bonn
 """
 
 

@@ -53,7 +53,7 @@ Protomaps-Build {build} (OSM-Stand {osm_stand}).
 - Schrift der Beschriftung: Noto Sans, SIL Open Font License 1.1
 
 Die Kacheln sind ein abgeleitetes Werk (Produced Work) im Sinne der ODbL. Erzeugt mit dem Workflow kacheln.yml
-im Repository daimpad/allris-test (Code MIT).
+im Repository daimpad/ratsatlas-bonn (Code MIT).
 """
 
 

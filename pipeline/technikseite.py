@@ -18,7 +18,7 @@ from html import escape
 from . import config
 
 PFAD = "technik/"
-REPO = "https://github.com/daimpad/allris-test"
+REPO = "https://github.com/daimpad/ratsatlas-bonn"
 CODE = REPO + "/blob/main/"
 ACTIONS = REPO + "/actions"
 WORKFLOWS = config.ROOT / ".github" / "workflows"
@@ -125,7 +125,7 @@ AUSGABEN = [
     ("a-offen", "Offene Daten", "GeoJSON der verorteten Vorlagen, Beschreibung nach DCAT-AP und Prüfprotokolle als "
                                 "TSV.", None),
     ("a-paket", "Datenpaket", "Alle Daten, Prüfprotokolle und Lizenzen als Zip-Paket.", config.PAKET_URL),
-    ("a-pages", "GitHub Pages", "Der Spiegel der Seite unter daimpad.github.io.", "https://daimpad.github.io/allris-test/"),
+    ("a-pages", "GitHub Pages", "Der Spiegel der Seite unter daimpad.github.io.", "https://daimpad.github.io/ratsatlas-bonn/"),
     ("a-server", "Hauptadresse", "Der Branch deploy enthält die fertige Seite; der Server von ris-bonn.datenatlas.de "
                                  "übernimmt ihn über einen Webhook.", config.SITE_URL),
 ]
@@ -505,7 +505,7 @@ def daten(root="../"):
         ("Betrieb", [
             ("t-actions", "GitHub Actions", f"{len(wfs)} Workflows steuern Abruf, Prüfung und Veröffentlichung "
                                              f"(Grafik „Zeitplan“).", ACTIONS, "Läufe auf GitHub"),
-            ("t-pages", "GitHub Pages", "Hostet den Spiegel der Seite.", "https://daimpad.github.io/allris-test/", "Spiegel"),
+            ("t-pages", "GitHub Pages", "Hostet den Spiegel der Seite.", "https://daimpad.github.io/ratsatlas-bonn/", "Spiegel"),
             ("t-server", "Webhosting (Plesk)", "Der Server der Hauptadresse übernimmt den Branch deploy über einen "
                                                "Webhook; .htaccess setzt Sicherheitskopfzeilen.", config.SITE_URL, "Hauptadresse"),
             ("t-branches", "Branches", "Neben main: " + ", ".join(branches) + ". Sie halten die fertige Seite, Archive, "
@@ -608,7 +608,7 @@ def body(d, root):
       <li>Einmalige Schritte, etwa das Auslesen der Haushaltspläne oder die Prüfbögen der Themenseiten, laufen nicht automatisch und fehlen im Zeitplan.</li>
       <li>Der Server der Hauptadresse übernimmt den Branch deploy von sich aus; sein Zeitpunkt steht nicht im Repository.</li>
     </ul>
-    <p class="meta">Quellcode unter MIT-Lizenz: <a href="{REPO}">github.com/daimpad/allris-test</a> · <a href="{root}einfach/">Einfache Sprache</a> · <a href="{root}begriffe/">Begriffe</a> · <a href="{root}">Zur Karte</a></p>"""
+    <p class="meta">Quellcode unter MIT-Lizenz: <a href="{REPO}">github.com/daimpad/ratsatlas-bonn</a> · <a href="{root}einfach/">Einfache Sprache</a> · <a href="{root}begriffe/">Begriffe</a> · <a href="{root}">Zur Karte</a></p>"""
 
 
 def write(site, site_url, page):

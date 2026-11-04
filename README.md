@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://ris-bonn.datenatlas.de/"><img src="https://img.shields.io/badge/Seite-ris--bonn.datenatlas.de-7c3aed" alt="Seite: ris-bonn.datenatlas.de"></a>
-  <a href="https://github.com/daimpad/allris-test/actions/workflows/pages.yml"><img src="https://github.com/daimpad/allris-test/actions/workflows/pages.yml/badge.svg" alt="Tägliche Aktualisierung"></a>
+  <a href="https://github.com/daimpad/ratsatlas-bonn/actions/workflows/pages.yml"><img src="https://github.com/daimpad/ratsatlas-bonn/actions/workflows/pages.yml/badge.svg" alt="Tägliche Aktualisierung"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/Code-MIT-2563eb" alt="Code: MIT"></a>
   <a href="data/LICENSE-DATA.md"><img src="https://img.shields.io/badge/Daten-CC0%20%2F%20CC%20BY%204.0-15803d" alt="Daten: CC0 und CC BY 4.0"></a>
   <a href="https://ris-bonn.datenatlas.de/rss/"><img src="https://img.shields.io/badge/Feeds-Atom%20%2F%20RSS-c2410c" alt="Feeds: Atom und RSS"></a>
@@ -15,8 +15,8 @@
 
 Der Ratsatlas zeigt die Vorlagen aus dem Ratsinformationssystem der Stadt Bonn auf einer Karte, einer Zeitleiste und als Liste – rund 25.000 Vorlagen seit Oktober 2019, täglich aktualisiert. Jede Angabe führt zum Original; was abgeleitet ist, ist gekennzeichnet.
 
-🌐 **Seite:** https://ris-bonn.datenatlas.de/ · Spiegel: https://daimpad.github.io/allris-test/
-📰 **Abonnieren:** [Feeds und Anleitung](https://ris-bonn.datenatlas.de/rss/) · 📦 **Daten:** [Datenpaket (Zip)](https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip) · 🛠️ **Technik:** [TECHNIK.md](TECHNIK.md)
+🌐 **Seite:** https://ris-bonn.datenatlas.de/ · Spiegel: https://daimpad.github.io/ratsatlas-bonn/
+📰 **Abonnieren:** [Feeds und Anleitung](https://ris-bonn.datenatlas.de/rss/) · 📦 **Daten:** [Datenpaket (Zip)](https://daimpad.github.io/ratsatlas-bonn/data/export/allris-bonn-export.zip) · 🛠️ **Technik:** [TECHNIK.md](TECHNIK.md)
 
 ## 🗺️ Was Sie auf der Seite finden
 

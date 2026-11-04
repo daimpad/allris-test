@@ -13,7 +13,7 @@ Geprüft vor dem Entwurf:
 
 Hallo,
 
-für die RIS-Karte Bonn (https://ris-bonn.datenatlas.de/, Code: https://github.com/daimpad/allris-test) nutze ich OParl-Lite für Sitzungen, Ergebnisse und Texte – danke dafür. Dass `underDirectionOf` inzwischen enthalten ist, habe ich gesehen.
+für die RIS-Karte Bonn (https://ris-bonn.datenatlas.de/, Code: https://github.com/daimpad/ratsatlas-bonn) nutze ich OParl-Lite für Sitzungen, Ergebnisse und Texte – danke dafür. Dass `underDirectionOf` inzwischen enthalten ist, habe ich gesehen.
 
 Eine Lücke ist mir aufgefallen:
 - In der OParl-API der Stadt haben 1.816 von 24.915 Vorlagen ein Feld `location` (7 %, Stand 18.10.2026), fast alle mit Punktkoordinate. Es sind vor allem Bürgeranträge nach § 24 GO NRW, Anregungen und Beschwerden und die Stellungnahmen dazu.
