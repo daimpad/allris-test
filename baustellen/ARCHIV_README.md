@@ -15,4 +15,4 @@ Dieser Branch wird täglich vom Workflow `baustellen.yml` im Repository [daimpad
 | `snapshots/JJJJ/MM/TT/thema_NNNNN.json` | Momentaufnahme eines Feeds, nur wenn sich der Inhalt gegenüber dem letzten Abruf geändert hat |
 | `STAND.json` | letzter Abruf je Feed: Zeitpunkt, Versuche, Anzahl, Prüfsumme |
 
-Eine Baustelle gilt nur als entfallen, wenn alle drei Feeds vollständig abgerufen wurden (der Dienst antwortet zeitweise mit HTTP 400). `adresse` enthält teils Hausnummern als Bezugspunkt der Baumaßnahme; die RIS-Karte zeigt Baustellen höchstens auf Straßenebene.
+Eine Baustelle gilt nur als entfallen, wenn alle drei Feeds vollständig abgerufen wurden (der Dienst antwortet zeitweise mit HTTP 400). `adresse` enthält teils Hausnummern als Bezugspunkt der Baumaßnahme; der Ratsatlas zeigt Baustellen höchstens auf Straßenebene.

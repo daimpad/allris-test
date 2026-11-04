@@ -44,9 +44,9 @@ AddCharset utf-8 .json .geojson .tsv .md .js .css .xml .ics
   </FilesMatch>
 </IfModule>
 
-# Frühere Hauptadresse (bis 04.11.2026): dauerhaft mit Pfad auf die neue Adresse. Liefert nginx statische Dateien
-# selbst aus, greift diese Regel nicht für sie; dafür in Plesk bei ris-bonn.datenatlas.de unter „Apache & nginx“
-# als zusätzliche nginx-Anweisung: return 301 https://bonn.ratsatlas.de$request_uri;
+# Frühere Hauptadresse (bis 04.11.2026): dauerhaft mit Pfad auf die neue Adresse. Damit die Regel auch für
+# statische Dateien greift, ist in Plesk bei ris-bonn.datenatlas.de unter „Apache & nginx“ die „Intelligente
+# Bearbeitung statischer Dateien“ abgeschaltet (04.11.2026; zusätzliche nginx-Anweisungen bietet das Paket nicht).
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTP_HOST} ^ris-bonn\.datenatlas\.de$ [NC]
