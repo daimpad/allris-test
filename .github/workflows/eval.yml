@@ -42,7 +42,7 @@ jobs:
         # bash mit pipefail: ein Abbruch von run.mjs (etwa ohne Schlüssel) färbt den Lauf rot, trotz „| tee“
         shell: bash
         run: |
-          set -- --anbieter "$ANBIETER" --modell "$MODELL" --daten https://daimpad.github.io/allris-test/data/export/ --aus _auswertung
+          set -- --anbieter "$ANBIETER" --modell "$MODELL" --daten https://daimpad.github.io/ratsatlas-bonn/data/export/ --aus _auswertung
           [ -n "$FRAGEN" ] && set -- "$@" --fragen "$FRAGEN"
           node eval/run.mjs "$@" | tee _zusammenfassung.txt
       - name: Ergebnisse sichern (Branch auswertung)

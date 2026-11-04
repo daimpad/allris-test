@@ -21,7 +21,7 @@ import { extractPrompt, fillPrompt, promptValues, version } from "../site/chat/p
 import { score, summary, cell, KRITERIEN } from "./score.mjs";
 
 const ROOT = new URL("../", import.meta.url);
-const LIVE = "https://daimpad.github.io/allris-test/data/export/";
+const LIVE = "https://daimpad.github.io/ratsatlas-bonn/data/export/";
 const ENV_KEY = { anthropic: "ANTHROPIC_API_KEY", mistral: "MISTRAL_API_KEY", openrouter: "OPENROUTER_API_KEY", lokal: "LOKAL_API_KEY" };
 
 function args(argv) {

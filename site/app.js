@@ -14,7 +14,7 @@
   // Startzustand ohne Gebiet im Link: Übersicht über ganz Bonn (Stadtbezirke anklickbar, noch keine Vorlagen geladen)
   const DEFAULT_AREA = "bonn:alle";
   const OVERVIEW_HINT = "Ganz Bonn: auf der Karte einen Stadtbezirk und dann einen Ortsteil anklicken oder oben ein Gebiet wählen. Die Suche findet Vorlagen in ganz Bonn.";
-  const REPO = "https://github.com/daimpad/allris-test";
+  const REPO = "https://github.com/daimpad/ratsatlas-bonn";
   const RANK = { hoch: 3, mittel: 2, niedrig: 1 };
   const LIST_STEP = 50;  // Liste in Schritten zu 50 mit „Weitere … anzeigen“ (Ladezeit Schritt 2, Entscheidung 02.11.2026)
   const MOBILE = matchMedia("(max-width: 900px)");

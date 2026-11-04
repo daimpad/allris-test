@@ -255,7 +255,7 @@ def write_dcat(path, data_start, modified, kurzfassungen=False):
                         "dcat:bbox": {"@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
                                       "@value": "POLYGON((7.02 50.63, 7.22 50.63, 7.22 50.78, 7.02 50.78, 7.02 50.63))"}},
         "dct:publisher": {"@type": "foaf:Agent", "foaf:name": "allris-bonn (Hackathon „Hack den Stadtrat“)",
-                          "foaf:homepage": {"@id": "https://github.com/daimpad/allris-test"}},
+                          "foaf:homepage": {"@id": "https://github.com/daimpad/ratsatlas-bonn"}},
         "dct:source": [{"@id": config.OPARL_BODY}, {"@id": config.LITE_GRAPHQL}],
         "dcat:landingPage": {"@id": site},
         "dcat:distribution": [

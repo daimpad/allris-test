@@ -10,7 +10,7 @@ from xml.sax.saxutils import escape
 from . import begriffsseite, config, dossier, einfachseite, gebietsseiten, haushaltsseite, rssseite, technikseite
 from .themenseiten import ALLE as THEMENSEITEN
 
-DEFAULT_URL = "https://daimpad.github.io/allris-test/"  # Platzhalter in site/, wird durch SITE_URL ersetzt
+DEFAULT_URL = "https://daimpad.github.io/ratsatlas-bonn/"  # Platzhalter in site/, wird durch SITE_URL ersetzt
 PAGES = ("index.html", "404.html", "datenschutz.html")
 SITEMAP = ("", "datenschutz.html")  # Pfade relativ zu SITE_URL
 

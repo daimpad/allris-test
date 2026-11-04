@@ -14,7 +14,7 @@ const DATA = "data/export/";
 const PREFS = "ris-assistent-einstellungen";   // Anbieter, Modell, Adresse – nie der Schlüssel
 const CONSENT = "ris-assistent-hinweis";
 const STATIC_URLS = ["https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php",
-  "https://github.com/daimpad/allris-test/blob/main/site/chat/systemprompt.md"];
+  "https://github.com/daimpad/ratsatlas-bonn/blob/main/site/chat/systemprompt.md"];
 const TOOL_LABEL = {
   suche_vorlagen: "Vorlagen suchen", hole_vorlage: "Vorlage abrufen", hole_prozesslinie: "Prozesslinie abrufen",
   suche_ort: "Orte suchen", liste_sitzungen: "Sitzungen abrufen", hole_gremium_oder_amt: "Gremium oder Amt abrufen",

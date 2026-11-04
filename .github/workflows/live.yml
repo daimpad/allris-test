@@ -40,13 +40,13 @@ jobs:
             echo "$body" | grep -q "$2" || { echo "::error::$1 enthält nicht „$2“"; fail=1; return; }
             echo "ok  $1"
           }
-          for base in https://ris-bonn.datenatlas.de/ https://daimpad.github.io/allris-test/; do
+          for base in https://ris-bonn.datenatlas.de/ https://daimpad.github.io/ratsatlas-bonn/; do
             check "$base" "Ratsatlas"
             check "${base}data/export/bonn/index.json" "generated_at"
             check "${base}datenschutz.html" "Verantwortlich"
           done
           # Unterseiten und Feed über ganz Bonn (seit 01.11.2026; Themen- und Haushaltsseite, Seite rss/, eine Gebietsseite)
-          for base in https://ris-bonn.datenatlas.de/ https://daimpad.github.io/allris-test/; do
+          for base in https://ris-bonn.datenatlas.de/ https://daimpad.github.io/ratsatlas-bonn/; do
             check "${base}rss/" "Inhalte abonnieren und weiterverwenden"
             check "${base}haushalt/" "Haushalt auf einen Blick"
             check "${base}thema/" "<h1>Themen"
@@ -58,7 +58,7 @@ jobs:
             if [ "${n:-0}" -gt 0 ]; then echo "ok  $feed ($n Einträge)"; else echo "::error::$feed ist kein Atom-Feed mit Einträgen"; fail=1; fi
           done
           # Graue Kartenkacheln (kacheln.yml, seit 02.11.2026); fehlen sie, zeigt die Seite OSM grau gefiltert: nur Hinweis
-          for base in https://ris-bonn.datenatlas.de/ https://daimpad.github.io/allris-test/; do
+          for base in https://ris-bonn.datenatlas.de/ https://daimpad.github.io/ratsatlas-bonn/; do
             if curl -fsSL --retry 3 --retry-delay 10 "${base}kacheln/stand.json" | grep -q '"build"' \
               && curl -fsSIL --retry 3 --retry-delay 10 "${base}kacheln/12/2128/1375.png" > /dev/null; then
               echo "ok  ${base}kacheln/"
