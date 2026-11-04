@@ -59,7 +59,7 @@
   "@type": "foaf:Agent",
   "foaf:name": "allris-bonn (Hackathon „Hack den Stadtrat“)",
   "foaf:homepage": {
-   "@id": "https://github.com/daimpad/allris-test"
+   "@id": "https://github.com/daimpad/ratsatlas-bonn"
   }
  },
  "dct:source": [
@@ -103,7 +103,7 @@
    }
   },
   {
-   "@id": "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip",
+   "@id": "https://daimpad.github.io/ratsatlas-bonn/data/export/allris-bonn-export.zip",
    "@type": "dcat:Distribution",
    "dct:title": {
     "@language": "de",
@@ -114,10 +114,10 @@
     "@value": "Alle Exporte, Audit-Protokolle (TSV), Verifikation und Lizenzübersicht."
    },
    "dcat:accessURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip"
+    "@id": "https://daimpad.github.io/ratsatlas-bonn/data/export/allris-bonn-export.zip"
    },
    "dcat:downloadURL": {
-    "@id": "https://daimpad.github.io/allris-test/data/export/allris-bonn-export.zip"
+    "@id": "https://daimpad.github.io/ratsatlas-bonn/data/export/allris-bonn-export.zip"
    },
    "dcat:mediaType": {
     "@id": "https://www.iana.org/assignments/media-types/application/zip"

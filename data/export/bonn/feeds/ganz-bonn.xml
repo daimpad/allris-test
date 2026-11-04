@@ -3,11 +3,107 @@
 <id>tag:allris-bonn,2026:feed/ganz-bonn</id>
 <title>Ratsatlas Bonn – ganz Bonn</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: ganz Bonn</subtitle>
-<updated>2026-11-03T00:00:00Z</updated>
+<updated>2026-11-04T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ganz-bonn.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=bonn:ganz"/>
 <author><name>Ratsatlas Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030284#vorlage</id>
+<title>Neue Vorlage 190692-11 AA: ÄA Grüne-Fraktion - Schulwegsicherung Friedrich-Ebert-Allee (B9) im Bereich der Stadtbahnhaltestelle Ollenhauerstraße (alt: 1912212NV2) Antrag zur Vorlage 190692</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:gronau#190692-11%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030284"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030282#vorlage</id>
+<title>Neue Vorlage 262094: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262094"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030282"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030275#vorlage</id>
+<title>Neue Vorlage 262091: Bürgerantrag: Anpassung und erneute Prüfung der Beschlussvorlage 261294 - Baureife Planung zum Ausbau der Straßen Bröhlweg und Im Bonnet in Pützchen/Bechlinghoven</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:puetzchen-bechlinghoven#262091"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030275"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030273#vorlage</id>
+<title>Neue Vorlage 262090: Grüne/Linke/Volt-Dringlichkeitsantrag - Rücknahme der Beschwerde gegen den Beschluss des Verwaltungsgerichts Köln zur Verkehrsführung auf der Oxfordstraße</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#262090"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030273"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030264#vorlage</id>
+<title>Neue Vorlage 262087: FDP-Antrag: Kleinspielfeld am Spielplatz Maxstraße auch sonntags öffnen</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:nordstadt#262087"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030264"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030260#vorlage</id>
+<title>Neue Vorlage 261744-02 AA: Grüne-Änderungsantrag: Nachnutzung der ehemaligen König-Fahd-Akademie in Lannesdorf Antrag zur Vorlage DS 261744</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:lannesdorf#261744-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030260"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030258#vorlage</id>
+<title>Neue Vorlage 262084: CDU/SPD-Bezirksfraktion-Antrag: Zuschüsse an Vereine und Schulen noch in 2026 vollständig auszahlen</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262084"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030258"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030256#vorlage</id>
+<title>Neue Vorlage 261901-02 AA: CDU/SPD-Fraktionen: Antrag der Grünen Ratsfraktion: Weiterentwicklung des Anmeldeverfahrens an weiterführenden Schulen Antrag zur Vorlage 261901</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261901-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030256"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030255#vorlage</id>
+<title>Neue Vorlage 262082: SPD-Große Anfrage: Fußläufige Nahversorgung verbessern</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262082"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030255"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030252#vorlage</id>
+<title>Neue Vorlage 261281-12 AA: SPD-Änderungsantrag: Fortschreibung des Rahmenplans zur Neuordnung der Bonner Bäderlandschaft Antrag zur Vorlage 261281</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:tannenbusch#261281-12%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030252"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029765#vorlage</id>
+<title>Neue Vorlage 260000-12: Ersatzbenennungen zu Ratsausschüssen und sonstigen Gremien</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260000-12"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029765"/>
+<summary>Mitteilungsvorlage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029484#vorlage</id>
+<title>Neue Vorlage 260001-02: Nachbenennung - Ausschussvorsitze nach § 58 Abs. 5 GO NRW</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260001-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029484"/>
+<summary>Mitteilungsvorlage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030248#vorlage</id>
 <title>Neue Vorlage 261869-01 AA: CDU-Änderungsantrag zur Gewährung von Zuschüssen gemäß den "Richtlinien für die Gewährung von Zuschüssen an Vereine und sonstige Vereinigungen zur Förderung der Heimatpflege und des Brauchtums sowie der Gesang- und Instrumental-vereine bzw. -vereinigungen im Stadtbezirk Bad Godesberg vom 24.10.2012 (in der Fassung vom 1.3.2023)" für das Jahr 2026 Antrag zur Vorlage 261869</title>
@@ -711,101 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:duisdorf#211204-04%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030051"/>
 <summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029948#vorlage</id>
-<title>Neue Vorlage 261297-02 ST: Linke Große Anfrage: Bonns wichtigste 150 Unternehmen ergänzende Stellungnahme zu 261297-01 ST</title>
-<updated>2026-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261297-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029948"/>
-<summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029812#vorlage</id>
-<title>Neue Vorlage 260919-07 ST: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
-<updated>2026-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:venusberg#260919-07%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029812"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029765#vorlage</id>
-<title>Neue Vorlage 260000-12: Ersatzbenennungen zu Ratsausschüssen und sonstigen Gremien</title>
-<updated>2026-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#260000-12"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029765"/>
-<summary>Mitteilungsvorlage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029620#vorlage</id>
-<title>Neue Vorlage 261820: Bebauungsplanverfahren Nr. 6924-3, Wohnpark II in Vilich-Müldorf: Gesetzlich geschützte Biotopflächen und vorläufig gesichertes Überschwemmungsgebiet</title>
-<updated>2026-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:vilich-mueldorf#261820"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029620"/>
-<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#vorlage</id>
-<title>Neue Vorlage 261799: Zielbeschluss über die Entwicklung der Flächen „Telekom Dome“ im Stadtbezirk Hardtberg, Ortsteil Duisdorf</title>
-<updated>2026-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030118#vorlage</id>
-<title>Neue Vorlage 262020: Große Anfrage der FDP-Gruppe: Einführung smarter Altpapiercontainer mit Füllstandsüberwachung</title>
-<updated>2026-10-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262020"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030118"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030117#vorlage</id>
-<title>Neue Vorlage 262019: Große Anfrage der FDP-Gruppe: Situation im Beethovenpark im Bereich Beethovenhalle</title>
-<updated>2026-10-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:bonn-zentrum#262019"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030117"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030114#vorlage</id>
-<title>Neue Vorlage 262017: Zentralisierung der IT in der Bonner Stadtverwaltung</title>
-<updated>2026-10-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262017"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030114"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030111#vorlage</id>
-<title>Neue Vorlage 261923-01 ST: Stellungnahme zur Kleinen Anfrage bzgl. OGS-Betreuung</title>
-<updated>2026-10-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#261923-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030111"/>
-<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030102#vorlage</id>
-<title>Neue Vorlage 262012: Große Anfrage der FDP Gruppe im Rat der Stadt Bonn zu Kosten, Wirtschaftlichkeit und gesetzliche Vorgaben im vorgelegten Bäderkonzept</title>
-<updated>2026-10-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:friesdorf#262012"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030102"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030097#vorlage</id>
-<title>Neue Vorlage 262009: Sitzungstermine 2027 des Ausschusses für Kinder, Jugend und Familie (Jugendhilfeausschuss)</title>
-<updated>2026-10-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262009"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030097"/>
-<summary>Mitteilungsvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030095#vorlage</id>
-<title>Neue Vorlage 262008: Über- und außerplanmäßige Aufwendungen und Auszahlungen gemäß § 83 (2) GO NRW - Liste V/2026</title>
-<updated>2026-10-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ohne:2026#262008"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030095"/>
-<summary>Beschlussvorlage · federführend: 20 Stadtkämmerei · Stand: offen</summary>
 </entry>
 </feed>

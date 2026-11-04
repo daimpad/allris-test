@@ -108,9 +108,12 @@ DTSTART:20261118T170000Z
 SUMMARY:Ausschuss für Digitalisierung\, Dienstleistung und Verwaltungsmode
  rnisierung
 DESCRIPTION:Sitzung des Ausschusses für Digitalisierung\, Dienstleistung u
- nd Verwaltungsmodernisierung\nTagesordnung noch nicht veröffentlicht.\nQu
- elle: OParl-API der Stadt Bonn (CC0 1.0)
+ nd Verwaltungsmodernisierung\nTagesordnung: https://www.bonn.sitzung-onlin
+ e.de/public/TO010?SILFDNR=2005889\nEinladung: https://www.bonn.sitzung-onl
+ ine.de/public/doc?DOCTYP=108&DOLFDNR=3247438&OTYP=41\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005889
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005620
