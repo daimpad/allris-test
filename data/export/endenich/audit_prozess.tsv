@@ -1,4 +1,9 @@
 drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruefvermerk
+260640-02	initiierung	Mitteilungsvorlage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030144	ungeprüft
+260640-02	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
+260640-02	veroeffentlichung	Datum der Vorlage	belegt	2026-11-03		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030144	ungeprüft
+260640-02	beratung	Kulturausschuss (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030144	ungeprüft
+260640-02	beratung	Rat (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030144	ungeprüft
 260745-03 ST	initiierung	Stellungnahme der Verwaltung	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2029709	ungeprüft
 260745-03 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 260745-03 ST	veroeffentlichung	Datum der Vorlage	belegt	2026-10-23		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2029709	ungeprüft
@@ -167,6 +172,7 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 260640	beratung	Kulturausschuss (Empfehlung)	belegt	2026-05-19	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2026485	ungeprüft
 260640	entscheidung	Rat (Entscheidung)	belegt	2026-06-15	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2026485	ungeprüft
 260640	folgevorlage	Mitteilungsvorlage	belegt	2026-08-27		oparl-bonn	260640-01	ungeprüft
+260640	folgevorlage	Mitteilungsvorlage	belegt	2026-11-03		oparl-bonn	260640-02	ungeprüft
 260640	vollzug	Umsetzung durch die Verwaltung	unklar				Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt es keine öffentliche Schnittstelle.	ungeprüft
 241447-02 ST	initiierung	Stellungnahme der Verwaltung	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2024937	ungeprüft
 241447-02 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-beuel-mitte</id>
 <title>Ratsatlas Bonn – Beuel-Mitte</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Beuel-Mitte</subtitle>
-<updated>2026-10-29T00:00:00Z</updated>
+<updated>2026-11-03T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://ris-bonn.datenatlas.de/data/export/bonn/feeds/ortsteil-beuel-mitte.xml"/>
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte"/>
 <author><name>Ratsatlas Bonn</name><uri>https://ris-bonn.datenatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030123#vorlage</id>
+<title>Neue Vorlage 242092-10 ST: BBB-Anfrage: Errichtung eines Förderzentrums mit dem Schwerpunkt „Geistige Entwicklung“ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße Drucksachengruppe 242092</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#242092-10%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030123"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030175#vorlage</id>
 <title>Neue Vorlage 262042: Bürgerantrag: Umgestaltung der Combahnstraße in eine Einbahnstraße</title>
@@ -79,6 +87,14 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261464-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029354"/>
 <summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028769#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261462 Bürgerantrag: Prüfung von Maßnahmen zur Verbesserung der Verkehrssicherheit an der Kreuzung Sank Augustiner Straße/Combahnstraße</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261462"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028769"/>
+<summary>Entscheidung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028732#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
@@ -705,6 +721,14 @@
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028769#vorlage</id>
+<title>Neue Vorlage 261462: Bürgerantrag: Prüfung von Maßnahmen zur Verbesserung der Verkehrssicherheit an der Kreuzung Sank Augustiner Straße/Combahnstraße</title>
+<updated>2026-08-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261462"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028769"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028661#vorlage</id>
 <title>Neue Vorlage 261356-01 ST: Platanenweg [Hausnummer ausgelassen] - Nutzungsstatus und Belegungskonzept</title>
 <updated>2026-08-02T00:00:00Z</updated>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261356"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028527"/>
 <summary>Kleine Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028526#vorlage</id>
-<title>Neue Vorlage 261355: Beschilderung zum Schutz von Fußgänger*innen auf dem Rheindamm</title>
-<updated>2026-07-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261355"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028526"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028525#vorlage</id>
-<title>Neue Vorlage 261354: Bürgerantrag- Antrag auf Überprüfung der Parkraumbewirtschaftung im Bereich der Helenenstraße in Beuel</title>
-<updated>2026-07-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261354"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028525"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028207#beratung-2026-07-08-Ausschuss%20f%C3%BCr%20Beteiligung%20der%20B%C3%BCrgerinnen%20und%20B%C3%BCrger</id>
-<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 261249-01 ST Bürgerantrag: Antrag zur Lärm- und Emissionsmessung und Einrichtung eines Tempolimits von 30 km/h auf der Sankt Augustiner Straße Beuel - Vertagungsbitte -</title>
-<updated>2026-07-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://ris-bonn.datenatlas.de/?gebiet=ortsteil:beuel-mitte#261249-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028207"/>
-<summary>Kenntnisnahme am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

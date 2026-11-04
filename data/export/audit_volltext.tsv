@@ -9037,7 +9037,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 231031	verortet	Hauptteil	volltext_ortsteil_name	Vilich- Müldorf	Vilich- Müldorf	niedrig	1
 231031-01 ST	nur in Anlagen genannt, nicht verortet						
 231032	Titel ohne gemeinsamen Ort, nicht verortet						
-231033	kein Ort						
 231033-01 ST	kein Ort						
 231033-02 ST	kein Ort						
 231033-03 ST	kein Ort						
@@ -10519,7 +10518,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240176	verortet	Hauptteil	volltext_strasse	Theresienau	Oberkassel	niedrig	1
 240176	verortet	Hauptteil	volltext_strasse+hausnummer	Flemingstraße	Duisdorf	niedrig	1
 240176	verortet	Hauptteil	volltext_strasse+ortsteil	Rochusstraße	Duisdorf	niedrig	1
-240178	Liste (15 Ortsteile), nicht verortet	Hauptteil					
 240178-01	kein Ort						
 240178-02 ST	nur in Anlagen genannt, nicht verortet						
 240179-01 ST	kein Ort						
@@ -12577,6 +12575,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
+242029	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	1
 242031	kein Ort						
 242032	kein Ort						
 242034	kein Ort						
@@ -13411,6 +13410,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252900	kein Ort						
 252903	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
 252903	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	niedrig	1
+252903-01	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
 252903-02 ST	kein Ort						
 252903-03 ST	kein Ort						
 252904	verortet	Hauptteil	volltext_ortsteil_adjektiv	Endenich	Endenich	niedrig	1
@@ -14772,6 +14772,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260165	kein Ort						
 260167	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 260167	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
+260168	kein Ort						
 260169	Liste (7 Ortsteile), nicht verortet	Hauptteil					
 260169-01	kein Ort						
 260169-02 ST	kein Ort						
@@ -15367,6 +15368,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260684-01 AA	verortet	Hauptteil	volltext_strasse	Rochusstraße	Duisdorf	mittel	1
 260684-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Fontainengraben	Duisdorf	mittel	1
 260684-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Robelstraße	Duisdorf	mittel	1
+260686	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Damm	Brüser Berg	mittel	1
+260686	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Damm	Duisdorf	mittel	1
+260686	verortet	Hauptteil	volltext_strasse	Konrad-Adenauer-Damm	Lengsdorf	mittel	1
 260691	kein Ort						
 260691-01 ST	kein Ort						
 260693	kein Ort						

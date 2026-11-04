@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 704,
+  "count": 705,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -37,6 +37,163 @@
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
  },
  "papers": [
+  {
+   "reference": "260640-02",
+   "name": "Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum",
+   "paper_type": "Mitteilungsvorlage",
+   "date": "2026-11-03",
+   "amt": "41 Kulturamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030144",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3244120&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "41 Kulturamt",
+     "name": "41-2 Gedenkstätte und NS-Dokumentationszentrum"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/364",
+     "method": "paper_type",
+     "evidence": "Mitteilungsvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Kulturausschuss",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Rat",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "260640",
+     "paper_type": "Beschlussvorlage",
+     "name": "Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum",
+     "date": "2026-04-30"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "vererbt",
+     "confidence": "niedrig",
+     "evidence": "übergeordnete Vorlage 260640",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2026485",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030144",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "kultur",
+     "method": "amt",
+     "evidence": "41 Kulturamt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030144",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2026-11-03",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030144",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Kulturausschuss",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet der Rat",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
   {
    "reference": "260745-03 ST",
    "name": "Stellungnahme zum Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der [Hausnummer ausgelassen]",
@@ -6042,6 +6199,12 @@
      "paper_type": "Mitteilungsvorlage",
      "name": "Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum",
      "date": "2026-08-27"
+    },
+    {
+     "reference": "260640-02",
+     "paper_type": "Mitteilungsvorlage",
+     "name": "Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum",
+     "date": "2026-11-03"
     }
    ],
    "locations": [
@@ -6136,6 +6299,15 @@
      "date": "2026-08-27",
      "source": "oparl-bonn",
      "reference": "260640-01",
+     "title": "Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "date": "2026-11-03",
+     "source": "oparl-bonn",
+     "reference": "260640-02",
      "title": "Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum"
     },
     {

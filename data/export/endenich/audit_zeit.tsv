@@ -1,4 +1,7 @@
 drucksache	zeitdimension	wert	quelle	status	bemerkung
+260640-02	datum_vorlage	2026-11-03	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+260640-02	beratung: Kulturausschuss (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+260640-02	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 260745-03 ST	datum_vorlage	2026-10-23	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 260745-03 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 261798-01	datum_vorlage	2026-10-21	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
@@ -102,6 +105,7 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 260640	beratung: Kulturausschuss (Empfehlung)	2026-05-19	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260640	beratung: Rat (Entscheidung)	2026-06-15	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260640	folgevorlage: 260640-01	2026-08-27	oparl-bonn	belegt	Mitteilungsvorlage
+260640	folgevorlage: 260640-02	2026-11-03	oparl-bonn	belegt	Mitteilungsvorlage
 241447-02 ST	datum_vorlage	2026-04-24	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 241447-02 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2026-05-19	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260745	datum_vorlage	2026-04-22	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
