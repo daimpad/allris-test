@@ -3,18 +3,26 @@
 <id>tag:allris-bonn,2026:feed/vorlage/261805</id>
 <title>Vorlage 261805: Veröffentlichung der Vorhabenliste: 164702 - Aufstellung des vorhabenbezogenen Bebauungsplans „Gartenstraße“</title>
 <subtitle>Verlauf der Vorlage 261805: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-10-16T00:00:00Z</updated>
+<updated>2026-11-03T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/261805.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261805"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029562#beratung-2026-11-03-Ausschuss%20f%C3%BCr%20Beteiligung%20der%20B%C3%BCrgerinnen%20und%20B%C3%BCrger</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „geändert beschlossen“ – 261805 Veröffentlichung der Vorhabenliste: 164702 - Aufstellung des vorhabenbezogenen Bebauungsplans „Gartenstraße“</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261805"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029562"/>
+<summary>Entscheidung am 2026-11-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029562#beratung-2026-10-16-Beirat%20B%C3%BCrgerbeteiligung</id>
 <title>Beirat Bürgerbeteiligung: „geändert beschlossen“ – 261805 Veröffentlichung der Vorhabenliste: 164702 - Aufstellung des vorhabenbezogenen Bebauungsplans „Gartenstraße“</title>
 <updated>2026-10-16T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261805"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029562"/>
-<summary>Empfehlung am 2026-10-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-10-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029562#beratung-2026-10-15-Beirat%20Kinder-%20und%20Jugendbeteiligung</id>
@@ -22,7 +30,7 @@
 <updated>2026-10-15T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261805"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029562"/>
-<summary>Empfehlung am 2026-10-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-10-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029562#vorlage</id>
@@ -30,6 +38,6 @@
 <updated>2026-10-01T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261805"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029562"/>
-<summary>Beschlussvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: in Beratung</summary>
+<summary>Beschlussvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: entschieden</summary>
 </entry>
 </feed>

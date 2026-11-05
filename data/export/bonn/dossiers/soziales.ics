@@ -110,9 +110,11 @@ DTSTAMP:20261118T170000Z
 DTSTART:20261118T170000Z
 SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
 DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
- on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
- Bonn (CC0 1.0)
+ on\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=
+ 2006014\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=1
+ 08&DOLFDNR=3246165&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006014
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005620
@@ -267,8 +269,9 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006475
-DTSTAMP:20270218T160000Z
-DTSTART:20270218T160000Z
+DTSTAMP:20270217T230000Z
+DTSTART:20270217T230000Z
+DTEND:20270218T230000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
@@ -596,8 +599,9 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006479
-DTSTAMP:20270907T150000Z
-DTSTART:20270907T150000Z
+DTSTAMP:20270906T220000Z
+DTSTART:20270906T220000Z
+DTEND:20270907T220000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
