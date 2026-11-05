@@ -59,6 +59,7 @@ BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005611
 DTSTAMP:20261104T160000Z
 DTSTART:20261104T160000Z
+DTEND:20261104T215500Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung: http
  s://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005611\nEinladung: ht
@@ -71,6 +72,7 @@ BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005751
 DTSTAMP:20261104T170000Z
 DTSTART:20261104T170000Z
+DTEND:20261104T182300Z
 SUMMARY:Schulausschuss
 DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung: https://www.bonn.si
  tzung-online.de/public/TO010?SILFDNR=2005751\nEinladung: https://www.bonn.

@@ -3,18 +3,74 @@
 <id>tag:allris-bonn,2026:feed/ganz-bonn</id>
 <title>Ratsatlas Bonn – ganz Bonn</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: ganz Bonn</subtitle>
-<updated>2026-11-04T00:00:00Z</updated>
+<updated>2026-11-05T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ganz-bonn.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bonn:ganz"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030326#vorlage</id>
+<title>Neue Vorlage 261220-05 AA: BSW/SBI-Änderungsantrag: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums, insbesondere Crack, und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage DS 261220</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030326"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030297#vorlage</id>
+<title>Neue Vorlage 262104: Linke-Große Anfrage: Sachstand und künftiges Vorgehen bei der Sanierung von Bonner Kunstrasenplätzen</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262104"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030297"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030283#vorlage</id>
+<title>Neue Vorlage 262095: Sitzungstermine des Ausschusses für Finanzen, Beteiligungen und Vergabe im Jahr 2027</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262095"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030283"/>
+<summary>Mitteilungsvorlage · federführend: II-1 Stabsstelle Konferenzzentrum/Beethovenhalle · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030226#vorlage</id>
+<title>Neue Vorlage 262065: Tagesordnungspunkte in nicht-öffentlicher Sitzung des Betriebsausschusses am 19.11.2026</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262065"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030226"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030225#vorlage</id>
+<title>Neue Vorlage 262064: Aktuelle Projekte im Städtischen Gebäudemanagement</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262064"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030225"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030207#vorlage</id>
+<title>Neue Vorlage 261324-01 ST: Stellungnahme zum Dringlichkeitsantrag der Gruppe BSW/SBI – Vorläufige Übersicht kühler Orte und Stand des Hitzeaktionsplans</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261324-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030207"/>
+<summary>Stellungnahme der Verwaltung · federführend: 53 Gesundheitsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030306#vorlage</id>
 <title>Neue Vorlage 261901-03 AA: Änderungsantrag der BSW/SBI-Gruppe: Weiterentwicklung des Anmeldeverfahrens an weiterführenden Schulen</title>
 <updated>2026-11-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261901-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030306"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030306#beratung-2026-11-04-Schulausschuss</id>
+<title>Schulausschuss: „abgelehnt“ – 261901-03 AA Änderungsantrag der BSW/SBI-Gruppe: Weiterentwicklung des Anmeldeverfahrens an weiterführenden Schulen</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261901-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030306"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030301#vorlage</id>
@@ -134,7 +190,15 @@
 <updated>2026-11-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261901-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030256"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030256#beratung-2026-11-04-Schulausschuss</id>
+<title>Schulausschuss: „ungeändert beschlossen“ – 261901-02 AA CDU/SPD-Fraktionen: Antrag der Grünen Ratsfraktion: Weiterentwicklung des Anmeldeverfahrens an weiterführenden Schulen Antrag zur Vorlage 261901</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261901-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030256"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030255#vorlage</id>
@@ -193,14 +257,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030225#vorlage</id>
-<title>Neue Vorlage 262064: Aktuelle Projekte im Städtischen Gebäudemanagement</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262064"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030225"/>
-<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030223#vorlage</id>
 <title>Neue Vorlage 261853-01 ST: BBB-Anfrage:  „Amtshilfeersuchen der städtischen Ausländerbehörde Bonn“</title>
 <updated>2026-11-04T00:00:00Z</updated>
@@ -215,14 +271,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261991-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030219"/>
 <summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030207#vorlage</id>
-<title>Neue Vorlage 261324-01 ST: Stellungnahme zum Dringlichkeitsantrag der Gruppe BSW/SBI – Vorläufige Übersicht kühler Orte und Stand des Hitzeaktionsplans</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261324-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030207"/>
-<summary>Stellungnahme der Verwaltung · federführend: 53 Gesundheitsamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030203#vorlage</id>
@@ -337,12 +385,28 @@
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029883#beratung-2026-11-04-Schulausschuss</id>
+<title>Schulausschuss: „vertagt - mit Maßgabe“ – 261900 Antrag der Grünen Ratsfraktion: Elternbefragung zum Bedarf an Gesamtschulplätzen in Bonn</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261900"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029883"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029765#vorlage</id>
 <title>Neue Vorlage 260000-12: Ersatzbenennungen zu Ratsausschüssen und sonstigen Gremien</title>
 <updated>2026-11-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260000-12"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029765"/>
 <summary>Mitteilungsvorlage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029761#beratung-2026-11-04-Schulausschuss</id>
+<title>Schulausschuss: „geändert beschlossen“ – 260945-03 Konzept zur flexiblen und rechtssicheren Schulbuchbeschaffung gem. § 75a GO NRW</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260945-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029761"/>
+<summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029737#vorlage</id>
@@ -526,7 +590,7 @@
 <updated>2026-11-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#242092-10%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030123"/>
-<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030106#vorlage</id>
@@ -743,69 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#262012-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030153"/>
 <summary>Stellungnahme der Verwaltung · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030129#vorlage</id>
-<title>Neue Vorlage 261745-01 ST: Vertagungsbitte zu Verkehrsentwicklung auf der Adenauerallee</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#261745-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030129"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030128#vorlage</id>
-<title>Neue Vorlage 261741-03 ST: Vertagungsbitte zu Task Force Nordbrücke - Transparenz und demokratische Kontrolle</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261741-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030128"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030093#vorlage</id>
-<title>Neue Vorlage 262007: Tagesordnungspunkte in nichtöffentlicher Sitzung des Ausschusses für Sicherheit, Ordnung und Bevölkerungsschutz</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262007"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030093"/>
-<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030034#vorlage</id>
-<title>Neue Vorlage 261872-01 ST: Bürgerantrag: Antrag auf Beibehaltung der Buslinie 610 und 611</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261872-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030034"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030006#vorlage</id>
-<title>Neue Vorlage 261953: Titelerneuerung 2026 für die Fair Trade Town Bonn</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261953"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030006"/>
-<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029967#vorlage</id>
-<title>Neue Vorlage 260919-08 ST: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-08%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029967"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029902#vorlage</id>
-<title>Neue Vorlage 261700-03 ST: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2027</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261700-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029902"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029866#vorlage</id>
-<title>Neue Vorlage 261891: Gewerbeflächenstrategie Bonn - Information zu Zielsetzung und Vorgehen</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261891"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029866"/>
-<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 </feed>
