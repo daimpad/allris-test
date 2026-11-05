@@ -3,7 +3,7 @@ Umbau Zeichen für Zeichen gleich (Referenz in tests/referenz/, erzeugt vor dem 
 die Abschnitte „Haushalt im Produktbereich“ und „Wer berät mit“ sowie die Sprungleiste und den Link auf haushalt/ ergänzt,
 am 28.10.2026 um target="_blank" an externen Links, die Feed-Erkennung im Kopf und den Link auf rss/, am 02.11.2026 um den
 Link in die Kachel des Produktbereichs auf haushalt/ und das Akkordeon „Begriffe auf dieser Seite“, im Fuß der Link
-auf einfach/); dazu die
+auf einfach/, am 05.11.2026 im Fuß der Verweis „Teil des Ratsatlas“ auf ratsatlas.de); dazu die
 Regeln der Zuordnung und ein Thema ohne Phasen."""
 import json
 import re

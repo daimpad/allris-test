@@ -60,6 +60,7 @@ def _page(site_url, path, title, description, body, root, head=""):
 {body}
   </main>
   <footer class="page-foot">
+    Teil des <a href="https://ratsatlas.de/">Ratsatlas</a> – Ratsentscheidungen vor der eigenen Haustür.<br>
     <a href="{root}einfach/">Einfache Sprache</a> · <a href="{root}gebiete/">Alle Gebiete</a> · <a href="{root}rss/">Abonnieren (RSS)</a> · <a href="https://nozilla.de/impressum/">Impressum</a> · <a href="{root}datenschutz.html">Datenschutz</a> · <a href="mailto:contact@nozilla.de">Kontakt</a>
   </footer>
 </body>
