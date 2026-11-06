@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ohne-2026</id>
 <title>Ratsatlas Bonn – stadtweit / ohne Ortsbezug 2026</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2026</subtitle>
-<updated>2026-11-05T00:00:00Z</updated>
+<updated>2026-11-06T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ohne-2026.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030323#vorlage</id>
+<title>Neue Vorlage 262116: Große Anfrage von CDU und FDP: Kosten und Aufwand des IT Supports an Bonner Schulen</title>
+<updated>2026-11-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262116"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030323"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030304#vorlage</id>
+<title>Neue Vorlage 262108: Sitzungstermine des Ausschusses für Umwelt, Klima und Lokale Agenda für das Jahr 2027</title>
+<updated>2026-11-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262108"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030304"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030322#vorlage</id>
 <title>Neue Vorlage 261969-01 ST: Vertagungsbitte zur Grüne-Große Anfrage zur niedrigschwelligen und mehrsprachigen Aufklärungs- und Beratungsangeboten zum Thema Wechseljahre / Menopause in Bonn</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261613"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029086"/>
 <summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030059#vorlage</id>
-<title>Neue Vorlage 261988: BBB-Anfrage "Erkenntnisse, Gefahrenabwehrmaßnahmen und behördliche Zusammenarbeit im Vorfeld und Umfeld der Amokfahrt vom 3. Dezember 2025 in der Bonner Innenstadt"</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261988"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030059"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030052#vorlage</id>
-<title>Neue Vorlage 261984: Tagesordnungspunkte in nichtöffentlicher Sitzung des Schulausschusses am 04.11.2026</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261984"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030052"/>
-<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 40 Schulamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

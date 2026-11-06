@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/schule</id>
 <title>Ratsatlas Bonn – Schule und Bildung</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Schule und Bildung (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-04T00:00:00Z</updated>
+<updated>2026-11-06T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/schule.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/schule-und-bildung/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030323#vorlage</id>
+<title>Neue Vorlage 262116: Große Anfrage von CDU und FDP: Kosten und Aufwand des IT Supports an Bonner Schulen</title>
+<updated>2026-11-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262116"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030323"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030312#vorlage</id>
+<title>Neue Vorlage 262112: FDP Antrag: Einrichtung einer Einbahnstraßenregelung in der August-Bier-Straße zur Erhöhung der Schulwegsicherheit und Verkehrsberuhigung</title>
+<updated>2026-11-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#262112"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030312"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030306#vorlage</id>
 <title>Neue Vorlage 261901-03 AA: Änderungsantrag der BSW/SBI-Gruppe: Weiterentwicklung des Anmeldeverfahrens an weiterführenden Schulen</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261137"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027916"/>
 <summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025763#beratung-2026-07-09-Rat</id>
-<title>Rat: „geändert beschlossen“ – 260400 Zuständigkeitsordnung der Ausschüsse des Rates der Bundesstadt Bonn</title>
-<updated>2026-07-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260400"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025763"/>
-<summary>Entscheidung am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025703#beratung-2026-07-09-Rat</id>
-<title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 190692-09 ST Stellungnahme zum BBB-Antrag: Schulwegsicherung Friedrich-Ebert-Allee (B9) im Bereich der Stadtbahnhaltestelle Ollenhauerstraße</title>
-<updated>2026-07-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#190692-09%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025703"/>
-<summary>Kenntnisnahme am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>
