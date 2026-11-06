@@ -2225,10 +2225,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "6.2.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
     },
     {
      "position": 2,
@@ -2328,8 +2328,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "6.2.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     },
     {
      "typ": "beratung",
@@ -4001,10 +4003,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "6.2",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
     },
     {
      "position": 2,
@@ -4098,8 +4100,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "6.2",
+     "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     },
     {
      "typ": "folgevorlage",
@@ -121924,6 +121928,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, die Fällung eines Mammutbaums auf einem Grundstück am Steinweg zu erlauben. Der Baum steht zu nah am Haus und an der Straße, ist beschädigt und wächst nicht artgerecht. Als Ersatz soll ein heimischer Laubbaum gepflanzt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-06"
    }
   },
   {

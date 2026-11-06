@@ -11817,7 +11817,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241191	kein Ort						
 241192	kein Ort						
 241192-01 ST	kein Ort						
-241192-02 ST	kein Ort						
 241193	kein Ort						
 241201	nur in Anlagen genannt, nicht verortet						
 241209	verortet	Hauptteil	volltext_ortsteil_name	Schweinheim	Schweinheim	mittel	1
@@ -12008,7 +12007,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241401	kein Ort						
 241402	Titel ohne gemeinsamen Ort, nicht verortet						
 241407	kein Ort						
-241409	nur in Anlagen genannt, nicht verortet						
 241412	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
 241414	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 241414	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
@@ -12138,7 +12136,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241563	nur in Anlagen genannt, nicht verortet						
 241564	nur in Anlagen genannt, nicht verortet						
 241567	Titel ohne gemeinsamen Ort, nicht verortet						
-241570	kein Ort						
 241571	kein Ort						
 241571-01 ST	kein Ort						
 241572	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
@@ -12577,7 +12574,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
-242029	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	1
 242031	kein Ort						
 242032	kein Ort						
 242034	kein Ort						
