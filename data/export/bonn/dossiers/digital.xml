@@ -9,6 +9,14 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030350#vorlage</id>
+<title>Neue Vorlage 262130: Volt-Dringlichkeitsantrag: Aktionsplan Dachstrategie Digitale Transformation</title>
+<updated>2026-11-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262130"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030350"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030323#vorlage</id>
 <title>Neue Vorlage 262116: Große Anfrage von CDU und FDP: Kosten und Aufwand des IT Supports an Bonner Schulen</title>
 <updated>2026-11-06T00:00:00Z</updated>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260068-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028343"/>
 <summary>Stellungnahme der Verwaltung · federführend: Dezernat OB · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027609#beratung-2026-06-30-Hauptausschuss</id>
-<title>Hauptausschuss: „zurückgezogen“ – 260989 Volt-Antrag: Digitalisierungsstrategie Bonn – Zeitplan, Zwischenstand und Einordnung der Bestandsaufnahme</title>
-<updated>2026-06-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260989"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027609"/>
-<summary>Entscheidung am 2026-06-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>
