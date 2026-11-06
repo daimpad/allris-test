@@ -60,7 +60,8 @@ class Auffindbarkeit(unittest.TestCase):
         manifest = json.loads((SITE / "site.webmanifest").read_text(encoding="utf-8"))
         local += [i["src"] for i in manifest["icons"]]
         for path in local:
-            self.assertTrue((SITE / path).is_file(), path)
+            # Versionszusatz (?v=2 gegen den Browser-Zwischenspeicher) gehört nicht zum Dateinamen
+            self.assertTrue((SITE / path.split("?")[0]).is_file(), path)
 
     def test_adressen_robots_sitemap(self):
         with tempfile.TemporaryDirectory() as tmp:

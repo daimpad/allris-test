@@ -46,14 +46,14 @@ def _page(site_url, path, title, description, body, root, head=""):
   <title>{escape(title)}</title>
   <meta name="description" content="{escape(description)}">
   <link rel="canonical" href="{escape(site_url + path)}">
-  <link rel="icon" href="{root}favicon.ico" sizes="32x32">
-  <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="{root}favicon.ico?v=2" sizes="32x32">
+  <link rel="icon" href="{root}favicon.svg?v=2" type="image/svg+xml">
   <link rel="stylesheet" href="{root}page.css">{head}
   <link rel="alternate" type="application/atom+xml" title="Ratsatlas Bonn – ganz Bonn" href="{root}data/export/bonn/feeds/ganz-bonn.xml">
 </head>
 <body>
   <header class="page-head">
-    <a class="page-brand" href="{root}"><img src="{root}favicon.svg" width="32" height="32" alt="">Ratsatlas <span>Bonn</span></a>
+    <a class="page-brand" href="{root}"><img src="{root}favicon.svg?v=2" width="32" height="32" alt="">Ratsatlas <span>Bonn</span></a>
     <a class="page-back" href="{root}">Zur Karte</a>
   </header>
   <main class="page">
