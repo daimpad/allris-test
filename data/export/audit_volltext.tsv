@@ -8283,7 +8283,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 230358	verortet	Hauptteil	volltext_strasse	Maarstraße	Beuel-Ost	mittel	7
 230358	verortet	Hauptteil	volltext_strasse	Maarstraße	Pützchen/Bechlinghoven	mittel	7
 230359	kein Ort						
-230359-01 ST	kein Ort						
 230360	kein Ort						
 230360-01 ST	kein Ort						
 230361	kein Ort						
@@ -11800,6 +11799,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241177-06	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	1
 241177-07 ST	kein Ort						
 241177-09 ST	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	mittel	3
+241177-10	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
+241177-10	verortet	Hauptteil	volltext_strasse	Lambareneweg	Nordstadt	mittel	5
+241177-10	verortet	Hauptteil	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	4
 241177-11 ST	kein Ort						
 241177-12 AA	kein Ort						
 241177-13 AA	kein Ort						
@@ -12574,6 +12576,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
+242029	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	1
 242031	kein Ort						
 242032	kein Ort						
 242034	kein Ort						
@@ -12615,6 +12618,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242109	Titel ohne gemeinsamen Ort, nicht verortet						
 242112	nur in Anlagen genannt, nicht verortet						
 242114	kein Ort						
+242116	kein Ort						
 242117	kein Ort						
 242118	kein Ort						
 242119	kein Ort						
@@ -16249,7 +16253,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261551-01 ST	kein Ort						
 261554	kein Ort						
 261559	kein Ort						
-261559-01 ST	kein Ort						
 261559-02 ST	verortet	Hauptteil	volltext_strasse	Bertha-von-Suttner-Platz	Bonn-Zentrum	niedrig	1
 261559-02 ST	verortet	Hauptteil	volltext_strasse	Cassius-Bastei	Bonn-Zentrum	niedrig	1
 261561	verortet	Hauptteil	volltext_strasse	Rosental	Bonn-Castell	mittel	2
