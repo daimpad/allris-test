@@ -57,7 +57,7 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 253158-02 ST	beratung: Hauptausschuss (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 253158-02 ST	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 260496-03 ST	datum_vorlage	2026-07-29	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-260496-03 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+260496-03 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2026-09-08	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 261096-01 ST	datum_vorlage	2026-07-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 261096-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 261146-01 ST	datum_vorlage	2026-06-24	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
@@ -136,8 +136,8 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 260567	folgevorlage: 260567-01 ST	2026-04-08	oparl-bonn	belegt	Stellungnahme der Verwaltung
 260567	beratung: Bezirksvertretung Bonn (Entscheidung)	2026-04-21	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260496	datum_vorlage	2026-03-26	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-260496	beratung: Bezirksvertretung Bonn (Entscheidung)	2026-06-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260496	folgevorlage: 260496-03 ST	2026-07-29	oparl-bonn	belegt	Stellungnahme der Verwaltung
+260496	beratung: Bezirksvertretung Bonn (Entscheidung)	2026-09-08	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260499	datum_vorlage	2026-03-26	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 260499	folgevorlage: 260499-01 ST	2026-06-02	oparl-bonn	belegt	Stellungnahme der Verwaltung
 260499	beratung: Bezirksvertretung Bonn (Entscheidung)	2026-06-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt

@@ -3542,11 +3542,11 @@
      "position": 0,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": null,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005618",
      "gremium": "Bezirksvertretung Bonn",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2026-09-08T15:08:00.000Z",
+     "cancelled": 0,
      "number": "6.43.1",
      "result": "vertagt",
      "public": 1,
@@ -3625,7 +3625,9 @@
      "role": "Kenntnisnahme",
      "status": "belegt",
      "source": "oparl-bonn",
-     "date_status": "unklar",
+     "date": "2026-09-08",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
      "number": "6.43.1",
      "result": "vertagt",
      "stand": "beraten",
@@ -8102,10 +8104,10 @@
      "position": 0,
      "role": "Entscheidung",
      "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005617",
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005618",
      "gremium": "Bezirksvertretung Bonn",
      "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2026-06-23T15:00:00.000Z",
+     "start_date": "2026-09-08T15:08:00.000Z",
      "cancelled": 0,
      "number": "6.43",
      "result": "vertagt - mit Maßgabe",
@@ -8174,21 +8176,6 @@
      "note": "datum"
     },
     {
-     "typ": "entscheidung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2026-06-23",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.43",
-     "result": "vertagt - mit Maßgabe",
-     "stand": "beraten",
-     "result_source": "oparl-lite",
-     "schleife": true
-    },
-    {
      "typ": "folgevorlage",
      "label": "Stellungnahme der Verwaltung",
      "status": "belegt",
@@ -8196,6 +8183,21 @@
      "source": "oparl-bonn",
      "reference": "260496-03 ST",
      "title": "Stellungnahme zum CDU-Bezirksfraktion-Antrag: Umsetzen von Fahrradbügeln in Endenich"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2026-09-08",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.43",
+     "result": "vertagt - mit Maßgabe",
+     "stand": "beraten",
+     "result_source": "oparl-lite",
+     "schleife": true
     }
    ],
    "soll": {
@@ -56571,6 +56573,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass die Prüfung der Verkehrsregelung am Hermann-Wandersleb-Ring später beginnt. Wegen Bauarbeiten an der Rochusstraße und Provinzialstraße wird die Datenerhebung erst im zweiten Halbjahr 2023 durchgeführt. Die Auswertung folgt dann im dritten Quartal.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-05"
    }
   },
   {

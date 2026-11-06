@@ -96,7 +96,7 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 260496-03 ST	initiierung	Stellungnahme der Verwaltung	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027876	ungeprüft
 260496-03 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 260496-03 ST	veroeffentlichung	Datum der Vorlage	belegt	2026-07-29		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027876	ungeprüft
-260496-03 ST	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027876	ungeprüft
+260496-03 ST	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt	2026-09-08	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027876	ungeprüft
 261096-01 ST	initiierung	Stellungnahme der Verwaltung	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028157	ungeprüft
 261096-01 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 261096-01 ST	veroeffentlichung	Datum der Vorlage	belegt	2026-07-06		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028157	ungeprüft
@@ -222,8 +222,8 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 260567	vollzug	Umsetzung durch die Verwaltung	unklar				Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt es keine öffentliche Schnittstelle.	ungeprüft
 260496	initiierung	Antrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2026228	ungeprüft
 260496	veroeffentlichung	Datum der Vorlage	belegt	2026-03-26		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2026228	ungeprüft
-260496	entscheidung	Bezirksvertretung Bonn (Entscheidung)	belegt	2026-06-23	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2026228	ungeprüft
 260496	folgevorlage	Stellungnahme der Verwaltung	belegt	2026-07-29		oparl-bonn	260496-03 ST	ungeprüft
+260496	entscheidung	Bezirksvertretung Bonn (Entscheidung)	belegt	2026-09-08	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2026228	ungeprüft
 260499	initiierung	Antrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2026231	ungeprüft
 260499	veroeffentlichung	Datum der Vorlage	belegt	2026-03-26		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2026231	ungeprüft
 260499	folgevorlage	Stellungnahme der Verwaltung	belegt	2026-06-02		oparl-bonn	260499-01 ST	ungeprüft

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-friesdorf</id>
 <title>Ratsatlas Bonn – Friesdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Friesdorf</subtitle>
-<updated>2026-11-04T00:00:00Z</updated>
+<updated>2026-11-05T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-friesdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030116#vorlage</id>
+<title>Neue Vorlage 262018: Neubau von zwei 4-gruppigen Kindertagesstätten in der Neckarstraße und Margaretenstraße und einer Mensa für die Servatiusschule</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#262018"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030116"/>
+<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030252#vorlage</id>
 <title>Neue Vorlage 261281-12 AA: SPD-Änderungsantrag: Fortschreibung des Rahmenplans zur Neuordnung der Bonner Bäderlandschaft Antrag zur Vorlage 261281</title>
@@ -193,14 +201,6 @@
 <summary>Anhörung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028962#beratung-2026-09-02-Sportausschuss</id>
-<title>Sportausschuss: „vertagt“ – 261281-04 AA BBB-Änderungsantrag: Fortschreibung des Rahmenplans zur Neuordnung der Bonner Bäderlandschaft</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#261281-04%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028962"/>
-<summary>Empfehlung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028962#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
 <title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 261281-04 AA BBB-Änderungsantrag: Fortschreibung des Rahmenplans zur Neuordnung der Bonner Bäderlandschaft</title>
 <updated>2026-09-02T00:00:00Z</updated>
@@ -255,14 +255,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#220380-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028548"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028534#beratung-2026-09-02-Sportausschuss</id>
-<title>Sportausschuss: „vertagt“ – 261281-02 AA Volt-Änderungsantrag: Bäderlandschaft sichern! Antrag zur Vorlage 261281</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#261281-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028534"/>
-<summary>Empfehlung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028534#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#240754-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024143"/>
 <summary>Kenntnisnahme am 2026-03-11; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024393#beratung-2026-01-28-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 232006-01 ST Bürgerantrag: Installation einer Fußgängerampel im Bereich Bernkasteler Straße [Hausnummer ausgelassen] in Bonn-Friesdorf</title>
+<updated>2026-01-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#232006-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024393"/>
+<summary>Kenntnisnahme am 2026-01-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
